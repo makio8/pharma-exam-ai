@@ -129,10 +129,10 @@ export interface UseAnalyticsReturn {
 }
 
 export function useAnalytics(): UseAnalyticsReturn {
-  const allHistory = loadFromStorage<AnswerHistory>('answer_history')
-  const allNotes = loadFromStorage<StickyNote>('sticky_notes')
-
+  // useMemo内でloadしてdepsを安定させる（毎レンダーで新配列が作られるのを防ぐ）
   return useMemo(() => {
+    const allHistory = loadFromStorage<AnswerHistory>('answer_history')
+    const allNotes = loadFromStorage<StickyNote>('sticky_notes')
     // --- 今日の統計 ---
     const todayHistory = allHistory.filter((h) => isToday(h.answered_at))
     const todayCorrect = todayHistory.filter((h) => h.is_correct).length
@@ -295,5 +295,6 @@ export function useAnalytics(): UseAnalyticsReturn {
       recentNotes,
       isEmpty,
     }
-  }, [allHistory, allNotes])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []) // ページマウント時に1回だけ計算（localStorageはページ遷移で更新される）
 }

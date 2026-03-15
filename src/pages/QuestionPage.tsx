@@ -1,5 +1,5 @@
 // 問題演習画面 - 4択・正誤判定・解説・付箋作成
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo, useCallback, useEffect, useRef } from 'react'
 import {
   Card,
   Typography,
@@ -80,7 +80,12 @@ export function QuestionPage() {
   const [isAnswered, setIsAnswered] = useState(false)
   const [isCorrect, setIsCorrect] = useState(false)
   const [confidence, setConfidence] = useState<ConfidenceLevel>('medium')
-  const [startTime] = useState(() => Date.now())
+  const startTimeRef = useRef(Date.now())
+
+  // questionId が変わったら startTime をリセット
+  useEffect(() => {
+    startTimeRef.current = Date.now()
+  }, [questionId])
 
   // --- 付箋モーダル ---
   const [noteModalOpen, setNoteModalOpen] = useState(false)
@@ -99,7 +104,7 @@ export function QuestionPage() {
     setIsCorrect(correct)
     setIsAnswered(true)
 
-    const timeSpent = Math.round((Date.now() - startTime) / 1000)
+    const timeSpent = Math.round((Date.now() - startTimeRef.current) / 1000)
     saveAnswer({
       user_id: 'local_user',
       question_id: question.id,
@@ -109,7 +114,7 @@ export function QuestionPage() {
       confidence_level: confidence,
       time_spent_seconds: timeSpent,
     })
-  }, [selectedAnswer, question, confidence, startTime, saveAnswer])
+  }, [selectedAnswer, question, confidence, startTimeRef, saveAnswer])
 
   /** 付箋を保存 */
   const handleSaveNote = useCallback(() => {
