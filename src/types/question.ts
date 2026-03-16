@@ -33,6 +33,7 @@ export interface Question {
   correct_answer: number    // 1〜5
   explanation: string
   tags: string[]            // キーワードタグ
+  correct_rate?: number     // 正答率（0〜1）。60%以上が演習推奨
   image_url?: string        // 問題に図がある場合
 }
 

@@ -244,7 +244,7 @@ export function QuestionPage() {
           }}
           style={{ width: '100%' }}
         >
-          <Space direction="vertical" style={{ width: '100%' }}>
+          <Space orientation="vertical" style={{ width: '100%' }}>
             {question.choices.map((choice) => (
               <Card
                 key={choice.key}

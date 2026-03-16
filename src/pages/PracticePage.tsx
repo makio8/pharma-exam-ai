@@ -9,11 +9,12 @@ import {
   Button,
   Tag,
   Badge,
-  List,
   Space,
   Row,
   Col,
   Switch,
+  Pagination,
+  Divider,
 } from 'antd'
 import {
   PlayCircleOutlined,
@@ -46,9 +47,14 @@ type CorrectStatus = 'all' | 'correct' | 'incorrect' | 'unanswered'
 /** セッション問題数 */
 type SessionCount = 10 | 20 | 0 // 0 = 全問
 
+const PAGE_SIZE = 10
+
 export function PracticePage() {
   const navigate = useNavigate()
   const { getQuestionResult } = useAnswerHistory()
+
+  // --- ページネーション ---
+  const [currentPage, setCurrentPage] = useState(1)
 
   // --- フィルター状態 ---
   const [selectedSubjects, setSelectedSubjects] = useState<QuestionSubject[]>([])
@@ -97,6 +103,7 @@ export function PracticePage() {
       })
     }
 
+    setCurrentPage(1)
     return result
   }, [selectedSubjects, selectedYears, selectedSections, correctStatus, keyword, getQuestionResult])
 
@@ -255,26 +262,13 @@ export function PracticePage() {
       {/* 問題一覧 */}
       <Badge.Ribbon text={`${filteredQuestions.length}問`} color="blue">
         <Card size="small">
-          <List
-            dataSource={filteredQuestions}
-            pagination={{ pageSize: 10, size: 'small', showSizeChanger: false }}
-            renderItem={(q) => (
-              <List.Item
-                key={q.id}
-                actions={[
-                  renderStatusBadge(q),
-                  <Button
-                    key="go"
-                    type="link"
-                    size="small"
-                    onClick={() => navigate(`/practice/${q.id}`)}
-                  >
-                    解く
-                  </Button>,
-                ]}
-              >
-                <List.Item.Meta
-                  title={
+          {filteredQuestions
+            .slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE)
+            .map((q, idx) => (
+              <div key={q.id}>
+                {idx > 0 && <Divider style={{ margin: '8px 0' }} />}
+                <Row justify="space-between" align="middle" wrap={false}>
+                  <Col flex="1" style={{ minWidth: 0 }}>
                     <Space size={4} wrap>
                       <Tag color={sectionColor(q.section)}>{q.section}</Tag>
                       <Text strong>第{q.year}回</Text>
@@ -282,27 +276,53 @@ export function PracticePage() {
                       <Text type="secondary">|</Text>
                       <Text>{q.subject}</Text>
                     </Space>
-                  }
-                  description={
-                    <Space size={4} wrap>
-                      {q.tags.slice(0, 2).map((tag) => (
-                        <Tag key={tag} style={{ fontSize: 11 }}>{tag}</Tag>
-                      ))}
-                      <Text
-                        type="secondary"
-                        style={{ fontSize: 13 }}
-                        ellipsis={{ tooltip: q.question_text }}
+                    <div style={{ marginTop: 4 }}>
+                      <Space size={4} wrap>
+                        {q.tags.slice(0, 2).map((tag) => (
+                          <Tag key={tag} style={{ fontSize: 11 }}>{tag}</Tag>
+                        ))}
+                        <Text
+                          type="secondary"
+                          style={{ fontSize: 13 }}
+                          ellipsis
+                        >
+                          {q.question_text.length > 40
+                            ? q.question_text.slice(0, 40) + '...'
+                            : q.question_text}
+                        </Text>
+                      </Space>
+                    </div>
+                  </Col>
+                  <Col style={{ marginLeft: 8, flexShrink: 0 }}>
+                    <Space>
+                      {renderStatusBadge(q)}
+                      <Button
+                        type="link"
+                        size="small"
+                        onClick={() => navigate(`/practice/${q.id}`)}
                       >
-                        {q.question_text.length > 40
-                          ? q.question_text.slice(0, 40) + '...'
-                          : q.question_text}
-                      </Text>
+                        解く
+                      </Button>
                     </Space>
-                  }
-                />
-              </List.Item>
-            )}
-          />
+                  </Col>
+                </Row>
+              </div>
+            ))}
+          {filteredQuestions.length === 0 && (
+            <Text type="secondary">条件に一致する問題がありません</Text>
+          )}
+          {filteredQuestions.length > PAGE_SIZE && (
+            <div style={{ textAlign: 'center', marginTop: 16 }}>
+              <Pagination
+                current={currentPage}
+                pageSize={PAGE_SIZE}
+                total={filteredQuestions.length}
+                onChange={setCurrentPage}
+                size="small"
+                showSizeChanger={false}
+              />
+            </div>
+          )}
         </Card>
       </Badge.Ribbon>
     </div>

@@ -51,7 +51,7 @@ export function AnalysisPage() {
       <div style={{ textAlign: 'center', padding: '48px 16px' }}>
         <Empty
           description={
-            <Space direction="vertical">
+            <Space orientation="vertical">
               <Title level={4}>まずは問題を解いてみましょう！</Title>
               <Text type="secondary">
                 回答データが蓄積されると、科目別の正答率や苦手分析が表示されます。
@@ -128,7 +128,7 @@ export function AnalysisPage() {
       title: '問題',
       key: 'question',
       render: (_: unknown, record: WeakQuestion) => (
-        <Space direction="vertical" size={0}>
+        <Space orientation="vertical" size={0}>
           <Space size={4}>
             <Tag color="blue">{record.subject}</Tag>
             <Tag>{record.category}</Tag>
@@ -179,7 +179,7 @@ export function AnalysisPage() {
   }
 
   return (
-    <Space direction="vertical" size="large" style={{ width: '100%' }}>
+    <Space orientation="vertical" size="large" style={{ width: '100%' }}>
       {/* === サマリー === */}
       <Card>
         <Title level={4}>
@@ -230,7 +230,7 @@ export function AnalysisPage() {
         {/* 全科目バー表示 */}
         <Divider style={{ margin: '16px 0 8px' }} />
         <Title level={5}>全科目一覧</Title>
-        <Space direction="vertical" size="small" style={{ width: '100%' }}>
+        <Space orientation="vertical" size="small" style={{ width: '100%' }}>
           {subjectAccuracies.map((sa) => {
             const pct = sa.total > 0 ? Math.round(sa.accuracy * 100) : 0
             const color =

@@ -67,7 +67,7 @@ export function HomePage() {
   }
 
   return (
-    <Space direction="vertical" size="large" style={{ width: '100%' }}>
+    <Space orientation="vertical" size="large" style={{ width: '100%' }}>
       {/* === 今日の進捗サマリー === */}
       <Card>
         <Title level={4}>
@@ -122,7 +122,7 @@ export function HomePage() {
           <TrophyOutlined style={{ marginRight: 8 }} />
           今日のおすすめ問題
         </Title>
-        <Space direction="vertical" size="middle" style={{ width: '100%' }}>
+        <Space orientation="vertical" size="middle" style={{ width: '100%' }}>
           {recommendedQuestions.map((q) => (
             <Card
               key={q.id}
@@ -191,7 +191,7 @@ export function HomePage() {
             image={Empty.PRESENTED_IMAGE_SIMPLE}
           />
         ) : (
-          <Space direction="vertical" size="small" style={{ width: '100%' }}>
+          <Space orientation="vertical" size="small" style={{ width: '100%' }}>
             {recentNotes.map((note) => {
               const config = NOTE_TYPE_CONFIG[note.note_type]
               return (

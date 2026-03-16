@@ -1,5 +1,5 @@
-// 開発用ダミー問題データ（50問）
-// 実際の問題文は第108〜115回の厚労省公開データから取得予定
+// 開発用ダミー問題データ（50問・正答率60%以上相当）
+// 実際の問題文は第107〜111回の厚労省公開データから取得予定
 
 import type { Question } from '../types/question'
 
@@ -23,6 +23,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 1,
     explanation: 'β1受容体は主に心臓に分布し、刺激すると心拍数増加・心収縮力増大をきたします。気管支拡張はβ2、末梢血管収縮はα1の作用です。',
     tags: ['受容体', 'アドレナリン', 'β遮断薬', '心臓'],
+    correct_rate: 0.88,
   },
   {
     id: 'q002',
@@ -42,6 +43,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: 'ACE阻害薬はブラジキニンの分解を抑制するため、ブラジキニンが蓄積して空咳を引き起こします。この副作用でARBへ切り替えることが多いです。',
     tags: ['ACE阻害薬', 'RAA系', '高血圧', 'ブラジキニン', '副作用'],
+    correct_rate: 0.85,
   },
   {
     id: 'q003',
@@ -61,6 +63,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 1,
     explanation: 'ワルファリンはビタミンK依存性凝固因子（II, VII, IX, X）の合成を阻害します。ビタミンKを補充することで拮抗できます。なおフィトナジオンもビタミンKの一種ですが選択肢1が最も一般的な表現です。',
     tags: ['ワルファリン', 'ビタミンK', '抗凝固薬', '相互作用'],
+    correct_rate: 0.82,
   },
   // ===== 薬剤 =====
   {
@@ -81,6 +84,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: '舌下投与は口腔粘膜から直接体循環へ吸収されるため、門脈を経由せず初回通過効果を受けません。ニトログリセリン舌下錠がその代表例です。',
     tags: ['初回通過効果', '薬物動態', '投与経路', 'バイオアベイラビリティ'],
+    correct_rate: 0.79,
   },
   {
     id: 'q005',
@@ -100,6 +104,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 4,
     explanation: 'マイクロカプセルは物理的にコーティングする製剤技術で、苦味マスキング・徐放化・吸湿防止・揮発成分保護などが目的です。水溶性を向上させるのは可溶化・共粉砕などの別技術です。',
     tags: ['製剤', 'マイクロカプセル', '徐放', 'DDS'],
+    correct_rate: 0.76,
   },
   // ===== 病態・薬物治療 =====
   {
@@ -120,6 +125,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 3,
     explanation: 'SGLT2阻害薬は腎臓でのグルコース再吸収を阻害し尿糖排泄を促すため、カロリー喪失により体重減少効果があります。スルホニルウレア、インスリン、チアゾリジン薬は体重増加の副作用があります。',
     tags: ['糖尿病', 'SGLT2阻害薬', '体重', '2型糖尿病治療'],
+    correct_rate: 0.81,
   },
   {
     id: 'q007',
@@ -139,6 +145,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 3,
     explanation: '妊婦の高血圧治療では、ACE阻害薬・ARBは胎児毒性のため禁忌。メチルドパは安全性が確立されており第一選択の一つです。',
     tags: ['妊婦', '高血圧', 'メチルドパ', '禁忌', 'ACE阻害薬'],
+    correct_rate: 0.74,
   },
   {
     id: 'q008',
@@ -158,6 +165,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: 'MRSAはβラクタム系に耐性があります。バンコマイシン（グリコペプチド系）はMRSA感染症の第一選択薬です。テイコプラニン、リネゾリドも有効です。',
     tags: ['MRSA', 'バンコマイシン', '感染症', '耐性菌', '抗菌薬'],
+    correct_rate: 0.91,
   },
   // ===== 化学 =====
   {
@@ -178,6 +186,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: 'イブプロフェンはα位に不斉炭素を持つ(R)/(S)エナンチオマーが存在します。市販品はラセミ体ですが、体内で(S)体へ変換されます。アスピリン・アセトアミノフェンには不斉炭素がありません。',
     tags: ['不斉炭素', 'エナンチオマー', 'イブプロフェン', 'NSAIDs', '有機化学'],
+    correct_rate: 0.70,
   },
   {
     id: 'q010',
@@ -197,6 +206,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: '弱酸性薬物はpHが低い（酸性）ほど非イオン形（分子形）が多くなります。非イオン形は脂溶性が高く、細胞膜を通過しやすいため吸収がよくなります（Henderson-Hasselbalchの式）。',
     tags: ['pH分配説', '弱酸性', 'イオン化', '吸収', 'Henderson-Hasselbalch'],
+    correct_rate: 0.77,
   },
   // ===== 生物 =====
   {
@@ -217,6 +227,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 3,
     explanation: 'タンパク質合成（翻訳）はリボソームで行われます。粗面小胞体膜上のリボソームでは分泌タンパクや膜タンパクが合成されます。',
     tags: ['リボソーム', 'タンパク質合成', '翻訳', '細胞小器官'],
+    correct_rate: 0.93,
   },
   {
     id: 'q012',
@@ -236,6 +247,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: 'I型過敏反応（アナフィラキシー）では、IgEが肥満細胞の表面に結合し、抗原再暴露で脱顆粒→ヒスタミン放出が起こります。H1受容体を介して血管拡張・気管支収縮をきたします。',
     tags: ['アナフィラキシー', '肥満細胞', 'IgE', 'I型過敏反応', 'ヒスタミン'],
+    correct_rate: 0.86,
   },
   // ===== 物理 =====
   {
@@ -256,6 +268,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 3,
     explanation: '透過力の強さはγ線 > β線 > α線の順です。γ線（電磁波）は物質との相互作用が弱く深くまで透過します。α線は紙1枚で遮蔽できます。',
     tags: ['放射線', '透過力', 'α線', 'β線', 'γ線'],
+    correct_rate: 0.83,
   },
   // ===== 法規・制度・倫理 =====
   {
@@ -276,6 +289,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 1,
     explanation: '薬機法第48条により、毒薬は他の物と区別し、鍵をかけた場所（施錠保管）に貯蔵しなければなりません。劇薬は区別して貯蔵すれば施錠不要です。',
     tags: ['毒薬', '施錠', '薬機法', '貯蔵', '劇薬'],
+    correct_rate: 0.89,
   },
   {
     id: 'q015',
@@ -295,6 +309,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 4,
     explanation: '生活保護受給者は医療扶助が適用されるため、後期高齢者医療制度の被保険者にはなりません（年齢にかかわらず）。',
     tags: ['後期高齢者医療', '生活保護', '保険制度', '被保険者'],
+    correct_rate: 0.72,
   },
   // ===== 実務 =====
   {
@@ -315,6 +330,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: '納豆にはビタミンKが多く含まれ、ビタミンK依存性凝固因子の合成を促進します。これによりワルファリンの抗凝固作用が減弱します。PT-INRが低下することで確認できます。',
     tags: ['ワルファリン', 'ビタミンK', '納豆', '相互作用', '服薬指導'],
+    correct_rate: 0.75,
   },
   {
     id: 'q017',
@@ -334,6 +350,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 4,
     explanation: '処方箋の必要記載事項（薬機法第22条）：患者氏名・年齢、薬名・分量・用法・用量、発行年月日、使用期間、記名押印または署名した医師名、医療機関の名称・住所または電話番号等。',
     tags: ['処方箋', '記載事項', '薬機法', '処方監査'],
+    correct_rate: 0.68,
   },
   // 追加問題（理論問題）
   {
@@ -354,10 +371,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 1,
     explanation: 'シスプラチンの特徴的副作用は腎毒性と聴覚障害（耳鳴り・難聴）です。過水和（大量輸液）と制吐薬の前投与が重要。また強い催吐性を持ちます。',
     tags: ['シスプラチン', '腎毒性', '聴覚障害', '抗がん薬', '副作用'],
+    correct_rate: 0.73,
   },
   {
     id: 'q019',
-    year: 112,
+    year: 107,
     question_number: 5,
     section: '必須',
     subject: '薬理',
@@ -373,10 +391,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 1,
     explanation: 'ベンゾジアゼピン系薬はGABA_A受容体のベンゾジアゼピン結合部位に作用し、GABAとの親和性を高めてClチャネルの開口頻度を増加させます（チャネル開口時間を延長するのはバルビツール酸系との違い）。',
     tags: ['ベンゾジアゼピン', 'GABA', '睡眠薬', '抗不安薬', '作用機序'],
+    correct_rate: 0.84,
   },
   {
     id: 'q020',
-    year: 112,
+    year: 107,
     question_number: 10,
     section: '必須',
     subject: '薬剤',
@@ -392,10 +411,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: '半減期（t1/2）= 0.693 × Vd / CL。腎機能低下によりクリアランス（CL）が低下すると半減期が延長します。腎機能低下患者では腎排泄型薬物の用量調整が必要です。',
     tags: ['半減期', '腎機能', '薬物動態', 'クリアランス', '用量調整'],
+    correct_rate: 0.78,
   },
   {
     id: 'q021',
-    year: 112,
+    year: 107,
     question_number: 15,
     section: '必須',
     subject: '病態・薬物治療',
@@ -411,10 +431,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 1,
     explanation: '慢性心不全（HFrEF）の標準治療はACE阻害薬/ARB（またはARNI）+β遮断薬+MRA+SGLT2阻害薬の4剤が現在の柱です。カルシウム拮抗薬は心不全増悪リスクがあり推奨されません。',
     tags: ['心不全', 'HFrEF', 'ACE阻害薬', 'ARNI', 'SGLT2阻害薬'],
+    correct_rate: 0.71,
   },
   {
     id: 'q022',
-    year: 113,
+    year: 108,
     question_number: 1,
     section: '必須',
     subject: '薬理',
@@ -430,10 +451,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: 'アセトアミノフェンは中枢でのCOX阻害を主な機序とし、末梢でのCOX阻害が弱いため胃粘膜障害が少なく、プロスタグランジン関連の腎への影響も少ないです。抗炎症作用はほぼなく、血小板への影響もNSAIDsと異なります。',
     tags: ['アセトアミノフェン', 'COX', '解熱鎮痛', 'NSAIDs', '胃粘膜'],
+    correct_rate: 0.90,
   },
   {
     id: 'q023',
-    year: 113,
+    year: 108,
     question_number: 5,
     section: '必須',
     subject: '法規・制度・倫理',
@@ -449,10 +471,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 1,
     explanation: '麻薬処方箋の有効期間は交付日を含む7日間です。帳簿の保存は2年。麻薬管理者は都道府県知事への免許申請が必要。残液は都道府県に廃棄届出を行います。',
     tags: ['麻薬', '処方箋', '有効期間', '麻薬及び向精神薬取締法', '管理'],
+    correct_rate: 0.87,
   },
   {
     id: 'q024',
-    year: 113,
+    year: 108,
     question_number: 10,
     section: '必須',
     subject: '生物',
@@ -468,10 +491,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 4,
     explanation: 'CYP2D6 PMでは代謝が低下するため、CYP2D6基質薬（コデイン・デキストロメトルファン・一部β遮断薬など）の血中濃度が上昇し副作用リスクが増します。コデインはCYP2D6でモルヒネに変換されるため、PMでは鎮痛効果が低下します。',
     tags: ['CYP2D6', '遺伝的多型', 'PM', 'コデイン', '薬物代謝'],
+    correct_rate: 0.75,
   },
   {
     id: 'q025',
-    year: 113,
+    year: 108,
     question_number: 20,
     section: '理論',
     subject: '薬剤',
@@ -487,11 +511,12 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: 'メタクリル酸コポリマー（Eudragit L/S）は酸性（胃内pH）では溶けず、腸内pHで溶解するため腸溶コーティングに使用されます。エチルセルロースは徐放膜に、HPCやPVPは即放性コーティングに使われます。',
     tags: ['腸溶製剤', 'Eudragit', 'コーティング', '製剤', '徐放'],
+    correct_rate: 0.67,
   },
   // 残り25問は続き
   {
     id: 'q026',
-    year: 114,
+    year: 109,
     question_number: 1,
     section: '必須',
     subject: '薬理',
@@ -507,10 +532,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 3,
     explanation: 'スタチンはHMG-CoA還元酵素を阻害してコレステロール合成を抑制→肝細胞内コレステロールが低下→肝LDL受容体発現増加→血中LDL取り込み増加でLDL-C低下。',
     tags: ['スタチン', 'HMG-CoA', 'LDL受容体', 'コレステロール', '高脂血症'],
+    correct_rate: 0.80,
   },
   {
     id: 'q027',
-    year: 114,
+    year: 109,
     question_number: 5,
     section: '必須',
     subject: '薬理',
@@ -526,10 +552,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 1,
     explanation: '長期投与により効果持続時間が短縮するウェアリングオフ現象が問題となります。また不随意運動（ジスキネジア）も問題です。抗ドパミン薬と異なり錐体外路症状は改善方向です。',
     tags: ['レボドパ', 'パーキンソン病', 'ウェアリングオフ', 'ジスキネジア'],
+    correct_rate: 0.73,
   },
   {
     id: 'q028',
-    year: 114,
+    year: 109,
     question_number: 10,
     section: '必須',
     subject: '薬剤',
@@ -545,10 +572,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: 'TDM対象薬の条件：①治療域が狭い（有効域と中毒域が近接）、②個体差が大きい、③血中濃度と効果・毒性が相関する。代表例はジゴキシン、バンコマイシン、リチウム、免疫抑制薬など。',
     tags: ['TDM', '治療薬物モニタリング', '有効域', '中毒域', 'バンコマイシン'],
+    correct_rate: 0.92,
   },
   {
     id: 'q029',
-    year: 114,
+    year: 109,
     question_number: 15,
     section: '必須',
     subject: '病態・薬物治療',
@@ -564,10 +592,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: '喘息の長期管理の基本は気道炎症を抑制する吸入ステロイド薬（ICS）です。SABAは発作時の対症療法（リリーバー）。重症例ではICS+LABA+生物学的製剤を組み合わせます。',
     tags: ['喘息', '吸入ステロイド', 'ICS', 'SABA', '長期管理'],
+    correct_rate: 0.86,
   },
   {
     id: 'q030',
-    year: 114,
+    year: 109,
     question_number: 20,
     section: '理論',
     subject: '病態・薬物治療',
@@ -583,10 +612,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 3,
     explanation: 'ビスホスホネートは食事で吸収が著しく低下するため空腹時服用が必須。また食道潰瘍予防のため服用後30分は立位または座位を保ち横になってはいけません。水以外（牛乳・カルシウム含有飲料）は吸収を阻害します。',
     tags: ['ビスホスホネート', '骨粗鬆症', '服薬指導', '食道障害', '吸収'],
+    correct_rate: 0.79,
   },
   {
     id: 'q031',
-    year: 115,
+    year: 110,
     question_number: 1,
     section: '必須',
     subject: '薬理',
@@ -602,10 +632,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: 'フロセミドなどのループ利尿薬はヘンレ係蹄上行脚のNa-K-2Cl共輸送体（NKCC2）を阻害し、強力な利尿作用を示します。サイアザイドは遠位尿細管、スピロノラクトンは集合管が作用部位です。',
     tags: ['ループ利尿薬', 'フロセミド', 'ヘンレ係蹄', 'NKCC2', '利尿薬'],
+    correct_rate: 0.84,
   },
   {
     id: 'q032',
-    year: 115,
+    year: 110,
     question_number: 5,
     section: '必須',
     subject: '化学',
@@ -621,10 +652,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 1,
     explanation: 'アスピリン（アセチルサリチル酸）はエステル結合の加水分解によりサリチル酸と酢酸に分解されます。この安定性確認は品質試験の基本です。',
     tags: ['アスピリン', '加水分解', 'サリチル酸', '安定性', '化学構造'],
+    correct_rate: 0.77,
   },
   {
     id: 'q033',
-    year: 115,
+    year: 110,
     question_number: 10,
     section: '必須',
     subject: '生物',
@@ -640,10 +672,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: '競合阻害では、基質と阻害剤が同じ活性部位を競合します。基質濃度を高くすれば阻害剤を排除できるため、Vmaxは変化しません。見かけのKmのみ増加します（Lineweaver-Burkプロット）。',
     tags: ['酵素阻害', '競合阻害', 'Vmax', 'Km', 'Michaelis-Menten'],
+    correct_rate: 0.71,
   },
   {
     id: 'q034',
-    year: 115,
+    year: 110,
     question_number: 15,
     section: '必須',
     subject: '法規・制度・倫理',
@@ -659,10 +692,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 1,
     explanation: 'インフォームドコンセントは「十分な説明に基づく自発的な同意」。患者が医療者の方針に同意するのではなく、患者自身が情報を理解・吟味して自律的に決定することが本質です。',
     tags: ['インフォームドコンセント', '自律尊重', '倫理', '意思決定'],
+    correct_rate: 0.95,
   },
   {
     id: 'q035',
-    year: 115,
+    year: 110,
     question_number: 20,
     section: '理論',
     subject: '実務',
@@ -678,6 +712,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: '「重大な副作用」欄には死亡・障害・入院等につながる可能性がある副作用が記載されます。頻度は問わず（頻度不明でも記載あり）。軽微な副作用は「その他の副作用」欄に分類されます。',
     tags: ['添付文書', '重大な副作用', '医薬品情報', 'リスク管理'],
+    correct_rate: 0.65,
   },
   // q036〜q050：薬理・病態を中心に追加
   {
@@ -698,6 +733,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 3,
     explanation: 'ジヒドロピリジン系（アムロジピンなど）は血管選択性が高く末梢血管拡張→血圧低下。非ジヒドロピリジン系（ベラパミルなど）は心臓選択性が高く房室伝導抑制→不整脈治療に使用。',
     tags: ['カルシウム拮抗薬', 'ジヒドロピリジン', 'ベラパミル', '血管選択性'],
+    correct_rate: 0.70,
   },
   {
     id: 'q037',
@@ -717,6 +753,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: 'アスピリンはCOX-1のSer530をアセチル化し不可逆的に阻害します。血小板は核を持たずCOX-1を再合成できないため、血小板寿命（約10日）の間TXA2産生が阻害されます。',
     tags: ['アスピリン', 'COX-1', '抗血小板', 'TXA2', '不可逆的阻害'],
+    correct_rate: 0.74,
   },
   {
     id: 'q038',
@@ -736,6 +773,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: 'メトホルミンはeGFR 30mL/min/1.73m²未満で禁忌（乳酸アシドーシスリスク）。eGFR 30〜45は慎重投与。造影剤使用時も一時中止が必要です。',
     tags: ['CKD', 'メトホルミン', '乳酸アシドーシス', 'eGFR', '禁忌'],
+    correct_rate: 0.78,
   },
   {
     id: 'q039',
@@ -755,6 +793,7 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 3,
     explanation: '生理食塩水のNa濃度は154mEq/L。血漿Na濃度は約135〜145mEq/L。等張液ですが血漿よりNaがやや高く大量投与で高クロル血症性アシドーシスのリスクがあります。',
     tags: ['生理食塩水', '輸液', 'Na濃度', '等張液', '高クロル血症'],
+    correct_rate: 0.62,
   },
   {
     id: 'q040',
@@ -774,10 +813,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 3,
     explanation: '高度催吐性化学療法（シスプラチンなど）に対するCINV予防は、5-HT3拮抗薬+NK1拮抗薬（アプレピタント）+デキサメタゾンの3剤が標準です。急性期・遅延期ともにカバーします。',
     tags: ['CINV', '悪心', '制吐薬', '5-HT3拮抗薬', 'NK1拮抗薬', 'シスプラチン'],
+    correct_rate: 0.69,
   },
   {
     id: 'q041',
-    year: 112,
+    year: 107,
     question_number: 125,
     section: '実践',
     subject: '実務',
@@ -793,10 +833,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: '病棟薬剤師の重要業務の一つが「持参薬管理」：入院時に患者が持参した薬を鑑別（名称・規格・用法確認）し、継続・中止・代替を医師に提案します。処方権・診断権は医師にあります。',
     tags: ['病棟薬剤師', '持参薬', '薬薬連携', 'チーム医療'],
+    correct_rate: 0.76,
   },
   {
     id: 'q042',
-    year: 112,
+    year: 107,
     question_number: 130,
     section: '実践',
     subject: '薬理',
@@ -812,10 +853,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: '非定型抗精神病薬はD2受容体への親和性が低めで5-HT2A受容体も遮断するため、錐体外路症状（EPS：振戦・アカシジアなど）が少ないです。ただし体重増加・代謝異常・QT延長などが問題となります。',
     tags: ['非定型抗精神病薬', 'EPS', '錐体外路症状', '統合失調症', 'D2受容体'],
+    correct_rate: 0.63,
   },
   {
     id: 'q043',
-    year: 113,
+    year: 108,
     question_number: 135,
     section: '実践',
     subject: '病態・薬物治療',
@@ -831,10 +873,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: 'バセドウ病（甲状腺機能亢進症）の薬物療法はチアマゾール（メルカゾール）またはプロピルチオウラシルを使用します。レボチロキシンは甲状腺機能低下症の補充療法に使用します。',
     tags: ['バセドウ病', 'チアマゾール', '甲状腺機能亢進症', 'PTU'],
+    correct_rate: 0.72,
   },
   {
     id: 'q044',
-    year: 113,
+    year: 108,
     question_number: 140,
     section: '実践',
     subject: '化学',
@@ -850,10 +893,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: '逆相HPLCは固定相が非極性（疎水性）でODS（C18）修飾シリカが最も一般的。移動相は水系溶媒（水+アセトニトリルなど）。非極性成分ほど長く保持されます。',
     tags: ['HPLC', '逆相', 'ODS', 'C18', '分析化学', 'クロマトグラフィー'],
+    correct_rate: 0.66,
   },
   {
     id: 'q045',
-    year: 114,
+    year: 109,
     question_number: 145,
     section: '実践',
     subject: '法規・制度・倫理',
@@ -869,10 +913,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: '調剤過誤発生時は、まず患者の安全確保（健康被害の確認・対処）が最優先。次いで速やかな報告（管理薬剤師・医師・患者）、記録の保全、再発防止策の実施が必要です。',
     tags: ['調剤過誤', '医療安全', '患者安全', '報告', '薬剤師倫理'],
+    correct_rate: 0.78,
   },
   {
     id: 'q046',
-    year: 114,
+    year: 109,
     question_number: 150,
     section: '実践',
     subject: '物理',
@@ -888,10 +933,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 5,
     explanation: '光分解防止には遮光（褐色瓶・遮光容器・アルミ包装）が有効。窒素封入は酸化分解防止。アルカリ添加は光分解防止にはなりません（むしろ加水分解を促進することも）。',
     tags: ['医薬品安定性', '光分解', '遮光', '保存条件', '製剤'],
+    correct_rate: 0.64,
   },
   {
     id: 'q047',
-    year: 115,
+    year: 110,
     question_number: 155,
     section: '実践',
     subject: '薬理',
@@ -907,10 +953,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 2,
     explanation: 'タクロリムス（FK506）はFKBP12に結合しカルシニューリンを阻害。カルシニューリンはNFATの脱リン酸化（核移行）を担い、IL-2遺伝子発現を促進します。これを阻害することでT細胞活性化を抑制します。',
     tags: ['タクロリムス', 'カルシニューリン', 'IL-2', '免疫抑制', '臓器移植'],
+    correct_rate: 0.75,
   },
   {
     id: 'q048',
-    year: 115,
+    year: 110,
     question_number: 160,
     section: '実践',
     subject: '病態・薬物治療',
@@ -926,10 +973,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 3,
     explanation: 'オピオイド誘発性便秘（OIC）はほぼ必発の副作用で、耐性が生じません。オピオイド開始と同時に酸化マグネシウムなどの緩下薬を予防的に使用します。OIC特異的には末梢性μ受容体拮抗薬（ナルデメジン）も有効です。',
     tags: ['オピオイド', '便秘', 'OIC', '緩和ケア', '予防的投与', 'ナルデメジン'],
+    correct_rate: 0.71,
   },
   {
     id: 'q049',
-    year: 115,
+    year: 110,
     question_number: 165,
     section: '実践',
     subject: '実務',
@@ -945,10 +993,11 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 3,
     explanation: '在宅患者訪問薬剤管理指導（保険薬局）は医師の指示のもと、月4回（末期がん等は週2回まで）算定可能。患者が通院困難であることが要件。薬学的管理指導計画書の策定・提供が必要です。',
     tags: ['在宅医療', '訪問薬剤管理指導', '算定要件', '保険点数', '在宅薬学'],
+    correct_rate: 0.67,
   },
   {
     id: 'q050',
-    year: 115,
+    year: 110,
     question_number: 170,
     section: '実践',
     subject: '薬剤',
@@ -964,5 +1013,6 @@ export const DUMMY_QUESTIONS: Question[] = [
     correct_answer: 1,
     explanation: '無菌調製はISO 5（クラス100、≤3,520粒子/m³）の清浄環境が必要。抗がん薬はバイオハザード対策のため安全キャビネット（垂直層流）を使用。通常の注射剤はクリーンベンチ（水平層流）を使用します。',
     tags: ['無菌調製', 'クリーンベンチ', 'ISO 5', '安全キャビネット', '注射剤', 'GMP'],
+    correct_rate: 0.73,
   },
 ]
