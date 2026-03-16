@@ -1,35 +1,39 @@
+import React, { Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import { AppLayout } from './components/layout/AppLayout'
-import { HomePage } from './pages/HomePage'
-import { PracticePage } from './pages/PracticePage'
-import { QuestionPage } from './pages/QuestionPage'
-import { NotesPage } from './pages/NotesPage'
-import { AnalysisPage } from './pages/AnalysisPage'
-import { LoginPage } from './pages/LoginPage'
+
+const HomePage = React.lazy(() => import('./pages/HomePage').then(m => ({ default: m.HomePage })))
+const PracticePage = React.lazy(() => import('./pages/PracticePage').then(m => ({ default: m.PracticePage })))
+const QuestionPage = React.lazy(() => import('./pages/QuestionPage').then(m => ({ default: m.QuestionPage })))
+const NotesPage = React.lazy(() => import('./pages/NotesPage').then(m => ({ default: m.NotesPage })))
+const AnalysisPage = React.lazy(() => import('./pages/AnalysisPage').then(m => ({ default: m.AnalysisPage })))
+const LoginPage = React.lazy(() => import('./pages/LoginPage').then(m => ({ default: m.LoginPage })))
+
+const Loading = () => <div style={{ padding: '2rem', textAlign: 'center' }}>読み込み中...</div>
 
 export const router = createBrowserRouter([
   {
     path: '/login',
-    element: <LoginPage />,
+    element: <Suspense fallback={<Loading />}><LoginPage /></Suspense>,
   },
   {
     path: '/',
-    element: <AppLayout><HomePage /></AppLayout>,
+    element: <AppLayout><Suspense fallback={<Loading />}><HomePage /></Suspense></AppLayout>,
   },
   {
     path: '/practice',
-    element: <AppLayout><PracticePage /></AppLayout>,
+    element: <AppLayout><Suspense fallback={<Loading />}><PracticePage /></Suspense></AppLayout>,
   },
   {
     path: '/practice/:questionId',
-    element: <AppLayout><QuestionPage /></AppLayout>,
+    element: <AppLayout><Suspense fallback={<Loading />}><QuestionPage /></Suspense></AppLayout>,
   },
   {
     path: '/notes',
-    element: <AppLayout><NotesPage /></AppLayout>,
+    element: <AppLayout><Suspense fallback={<Loading />}><NotesPage /></Suspense></AppLayout>,
   },
   {
     path: '/analysis',
-    element: <AppLayout><AnalysisPage /></AppLayout>,
+    element: <AppLayout><Suspense fallback={<Loading />}><AnalysisPage /></Suspense></AppLayout>,
   },
 ])
