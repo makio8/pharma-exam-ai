@@ -5,8 +5,13 @@ import { PracticePage } from './pages/PracticePage'
 import { QuestionPage } from './pages/QuestionPage'
 import { NotesPage } from './pages/NotesPage'
 import { AnalysisPage } from './pages/AnalysisPage'
+import { LoginPage } from './pages/LoginPage'
 
 export const router = createBrowserRouter([
+  {
+    path: '/login',
+    element: <LoginPage />,
+  },
   {
     path: '/',
     element: <AppLayout><HomePage /></AppLayout>,

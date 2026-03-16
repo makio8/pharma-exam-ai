@@ -63,6 +63,9 @@ export function PracticePage() {
   const [correctStatus, setCorrectStatus] = useState<CorrectStatus>('all')
   const [keyword, setKeyword] = useState('')
 
+  // --- 正答率フィルター（デフォルトON: 60%以上のみ） ---
+  const [easyOnly, setEasyOnly] = useState(true)
+
   // --- セッション設定 ---
   const [sessionCount, setSessionCount] = useState<SessionCount>(10)
   const [randomOrder, setRandomOrder] = useState(false)
@@ -70,6 +73,11 @@ export function PracticePage() {
   // --- フィルタリング ---
   const filteredQuestions = useMemo(() => {
     let result = [...DUMMY_QUESTIONS]
+
+    // 正答率60%以上フィルター
+    if (easyOnly) {
+      result = result.filter((q) => (q.correct_rate ?? 1) >= 0.6)
+    }
 
     if (selectedSubjects.length > 0) {
       result = result.filter((q) => selectedSubjects.includes(q.subject))
@@ -105,7 +113,7 @@ export function PracticePage() {
 
     setCurrentPage(1)
     return result
-  }, [selectedSubjects, selectedYears, selectedSections, correctStatus, keyword, getQuestionResult])
+  }, [easyOnly, selectedSubjects, selectedYears, selectedSections, correctStatus, keyword, getQuestionResult])
 
   // --- セッション開始 ---
   const handleStartSession = () => {
@@ -212,6 +220,23 @@ export function PracticePage() {
               <Radio.Button value="incorrect">不正解</Radio.Button>
               <Radio.Button value="unanswered">未回答</Radio.Button>
             </Radio.Group>
+          </Col>
+          <Col xs={24} sm={12}>
+            <Space>
+              <Text type="secondary">正答率60%以上のみ:</Text>
+              <Switch
+                checked={easyOnly}
+                onChange={setEasyOnly}
+                size="small"
+                checkedChildren="ON"
+                unCheckedChildren="OFF"
+              />
+              {easyOnly && (
+                <Text type="secondary" style={{ fontSize: 12 }}>
+                  （難問を除外中）
+                </Text>
+              )}
+            </Space>
           </Col>
           <Col xs={24}>
             <Input.Search

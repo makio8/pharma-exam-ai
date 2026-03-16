@@ -1,11 +1,14 @@
-import { Layout, Menu, Typography } from 'antd'
+import { Layout, Menu, Typography, Button, Avatar, Tooltip } from 'antd'
 import {
   HomeOutlined,
   ReadOutlined,
   BulbOutlined,
   BarChartOutlined,
+  UserOutlined,
+  LogoutOutlined,
 } from '@ant-design/icons'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useAuth } from '../../hooks/useAuth'
 
 const { Header, Content, Footer } = Layout
 const { Text } = Typography
@@ -23,6 +26,13 @@ interface AppLayoutProps {
 
 export function AppLayout({ children }: AppLayoutProps) {
   const location = useLocation()
+  const navigate = useNavigate()
+  const { user, signOut } = useAuth()
+
+  const handleSignOut = async () => {
+    await signOut()
+    navigate('/')
+  }
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -52,6 +62,33 @@ export function AppLayout({ children }: AppLayoutProps) {
             label: <Link to={item.key}>{item.label}</Link>,
           }))}
         />
+        {/* 認証ステータス */}
+        <div style={{ flexShrink: 0 }}>
+          {user ? (
+            <Tooltip title={`${user.email} でログイン中`}>
+              <Avatar
+                icon={<UserOutlined />}
+                size="small"
+                style={{ cursor: 'pointer', background: '#1890ff', marginRight: 8 }}
+              />
+              <Button
+                type="text"
+                icon={<LogoutOutlined />}
+                size="small"
+                style={{ color: '#8c8c8c' }}
+                onClick={handleSignOut}
+              />
+            </Tooltip>
+          ) : (
+            <Button
+              size="small"
+              onClick={() => navigate('/login')}
+              style={{ color: '#8c8c8c', borderColor: '#434343' }}
+            >
+              ログイン
+            </Button>
+          )}
+        </div>
       </Header>
 
       {/* メインコンテンツ */}
