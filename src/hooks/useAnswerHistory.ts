@@ -1,36 +1,24 @@
-// 回答履歴をlocalStorageで管理するカスタムフック
-import { useState, useCallback } from 'react'
+// 回答履歴をリポジトリ経由で管理するカスタムフック
+import { useState, useCallback, useEffect } from 'react'
 import type { AnswerHistory } from '../types/question'
-
-const STORAGE_KEY = 'answer_history'
-
-function loadHistory(): AnswerHistory[] {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY)
-    if (!raw) return []
-    return JSON.parse(raw) as AnswerHistory[]
-  } catch {
-    return []
-  }
-}
-
-function persistHistory(history: AnswerHistory[]): void {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(history))
-}
+import { answerHistoryRepo } from '../repositories'
 
 export function useAnswerHistory() {
-  const [history, setHistory] = useState<AnswerHistory[]>(loadHistory)
+  const [history, setHistory] = useState<AnswerHistory[]>([])
+  const [loading, setLoading] = useState(true)
+
+  // 初回ロード
+  useEffect(() => {
+    answerHistoryRepo.getAll().then((data) => {
+      setHistory(data)
+      setLoading(false)
+    })
+  }, [])
 
   /** 回答を保存（idは自動生成） */
   const saveAnswer = useCallback((answer: Omit<AnswerHistory, 'id'>) => {
-    const newEntry: AnswerHistory = {
-      ...answer,
-      id: crypto.randomUUID(),
-    }
-    setHistory((prev) => {
-      const next = [...prev, newEntry]
-      persistHistory(next)
-      return next
+    answerHistoryRepo.save(answer).then((newEntry) => {
+      setHistory((prev) => [...prev, newEntry])
     })
   }, [])
 
@@ -44,5 +32,5 @@ export function useAnswerHistory() {
     [history],
   )
 
-  return { history, saveAnswer, getQuestionResult } as const
+  return { history, loading, saveAnswer, getQuestionResult } as const
 }
