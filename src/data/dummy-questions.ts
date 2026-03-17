@@ -1,8 +1,11 @@
-// 問題データ（ダミー200問 + 厚労省実データ）
+// 問題データ（ダミー200問 + 厚労省実データ 第107〜110回）
 // ダミー: 開発用に作成した問題（id: q001〜q200）
-// 実データ: 厚労省 第110回薬剤師国家試験より取得（id: r110-xxx）
+// 実データ: 厚労省 第107〜110回薬剤師国家試験より取得（id: r107-xxx 〜 r110-xxx）
 
 import type { Question } from '../types/question'
+import { EXAM_107_QUESTIONS } from './real-questions/exam-107'
+import { EXAM_108_QUESTIONS } from './real-questions/exam-108'
+import { EXAM_109_QUESTIONS } from './real-questions/exam-109'
 import { EXAM_110_QUESTIONS } from './real-questions/exam-110'
 
 /** ダミー問題（開発用） */
@@ -3128,8 +3131,11 @@ const PRACTICE_QUESTIONS: Question[] = [
   },
 ]
 
-/** 全問題データ（ダミー + 実データを統合） */
+/** 全問題データ（ダミー + 第107〜110回実データを統合） */
 export const DUMMY_QUESTIONS: Question[] = [
   ...PRACTICE_QUESTIONS,
+  ...EXAM_107_QUESTIONS,
+  ...EXAM_108_QUESTIONS,
+  ...EXAM_109_QUESTIONS,
   ...EXAM_110_QUESTIONS,
 ]
