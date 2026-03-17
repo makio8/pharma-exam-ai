@@ -1,9 +1,12 @@
-// 開発用ダミー問題データ（50問・正答率60%以上相当）
-// 実際の問題文は第107〜111回の厚労省公開データから取得予定
+// 問題データ（ダミー200問 + 厚労省実データ）
+// ダミー: 開発用に作成した問題（id: q001〜q200）
+// 実データ: 厚労省 第110回薬剤師国家試験より取得（id: r110-xxx）
 
 import type { Question } from '../types/question'
+import { EXAM_110_QUESTIONS } from './real-questions/exam-110'
 
-export const DUMMY_QUESTIONS: Question[] = [
+/** ダミー問題（開発用） */
+const PRACTICE_QUESTIONS: Question[] = [
   // ===== 薬理 =====
   {
     id: 'q001',
@@ -3123,4 +3126,10 @@ export const DUMMY_QUESTIONS: Question[] = [
     explanation: 'ポリファーマシー（多剤併用、一般に6剤以上）は有害事象リスク増加、相互作用、アドヒアランス低下、転倒リスク上昇等が問題です。処方見直し（deprescribing）が重要です。',
     tags: ['ポリファーマシー', '多剤併用', 'アドヒアランス', '高齢者'], correct_rate: 0.85,
   },
+]
+
+/** 全問題データ（ダミー + 実データを統合） */
+export const DUMMY_QUESTIONS: Question[] = [
+  ...PRACTICE_QUESTIONS,
+  ...EXAM_110_QUESTIONS,
 ]
