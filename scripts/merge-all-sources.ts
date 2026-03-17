@@ -120,14 +120,21 @@ for (const year of years) {
   // 統計
   const withChoices = merged.filter(q => q._has_choices)
   const withAnswer = merged.filter(q => q._has_answer)
-  const appReady = merged.filter(q => q._has_choices && q._has_answer && q.question_text.length > 10)
+  // 選択肢ありの問題 + 画像URLありの問題（選択肢なしでも画像で表示可能）
+  const appReady = merged.filter(q => {
+    if (q._has_choices && q._has_answer && q.question_text.length > 10) return true
+    // 画像URLがあり正答がある問題は、選択肢不足でも画像問題として投入
+    if (q.image_url && q._has_answer && q.question_text.length > 5) return true
+    return false
+  })
   const pdfOnly = merged.filter(q => q._source === 'pdf_only')
+  const imageOnly = appReady.filter(q => !q._has_choices && q.image_url)
 
   console.log(`\n=== 第${year}回 ===`)
   console.log(`全問題: ${merged.length}/345`)
   console.log(`選択肢あり: ${withChoices.length}`)
   console.log(`正答あり: ${withAnswer.length}`)
-  console.log(`アプリ投入可能: ${appReady.length}`)
+  console.log(`アプリ投入可能: ${appReady.length} (うち画像問題: ${imageOnly.length})`)
   console.log(`PDFのみ（解説なし）: ${pdfOnly.length}`)
 
   // アプリ用TS出力（選択肢+正答ありのもの、choicesは5つに制限）

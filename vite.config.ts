@@ -9,6 +9,9 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico'],
+      workbox: {
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB（問題データが大きいため）
+      },
       manifest: {
         name: '国試ノート - 薬剤師国家試験演習',
         short_name: '国試ノート',
@@ -38,6 +41,11 @@ export default defineConfig({
           if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/') || id.includes('node_modules/react-router')) return 'vendor-react'
           if (id.includes('node_modules/antd') || id.includes('node_modules/@ant-design')) return 'vendor-antd'
           if (id.includes('node_modules/@supabase')) return 'vendor-supabase'
+          // 問題データを年度別に分割
+          if (id.includes('real-questions/exam-107')) return 'data-107'
+          if (id.includes('real-questions/exam-108')) return 'data-108'
+          if (id.includes('real-questions/exam-109')) return 'data-109'
+          if (id.includes('real-questions/exam-110')) return 'data-110'
         },
       },
     },
