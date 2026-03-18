@@ -185,7 +185,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】IUPAC命名法による分岐鎖アルキル基の構造式を問う問題\n【正答の根拠】2-メチルブチル基は、ブチル基（炭素4個の直鎖）の2位にメチル基が結合した構造。主鎖に近い炭素から番号をつける。選択肢5が正しい構造。\n【他の選択肢】\n1. ✗ 3-メチルブチル基の構造\n2. ✗ 1,2-ジメチルプロピル基の構造\n3. ✗ 2,2-ジメチルプロピル基の構造\n4. ✗ 1-メチルブチル基の構造\n5. ○ 2-メチルブチル基が正答\n【覚え方💡】アルキル基の命名は「主鎖に近い炭素から番号をつける」のがルール\n【関連知識】イソペンチル基＝3-メチルブチル基、ネオペンチル基＝2,2-ジメチルプロピル基",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q006.png"
   },
   {
     "id": "r103-007",
@@ -198,7 +199,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】不斉中心のR/S表示法を問う問題\n【正答の根拠】R,S表示法では、不斉炭素に結合する4つの置換基に優先順位をつけ、④位を奥にして①→②→③が右回り（時計回り）ならR配置。選択肢5がR配置。\n【他の選択肢】\n1. ✗ S配置（④位が手前で右回り→実際はS体）\n2. ✗ S配置\n3. ✗ S配置（④位が奥で左回り→S体）\n4. ✗ S配置\n5. ○ R配置が正答\n【覚え方💡】「右回り＝R（Right）、左回り＝S（Sinister＝左）」。④位が手前ならR/S逆転\n【関連知識】CIP順位則: 原子番号大→優先順位高。同じなら次の原子で比較",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q007.png"
   },
   {
     "id": "r103-008",
@@ -211,7 +213,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】芳香族性を示さない化合物を問う問題\n【正答の根拠】芳香族性にはヒュッケル則（4n+2個のπ電子）と環全体の平面性が必要。シクロペンタジエニルカチオンはπ電子4個で4n+2を満たさないため芳香族性を示さない。\n【他の選択肢】\n1. ✗ シクロペンタジエニルカチオン：π電子4個→芳香族性なし（正答）\n2. ✗ ピロール：π電子6個→芳香族性あり\n3. ✗ フラン：π電子6個→芳香族性あり\n4. ✗ ピリジン：π電子6個→芳香族性あり\n5. ✗ ピリジニウム：π電子6個→芳香族性あり\n【覚え方💡】「4n+2のπ電子＝ヒュッケル則」。n=0→2個、n=1→6個、n=2→10個\n【関連知識】シクロペンタジエニルアニオン（C₅H₅⁻）はπ電子6個で芳香族性あり",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q008.png"
   },
   {
     "id": "r103-009",
@@ -292,7 +295,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】心臓から肺に血液を送る肺動脈の位置を問う問題\n【正答の根拠】肺動脈は右心室から肺へ血液を送る血管であり、図中の4番が該当する。\n【他の選択肢】\n1. ✗ 上大静脈\n2. ✗ 下大静脈\n3. ✗ 肺静脈\n4. ○ 肺動脈が正答\n5. ✗ 大動脈\n【覚え方💡】「右心→肺動脈→肺→肺静脈→左心→大動脈→全身」の血液循環の順序で覚える\n【関連知識】肺動脈は静脈血（CO₂が多い血液）を運ぶ。動脈＝心臓から出る血管の意味",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q011.png"
   },
   {
     "id": "r103-012",
@@ -1415,7 +1419,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】ヘム鉄に配位結合してCYP3A4を阻害する薬物を問う問題\n【正答の根拠】シメチジンはイミダゾール環を持ち、イミダゾール環の窒素がCYPのヘム鉄に配位結合して酵素活性を阻害する。\n【他の選択肢】\n1. ✗ カナマイシン（アミノグリコシド系抗生物質）\n2. ✗ メマンチン（NMDA受容体拮抗薬）\n3. ○ シメチジンが正答\n4. ✗ ウベニメクス（免疫賦活薬）\n5. ✗ ロキソプロフェン（NSAIDs）\n【覚え方💡】「イミダゾール環・トリアゾール環→ヘム鉄に配位→CYP阻害」。シメチジン、アゾール系抗真菌薬が代表例\n【関連知識】CYP阻害薬の併用は薬物相互作用の原因。他のH2ブロッカー（ファモチジン等）にはこの作用が弱い",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q045.png"
   },
   {
     "id": "r103-046",
@@ -2958,7 +2963,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】分子間相互作用と支配的に働く現象の正しい組合せを問う問題（2つ選択）\n【正答の根拠】正答は2と3。イオン-双極子相互作用は水和イオンの形成に関与。分散力（ファンデルワールス力）はn-ヘキサンがメタンより沸点が高い理由。\n【他の選択肢】\n1. ✗ ミセル形成は疎水性相互作用（静電的相互作用ではない）\n2. ○ イオン-双極子相互作用→水和イオン\n3. ○ 分散力→分子量大でVDW力増強→沸点上昇\n4. ✗ NaCl結晶形成はイオン-双極子相互作用（水素結合ではない）\n5. ✗ DNA塩基対は水素結合（疎水性相互作用ではない）\n【覚え方💡】分子間力の強さ：共有結合>イオン結合>水素結合>双極子相互作用>分散力\n【関連知識】分散力は全ての分子に働く。分子量増大→電子雲の変形しやすさ↑→分散力↑",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q091.png"
   },
   {
     "id": "r103-092",
@@ -3171,7 +3177,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】確認試験の対象医薬品・試液・結果の正しい組合せを問う問題（2つ選択）\n【正答の根拠】正答は1と2。ナプロキセン（カルボキシ基）→ヒドロキサム酸鉄反応→赤紫色。ヒドロコルチゾン（α-ケトール基）→フェーリング試液→赤色沈殿。\n【他の選択肢】\n1. ○ ナプロキセン-カルボキシ基-赤紫色\n2. ○ ヒドロコルチゾン-α-ケトール基-赤色沈殿\n3. ✗ カイニン酸（イミノ酸）はニンヒドリンで黄色（赤紫ではない）\n4. ✗ アミノ安息香酸エチル（芳香族1級アミン）→津田試薬→赤色\n5. ✗ レボドパ（フェノール性OH）→4-アミノアンチピリン→赤色\n【覚え方💡】確認試験の官能基と試薬をペアで覚える。「α-ケトール→フェーリング→赤沈殿」\n【関連知識】芳香族1級アミンのジアゾカップリング反応、フェノール性OHの4-アミノアンチピリン反応も頻出",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q098.png"
   },
   {
     "id": "r103-099",
@@ -3418,7 +3425,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】アルドラーゼが触媒するアルドール反応の生成物構造を問う問題\n【正答の根拠】解糖系のアルドラーゼはフルクトース1,6-ビスリン酸をジヒドロキシアセトンリン酸とグリセルアルデヒド3-リン酸に分解（逆アルドール反応）。選択肢3の構造が正しい。\n【他の選択肢】\n1. ✗ 構造が異なる\n2. ✗ 構造が異なる\n3. ○ 正しいアルドール反応生成物\n4. ✗ 構造が異なる\n5. ✗ 構造が異なる\n【覚え方💡】「アルドール反応＝ケトン/アルデヒドのα炭素とカルボニルの付加→β-ヒドロキシカルボニル」\n【関連知識】解糖系のアルドラーゼ反応は可逆。糖新生では逆方向（アルドール縮合方向）に進行",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q106.png"
   },
   {
     "id": "r103-107",
@@ -3431,7 +3439,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】¹H-NMRスペクトルから化合物構造を推定する問題\n【正答の根拠】4ppm付近に3H分の一重線→メトキシ基（-OCH₃）。他にメチル基のシグナルなし→選択肢2の構造が該当。\n【他の選択肢】\n1. ✗ メトキシ基を持たない構造\n2. ○ メトキシ基を有し他にメチル基なしの構造（正答）\n3. ✗ メトキシ基を持たない構造\n4. ✗ メトキシ基以外にメチル基がある構造\n5. ✗ メトキシ基以外にメチル基がある構造\n【覚え方💡】「OCH₃＝δ3.5-4.0ppm付近の一重線（3H）」。NMRのシグナル位置と積分値で構造決定\n【関連知識】NMR化学シフト：TMS基準0ppm、アルキル0-2、OCH₃ 3.5-4.0、ArH 6-9ppm",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q107.png"
   },
   {
     "id": "r103-108",
@@ -3872,7 +3881,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】問119と連問。正答は2と3。タンパク質Xの比活性は精製により向上。ハイブリドーマ作製にはマウス骨髄腫細胞を使用。\n【他の選択肢】\n1. ✗ SDS処理で酵素活性は失われる\n2. ○ 比活性は精製後（試料ウ）で高い\n3. ○ ハイブリドーマ作製にマウス骨髄腫細胞使用\n4. ✗ モノクローナル抗体は単一エピトープのみ認識\n5. ✗ ウエスタンブロットでは細胞内局在は同定できない（免疫染色が必要）\n【覚え方💡】「モノクローナル抗体＝1種類のB細胞由来＝1つのエピトープのみ認識」\n【関連知識】ポリクローナル抗体は複数エピトープを認識。細胞内局在は免疫蛍光染色やサブセル分画で解析",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q120.png"
   },
   {
     "id": "r103-121",
@@ -4293,7 +4303,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】抗がん薬の薬理を問う問題\n【正答の根拠】元データに基づく抗がん薬の分類と作用機序。\n【他の選択肢】\n（元データに基づく選択肢情報）\n【覚え方💡】「アルキル化薬＝DNA架橋。代謝拮抗薬＝DNA合成阻害。微小管阻害薬＝有糸分裂阻害」\n【関連知識】分子標的薬：イマチニブ（BCR-ABL）、トラスツズマブ（HER2）、リツキシマブ（CD20）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q133.png"
   },
   {
     "id": "r103-134",
@@ -4412,7 +4423,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q137.png"
   },
   {
     "id": "r103-138",
@@ -5773,7 +5785,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q178.png"
   },
   {
     "id": "r103-179",
@@ -5786,7 +5799,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q179.png"
   },
   {
     "id": "r103-180",
@@ -6257,7 +6271,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q193.png"
   },
   {
     "id": "r103-194",
@@ -6460,7 +6475,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】実践問題（複合問題）\n【正答の根拠】元データに基づく。\n【他の選択肢】\n（元データに基づく選択肢情報）\n【覚え方💡】該当分野の基本知識を整理して覚える\n【関連知識】元データの関連トピックを確認",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q199.png"
   },
   {
     "id": "r103-200",
@@ -6735,7 +6751,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】実践問題（複合問題）\n【正答の根拠】元データに基づく。\n【他の選択肢】\n（元データに基づく選択肢情報）\n【覚え方💡】該当分野の基本知識を整理して覚える\n【関連知識】元データの関連トピックを確認",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q207.png"
   },
   {
     "id": "r103-208",
@@ -6802,7 +6819,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】実践問題（複合問題）\n【正答の根拠】元データに基づく。\n【他の選択肢】\n（元データに基づく選択肢情報）\n【覚え方💡】該当分野の基本知識を整理して覚える\n【関連知識】元データの関連トピックを確認",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q209.png"
   },
   {
     "id": "r103-210",
@@ -6849,7 +6867,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】実践問題（複合問題）\n【正答の根拠】元データに基づく。\n【他の選択肢】\n（元データに基づく選択肢情報）\n【覚え方💡】該当分野の基本知識を整理して覚える\n【関連知識】元データの関連トピックを確認",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q211.png"
   },
   {
     "id": "r103-212",
@@ -6912,7 +6931,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q213.png"
   },
   {
     "id": "r103-214",
@@ -7143,7 +7163,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】実践問題（複合問題）\n【正答の根拠】元データに基づく。\n【他の選択肢】\n（元データに基づく選択肢情報）\n【覚え方💡】該当分野の基本知識を整理して覚える\n【関連知識】元データの関連トピックを確認",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q219.png"
   },
   {
     "id": "r103-220",
@@ -7210,7 +7231,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題（複合問題）\n【正答の根拠】元データに基づく。\n【他の選択肢】\n（元データに基づく選択肢情報）\n【覚え方💡】該当分野の基本知識を整理して覚える\n【関連知識】元データの関連トピックを確認",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q221.png"
   },
   {
     "id": "r103-222",
@@ -7331,7 +7353,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q224.png"
   },
   {
     "id": "r103-225",
@@ -7506,7 +7529,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は4。詳細な問題文・選択肢が不完全。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q228.png"
   },
   {
     "id": "r103-229",
@@ -7519,7 +7543,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は2。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q229.png"
   },
   {
     "id": "r103-230",
@@ -8082,7 +8107,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q247.png"
   },
   {
     "id": "r103-248",
@@ -8129,7 +8155,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q249.png"
   },
   {
     "id": "r103-250",
@@ -8172,7 +8199,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q251.png"
   },
   {
     "id": "r103-252",
@@ -8215,7 +8243,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q253.png"
   },
   {
     "id": "r103-254",
@@ -8262,7 +8291,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q255.png"
   },
   {
     "id": "r103-256",
@@ -8309,7 +8339,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q257.png"
   },
   {
     "id": "r103-258",
@@ -8522,7 +8553,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q264.png"
   },
   {
     "id": "r103-265",
@@ -8535,7 +8567,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q265.png"
   },
   {
     "id": "r103-266",
@@ -8582,7 +8615,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q267.png"
   },
   {
     "id": "r103-268",
@@ -8595,7 +8629,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q268.png"
   },
   {
     "id": "r103-269",
@@ -8608,7 +8643,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q269.png"
   },
   {
     "id": "r103-270",
@@ -8655,7 +8691,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q271.png"
   },
   {
     "id": "r103-272",
@@ -8702,7 +8739,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q273.png"
   },
   {
     "id": "r103-274",
@@ -8821,7 +8859,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q277.png"
   },
   {
     "id": "r103-278",
@@ -8868,7 +8907,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q279.png"
   },
   {
     "id": "r103-280",
@@ -8915,7 +8955,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q281.png"
   },
   {
     "id": "r103-282",
@@ -8962,7 +9003,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q283.png"
   },
   {
     "id": "r103-284",
@@ -9073,7 +9115,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q287.png"
   },
   {
     "id": "r103-288",
@@ -9120,7 +9163,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q289.png"
   },
   {
     "id": "r103-290",
@@ -9167,7 +9211,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q291.png"
   },
   {
     "id": "r103-292",
@@ -9214,7 +9259,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q293.png"
   },
   {
     "id": "r103-294",
@@ -9261,7 +9307,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q295.png"
   },
   {
     "id": "r103-296",
@@ -9444,7 +9491,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q301.png"
   },
   {
     "id": "r103-302",
@@ -9491,7 +9539,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q303.png"
   },
   {
     "id": "r103-304",
@@ -9538,7 +9587,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q305.png"
   },
   {
     "id": "r103-306",
@@ -9585,7 +9635,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q307.png"
   },
   {
     "id": "r103-308",
@@ -9632,7 +9683,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q309.png"
   },
   {
     "id": "r103-310",
@@ -9679,7 +9731,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q311.png"
   },
   {
     "id": "r103-312",
@@ -9726,7 +9779,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q313.png"
   },
   {
     "id": "r103-314",
@@ -9773,7 +9827,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q315.png"
   },
   {
     "id": "r103-316",
@@ -9948,7 +10003,8 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q321.png"
   },
   {
     "id": "r103-322",
@@ -10735,6 +10791,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データの解説に基づく。\n【他の選択肢】\n（選択肢データなし）\n【覚え方💡】該当問題の元データを確認してください\n【関連知識】該当問題の元データを確認してください",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/103/q345.png"
   }
 ]

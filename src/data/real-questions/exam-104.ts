@@ -219,7 +219,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】最も塩基性が強い化合物（グアニジン）を問う問題\n【正答の根拠】グアニジンはプロトンを受け取った共役酸が3つの窒素に共鳴安定化されるため、極めて強い塩基性を示す。\n【他の選択肢】\n1. ○ グアニジンが最も塩基性が強い（正答）\n2. ✗ アセトアミドのN原子の非共有電子対はカルボニルと共鳴し非局在化→塩基性弱い\n3. ✗ エチルアミンはsp3のN原子で塩基性を示すがグアニジンより弱い\n4. ✗ インドールのN原子の非共有電子対は芳香族性に寄与し非局在化→塩基性ほぼなし\n5. ✗ ピリミジンはsp2のN原子で塩基性を示すがグアニジンより弱い\n【覚え方💡】「グアニジン＝共役酸が超安定＝超強塩基」。アルギニンの側鎖にもグアニジン基がある（pKa約12.5）。\n【関連知識】塩基性の強さ＝共役酸の安定性で決まる。非共有電子対の局在性がポイント。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q007.png"
   },
   {
     "id": "r104-008",
@@ -232,7 +233,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】ブタンの最も安定な立体配座（アンチ型）を問う問題\n【正答の根拠】ブタンのC2−C3結合を回転させた場合、2つのメチル基が最も離れるアンチ型が立体反発が最小で最も安定である。\n【他の選択肢】\n1. ○ アンチ型が最も安定（正答）\n2. ✗ ゴーシュ型（メチル基間60°）は立体反発あり\n3. ✗ ゴーシュ型\n4. ✗ ゴーシュ型\n5. ✗ ゴーシュ型\n【覚え方💡】「アンチ＝180°で最遠＝最安定」「ゴーシュ＝60°で近い＝やや不安定」「重なり型＝最不安定」。Newman投影式で判断。\n【関連知識】エタンの回転障壁は約12 kJ/mol。ブタンではメチル基間のゴーシュ相互作用が約3.8 kJ/mol。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q008.png"
   },
   {
     "id": "r104-009",
@@ -245,7 +247,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】ヒスタミンに含まれる複素環（イミダゾール）を問う問題\n【正答の根拠】ヒスタミンはイミダゾール環にエチルアミン側鎖が結合した構造を持つ。ヒスチジンの脱炭酸により生合成される。\n【他の選択肢】\n1. ✗ ピリダジンは6員環に隣接する2つのN原子\n2. ✗ ピリミジンは6員環の1,3位にN原子\n3. ✗ ピラジンは6員環の1,4位にN原子\n4. ✗ ピラゾールは5員環の隣接する2つのN原子\n5. ○ イミダゾールは5員環の1,3位にN原子（正答）\n【覚え方💡】「ヒスタミン＝イミダゾール」「ジアジン系：ピリダジン(1,2)・ピリミジン(1,3)・ピラジン(1,4)」。5員環はピラゾール(隣接)・イミダゾール(離れ)。\n【関連知識】H1受容体→アレルギー、H2受容体→胃酸分泌、H3受容体→中枢神経。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q009.png"
   },
   {
     "id": "r104-010",
@@ -292,7 +295,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】聴覚器の模式図から鼓膜を同定する問題\n【正答の根拠】鼓膜は外耳と中耳の境界に位置する薄い膜で、外部からの音波を振動に変換する。図中の5が鼓膜に該当する。\n【他の選択肢】\n1. ✗ 耳小骨（ツチ骨）\n2. ✗ 半規管\n3. ✗ 蝸牛\n4. ✗ 前庭\n5. ○ 鼓膜（正答）\n【覚え方💡】音の伝達順：「鼓膜→耳小骨→蝸牛（音の感知）」。平衡感覚は前庭・半規管が担当。\n【関連知識】耳小骨は3つ（ツチ骨・キヌタ骨・アブミ骨）で人体最小の骨。蝸牛のコルチ器が聴覚受容器。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q011.png"
   },
   {
     "id": "r104-012",
@@ -339,7 +343,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】RNAを構成する糖（D−リボース）の構造を問う問題\n【正答の根拠】D−リボースは五炭糖（ペントース）で、RNAの構成糖。2'位にOH基を持つ点がDNAの構成糖D−デオキシリボースとの違い。\n【他の選択肢】\n1. ✗ D−グルコース（六炭糖）\n2. ✗ D−ガラクトース（六炭糖）\n3. ✗ D−デオキシリボース（DNAの構成糖）\n4. ○ D−リボース（RNAの構成糖、正答）\n5. ✗ D−フルクトース（六炭糖）\n【覚え方💡】「RNA＝リボース、DNA＝デオキシリボース」。デオキシ＝酸素が1つ少ない（2'位のOH→H）。\n【関連知識】ヌクレオシド＝糖＋塩基、ヌクレオチド＝糖＋塩基＋リン酸。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q013.png"
   },
   {
     "id": "r104-014",
@@ -3004,7 +3009,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】日本薬局方の確認試験の対象・操作・結果の組合せを問う問題\n【正答の根拠】フルオシノニドのフッ化物反応とアセタゾラミドの硫黄反応が正しい組合せ（正答1,2）。要確認：複数正答問題。\n【他の選択肢】\n1. ○ フルオシノニド＋フッ化物反応（正答の一つ）\n2. ○ アセタゾラミド＋硫化水素反応（正答の一つ）\n3. ✗ イオタラム酸は紫色ヨウ素ガス（炎色ではない）\n4. ✗ デフェロキサミンはヒドロキサム酸反応で濃赤色\n5. ✗ インドメタシンは炎色反応で緑色\n【覚え方💡】元素別確認試験：「F→ガラス腐食」「S→H2S→酢酸鉛紙黒変」「I→紫色蒸気」「Cl→緑色炎色」\n【関連知識】日本薬局方の確認試験は化学的同定法の基礎。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q092.png"
   },
   {
     "id": "r104-093",
@@ -3311,7 +3317,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】求核置換反応（SN反応）を問う問題\n【正答の根拠】ゲラニル二リン酸へのSN1反応（選択肢1正）、S-アデノシルメチオニンへのSN2反応（選択肢2正）。\n【他の選択肢】\n1. ○ SN1反応（正答の一つ）\n2. ○ SN2反応（正答の一つ）\n3. ✗ 脱炭酸反応\n4. ✗ 脱水反応\n5. ✗ 逆アルドール反応\n【覚え方💡】「SN1＝1段階（カルボカチオン経由）」「SN2＝2段階（背面攻撃）」\n【関連知識】生体内のメチル基転移はSAMからのSN2反応が多い。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q102.png"
   },
   {
     "id": "r104-103",
@@ -3448,7 +3455,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】コカイン構造を基に創出された局所麻酔薬を問う問題\n【正答の根拠】プロカインはコカインの構造を単純化して合成された局所麻酔薬。選択肢4が該当。\n【他の選択肢】\n1. ✗ アンレキサノクスは抗アレルギー薬\n2. ✗ ホマトロピンは散瞳薬\n3. ✗ ネオスチグミンはChE阻害薬\n4. ○ プロカイン（正答）\n5. ✗ スキサメトニウムは筋弛緩薬\n【覚え方💡】「コカイン→プロカイン→リドカイン」の局所麻酔薬の歴史。共通構造：芳香環-エステル/アミド-アミン。\n【関連知識】エステル型（プロカイン）は血漿ChEで分解。アミド型（リドカイン）は肝代謝。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q107.png"
   },
   {
     "id": "r104-108",
@@ -3665,7 +3673,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 6,
     "explanation": "【ポイント】チミン二量体のヌクレオチド除去修復の酵素を問う問題\n【正答の根拠】ア=エンドヌクレアーゼ、イ=DNAヘリカーゼ、ウ=DNAポリメラーゼI、エ=DNAリガーゼ。選択肢6が正答。\n【他の選択肢】\n（画像問題のため選択肢の詳細は問題による）\n【覚え方💡】「切る(ヌクレアーゼ)→ほどく(ヘリカーゼ)→合成(ポリメラーゼ)→つなぐ(リガーゼ)」\n【関連知識】紫外線DNA損傷はチミン二量体が代表。色素性乾皮症(XP)はNER欠損。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q114.png"
   },
   {
     "id": "r104-115",
@@ -4086,7 +4095,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】硫酸転移酵素の補酵素を問う問題\n【正答の根拠】PAPS（3'-ホスホアデノシン-5'-ホスホスルフェート）が硫酸転移酵素の補酵素。選択肢2。\n【他の選択肢】\n1. ✗ グルタチオンはGST転移酵素の補酵素\n2. ○ PAPS（正答）\n3. ✗ NADPは脱水素酵素の補酵素\n4. ✗ アセチルCoAはNAT酵素の補酵素\n5. ✗ UDP-グルクロン酸はUGT酵素の補酵素\n【覚え方💡】第II相代謝の補酵素：「硫酸=PAPS」「グルクロン酸=UDPGA」「グルタチオン=GSH」「アセチル=AcCoA」\n【関連知識】第II相代謝は一般に薬物の水溶性を上げて排泄を促進。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q127.png"
   },
   {
     "id": "r104-128",
@@ -4475,7 +4485,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（問137-140連問の問138）（要確認）\n【正答の根拠】β酸化の反応：aからbへFAD必要（選択肢1正）。dからe,fへCoASHが求核剤（選択肢4正）。\n【他の選択肢】\n（連問のため問137の解説を参照）\n【覚え方💡】「β酸化：脱水素(FAD)→水和→脱水素(NAD+)→チオリシス(CoASH)」\n【関連知識】β酸化1回転でアセチルCoA+FADH2+NADH各1分子生成。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q138.png"
   },
   {
     "id": "r104-139",
@@ -4488,7 +4499,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（問137-140連問の問139）（要確認）\n【正答の根拠】タンデムマス法：1段目で選択されるイオン＝プリカーサーイオン（選択肢3正）。アミノ酸等の一斉分析に有用（選択肢5正）。\n【他の選択肢】\n（連問のため問137の解説を参照）\n【覚え方💡】「タンデムマス＝MS/MS＝直列配置（並列ではない）」「プリカーサー→CID→プロダクトイオン」\n【関連知識】新生児マススクリーニングでアミノ酸代謝異常・有機酸代謝異常・脂肪酸代謝異常を検出。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q139.png"
   },
   {
     "id": "r104-140",
@@ -4501,7 +4513,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（問137-140連問の問140）（要確認）\n【正答の根拠】タンデムマス法の測定結果と診断基準に基づく疾患判定と栄養療法。\n【他の選択肢】\n（連問のため問137の解説を参照）\n【覚え方💡】「CPT-1欠損＝C0/(C16+C18)>100」「VLCAD欠損＝C14:1>0.4」「MCAD欠損＝C8>0.3」\n【関連知識】脂肪酸代謝異常の栄養療法：異常な脂肪酸を避け代替エネルギー源を供給。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q140.png"
   },
   {
     "id": "r104-141",
@@ -5658,7 +5671,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】コーティング製剤の溶出性とpH依存性を問う問題\n【正答の根拠】pH1.2と6.0で溶出低く、pH7.0で溶出→腸溶性コーティング。メタクリル酸コポリマーSが基剤（選択肢3正）。\n【他の選択肢】\n1. ✗ 即放性顆粒はpH非依存で溶出\n2. ✗ 即放性外層もpH非依存\n3. ○ メタクリル酸コポリマーSコーティング（正答）\n4. ✗ ヒプロメロースコーティングは胃溶性\n5. ✗ 即放性はpH非依存\n【覚え方💡】「腸溶性基剤＝メタクリル酸コポリマー・ヒプロメロースフタル酸エステル」「pH≧7で溶出」\n【関連知識】腸溶性製剤は胃酸で分解される薬物や胃粘膜刺激が強い薬物に使用。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q175.png"
   },
   {
     "id": "r104-176",
@@ -6201,7 +6215,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（問190-191連問の問191）（要確認）\n【正答の根拠】問190の解説を参照。クロミプラミン＝NA+5-HT再取り込み阻害。メチルフェニデート＝DA+NA再取り込み阻害。\n【他の選択肢】\n（連問のため問190の解説を参照）\n【覚え方💡】「三環系＝NA+5-HT再取り込み阻害」「メチルフェニデート＝DA+NA再取り込み阻害」\n【関連知識】SSRI＝5-HT選択的。SNRI＝5-HT+NA。NaSSA＝α2遮断。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q191.png"
   },
   {
     "id": "r104-192",
@@ -6268,7 +6283,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（問192-193連問の問193）（要確認）\n【正答の根拠】問192の解説を参照。スピロノラクトンによる女性化乳房＝アンドロゲン受容体遮断+プロゲステロン受容体遮断。\n【他の選択肢】\n（連問のため問192の解説を参照）\n【覚え方💡】「スピロノラクトン＝非選択的→アンドロゲン・プロゲステロン受容体にも作用」\n【関連知識】エプレレノンはアルドステロン受容体選択性が高く、性ホルモン関連副作用が少ない。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q193.png"
   },
   {
     "id": "r104-194",
@@ -6335,7 +6351,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（問194-195連問の問195）（要確認）\n【正答の根拠】問194の解説を参照。オセルタミビル＝ノイラミニダーゼ阻害。カルボシステイン＝粘液修復。\n【他の選択肢】\n（連問のため問194の解説を参照）\n【覚え方💡】「カルボシステイン＝粘液成分調整（フコムチン↓シアロムチン↑）」\n【関連知識】アンブロキソールは肺サーファクタント分泌促進+粘液溶解。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q195.png"
   },
   {
     "id": "r104-196",
@@ -6402,7 +6419,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": "解なし",
     "explanation": "【ポイント】問題データ不完全（問196-197連問の問197）（要確認）\n【正答の根拠】問196の解説を参照。FPIA法の代替としてEMIT法で再測定。\n【他の選択肢】\n（連問のため問196の解説を参照）\n【覚え方💡】「FPIA＝蛍光偏光」「EMIT＝酵素増幅」「サンドイッチELISA＝低分子に不適」\n【関連知識】TDM対象薬：ジゴキシン、テオフィリン、アミノグリコシド、バンコマイシン等。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q197.png"
   },
   {
     "id": "r104-198",
@@ -6645,7 +6663,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（問202-203連問の問203）（要確認）\n【正答の根拠】問202の解説を参照。リファンピシンの紫外可視吸収スペクトルと尿着色の関係。\n【他の選択肢】\n（連問のため問202の解説を参照）\n【覚え方💡】「可視光領域の吸収＝補色が見える」「青-緑の吸収→赤-橙色に見える」\n【関連知識】吸光度A=-log(T)。紫外線測定には石英セルが必要。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q203.png"
   },
   {
     "id": "r104-204",
@@ -6712,7 +6731,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（問204-205連問の問205）（要確認）\n【正答の根拠】問204の解説を参照。ドルトンの法則と酸素解離曲線のBohr効果。\n【他の選択肢】\n（連問のため問204の解説を参照）\n【覚え方💡】「Bohr効果＝pH低下で酸素親和性低下＝右方移動」\n【関連知識】P50＝Hb酸素飽和度50%のPaO2。正常約27Torr。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q205.png"
   },
   {
     "id": "r104-206",
@@ -6779,7 +6799,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（問206-207連問の問207）（要確認）\n【正答の根拠】問206の解説を参照。配位子Bの方が交換されにくい（塩基性が高い）。\n【他の選択肢】\n（連問のため問206の解説を参照）\n【覚え方💡】「配位子の塩基性高い→中心金属に強く結合→交換されにくい」\n【関連知識】オキサリプラチンのDNA架橋形成が抗がん作用の本体。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q207.png"
   },
   {
     "id": "r104-208",
@@ -6846,7 +6867,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（問208-209連問の問209）（要確認）\n【正答の根拠】問208の解説を参照。プラスグレルの活性化にはエステラーゼ+CYPが関与。\n【他の選択肢】\n（連問のため問208の解説を参照）\n【覚え方💡】「チエノピリジン系＝チクロピジン・クロピドグレル・プラスグレル」\n【関連知識】活性代謝物CはP2Y12受容体と不可逆的に共有結合。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q209.png"
   },
   {
     "id": "r104-210",
@@ -6913,7 +6935,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（問210-211連問の問211）（要確認）\n【正答の根拠】問210の解説を参照。ブデソニドのアセタール構造が加水分解で開裂。\n【他の選択肢】\n（連問のため問210の解説を参照）\n【覚え方💡】「アセタール加水分解→OH基2つ増加→水溶性向上→排泄促進」\n【関連知識】ブデソニドは肝初回通過効果が大きく全身性副作用が少ない。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q211.png"
   },
   {
     "id": "r104-212",
@@ -6980,7 +7003,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（問212-213連問の問213）（要確認）\n【正答の根拠】問212の解説を参照。バラシクロビル＝アシクロビル+L-バリンのエステル結合プロドラッグ。\n【他の選択肢】\n（連問のため問212の解説を参照）\n【覚え方💡】「PEPT1（ペプチドトランスポーター）経由で吸収率向上」\n【関連知識】アシクロビルはウイルスのチミジンキナーゼで最初のリン酸化を受ける。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q213.png"
   },
   {
     "id": "r104-214",
@@ -7027,7 +7051,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（問214-215連問の問215）（要確認）\n【正答の根拠】問214の解説を参照。グリチルリチン酸の加水分解産物＝グリチルレチン酸。\n【他の選択肢】\n（連問のため問214の解説を参照）\n【覚え方💡】「グリチルリチン酸＝配糖体→グリチルレチン酸＝アグリコン」\n【関連知識】バイカリン→バイカレイン。ゲニポシド→ゲニピン。配糖体の加水分解の比較。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q215.png"
   },
   {
     "id": "r104-216",
@@ -7094,7 +7119,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（問216-217連問の問217）（要確認）\n【正答の根拠】問216の解説を参照。ADH過剰→集合管で水再吸収促進→低Na血症。\n【他の選択肢】\n（連問のため問216の解説を参照）\n【覚え方💡】「ADH＝バソプレシン＝V2受容体→アクアポリン2発現→水再吸収↑」\n【関連知識】トルバプタンはV2受容体遮断薬で自由水排泄を促進。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q217.png"
   },
   {
     "id": "r104-218",
@@ -7229,7 +7255,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（問220-221連問の問221）（要確認）\n【正答の根拠】問220の解説を参照。ドネペジルOD錠1日1回が最適。\n【他の選択肢】\n（連問のため問220の解説を参照）\n【覚え方💡】「ドネペジル＝ChE阻害＝1日1回」「リバスチグミンパッチ＝ChE+BuChE阻害」\n【関連知識】ドネペジルはAD治療薬で最初に承認された薬剤。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q221.png"
   },
   {
     "id": "r104-222",
@@ -7272,7 +7299,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（問222-223連問の問223）（要確認）\n【正答の根拠】問222の解説を参照。レボドパの脱炭酸反応にPLP（VitB6）が関与。\n【他の選択肢】\n（連問のため問222の解説を参照）\n【覚え方💡】「PLP＝ピリドキサルリン酸＝アミノ酸代謝の万能補酵素」\n【関連知識】VitB6はトランスアミナーゼ・脱炭酸酵素・セリンデヒドラターゼ等の補酵素。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q223.png"
   },
   {
     "id": "r104-224",
@@ -7339,7 +7367,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（問224-225連問の問225）（要確認）\n【正答の根拠】問224の解説を参照。エピペンは太もも外側に注射（お尻は不適）。\n【他の選択肢】\n（連問のため問224の解説を参照）\n【覚え方💡】「エピペン＝太もも外側＝衣服の上からでもOK」\n【関連知識】アナフィラキシー発症時はまずエピペン→119番→仰臥位（足を挙上）。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q225.png"
   },
   {
     "id": "r104-226",
@@ -8058,7 +8087,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q247.png"
   },
   {
     "id": "r104-248",
@@ -8105,7 +8135,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢4。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q249.png"
   },
   {
     "id": "r104-250",
@@ -8152,7 +8183,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q251.png"
   },
   {
     "id": "r104-252",
@@ -8199,7 +8231,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q253.png"
   },
   {
     "id": "r104-254",
@@ -8246,7 +8279,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢4。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q255.png"
   },
   {
     "id": "r104-256",
@@ -8293,7 +8327,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢5。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q257.png"
   },
   {
     "id": "r104-258",
@@ -8408,7 +8443,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢4。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q261.png"
   },
   {
     "id": "r104-262",
@@ -8421,7 +8457,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q262.png"
   },
   {
     "id": "r104-263",
@@ -8434,7 +8471,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q263.png"
   },
   {
     "id": "r104-264",
@@ -8515,7 +8553,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢5。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q266.png"
   },
   {
     "id": "r104-267",
@@ -8528,7 +8567,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢5。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q267.png"
   },
   {
     "id": "r104-268",
@@ -8575,7 +8615,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢5。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q269.png"
   },
   {
     "id": "r104-270",
@@ -8618,7 +8659,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q271.png"
   },
   {
     "id": "r104-272",
@@ -8665,7 +8707,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q273.png"
   },
   {
     "id": "r104-274",
@@ -8712,7 +8755,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢5。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q275.png"
   },
   {
     "id": "r104-276",
@@ -8759,7 +8803,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q277.png"
   },
   {
     "id": "r104-278",
@@ -8942,7 +8987,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q283.png"
   },
   {
     "id": "r104-284",
@@ -8989,7 +9035,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q285.png"
   },
   {
     "id": "r104-286",
@@ -9036,7 +9083,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q287.png"
   },
   {
     "id": "r104-288",
@@ -9083,7 +9131,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q289.png"
   },
   {
     "id": "r104-290",
@@ -9130,7 +9179,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q291.png"
   },
   {
     "id": "r104-292",
@@ -9177,7 +9227,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q293.png"
   },
   {
     "id": "r104-294",
@@ -9224,7 +9275,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q295.png"
   },
   {
     "id": "r104-296",
@@ -9271,7 +9323,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q297.png"
   },
   {
     "id": "r104-298",
@@ -9318,7 +9371,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢4。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q299.png"
   },
   {
     "id": "r104-300",
@@ -9501,7 +9555,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q305.png"
   },
   {
     "id": "r104-306",
@@ -9548,7 +9603,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q307.png"
   },
   {
     "id": "r104-308",
@@ -9595,7 +9651,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q309.png"
   },
   {
     "id": "r104-310",
@@ -9774,7 +9831,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q315.png"
   },
   {
     "id": "r104-316",
@@ -9821,7 +9879,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q317.png"
   },
   {
     "id": "r104-318",
@@ -9868,7 +9927,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢4。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q319.png"
   },
   {
     "id": "r104-320",
@@ -9915,7 +9975,8 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題データ不完全のため省略）\n【覚え方💡】第104回実践問題。\n【関連知識】実践問題は臨床現場を想定した応用力が問われる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/104/q321.png"
   },
   {
     "id": "r104-322",

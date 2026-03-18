@@ -185,7 +185,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】第二級アミンの構造を判別する問題\n【正答の根拠】第n級アミンはNH3のn個のHをアルキル基等に置換したもの。第二級アミンはR2NH構造を持つ。選択肢3が第二級アミンに該当。\n【他の選択肢】\n1. ✗ 第一級アミン\n2. ✗ 第一級アミン\n3. ○ 正答（第二級アミン）\n4. ✗ アミド（カルボニルのNは級数に含めない）\n5. ✗ アミド\n【覚え方💡】「アミン級数＝Nに結合したC(アルキル基)の数」。アミドのN-C=O結合は級数にカウントしない。\n【関連知識】第三級アミンは酸化されてN-オキシドになりやすい。第一級アミンはジアゾ化反応を受ける。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q006.png"
   },
   {
     "id": "r106-007",
@@ -198,7 +199,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】カルボニル化合物の求核剤に対する反応性の順序を問う問題\n【正答の根拠】カルボニルCの正電荷が大きいほど求核剤に対する反応性が高い。反応性：塩化アセチル＞無水酢酸＞アルデヒド＞ケトン＞エステル。\n【他の選択肢】\n1. ✗ プロピオンアルデヒド（3番目に反応性が高い）\n2. ✗ 無水酢酸（2番目に反応性が高い）\n3. ✗ メチルエチルケトン（4番目）\n4. ○ 塩化アセチル（最も反応性が高い）\n5. ✗ 酢酸メチル（最も反応性が低い）\n【覚え方💡】「酸塩化物＞酸無水物＞アルデヒド＞ケトン＞エステル＞アミド」。脱離基の脱離能の順に反応性が決まる。\n【関連知識】カルボン酸誘導体の反応性はacyl substitution反応で重要。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q007.png"
   },
   {
     "id": "r106-008",
@@ -279,7 +281,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】カンゾウに含まれ偽アルドステロン症の原因となる成分を問う問題\n【正答の根拠】グリチルリチン酸はカンゾウの主要成分で、低カリウム血症などの偽アルドステロン症を引き起こす。\n【他の選択肢】\n1. ✗ ジゴキシン（ケジギタリスの成分→ジギタリス中毒）\n2. ○ グリチルリチン酸（カンゾウの成分→偽アルドステロン症）\n3. ✗ ゲニポシド（サンシシの成分→腸間膜静脈硬化症）\n4. ✗ バイカリン（オウゴンの成分→間質性肺炎）\n5. ✗ センノシドA（センナ・ダイオウの成分→消化器障害）\n【覚え方💡】「カンゾウ＝グリチルリチン＝偽アルドステロン症＝低K血症」。甘草含有漢方薬の併用に注意。\n【関連知識】偽アルドステロン症は高血圧・低K・代謝性アルカローシスが三徴。芍薬甘草湯など甘草含有漢方薬全般で注意。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q010.png"
   },
   {
     "id": "r106-011",
@@ -292,7 +295,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】胃の解剖学的構造で幽門の位置を問う問題\n【正答の根拠】幽門は胃と十二指腸の接合部に位置する。模式図中の4番が幽門に該当する。\n【他の選択肢】\n1. ✗ 噴門（食道と胃の接合部）\n2. ✗ 胃底部（噴門より上方）\n3. ✗ 胃体部（胃の中心部）\n4. ○ 幽門（胃と十二指腸の接合部）\n5. ✗ 十二指腸\n【覚え方💡】「食道→噴門→胃底部→胃体部→幽門→十二指腸」。入口が噴門、出口が幽門。\n【関連知識】幽門部にはG細胞がありガストリンを分泌。幽門狭窄症は新生児に多い。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q011.png"
   },
   {
     "id": "r106-012",
@@ -339,7 +343,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】細胞内骨格（微小管）の分布を問う問題\n【正答の根拠】微小管は中心体を起点として細胞質内に伸び、細胞の形態維持や物質輸送に関与する。図2が微小管の分布に該当。\n【他の選択肢】\n1. ✗ アクチンフィラメント（細胞膜直下の細胞皮層）\n2. ○ 微小管（中心体から放射状に伸びる）\n3. ✗ 中間径フィラメント（細胞質で網目状に広がる）\n4. ✗ コラーゲンなどの細胞外マトリックス\n5. ✗ 収縮環のアクチン・ミオシン\n【覚え方💡】「微小管＝中心体から放射状」「アクチン＝膜直下」「中間径＝網目状」。\n【関連知識】ビンクリスチン・パクリタキセルなどの抗がん薬は微小管に作用する。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q013.png"
   },
   {
     "id": "r106-014",
@@ -352,7 +357,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】ミカエリス・メンテンの速度論のグラフを問う問題\n【正答の根拠】Vmax/2のとき基質濃度[S]=Kmとなるグラフが正答。基質濃度増加に伴い反応速度は飽和曲線を描く。\n【他の選択肢】\n1. ○ 正答（Vmax/2の時[S]=Kmが正しく示されている）\n2〜5. ✗ KmとVmaxの位置関係が正しくない\n【覚え方💡】「Km＝Vmaxの半分の速度を与える基質濃度」。グラフは双曲線型で、高濃度で頭打ち。\n【関連知識】Lineweaver-Burkプロット（逆数プロット）で直線化できる。競合阻害ではKm増大、Vmax不変。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q014.png"
   },
   {
     "id": "r106-015",
@@ -739,7 +745,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】完全刺激薬の親和性変化と濃度-反応曲線の関係を問う問題\n【正答の根拠】親和性が高い化合物Bの曲線は左シフトし、内活性同一のため最大反応は同じ100%。\n【他の選択肢】\n1〜5のうち2が正答。左シフト＋最大反応同一のグラフ。\n【覚え方💡】「親和性↑＝左シフト、内活性同じ＝最大反応同じ」。\n【関連知識】部分刺激薬では最大反応が完全刺激薬より低くなる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q026.png"
   },
   {
     "id": "r106-027",
@@ -1296,7 +1303,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】分布容積Vdの計算式を問う問題\n【正答の根拠】Vd = Vp + Vt×(Ct/Cp)。体内薬物量÷血漿中濃度。\n【他の選択肢】\n正しい式は選択肢2。\n【覚え方💡】「Vd＝X/Cp」。組織に多く分布するほどVdは大きい。\n【関連知識】Vd＞体液量なら組織結合が強い。ジゴキシンVd≒500L。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q043.png"
   },
   {
     "id": "r106-044",
@@ -1479,7 +1487,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】水不溶性マトリックス型製剤の放出パターンを問う問題\n【正答の根拠】拡散律速のため時間経過とともに放出速度が低下する。√t則（Higuchi式）に従う。\n【他の選択肢】\n1〜3,5. ✗ パターン不一致\n4. ○ 時間とともに放出速度低下\n【覚え方💡】「マトリックス型＝√t則」。浸透圧ポンプ型は0次放出。\n【関連知識】Higuchi式：Q = kH × √t。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q049.png"
   },
   {
     "id": "r106-050",
@@ -3268,7 +3277,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】酸性度の比較を問う問題（2つ選べ）\n【正答の根拠】共役塩基の安定性で酸性度を比較。電子求引基は酸性度を高める。近い位置ほど効果大。\n【他の選択肢】\n1〜5のうち4と5が正答。\n【覚え方💡】「共役塩基が安定→強い酸」「電子求引基→酸性度↑」「位置が近い→効果大」。\n【関連知識】酸性度の比較は有機化学の基本。pKaで定量的に比較できる。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q102.png"
   },
   {
     "id": "r106-103",
@@ -3349,7 +3359,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】カルボキシ基のバイオアイソスターを含む化合物を問う問題（2つ選べ）\n【正答の根拠】カンデサルタンシレキセチルにはテトラゾール、オキサメタシンにはヒドロキサム酸が含まれる。\n【他の選択肢】\n1. ✗ イマチニブ（含まない）\n2. ✗ フルジアゼパム（含まない）\n3. ○ カンデサルタン（テトラゾール）\n4. ✗ サキナビル（含まない）\n5. ○ オキサメタシン（ヒドロキサム酸）\n【覚え方💡】「COOHのバイオアイソスター＝テトラゾール・ヒドロキサム酸・スルホンアミド等」。\n【関連知識】ARBの多くにテトラゾール基が含まれる（ロサルタン・バルサルタン等）。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q105.png"
   },
   {
     "id": "r106-106",
@@ -3396,7 +3407,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】1H-NMRスペクトルから化合物構造を決定する問題\n【正答の根拠】イソプロピル基×2、OH基、ベンゼン環の置換パターンからプロポフォールの構造が正答。\n【他の選択肢】\n1. ○ プロポフォール（2,6-ジイソプロピルフェノール）\n2〜5. ✗ スペクトルパターンが一致しない\n【覚え方💡】「NMR読解：積分比→H数、分裂パターン→隣接H数、化学シフト→官能基」。\n【関連知識】プロポフォールは全身麻酔の導入・維持に使用。脂肪乳剤として製剤化。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q107.png"
   },
   {
     "id": "r106-108",
@@ -3613,7 +3625,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】Gsタンパク質のGDP-GTP交換反応後の状態を問う問題\n【正答の根拠】αサブユニットがGTPと結合し、βγ複合体から解離した状態。\n【他の選択肢】\n1〜5のうち5が正答。αサブユニット+GTP、βγ複合体が解離。\n【覚え方💡】「GPCR活性化→α-GTP＋βγに解離→各々が標的に作用」。\n【関連知識】GTPaseでGTP→GDP→αがβγと再会合→不活性化。コレラ毒素はGTPase阻害。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q114.png"
   },
   {
     "id": "r106-115",
@@ -4010,7 +4023,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問124-126の連問の一部（問125）。問124の解説に統合。\n【正答の根拠】問124の解説参照。IR1500cm-1付近ではなく1650cm-1付近がキノンのカルボニル吸収。\n【他の選択肢】\n問124の解説参照。\n【覚え方💡】問124参照。\n【関連知識】問124参照。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q125.png"
   },
   {
     "id": "r106-126",
@@ -4023,7 +4037,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問124-126の連問の一部（問126）。問124の解説に統合。\n【正答の根拠】問124の解説参照。VKはプロトロンビン生成とGlu残基γ-カルボキシル化に関与。\n【他の選択肢】\n問124の解説参照。\n【覚え方💡】問124参照。\n【関連知識】問124参照。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q126.png"
   },
   {
     "id": "r106-127",
@@ -4274,7 +4289,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】化審法の第一種特定化学物質を問う問題（2つ選べ）\n【正答の根拠】PCB（ポリ塩化ビフェニル）とPCN（ポリ塩化ナフタレン）が第一種特定化学物質。\n【他の選択肢】\n1. ✗ PCDD（非意図的生成物→化審法対象外）\n2. ✗ PCDF（非意図的生成物→対象外）\n3. ○ PCB\n4. ✗ クロロニトロフェン（一般化学物質）\n5. ○ PCN\n【覚え方💡】「第一種特定化学物質＝難分解＋高蓄積＋長期毒性or高次捕食動物毒性」。\n【関連知識】化審法はPCB汚染（カネミ油症事件）を契機に制定。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q134.png"
   },
   {
     "id": "r106-135",
@@ -5231,7 +5247,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（問160との連問、問160の解説を参照）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q161.png"
   },
   {
     "id": "r106-162",
@@ -5604,7 +5621,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】CYP450のヘム鉄に配位して阻害する薬物の構造を問う問題\n【正答の根拠】ケトコナゾールはイミダゾール骨格を有し、ヘム鉄に配位してCYP450を強く阻害する。\n【他の選択肢】\n1. ○ ケトコナゾール（イミダゾール骨格）\n2. ✗ シタラビン（イミダゾール骨格なし）\n3. ✗ カナマイシン（イミダゾール骨格なし）\n4. ✗ テトラサイクリン（イミダゾール骨格なし）\n5. ✗ レボフロキサシン（イミダゾール骨格なし）\n【覚え方💡】「イミダゾール・トリアゾール骨格→ヘム鉄に配位→CYP阻害」。\n【関連知識】アゾール系抗真菌薬はCYP3A4阻害が強く薬物相互作用に注意。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q172.png"
   },
   {
     "id": "r106-173",
@@ -5689,7 +5707,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】タンパク結合飽和時のAUCとfu×AUCの投与量依存性を問う問題\n【正答の根拠】well-stirred modelで経口投与時、fu×AUCpo=Fa×Dpo/CLintとなり投与量に比例（直線）。AUCpoはfu↑により飽和曲線的に増加。\n【他の選択肢】\n選択肢3が正答（AUCは上に凸、fu×AUCは直線）\n【覚え方💡】「経口投与でfu×AUC＝Fa×D/CLint（fu無関係で直線）」「AUCはfuの増加により見かけ上非線形」。\n【関連知識】肝クリアランスが低い薬物ほどタンパク結合変化の影響が大きい。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q175.png"
   },
   {
     "id": "r106-176",
@@ -6284,7 +6303,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】臨床研究の統計手法の組合せを問う問題（2つ選べ）\n【正答の根拠】ロジスティック回帰分析は質的変数を目的変数として複数因子の影響度合いを検討。ログランク検定は生存率曲線の群間差を検定。\n【他の選択肢】\n1. ✗ 比率の差はカイ二乗検定\n2. ✗ 対応ある2群の量的変数はpaired-t検定\n3. ✗ 量的変数の多因子は重回帰分析\n4. ○ ロジスティック回帰分析\n5. ○ ログランク検定\n【覚え方💡】「目的変数が質的＝ロジスティック回帰」「生存時間解析＝ログランク検定」。\n【関連知識】カプランマイヤー法で生存率曲線を描き、ログランク検定で有意差を判定。",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q193.png"
   },
   {
     "id": "r106-194",
@@ -6419,7 +6439,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（問196との連問、問196の解説を参照）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q197.png"
   },
   {
     "id": "r106-198",
@@ -6642,7 +6663,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（問202との連問、問202の解説を参照）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q203.png"
   },
   {
     "id": "r106-204",
@@ -6709,7 +6731,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（問204との連問、問204の解説を参照）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q205.png"
   },
   {
     "id": "r106-206",
@@ -6776,7 +6799,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（問206との連問、問206の解説を参照）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q207.png"
   },
   {
     "id": "r106-208",
@@ -6843,7 +6867,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（問208との連問、問208の解説を参照）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q209.png"
   },
   {
     "id": "r106-210",
@@ -6890,7 +6915,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（問210との連問、問210の解説を参照）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q211.png"
   },
   {
     "id": "r106-212",
@@ -6937,7 +6963,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（問212との連問、問212の解説を参照）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q213.png"
   },
   {
     "id": "r106-214",
@@ -7092,7 +7119,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（問216との連問、問216の解説を参照）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q217.png"
   },
   {
     "id": "r106-218",
@@ -7159,7 +7187,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（問218との連問、問218の解説を参照）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q219.png"
   },
   {
     "id": "r106-220",
@@ -7226,7 +7255,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（問220との連問、問220の解説を参照）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q221.png"
   },
   {
     "id": "r106-222",
@@ -7293,7 +7323,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（問222との連問、問222の解説を参照）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q223.png"
   },
   {
     "id": "r106-224",
@@ -7768,7 +7799,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q237.png"
   },
   {
     "id": "r106-238",
@@ -7815,7 +7847,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q239.png"
   },
   {
     "id": "r106-240",
@@ -7998,7 +8031,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q245.png"
   },
   {
     "id": "r106-246",
@@ -8045,7 +8079,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q247.png"
   },
   {
     "id": "r106-248",
@@ -8092,7 +8127,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q249.png"
   },
   {
     "id": "r106-250",
@@ -8139,7 +8175,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q251.png"
   },
   {
     "id": "r106-252",
@@ -8186,7 +8223,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q253.png"
   },
   {
     "id": "r106-254",
@@ -8233,7 +8271,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q255.png"
   },
   {
     "id": "r106-256",
@@ -8280,7 +8319,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q257.png"
   },
   {
     "id": "r106-258",
@@ -8327,7 +8367,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q259.png"
   },
   {
     "id": "r106-260",
@@ -8374,7 +8415,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q261.png"
   },
   {
     "id": "r106-262",
@@ -8421,7 +8463,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q263.png"
   },
   {
     "id": "r106-264",
@@ -8468,7 +8511,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q265.png"
   },
   {
     "id": "r106-266",
@@ -8515,7 +8559,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q267.png"
   },
   {
     "id": "r106-268",
@@ -8562,7 +8607,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q269.png"
   },
   {
     "id": "r106-270",
@@ -8609,7 +8655,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q271.png"
   },
   {
     "id": "r106-272",
@@ -8660,7 +8707,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q273.png"
   },
   {
     "id": "r106-274",
@@ -8707,7 +8755,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q275.png"
   },
   {
     "id": "r106-276",
@@ -8754,7 +8803,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q277.png"
   },
   {
     "id": "r106-278",
@@ -8801,7 +8851,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q279.png"
   },
   {
     "id": "r106-280",
@@ -8848,7 +8899,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q281.png"
   },
   {
     "id": "r106-282",
@@ -8895,7 +8947,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q283.png"
   },
   {
     "id": "r106-284",
@@ -8942,7 +8995,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q285.png"
   },
   {
     "id": "r106-286",
@@ -9057,7 +9111,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q289.png"
   },
   {
     "id": "r106-290",
@@ -9240,7 +9295,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q295.png"
   },
   {
     "id": "r106-296",
@@ -9287,7 +9343,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q297.png"
   },
   {
     "id": "r106-298",
@@ -9334,7 +9391,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q299.png"
   },
   {
     "id": "r106-300",
@@ -9381,7 +9439,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q301.png"
   },
   {
     "id": "r106-302",
@@ -9428,7 +9487,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q303.png"
   },
   {
     "id": "r106-304",
@@ -9475,7 +9535,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q305.png"
   },
   {
     "id": "r106-306",
@@ -9522,7 +9583,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q307.png"
   },
   {
     "id": "r106-308",
@@ -9569,7 +9631,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q309.png"
   },
   {
     "id": "r106-310",
@@ -9616,7 +9679,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q311.png"
   },
   {
     "id": "r106-312",
@@ -9663,7 +9727,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q313.png"
   },
   {
     "id": "r106-314",
@@ -9710,7 +9775,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q315.png"
   },
   {
     "id": "r106-316",
@@ -9757,7 +9823,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q317.png"
   },
   {
     "id": "r106-318",
@@ -9804,7 +9871,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q319.png"
   },
   {
     "id": "r106-320",
@@ -9851,7 +9919,8 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/106/q321.png"
   },
   {
     "id": "r106-322",

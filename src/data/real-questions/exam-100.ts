@@ -49,7 +49,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】可逆反応の平衡定数から平衡時の組成比を求める問題\n【正答の根拠】平衡定数K=k₁/k₋₁=0.01/0.02=0.5。[B]eq/[A]eq=0.5なので、[A]eq:[B]eq=2:1。初期[A]=1とすると、[A]eq≈0.67、[B]eq≈0.33に収束するグラフが正答。\n【他の選択肢】\n1. ✗ 平衡組成比が異なるグラフ\n2. ○ A=0.67、B=0.33に収束する正しいグラフ（正答）\n3. ✗ 平衡組成比が異なるグラフ\n4. ✗ 平衡組成比が異なるグラフ\n5. ✗ 平衡組成比が異なるグラフ\n【覚え方💡】K=k正/k逆。K<1なら原系（A）が多く残る。K>1なら生成系（B）が多い。分数の比で平衡組成が決まる！\n【関連知識】正逆反応が一次反応の場合、平衡定数K=k₁/k₋₁の関係が成り立つ",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q002.png"
   },
   {
     "id": "r100-003",
@@ -164,7 +165,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】有機化学史上初の有機化合物人工合成（ウェーラー合成）を問う問題\n【正答の根拠】1828年、ウェーラーがシアン酸アンモニウム（NH₄OCN、無機化合物）を加熱して尿素（CO(NH₂)₂）を合成した。これにより無機物から有機物が合成できることが証明された。\n【他の選択肢】\n1. ✗ 選択肢の構造は尿素ではない\n2. ✗ 選択肢の構造は尿素ではない\n3. ✗ 選択肢の構造は尿素ではない\n4. ○ 尿素CO(NH₂)₂（正答）\n5. ✗ 選択肢の構造は尿素ではない\n【覚え方💡】「ウェーラーが尿素を作った」→有機化学の夜明け。「ウェー（尿）ラー」で尿素と結びつける！\n【関連知識】これ以前は「生気説」（有機物は生物のみが作れる）が信じられていた",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q006.png"
   },
   {
     "id": "r100-007",
@@ -177,7 +179,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】非共有電子対がsp²混成軌道に収容されている化合物を問う問題\n【正答の根拠】フランの酸素原子はsp²混成軌道をとり、2対の非共有電子対のうち1対はsp²混成軌道に、もう1対は芳香族性に関与するp軌道に収容されている。\n【他の選択肢】\n1. ✗ アセトニトリルのN：sp混成軌道→非共有電子対はsp軌道に収容\n2. ○ フランのO：sp²混成→非共有電子対の一方がsp²軌道に収容（正答）\n3. ✗ アニリンのN：共鳴時sp²→非共有電子対はp軌道に収容\n4. ✗ ピロールのN：sp²混成→非共有電子対はp軌道（芳香族性に関与）\n5. ✗ トリエチルアミンのN：sp³混成→非共有電子対はsp³軌道\n【覚え方💡】芳香族ヘテロ環の判定法：「ピロール型＝電子対がp軌道で芳香族性に参加」「ピリジン型＝電子対がsp²で芳香族性に不参加」。フランはピリジン型の電子対を1つ持つ\n【関連知識】Hückel則（4n+2個のπ電子）と混成軌道の関係を整理しておく",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q007.png"
   },
   {
     "id": "r100-008",
@@ -190,7 +193,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】メソ化合物の定義と判別を問う問題\n【正答の根拠】メソ化合物は複数の不斉炭素を持ちながら分子内に対称面があるため、光学活性を示さない化合物。選択肢5が不斉炭素2つ＋分子内対称面を持つメソ化合物。\n【他の選択肢】\n1. ✗ 不斉炭素2つあるが分子内対称面なし（光学活性体）\n2. ✗ 不斉炭素2つあるが分子内対称面なし（光学活性体）\n3. ✗ 不斉炭素を持たない（メソ化合物の定義を満たさない）\n4. ✗ 不斉炭素2つあるが分子内対称面なし（光学活性体）\n5. ○ 不斉炭素2つ＋分子内対称面あり→メソ化合物（正答）\n【覚え方💡】メソの判定3ステップ：①不斉炭素が複数あるか？→②分子を半分に折って対称面があるか？→③両方YESならメソ！\n【関連知識】メソ酒石酸が代表例。メソ体はラセミ体と異なり分割できない",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q008.png"
   },
   {
     "id": "r100-009",
@@ -509,7 +513,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】老年化指数の計算式を問う問題\n【正答の根拠】老年化指数＝老年人口÷年少人口×100。高齢化の進行度を年少人口との比で表す指標。\n【他の選択肢】\n1. ✗ 老年人口÷生産年齢人口×100＝老年人口指数\n2. ✗ 老年人口÷総人口×100＝老年人口割合\n3. ○ 老年人口÷年少人口×100＝老年化指数（正答）\n4. ✗ 該当する指標名なし\n5. ✗ （年少人口＋老年人口）÷生産年齢人口×100＝従属人口指数\n【覚え方💡】「老年化指数＝お年寄り÷子ども」。老年人口割合は「÷総人口」。指数と割合を混同しない！\n【関連知識】年少人口：0-14歳、生産年齢人口：15-64歳、老年人口：65歳以上",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q018.png"
   },
   {
     "id": "r100-019",
@@ -2562,7 +2567,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】医薬分業率の計算式\n【正答の根拠】医薬分業率＝院外処方せん枚数÷（院外処方せん枚数＋院内投薬を含む全処方件数）×100。外来患者のみ対象。\n【他の選択肢】\n1. ✗ 該当しない計算式\n2. ✗ 該当しない計算式\n3. ○ 正しい計算式（正答）\n4. ✗ 該当しない計算式\n5. ✗ 該当しない計算式\n【覚え方💡】分業率＝「院外処方せん枚数÷全投薬に対する処方件数×100」。入院は含まない\n【関連知識】日本の医薬分業率は約75%以上に達している",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q079.png"
   },
   {
     "id": "r100-080",
@@ -3277,7 +3283,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】分液操作による有機化合物の分離（酸塩基性による抽出）\n【正答の根拠】NaHCO3→NaOH→HClの順に分液操作を行うと、最後のエーテル層Aに残るのは塩基性が最も弱いジフェニルアミン。弱酸・フェノール・アミンの順に除かれる。\n【他の選択肢】\n1. ✗ 安息香酸はNaHCO3水溶液で除去される\n2. ✗ フェノールはNaOH水溶液で除去される\n3. ✗ エチレングリコールは水溶性が高く水層へ\n4. ✗ アニリンはHClで塩を形成し水層へ\n5. ○ ジフェニルアミンがエーテル層Aに残る（正答）\n【覚え方💡】抽出順：NaHCO3=強酸除去→NaOH=弱酸除去→HCl=塩基除去。残るのは最も中性に近い化合物\n【関連知識】pKaの大小関係を利用した系統的分離法。有機化学の基本操作",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q101.png"
   },
   {
     "id": "r100-102",
@@ -3290,7 +3297,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】アルケンのヒドロホウ素化-酸化反応の主生成物\n【正答の根拠】ヒドロホウ素化-酸化反応では水がアルケンに逆マルコフニコフ則でシン付加する。立体障害の少ない炭素にOHが付く。\n【他の選択肢】\n1. ○ 逆マルコフニコフ則・シン付加の生成物（正答）\n2. ✗ マルコフニコフ則の生成物\n3. ✗ アンチ付加の生成物\n4. ✗ 立体化学が異なる\n5. ✗ 位置選択性が異なる\n【覚え方💡】ヒドロホウ素化=「逆マル・シン」。酸水銀(II)による水和=「マル・反応条件で立体選択なし」\n【関連知識】BH₃はまずアルケンにシン付加し、H₂O₂/NaOHで酸化してアルコールになる",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q102.png"
   },
   {
     "id": "r100-103",
@@ -3303,7 +3311,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】Wittig反応で必要な試薬の推定\n【正答の根拠】Wittig反応はカルボニル化合物とホスホニウムイリド（Ph₃P=CR₂）からアルケンを合成する反応。生成物Cの構造からイリドを逆合成的に推定する。\n【他の選択肢】\n1. ✗ 該当しない試薬\n2. ✗ 該当しない試薬\n3. ✗ 該当しない試薬\n4. ✗ 該当しない試薬\n5. ○ 正しいホスホニウム塩（正答）\n【覚え方💡】Wittig反応の手順：①ハロゲン化物+PPh₃→ホスホニウム塩 ②塩基でイリド生成 ③カルボニルと反応→アルケン+Ph₃P=O\n【関連知識】Wittig反応はカルボニルのC=OをC=Cに変換する「骨格変換反応」",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q103.png"
   },
   {
     "id": "r100-104",
@@ -3316,7 +3325,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】正しい反応機構で進行する反応の識別\n【正答の根拠】ベンゼン+ニトロニウムイオン(NO₂⁺)の芳香族求電子置換反応は、記載された電子移動の矢印通りに進行する。\n【他の選択肢】\n1. ✗ 酢酸とメトキシドの反応機構が異なる\n2. ✗ SN1反応の攻撃方向が両面から\n3. ○ 芳香族求電子置換反応が正しい機構（正答）\n4. ✗ クロロベンゼンは通常条件でSN反応しない\n5. ✗ メチルプロパンの塩素化はラジカル機構\n【覚え方💡】芳香族求電子置換(SEAr)の3段階：①求電子剤生成 ②π複合体→σ複合体 ③脱プロトンで芳香族性回復\n【関連知識】ニトロ化・ハロゲン化・フリーデルクラフツ反応はすべてSEAr機構",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q104.png"
   },
   {
     "id": "r100-105",
@@ -3329,7 +3339,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】標的酵素と共有結合を形成する医薬品の識別\n【正答の根拠】フルオロウラシル(5-FU)→5-FdUMPがチミジル酸合成酵素と共有結合。ベンジルペニシリンはトランスペプチダーゼと共有結合（β-ラクタム環が開裂してアシル化）。\n【他の選択肢】\n1. ✗ オセルタミビルはノイラミニダーゼと非共有結合\n2. ✗ プラバスタチンはHMG-CoA還元酵素と非共有結合\n3. ○ 5-FU→5-FdUMPがチミジル酸合成酵素と共有結合（正答の1つ）\n4. ✗ ファモチジンはH₂受容体と非共有結合\n5. ○ ベンジルペニシリンがトランスペプチダーゼと共有結合（正答の1つ）\n【覚え方💡】共有結合阻害薬=「不可逆的」。β-ラクタム系、5-FU、アスピリン(COX)が代表\n【関連知識】自殺基質（mechanism-based inhibitor）は酵素に取り込まれて共有結合する",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q105.png"
   },
   {
     "id": "r100-106",
@@ -3878,7 +3889,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】日本で使用禁止の着色料の識別\n【正答の根拠】日本で認められた合成タール色素12種はすべて酸性水溶性化合物。パラローズアニリンは塩基性タール色素で使用禁止。\n【他の選択肢】\n1. ○ パラローズアニリン＝塩基性→禁止着色料（正答）\n2. ✗ 食用赤色102号＝使用認可\n3. ✗ 食用赤色105号＝使用認可\n4. ✗ 食用青色2号＝使用認可\n5. ✗ 食用緑色3号＝使用認可\n【覚え方💡】認可タール色素＝全て酸性（スルホン酸基orカルボキシ基）。塩基性色素は全て禁止\n【関連知識】認可12色素：赤2,3,40,102,104,105,106、黄4,5、緑3、青1,2",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q122.png"
   },
   {
     "id": "r100-123",
@@ -4129,7 +4141,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】CYPが関与しない生体内反応の識別\n【正答の根拠】マラチオンはカルボキシエステラーゼで加水分解されて解毒。CYPによる酸化は関与しない。\n【他の選択肢】\n1. ✗ 四塩化炭素→CYPで還元的脱ハロゲン化（CYP関与する）\n2. ✗ トルエン→CYPでベンジル位酸化（CYP関与する）\n3. ✗ フェナセチン→CYPでO-脱エチル化（CYP関与する）\n4. ○ マラチオン→カルボキシエステラーゼで加水分解（CYP関与しない）（正答）\n5. ✗ ベンゾ[a]ピレン→CYPでエポキシ化（CYP関与する）\n【覚え方💡】有機リン系農薬の解毒は「エステラーゼによる加水分解」が主経路。CYPはむしろ活性化（毒性化）に関与\n【関連知識】パラチオンはCYPでパラオキソン（活性体）に変換される＝代謝的活性化の例",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q130.png"
   },
   {
     "id": "r100-131",
@@ -6422,7 +6435,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問196-199の連番問題の一部（アルプロスタジル注射液の情報提供）\n【正答の根拠】親問題（問196）の解説を参照。正答は3,5。リポ化製剤は5%ブドウ糖に混和可能で病変部位集積性をもつ。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】リポ製剤＝白色乳濁液。凍結不可、PVCセット不可\n【関連知識】α-シクロデキストリン包接体とリポ化製剤は同じPGE1の異なるDDS",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q197.png"
   },
   {
     "id": "r100-198",
@@ -6435,7 +6449,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問196-199の連番問題の一部（α-CDの包接平衡定数の計算）\n【正答の根拠】親問題（問196）の解説を参照。65%解離→35%が包接状態。平衡定数K≒8.1×10²L/mol。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】包接平衡：K=[CD-Drug]/([CD]×[Drug])。モル比1:1の包接なので計算はシンプル\n【関連知識】シクロデキストリンは環状オリゴ糖。α-CD=6糖、β-CD=7糖、γ-CD=8糖",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q198.png"
   },
   {
     "id": "r100-199",
@@ -6448,7 +6463,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問196-199の連番問題の一部（ヤング・ラプラスの式で油滴内圧を計算）\n【正答の根拠】ΔP=2γ/r=2×25×10⁻³/(60×10⁻⁹)≒8.3×10⁵ Pa。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】ヤング・ラプラスの式：ΔP=2γ/r。粒子が小さいほど内圧が高い\n【関連知識】エマルション安定性：粒子径が小さいほど熱力学的には不安定だが、界面活性剤で安定化",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q199.png"
   },
   {
     "id": "r100-200",
@@ -6583,7 +6599,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問202-203の連番問題の一部（LC/MSによる血漿中薬物濃度定量の前処理）\n【正答の根拠】親問題（問202）の解説を参照。塩基性薬物→アルカリ化→有機溶媒で抽出。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】溶媒抽出：酸性薬物→酸性化、塩基性薬物→アルカリ化で分子形にして有機層に移行させる\n【関連知識】LC/MSはHPLCと質量分析を組み合わせた高感度分析法",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q203.png"
   },
   {
     "id": "r100-204",
@@ -6650,7 +6667,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問204-205の連番問題の一部（LC/MSの原理）\n【正答の根拠】親問題（問204）の解説を参照。ESI法でイオン化、タンデムMSで選択性向上。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】LC/MS＝液体クロマト+質量分析。ESI＝エレクトロスプレーイオン化（大気圧下）\n【関連知識】重水素標識体は安定同位体（放射性ではない）→使用場所の制限なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q205.png"
   },
   {
     "id": "r100-206",
@@ -6717,7 +6735,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問206-207の連番問題の一部（オメプラゾールの構造と活性化反応）\n【正答の根拠】親問題（問206）の解説を参照。活性化は分子内付加反応。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】PPIのS原子は不斉中心。エソメプラゾール＝S体のみの光学異性体\n【関連知識】H⁺,K⁺-ATPaseのシステイン残基とジスルフィド結合→不可逆的阻害",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q207.png"
   },
   {
     "id": "r100-208",
@@ -6784,7 +6803,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問208-209の連番問題の一部（インスリンの構造）\n【正答の根拠】親問題（問208）の解説を参照。超速効型＝二量体形成しにくい。S-S結合はCys酸化。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】A鎖C末端＝Asn（アスパラギン）、N末端＝Gly。B鎖C末端＝Thr、N末端＝Phe\n【関連知識】超速効型（リスプロ・アスパルト・グルリジン）はアミノ酸置換で自己会合を抑制",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q209.png"
   },
   {
     "id": "r100-210",
@@ -6827,7 +6847,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 0,
     "explanation": "【ポイント】問210-211の連番問題の一部（モルヒネ構造から開発された鎮痛薬）\n【正答の根拠】本問は「解なし」。ペンタゾシンはモルヒネ構造をベースに開発されたが、もう1つの正答が確定しない。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】モルヒネ骨格の簡略化：モルヒネ→コデイン→ペンタゾシン→ペチジン（構造が段階的に単純化）\n【関連知識】ペンタゾシン＝κ刺激+μ部分作動。麻薬拮抗性鎮痛薬に分類",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q211.png"
   },
   {
     "id": "r100-212",
@@ -6870,7 +6891,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問212-213の連番問題の一部（認知症治療薬と受容体の内在性リガンド）\n【正答の根拠】親問題（問212）の解説を参照。メマンチン→NMDA受容体（リガンド＝グルタミン酸）、ガランタミン→ChE（基質＝ACh）。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】ドネペジル・ガランタミン・リバスチグミン＝ChEI（基質ACh）。メマンチン＝NMDA拮抗（リガンドGlu）\n【関連知識】ガランタミンはChE阻害+ニコチン受容体のアロステリック増強作用",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q213.png"
   },
   {
     "id": "r100-214",
@@ -6937,7 +6959,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問214-215の連番問題の一部（センノシドの構造と代謝）\n【正答の根拠】親問題（問214）の解説を参照。腸内細菌酵素で活性代謝物レインアンスロンが生成。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】センノシドA＝ビアンスロン配糖体（トリテルペンではない）\n【関連知識】大腸刺激性下剤の代表。アウエルバッハ神経叢を刺激して腸運動亢進",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q215.png"
   },
   {
     "id": "r100-216",
@@ -6984,7 +7007,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問216-217の連番問題の一部（拒絶反応の免疫学）\n【正答の根拠】親問題（問216）の解説を参照。HLA不適合→拒絶反応＋タクロリムスのカルシニューリン阻害。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】HVGR＝宿主が移植片を攻撃。GVHR＝移植片が宿主を攻撃（骨髄移植で問題）\n【関連知識】急性拒絶＝T細胞中心の細胞性免疫。超急性拒絶＝既存抗体による液性免疫",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q217.png"
   },
   {
     "id": "r100-218",
@@ -7031,7 +7055,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問218-219の連番問題の一部（グルコース代謝）\n【正答の根拠】親問題（問218）の解説を参照。コリ回路＋インスリンのGLUT4発現促進。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】筋肉はグルコース6-ホスファターゼがない→グリコーゲン分解しても血中にGlu放出不可\n【関連知識】グルコース-アラニン回路：筋肉でアラニン生成→肝臓で糖新生→グルコースに変換",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q219.png"
   },
   {
     "id": "r100-220",
@@ -7098,7 +7123,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問220-221の連番問題の一部（H.pyloriの代謝反応）\n【正答の根拠】親問題（問220）の解説を参照。ウレアーゼ→尿素分解→NH3で胃酸中和。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】ピロリ菌＝ウレアーゼ産生菌。NH3で胃酸を中和して胃内で生存\n【関連知識】除菌療法：PPI+AMPC+CAM（1次除菌）、PPI+AMPC+MNZ（2次除菌）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q221.png"
   },
   {
     "id": "r100-222",
@@ -7145,7 +7171,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問222-223の連番問題の一部（フェブキソスタットとの相互作用）\n【正答の根拠】親問題（問222）の解説を参照。アザチオプリン→6-MP→XO代謝→併用禁忌。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】「XO阻害薬とアザチオプリン/6-MPは絶対NG」→骨髄抑制のリスク\n【関連知識】アザチオプリンはプリン拮抗薬で免疫抑制薬。関節リウマチ、臓器移植に使用",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q223.png"
   },
   {
     "id": "r100-224",
@@ -7212,7 +7239,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問224-225の連番問題の一部（ドーピング禁止物質への対応）\n【正答の根拠】親問題（問224）の解説を参照。テストステロン＝ドーピング禁止物質→販売不可。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】薬剤師のドーピング対応：WADAの禁止リスト確認→該当物質は販売しない→選手に説明\n【関連知識】スポーツファーマシストは日本アンチドーピング機構（JADA）の認定資格",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q225.png"
   },
   {
     "id": "r100-226",
@@ -7279,7 +7307,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問226-227の連番問題の一部（栄養素と栄養状態）\n【正答の根拠】親問題（問226）の解説を参照。銅・亜鉛の吸収競合＋ビタミンC→非ヘム鉄吸収促進。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】BMI＝体重(kg)÷身長(m)²。18.5未満＝やせ、18.5-25＝標準、25以上＝肥満\n【関連知識】n-3系脂肪酸（EPA,DHA）は長鎖→胆汁酸ミセルで吸収。中鎖脂肪酸はミセル不要",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q227.png"
   },
   {
     "id": "r100-228",
@@ -7346,7 +7375,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問228-229の連番問題の一部（トクホの許可表示）\n【正答の根拠】親問題（問228）の解説を参照。キトサン含有＝コレステロール関連の許可表示。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】トクホの許可表示は「疾病の治療・予防」は不可。「気になる方に」等の表現を使用\n【関連知識】特定保健用食品の関与成分例：難消化性デキストリン（血糖）、キトサン（コレステロール）",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q229.png"
   },
   {
     "id": "r100-230",
@@ -7413,7 +7443,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問230-231の連番問題の一部（食物アレルギー表示制度）\n【正答の根拠】親問題（問230）の解説を参照。特定原材料は微量でも表示義務＋対面販売は表示義務なし。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】特定原材料＝7品目は表示義務。推奨表示（任意）＝21品目（あわび・いか・さけ等）\n【関連知識】食物依存性運動誘発アナフィラキシー＝食後の運動で誘発。小麦が原因であることが多い",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q231.png"
   },
   {
     "id": "r100-232",
@@ -7460,7 +7491,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問232-233の連番問題の一部（自然毒と中毒症状）\n【正答の根拠】親問題（問232）の解説を参照。トリカブト→アコニチン→不整脈が特徴的。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】食中毒の原因物質と症状を対応づけ：アコニチン＝不整脈、テトロドトキシン＝しびれ・呼吸麻痺、イルジンS＝胃腸障害\n【関連知識】プタキロシド（ワラビ）は発がん性、α-アマニチン（タマゴテングタケ）はRNA合成阻害→肝障害",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q233.png"
   },
   {
     "id": "r100-234",
@@ -7507,7 +7539,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問234-235の連番問題の一部（生活習慣病の疫学統計）\n【正答の根拠】親問題（問234）の解説を参照。糖尿病の総患者数は年々増加傾向。\n【他の選択肢】\n（親問題参照）\n【覚え方💡】日本の糖尿病患者数は約1000万人。予備軍含めると約2000万人\n【関連知識】国民健康・栄養調査と患者調査で疾患の疫学データを把握",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q235.png"
   },
   {
     "id": "r100-236",
@@ -7554,7 +7587,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】本問は連番問題の一部。正答は選択肢1。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q237.png"
   },
   {
     "id": "r100-238",
@@ -7601,7 +7635,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q239.png"
   },
   {
     "id": "r100-240",
@@ -7648,7 +7683,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q241.png"
   },
   {
     "id": "r100-242",
@@ -7695,7 +7731,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q243.png"
   },
   {
     "id": "r100-244",
@@ -7742,7 +7779,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q245.png"
   },
   {
     "id": "r100-246",
@@ -7789,7 +7827,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q247.png"
   },
   {
     "id": "r100-248",
@@ -7836,7 +7875,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢4。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q249.png"
   },
   {
     "id": "r100-250",
@@ -7883,7 +7923,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q251.png"
   },
   {
     "id": "r100-252",
@@ -7930,7 +7971,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢4。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q253.png"
   },
   {
     "id": "r100-254",
@@ -7977,7 +8019,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q255.png"
   },
   {
     "id": "r100-256",
@@ -8024,7 +8067,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q257.png"
   },
   {
     "id": "r100-258",
@@ -8071,7 +8115,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q259.png"
   },
   {
     "id": "r100-260",
@@ -8118,7 +8163,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q261.png"
   },
   {
     "id": "r100-262",
@@ -8165,7 +8211,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q263.png"
   },
   {
     "id": "r100-264",
@@ -8212,7 +8259,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q265.png"
   },
   {
     "id": "r100-266",
@@ -8255,7 +8303,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q267.png"
   },
   {
     "id": "r100-268",
@@ -8302,7 +8351,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q269.png"
   },
   {
     "id": "r100-270",
@@ -8349,7 +8399,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q271.png"
   },
   {
     "id": "r100-272",
@@ -8396,7 +8447,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q273.png"
   },
   {
     "id": "r100-274",
@@ -8443,7 +8495,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 6,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢6。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q275.png"
   },
   {
     "id": "r100-276",
@@ -8490,7 +8543,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢5。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q277.png"
   },
   {
     "id": "r100-278",
@@ -8537,7 +8591,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q279.png"
   },
   {
     "id": "r100-280",
@@ -8584,7 +8639,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q281.png"
   },
   {
     "id": "r100-282",
@@ -8631,7 +8687,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q283.png"
   },
   {
     "id": "r100-284",
@@ -8674,7 +8731,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢4。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q285.png"
   },
   {
     "id": "r100-286",
@@ -8721,7 +8779,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢5。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q287.png"
   },
   {
     "id": "r100-288",
@@ -8734,7 +8793,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q288.png"
   },
   {
     "id": "r100-289",
@@ -8747,7 +8807,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q289.png"
   },
   {
     "id": "r100-290",
@@ -8794,7 +8855,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q291.png"
   },
   {
     "id": "r100-292",
@@ -8841,7 +8903,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢5。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q293.png"
   },
   {
     "id": "r100-294",
@@ -8888,7 +8951,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q295.png"
   },
   {
     "id": "r100-296",
@@ -8935,7 +8999,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q297.png"
   },
   {
     "id": "r100-298",
@@ -8982,7 +9047,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q299.png"
   },
   {
     "id": "r100-300",
@@ -9029,7 +9095,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q301.png"
   },
   {
     "id": "r100-302",
@@ -9042,7 +9109,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q302.png"
   },
   {
     "id": "r100-303",
@@ -9055,7 +9123,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q303.png"
   },
   {
     "id": "r100-304",
@@ -9102,7 +9171,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢4。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q305.png"
   },
   {
     "id": "r100-306",
@@ -9149,7 +9219,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q307.png"
   },
   {
     "id": "r100-308",
@@ -9192,7 +9263,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q309.png"
   },
   {
     "id": "r100-310",
@@ -9239,7 +9311,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q311.png"
   },
   {
     "id": "r100-312",
@@ -9286,7 +9359,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q313.png"
   },
   {
     "id": "r100-314",
@@ -9333,7 +9407,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q315.png"
   },
   {
     "id": "r100-316",
@@ -9376,7 +9451,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q317.png"
   },
   {
     "id": "r100-318",
@@ -9423,7 +9499,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢1。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q319.png"
   },
   {
     "id": "r100-320",
@@ -9470,7 +9547,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q321.png"
   },
   {
     "id": "r100-322",
@@ -9517,7 +9595,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢3。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q323.png"
   },
   {
     "id": "r100-324",
@@ -9564,7 +9643,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q325.png"
   },
   {
     "id": "r100-326",
@@ -9875,7 +9955,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢2。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q335.png"
   },
   {
     "id": "r100-336",
@@ -10122,7 +10203,8 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】実践問題の連番問題（問題データ詳細なし）\n【正答の根拠】正答は選択肢4。\n【他の選択肢】\n（問題文・選択肢の詳細データなし）\n【覚え方💡】該当なし\n【関連知識】該当なし",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/100/q343.png"
   },
   {
     "id": "r100-344",

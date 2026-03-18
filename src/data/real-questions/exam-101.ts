@@ -185,7 +185,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】カテコールアミンの構造（カテコール＋アミン）を持つ化合物の識別\n【正答の根拠】カテコールアミンはカテコール骨格（ベンゼン環に隣接する2つのOH基）とアミノ基を持つ化合物。アドレナリン（選択肢3）がこれに該当する。\n【他の選択肢】\n1. ✗ エテンザミド（サリチル酸系解熱鎮痛薬）\n2. ✗ クロルプロマジン（フェノチアジン系抗精神病薬）\n3. ○ アドレナリン（カテコールアミン）\n4. ✗ アセトアミノフェン（アニリン誘導体の解熱鎮痛薬）\n5. ✗ アミノ安息香酸エチル（エステル型局所麻酔薬）\n【覚え方💡】カテコールアミン＝「猫(ねこ)のドアノブ」→ノルアドレナリン、ドパミン、アドレナリンの3つ\n【関連知識】カテコールアミンの生合成：チロシン→L-DOPA→ドパミン→ノルアドレナリン→アドレナリン",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q006.png"
   },
   {
     "id": "r101-007",
@@ -232,7 +233,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】共鳴構造式の正誤判定（原子位置は同じで電子位置のみ異なる）\n【正答の根拠】共鳴構造では原子の位置は変わらず電子の位置のみが異なる。選択肢3は水素原子の結合位置が移動しており、共鳴構造ではなく構造異性体の関係。\n【他の選択肢】\n1. ✗ 酢酸イオンの構造は正しい共鳴関係\n2. ✗ アセトンの構造は正しい共鳴関係\n3. ○ 水素原子の位置が異なるため構造異性体であり共鳴構造ではない（誤り）\n4. ✗ ジアゾメタンの構造は正しい共鳴関係\n5. ✗ アセトンアニオンの構造は正しい共鳴関係\n【覚え方💡】共鳴＝「電子だけお引っ越し、原子は動かない」。原子が動いたら異性体！\n【関連知識】共鳴構造の寄与が大きいほど安定化エネルギーが大きい",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q008.png"
   },
   {
     "id": "r101-009",
@@ -245,7 +247,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】シクロヘキサンの最安定立体配座（エクアトリアル配置）\n【正答の根拠】trans-1,4-ジメチルシクロヘキサンで2つのメチル基が共にエクアトリアル位にある配座が最も安定。アキシャル位は1,3-ジアキシャル相互作用で不安定。\n【他の選択肢】\n1. ○ 2つのメチル基がエクアトリアル位の最安定配座\n2. ✗ 2つのメチル基がアキシャル位で不安定\n3. ✗ cis-1,3-ジメチルシクロヘキサンで化合物Aと異なる\n4. ✗ cis-1,3-ジメチルシクロヘキサンで化合物Aと異なる\n5. ✗ cis-1,4-ジメチルシクロヘキサンで化合物Aと異なる\n【覚え方💡】「いす形ではエクアトリアルが王様」→大きい置換基はeq位が安定\n【関連知識】1,3-ジアキシャル相互作用のエネルギーはCH3で約7.6 kJ/mol",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q009.png"
   },
   {
     "id": "r101-010",
@@ -288,7 +291,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】眼球の解剖学的構造（水晶体の位置）\n【正答の根拠】水晶体は眼球の前方に位置する透明な凸レンズ状の組織で、入射光を屈折させて網膜上に像を結ぶ。図中の2番が水晶体に該当する。\n【他の選択肢】\n1. ✗ 角膜（入射光を透過させる透明な膜）\n2. ○ 水晶体（レンズの働き）\n3. ✗ 硝子体（眼球内部を満たすゼリー状組織）\n4. ✗ 毛様体（眼房水の産生、焦点調節）\n5. ✗ 網膜（光受容・視神経への伝達）\n【覚え方💡】前から順に「角膜→水晶体→硝子体→網膜」。水晶体は毛様体筋で厚さ調節\n【関連知識】水晶体が濁る疾患が白内障。緑内障は眼圧上昇による視神経障害",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q011.png"
   },
   {
     "id": "r101-012",
@@ -301,7 +305,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】ヒスタミンの前駆アミノ酸（脱炭酸でヒスタミンを生じるもの）\n【正答の根拠】ヒスチジンが脱炭酸酵素（ヒスチジンデカルボキシラーゼ）により脱炭酸されてヒスタミンを生成する。\n【他の選択肢】\n1. ✗ L-システイン（含硫アミノ酸）\n2. ✗ L-アスパラギン（酸性アミノ酸のアミド）\n3. ✗ L-アラニン（中性アミノ酸）\n4. ✗ L-バリン（分岐鎖アミノ酸）\n5. ○ L-ヒスチジン（イミダゾール環を持つ塩基性アミノ酸）\n【覚え方💡】「ヒス→ヒスタミン」名前が似ている！脱炭酸でCO2が取れてアミンになる\n【関連知識】同様にグルタミン酸→GABA、トリプトファン→セロトニン（5-HT）、チロシン→ドパミン",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q012.png"
   },
   {
     "id": "r101-013",
@@ -450,7 +455,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】酸化防止剤として指定されている食品添加物の構造識別\n【正答の根拠】ジブチルヒドロキシトルエン（BHT）は酸化防止剤として食品衛生法で指定されている。フェノール性OHが抗酸化作用を示す。\n【他の選択肢】\n1. ✗ 安息香酸は保存料\n2. ✗ オルトフェニルフェノールは防かび剤\n3. ✗ サッカリンは甘味料\n4. ○ BHTは酸化防止剤\n5. ✗ アセスルファムカリウムは甘味料\n【覚え方💡】酸化防止剤は「BHT・BHA・ビタミンE・ビタミンC」が代表的\n【関連知識】BHTとBHA（ブチルヒドロキシアニソール）はフェノール系酸化防止剤。油脂の自動酸化を防ぐ",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q017.png"
   },
   {
     "id": "r101-018",
@@ -3157,7 +3163,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】日本薬局方の定性反応と対象物の正しい組合せ（2つ選べ）\n【正答の根拠】正答は1と5。過マンガン酸塩の過酸化水素との反応（脱色）、リン酸塩の七モリブデン酸六アンモニウムとの反応（黄色沈殿）が正しい。\n【他の選択肢】\n1. ○ 過マンガン酸塩の定性反応（正しい組合せ）\n2. ✗ ヨウ化物の記述（塩化物の反応ではない）\n3. ✗ ホウ酸塩の記述（他の対象と混同）\n4. ✗ 炭酸水素塩の記述（他の対象と混同）\n5. ○ リン酸塩の定性反応（正しい組合せ）\n【覚え方💡】日局定性反応は「イオンの特徴的反応」を覚える。Ag⁺で沈殿色が手がかり\n【関連知識】AgCl白色(希硝酸不溶)、AgBr淡黄色、AgI黄色(NH3水不溶)",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q097.png"
   },
   {
     "id": "r101-098",
@@ -3272,7 +3279,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】有機化学反応の主生成物の構造式（2つ選べ）\n【正答の根拠】正答は1と2。アルケンへのBr2付加はアンチ付加、酸触媒下の水付加はマルコフニコフ則に従う。\n【他の選択肢】\n1. ○ Br2のアンチ付加→メソ体のジブロモブタン生成\n2. ○ 酸触媒下H2O付加→マルコフニコフ則に従う\n3. ✗ 共役ジエンへのHBr付加は1,2-付加体か1,4-付加体（4-ブロモ体は生成しない）\n4. ✗ m-CPBA酸化はシン付加でエポキシド生成（立体保持）\n5. ✗ Na/液体NH3によるバーチ還元ではtrans-アルケン生成\n【覚え方💡】ハロゲン付加＝アンチ、水付加＝マルコフニコフ、バーチ還元＝トランス\n【関連知識】マルコフニコフ則：H⁺は置換基の多い炭素と反対側に付加",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q101.png"
   },
   {
     "id": "r101-102",
@@ -3353,7 +3361,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】マイケル付加反応の中間体構造\n【正答の根拠】正答は5。エノラートイオンがα,β-不飽和ケトンのβ炭素に求核攻撃してマイケル付加体（中間体C）を生成。続いて分子内アルドール反応で閉環しDとなる（ロビンソン環化反応）。\n【他の選択肢】\n1. ✗ マイケル付加の位置が異なる\n2. ✗ マイケル付加の位置が異なる\n3. ✗ マイケル付加の位置が異なる\n4. ✗ マイケル付加の位置が異なる\n5. ○ 正しいマイケル付加中間体\n【覚え方💡】ロビンソン環化＝マイケル付加＋分子内アルドール→6員環生成\n【関連知識】マイケル付加は1,4-共役付加。ロビンソン環化はステロイド合成等で重要",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q104.png"
   },
   {
     "id": "r101-105",
@@ -4374,7 +4383,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】ハロアルカン類（フロン）のオゾン層破壊効果による分類\n【正答の根拠】正答は2と4。②群はハイドロクロロフルオロカーボン(HCFC)で、構造中に水素と塩素を含む代替フロン。\n【他の選択肢】\n1. ✗ ①群の特定フロン(CFC)に該当\n2. ○ HCFCに分類される構造\n3. ✗ ③群のHFC（塩素を含まない）に該当\n4. ○ HCFCに分類される構造\n5. ✗ ①群の特定フロン(CFC)に該当\n【覚え方💡】CFC(塩素+フッ素+炭素)→HCFC(水素追加で分解性UP)→HFC(塩素なし)の順にオゾン層破壊力低下\n【関連知識】モントリオール議定書でCFC全廃→HCFC段階的削減→HFCへ代替。しかしHFCは温室効果ガス",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q135.png"
   },
   {
     "id": "r101-136",
@@ -4421,7 +4431,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】ウインクラー法（溶存酸素測定）の反応過程\n【正答の根拠】正答は5。水酸化マンガンに酸素が「固定」され亜マンガン酸の「褐色」沈殿を生じ、硫酸酸性で「I2」が遊離。\n【他の選択肢】\n1-4. ✗ 語句の組合せが異なる\n5. ○ a=固定、b=褐色、c=I2\n【覚え方💡】ウインクラー法：O2固定→褐色沈殿→I2遊離→チオ硫酸Naで滴定\n【関連知識】DO(溶存酸素)は水質汚濁の指標。きれいな水はDOが高い",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q137.png"
   },
   {
     "id": "r101-138",
@@ -5752,7 +5763,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】湿式顆粒圧縮法の製造工程\n【正答の根拠】正答は1。ア=粉砕、イ=練合、ウ=乾燥、エ=混合（滑沢剤添加後）。\n【他の選択肢】\n1. ○ 粉砕→練合→乾燥→混合の組合せ\n2-5. ✗ 工程順序が異なる\n【覚え方💡】湿式顆粒圧縮法：秤量→粉砕→混合→練合→造粒→乾燥→整粒→混合(滑沢剤)→打錠→コーティング\n【関連知識】直接粉末圧縮法は造粒工程を省略。流動層造粒法は乾燥と造粒を同時に行う",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q177.png"
   },
   {
     "id": "r101-178",
@@ -5799,7 +5811,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】リザーバー型経皮吸収製剤の薬物放出パターン\n【正答の根拠】放出制御膜があり、シンク条件下で各パラメータ一定→dQ/dt一定→累積放出量は時間に比例（0次放出）。\n【他の選択肢】\n1-2. ✗ 非線形の放出パターン\n3. ○ 時間に比例する直線的放出（0次放出）\n4-5. ✗ 非線形の放出パターン\n【覚え方💡】リザーバー型＝膜制御＝0次放出。マトリックス型＝√t放出(Higuchi式)\n【関連知識】代表的経皮吸収製剤：ニトログリセリン(狭心症)、フェンタニル(疼痛)、ニコチン(禁煙)",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q179.png"
   },
   {
     "id": "r101-180",
@@ -6486,7 +6499,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】ポアズイユの法則による血圧計算。正答は4(約135mmHg)。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q199.png"
   },
   {
     "id": "r101-200",
@@ -6553,7 +6567,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】血中グルコース測定法。正答は1と5。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q201.png"
   },
   {
     "id": "r101-202",
@@ -6620,7 +6635,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】赤外吸収スペクトル法。正答は2と4。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q203.png"
   },
   {
     "id": "r101-204",
@@ -6667,7 +6683,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】フロセミドの分配係数とpKa。正答は2と5。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q205.png"
   },
   {
     "id": "r101-206",
@@ -6734,7 +6751,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】セフジニルの構造と反応性。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q207.png"
   },
   {
     "id": "r101-208",
@@ -6801,7 +6819,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q209.png"
   },
   {
     "id": "r101-210",
@@ -6868,7 +6887,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q211.png"
   },
   {
     "id": "r101-212",
@@ -6931,7 +6951,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q213.png"
   },
   {
     "id": "r101-214",
@@ -6994,7 +7015,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q215.png"
   },
   {
     "id": "r101-216",
@@ -7061,7 +7083,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q217.png"
   },
   {
     "id": "r101-218",
@@ -7108,7 +7131,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q219.png"
   },
   {
     "id": "r101-220",
@@ -7171,7 +7195,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q221.png"
   },
   {
     "id": "r101-222",
@@ -7238,7 +7263,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q223.png"
   },
   {
     "id": "r101-224",
@@ -7285,7 +7311,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q225.png"
   },
   {
     "id": "r101-226",
@@ -7352,7 +7379,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q227.png"
   },
   {
     "id": "r101-228",
@@ -7403,7 +7431,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q229.png"
   },
   {
     "id": "r101-230",
@@ -7470,7 +7499,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q231.png"
   },
   {
     "id": "r101-232",
@@ -7537,7 +7567,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q233.png"
   },
   {
     "id": "r101-234",
@@ -7612,7 +7643,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q235.png"
   },
   {
     "id": "r101-236",
@@ -7679,7 +7711,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】メソミル(カルバメート系殺虫剤)のChE阻害。正答は4。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q237.png"
   },
   {
     "id": "r101-238",
@@ -7726,7 +7759,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。正答は1。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q239.png"
   },
   {
     "id": "r101-240",
@@ -7773,7 +7807,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は1。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q241.png"
   },
   {
     "id": "r101-242",
@@ -7816,7 +7851,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は1。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q243.png"
   },
   {
     "id": "r101-244",
@@ -7863,7 +7899,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は4。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q245.png"
   },
   {
     "id": "r101-246",
@@ -7910,7 +7947,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は1。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q247.png"
   },
   {
     "id": "r101-248",
@@ -7957,7 +7995,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は5。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q249.png"
   },
   {
     "id": "r101-250",
@@ -8004,7 +8043,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は1。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q251.png"
   },
   {
     "id": "r101-252",
@@ -8047,7 +8087,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は3。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q253.png"
   },
   {
     "id": "r101-254",
@@ -8094,7 +8135,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は1。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q255.png"
   },
   {
     "id": "r101-256",
@@ -8141,7 +8183,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は2。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q257.png"
   },
   {
     "id": "r101-258",
@@ -8184,7 +8227,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は2。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q259.png"
   },
   {
     "id": "r101-260",
@@ -8231,7 +8275,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は4。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q261.png"
   },
   {
     "id": "r101-262",
@@ -8278,7 +8323,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は2。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q263.png"
   },
   {
     "id": "r101-264",
@@ -8325,7 +8371,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は3。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q265.png"
   },
   {
     "id": "r101-266",
@@ -8338,7 +8385,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は2。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q266.png"
   },
   {
     "id": "r101-267",
@@ -8351,7 +8399,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は3。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q267.png"
   },
   {
     "id": "r101-268",
@@ -8398,7 +8447,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は2。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q269.png"
   },
   {
     "id": "r101-270",
@@ -8445,7 +8495,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は2。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q271.png"
   },
   {
     "id": "r101-272",
@@ -8492,7 +8543,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】正答は4。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q273.png"
   },
   {
     "id": "r101-274",
@@ -8539,7 +8591,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q275.png"
   },
   {
     "id": "r101-276",
@@ -8582,7 +8635,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 6,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q277.png"
   },
   {
     "id": "r101-278",
@@ -8629,7 +8683,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q279.png"
   },
   {
     "id": "r101-280",
@@ -8672,7 +8727,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q281.png"
   },
   {
     "id": "r101-282",
@@ -8715,7 +8771,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q283.png"
   },
   {
     "id": "r101-284",
@@ -8758,7 +8815,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q285.png"
   },
   {
     "id": "r101-286",
@@ -8805,7 +8863,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q287.png"
   },
   {
     "id": "r101-288",
@@ -8852,7 +8911,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q289.png"
   },
   {
     "id": "r101-290",
@@ -8899,7 +8959,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q291.png"
   },
   {
     "id": "r101-292",
@@ -8946,7 +9007,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q293.png"
   },
   {
     "id": "r101-294",
@@ -8993,7 +9055,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q295.png"
   },
   {
     "id": "r101-296",
@@ -9040,7 +9103,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q297.png"
   },
   {
     "id": "r101-298",
@@ -9087,7 +9151,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q299.png"
   },
   {
     "id": "r101-300",
@@ -9134,7 +9199,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q301.png"
   },
   {
     "id": "r101-302",
@@ -9181,7 +9247,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q303.png"
   },
   {
     "id": "r101-304",
@@ -9228,7 +9295,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q305.png"
   },
   {
     "id": "r101-306",
@@ -9241,7 +9309,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q306.png"
   },
   {
     "id": "r101-307",
@@ -9254,7 +9323,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q307.png"
   },
   {
     "id": "r101-308",
@@ -9301,7 +9371,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q309.png"
   },
   {
     "id": "r101-310",
@@ -9344,7 +9415,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q311.png"
   },
   {
     "id": "r101-312",
@@ -9391,7 +9463,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q313.png"
   },
   {
     "id": "r101-314",
@@ -9438,7 +9511,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q315.png"
   },
   {
     "id": "r101-316",
@@ -9485,7 +9559,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q317.png"
   },
   {
     "id": "r101-318",
@@ -9520,7 +9595,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q319.png"
   },
   {
     "id": "r101-320",
@@ -9533,7 +9609,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q320.png"
   },
   {
     "id": "r101-321",
@@ -9546,7 +9623,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q321.png"
   },
   {
     "id": "r101-322",
@@ -9589,7 +9667,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q323.png"
   },
   {
     "id": "r101-324",
@@ -9602,7 +9681,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q324.png"
   },
   {
     "id": "r101-325",
@@ -9615,7 +9695,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q325.png"
   },
   {
     "id": "r101-326",
@@ -9802,7 +9883,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q331.png"
   },
   {
     "id": "r101-332",
@@ -9917,7 +9999,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q335.png"
   },
   {
     "id": "r101-336",
@@ -9930,7 +10013,8 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "choices": [],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】元データを参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
-    "tags": []
+    "tags": [],
+    "image_url": "/images/questions/101/q336.png"
   },
   {
     "id": "r101-337",
