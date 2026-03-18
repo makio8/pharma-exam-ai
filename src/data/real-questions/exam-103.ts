@@ -7094,7 +7094,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
         "text": "体重減少"
       }
     ],
-    "correct_answer": "解なし",
+    "correct_answer": 0,
     "explanation": "【ポイント】実践問題（複合問題）\n【正答の根拠】元データに基づく。\n【他の選択肢】\n（元データに基づく選択肢情報）\n【覚え方💡】該当分野の基本知識を整理して覚える\n【関連知識】元データの関連トピックを確認",
     "tags": []
   },

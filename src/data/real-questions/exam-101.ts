@@ -6430,7 +6430,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
         "text": "β‑ラクタム系抗生物質                ２次反応"
       }
     ],
-    "correct_answer": "解なし",
+    "correct_answer": 0,
     "explanation": "【ポイント】問題データ不完全（要確認）\n【正答の根拠】公式解答は「解なし」。問196との連問。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
     "tags": []
   },
@@ -6804,7 +6804,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
         "text": "この酒石酸は（2R,3R）の立体配置を有する。"
       }
     ],
-    "correct_answer": "解なし",
+    "correct_answer": 0,
     "explanation": "【ポイント】連問形式の実践問題（問208以降）\n【正答の根拠】問題データに基づいて正答を確認。元データの解説を参照。\n【他の選択肢】\n【覚え方💡】\n【関連知識】",
     "tags": []
   },

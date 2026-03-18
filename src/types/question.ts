@@ -8,6 +8,7 @@ export type QuestionSubject =
   | '物理'
   | '化学'
   | '生物'
+  | '衛生'
   | '薬理'
   | '薬剤'
   | '病態・薬物治療'
@@ -16,7 +17,7 @@ export type QuestionSubject =
 
 /** 問題の選択肢 */
 export interface Choice {
-  key: 1 | 2 | 3 | 4 | 5
+  key: number
   text: string
 }
 

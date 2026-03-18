@@ -41,7 +41,14 @@ export default defineConfig({
           if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/') || id.includes('node_modules/react-router')) return 'vendor-react'
           if (id.includes('node_modules/antd') || id.includes('node_modules/@ant-design')) return 'vendor-antd'
           if (id.includes('node_modules/@supabase')) return 'vendor-supabase'
-          // 問題データを年度別に分割
+          // 問題データを年度別に分割（100-110回）
+          if (id.includes('real-questions/exam-100')) return 'data-100'
+          if (id.includes('real-questions/exam-101')) return 'data-101'
+          if (id.includes('real-questions/exam-102')) return 'data-102'
+          if (id.includes('real-questions/exam-103')) return 'data-103'
+          if (id.includes('real-questions/exam-104')) return 'data-104'
+          if (id.includes('real-questions/exam-105')) return 'data-105'
+          if (id.includes('real-questions/exam-106')) return 'data-106'
           if (id.includes('real-questions/exam-107')) return 'data-107'
           if (id.includes('real-questions/exam-108')) return 'data-108'
           if (id.includes('real-questions/exam-109')) return 'data-109'
