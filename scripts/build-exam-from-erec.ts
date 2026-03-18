@@ -60,11 +60,17 @@ for (const year of years) {
   let answers: Record<string, any> = {}
   const answersPath = `/tmp/claude/answers-${year}.json`
   try {
-    const answersList: any[] = JSON.parse(fs.readFileSync(answersPath, 'utf-8'))
-    for (const a of answersList) {
-      answers[a.question_number] = a.correct_answers
+    const raw = JSON.parse(fs.readFileSync(answersPath, 'utf-8'))
+    // 形式: { "year": 106, "answers": { "1": 2, "2": 4, ... } }
+    if (raw.answers && typeof raw.answers === 'object') {
+      answers = raw.answers
+      console.log(`  正答PDF: ${Object.keys(answers).length}問`)
+    } else if (Array.isArray(raw)) {
+      for (const a of raw) {
+        answers[a.question_number] = a.correct_answers
+      }
+      console.log(`  正答PDF: ${raw.length}問`)
     }
-    console.log(`  正答PDF: ${answersList.length}問`)
   } catch {
     console.log(`  ⚠ 正答PDF (${answersPath}) が見つかりません。e-RECのanswer_textを使用`)
   }
@@ -81,10 +87,10 @@ for (const year of years) {
 
     // 正答の決定（PDF正答 > e-REC）
     let correctAnswer = 0
-    if (answers[qNum]) {
+    const pdfAnswer = answers[String(qNum)]
+    if (pdfAnswer !== undefined) {
       // PDF正答（配列の場合は最初の値）
-      const ca = answers[qNum]
-      correctAnswer = Array.isArray(ca) ? ca[0] : ca
+      correctAnswer = Array.isArray(pdfAnswer) ? pdfAnswer[0] : pdfAnswer
     } else if (erec?.answer_text) {
       // answer_textから数字を抽出
       const m = erec.answer_text.match(/(\d)/)
