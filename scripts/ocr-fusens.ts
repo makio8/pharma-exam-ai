@@ -41,25 +41,32 @@ const OUTPUT_DIR = path.join(__dirname, '..', 'src', 'data', 'fusens')
 
 const PROMPT = `あなたは薬学の専門家です。この画像は薬剤師国家試験の学習ノートで、ルーズリーフに手書きの付箋が貼られています。
 
-この画像に含まれる全ての付箋を個別に読み取り、以下のJSON配列形式で出力してください。
+各付箋を個別に読み取り、JSON配列で出力してください。
 
-[
-  {
-    "title": "付箋のタイトル（赤字の見出し。なければ内容から推定）",
-    "body": "本文テキスト（数式・化学式を含む。改行は\\nで表現）",
-    "subject": "物理|化学|生物|薬理|薬剤|病態・薬物治療|法規・制度・倫理|実務|衛生",
-    "note_type": "knowledge|solution|mnemonic|caution|related",
-    "tags": ["タグ1", "タグ2", "タグ3"],
-    "color": "yellow|pink|green|blue|orange"
-  }
-]
+■ note_type の分類基準（重要）:
+- "knowledge": 知識の整理・定義・分類（「〇〇とは」「〇〇の定義」）
+- "mnemonic": 語呂合わせ・覚え方・暗記法・単位換算の早見表（「〇〇で覚える」矢印で変換法を示すもの）
+- "solution": 解法・計算手順・考え方のフロー（「まず〇〇→次に〇〇」導出過程）
+- "caution": 注意点・ひっかけ・間違いやすいポイント（「〇〇に注意」「〇〇と混同しない」）
+- "related": 比較表・まとめ・対比（「A vs B」番号付きリスト）
+
+■ タイトルのルール:
+- 赤字の見出しがあればそれをタイトルにする
+- なければ内容を10文字以内で要約してタイトルを作る（絶対にnullにしない）
+
+[{"title":"タイトル(10文字以内で必須)","body":"本文(数式・化学式含む)","subject":"物理|化学|生物|薬理|薬剤|病態・薬物治療|法規・制度・倫理|実務|衛生","note_type":"knowledge|mnemonic|solution|caution|related","tags":["タグ1","タグ2","タグ3"]}]
+
+■ 分類の追加ルール:
+- 単位換算（ppm=mg/L、1Pa=N/m²等）→ "mnemonic"（覚えておく変換法）
+- 「〇〇の定義」系 → "knowledge"
+- 複数項目の比較リスト → "related"
+- 構造式の描き方や反応の手順 → "solution"
 
 注意:
-- 手書き文字を可能な限り正確に読み取ってください
-- 薬学・化学の専門用語（受容体名、薬物名、化学式等）は正確に
-- 付箋の色（黄色・ピンク・緑・青等）も記録
+- 手書き文字を可能な限り正確に読み取る
+- 薬学・化学の専門用語は正確に
 - 読み取れない部分は [不明] と記載
-- JSONのみ出力（説明文は不要）`
+- JSONのみ出力（説明文不要）`
 
 interface FusenOCRResult {
   page: number
@@ -69,7 +76,6 @@ interface FusenOCRResult {
     subject: string
     note_type: string
     tags: string[]
-    color: string
   }[]
 }
 
