@@ -94,14 +94,36 @@ for (const year of years) {
       continue
     }
 
-    const existingLen = (question.explanation || '').length
-    const newLen = explanationText.length
+    const existing = question.explanation || ''
+    const explText = typeof explanationText === 'string' ? explanationText : ''
+    if (!explText) { skipped++; continue }
+    const isTemplateNew = explText.includes('【ポイント】')
+    const isTemplateExisting = existing.includes('【ポイント】')
 
-    if (newLen > existingLen) {
-      question.explanation = explanationText
+    // テンプレート構造化解説を常に優先
+    // 1. 新がテンプレート & 既存がテンプレートでない → 上書き
+    // 2. 両方テンプレート → 長い方を採用
+    // 3. 両方テンプレートでない → 長い方を採用
+    // 4. 既存がテンプレート & 新がテンプレートでない → スキップ
+    if (isTemplateNew && !isTemplateExisting) {
+      question.explanation = explText
       updated++
+    } else if (isTemplateNew && isTemplateExisting) {
+      if (explText.length > existing.length) {
+        question.explanation = explText
+        updated++
+      } else {
+        skipped++
+      }
+    } else if (!isTemplateNew && !isTemplateExisting) {
+      if (explText.length > existing.length) {
+        question.explanation = explText
+        updated++
+      } else {
+        skipped++
+      }
     } else {
-      skipped++
+      skipped++ // 既存がテンプレート、新がテンプレートでない → スキップ
     }
   }
 
