@@ -1,8 +1,8 @@
 /**
- * 第107〜110回 全345問×4回 = 1,380問 取得スクリプト
+ * 第100〜110回 全345問×11回 = 3,795問 取得スクリプト
  * 必須 + 理論①② + 実践①②③ の全6セクション対応
  *
- * npx tsx scripts/fetch-full-exams.ts
+ * npx tsx scripts/fetch-full-exams.ts [--year 100-106]
  */
 
 import * as fs from 'fs'
@@ -30,18 +30,31 @@ interface ExamSection {
 }
 
 function getExamSections(year: number): ExamSection[] {
-  // 107回はURL構造が異なる（サブディレクトリあり）
-  const prefix107 = `${BASE}/%e7%ac%ac107%e5%9b%9e%e8%96%ac%e5%89%a4%e5%b8%ab%e5%9b%bd%e5%ae%b6%e8%a9%a6%e9%a8%93`
+  // 100-107回はサブディレクトリ構造: /第XXX回薬剤師国家試験/第XXX回　セクション名/
+  // 108-109回はフラット: /第XXX回　セクション名/
+  // 110回は過去問解説サブディレクトリ: /薬剤師国家試験過去問解説/第110回薬剤師国家試験/第110回　セクション名/
+
+  function yearPrefix(y: number): string {
+    return `${BASE}/%e7%ac%ac${y}%e5%9b%9e%e8%96%ac%e5%89%a4%e5%b8%ab%e5%9b%bd%e5%ae%b6%e8%a9%a6%e9%a8%93`
+  }
+
+  function subDirSections(y: number, prefix: string): ExamSection[] {
+    return [
+      { name: '必須', section: '必須', url: `${prefix}/%e7%ac%ac${y}%e5%9b%9e%e3%80%80%e5%bf%85%e9%a0%88%e5%95%8f%e9%a1%8c/` },
+      { name: '理論①', section: '理論', url: `${prefix}/%e7%ac%ac${y}%e5%9b%9e%e3%80%80%e7%90%86%e8%ab%96%e5%95%8f%e9%a1%8c%e2%91%a0/` },
+      { name: '理論②', section: '理論', url: `${prefix}/%e7%ac%ac${y}%e5%9b%9e%e3%80%80%e7%90%86%e8%ab%96%e5%95%8f%e9%a1%8c%e2%91%a1/` },
+      { name: '実践①', section: '実践', url: `${prefix}/%e7%ac%ac${y}%e5%9b%9e%e3%80%80%e5%ae%9f%e8%b7%b5%e5%95%8f%e9%a1%8c%e2%91%a0/` },
+      { name: '実践②', section: '実践', url: `${prefix}/%e7%ac%ac${y}%e5%9b%9e%e3%80%80%e5%ae%9f%e8%b7%b5%e5%95%8f%e9%a1%8c%e2%91%a1/` },
+      { name: '実践③', section: '実践', url: `${prefix}/%e7%ac%ac${y}%e5%9b%9e%e3%80%80%e5%ae%9f%e8%b7%b5%e5%95%8f%e9%a1%8c%e2%91%a2/` },
+    ]
+  }
+
+  // 100-107回: サブディレクトリ構造
+  if (year >= 100 && year <= 107) {
+    return subDirSections(year, yearPrefix(year))
+  }
 
   const sections: Record<number, ExamSection[]> = {
-    107: [
-      { name: '必須', section: '必須', url: `${prefix107}/%e7%ac%ac107%e5%9b%9e%e3%80%80%e5%bf%85%e9%a0%88%e5%95%8f%e9%a1%8c/` },
-      { name: '理論①', section: '理論', url: `${prefix107}/%e7%ac%ac107%e5%9b%9e%e3%80%80%e7%90%86%e8%ab%96%e5%95%8f%e9%a1%8c%e2%91%a0/` },
-      { name: '理論②', section: '理論', url: `${prefix107}/%e7%ac%ac107%e5%9b%9e%e3%80%80%e7%90%86%e8%ab%96%e5%95%8f%e9%a1%8c%e2%91%a1/` },
-      { name: '実践①', section: '実践', url: `${prefix107}/%e7%ac%ac107%e5%9b%9e%e3%80%80%e5%ae%9f%e8%b7%b5%e5%95%8f%e9%a1%8c%e2%91%a0/` },
-      { name: '実践②', section: '実践', url: `${prefix107}/%e7%ac%ac107%e5%9b%9e%e3%80%80%e5%ae%9f%e8%b7%b5%e5%95%8f%e9%a1%8c%e2%91%a1/` },
-      { name: '実践③', section: '実践', url: `${prefix107}/%e7%ac%ac107%e5%9b%9e%e3%80%80%e5%ae%9f%e8%b7%b5%e5%95%8f%e9%a1%8c%e2%91%a2/` },
-    ],
     108: [
       { name: '必須', section: '必須', url: `${BASE}/%e7%ac%ac108%e5%9b%9e%e3%80%80%e5%bf%85%e9%a0%88%e5%95%8f%e9%a1%8c/` },
       { name: '理論①', section: '理論', url: `${BASE}/%e7%ac%ac108%e5%9b%9e%e3%80%80%e7%90%86%e8%ab%96%e5%95%8f%e9%a1%8c%e2%91%a0/` },
@@ -192,7 +205,17 @@ async function main() {
   const outputDir = path.join(__dirname, '..', 'src', 'data', 'real-questions')
   fs.mkdirSync(outputDir, { recursive: true })
 
-  const years = [107, 108, 109, 110]
+  // CLI引数で年度指定: --year 100-106 or --year 103
+  const yearArg = process.argv.find((_, i) => process.argv[i - 1] === '--year')
+  let years: number[]
+  if (yearArg && yearArg.includes('-')) {
+    const [start, end] = yearArg.split('-').map(Number)
+    years = Array.from({ length: end - start + 1 }, (_, i) => start + i)
+  } else if (yearArg) {
+    years = [Number(yearArg)]
+  } else {
+    years = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
+  }
   const grandTotal: Record<number, { total: number; usable: number }> = {}
 
   for (const year of years) {

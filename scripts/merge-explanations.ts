@@ -20,8 +20,8 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const dataDir = path.join(__dirname, '..', 'src', 'data', 'real-questions')
 
-// 110回は最後に処理（別エージェントが書き込み中の可能性があるため）
-const years = [107, 108, 109, 110]
+// 100-110回すべて処理（110回は最後に処理）
+const years = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
 
 interface QuestionObj {
   id: string
