@@ -26,6 +26,83 @@ interface PdfConfig {
 
 const EXAMS: PdfConfig[] = [
   {
+    year: 100,
+    pdfs: [
+      { url: '', file: 'q100-hissu.pdf', section: '必須' },
+      { url: '', file: 'q100-riron1.pdf', section: '理論' },
+      { url: '', file: 'q100-riron2.pdf', section: '理論' },
+      { url: '', file: 'q100-jissen1.pdf', section: '実践' },
+      { url: '', file: 'q100-jissen2.pdf', section: '実践' },
+      { url: '', file: 'q100-jissen3.pdf', section: '実践' },
+    ],
+  },
+  {
+    year: 101,
+    pdfs: [
+      { url: '', file: 'q101-hissu.pdf', section: '必須' },
+      { url: '', file: 'q101-riron1.pdf', section: '理論' },
+      { url: '', file: 'q101-riron2.pdf', section: '理論' },
+      { url: '', file: 'q101-jissen1.pdf', section: '実践' },
+      { url: '', file: 'q101-jissen2.pdf', section: '実践' },
+      { url: '', file: 'q101-jissen3.pdf', section: '実践' },
+    ],
+  },
+  {
+    year: 102,
+    pdfs: [
+      { url: '', file: 'q102-hissu.pdf', section: '必須' },
+      { url: '', file: 'q102-riron1.pdf', section: '理論' },
+      { url: '', file: 'q102-riron2.pdf', section: '理論' },
+      { url: '', file: 'q102-jissen1.pdf', section: '実践' },
+      { url: '', file: 'q102-jissen2.pdf', section: '実践' },
+      { url: '', file: 'q102-jissen3.pdf', section: '実践' },
+    ],
+  },
+  {
+    year: 103,
+    pdfs: [
+      { url: '', file: 'q103-hissu.pdf', section: '必須' },
+      { url: '', file: 'q103-riron1.pdf', section: '理論' },
+      { url: '', file: 'q103-riron2.pdf', section: '理論' },
+      { url: '', file: 'q103-jissen1.pdf', section: '実践' },
+      { url: '', file: 'q103-jissen2.pdf', section: '実践' },
+      { url: '', file: 'q103-jissen3.pdf', section: '実践' },
+    ],
+  },
+  {
+    year: 104,
+    pdfs: [
+      { url: '', file: 'q104-hissu.pdf', section: '必須' },
+      { url: '', file: 'q104-riron1.pdf', section: '理論' },
+      { url: '', file: 'q104-riron2.pdf', section: '理論' },
+      { url: '', file: 'q104-jissen1.pdf', section: '実践' },
+      { url: '', file: 'q104-jissen2.pdf', section: '実践' },
+      { url: '', file: 'q104-jissen3.pdf', section: '実践' },
+    ],
+  },
+  {
+    year: 105,
+    pdfs: [
+      { url: '', file: 'q105-hissu.pdf', section: '必須' },
+      { url: '', file: 'q105-riron1.pdf', section: '理論' },
+      { url: '', file: 'q105-riron2.pdf', section: '理論' },
+      { url: '', file: 'q105-jissen1.pdf', section: '実践' },
+      { url: '', file: 'q105-jissen2.pdf', section: '実践' },
+      { url: '', file: 'q105-jissen3.pdf', section: '実践' },
+    ],
+  },
+  {
+    year: 106,
+    pdfs: [
+      { url: '', file: 'q106-hissu.pdf', section: '必須' },
+      { url: '', file: 'q106-riron1.pdf', section: '理論' },
+      { url: '', file: 'q106-riron2.pdf', section: '理論' },
+      { url: '', file: 'q106-jissen1.pdf', section: '実践' },
+      { url: '', file: 'q106-jissen2.pdf', section: '実践' },
+      { url: '', file: 'q106-jissen3.pdf', section: '実践' },
+    ],
+  },
+  {
     year: 107,
     pdfs: [
       { url: 'https://www.mhlw.go.jp/content/000915525.pdf', file: 'q107-hissu.pdf', section: '必須' },
@@ -472,9 +549,20 @@ async function main() {
   const tmpDir = '/tmp/claude'
   const outputDir = path.join(__dirname, '..', 'src', 'data', 'real-questions')
 
+  // CLI引数で年度指定: --year 100-106 or --year 103
+  const yearArg = process.argv.find((_, i) => process.argv[i - 1] === '--year')
+  let targetYears: number[] | null = null
+  if (yearArg && yearArg.includes('-')) {
+    const [start, end] = yearArg.split('-').map(Number)
+    targetYears = Array.from({ length: end - start + 1 }, (_, i) => start + i)
+  } else if (yearArg) {
+    targetYears = [Number(yearArg)]
+  }
+  const exams = targetYears ? EXAMS.filter(e => targetYears!.includes(e.year)) : EXAMS
+
   // 改善前の統計を読み込む
   const beforeStats: Record<number, { total: number; with5: number }> = {}
-  for (const exam of EXAMS) {
+  for (const exam of exams) {
     const existingPath = path.join(outputDir, `exam-${exam.year}-pdf.json`)
     if (fs.existsSync(existingPath)) {
       const existing: ParsedQuestion[] = JSON.parse(fs.readFileSync(existingPath, 'utf-8'))
@@ -485,7 +573,7 @@ async function main() {
     }
   }
 
-  for (const exam of EXAMS) {
+  for (const exam of exams) {
     console.log(`\n=== 第${exam.year}回 PDFダイレクトパース (v2) ===`)
 
     const allQuestions: ParsedQuestion[] = []
@@ -548,7 +636,7 @@ async function main() {
   console.log('\n=== 全体統計 ===')
   let totalBefore = 0
   let totalAfter = 0
-  for (const exam of EXAMS) {
+  for (const exam of exams) {
     const outPath = path.join(outputDir, `exam-${exam.year}-pdf.json`)
     const data: ParsedQuestion[] = JSON.parse(fs.readFileSync(outPath, 'utf-8'))
     const with5 = data.filter(q => q.choices.length >= 5).length
