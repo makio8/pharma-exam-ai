@@ -24,7 +24,7 @@ import {
   CloseCircleFilled,
 } from '@ant-design/icons'
 import { useParams, useNavigate } from 'react-router-dom'
-import { DUMMY_QUESTIONS } from '../data/dummy-questions'
+import { ALL_QUESTIONS } from '../data/all-questions'
 import { useAnswerHistory } from '../hooks/useAnswerHistory'
 import { NOTE_TYPE_CONFIG } from '../types/note'
 import type { NoteType, NoteVisibility, StickyNote } from '../types/note'
@@ -54,7 +54,7 @@ export function QuestionPage() {
 
   // --- 問題のロード ---
   const question = useMemo(
-    () => DUMMY_QUESTIONS.find((q) => q.id === questionId),
+    () => ALL_QUESTIONS.find((q) => q.id === questionId),
     [questionId],
   )
 

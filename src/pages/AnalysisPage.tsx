@@ -28,7 +28,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAnalytics } from '../hooks/useAnalytics'
 import { NOTE_TYPE_CONFIG } from '../types/note'
 import type { SubjectAccuracy, Question } from '../types/question'
-import { DUMMY_QUESTIONS } from '../data/dummy-questions'
+import { ALL_QUESTIONS } from '../data/all-questions'
 import type { NoteType } from '../types/note'
 
 const { Title, Text } = Typography
@@ -172,9 +172,9 @@ export function AnalysisPage() {
   ]
 
   // --- 回答履歴用のquestionマップ ---
-  // DUMMY_QUESTIONSからidで引ける形にする
+  // ALL_QUESTIONSからidで引ける形にする
   const questionMap = new Map<string, Question>()
-  for (const q of DUMMY_QUESTIONS) {
+  for (const q of ALL_QUESTIONS) {
     questionMap.set(q.id, q)
   }
 

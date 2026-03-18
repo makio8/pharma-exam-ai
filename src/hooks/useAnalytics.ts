@@ -7,7 +7,7 @@ import type {
   SubjectAccuracy,
 } from '../types/question'
 import type { NoteType, StickyNote } from '../types/note'
-import { DUMMY_QUESTIONS } from '../data/dummy-questions'
+import { ALL_QUESTIONS } from '../data/all-questions'
 
 /** 全科目リスト */
 const ALL_SUBJECTS: QuestionSubject[] = [
@@ -152,7 +152,7 @@ export function useAnalytics(): UseAnalyticsReturn {
     }
     // question_id → subject のルックアップ
     const questionMap = new Map<string, Question>()
-    for (const q of DUMMY_QUESTIONS) {
+    for (const q of ALL_QUESTIONS) {
       questionMap.set(q.id, q)
     }
     for (const h of allHistory) {
@@ -235,10 +235,10 @@ export function useAnalytics(): UseAnalyticsReturn {
 
     // --- おすすめ問題（未回答 + 苦手から3問ピックアップ） ---
     const answeredIds = new Set(allHistory.map((h) => h.question_id))
-    const unanswered = DUMMY_QUESTIONS.filter((q) => !answeredIds.has(q.id))
+    const unanswered = ALL_QUESTIONS.filter((q) => !answeredIds.has(q.id))
     // 苦手問題（不正解があるもの）を優先
     const weakIds = new Set(incorrectCountMap.keys())
-    const weakForRecommend = DUMMY_QUESTIONS.filter(
+    const weakForRecommend = ALL_QUESTIONS.filter(
       (q) => weakIds.has(q.id)
     ).sort(
       (a, b) =>
@@ -263,7 +263,7 @@ export function useAnalytics(): UseAnalyticsReturn {
     }
     // それでも足りなければダミーからランダム
     if (recommended.length < 3) {
-      const shuffled = [...DUMMY_QUESTIONS].sort(() => Math.random() - 0.5)
+      const shuffled = [...ALL_QUESTIONS].sort(() => Math.random() - 0.5)
       for (const q of shuffled) {
         if (recommended.length >= 3) break
         if (!recommended.find((r) => r.id === q.id)) {
@@ -288,7 +288,7 @@ export function useAnalytics(): UseAnalyticsReturn {
       todayStats,
       recentHistory,
       totalAnswered: allHistory.length,
-      totalQuestions: DUMMY_QUESTIONS.length,
+      totalQuestions: ALL_QUESTIONS.length,
       noteStats,
       weeklyData,
       recommendedQuestions: recommended,

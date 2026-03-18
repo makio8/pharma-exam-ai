@@ -17,7 +17,7 @@ import { PlusOutlined, SearchOutlined } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
 import type { NoteType, NoteVisibility, StickyNote } from '../types/note.ts'
 import { NOTE_TYPE_CONFIG } from '../types/note.ts'
-import { DUMMY_QUESTIONS } from '../data/dummy-questions.ts'
+import { ALL_QUESTIONS } from '../data/all-questions'
 import { useStickyNotes } from '../hooks/useStickyNotes.ts'
 import { StickyNoteCard } from '../components/common/StickyNoteCard.tsx'
 import { StickyNoteDetail } from '../components/common/StickyNoteDetail.tsx'
@@ -48,7 +48,7 @@ const INITIAL_FILTERS: Filters = {
 
 /** question_id から「第◯◯回 問◯」形式のタイトルを生成 */
 function questionTitle(questionId: string): string | undefined {
-  const q = DUMMY_QUESTIONS.find(d => d.id === questionId)
+  const q = ALL_QUESTIONS.find(d => d.id === questionId)
   if (!q) return undefined
   return `第${q.year}回 問${q.question_number}`
 }

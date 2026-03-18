@@ -23,7 +23,7 @@ import {
   MinusCircleOutlined,
 } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
-import { DUMMY_QUESTIONS } from '../data/dummy-questions'
+import { ALL_QUESTIONS } from '../data/all-questions'
 import { useAnswerHistory } from '../hooks/useAnswerHistory'
 import type { QuestionSection, QuestionSubject, Question } from '../types/question'
 
@@ -39,7 +39,7 @@ const SUBJECTS: QuestionSubject[] = [
 const SECTIONS: QuestionSection[] = ['必須', '理論', '実践']
 
 /** 年度一覧（ダミーデータから抽出） */
-const YEARS = [...new Set(DUMMY_QUESTIONS.map((q) => q.year))].sort((a, b) => a - b)
+const YEARS = [...new Set(ALL_QUESTIONS.map((q) => q.year))].sort((a, b) => a - b)
 
 /** 正誤ステータス */
 type CorrectStatus = 'all' | 'correct' | 'incorrect' | 'unanswered'
@@ -72,7 +72,7 @@ export function PracticePage() {
 
   // --- フィルタリング ---
   const filteredQuestions = useMemo(() => {
-    let result = [...DUMMY_QUESTIONS]
+    let result = [...ALL_QUESTIONS]
 
     // 正答率60%以上フィルター
     if (easyOnly) {
