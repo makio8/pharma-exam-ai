@@ -1,0 +1,734 @@
+[
+  {
+    "page": 1,
+    "notes": [
+      {
+        "title": "SI基本単位",
+        "body": "Cd n A K s mol kg\nカンデラ\nモル\nキログラム\nマス\n秒\nで Cd となる",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "SI単位",
+          "基本単位",
+          "カンデラ",
+          "モル",
+          "キログラム",
+          "秒"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "単位",
+        "body": "エネルギー(仕事・熱) J = N・m = kg・m²・s⁻²\n圧力 Pa = N・m⁻² = kg・m⁻¹・s⁻²\n力 N = J・m⁻¹ = kg・m・s⁻²",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "単位",
+          "エネルギー",
+          "仕事",
+          "熱",
+          "圧力",
+          "力",
+          "J",
+          "Pa",
+          "N"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "圧力 Pa(パスカル)",
+        "body": "1 Pa = N/m²\n1m²の面積あたりに\n働く1Nの力\nエネルギー(仕事・熱) J\n1J = N x m\n1Jは、物体を1Nの力で\n1m移動させる仕事\n⇒ N = J/m",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "圧力",
+          "パスカル",
+          "Pa",
+          "エネルギー",
+          "仕事",
+          "熱",
+          "J",
+          "ニュートン",
+          "N"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "力(ニュートン)を覚える",
+        "body": "・速度: ねりの変化を時間で割った\n・加速度: 速度の変化を時間で割った\nN = kg x m x s⁻²\nニュートンは、1kgの物体に1m/s²の\n加速度でかけたもの\n力 N = kg・m・s⁻² より\n圧力 Pa = N・m⁻² = kg・m・s⁻²・m⁻² = kg・m⁻¹・s⁻²\nエネルギー J = N x m = kg・m・s⁻²・m = kg・m²・s⁻²",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "力",
+          "ニュートン",
+          "N",
+          "速度",
+          "加速度",
+          "単位換算"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "ppmの定義",
+        "body": "ppm = mg/L\n1m³ = 1000L\n0.1% = 1000ppm",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "ppm",
+          "mg/L",
+          "単位換算",
+          "体積"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "Na⁺の1日摂取量",
+        "body": "Na⁺の1日摂取量\n1～2mEq/kg\n50kgで60～100mEq",
+        "subject": "衛生",
+        "note_type": "knowledge",
+        "tags": [
+          "Na+",
+          "ナトリウム",
+          "摂取量",
+          "mEq"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "ppmと濃度の関係",
+        "body": "ppm = mg/L\n0.1V = 1000ppm\n1ppm = 0.0001%",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "ppm",
+          "mg/L",
+          "単位換算",
+          "濃度"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "温度換算",
+        "body": "273 K\n0℃\n0℃ = 273K",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "温度",
+          "ケルビン",
+          "摂氏",
+          "単位換算"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "w/v %の定義",
+        "body": "w/v % ⇒ g/100mLのこと",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "w/v%",
+          "濃度",
+          "単位"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "対数計算",
+        "body": "10⁰.³ = 2\nlog₁₀2 = 0.3\n10⁰.³ = 2",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "対数",
+          "計算"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "双極子の種類",
+        "body": "① 永久双極子\n⇒ 常に偏りをもつ。極性分子\n例) H₂O, HCl, NH₃\n② 誘起双極子\n⇒ 電子雲のゆらぎによって偏り\n瞬間-誘起双極子相互作用\n例) CH₄, CO₂, CCl₄",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "双極子",
+          "永久双極子",
+          "誘起双極子",
+          "極性分子",
+          "分子間力"
+        ],
+        "color": "green"
+      },
+      {
+        "title": "アルカンの沸点",
+        "body": "分枝がないのは\nC-C-C-C-C\n｜｜｜｜｜\nC-C-C-C-C\n↑鎖状の形\n分枝があるのは\nC-C-C-C\n｜\nC\n↑球状の形\n↑接触面積が小さい\n↑沸点低い",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "アルカン",
+          "沸点",
+          "分子構造",
+          "分枝",
+          "鎖状",
+          "接触面積"
+        ],
+        "color": "green"
+      },
+      {
+        "title": "H₂O CHFIについて",
+        "body": "H₂Oの構造図 (δ⁺, δ⁻の表記あり)\n水素結合 (4本)\nH-F, F-H, F-H-Fの構造図 (δ⁺, δ⁻の表記あり)\n水素結合 (2本)",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "H₂O",
+          "HF",
+          "水素結合",
+          "極性"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "水素結合を形成する",
+        "body": "CH₃-C(=O)-OHの構造図 (酢酸の二量体)\n酢酸の二量体\no-ニトロフェノール構造図 (分子内水素結合)\np-ニトロフェノール構造図 (分子間水素結合)",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "水素結合",
+          "分子間水素結合",
+          "分子内水素結合",
+          "酢酸",
+          "二量体",
+          "ニトロフェノール"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "沸点まとめ",
+        "body": "① 官能基(極性度) & 原子数) ⇒ b.p.↑\nex) CH₃OH > CH₃NH₂ > CH₃SH\n② 二量体形成 ⇒ b.p.↑\nex) CH₃COOH > CH₃CH₂CH₂OH\n③ 分子間水素結合 ＞ 分子内水素結合\nex) p-ニトロフェノール > o-ニトロフェノール",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "沸点",
+          "官能基",
+          "極性",
+          "原子数",
+          "二量体",
+          "水素結合",
+          "p-ニトロフェノール",
+          "o-ニトロフェノール"
+        ],
+        "color": "green"
+      },
+      {
+        "title": "ヨウ素と電荷移動相互作用",
+        "body": "ヨウ素 ⇒ 電荷移動相互作用 (色を呈す)\n「ベンゼンにヨウ素を溶かすと色を呈す」",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "ヨウ素",
+          "電荷移動相互作用",
+          "ベンゼン",
+          "色"
+        ],
+        "color": "green"
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "notes": [
+      {
+        "title": "SI基本単位",
+        "body": "Cd n A K s mol kg\nかか のマーク スモール キング\nm A s kg で Cd mol\nマスク で CD となる",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "SI単位",
+          "基本単位",
+          "物理単位"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "ppmと単位換算",
+        "body": "ppm = mg/L\n1m³ = 1000L\n0.1% = 1000ppm\nNa+の1日摂取量\n1~2mEq/kg\n50kgで60~100mEq",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "ppm",
+          "単位換算",
+          "Na+",
+          "摂取量",
+          "濃度"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "単位",
+        "body": "エネルギー(仕事・熱) J=N・m=kg・m²・s⁻²\n圧力 Pa=N/m²=kg・m⁻¹・s⁻²\n力 N=J・m⁻¹=kg・m・s⁻²",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "単位",
+          "エネルギー",
+          "圧力",
+          "力",
+          "J",
+          "Pa",
+          "N"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "ppmと単位換算",
+        "body": "ppm = mg/L\n0.1% = 1000ppm\n1ppm = 0.0001%",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "ppm",
+          "単位換算",
+          "濃度"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "圧力 Pa(パスカル)",
+        "body": "1Pa = N/m²\n1m²の面積あたりに\n働く1Nの力",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "圧力",
+          "Pa",
+          "パスカル",
+          "定義"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "温度単位換算",
+        "body": "K = 273 K\n0℃\n0℃ = 273K\nos = OH\n(T)",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "温度",
+          "ケルビン",
+          "摂氏",
+          "単位換算"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "エネルギー(仕事・熱) J",
+        "body": "1J = N x m\n1Jは、物体を1Nの力で\n1m移動させる仕事\nN = J/m",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "エネルギー",
+          "仕事",
+          "熱",
+          "J",
+          "ジュール",
+          "定義"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "w/v %",
+        "body": "w/v % → g/100mLのこと",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "w/v%",
+          "濃度",
+          "単位"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "力(ニュートン)を覚える",
+        "body": "重さ 物理 10mの場所は\n50kgのリンゴ 50kgに\n加加速度 m/s²\n単位時間あたり\nどれだけ速度(m/s)\n増すか？\nm/s ÷ s\n速度 ÷ 時間\n加加速度\n50kgのリンゴに\n加わった力\n加速度10m/s²\nN = kg・m・s⁻²\nニュートンは、1kgの物体に1m/s²の\n加速度をつけたときの力",
+        "subject": "物理",
+        "note_type": "mnemonic",
+        "tags": [
+          "力",
+          "ニュートン",
+          "N",
+          "加速度",
+          "定義",
+          "物理"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "対数計算",
+        "body": "10⁰.³ = 2\nlog₁₀2 = 0.3\n10⁰.³ = 2",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "対数",
+          "log",
+          "数学"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "速度・加速度・単位のまとめ",
+        "body": "・速度: ねりの変化を時間で割った\n・加速度: 速度の変化を時間で割った\n力 N = kg・m・s⁻² より\n圧力 Pa = N・m⁻² = kg・m・s⁻²・m⁻² = kg・m⁻¹・s⁻²\nエネルギー J = N・m = kg・m・s⁻²・m = kg・m²・s⁻²",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "速度",
+          "加速度",
+          "力",
+          "圧力",
+          "エネルギー",
+          "単位",
+          "定義"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "双極子の種類",
+        "body": "分子内に電荷の偏りをもつ分子\n① 永久双極子\n→ 常に偏りをもつ。極性分子\n例: H₂O, HCl, NH₃\n② 瞬間双極子\n→ 電荷が常にゆらいでいる\n例: CH₄, CO₂, CCl₄\n瞬間-誘起双極子相互作用",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "双極子",
+          "永久双極子",
+          "瞬間双極子",
+          "極性分子",
+          "分子間力"
+        ],
+        "color": "green"
+      },
+      {
+        "title": "アルカンの沸点",
+        "body": "アルカンの沸点\n分枝のほうは\nC-C-C-C-C\n| | | | |\nC-C-C-C-C\n↑接触面積\n↓沸点\nC\nC-C-C-C\nC\n↑ファンデル\nワールス力\n↓接触面積\n↑沸点",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "アルカン",
+          "沸点",
+          "分子間力",
+          "ファンデルワールス力",
+          "接触面積"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "水素結合を形成する",
+        "body": "水素結合を形成する\nH₂O\nCH₃-C-O-H\nCH₃-C-O-CH₃\n酢酸の二量体\nエタノールと\n酢酸",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "水素結合",
+          "H2O",
+          "酢酸",
+          "エタノール",
+          "分子間力"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "H₂O CHFIについて",
+        "body": "H₂O CHFIについて\nH-F H-F H-F H-F\n水素結合 (4本)\n水素結合 (2本)",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "水素結合",
+          "H2O",
+          "HF"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "沸点まとめ",
+        "body": "沸点まとめ\n① 官能基(極性度) → b.p\nex) CH₃OH > CH₃NH₂ > CH₃SH\n② 二量体形成 → b.p\nex) CH₃COOH > CH₃CH₂CH₂OH\n③ 分子間水素結合 ＞分子内水素結合\nex) p-ニトロフェノール > o-ニトロフェノール",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "沸点",
+          "官能基",
+          "極性",
+          "二量体",
+          "水素結合",
+          "分子間力"
+        ],
+        "color": "green"
+      },
+      {
+        "title": "分子間力と沸点",
+        "body": "O-ニトロフェノール\n分子内水素結合\nP-ニトロフェノール\n分子間水素結合",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "分子間力",
+          "沸点",
+          "水素結合",
+          "ニトロフェノール"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "ヨウ素",
+        "body": "ヨウ素 ⇒ 電荷移動相互作用 (色を呈す)\n「ベンゼンにヨウ素をとかすと色を呈す」",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "ヨウ素",
+          "電荷移動相互作用",
+          "ベンゼン"
+        ],
+        "color": "green"
+      }
+    ]
+  },
+  {
+    "page": 3,
+    "notes": [
+      {
+        "title": "SI基本単位",
+        "body": "Cd n A K s mol kg\nかか のマーク スモール キング\nm A s kg で Cd mol\nマスク で CD となる",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "SI単位",
+          "基本単位",
+          "物理量"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "ppmとNa+摂取量",
+        "body": "ppm = mg/L\n1m³ = 1000 L\n0.1% = 1000 ppm\nNa+ の1日摂取量\n1~2mEq/kg\n50kgで60~100mEq",
+        "subject": "衛生",
+        "note_type": "knowledge",
+        "tags": [
+          "ppm",
+          "単位換算",
+          "Na+",
+          "摂取量",
+          "衛生"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "単位",
+        "body": "エネルギー(仕事・熱) J = N・m = kg・m²・s⁻²\n圧力 Pa = N/m² = kg・m⁻¹・s⁻²\n力 N = J・m⁻¹ = kg・m・s⁻²\n(N = kg・m・s⁻² は重要)\n(J = N・m は重要)",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "単位",
+          "エネルギー",
+          "圧力",
+          "力",
+          "ジュール",
+          "パスカル",
+          "ニュートン"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "ppm",
+        "body": "ppm = mg/L\n0.1% = 1000ppm\n1ppm = 0.0001%",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "ppm",
+          "単位換算",
+          "濃度"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "圧力 Pa(パスカル)",
+        "body": "1Pa\nPa = N/m²\n1m² の面積あたりに\n働く1Nの力",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "圧力",
+          "パスカル",
+          "N/m²"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "温度換算",
+        "body": "K = 273 K\n0℃\n0℃ = 273K\nK = ℃ + 273",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "温度",
+          "ケルビン",
+          "摂氏",
+          "単位換算"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "エネルギー(仕事・熱) J",
+        "body": "1J\nJ = N・m\n1J は、物体を1Nの力で\n1m移動させる仕事\nN = J/m",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "エネルギー",
+          "仕事",
+          "熱",
+          "ジュール",
+          "ニュートンメートル"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "w/v%の定義",
+        "body": "w/v % → g/100mL のこと",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "濃度",
+          "w/v%",
+          "単位"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "力(ニュートン)を覚える",
+        "body": "重力\n1kgのリンゴ\n約9.8N\n加速度 m/s²\n単位時間あたり\nどれだけ速度(m/s)\n増すか？\nm/s\n速度\n時間\n時速10kmの物体が\n5秒後に\n時速60kmになった\nこの時の加速度は10m/s²\n増えた\n・速度: 位相の変化を時間で割った\n・加速度: 速度の変化を時間で割った\nN = kg・m・s⁻²\nニュートンは、1kgの物体に1m/s²の\n加速度をつけた時の力",
+        "subject": "物理",
+        "note_type": "mnemonic",
+        "tags": [
+          "力",
+          "ニュートン",
+          "重力",
+          "加速度",
+          "速度",
+          "単位"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "対数と指数",
+        "body": "10⁰.³ = 2\nlog₁₀ 2 = 0.3\n10⁰.³ = 2",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "対数",
+          "指数",
+          "計算"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "単位換算の確認",
+        "body": "力 N = kg・m・s⁻² より\n圧力 Pa = N・m⁻² = kg・m・s⁻²・m⁻² = kg・m⁻¹・s⁻²\nエネルギー J = N・m = kg・m・s⁻²・m = kg・m²・s⁻²",
+        "subject": "物理",
+        "note_type": "knowledge",
+        "tags": [
+          "単位換算",
+          "力",
+          "圧力",
+          "エネルギー",
+          "ニュートン",
+          "パスカル",
+          "ジュール"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "双極子の種類",
+        "body": "分子内に電荷の偏りをもつ分子\n① 永久双極子\n→ 常に偏りをもつ。極性分子\n例: H₂O, HCl, NH₃\n② 瞬間双極子\n→ 電荷の揺らぎによって生じる偏り\n瞬間-誘起双極子相互作用\n例: CH₄, CO₂, CCl₄",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "双極子",
+          "極性分子",
+          "永久双極子",
+          "瞬間双極子",
+          "分子間力"
+        ],
+        "color": "green"
+      },
+      {
+        "title": "アルカンの沸点",
+        "body": "分枝のほうは\nC-C-C-C-C\n| | | | |\nC-C-C-C-C\n↑鎖状の形\nC\n|\nC-C-C-C\n|\nC\n↑球形に近い\n沸点\n↑鎖状の形\n↓球形に近い",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "アルカン",
+          "沸点",
+          "分子構造",
+          "分子間力"
+        ],
+        "color": "green"
+      },
+      {
+        "title": "水素結合を形成する",
+        "body": "沸点が高い\nH₂O\nCH₃-C-O-H\nCH₃-C-O-H\n酢酸の二量体",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "水素結合",
+          "沸点",
+          "酢酸",
+          "二量体"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "H₂O, HFについて",
+        "body": "H₂O\nH-O-H (4本)\nH-F, H-F, H-F (2本)\n水素結合",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "水素結合",
+          "H₂O",
+          "HF",
+          "分子間力"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "ニトロフェノールの水素結合",
+        "body": "O-H\nN-H\nF-H\nO-ニトロフェノール\n分子内水素結合\nP-ニトロフェノール\n分子間水素結合",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "水素結合",
+          "分子内水素結合",
+          "分子間水素結合",
+          "ニトロフェノール"
+        ],
+        "color": "yellow"
+      },
+      {
+        "title": "沸点まとめ",
+        "body": "① 官能基(極性度) & 原子量) → b.p.\nex) CH₃OH > CH₃NH₂ > CH₃SH\n② 二量体形成 → b.p.\nex) CH₃COOH > CH₃CH₂CH₂OH\n③ 分子間水素結合 ＞ 分子内水素結合\nex) O-ニトロフェノール > P-ニトロフェノール",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "沸点",
+          "官能基",
+          "極性",
+          "原子量",
+          "二量体",
+          "水素結合",
+          "分子内水素結合",
+          "分子間水素結合",
+          "ニトロフェノール"
+        ],
+        "color": "green"
+      },
+      {
+        "title": "ヨウ素と電荷移動相互作用",
+        "body": "ヨウ素 ⇒ 電荷移動相互作用 (色を呈す)\n「ベンゼンにヨウ素を溶かすと褐色を呈す」",
+        "subject": "化学",
+        "note_type": "knowledge",
+        "tags": [
+          "ヨウ素",
+          "電荷移動相互作用",
+          "ベンゼン",
+          "色"
+        ],
+        "color": "green"
+      }
+    ]
+  }
+]
