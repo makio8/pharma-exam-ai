@@ -147,7 +147,12 @@ async function fetchPage(url: string): Promise<string> {
 
 async function main() {
   const outputDir = path.join(__dirname, '..', 'src', 'data', 'real-questions')
-  const years = [107, 108, 109, 110]
+  // CLI引数で年度指定: npx tsx scripts/fetch-erec.ts --year 106
+  const args = process.argv.slice(2)
+  const yearArgIdx = args.indexOf('--year')
+  const years = yearArgIdx >= 0
+    ? [parseInt(args[yearArgIdx + 1])]
+    : [107, 108, 109, 110]
 
   for (const year of years) {
     console.log(`\n=== 第${year}回 e-REC取得 ===`)

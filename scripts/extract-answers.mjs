@@ -183,7 +183,9 @@ function validate(result) {
 }
 
 // メイン処理
-const exams = [107, 108, 109, 110];
+// CLI引数で年度指定可能: node scripts/extract-answers.mjs 100 101 102
+const cliYears = process.argv.slice(2).map(Number).filter(n => n > 0);
+const exams = cliYears.length > 0 ? cliYears : [107, 108, 109, 110];
 
 console.log("=== 薬剤師国家試験 正答抽出 ===\n");
 
