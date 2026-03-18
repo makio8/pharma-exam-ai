@@ -1,24 +1,22 @@
 // リポジトリファクトリ: 環境変数でlocalStorage / Supabaseを自動切替
+// 認証済み → Supabase、未認証 → localStorage にフォールバック
 import type { IAnswerHistoryRepo, IStickyNoteRepo } from './interfaces'
 import { LocalAnswerHistoryRepo } from './localStorage/answerHistoryRepo'
 import { LocalStickyNoteRepo } from './localStorage/stickyNoteRepo'
-
-const useSupabase =
-  !!import.meta.env.VITE_SUPABASE_URL && !!import.meta.env.VITE_SUPABASE_ANON_KEY
+import { SupabaseAnswerHistoryRepo } from './supabase/answerHistoryRepo'
+import { SupabaseStickyNoteRepo } from './supabase/stickyNoteRepo'
+import { isSupabaseConfigured } from '../lib/supabase'
 
 function createAnswerHistoryRepo(): IAnswerHistoryRepo {
-  if (useSupabase) {
-    // 将来: SupabaseAnswerHistoryRepo を返す
-    // import { SupabaseAnswerHistoryRepo } from './supabase/stub'
-    // return new SupabaseAnswerHistoryRepo()
-    console.warn('Supabase repo not yet implemented, falling back to localStorage')
+  if (isSupabaseConfigured) {
+    return new SupabaseAnswerHistoryRepo()
   }
   return new LocalAnswerHistoryRepo()
 }
 
 function createStickyNoteRepo(): IStickyNoteRepo {
-  if (useSupabase) {
-    console.warn('Supabase repo not yet implemented, falling back to localStorage')
+  if (isSupabaseConfigured) {
+    return new SupabaseStickyNoteRepo()
   }
   return new LocalStickyNoteRepo()
 }
