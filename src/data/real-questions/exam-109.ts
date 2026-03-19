@@ -3299,7 +3299,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 106,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 106",
     "question_text": "下図に示したように、乳酸脱水素酵素（乳酸デヒドロゲナーゼ）はピルビン酸からL-乳酸への変換を触媒する。この酵素の活性中心に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -3333,7 +3333,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 107,
     "section": "理論",
-    "subject": "物理",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 107",
     "question_text": "下図は、ある化合物の1H−NMRスペクトル〔400 MHz、CDCl3、基準物質はテトラメチルシラン（TMS）〕を示したものである。この化合物の構造式として正しいのはどれか。１つ選べ。なお、×印のシグナルはCDCl3溶媒中に含まれるCHCl3のプロトンに由来するシグナルであり、エのピークは重水（D2O）を添加するとほぼ消失した。",
     "choices": [],
@@ -3415,7 +3415,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 110,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 110,111",
     "question_text": "解糖系では、下の図1のように、D−グルコースがD−フルクトース1,6−ビスリン酸へと変換されたのちに、2分子のピルビン酸へと分解される。\n\nまた、図2のように、D−フルクトース1,6−ビスリン酸は、アルドラーゼによって、代謝物AとBへ変換される。この反応はアルドール反応の逆反応である。\n\nさらに、図3のように、代謝物AとBは細胞質中で酵素的に相互変換可能であり、代謝物Bはさらに代謝物Cを経て、ピルビン酸まで変換される。\n\n問110\n代謝物Aの構造として正しいのはどれか。１つ選べ。\n\n問111\n解糖系に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3770,7 +3770,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 122,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "衛生",
     "category": "",
     "question_text": "問 120−122        ヒト免疫不全ウイルス（HIV）感染と薬害エイズに関する以下の問いに答\nえよ。\n問 122（法規・制度・倫理）\n血液製剤による感染被害の救済制度に関する記述として、正しいのはどれか。2\nつ選べ。\n1 適正な使用目的に従い適正に使用された場合の感染被害の救済を目的としている。\n2    給付金は、原因となった血液製剤の製造販売業者が全額負担する。\n3    医療費給付の対象は、入院を要する程度以上の感染被害である。\n4    葬祭料や遺族年金に関する給付項目は含まれていない。\n5    製造販売業者の過失が裁判によって証明された場合に救済の対象となる。\n6083_02_1DAY2_M.indd 30                                                                                        2023/12/22 20:22\n一般問題（薬学理論問題）【衛生】",
     "choices": [],
@@ -4342,7 +4342,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 141,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 141",
     "question_text": "廃棄物に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4376,7 +4376,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 142,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 142",
     "question_text": "製造物責任と医薬品に関する記述のうち、 正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4410,7 +4410,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 143,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 143",
     "question_text": "医薬品の効能・効果、用法・用量、使用上の注意などの医薬品医療機器等法に定められた「注意事項等情報」について製造販売業者が行うべきこととして、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4444,7 +4444,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 144,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 144",
     "question_text": "特定用途医薬品の指定に必須となる要件はどれか。2つ選べ。",
     "choices": [
@@ -4478,7 +4478,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 145,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 145",
     "question_text": "指定薬物に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4512,7 +4512,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 146,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 146",
     "question_text": "毒物及び劇物取締法に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4546,7 +4546,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 147,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 147",
     "question_text": "医療法に基づく医療計画策定において定めるべき事項はどれか。2つ選べ。",
     "choices": [
@@ -4580,7 +4580,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 148,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 148",
     "question_text": "健康保険制度に基づく調剤報酬に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4614,7 +4614,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 149,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 149",
     "question_text": "国民医療費の動向（2015年度〜2019年度）に関して、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4648,7 +4648,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 150,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 150",
     "question_text": "パーソナリティの認知におけるハロー効果の傾向を示す説明として、適切なのはどれか。1つ選べ。",
     "choices": [
@@ -4832,7 +4832,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 156,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 156",
     "question_text": "花粉症の治療に用いられる薬物に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4866,7 +4866,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 157,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 157,158",
     "question_text": "37歳女性。アレルギー疾患の既往歴なし。顔面に紅斑が出現したため、近医を受診し、全身性エリテマトーデス（SLE）と診断された。ステロイド療法が施行され、病状は落ち着いた。副腎皮質ステロイド性薬の漸減中に、突然、上機嫌になって多弁となったり、急に無表情になったり、「スマートフォンの使い方が分からなくなった。」と困惑して涙ぐんだりする症状が目立つようになった。血液検査の結果は以下のとおりである。\n（検査値）\n\n赤血球 400×104/μL、白血球5,120/μL、血小板20.8×104/μL、血清クレアチニン1.84mg/dL、eGFR 32.8mL/min/1.73m2、空腹時血糖112mg/dL、HbA1c 6.5%、抗核抗体（＋）、\n\n尿タンパク（2＋）、尿潜血（＋）\n問157（病態・薬物治療）\n\nこの患者に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4900,7 +4900,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 158,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 157−158      ₃₇ 歳女性。アレルギー疾患の既往歴なし。顔面に紅斑が出現したため、近\n医を受診し、全身性エリテマトーデス（SLE）と診断された。ステロイド療法が施\n行され、病状は落ち着いた。副腎皮質ステロイド性薬の漸減中に、突然、上機嫌に\nなって多弁となったり、急に無表情になったり、「スマートフォンの使い方が分か\nらなくなった。」と困惑して涙ぐんだりする症状が目立つようになった。血液検査\nの結果は以下のとおりである。\n（検査値）\n赤血球 ₄₀₀ # ₁₀ /nL、白血球 ₅ , ₁₂₀/nL、血小板 ₂₀ . ₈ # ₁₀ /nL、\n4                                 4\n血清クレアチニン ₁ . ₈₄ mg/dL、eGFR ₃₂ . ₈ mL/min/₁ . ₇₃ m 、\n空腹時血糖 ₁₁₂ mg/dL、HbA₁c ₆ . ₅％、抗核抗体（+）、尿タンパク（ ₂+）、\n尿潜血（+）\n6083_03_1DAY3_M.indd 7                                                          2024/01/11 15:33\n問 158（薬理）\nSLE 及びその合併症の治療に用いられる薬物に関する記述のうち、正しいのは\nどれか。2つ選べ。\n1     シクロホスファミドは、肝臓で代謝されて活性体となり、DNA をアルキル化\nして、DNA の複製を阻害する。\n2 ミゾリビンは、ジヒドロ葉酸還元酵素を阻害して、チミジル酸の合成を抑制す\nる。\n3     タクロリムスは、活性化 T 細胞核内因子（NFAT）のリン酸化を阻害して、\nIL︲₂ の産生を抑制する。\n4 ミコフェノール酸モフェチルは、体内でミコフェノール酸に加水分解され、プ\nリン塩基の合成を抑制する。\n5     ベリムマブは、B リンパ球細胞膜の CD₂₀ に結合して、B リンパ球の増殖を抑\n制する。\n6083_03_1DAY3_M.indd 8                                               2024/01/11 15:33\n一般問題（薬学理論問題）【薬理】",
     "choices": [],
@@ -4914,7 +4914,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 159,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 159",
     "question_text": "心不全の治療に用いられる薬物に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4948,7 +4948,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 160,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 160",
     "question_text": "高血圧症に用いられる薬物に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4982,7 +4982,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 161,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 161",
     "question_text": "造血系に作用する薬物に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5016,7 +5016,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 162,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 162",
     "question_text": "胃・十二指腸潰瘍の治療に用いられる薬物に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5050,7 +5050,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 163,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 163",
     "question_text": "肝疾患、膵疾患及び胆道疾患の治療に用いられる薬物に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5084,7 +5084,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 164,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 164",
     "question_text": "高尿酸血症の治療に用いられる薬物に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5118,7 +5118,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 165,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 165,166",
     "question_text": "50歳女性。5年前に近医にて高血圧を指摘され、アムロジピン5mg/日を服用していた。最近の血圧は155/95 mmHg程度と高値が持続しており、頭痛や脱力を自覚し今回受診した。二次性高血圧が疑われたため、腹部CT検査が実施されて左副腎に腫瘍を認めたが、血中コルチゾール値や血中カテコールアミン値の上昇は認めなかった。\n問165（薬理）\n\nこの患者にスピロノラクトンが投与されることになった。スピロノラクトンに関する記述として、 正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5152,7 +5152,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 166,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 165−166      ₅₀ 歳女性。 ₅ 年前に近医にて高血圧を指摘され、アムロジピン ₅ mg/日を\n服用していた。最近の血圧は ₁₅₅/₉₅ mmHg 程度と高値が持続しており、頭痛や脱\n力を自覚し今回受診した。二次性高血圧が疑われたため、腹部 CT 検査が実施され\nて左副腎に腫瘍を認めたが、血中コルチゾール値や血中カテコールアミン値の上昇\nは認めなかった。\n問 166（病態・薬物治療）\n本症例で認められる血液検査所見として、正しいのはどれか。2つ選べ。\n1     カリウム低値\n2     カルシウム高値\n3     LDL コレステロール高値\n4     遊離チロキシン（FT₄）高値\n5     レニン活性低値\n6083_03_1DAY3_M.indd 12                                                2023/12/22 1:45",
     "choices": [],
@@ -5166,7 +5166,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 167,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 167,168",
     "question_text": "35歳男性。献血時の検査でヒト免疫不全ウイルス（HIV）抗体陽性となり、HIV感染症と診断された。\n問167（病態・薬物治療）\n\nこの症例に対する治療に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5200,7 +5200,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 168,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 167−168      ₃₅ 歳男性。献血時の検査でヒト免疫不全ウイルス（HIV）抗体陽性とな\nり、HIV 感染症と診断された。\n問 168（薬理）\nHIV 感染症治療薬に関する記述のうち、正しいのはどれか。2つ選べ。\n1     エムトリシタビンは、HIV 感染細胞内でリン酸化されて活性体となり、HIV\nの RNA 依存性 DNA ポリメラーゼを阻害する。\n2     マラビロクは、RNA 依存性 DNA ポリメラーゼの活性中心近傍に結合して、\n酵素活性を阻害する。\n3 ラルテグラビルは、HIV インテグラーゼを阻害して、ウイルス DNA の宿主\nDNA への組込みを抑制する。\n4     アバカビルは、HIV プロテアーゼを阻害して、ウイルスタンパク質の産生を抑\n制する。\n5     エファビレンツは、宿主の細胞膜上の C︲C ケモカイン受容体 ₅ （CCR₅）に結\n合して、HIV の細胞内への侵入を抑制する。\n6083_03_1DAY3_M.indd 13                                               2023/12/22 1:45\n一般問題（薬学理論問題）【薬理】",
     "choices": [],
@@ -5214,7 +5214,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 169,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 169",
     "question_text": "抗悪性腫瘍薬に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5282,7 +5282,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 171,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 171",
     "question_text": "経口投与する薬物について、食事により量的バイオアベイラビリティは変わらないが、速度的バイオアベイラビリティが低下するのはどれか。2つ選べ。",
     "choices": [
@@ -5316,7 +5316,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 172,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 172",
     "question_text": "線形1-コンパートメントモデルに従い、肝代謝と腎排泄によってのみ体内から消失する薬物Aを、ある患者に急速静注したときの体内動態データを以下に示す。この患者の糸球体ろ過速度（GFR）を120mL/minとしたとき、薬物Aの血漿タンパク非結合率に最も近い値はどれか。1つ選べ。ただし、薬物Aは腎尿細管で分泌・再吸収を受けず、血漿タンパク非結合形のみが糸球体でろ過されるものとする。",
     "choices": [
@@ -5350,7 +5350,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 173,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 173",
     "question_text": "薬物のみかけの分布容積とその変動に関与する血漿タンパク結合に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5384,7 +5384,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 174,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 174",
     "question_text": "薬物代謝酵素の遺伝子多型に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5418,7 +5418,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 175,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 175",
     "question_text": "下表には薬物の肝抽出率及び血漿タンパク結合率を示す。これら3種の物の体内動態の変動に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5452,7 +5452,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 176,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 176",
     "question_text": "TDMの実施が望ましい薬物の性質として、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5486,7 +5486,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 177,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 177,178",
     "question_text": "問177（薬剤）\n\n　イリノテカン塩酸塩水和物を有効成分とするオニバイド点滴静注に関する記述のうち、正しいのはどれか。2つ選べ。なお、本製剤は以下の添加物を含む。\n添加物\n\n1,2-ジステアロイル-sn-グリセロ-3-ホスホコリン、コレステロール、\n\nN-(カルボニルーメトキシポリエチレングリコール-2000)-1,2-ジステアロイル\n\n-sn-グリセロ-3-ホスホエタノールアミンナトリウム塩、\n\n4-(2-ヒドロキシエチル)-1-ピペラジンエタンスルホン酸",
     "choices": [
@@ -5520,7 +5520,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 179,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 179",
     "question_text": "2種類の粉体A及びBの粉体層について、図1に示すように、種々の垂直応力（σ）を加えた状態で可動セルを水平方向に引っ張ることでせん断試験を行った。得られたせん断応力（τ）の値をσに対してプロットした結果を図2に示す。以下の記述のうち、正しいのはどれか。2つ選べ。ただし、τとσの間にはクーロンの式が成立するものとする。\nクーロンの式　τ=μ・σ＋C\n\nμ：内部摩擦係数、C：付着力（いずれも定数）",
     "choices": [
@@ -5554,7 +5554,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 180,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 180",
     "question_text": "固体薬物AをS＝3cm2の円盤状に圧縮し、回転円盤法で37°Cにおいて溶解実験を行った。固体薬物Aの溶解速度は（1）の式に従い、試験中Sは変化しないものとする。t＝0のときC＝0、11分後の薬物Aの濃度がCs/2であるとき、固体薬物Aのみかけの溶解速度定数k（min－1・cm－2）に最も近い値はどれか。1つ選べ。ただし、In2＝0.693とする。",
     "choices": [
@@ -5588,7 +5588,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 182,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 182",
     "question_text": "バイオ医薬品の微粒子製剤の水への分散性を、ゼータ電位と平均粒子径から評価した。下図の異なるpHにおける結果に関する記述のうち、正しいのはどれか。2つ選べ。ただし、一次粒子の粒子径はpHにより変化せず、温度は一定とする。また、粒度分布は一峰性で十分小さく、粒子の凝集は可逆的とする。",
     "choices": [
@@ -5622,7 +5622,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 184,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 184",
     "question_text": "図1に示すニフェジピン徐放錠を8分割又は分割せずに、1錠分をヒトに経口投与したときの血漿中ニフェジピン濃度の推移を図2に示す。この錠剤に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5690,7 +5690,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 186,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 186",
     "question_text": "骨粗しょう症に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5724,7 +5724,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 187,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 187",
     "question_text": "再生不良性貧血に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5758,7 +5758,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 188,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 188",
     "question_text": "72歳男性。本態性高血圧症のために、処方1及び処方2を服用していた。最近、血圧が上昇したため、薬物による降圧療法を強化することになった。追加する治療薬として、最も適切なのはどれか。1つ選べ。",
     "choices": [
@@ -5792,7 +5792,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 189,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 189",
     "question_text": "間質性肺炎に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5826,7 +5826,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 190,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 190",
     "question_text": "25歳男性。身長176cm、体重65kg。20歳の時に1型糖尿病を発症し、1日4回のインスリン皮下注射と血糖自己測定によるインスリン強化療法を行ってきた。最近の血液検査でHbA1c値が7.3%であったためインスリン治療の変更が計画された。\nインスリン注射量の変更に関して適切なのはどれか。２つ選べ。",
     "choices": [
@@ -5860,7 +5860,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 191,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 191",
     "question_text": "白内障に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5894,7 +5894,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 192,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 192",
     "question_text": "白癬及びその治療薬に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5928,7 +5928,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 193,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 193",
     "question_text": "多発性骨髄腫の病態に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5962,7 +5962,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 194,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 194",
     "question_text": "ある疾患の予防薬である新薬Xの評価を行うために調査を行ったところ、プラセボ対照無作為化二重盲検比較試験のデータが得られ、新薬Xの有効性が示されていた(下表)。この結果から算出できる新薬Xの治療必要数（NNT）が20であるとき、表の（A）に入る数値として適切なのはどれか。1つ選べ。",
     "choices": [
@@ -5996,7 +5996,7 @@ export const EXAM_109_QUESTIONS: Question[] = [
     "year": 109,
     "question_number": 195,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 195",
     "question_text": "55歳男性。会社員。26歳時に結婚し、子供が二人いる。元来まじめな性格で、会社では昼夜を問わず仕事をしていた。2年前に昇進し、一層仕事に励んでいた。今年に入り、朝早く目が覚めてその後眠れないようになった。また、便秘がちになり食欲が低下したため、近医の消化器内科を受診したが軽快しなかった。その後も体調不良が続き、これらの症状に加え、立ちくらみや耳鳴りが出現したため、内科を転々とし精査を受けたが、器質的異常は認められなかった。やがて、一日中身体の不調を自覚するようになり、業務中にミスが増えた。「こんなダメな自分と一緒にいても未来がないので離婚しよう。」と、妻に頻回に言うようになった。趣味のゴルフへの興味もなくなり、休日は家でぼんやり過ごすようになったため、心配した妻と一緒に精神科を受診し、うつ病と診断された。\nこの患者の病態と治療に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [

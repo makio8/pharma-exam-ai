@@ -2647,7 +2647,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 82,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "実務",
     "category": "必須問題 - 問 82",
     "question_text": "医薬品の使用によって健康被害が生じた場合に、医療従事者が厚生労働大臣（情報の整理を独立行政法人医薬品医療機器総合機構（PMDA）に行わせることとした場合には、PMDAに提出するのはどれか。１つ選べ。",
     "choices": [
@@ -3437,7 +3437,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 107,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 107",
     "question_text": "ヒスタミンH1受容体拮抗薬であるレボセチリジン塩酸塩に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体との結合親和性を高める。",
     "choices": [
@@ -4541,7 +4541,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 141,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 141",
     "question_text": "薬剤師の守秘義務（刑法第134条）に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4575,7 +4575,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 142,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 142",
     "question_text": "医薬品の製造販売業及び製造業に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -4609,7 +4609,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 143,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 143",
     "question_text": "指定薬物に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4643,7 +4643,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 144,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 144",
     "question_text": "医療従事者に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4677,7 +4677,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 145,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 145",
     "question_text": "毒物及び劇物取締法に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4711,7 +4711,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 146,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 146",
     "question_text": "医薬品副作用被害救済制度に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4745,7 +4745,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 147,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 147",
     "question_text": "公的医療保険制度に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4779,7 +4779,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 148,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 148",
     "question_text": "下図は、ある県内の保険医療機関2施設、保険薬局2施設及び患者宅との位置関係を図示したものである。以下の説明のうち、適切なのはどれか。２つ選べ。\n\nの調剤所は、患者が ウ で受け取った処方箋に基づき調剤することができる。\nは、患者に対する調剤は一切できない。\nは、患者が ア で受け取った処方箋を持参した際に、在庫がなければ調剤を断ることができる。\nは、 イ で分割調剤を行った後の処方箋を受け付けた場合、残りの分の調剤を行うことができる。\nには無菌調剤室がないが、適切に手続きをすれば、 エ の薬剤師が イ の無菌調剤室を利用して無菌調剤を行うことができる。",
     "choices": [
@@ -4813,7 +4813,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 149,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 149",
     "question_text": "治験に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4847,7 +4847,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 150,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 150",
     "question_text": "リスボン宣言に基づく未成年患者への医療従事者の対応として、適切なのはどれか。１つ選べ。",
     "choices": [
@@ -5051,7 +5051,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 156,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 156",
     "question_text": "神経障害性疼痛（糖尿病性神経障害に伴う痛みなど）の治療薬には、一次知覚神経に発現するイオンチャネルに作用するものがある。その作用機序として正しいのはどれか。２つ選べ。\n\nチャネルを遮断し、神経伝達物質の遊離を抑制する。\nチャネルを遮断し、神経伝達物質の遊離を抑制する。\nチャネルを遮断し、神経伝達物質の遊離を抑制する。\nチャネルを遮断し、神経の興奮を抑制する。\nチャネルを遮断し、神経の興奮を抑制する。",
     "choices": [
@@ -5085,7 +5085,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 157,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 157",
     "question_text": "Ca2＋チャネル遮断薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\nチャネルを遮断するが、血管平滑筋のL型Ca2＋チャネルは遮断しない。\nチャネルを遮断するが、心筋のL型Ca2＋チャネルは遮断しない。\nチャネル及び交感神経終末のN型Ca2＋チャネルを遮断する。\nチャネルを遮断する。\nチャネル遮断作用に加えて、K＋チャネル活性化作用を有する。",
     "choices": [
@@ -5119,7 +5119,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 158,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 158",
     "question_text": "利尿薬の作用機序に関する記述のうち、正しいのはどれか。２つ選べ。\n\n-K＋-2Cl－共輸送体を選択的に阻害する。\n-Cl－共輸送体を選択的に阻害する。\n-K＋-2Cl－共輸送体を阻害するとともに、心房性ナトリウム利尿ペプチド（ANP）受容体を遮断する。\nチャネルの発現を抑制する。\nチャネルを遮断する。",
     "choices": [
@@ -5153,7 +5153,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 159,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 159",
     "question_text": "呼吸器系に作用する薬物に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5187,7 +5187,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 160,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 160",
     "question_text": "消化器系に作用する薬物の副作用に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を選択的に遮断し、心悸亢進を引き起こす。\n\n受容体を遮断し、乳汁漏出を引き起こす。\n受容体を遮断し、口渇を引き起こす。\n受容体を遮断し、頻尿を引き起こす。",
     "choices": [
@@ -5221,7 +5221,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 161,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 161",
     "question_text": "ホルモン関連薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を遮断し、集合管における水の再吸収を抑制する。",
     "choices": [
@@ -5255,7 +5255,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 162,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 162",
     "question_text": "脂質異常症治療薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5289,7 +5289,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 163,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 163",
     "question_text": "抗アレルギー薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を遮断し、気管支平滑筋の収縮を抑制する。",
     "choices": [
@@ -5323,7 +5323,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 164,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 164",
     "question_text": "β-ラクタム系抗菌薬の耐性発現及び副作用に関する記述のうち、正しいのはどれか。２つ選べ。\n\n-ラクタム環を開裂するセファロスポリナーゼを産生する細菌は、セファレキシンに対する耐性を示す。\n\n-ラクタム系抗菌薬の治療効果を高める。",
     "choices": [
@@ -5357,7 +5357,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 165,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 165",
     "question_text": "抗悪性腫瘍薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5557,7 +5557,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 171,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 171",
     "question_text": "薬物Aは、静脈内投与後、肝臓における代謝と腎排泄によってのみ消失し、正常時は肝クリアランスが全身クリアランスの80％であること、腎排泄は糸球体ろ過のみによって起こることがわかっている。\nある肝疾患患者において、血中アルブミン濃度の低下により薬物Aの血中タンパク非結合形分率が2倍に上昇し、肝クリアランスは4分の1に低下していた。この患者に対し、正常時の2分の1の血中濃度時間曲線下面積（AUC）が得られるようにするには、静脈内投与量を正常時の何％にすればよいか。１つ選べ。ただし、薬物Aの体内動態には、いずれの場合にも線形性が成り立つものとする。",
     "choices": [
@@ -5591,7 +5591,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 172,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 172",
     "question_text": "薬物A 50 mgを、粉末製剤あるいは液剤として経口投与した後の血中濃度時間曲線下面積（AUC）は等しく、1,500 µg・h/Lであった。一方、血中濃度に関する1次モーメント時間曲線下面積（AUMC）は、粉末製剤の場合が9,000 µg・h2/L、液剤の場合が7,500 µg・h2/Lであった。薬物Aの粉末製剤の平均溶出時間（h）に相当するのはどれか。１つ選べ。",
     "choices": [
@@ -5625,7 +5625,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 173,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 173",
     "question_text": "治療薬物モニタリング（TDM）に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5659,7 +5659,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 174,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 174",
     "question_text": "医薬品粉体のぬれ及び吸湿に関する記述として、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5693,7 +5693,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 175,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 175",
     "question_text": "球状の医薬品懸濁粒子は、溶媒中を次式で表される速度で沈降する。次の記述のうち正しいのはどれか。２つ選べ。ただし、設問中のパラメータ以外は変化しないものとする。",
     "choices": [
@@ -5723,7 +5723,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 176,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 176",
     "question_text": "1価の弱酸性化合物（pKa＝6.1）の水に対する溶解度は、pH 1のとき0.1 µg/mLであった。この化合物の溶解度が1 mg/mLとなるpHはいくらか。最も近い値を１つ選べ。ただし、イオン形は完全に水に溶解するものとする。",
     "choices": [
@@ -5757,7 +5757,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 177,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 177",
     "question_text": "問 177 湿式顆粒圧縮法による錠剤の製造プロセスにおいて、ア〜エに当てはまる単位\n操作の組合せとして適切なのはどれか。       つ選べ。\n結合剤\n溶液\n主薬          分      混                  造\nア                       イ\n添加剤         級      合                  粒\n整              打       錠\nウ             エ\n粒              錠       剤\n滑沢剤\nア         イ                 ウ           エ\n1    粉砕        練合             乾燥              混合\n2    粉砕       コーティング          混合              乾燥\n3    練合        粉砕           コーティング            粉砕\n4    練合       コーティング          乾燥              混合\n5    乾燥        粉砕             混合              練合\n6    乾燥        練合             混合          コーティング\n⎜ 14⎜",
     "choices": [],
@@ -5771,7 +5771,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 178,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 178",
     "question_text": "医薬品の容器・包装に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5805,7 +5805,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 179,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 179",
     "question_text": "問 179 ある経皮吸収型製剤の断面図（模式図）を以下に示す。in vitro 放出試験にお\nける本製剤からの累積薬物放出量と時間の関係を示したグラフとして、正しいのは\nどれか。     つ選べ。ただし、放出試験中、薬物貯蔵層内、放出制御膜内及び粘着層\n内の薬物濃度は一定に保たれ、かつシンク条件が成立しているものとする。\n支持膜\n薬物貯蔵層\n放出制御膜\n粘着層\n1                    2                     3\n累積薬物放出量              累積薬物放出量               累積薬物放出量\n0         時間         0           時間          0         時間\n4                    5\n累積薬物放出量              累積薬物放出量\n0         時間         0           時間\n⎜ 16⎜",
     "choices": [],
@@ -5819,7 +5819,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 180,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 180",
     "question_text": "EPR（Enhanced Permeability and Retention）効果の説明として、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -6023,7 +6023,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 186,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 186",
     "question_text": "36歳男性。既往歴に特記すべきことなし。体のだるさとともに、突然、上眼瞼と下肢に浮腫が出現した。血圧は140/85 mmHgで、血液検査・尿検査を行ったところ、結果は以下のとおりであった。\n血液検査：白血球5,800/µL、Hb 14.2 g/dL、血小板数25×104/µL、AST 32 IU/L、ALT 38 IU/L、血中尿素窒素（BUN）23 mg/dL、血清クレアチニン1.2 mg/dL、クレアチニンクリアランス80 mL/min、Na 138 mEq/L、K 4.5 mEq/L、Cl 102 mEq/L、低密度リポタンパク質コレステロール（LDL-C）268 mg/dL、高密度リポタンパク質コレステロール（HDL-C）39 mg/dL、トリグリセリド190 mg/dL、血清総タンパク5.6 g/dL、血清アルブミン2.6 g/dL、空腹時血糖98 mg/dL、HbA1c 5.6％\n尿検査：尿潜血（－）、尿タンパク（4＋）3.8 g/day、尿比重1.018\n精査の結果、ステロイドのパルス療法が開始された。\nこの患者の推定される病態として正しいのはどれか。１つ選べ。",
     "choices": [
@@ -6057,7 +6057,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 187,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 187",
     "question_text": "58歳男性。21歳のとき、統合失調症を発症。その後、精神科への入退院を繰り返し、昨日、本院に入院。検査の結果、耐糖能異常が診断された。\n薬歴として以下の処方が記載されていた。\n\nこの患者の処方に対して薬剤師が、医師に処方変更を提案するとき、削除を提案すべき薬剤はどれか。１つ選べ。",
     "choices": [
@@ -6091,7 +6091,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 188,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 188",
     "question_text": "臓器移植の拒絶反応に用いる薬物に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6125,7 +6125,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 189,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 189",
     "question_text": "口腔咽頭カンジダ症に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6159,7 +6159,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 190,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 190",
     "question_text": "55歳男性。進行下行結腸がん手術施行後、テガフール・ウラシル配合剤を内服していた。その後、脾転移、腹膜播種が認められ、FOLFOX＋ベバシズマブ療法が開始された。12コース施行後、効果が不十分なため、FOLFIRI＋パニツムマブ療法へ変更となった。このがん化学療法施行前に行う遺伝子検査はどれか。２つ選べ。",
     "choices": [
@@ -6193,7 +6193,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 191,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 191",
     "question_text": "製薬企業の医薬情報担当者の役割として適切なのはどれか。２つ選べ。",
     "choices": [
@@ -6227,7 +6227,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 192,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 192",
     "question_text": "ある疾患Xは、日本人の有病率が0.2％である。Xに対する疾患マーカーMは、Xに罹患した患者において99％の確率で陽性を示すが、1％の確率で陰性を示す。また、Xに罹患していない患者では2％の確率で陽性を示し、98％の確率で陰性を示す。ある日本人患者が疾患マーカーMで陽性を示したとき、その患者がXに罹患している確率（陽性予測値）として、最も近い値はどれか。１つ選べ。",
     "choices": [
@@ -6261,7 +6261,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 193,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 193",
     "question_text": "コホート研究の指標の中で、「絶対リスク減少率」に該当するのはどれか。２つ選べ。",
     "choices": [
@@ -6295,7 +6295,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 194,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 194",
     "question_text": "仮説検定を危険率1％で行ったところ、帰無仮説は棄却できなかった。この検定結果に関する記述として適切なのはどれか。１つ選べ。",
     "choices": [
@@ -6329,7 +6329,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "year": 101,
     "question_number": 195,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 195",
     "question_text": "問 195 以下の図は、３群以上の間で仮説検定を行う場合の、データの種類に応じた仮\n説検定法の選択とその順序の概要を示したものである。図の①，②，③の組合せと\nして適切なのはどれか。          つ選べ。なお、post hoc 多重比             検定には Tukeyの検\n定、Scheffe の検定、Dunnett の検定などが含まれる。\n正規分布か               ①\nいいえ\nはい\n②\n③\n①                       ②                    ③\n1   post hoc 多重比   検定   Kruskal‑Wallis 検定        一元配置分散分析\n2   post hoc 多重比   検定   一元配置分散分析                 Kruskal‑Wallis 検定\n3   一元配置分散分析            Kruskal‑Wallis 検定        post hoc 多重比 検定\n4   一元配置分散分析            post hoc 多重比        検定   Kruskal‑Wallis 検定\n5   Kruskal‑Wallis 検定   一元配置分散分析                 post hoc 多重比 検定\n6   Kruskal‑Wallis 検定   post hoc 多重比        検定   一元配置分散分析\n⎜ 26⎜",
     "choices": [

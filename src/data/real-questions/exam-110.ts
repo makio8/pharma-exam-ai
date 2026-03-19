@@ -3261,7 +3261,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 104,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 104",
     "question_text": "下図は、DNAの二重らせん構造の一部で、2本のポリヌクレオチド鎖間で形成される相補的塩基対を示している。以下の記述のうち、適切なのはどれか。２つ選べ。",
     "choices": [
@@ -3296,7 +3296,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 105,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 105",
     "question_text": "下図は、アセチルCoAが生合成される一連の反応を模式的に示している。以下の記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3366,7 +3366,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 107,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 107",
     "question_text": "下図は、インスリンの構造を模式的に示している。図中の○はアミノ酸残基を示し、特徴のあるアミノ酸残基を3文字表記している。\n\n近年、インスリンの化学構造を部分的に改変することで、治療目的に沿った血糖降下作用を発揮するインスリンアナログ製剤（１〜５）が開発されている。このうち、構造改変によりインスリンの等電点（pI 約5.4）を中性付近（pI 約6.7）に近づけることにより、生理的pHで等電点沈殿を起こし、皮下で徐々に溶解、吸収され、1日1回の皮下投与で安定した血糖降下作用を示すのはどれか。１つ選べ。\nなお、各アナログ製剤の構造はインスリンと同様な方法で図示しており、図中のはインスリンと異なるアミノ酸残基を示す。",
     "choices": [],
@@ -3380,7 +3380,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 108,
     "section": "理論",
-    "subject": "物理",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 108",
     "question_text": "図は、アラニン誘導体Aの1H NMRスペクトル［400MHz、CDCl3、基準物質はテトラメチルシラン（TMS）］を示している。以下の記述のうち、正しいのはどれか。２つ選べ。\n\n　なお、×印のシグナルはCDCl3中に含まれるCHCl3のプロトンに由来するシグナルであり、fのピークは重水（D2O）を添加するとほぼ消失した。",
     "choices": [
@@ -3740,7 +3740,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 120,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 120,121",
     "question_text": "ナイアシンに関する以下の問いに答えよ。\n問120（衛生）\n\nナイアシンに関する記述として正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3774,7 +3774,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 121,
     "section": "理論",
-    "subject": "生物",
+    "subject": "衛生",
     "category": "",
     "question_text": "問 120−121      ナイアシンに関する以下の問いに答えよ。\n問 121（物理・化学・生物）\nナイアシンから合成される下図の補酵素について、正しいのはどれか。2つ選\nべ。\nH       H O\nO-                            NH2\nO P O                N\nO\nO\nOH OH              NH2\nN\nN\nO P O                N     N\nO-          O\nOH O\nO P O-\nO-\n1     酸化型の構造を示している。\n2     ₃₄₀ nm の吸収極大を有する。\n3     ₃︲ヒドロキシ︲₃︲メチルグルタリル CoA（HMG︲CoA）からメバロン酸を産生\nする反応に関与する。\n4     ピルビン酸からアセチル CoA を産生する反応に関与する。\n5     ミトコンドリア内膜上での電子の受け渡しに関与する。\n一般問題（薬学理論問題）【衛生】",
     "choices": [],
@@ -4372,7 +4372,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 141,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 141",
     "question_text": "薬剤師の免許の取消し等に関する記述として、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4406,7 +4406,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 142,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 142",
     "question_text": "薬局の開設者が、患者の同意なしでも患者の個人情報を第三者に提供できるのはどれか。２つ選べ。",
     "choices": [
@@ -4440,7 +4440,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 143,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 143",
     "question_text": "医薬品医療機器等法における再生医療等製品に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4474,7 +4474,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 144,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 144",
     "question_text": "医薬品医療機器等法に基づく薬局管理者の義務はどれか。2つ選べ。",
     "choices": [
@@ -4508,7 +4508,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 145,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 145",
     "question_text": "劇薬の取扱いについて、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4542,7 +4542,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 146,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 146",
     "question_text": "医療法に基づく医療事故調査制度における医療事故の対応に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4576,7 +4576,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 147,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 147",
     "question_text": "我が国の医療保険制度に関する記述として、正しいのはどれか。２つ選べ。なお、公費負担医療を受けている場合を除く。",
     "choices": [
@@ -4610,7 +4610,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 148,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 148",
     "question_text": "評価対象医薬品Aは比較対照医薬品Bと比べて追加的有用性が示されており、費用効用分析を行うこととなった。 分析の結果、増分費用効果比（ICER）は「200万円/QALY」であった。分析結果の記述として、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -4645,7 +4645,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 149,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 149",
     "question_text": "我が国の医療薬分業について正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4679,7 +4679,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 150,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 150",
     "question_text": "薬剤師と実務実習の会話である。会話内容に関する記述として適切なのはどれか。２つ選べ。",
     "choices": [
@@ -4884,7 +4884,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 156,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 156,157",
     "question_text": "63歳男性。慢性心不全と診断され、治療中である。その他の既往歴及び常用薬はない。あ\n問156（薬理）\n\n心不全治療薬に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4918,7 +4918,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 157,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 156−157      ₆₃ 歳男性。慢性心不全と診断され、治療中である。その他の既往歴及び常\n用薬はない。\n問 157（病態・薬物治療）\n服薬は正しく継続され、副作用もみられなかったが、 ₁ ケ月前から労作時の息切\nれが徐々に増悪するようになった。 ₂ ～ ₃ 日前からは安静時にも息苦しさを自覚す\nるようになり、昨夜突然、強い咳を伴った呼吸困難が出現したため救急搬送され\nた。下肢に浮腫が認められ、血圧は ₈₈/₆₀ mmHg であった。心臓超音波検査を\n行ったところ、左室駆出率（LVEF）は ₃₀％に低下していた。さらに、胸部 X 線\n検査により肺うっ血と軽度な心拡大の所見が認められ、慢性心不全の急性増悪と診\n断され入院となった。この患者の来院時の病態及び症状に関する記述として、正し\nいのはどれか。2つ選べ。\n1    右心機能は正常である。\n2    心臓からのナトリウム利尿ペプチドの分泌が亢進している。\n3    心電図で ST 上昇が認められる。\n4    呼吸症状は、起坐位よりも仰臥位で増悪する。\n5    尿量は増加している可能性が高い。\n一般問題（薬学理論問題）【薬理】",
     "choices": [],
@@ -4932,7 +4932,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 158,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 158",
     "question_text": "高血圧症治療薬に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4966,7 +4966,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 159,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 159",
     "question_text": "抗血小板薬に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5000,7 +5000,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 160,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 160",
     "question_text": "呼吸器系に作用する薬物に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5034,7 +5034,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 161,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 161",
     "question_text": "過敏性腸症候群治療薬に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5068,7 +5068,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 162,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 162,163",
     "question_text": "50歳男性。営業職で飲酒の機会が多く、5年間で体重は8kg増加した。健診にて4年前より高血糖を指摘されていたが、放置していた。最近、口渇と頻尿を認めるようになったため病院を受診し検査を受けた結果、2型糖尿病と診断された。服薬歴なし。喫煙20本/日。運動習慣はない。\n問162（病態・薬物治療）\n\nこの患者の身体所見及び検査値は以下のとおりである。\n\n身長175cm、体重80kg、血圧146／94mmHg、脈拍62拍／分、下肢に浮腫はない。\n本患者において2型糖尿病に合併しているのはどれか。２つ選べ。",
     "choices": [
@@ -5102,7 +5102,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 163,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 162−163 ₅₀ 歳男性。営業職で飲酒の機会が多く、 ₅ 年間で体重は ₈ kg 増加した。\n健診にて ₄ 年前より高血糖を指摘されていたが、放置していた。最近、口渇と頻尿\nを認めるようになったため病院を受診し検査を受けた結果、 ₂ 型糖尿病と診断され\nた。服薬歴なし。喫煙 ₂₀ 本/日。運動習慣はない。\n問 163（薬理）\n糖尿病治療薬に関する記述として、正しいのはどれか。2つ選べ。\n1     グリクラジドは、ATP 感受性 K チャネルを開口して、膵臓ランゲルハンス島\n+\nb 細胞からのインスリン分泌を促進する。\n2     ピオグリタゾンは、ペルオキシソーム増殖剤応答性受容体 a（PPAR a）を刺\n激して、アディポネクチンの分泌を低下させる。\n3     ボグリボースは、小腸上皮細胞に存在する a︲グルコシダーゼを阻害して、単\n糖類の生成を抑制する。\n4 ルセオグリフロジンは、ナトリウム︲グルコース共輸送体 ₂ （SGLT₂）を阻害\nして、近位尿細管におけるグルコースの再吸収を抑制する。\n5     イメグリミンは、インクレチンの分解を抑制して、膵臓ランゲルハンス島 a 細\n胞からのグルカゴン分泌を促進する。\n一般問題（薬学理論問題）【薬理】",
     "choices": [],
@@ -5116,7 +5116,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 164,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 164",
     "question_text": "脂質異常症治療薬に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5150,7 +5150,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 165,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 165,166",
     "question_text": "6歳男児。咽頭痛のため耳鼻咽喉科を受診した。血液検査で抗ストレプトリジンO（ASO）抗体と抗ストレプトキナーゼ（ASK）抗体の上昇が認められ、A群溶血性レンサ球菌（溶連菌）咽頭炎と診断された。\n問 165（病態・薬物治療）\n\nA群溶血性レンサ球菌（溶連菌）咽頭炎に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5184,7 +5184,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 166,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 165−166       ₆ 歳男児。咽頭痛のため耳鼻咽喉科を受診した。血液検査で抗ストレプト\nリジン O（ASO）抗体と抗ストレプトキナーゼ（ASK）抗体の上昇が認められ、\nA 群溶血性レンサ球菌（溶連菌）咽頭炎と診断された。\n問 166（薬理）\nレンサ球菌属に対して抗菌作用を示す薬物に関する記述として、正しいのはどれ\nか。2つ選べ。\n1 セファレキシンは、細菌のピルビン酸転移酵素を阻害して、UDP︲N ︲アセチル\nムラミン酸の合成を抑制する。\n2 エリスロマイシンは、細菌のジヒドロ葉酸還元酵素を阻害して、テトラヒドロ\n葉酸の生成を抑制する。\n3 アモキシシリンは、細菌のペニシリン結合タンパク質に共有結合して、不可逆\n的にトランスペプチダーゼ活性を阻害する。\n4     クリンダマイシンは、細菌のリボソーム ₅₀S サブユニットに結合して、ペプチ\nド転移酵素反応を阻害する。\n5     アジスロマイシンは、細菌のリボソーム ₃₀S サブユニットと結合して、アミノ\nアシル tRNA が mRNA と結合するのを阻害する。\n一般問題（薬学理論問題）【薬理】",
     "choices": [],
@@ -5198,7 +5198,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 167,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 167",
     "question_text": "抗悪性腫瘍薬に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5232,7 +5232,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 168,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 168",
     "question_text": "鉱質コルチコイド作用が弱く、糖質コルチコイド作用が最も強いステロイド性抗炎症薬はどれか。１つ選べ。",
     "choices": [],
@@ -5314,7 +5314,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 171,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 171",
     "question_text": "ある薬物のアルブミンへの結合定数は10（µmol/L)－1、結合部位数は2である。この薬物のアルブミン結合に関する両逆数プロットを点線で表し、また、この薬物のアルブミンへの結合が別の薬物の共存により競合的に阻害された場合を実線で表すとき、正しい図はどれか。１つ選べ。\nただし、図中のr はアルブミン1分子当たりに結合している薬物の分子数を、[Df]は非結合形薬物濃度を示す。",
     "choices": [],
@@ -5328,7 +5328,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 173,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 173",
     "question_text": "腎機能が低下したある患者のイヌリンクリアランスが30 mL/min/1.73 m2、クレアチニンクリアランスが50 mL/min/1.73 m2であった。この患者の腎機能に関する記述として適切なのはどれか。2つ選べ。ただし、クレアチニンは血漿タンパク質に結合せず、尿細管で再吸収されないものとする。",
     "choices": [
@@ -5362,7 +5362,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 175,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 175",
     "question_text": "体内動態が線形1-コンパートメントモデルに従い、生物学的半減期が1.4時間である薬物を、3種類の剤形で同用量を経口投与したとき、下表に示す血中濃度時間曲線下面積 (AUC) と一次モーメント時間曲線下面積 (AUMC) が得られた。この結果に関する記述として、正しいのはどれか。2つ選べ。ただし、絶対的バイオアベイラビリティはいずれも100%とし、ln2＝0.693 とする。",
     "choices": [
@@ -5397,7 +5397,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 176,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 176",
     "question_text": "ある水不溶性の薬物粉体25.0gを50.0mLの容器に充てんした。この容器を水で満たしたとき、全体の質量（容器質量を除く）は55.0gであった。この粉体の真密度（g/mL）に最も近い値はどれか。１つ選べ。ただし、水の密度を1.00g/mLとし、添加した水は粉体の空隙をすべて満たすものとする。",
     "choices": [
@@ -5431,7 +5431,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 177,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 177",
     "question_text": "テオフィリン無水物 (分子量 180) の結晶、非晶質、及び両者の混合物について、下図のA～C に示す水蒸気吸着等温線が得られた。この結果に関する記述のうち、正しいのはどれか。2つ選べ。\n\n　ただし、結晶は吸湿せず、非晶質は相対湿度80%以上ですべて水和物に転移するものとする。",
     "choices": [
@@ -5466,7 +5466,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 178,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 178",
     "question_text": "図中の直線は、3種の薬物A、B、Cがそれぞれ溶解補助剤Xと可溶性複合体AX、BX、CXを形成し、溶解度が増大する様子を示している。\n以下の記述のうち、正しいのはどれか。2つ選べ。\n\nなお、いずれの場合も安定度定数Kは次式で表される。\nただし、［　］は濃度を示す。",
     "choices": [
@@ -5501,7 +5501,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 179,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 179",
     "question_text": "薬物の溶解性を高める製剤的手法に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5535,7 +5535,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 181,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 181",
     "question_text": "下図はロータリー打錠機による打錠工程を模式的に示したものである。工程Aはどれか。１つ選べ。",
     "choices": [
@@ -5570,7 +5570,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 182,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 182",
     "question_text": "粘膜に適用する製剤に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5604,7 +5604,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 183,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 183",
     "question_text": "日本薬局方一般試験法に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5706,7 +5706,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 186,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 186",
     "question_text": "17歳男性。14歳時、起床時に右肩がぴくついた後、意識が消失した。病院において脳波検査で異常が指摘され、てんかんと診断された。バルプロ酸ナトリウムによる治療が開始され、問題なく経過していた。今回、全般性強直間代発作が出現し、重積状態になったため救急搬送された。20分ほどけいれん発作が持続している。本患者のけいれん抑制のために最初に静脈内投与される薬物として、適切なのはどれか。2つ選べ。",
     "choices": [
@@ -5740,7 +5740,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 187,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 187",
     "question_text": "薬剤性過敏症症候群に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5774,7 +5774,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 188,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 188",
     "question_text": "腫瘍マーカーに関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5808,7 +5808,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 189,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 189",
     "question_text": "白血球減少症の病態及び治療薬に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5842,7 +5842,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 190,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 190",
     "question_text": "慢性閉塞性肺疾患（COPD）に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5876,7 +5876,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 191,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 191",
     "question_text": "食道静脈瘤に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5910,7 +5910,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 193,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 193",
     "question_text": "症例対照研究の特徴として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5944,7 +5944,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 194,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 194",
     "question_text": "疾患Xの有無を調べる検査Aの感度は95%、特異度は90%である。疾患Xの有病率が10%の集団に対し検査Aを実施した場合、検査Aの結果が陽性の患者のうち、真に疾患Xに罹患している確率（陽性的中率）に最も近い値はどれか。１つ選べ。",
     "choices": [
@@ -5978,7 +5978,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
     "year": 110,
     "question_number": 195,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 195",
     "question_text": "薬物動態の変化に関連する記述として、正しいのはどれか。2つ選べ。",
     "choices": [

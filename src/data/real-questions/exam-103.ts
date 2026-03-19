@@ -2175,7 +2175,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 68,
     "section": "必須",
-    "subject": "実務",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 68",
     "question_text": "出血リスクの高い手術を予定されている患者で、手術前7日もしくはそれ以前からの休薬を提案すべきものはどれか。１つ選べ。",
     "choices": [
@@ -2685,7 +2685,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 83,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "実務",
     "category": "必須問題 - 問 83",
     "question_text": "医療機関において治験責任医師の重要な協力者として治験全体の調整を担うスタッフの名称はどれか。１つ選べ。",
     "choices": [
@@ -2821,7 +2821,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 87,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "実務",
     "category": "必須問題 - 問 87",
     "question_text": "地域包括ケアシステムに関する以下の文の 　　　 に当てはまるのはどれか。１つ選べ。\n\n団塊の世代が75歳以上となる2025年を目途に、重度な要介護状態となっても住み慣れた地域で自分らしい暮らしを人生の最後まで続けることができるよう、住まい・医療・介護・ 　　　 ・生活支援が一体的に提供される地域包括ケアシステムの構築を実現していきます。",
     "choices": [
@@ -3035,7 +3035,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 94,
     "section": "理論",
-    "subject": "生物",
+    "subject": "物理",
     "category": "一般 理論問題 - 問 94",
     "question_text": "図はタンパク質中のペプチド結合を表したものである。以下の記述のうち、正しいのはどれか。２つ選べ。\n\n炭素は同一平面上にある。\nヘリックス構造では、n番目のペプチド結合を構成するC＝Oが、（n＋3）番目のペプチド結合を構成するN−Hと水素結合を形成している。\nヘリックスやβシートなどの二次構造は、円偏光二色性測定法により観測できる。\nシート構造の形成には、C＝OとN−Hの間の水素結合は寄与しない。\n−N結合とCα−C結合の回転の角度（φ、ψ）は、それぞれ任意の角度をとることができる。",
     "choices": [
@@ -3515,7 +3515,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 110,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 110",
     "question_text": "図は、腎臓のネフロンの概略を示している。健常人の腎臓における体液調節に関与する部位ア〜オについての記述のうち、正しいのはどれか。２つ選べ。\n\n−が原尿中に分泌される。\n\nとCl−が管腔内から間質液中へ輸送される。\n/K＋交換系は、アルドステロンにより抑制される。",
     "choices": [
@@ -4533,7 +4533,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 141,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 141",
     "question_text": "調剤された薬剤に関する情報提供及び指導についての薬局開設者の義務として、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -4567,7 +4567,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 142,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 142",
     "question_text": "毒薬又は劇薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4601,7 +4601,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 143,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 143",
     "question_text": "指定薬物に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4635,7 +4635,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 144,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 144",
     "question_text": "薬剤師の業務に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4669,7 +4669,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 145,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 145",
     "question_text": "麻薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4703,7 +4703,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 146,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 146",
     "question_text": "向精神薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4737,7 +4737,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 147,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 147",
     "question_text": "特定毒物の取扱いに関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4771,7 +4771,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 148,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 148",
     "question_text": "新薬Aと既存薬Bの費用と効果に関する調査を行い、表に示す結果を得た。費用効用分析により求められる既存薬Bに対する新薬Aの増分費用効果比（ICER）として、正しい値（万円／QALY）はどれか。１つ選べ。",
     "choices": [
@@ -4805,7 +4805,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 149,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 149",
     "question_text": "治験審査委員会が満たすべき要件として、誤っているのはどれか。２つ選べ。",
     "choices": [
@@ -4839,7 +4839,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 150,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 150",
     "question_text": "60歳男性。会社の健康診断で胃にポリープが見つかり、近くの総合病院で精密検査したところ悪性との診断を受け、胃の全摘手術を受けた。退院2週間後に外来受診したところ、「食欲もなく、なかなか体力が戻らない。休職して自宅で療養している。治療にお金がかかり経済的にも厳しい。」と落ち込んだ様子だった。\nこの男性の体験を表す言葉として最も適しているのはどれか。１つ選べ。",
     "choices": [
@@ -5043,7 +5043,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 156,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 156",
     "question_text": "本態性高血圧治療薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\nチャネルを阻害することで血管平滑筋を弛緩させる。\n\n-Cl－共輸送系を阻害することでNa＋の再吸収を抑制する。",
     "choices": [
@@ -5077,7 +5077,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 157,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 157",
     "question_text": "呼吸器系に作用する薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体遮断作用により、気管支平滑筋を弛緩させる。",
     "choices": [
@@ -5111,7 +5111,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 158,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 158",
     "question_text": "消化器に作用する薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を刺激することでアセチルコリンの遊離を増大させ、胃排出を促進する。\n受容体を遮断することで胃酸分泌を抑制する。\n,K＋-ATPaseのSH基と酸性環境で共有結合を形成することで胃酸分泌を抑制する。\nチャネル（ClC-2）を活性化することで腸管内への水分分泌を促進する。\n受容体を遮断し、ドパミンによるアセチルコリンの遊離抑制を解除することで胃運動を促進する。",
     "choices": [
@@ -5145,7 +5145,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 159,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 159",
     "question_text": "播種性血管内凝固症候群（DIC）の治療薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5179,7 +5179,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 160,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 160",
     "question_text": "非ステロイド性抗炎症薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\nの産生を抑制することで炎症による体温上昇を抑制する。",
     "choices": [
@@ -5213,7 +5213,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 161,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 161",
     "question_text": "抗菌薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5247,7 +5247,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 162,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 162",
     "question_text": "抗ウイルス薬の作用機序に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5281,7 +5281,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 163,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 163",
     "question_text": "がんのホルモン療法薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\n-還元酵素を阻害することでジヒドロテストステロンの産生を抑制する。",
     "choices": [
@@ -5315,7 +5315,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 164,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 164",
     "question_text": "抗悪性腫瘍薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\nBの活性化を阻害する。",
     "choices": [
@@ -5349,7 +5349,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 165,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 165",
     "question_text": "図は、カテコールアミンの生合成・代謝経路を示している。ただし、A〜Eは化合物を、ア〜エは酵素を示している。パーキンソン病治療薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5553,7 +5553,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 171,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 171",
     "question_text": "問 171       経口投与時において、薬物Ａの体内動態に薬物Ｂの併用が及ぼす影響として正\nしいのはどれか。２つ選べ。\n薬物Ａの体内動態に\n薬物Ａ               薬物Ｂ\n及ぼす影響\n1   ノルフロキサシン         スクラルファート水和物     消化管吸収の低下\n2   イトラコナゾール         オメプラゾール         肝取り込みの阻害\n3   アセトアミノフェン        メトクロプラミド        尿細管分泌の阻害\n4   メルカプトプリン水和物      フェブキソスタット       代謝の阻害\n5   ピタバスタチンカルシウム シクロスポリン             代謝の亢進",
     "choices": [
@@ -5587,7 +5587,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 172,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 172",
     "question_text": "問 172         各グラフの実線は、肝でのみ消失する薬物を経口投与したときの血中濃度推移\nを表す。肝固有クリアランスが ₂ 倍に増加したときの血中濃度推移（破線）を表す\n最も適切なグラフはどれか。１つ選べ。ただし、この薬物の肝での消失は血流律速\nで、well︲stirred model に基づくものとする。\n1                     2              3\n血中濃度の対数値             血中濃度の対数値            血中濃度の対数値\n時間                 時間                 時間\n4                     5              6\n血中濃度の対数値             血中濃度の対数値            血中濃度の対数値\n時間                 時間                 時間",
     "choices": [
@@ -5609,7 +5609,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 173,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 173",
     "question_text": "ある薬物100 mgを被験者に急速静脈内投与した後に血中濃度及び尿中排泄量を測定したところ、未変化体の血中濃度時間曲線下面積（AUC）は1.0 mg・h/L、代謝物の尿中総排泄量は20 mg（未変化体換算量）であった。一方、この薬物200 mgを同一患者に経口投与したときのAUCは0.8 mg・h/Lであった。この薬物の体内動態の説明として誤っているのはどれか。１つ選べ。\nただし、この薬物は肝代謝及び腎排泄でのみ消失し、代謝物は全て尿中に排泄されるものとする。また、体内動態は線形性を示し、肝血流速度は80 L/hとする。",
     "choices": [
@@ -5643,7 +5643,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 174,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 174",
     "question_text": "固形製剤中における医薬品の分子集合体の性質に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5677,7 +5677,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 175,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 175",
     "question_text": "医療用活性炭の品質管理を目的として、ガス吸着法による比表面積測定を行った。試料2.0 gに対する窒素ガスの単分子吸着量が3.0×10－2 molであったとき、この試料の比表面積（m2/g）に最も近い値はどれか。１つ選べ。\nただし、アボガドロ定数を6.0×1023 mol－1、窒素分子の分子占有断面積を1.6×10－19 m2とする。",
     "choices": [
@@ -5711,7 +5711,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 176,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 176",
     "question_text": "高分子の構造と性質に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5745,7 +5745,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 177,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 177",
     "question_text": "図の固形製剤の製造工程に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5779,7 +5779,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 178,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 178",
     "question_text": "問 178    油相に水相を常温で撹拌しながら徐々に加え、o/w 型のクリーム剤を調製した\nい。調製している溶液の粘度変化を表すグラフとして最も適切なのはどれか。１つ\n選べ。\n粘度\n₀\n粘度\n₀\n粘度\n₀\n粘度\n₀\n粘度\n₀\n水相 ₀％                 ₅₀％          ₁₀₀％\n油相 ₁₀₀％               ₅₀％            ₀％",
     "choices": [],
@@ -5793,7 +5793,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 179,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 179",
     "question_text": "問 179    薬物とその効果等を向上させる目的及び目的を達成するために実用化されてい\nる薬物送達システム（DDS）の組合せとして、正しいのはどれか。２つ選べ。\n薬物           目的            DDS\n1   アルプロスタジル       血液脳関門透過性の増大    高分子マトリックス\n2   チモロールマレイン酸塩 有効血中濃度の持続化        リピッドマイクロスフェア\n3   硝酸イソソルビド       有効血中濃度の持続化     経皮吸収治療システム\n4   ドキソルビシン塩酸塩     がん病変部への薬物の集積   リポソーム\n5   プロポフォール        がん病変部への薬物の集積   抗体薬物複合体",
     "choices": [],
@@ -5807,7 +5807,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 180,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 180",
     "question_text": "医薬品の製造管理及び品質管理に関する基準（GMP）するに関連する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6007,7 +6007,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 186,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 186",
     "question_text": "8歳男児。学校の授業中に先生の話を聞いていない。着席しても落ち着かず、離席もあり、集中できず、ミスが多く、忘れっぽい。休み時間に大声を出したり、動き回ったりし、順番を待つことができない。知能は正常であるが周囲の子ども達となじめず、親が心配して病院を受診させたところ、注意欠陥・多動性障害と診断された。\nこの疾患の病態及び薬物療法に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6041,7 +6041,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 187,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 187",
     "question_text": "じん麻疹及び薬疹に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6075,7 +6075,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 188,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 188",
     "question_text": "全身性エリテマトーデス（SLE）に関する記述のうち、誤っているのはどれか。２つ選べ。",
     "choices": [
@@ -6109,7 +6109,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 189,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 189",
     "question_text": "76歳女性。長期入院中。ベッド接触面の皮膚に、圧迫しても消退しない限定的な発赤ができている。本患者に対する治療として提案すべきことはどれか。２つ選べ。",
     "choices": [
@@ -6143,7 +6143,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 190,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 190",
     "question_text": "医薬品リスク管理計画（Risk Management Plan：RMP）に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6177,7 +6177,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 191,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 191",
     "question_text": "抗不整脈薬投与患者で低血糖の症例をしばしば経験した薬剤師が、自施設の患者における抗不整脈薬の服用と低血糖の発症との関連性を調査した。低血糖発症患者（n＝90）と、年齢及び性別でマッチングした低血糖非発症患者（n＝450）を選択して、過去１年間のカルテを調査した。対象患者における抗不整脈薬A、Ｂ、Cの処方の有無を調査した結果を表に示す。\n次の記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6211,7 +6211,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 192,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 192,193",
     "question_text": "医師から「2型糖尿病患者に脂質異常症治療薬Aを投与した際の、動脈硬化性疾患に対する予防効果（心血管疾患予防）について教えてほしい」と問合せがあった。薬剤師が文献調査をした結果、動脈硬化性疾患の既往歴がない2型糖尿病患者（40〜75歳）を、「A投与群」又は「A非投与群」の2群に無作為に割付し、心血管死、脳血管障害、急性冠症候群などの動脈硬化性の心血管イベントの発症率を比較した論文を得ることができた。平均追跡期間は5年で、図に示した結果が得られている。\n\n問192 \n得られた論文の批判的吟味に関する記述のうち、適切なのはどれか。２つ選べ。\n\n値から、両群間に統計学的に有意な差が見出されたといえる。\n\n問193 \n前問のデータ解析方法に関する文中の［　］に入る適切な語句はどれか。１つ選べ。",
     "choices": [
@@ -6265,7 +6265,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 193,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "",
     "question_text": "問 192−193\n医師から「 ₂ 型糖尿病患者に脂質異常症治療薬Ａを投与した際の、動脈硬化性疾\n患に対する予防効果（心血管疾患予防）について教えてほしい」と問合せがあっ\nた。薬剤師が文献調査をした結果、動脈硬化性疾患の既往歴がない ₂ 型糖尿病患者\n（₄₀～₇₅ 歳）を、「Ａ投与群」又は「Ａ非投与群」の ₂ 群に無作為に割付し、心血\n管死、脳血管障害、急性冠症候群などの動脈硬化性の心血管イベントの発症率を比\n較した論文を得ることができた。平均追跡期間は ₅ 年で、図に示した結果が得られ\nている。\n累積心血管イベント発症率︵％︶\n₄\nＡ非投与群\n₃                                   Ａ投与群\n₂\n₁\nハザード比：₀ . ₈₁（₉₅％信頼区間、₀ . ₆₉︲₀ . ₉₅）\np = ₀ . ₀₁₁\n₀\n₀   ₁    ₂     ₃        ₄   ₅\n期間（年）",
     "choices": [],
@@ -6279,7 +6279,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 194,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 194",
     "question_text": "薬物代謝酵素の遺伝子多型に関する記述のうち、正しいのはどれか。２つ選べ。\n\n−アセチル転移酵素2（NAT2）のslow acetylator（SA）では、イソニアジドによる副作用のリスクが増大する。",
     "choices": [
@@ -6313,7 +6313,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
     "year": 103,
     "question_number": 195,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 195",
     "question_text": "薬物の乳汁移行に関する記述のうち、正しいのはどれか。１つ選べ。\n\naがある。",
     "choices": [

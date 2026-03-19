@@ -2485,7 +2485,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 81,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "実務",
     "category": "必須問題 - 問 81",
     "question_text": "薬局薬剤師の役割として正しいのはどれか。１つ選べ。",
     "choices": [
@@ -2553,7 +2553,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 83,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "実務",
     "category": "必須問題 - 問 83",
     "question_text": "器官形成期に該当し、薬剤による催奇形性のリスクが最も高いと考えられる妊娠週はどれか。１つ選べ。",
     "choices": [
@@ -2655,7 +2655,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 86,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "実務",
     "category": "必須問題 - 問 86",
     "question_text": "薬局間で譲渡を行う際、譲受・譲渡の記録が法律上必要なのはどれか。１つ選べ。",
     "choices": [
@@ -2689,7 +2689,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 87,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "実務",
     "category": "必須問題 - 問 87",
     "question_text": "健康サポート薬局の活動・業務内容として適切でないのはどれか。１つ選べ。",
     "choices": [
@@ -2791,7 +2791,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 90,
     "section": "必須",
-    "subject": "衛生",
+    "subject": "実務",
     "category": "必須問題 - 問 90",
     "question_text": "学校薬剤師の業務として教室内の空気検査がある。シックハウス症候群の原因物質の1つで、室内空気中濃度に関する基準値が設定されているのはどれか。１つ選べ。",
     "choices": [
@@ -3369,7 +3369,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 107,
     "section": "理論",
-    "subject": "物理",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 107",
     "question_text": "問 107   図は、ある化合物Ａの H︲NMR スペクトル（₄₀₀ MHz、CDCl3、基準物質はテ\nトラメチルシラン）を示したものである。また、表は各シグナルの積分比を一覧に\nしたものである。化合物Ａの加水分解反応によって得られた化合物Ｂについて、同\n様の条件下で H︲NMR スペクトルの測定を行ったところ、アとウに相当するシグ\nナルが消失し、₁₁ ppm 付近に線幅の広い新たなシグナルが観測された。化合物Ａ\nの構造式はどれか。1つ選べ。なお、×印のシグナルは水又は CDCl3 中に含まれ\nる CHCl3 のプロトンに由来するシグナルである。\n表\nシグナル 積分比\nア        ₃\nイ        ₃\nウ        ₂\nエ        ₁\nオ        ₁\nカ        ₁\nキ        ₁\nク        ₁\n×\nイ                    アの拡大\nウの拡大\nエ～キの拡大\nキ               カ     オ       エ\n×ア\n×\nウ\nオ\nカエ\nキ\nク\n₉.₀       ₈.₀         ₇.₀       ₆.₀       ₅.₀           ₄.₀        ₃.₀   ₂.₀        ₁.₀       ₀ ppm\n1                                    2                                        3\nCH3                                   H                                     H\nH3C             N         O                           N    O\nN       O\nH3C                                      H3C\nO                       O                O               O\nHO                     O CH3                                            CH3                             CH3\n4                                               5\nH                                    H\nH3C       O           N     O                              N     O\nO CH3               HO               O\nCH3        CH3",
     "choices": [],
@@ -3431,7 +3431,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 110,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 110",
     "question_text": "骨の成長とリモデリングに関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3717,7 +3717,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 119,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 119,120,121",
     "question_text": "健康な成人における糖質の消化・吸収過程について、消化管における糖質の消化のプロセス（図1）、小腸粘膜上皮細胞におけるグルコースの輸送過程（図2）及び糖尿病治療薬アカルボースの構造式（図3）を示した。以下の問いに答えよ。\n\n問119（衛生）\n消化管における糖質の消化・吸収に関する記述のうち、正しいのはどれか。２つ選べ。\n\n問120（物理・化学・生物）\n小腸粘膜上皮細胞における糖の輸送過程に関する記述のうち、正しいのはどれか。２つ選べ。\n\nの濃度勾配を利用して、グルコースを細胞内に取り込む。\n\n（イオン①）を細胞内に、Na＋（イオン②）を細胞外に輸送する。\n\n問121（物理・化学・生物）\nα−グルコシダーゼ阻害薬であるアカルボースに関する記述のうち、誤っているのはどれか。１つ選べ。\n\n−ベンゾキノン試液による呈色反応を示す。",
     "choices": [
@@ -3791,7 +3791,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 120,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "",
     "question_text": "問 119−121   健康な成人における糖質の消化・吸収過程について、消化管における糖質\nの消化のプロセス（図 ₁ ）\n、小腸粘膜上皮細胞におけるグルコースの輸送過程（図\n₂ ）及び糖尿病治療薬アカルボースの構造式（図 ₃ 、₃₀ ページ）を示した。以下\nの問いに答えよ。\nでんぷん\nデキストリン\n酵素Ａ\nマルトース                    ラクトース\n酵素Ｃ\n酵素Ｂ\nグルコース             グルコース         ガラクトース\n図₁   消化管における糖質の消化のプロセス\n管腔側\nグルコース\n輸送体Ｄ\n小腸粘膜\n上皮細胞\nグルコース\nイオン②\n輸送体Ｆ\n輸送体Ｅ\nイオン①\n毛細血管側\n図₂   小腸粘膜上皮細胞におけるグルコースの輸送過程\n問 120（物理・化学・生物）\n小腸粘膜上皮細胞における糖の輸送過程に関する記述のうち、正しいのはどれ\nか。2つ選べ。\n1    ガラクトースは、単純拡散により細胞膜を通過して細胞内に取り込まれる。\n2    輸送体Ｄは、細胞内外の Na の濃度勾配を利用して、グルコースを細胞内に\n+\n取り込む。\n3    輸送体Ｄは、マルトースの輸送体としても働く。\n4    輸送体Ｅは、ATP の加水分解により得られたエネルギーを利用して、グル\nコースを毛細血管側に輸送する。\n5    輸送体Ｆは、ATP の加水分解により得られたエネルギーを利用して、K （イ\n+\nオン①）を細胞内に、Na （イオン②）を細胞外に輸送する。\n+",
     "choices": [],
@@ -3805,7 +3805,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 121,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "",
     "question_text": "問 119−121   健康な成人における糖質の消化・吸収過程について、消化管における糖質\nの消化のプロセス（図 ₁ ）\n、小腸粘膜上皮細胞におけるグルコースの輸送過程（図\n₂ ）及び糖尿病治療薬アカルボースの構造式（図 ₃ 、₃₀ ページ）を示した。以下\nの問いに答えよ。\nでんぷん\nデキストリン\n酵素Ａ\nマルトース                    ラクトース\n酵素Ｃ\n酵素Ｂ\nグルコース             グルコース         ガラクトース\n図₁   消化管における糖質の消化のプロセス\n管腔側\nグルコース\n輸送体Ｄ\n小腸粘膜\n上皮細胞\nグルコース\nイオン②\n輸送体Ｆ\n輸送体Ｅ\nイオン①\n毛細血管側\n図₂   小腸粘膜上皮細胞におけるグルコースの輸送過程\n問 121（物理・化学・生物）\na︲グルコシダーゼ阻害薬であるアカルボースに関する記述のうち、誤っている\nのはどれか。1つ選べ。\nHO                  CH3              CH2OH            CH2OH\nO                  O                O\nOH             OH               OH               OH           OH\nHO              N              O                  O\nH\nOH             OH                 OH               OH\n図₃   アカルボース\n1   マルトース型の部分構造が含まれる。\n2   破線で囲んだ部分の結合様式は b ₁ → ₄ 結合である。\n3   水に溶けやすい。\n4   ヘミアセタール構造をもつため、フェーリング試液による沈殿反応を示す。\n5   p︲ベンゾキノン試液による呈色反応を示す。\n一般問題（薬学理論問題）【衛生】",
     "choices": [
@@ -4489,7 +4489,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 141,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 141",
     "question_text": "薬剤師法に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -4523,7 +4523,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 142,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 142",
     "question_text": "薬局に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -4557,7 +4557,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 143,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 143",
     "question_text": "平成29年度の国民医療費の内訳に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -4591,7 +4591,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 144,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 144",
     "question_text": "医薬分業に関する記述のうち、適切なのはどれか。２つ選べ。",
     "choices": [
@@ -4625,7 +4625,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 145,
     "section": "理論",
-    "subject": "実務",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 145",
     "question_text": "患者とのコミュニケーションギャップを防ぐための医療従事者の対応として、適切でないのはどれか。１つ選べ。",
     "choices": [
@@ -4659,7 +4659,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 146,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 146",
     "question_text": "患者の自己決定に関する医療従事者の対応として、適切なのはどれか。２つ選べ。",
     "choices": [
@@ -4693,7 +4693,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 147,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 147",
     "question_text": "医薬品の製造販売の承認拒否事由として、適切でないのはどれか。１つ選べ。",
     "choices": [
@@ -4727,7 +4727,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 148,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 148",
     "question_text": "医療法に基づき、医療機関の管理者に求められる医療安全の確保に関する記述のうち、適切なのはどれか。２つ選べ。",
     "choices": [
@@ -4761,7 +4761,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 149,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 149",
     "question_text": "我が国の医療保険制度に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4795,7 +4795,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 150,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 150",
     "question_text": "薬価基準制度に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4999,7 +4999,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 156,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 156",
     "question_text": "貧血の治療薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\nを補充し、DNA合成を促進することで、巨赤芽球性貧血を改善する。",
     "choices": [
@@ -5033,7 +5033,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 157,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 157",
     "question_text": "インドメタシンの副作用である消化性潰瘍の発症機序として正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5067,7 +5067,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 158,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 158",
     "question_text": "下部消化管に作用する薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\nチャネル2（ClC−2）を活性化することで、腸管腔内への水分分泌を促進する。",
     "choices": [
@@ -5101,7 +5101,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 159,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 159",
     "question_text": "図はステロイドホルモン様の薬理作用をもつ薬物の化学構造を示したものである。この薬物の構造と薬理活性に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5135,7 +5135,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 160,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 160",
     "question_text": "ホルモン関連薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を遮断し、利尿作用を示す。",
     "choices": [
@@ -5169,7 +5169,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 161,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 161",
     "question_text": "1型糖尿病の治療に用いられる下図の構造の薬物に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5203,7 +5203,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 162,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 162",
     "question_text": "抗ヒト免疫不全ウイルス（HIV）薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5237,7 +5237,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 163,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 163,164",
     "question_text": "58歳男性。5年前より健康診断にて高血圧症を指摘されていたが放置していた。1年前には心肥大も指摘され、その頃から労作時に呼吸が苦しくなるようになった。ある日、発作性夜間呼吸困難のため、緊急入院した。入院時に浮腫が認められ、胸部レントゲンで、心肥大の増悪と肺うっ血像が認められた。\n\n問163（病態）\nこの患者に関する記述のうち、正しいのはどれか。２つ選べ。\n\n問164（薬理）\nこの患者に対して、症状の改善や心臓への負荷を軽減するため、作用機序の異なる2つの薬物が治療薬の候補となった。それぞれの主な作用点と作用、主な細胞内の反応、前負荷及び後負荷に及ぼす影響の組合せのうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5271,7 +5271,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 164,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 163−164   ₅₈ 歳男性。 ₅ 年前より健康診断にて高血圧症を指摘されていたが放置して\nいた。 ₁ 年前には心肥大も指摘され、その頃から労作時に呼吸が苦しくなるように\nなった。ある日、発作性夜間呼吸困難のため、緊急入院した。入院時に浮腫が認め\nられ、胸部レントゲンで、心肥大の増悪と肺うっ血像が認められた。\n問 164（薬理）\nこの患者に対して、症状の改善や心臓への負荷を軽減するため、作用機序の異な\nる ₂ つの薬物が治療薬の候補となった。それぞれの主な作用点と作用、主な細胞内\nの反応、前負荷及び後負荷に及ぼす影響の組合せのうち、正しいのはどれか。2つ\n選べ。\n主な作用点と作用               主な細胞内の反応   前負荷   後負荷\n1   Na , K ︲ATPase の阻害   K 濃度上昇             軽減    不変\n+   +              +\n心房性ナトリウム利尿ペプ         サイクリック GMP（cGMP）\n2                                           軽減    軽減\nチド（ANP）受容体の刺激        濃度上昇\nアデニル酸シクラーゼの活         サイクリック AMP（cAMP）\n3                                           軽減    不変\n性化                   濃度上昇\nホスホジエステラーゼⅢの\n4                        cGMP 濃度上昇          軽減    軽減\n阻害\n可溶性グアニル酸シクラー\n5                        cGMP 濃度上昇          軽減    軽減\nゼの活性化",
     "choices": [
@@ -5305,7 +5305,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 165,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 165,166",
     "question_text": "35歳女性。身長150 cm、体重65 kg、血圧138/90 mmHg、喫煙歴あり（30本／日）。仕事が忙しくなりストレスが溜まり、暴飲暴食で早食いとなった。ある日、突然、今までに経験したことがない心窩部痛におそわれ、心配になり近医を受診した。検査の結果、逆流性食道炎と診断され、下記の処方で治療が開始され、2ヶ月ほどで軽快した。\n\n問165（薬理）\nこの患者に処方されたそれぞれの薬物の作用機序として正しいのはどれか。２つ選べ。\n\n受容体遮断\n受容体遮断\n,K＋−ATPase阻害\n受容体刺激\n受容体遮断\n\n問166（病態）\nこの患者に関する記述のうち、適切なのはどれか。２つ選べ。\n\nチャネル遮断薬を併用するとより症状が改善する。",
     "choices": [
@@ -5359,7 +5359,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 166,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 165−166    ₃₅ 歳 女 性。 身 長 ₁₅₀ cm、 体 重 ₆₅ kg、 血 圧 ₁₃₈/₉₀ mmHg、 喫 煙 歴 あ り\n（₃₀ 本/日）。仕事が忙しくなりストレスが溜まり、暴飲暴食で早食いとなった。\nある日、突然、今までに経験したことがない心窩部痛におそわれ、心配になり近医\nを受診した。検査の結果、逆流性食道炎と診断され、下記の処方で治療が開始さ\nれ、 ₂ ヶ月ほどで軽快した。\n（処方 ₁ ）\nランソプラゾールカプセル ₃₀ mg              ₁ 回 ₁ カプセル（ ₁ 日 ₁ カプセル）\n₁日₁回    朝食後    ₇ 日分\n（処方 ₂ ）\nモサプリドクエン酸塩錠 ₅ mg                ₁ 回 ₁ 錠（ ₁ 日 ₃ 錠）\n₁日₃回    朝昼夕食後       ₇ 日分\n問 166（病態）\nこの患者に関する記述のうち、適切なのはどれか。2つ選べ。\n1    食道下部括約筋の収縮により、胃酸が逆流することにより発症した。\n2    内視鏡検査で食道に炎症やびらんが認められた。\n3    Ca    チャネル遮断薬を併用するとより症状が改善する。\n2+\n4   再発防止のため、この処方 ₂ を継続する必要がある。\n5   薬物療法に加えて禁煙や体重の減量などの生活指導が奏功する。",
     "choices": [],
@@ -5373,7 +5373,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 167,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 167,168",
     "question_text": "47歳男性。身長172 cm、体重85 kg。38歳時より高血圧を指摘され、下記処方にて治療を受けていた。日常、ビールを飲むことが多い。\n\n子供の運動会で短距離走に出場した。運動会終了後、懇親会にて飲酒した次の日、右足母趾の腫脹と痛みを認めた。その後、痛みは徐々に増悪し、患部の赤く腫大した状態が2日間持続していると訴え受診した。\n\n問167（病態）\n患者が訴えている症状を速やか改善させるために処方される薬物として最も適切なのはどれか。１つ選べ。\n\n問168（薬理）\n精査の結果、この患者では左腎結石を認め、以下の検査の結果が得られた。\n検査値：血圧136/86 mmHg、空腹時血糖値110mg/dL、HbA1c6.1％（NGSP値）、LDL−C140 mg/dL、TG（トリグリセリド）210mg/dL、血清クレアチニン値1.1mg/dL、eGFR68mL/min/1.73m2、BUN21mg/dL、尿酸値10.5mg/dL\n\n患者が訴えている症状が寛解した後、その症状の再発を予防する目的で投与される薬物に関する記述のうち、最も適切などれか。１つ選べ。",
     "choices": [
@@ -5427,7 +5427,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 168,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 167−168   ₄₇ 歳男性。身長 ₁₇₂ cm、体重 ₈₅ kg。₃₈ 歳時より高血圧を指摘され、下\n記処方にて治療を受けていた。日常、ビールを飲むことが多い。\n（処方）\nカンデサルタンシレキセチル錠 ₈ mg        ₁ 回 ₁ 錠（ ₁ 日 ₁ 錠）\n₁日₁回    朝食後    ₁₄ 日分\n子供の運動会で短距離走に出場した。運動会終了後、懇親会にて飲酒した次の\n日、右足母趾の腫脹と痛みを認めた。その後、痛みは徐々に増悪し、患部の赤く腫\n大した状態が ₂ 日間持続していると訴え受診した。\n問 168（薬理）\n精査の結果、この患者では左腎結石を認め、以下の検査結果が得られた。\n検査値：血圧 ₁₃₆/₈₆ mmHg、空腹時血糖値 ₁₁₀ mg/dL、HbA₁c ₆ . ₁％\n（NGSP 値）\n、\nLDL︲C ₁₄₀ mg/dL、TG（トリグリセリド）₂₁₀ mg/dL、\n血清クレアチニン値 ₁.₁ mg/dL、eGFR ₆₈ mL/min/₁. ₇₃ m 、BUN ₂₁ mg/dL、\n尿酸値 ₁₀ . ₅ mg/dL\n患者が訴えている症状が寛解した後、その症状の再発を予防する目的で投与され\nる薬物に関する記述のうち、最も適切なのはどれか。1つ選べ。\n1   キサンチンオキシダーゼを阻害し、尿酸生成を抑制する。\n2   腎尿細管において、尿酸の再吸収を抑制する。\n3   尿酸をアラントインと過酸化水素に分解する。\n4   シクロオキシゲナーゼを阻害する。\n5   チュブリンと結合して微小管重合を阻害し、好中球の遊走を抑制する。\n一般問題（薬学理論問題）【薬剤】",
     "choices": [],
@@ -5509,7 +5509,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 171,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 171",
     "question_text": "問 171   1 ～ ５ のうち、アセトアミノフェンによる肝毒性に関与し、エタノールにより\n誘導される酵素が関わる代謝過程はどれか。1つ選べ。\nNHCOCH3                NHCOCH3                NHCOCH3\n1                     2\nCOOH\nOSO3H                  OH                      O\nO\nアセトアミノフェン                 OH\nHO\nOH\nNHCOCH3                         NCOCH3                 NHCOCH3\n4                     5\nS                                                      生体高分子\nHO H            O                 O                      OH\nHOOC    N                   COOH\nN\nO    H        NH2",
     "choices": [],
@@ -5523,7 +5523,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 172,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 172",
     "question_text": "ある薬物を患者に点滴静注により持続投与中である。定常状態における血中薬物濃度は5.0 µg/mLであり、定常状態到達時にいったん完全に排尿し、5時間後に再度排尿した尿の総量は300 mL、尿中薬物濃度は180 µg/mLであった。この患者における糸球体ろ過速度を120 mL/min、薬物の尿細管再吸収率を20％、血中非結合形分率を0.20としたとき、この薬物の尿細管分泌クリアランス（mL/min）に最も近い値はどれか。１つ選べ。",
     "choices": [
@@ -5557,7 +5557,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 173,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 173",
     "question_text": "薬物の胆汁中排泄に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5591,7 +5591,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 174,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 174",
     "question_text": "治療薬物モニタリング（TDM）が有効な薬物の特徴として、適切でないのはどれか。１つ選べ。",
     "choices": [
@@ -5625,7 +5625,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 175,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 175",
     "question_text": "問 175       トランスポーターを介した薬物の尿細管分泌が併用薬によって阻害され、薬物\nの血中濃度上昇をもたらす薬物相互作用として、トランスポーター、薬物、併用薬\nの正しい組合せはどれか。2つ選べ。\nトランスポーター           薬物        併用薬\n中性アミノ酸トランスポーター\n1                          レボドパ       カルビドパ\nLAT₁\n2   P︲糖タンパク質               ジゴキシン      キニジン\n有機アニオントランスポーター\n3                          メトトレキサート   プロベネシド\nOAT₁ 、OAT₃\nペプチドトランスポーター\n4                          メトホルミン     シメチジン\nPEPT₁\nH /有機カチオン逆輸送体\n+\n5                          リチウム       ロキソプロフェン\nMATE₁ 、MATE₂︲K",
     "choices": [
@@ -5659,7 +5659,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 176,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 176",
     "question_text": "ある薬物10 mgを被験者に急速静脈内投与した後、薬物の血中濃度及び尿中排泄量を測定したところ、血中濃度時間曲線下面積は0.20 mg・h/L、尿中総排泄量は2.0 mgであった。一方、この薬物40 mgを同一被験者に経口投与したときの尿中総排泄量は3.0 mgであった。この薬物40 mgを経口投与したときの体内動態の説明として、正しいのはどれか。２つ選べ。ただし、この薬物は肝代謝及び腎排泄でのみ消失し、体内動態は線形性を示す。また、肝血流速度は80 L/hとする。",
     "choices": [
@@ -5693,7 +5693,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 177,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 177",
     "question_text": "粒子径のみが異なる大小2種の単分散球形固体粒子から成る粉体Ⅰ及びⅡを、同一仕込み量（W0）で一定温度の水にそれぞれ投入し攪拌した。溶解せず残っている量（Wt）を経時的に測定したところ、図のような関係が得られた。この結果の説明に関する記述のうち、正しいのはどれか。２つ選べ。ただし、溶解はシンク条件において拡散律速で進行するものとし、試験条件は同じとする。\n\n/minである。",
     "choices": [
@@ -5727,7 +5727,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 178,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 178",
     "question_text": "乳剤A、B及びCはそれぞれ図に示す容積の水と油からなっている。これらの乳剤には非電解質の薬物1,000 mgが溶解している。25℃における乳剤A〜Cの油相及び水相中の薬物濃度に関する記述のうち、最も適切なのはどれか。１つ選べ。ただし、25℃における薬物の油／水分配係数は1,000であり、分配平衡に達しているものとする。また、溶解に伴う容積変化は無視でき、両相において薬物は会合しないものとする。",
     "choices": [
@@ -5761,7 +5761,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 179,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 179",
     "question_text": "ある非電解質性の安定形結晶と準安定形結晶を、固相が常に存在する状態で一定温度の水に溶解したところ、図に示す薬物濃度―時間曲線Ⅰ及びⅡが得られた。この薬物の溶解挙動に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5795,7 +5795,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 180,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 180",
     "question_text": "図は薬物Aの水和物について昇温過程で熱重量測定（TG）及び示差走査熱量測定（DSC）を行った結果である。薬物Aに関する記述のうち、最も適切なのはどれか。１つ選べ。ただし、薬物Aには水和物、無水物ともに結晶多形は存在しない。",
     "choices": [
@@ -5829,7 +5829,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 181,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 181",
     "question_text": "光に対して不安定な薬物Aを含有するフィルムコーティング錠に含まれる添加剤を以下に示す。添加剤の種類や量を変更したときに起こり得る錠剤特性の変化に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5863,7 +5863,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 182,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 182",
     "question_text": "医薬品の容器に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5897,7 +5897,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 183,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 183",
     "question_text": "粒子が関係する日本薬局方一般試験法に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5999,7 +5999,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 186,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 186",
     "question_text": "子宮内膜症の病態と治療に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6033,7 +6033,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 187,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 187",
     "question_text": "25歳女性。身長158 cm、体重53 kg。最近、姿勢の変動に伴い、頭痛、動悸及び発汗を認めたため心配になり病院を受診した。来院時の所見は以下のとおりであった。\n\n血圧188/106 mmHg、脈拍110回/分\n血液検査：空腹時血糖値104 mg/dL、HbA1c 5.9％（NGSP値）、Na 137 mEq/L、K 4.2 mEq/L\n腹部CT検査：右副腎に5 cm大の腫瘤\n\n検査の結果、右副腎腫瘍の摘出術を行うこととなった。術前の血圧管理のために最初に用いる薬物として最も適切なのはどれか。１つ選べ。",
     "choices": [
@@ -6067,7 +6067,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 188,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 188",
     "question_text": "75歳男性。15年ほど前から動作がゆっくりになり、立っているときに前かがみの姿勢が目立つようになった。近医を受診したところ、パーキンソン病と診断され、タリペキソールの投与により症状の改善を認めた。70歳頃より症状が悪化したが、レボドパとカルビドパの配合剤への変更により、症状の改善が得られていた。最近、この配合剤の薬効の持続時間が短くなり、配合剤の使用回数が増えた。この患者の病態及び薬物治療に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6101,7 +6101,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 189,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 189",
     "question_text": "脳腫瘍に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6135,7 +6135,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 190,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 190",
     "question_text": "せん妄に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -6169,7 +6169,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 191,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 191",
     "question_text": "HIV感染症に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6203,7 +6203,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 192,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 192",
     "question_text": "非ホジキンリンパ腫の病態と治療に関する記述のうち、正しいのはどれか。２つ選べ。\n\n感染に関連する慢性胃炎を併発することが多い。",
     "choices": [
@@ -6237,7 +6237,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 193,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 193",
     "question_text": "仮説検定を有意水準5％で行ったところ、帰無仮説は棄却できなかった。この検定に関する記述のうち、適切なのはどれか。２つ選べ。",
     "choices": [
@@ -6271,7 +6271,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 194,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 194",
     "question_text": "便秘治療薬の有効性に関する臨床試験の結果から、以下の情報を得た。データ解析方法に関する文中の［　　　　］に入る適切な語句はどれか。１つ選べ。\n\n−test\t\n 検定",
     "choices": [
@@ -6305,7 +6305,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 195,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 195",
     "question_text": "28歳男性。半年前に転勤で築10年のマンションに転居してきた。仕事が忙しく部屋の掃除が滞っていたが、元気に過ごしてきた。しかし、3週間ほど前からくしゃみ、鼻のかゆみ、鼻汁・鼻漏を認め、最近は鼻づまりや目のかゆみも感じている。頭痛や発熱、喉の痛みはなく、鼻づまりは口呼吸をするほどではなかったが、くしゃみは、日に7〜8回あることから内科を受診したところ、次の薬剤が処方された。\n\n本症例に関する病態及び薬物治療に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [

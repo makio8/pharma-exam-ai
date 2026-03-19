@@ -125,7 +125,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 5,
     "section": "必須",
-    "subject": "生物",
+    "subject": "物理",
     "category": "必須問題 - 問 5",
     "question_text": "酵素反応速度を表す式はどれか。１つ選べ。",
     "choices": [
@@ -2459,7 +2459,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 80,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 80",
     "question_text": "薬局に処方箋を持参した成人患者が、半年前から継続処方されている薬について、「この薬は、あまり飲みたくないのです」と訴えた。この訴えの次に薬剤師が患者にかける言葉として適切なのはどれか。１つ選べ。",
     "choices": [
@@ -2629,7 +2629,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 85,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "実務",
     "category": "必須問題 - 問 85",
     "question_text": "医療用医薬品としてすでに使われている有効成分が転用された要指導医薬品及び一般用医薬品を何というか。１つ選べ。",
     "choices": [
@@ -3289,7 +3289,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 107,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 107",
     "question_text": "ビルダグリプチンに関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4373,7 +4373,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 141,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 141",
     "question_text": "医薬品医療機器等法に規定される医療機器に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4407,7 +4407,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 142,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 142",
     "question_text": "医薬品の製造販売業者における総括製造販売責任者に関する記述のうち、誤っているのはどれか。２つ選べ。",
     "choices": [
@@ -4441,7 +4441,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 143,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 143",
     "question_text": "医薬品の製造販売の承認に関して、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -4475,7 +4475,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 144,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 144",
     "question_text": "薬剤師免許に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4509,7 +4509,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 145,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 145",
     "question_text": "安全な血液製剤の安定供給の確保等に関する法律に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4543,7 +4543,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 146,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 146",
     "question_text": "介護保険に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4577,7 +4577,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 147,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 147",
     "question_text": "我が国の薬価基準制度に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4611,7 +4611,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 148,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 148",
     "question_text": "問 148 下図は、平成 15（2003）年度及び平成 25（2013）年度の制度区分別国民医療\n費の給付分等の割合を示したものである。ア 、イ 、ウ 及び エ にあてはまるの\nはどれか。    つ選べ。\n患      公\n平成 15年度                                   者      費\nア               イ       負      負\n(2003)                                   担      担\n44.7％           33.8％   15.7％   5.8％\n患      公      そ\n者      費      の\n平成 25年度            ウ                 エ                  他\n負      負\n(2013)                                   担      担\n47.0％           32.7％   12.5％ 7.4％ 0.5％\n制度区分別国民医療費の構成割合\n注）厚生労働省「平成 15年度国民医療費の概況」及び「平成 25年度国民医療費の概況」\nを基に作成した。端数処理により、合計が 100％にならないものがある。\nア            イ              ウ               エ\n1 医療保険     老人保健             後期高齢者医療     医療保険\n2 医療保険     老人保健             医療保険        後期高齢者医療\n3 老人保健     医療保険             後期高齢者医療     医療保険\n4 老人保健     医療保険             医療保険        後期高齢者医療\n5 医療保険     後期高齢者医療          後期高齢者医療     医療保険\n6 医療保険     後期高齢者医療          医療保険        後期高齢者医療\n⎜ 41⎜",
     "choices": [],
@@ -4625,7 +4625,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 149,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 149",
     "question_text": "下図は、ある疾患に対して使用可能な2つの薬剤による治療の費用対効果を比較するために作成した決定樹（判断樹）モデルである。治療プログラム（薬物治療）の経済評価において、このようなモデルを用いた分析の特徴として正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4659,7 +4659,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 150,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 150",
     "question_text": "89歳のAさんは、独居であり、居住地と同じ市内の2つの医療機関（B病院、C診療所）に通院し、いずれからも薬を処方されている。Aさんは、B病院の処方箋の調剤をD薬局で受け、C診療所では診療所の中で薬を受け取っている。Aさんは2つの医療機関からの薬について混乱する場合があるという。\n地域の薬局に求められる役割を踏まえて、D薬局の薬剤師の対応として、適切なのはどれか。２つ選べ。",
     "choices": [
@@ -4863,7 +4863,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 156,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 156",
     "question_text": "痛みを伴う疾患に用いられる薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\nチャネルのα2δサブユニットに結合し、神経伝達物質の遊離を抑制する。\n受容体を遮断し、片頭痛を緩和する。\n−アミノ酪酸GABAB受容体を刺激し、筋緊張を伴う疼痛を緩和する。",
     "choices": [
@@ -4897,7 +4897,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 157,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 157",
     "question_text": "中枢神経疾患治療薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\nチャネルの活性化により神経細胞膜を過分極させ、抗てんかん作用を示す。\n流入を抑制し、認知機能障害を改善する。\n−メチルトランスフェラーゼ(COMT)を阻害して、レボドパの脳内移行量を増加させる。\nチャネルを選択的に遮断し、抗てんかん作用を示す。\n受容体を選択的に刺激し、錐体外路障害を改善する。",
     "choices": [
@@ -4931,7 +4931,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 158,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 158",
     "question_text": "高血圧症治療薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4965,7 +4965,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 159,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 159",
     "question_text": "消化器に作用する薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を遮断して副交感神経終末からのアセチルコリンの放出を抑制し、止潟作用を示す。\n受容体を遮断して腸管運動を抑制する。\n受容体を刺激して腸管運動を抑制する。\n受容体を遮断して胃酸分泌を抑制する。",
     "choices": [
@@ -4999,7 +4999,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 160,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 160",
     "question_text": "脂質異常症治療薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5033,7 +5033,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 161,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 161",
     "question_text": "骨粗しょう症治療薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\n(腫瘍壊死因子−α)抗体で、前駆細胞から破骨細胞への分化を抑制する。",
     "choices": [
@@ -5067,7 +5067,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 162,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 162",
     "question_text": "血液・造血組織に作用する薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\nの吸収を促進し、巨赤芽球性貧血を改善する。",
     "choices": [
@@ -5101,7 +5101,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 163,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 163",
     "question_text": "抗アレルギー薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5135,7 +5135,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 164,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 164",
     "question_text": "抗ウイルス薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5321,7 +5321,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 171,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 171",
     "question_text": "ある薬物を含む散剤（薬物100 mg/g）を繰り返し経口投与し、定常状態における平均血中濃度を2.0 µg/mLとしたい。投与間隔を8時間とするとき、1回あたりの散剤の投与量（g）として最も適切なのはどれか。１つ選べ。\nただし、この薬物の体内動態は線形1−コンパートメントモデルに従い、全身クリアランスは120 mL/min、この散剤における薬物のバイオアベイラビリティは80%とする。",
     "choices": [
@@ -5355,7 +5355,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 172,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 172",
     "question_text": "以下のア、イ、ウで示される物質を様々な濃度で水に溶解し、一定温度下で濃度と表面張力の関係を調べたところ、下図に示すⅠ、Ⅱ、Ⅲのようになった。以下の記述のうち、正しいのはどれか。２つ選べ。\n\n１より高い濃度では水相表面における物質の濃度（吸着量）は飽和して一定である。",
     "choices": [
@@ -5389,7 +5389,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 173,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 173",
     "question_text": "高分子及び高分子水溶液に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5423,7 +5423,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 174,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 174",
     "question_text": "25℃の水溶液中における薬物Ａ及び薬物Ｂの濃度を経時的に測定したところ、下図のような結果を得た。次に、両薬物について同一濃度（C０）の水溶液を調製し、25℃で保存したとき、薬物濃度がC０/2になるまでに要する時間が等しくなった。C０（mg/mL）に最も近い値はどれか。１つ選べ。",
     "choices": [
@@ -5457,7 +5457,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 175,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 175",
     "question_text": "放出制御製剤に用いられる添加物に関する記述のうち、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -5491,7 +5491,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 176,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 176",
     "question_text": "固形製剤の製造工程と製剤機械に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5525,7 +5525,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 177,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 177",
     "question_text": "製剤に用いられる容器及び包装に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5559,7 +5559,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 178,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 178",
     "question_text": "固形製剤の評価に用いられる一般試験法に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5593,7 +5593,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 179,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 179",
     "question_text": "下図は、浸透圧を利用した放出制御システム（OROS®＊）が応用されたメチルフェニデート塩酸塩徐放錠の断面図である。以下の記述のうち、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -5831,7 +5831,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 186,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 186",
     "question_text": "インフルエンザの病態、診断及び治療に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5865,7 +5865,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 187,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 187",
     "question_text": "58歳男性。既往歴なし。20歳頃より現在まで喫煙継続中（20本/日）。半年前より、軽度の咳嗽及び喀痰がみられたが放置していた。しかし最近、会社の健康診断で肺の腫瘤陰影を指摘され、呼吸器内科を受診した。胸部エックス線では、右肺門部に径3 cm大の腫瘤陰影が認められ、経気管支内視鏡検査では、右主気管支の圧迫像が認められた。さらに気管支肺生検の結果、小細胞肺癌と診断された。\n本患者の治療に適切な薬物はどれか。２つ選べ。",
     "choices": [
@@ -5899,7 +5899,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 188,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 188",
     "question_text": "薬物の鎮痛効果について並行群間比較試験を実施することになった。600名の患者を薬物A投与群300名と薬物B投与群300名に分け、各々の薬物について投与後の鎮痛効果をレベル1〜10までの10段階で評価した。この評価データが正規分布していない場合、薬物Aと薬物Bの鎮痛効果の差を比較するための適切な統計手法はどれか。１つ選べ。\n\n-test\n\n-test",
     "choices": [
@@ -5933,7 +5933,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 189,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 189",
     "question_text": "薬物Aと薬物Bをそれぞれ200名の患者に投与して、ある副作用の発現割合を比較したころ、副作用が発現した人は薬物A群で40名、薬物B群で15名であった。患者の内訳を詳細に調査した結果、薬物A群で100名、薬物B群でも100名が重症の患者であった。報告によると、薬物A投与の場合、副作用発現に重症度の影響はみられないが、薬物B投与では、重症の患者は、重症でない患者に比較すると副作用発現割合が2倍高くなることがわかっている。この場合、次の記述のうち、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -5967,7 +5967,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 190,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 190",
     "question_text": "EBMの実践において、臨床研究論文の批判的吟味を行う際の「外的妥当性」に該当するのはどれか。１つ選べ。",
     "choices": [
@@ -6001,7 +6001,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 191,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 191",
     "question_text": "36歳女性。主婦。最近、左乳房の腫瘤に気付き、病院の乳腺外来を受診した。\n身体所見：身長158 cm。体重50 kg。血圧128/70 mmHg。左乳房の触診にて、内上方に1 cm大の硬結を触知した。生理周期28日。\n検査所見：尿所見 正常、末梢血検査 異常なし。\n生化学的検査・腫瘍マーカー検査：CEA8.0 ng/mL（正常値5.0 ng/mL以下）、\nエストロゲン感受性（＋）、プロゲステロン受容体（＋）、HER2蛋白 陰性。\n\nCEA；carcinoembryonic antigen\nHER2；human epidermal growth factor receptor type 2\n\n検査の結果、外科的手術を行い、その後、薬物治療を行うこととなった。\nこの患者に適応となる薬物はどれか。２つ選べ。",
     "choices": [
@@ -6035,7 +6035,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 192,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 192",
     "question_text": "虚血性心疾患とその治療に関する記述のうち、正しいのはどれか。２つ選べ。\n\n遮断薬は冠動脈がれん縮している狭心症の第1選択薬として用いる。",
     "choices": [
@@ -6069,7 +6069,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 193,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 193",
     "question_text": "病態と生体リズムの関係について、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -6103,7 +6103,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 194,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 194,195",
     "question_text": "患者：72歳男性。\n既往歴：高血圧で降圧剤を内服。\n現病歴：1年ほど前より尿勢の低下、排尿回数の増加がみられ、とくに飲酒後の排尿困難を感じていたが放置していた。その後、数種の一般用医薬品を服用したところ排尿ができなくなり、下腹部膨満感が出現。間欠的に激しい痛みも出現したため、救急車にて来院した。尿道カテーテルを留置したところ800 mLの尿の流出があった。2日間カテーテルを留置後に抜去したところ、自排尿は得られたが前立腺容積も大きく、残尿も多かったため経尿道的前立腺切除手術を施行した。前立腺特異抗原（PSA）値は3.9 ng/mLであった。\n\n問194（病態・薬物治療）\n下記の診断・検査のうち、前立腺肥大症と前立腺がんの鑑別に役立つのはどれか。１つ選べ。\n\n問195（薬理）\n患者に聞いたところ、次の成分を含む一般用医薬品を服用したことがわかった。\n\nこれらの一般用医薬品服用後に生じた排尿困難の機序と考えられるのはどれか。１つ選べ。\n\n受容体遮断\n受容体遮断\n受容体遮断\n1受容体遮断\n受容体遮断",
     "choices": [
@@ -6157,7 +6157,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "year": 102,
     "question_number": 195,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "法規・制度・倫理",
     "category": "",
     "question_text": "問 195（薬理）\n患者に聞いたところ、次の成分を含む一般用医薬品を服用したことがわかった。\nジフェンヒドラミン   （睡眠改善薬）\nファモチジン      （胃腸薬）\nフェキソフェナジン   （アレルギー専用鼻炎薬）\nこれらの一般用医薬品服用後に生じた排尿困難の機序と考えられるのはどれか。\nつ選べ。\n1 ヒスタミン H 受容体遮断\n2 ヒスタミン H 受容体遮断\n3 アセチルコリン M 受容体遮断\n4 アドレナリン α 受容体遮断\n5 ロイコトリエン CysLT 受容体遮断\n⎜ 26⎜",
     "choices": [],

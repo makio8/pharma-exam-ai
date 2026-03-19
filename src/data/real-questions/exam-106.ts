@@ -2617,7 +2617,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 83,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "実務",
     "category": "必須問題 - 問 83",
     "question_text": "DNAR（Do Not Attempt Resuscitation）の説明として正しいのはどれか。１つ選べ。",
     "choices": [
@@ -2719,7 +2719,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 86,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "実務",
     "category": "必須問題 - 問 86",
     "question_text": "ラモトリギンに対して発出された安全性速報（ブルーレター）を契機に添付文書の「警告」に記載された重篤な副作用はどれか。１つ選べ。",
     "choices": [
@@ -2753,7 +2753,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 87,
     "section": "必須",
-    "subject": "薬剤",
+    "subject": "実務",
     "category": "必須問題 - 問 87",
     "question_text": "ジゴキシンが投与されている患者について、安全性確保の点からモニタリングが推奨される項目はどれか。１つ選べ。",
     "choices": [
@@ -3401,7 +3401,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 107,
     "section": "理論",
-    "subject": "物理",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 107",
     "question_text": "問 107   図は、ある化合物の H︲NMR スペクトル（₄₀₀ MHz、CDCl3、基準物質はテト\nラメチルシラン）を表したものである。この化合物の構造式として正しいのはどれ\nか。1つ選べ。なお、拡大図Ａ、Ｂ、Ｃの拡大率はそれぞれ異なる。また、ウのシ\nグナルは重水を添加することにより消失する。\n表\nシグナル 積分比\nア           ₁₂\nイ           ₂\nウ           ₁\nエ           ₁\nオ           ₂\nア\nＡ アの拡大\nＣ オ、エの拡大                       Ｂ イの拡大\n₇.₁     ₇.₀        ₆.₉              ₃.₂    ₃.₁         ₁.₃     ₁.₂\nオ                          ウ\nエ                                            イ\n₈.₀        ₇.₀          ₆.₀         ₅.₀         ₄.₀         ₃.₀     ₂.₀         ₁.₀   ₀\nOH                                CO2H\nCH3 OH     CH3\nH3C                CH3   H3C                   CH3         H3C                  CH3\nCH3           CH3                 CH3          CH3\n1                          2                                 3\nCH3 CO2H\nH3C                            CH3                 CH3\nCH3\nH3C     O             O     CH3\nCH3\n4                              5",
     "choices": [],
@@ -3483,7 +3483,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 110,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 110",
     "question_text": "呼吸器系に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3773,7 +3773,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 119,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 119",
     "question_text": "75歳以上のサルコペニア（加齢性筋肉減少症）の高齢者160名を対象に健康教育を行うとともに、4つのグループに無作為に分類して筋力トレーニング（筋トレ）、ロイシン高配合の必須アミノ酸のサプリメント摂取（サプリ摂取）を定期的に行いながら追跡調査を行った。3ヶ月後、膝関節伸展筋力を指標としてサルコぺニアが改善した者と改善しなかった者に分けたところ、以下の表の結果となった。また、3ヶ月後の膝関節伸展筋力の変動（%）を調べて図に示した。\n\nサルコペニア及びこの疫学研究に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3807,7 +3807,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 120,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 120",
     "question_text": "「21世紀における国民健康づくり運動（健康日本21）」に関する記述のうち、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -4017,7 +4017,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 125,
     "section": "理論",
-    "subject": "生物",
+    "subject": "衛生",
     "category": "",
     "question_text": "問 124−126   ビタミン K は正常な生理機能の維持に不可欠であり、通常は必要量を食\n品から摂取している。\n問 125（物理・化学・生物）\nビタミン K の一種であるビタミン K2（メナテトレノン）に関する記述のうち、\n誤っているのはどれか。1つ選べ。\nO\nCH3\nCH3\nO          CH3        CH3      CH3   CH3\nビタミン K2（メナテトレノン）\n1   ヘキサンには極めて溶けやすいが、水にはほとんど溶けない。\n2   光によって分解し、着色が強くなる。\n3   還元されるとヒドロキノン型になる。\n4   赤外吸収スペクトルにおいて、₁₅₀₀ cm                  付近にカルボニル基に由来する吸収\n-1\nを示す。\n5   ₂︲メチル︲₁ , ₄︲ナフトキノンにイソプレン単位で構成されるプレニル基が結合\nしている。",
     "choices": [],
@@ -4031,7 +4031,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 126,
     "section": "理論",
-    "subject": "生物",
+    "subject": "衛生",
     "category": "",
     "question_text": "問 124−126   ビタミン K は正常な生理機能の維持に不可欠であり、通常は必要量を食\n品から摂取している。\n問 126（物理・化学・生物）\nビタミン K の生理作用に関する記述のうち、正しいのはどれか。2つ選べ。\n1   ビタミン K は、プロトロンビンの生成に関与する。\n2   ワルファリンによりビタミン K 依存性凝固因子の生成が促進される。\n3   ビタミン K は、タンパク質のグルタミン酸残基の修飾に関与する。\n4   ビタミン K は、デヒドロゲナーゼの補酵素として働く。\n5   ビタミン K は、骨基質タンパク質オステオカルシンの分解を促進する。\n一般問題（薬学理論問題）【衛生】",
     "choices": [],
@@ -4045,7 +4045,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 127,
     "section": "理論",
-    "subject": "生物",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 127",
     "question_text": "エネルギー代謝に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4079,7 +4079,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 128,
     "section": "理論",
-    "subject": "生物",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 128",
     "question_text": "図は、体重70 kgの男性がグルコース100 gを摂取後に絶食した場合の血中グルコース濃度に基づいた理論的なグルコース消費量の経時変化を示している。図の縦軸はグルコース消費量を、横軸はグルコース摂取後の時間経過をステージⅠ〜Ⅳに分けて示している。 　A　  及び  　B　  は血中グルコースの供給源を示す。この図に関する記述のうち、誤っているのはどれか。１つ選べ。\n\n は、グリコーゲンである\n は、糖新生であり、ステージⅡ、Ⅲでは筋肉においてタンパク質が分解されて生じたアラニンが肝臓に運ばれて起こる。",
     "choices": [
@@ -4501,7 +4501,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 141,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 141",
     "question_text": "問 141   過去に重篤な副作用で問題となった医薬品成分のうち、適切な安全対策などを\n施すことで別の適応症で承認を受けたものがいくつかある。その組合せとして適切\nなのはどれか。1つ選べ。\n医薬品成分      副作用           別の適応症\n1     サリドマイド     四肢奇形          多発性骨髄腫\n2     クロロキン      網膜症           髄膜炎\n3     ソリブジン      ウイルス性肝炎       帯状疱疹\n4     キノホルム      自閉症           アルツハイマー病\n5     ゲフィチニブ     間質性肺炎         インフルエンザ",
     "choices": [
@@ -4535,7 +4535,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 142,
     "section": "理論",
-    "subject": "実務",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 142",
     "question_text": "医療者が患者に悪い知らせを伝える際のコミュニケーションスキルとしてSPIKESモデル（注）がある。薬剤師が抗がん剤の副作用について説明をする場面に関する記述のうち、SPIKESモデルの「Invitation」に該当するのはどれか。１つ選べ。\n\n（注）SPIKES：Setting（面談の設定）、Perception（患者認識の評価）、\nInvitation（患者からの求めの確認）、Knowledge（知識や情報の提供）、\nEmpathy（感情への共感的対応）、Strategy ＆ Summary（方針とまとめ）",
     "choices": [
@@ -4569,7 +4569,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 143,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 143",
     "question_text": "薬局開設者が、患者の同意なしでも薬剤服用歴等の患者の個人情報を第三者に提供可能な場合はどれか。１つ選べ。",
     "choices": [
@@ -4603,7 +4603,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 144,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 144",
     "question_text": "医薬品の再審査制度に関する記述のうち、適切なのはどれか。１つ選べ。",
     "choices": [
@@ -4637,7 +4637,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 145,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 145",
     "question_text": "医薬品の研究開発から製造販売に至る業務のうち、原則として薬剤師が行うこととされているのはどれか。１つ選べ。",
     "choices": [
@@ -4671,7 +4671,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 146,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 146",
     "question_text": "医薬品の製造販売業及び製造業に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4705,7 +4705,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 147,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 147",
     "question_text": "医薬品の添付文書等（医薬品に添付する文書又はその容器若しくは被包）に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4739,7 +4739,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 148,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 148",
     "question_text": "日本薬局方に関する記述のうち、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -4773,7 +4773,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 149,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 149",
     "question_text": "毒物及び劇物取締法に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4807,7 +4807,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 150,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 150",
     "question_text": "医療保険制度上、後発医薬品の使用促進のために、これまで国が実施してきた政策として、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -5031,7 +5031,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 156,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 156,157",
     "question_text": "問156〜157\n40歳女性。3年前に多発性関節炎を認め外来受診したところ、関節リウマチと診断された。メトトレキサートとプレドニゾロンによる治療が開始され、徐々に増量することにより症状の改善を認めていたが、最近、関節痛が再燃した。\n\n問156（薬理）\n関節リウマチ治療薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\n問157（病態・薬物治療）\n再燃時に、値が上昇していると考えられる検査項目はどれか。２つ選べ。",
     "choices": [
@@ -5085,7 +5085,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 157,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 156−157   ₄₀ 歳女性。 ₃ 年前に多発性関節炎を認め外来受診したところ、関節リウマ\nチと診断された。メトトレキサートとプレドニゾロンによる治療が開始され、徐々\nに増量することにより症状の改善を認めていたが、最近、関節痛が再燃した。\n問 157（病態・薬物治療）\n再燃時に、値が上昇していると考えられる検査項目はどれか。2つ選べ。\n1   CEA\n2   CPK\n3   KL︲₆\n4   MMP₃\n5   白血球数\n一般問題（薬学理論問題）【薬理】",
     "choices": [
@@ -5119,7 +5119,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 158,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 158",
     "question_text": "骨粗しょう症治療薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\nB活性化受容体リガンド）を標的とするヒト型IgG2モノクローナル抗体で、RANKLによる破骨細胞の形成を抑制する。",
     "choices": [
@@ -5153,7 +5153,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 159,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 159",
     "question_text": "心不全治療薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\n, K＋−ATPaseを阻害して、心筋細胞内Ca2＋濃度を上昇させて陽性変力作用を示す。\n\n感受性を増大させるとともに、ホスホジエステラーゼⅢを阻害して、強心作用を示す。",
     "choices": [
@@ -5187,7 +5187,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 160,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 160,161",
     "question_text": "問160〜161\n53歳男性。身長170 cm、体重90 kg。喫煙歴あり（15本/日）、機会飲酒。数年前から健康診断で血圧が高いことを指摘され、本人も自覚していたが放置していた。最近、軽度のめまい感が頻発するので受診した。来院時の血圧は150/95 mmHg、心電図検査の胸部誘導でSV1＋RV5＝4.0 mV。胸部X線検査で心胸郭比（CTR）56％。血漿レニン活性、血漿アルドステロン濃度、血中カテコールアミン濃度はいずれも正常、HbA1c5.8％（NGSP値）、TG（トリグリセリド）140 mg/dL、LDL−C160 mg/dL、HDL−C40 mg/dL、尿タンパク（－）であった。2回目の受診時にシルニジピンとフルバスタチンによる治療が開始された。\n\n問160（薬理）\nシルニジピンに関する記述として正しいのはどれか。２つ選べ。\n\n受容体を遮断して、血圧を低下させる。\nチャネルを遮断して、交感神経終末からのノルアドレナリンの遊離を抑制する。\nチャネルを遮断して、血管平滑筋を弛緩させる。\n受容体を遮断して、末梢血管抵抗を低下させる。\n受容体を遮断して、レニン分泌を抑制する。\n\n問161（病態・薬物治療）\nこの患者の病態に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5241,7 +5241,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 161,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 160−161 ₅₃ 歳男性。身長 ₁₇₀ cm、体重 ₉₀ kg。喫煙歴あり（₁₅ 本 / 日）\n、機会飲酒。\n数年前から健康診断で血圧が高いことを指摘され、本人も自覚していたが放置して\nい た。 最 近、 軽 度 の め ま い 感 が 頻 発 す る の で 受 診 し た。 来 院 時 の 血 圧 は\n₁₅₀/₉₅ mmHg、心電図検査の胸部誘導で SV1 + RV5 = ₄ . ₀ mV。胸部 X 線検査で\n心胸郭比（CTR）₅₆％。血漿レニン活性、血漿アルドステロン濃度、血中カテ\nコールアミン濃度はいずれも正常、HbA₁c ₅ . ₈％（NGSP 値）、TG（トリグリセリ\nド ）₁₄₀ mg/dL、LDL︲C ₁₆₀ mg/dL、HDL︲C ₄₀ mg/dL、 尿 タ ン パ ク（-） で\nあった。 ₂ 回目の受診時にシルニジピンとフルバスタチンによる治療が開始され\nた。\n問 161（病態・薬物治療）\nこの患者の病態に関する記述のうち、正しいのはどれか。2つ選べ。\n1   家庭では、血圧が正常である。\n2   脂質異常症による二次性高血圧である。\n3   病態の改善には肥満度を下げることが推奨される。\n4   病態の改善にはカリウム制限を厳密に行う必要がある。\n5   心肥大がある。\n一般問題（薬学理論問題）【薬理】",
     "choices": [],
@@ -5255,7 +5255,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 162,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 162",
     "question_text": "抗血栓薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を選択的かつ可逆的に遮断する。",
     "choices": [
@@ -5289,7 +5289,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 163,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 163",
     "question_text": "呼吸器系に作用する薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を刺激することで、気管支平滑筋を弛緩させる。",
     "choices": [
@@ -5323,7 +5323,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 164,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 164",
     "question_text": "消化器系に作用する薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\n−メチルトランスフェラーゼ（COMT）を阻害して、Oddi括約筋を弛緩させ、胆汁分泌を抑制する。",
     "choices": [
@@ -5357,7 +5357,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 165,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 165",
     "question_text": "高尿酸血症及び痛風の治療に用いられる薬物に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5391,7 +5391,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 166,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 166,167",
     "question_text": "問166〜167\n35歳男性。身長173 cm、体重85 kg。父親が糖尿病。既往歴なし。喫煙歴なし。機会飲酒。会社事務職で日頃より運動不足であり、毎日1 L以上の甘い清涼飲料水を飲用していた。この1年間で体重が3 kg増加したが、ここ数ヶ月は体重の減少を自覚している。7日前より全身倦怠感、口渇及び多尿を認めたため外来受診した。受診時の意識は清明であり、血糖値480 mg/dL、HbA1c 11.0％（NGSP値）、尿糖（4＋）、尿蛋白（－）、尿中ケトン体（3＋）であった。\n\n問166（薬理）\n血糖降下作用を有する薬物の作用機序に関する記述のうち、正しいのはどれか。２つ選べ。\n\n問167（病態・薬物治療）\nこの患者で、血中濃度が顕著に上昇していると考えられるのはどれか。２つ選べ。",
     "choices": [
@@ -5445,7 +5445,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 167,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 166−167   ₃₅ 歳男性。身長 ₁₇₃ cm、体重 ₈₅ kg。父親が糖尿病。既往歴なし。喫煙歴\nなし。機会飲酒。会社事務職で日頃より運動不足であり、毎日 ₁ L 以上の甘い清涼\n飲料水を飲用していた。この ₁ 年間で体重が ₃ kg 増加したが、ここ数ヶ月は体重\nの減少を自覚している。 ₇ 日前より全身倦怠感、口渇及び多尿を認めたため外来受\n診した。受診時の意識は清明であり、血糖値 ₄₈₀ mg/dL、HbA₁c ₁₁ . ₀％（NGSP\n値）\n、尿糖（ ₄+）、尿蛋白（-）、尿中ケトン体（ ₃+）であった。\n問 167（病態・薬物治療）\nこの患者で、血中濃度が顕著に上昇していると考えられるのはどれか。2つ選\nべ。\n1    ₃︲ヒドロキシ酪酸\n2   アセト酢酸\n3   c︲アミノ酪酸\n4   水酸化物イオン\n5   ナトリウムイオン\n一般問題（薬学理論問題）【薬理】",
     "choices": [
@@ -5479,7 +5479,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 168,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 168",
     "question_text": "内分泌系に作用する薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を遮断することで、下垂体前葉からのプロラクチンの分泌を抑制する。\n\n受容体を遮断することで、腎集合管における水の再吸収を阻害する。",
     "choices": [
@@ -5513,7 +5513,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 169,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 169",
     "question_text": "抗ウイルス薬の作用機序に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5581,7 +5581,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 171,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 171",
     "question_text": "薬物の胎児への移行に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5615,7 +5615,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 172,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 172",
     "question_text": "問 172   以下の薬物のうち、ヘム鉄に配位することによって、シトクロム P₄₅₀ の活性\nを最も強く阻害するのはどれか。1つ選べ。\n1                                                                                 2\nO                                                 NH2\nN       CH3                                     N\nN\nN\nO         N\nN             H                                                   HO\nO                                                                              O\nO\nH HO\nO\nH                 H\nCl                   Cl                                                                         OH H\n3                                                       4\nHO                                             OH        O           OH        O           O\nOH\nH             OH                                                                             NH2\nH\nNH2       H\nOH\nHO                                                            H           H\nH2N                                                             HO        CH3           H       N       CH3\nH       HO\nH3C\nH           OH\nH                         O\nH                                  5\nHO\nCH3\nH2N O H                                    H3C\nN                  O                    H\nH\nOH                                               N                     N\nH\nH\nH\nNH2                                F                                 CO2H\nNH2\nO",
     "choices": [],
@@ -5629,7 +5629,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 173,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 173",
     "question_text": "体内動態が線形性を示す薬物Aは、肝代謝と腎排泄によって体内から消失し、正常時における腎クリアランスは全身クリアランスの60％である。また、腎疾患時に薬物Aの肝クリアランスは変化しないが、腎クリアランスは糸球体ろ過速度（GFR）に比例して変化する。薬物Aを投与中の患者において、GFRが正常時の50%に低下したとする。薬物Aの血中濃度時間曲線下面積（AUC）を腎機能正常時と同じにするには、投与量を腎機能正常時の何％に変更すればよいか。１つ選べ。",
     "choices": [
@@ -5663,7 +5663,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 174,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 174",
     "question_text": "問 174       肝代謝のみで消失する薬物 ₄₀₀ mg をヒトに単回静脈内投与した際、図に示す\n血中濃度推移が得られた。この薬物の体内動態は線形性を示し、経口投与時に門脈\n血中に移行する割合は ₁₀₀％である。この薬物を反復経口投与し、定常状態での平\n均血中薬物濃度を ₃ . ₅ ng/mL としたい。この薬物の肝クリアランス（L/h）及び ₁\n日あたりの投与量（mg）の組合せとして最も適切なのはどれか。1つ選べ。な\nお、肝血流速度は ₈₀ L/h、ln ₂ = ₀ . ₆₉₃ とする。\n₁₀\n₉\n₈\n₇\n血中薬物濃度（ ng/mL）\n₆\n₅\n₄\n₃\n₂\n₁\n₀   ₁   ₂   ₃    ₄   ₅     ₆   ₇   ₈   ₉   ₁₀\n時間（h）\n肝クリアランス（L/h）                              ₁ 日あたりの投与量（mg）\n1                         ₅                                 ₅₀₀\n2                         ₅                                 ₉₅₀\n3                         ₅                             ₁ , ₁₀₀\n4                         ₁₀                                ₅₀₀\n5                         ₁₀                                ₉₅₀\n6                         ₁₀                            ₁ , ₁₀₀",
     "choices": [
@@ -5701,7 +5701,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 175,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 175",
     "question_text": "問 175   肝代謝のみで消失する薬物について、血漿タンパク結合に飽和が認められ、投\n与量の増加に伴い血中タンパク非結合形分率（ fu）が増加していた。この薬物を経\n口投与したとき、投与量と血中濃度時間曲線下面積（AUC：実線）、及び投与量と\n非結合形薬物の AUC（ fu # AUC：点線）の関係として、適切なのはどれか。1\nつ選べ。なお、肝血流速度、この薬物の吸収率及び肝固有クリアランスは投与量が\n増加してもいずれも一定であり、肝での消失は well︲stirred model に基づくものと\nする。\n1                     2                          3\nAUC あるいは              AUC あるいは                   AUC あるいは\nfu # AUC              fu # AUC                   fu # AUC\n投与量                        投与量                   投与量\n4                     5\nAUC あるいは              AUC あるいは\nfu # AUC              fu # AUC\n投与量                        投与量",
     "choices": [],
@@ -5715,7 +5715,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 176,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 176",
     "question_text": "抗菌薬の投与計画に関する記述のうち、正しいのはどれか。２つ選べ。\n\nmax）をMICで除したCmax/MICが用いられる。",
     "choices": [
@@ -5749,7 +5749,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 177,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 177",
     "question_text": "表に示す特性を有する2種類の水溶性薬物の結晶性粉体A、Bがある。以下の記述のうち、正しいのはどれか。２つ選べ。ただし、粉体A、Bはいずれも結晶粒子内に空隙はなく、粒子密度と真密度は等しいものとする。また、粉体AとBの相互作用はないものとする。",
     "choices": [
@@ -5783,7 +5783,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 178,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 178",
     "question_text": "図は結晶多形をもつ薬物Aについて15〜35℃におけるリン酸緩衝液中の溶解度（S ）の対数値を絶対温度（T ）の逆数に対してプロットしたものである。この図に関する記述のうち、正しいのはどれか。２つ選べ。ただし、Aの溶解熱は測定温度範囲において一定とする。\n\nrは、Ⅰ形結晶の分解開始温度である。\n\nr以上の温度になると、Ⅰ形結晶の方がⅡ形結晶より高い溶解度を示すことが予測される。",
     "choices": [
@@ -5817,7 +5817,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 179,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 179",
     "question_text": "液状の物質AとBについて、せん断応力とせん断速度の関係を調べたところ、図の結果が得られた。これらの図に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5851,7 +5851,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 180,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 180",
     "question_text": "乳剤及び懸濁剤に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5885,7 +5885,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 181,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 181",
     "question_text": "表は、ジアゼパム注射剤の組成と性状を示す。\n\n本剤に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5919,7 +5919,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 182,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 182",
     "question_text": "単位操作と製剤機械に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5953,7 +5953,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 183,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 183",
     "question_text": "単一有効成分含量の表示が50 mgの素錠Aについて日本薬局方製剤均一性試験法の質量偏差試験を実施した。Aの30錠をとり、初めの試料10個について個々の質量を精密に測定し、含量を推定したところ表のようになった。本試験の結果について正しい判定はどれか。１つ選べ。なお、表示量に対する％で表した製造時における個々の製剤中の目標含量を100％としたときの判定値の計算式は以下のとおりであり、判定値の最大許容限度値は15％である。",
     "choices": [
@@ -5991,7 +5991,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 184,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 184",
     "question_text": "我が国で実用化されている薬物送達システム（DDS）に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6059,7 +6059,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 186,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 186",
     "question_text": "75歳男性。2ヶ月前より顔面蒼白を家族に指摘されていた。最近、手足のしびれと味覚異常を自覚し、倦怠感が増大したため受診した。既往歴として15年前に胃の全摘術を受けている。\n\n血液検査所見：\n赤血球数 240×104/µL、Hb 8.1 g/dL、Ht 27.0％、MCV 113  fL、MCH 34 pg、白血球数 4,200 /µL、血小板数 18.5×104/µL\n\nこの患者の治療に適している薬剤はどれか。１つ選べ。",
     "choices": [
@@ -6093,7 +6093,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 187,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 187",
     "question_text": "慢性腎臓病の病態と治療に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6127,7 +6127,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 188,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 188",
     "question_text": "高尿酸血症及び痛風の病態と治療に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6161,7 +6161,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 189,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 189",
     "question_text": "21歳男子大学生。親戚の4歳児の面倒をみた2週間後に頭痛と発熱を認めたため、市販のかぜ薬を服用した。翌日、市販薬で一時的に解熱したが、再び発熱し、両側の頬から耳の後ろにかけて腫れ、腫脹部分に痛みを感じたため受診し、流行性耳下腺炎と診断された。この患者の病態及び薬物治療に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6195,7 +6195,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 190,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 190",
     "question_text": "膵臓がんに関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6229,7 +6229,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 191,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 191",
     "question_text": "漢方薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6263,7 +6263,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 192,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 192",
     "question_text": "遺伝子治療に関する記述のうち、正しいのはどれか。２つ選べ。\n\n遺伝子治療は、遺伝子を直接患者に投与して、標的細胞に導入する方法である。",
     "choices": [
@@ -6297,7 +6297,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 193,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 193",
     "question_text": "問 193    臨床研究における検討事項と使用する統計手法の組合せとして適切なのはどれ\nか。2つ選べ。\n検討事項                  統計手法\n薬剤投与群の男女比と非投与群の男女比に差があるかどうかを      Mann︲Whitney\n検討する                              の U 検定\n2   降圧薬を投与する前後の血圧に差があるかどうかを検討する       重回帰分析\n血圧値の低下に対して、年齢、性別、食塩摂取量などの複数の\n3                                     カイ二乗検定\n因子の影響度合いを検討する（時間的要素を考慮しない）\n副作用の有無に対して、治療法や背景などの複数の因子の影響      ロジスティック\n度合いを検討する（時間的要素を考慮しない）             回帰分析\n抗がん剤投与群の生存率曲線と手術群の生存率曲線に差がある\n5                                     ログランク検定\nかどうかを検討する",
     "choices": [],
@@ -6311,7 +6311,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 194,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 194",
     "question_text": "ある疾患の発症予防薬Aの評価を行うため臨床試験の文献を収集したところ、下記の情報を得た。この試験に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6345,7 +6345,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "year": 106,
     "question_number": 195,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 195",
     "question_text": "遺伝学的検査・診断に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [

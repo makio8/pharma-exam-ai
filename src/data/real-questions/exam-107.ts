@@ -2556,7 +2556,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 81,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "実務",
     "category": "必須問題 - 問 81",
     "question_text": "「インフォームド・コンセント」に関する記述のうち、正しいのはどれか。1つ選べ。",
     "choices": [
@@ -2590,7 +2590,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 82,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "実務",
     "category": "必須問題 - 問 82",
     "question_text": "以下の説明文に該当するのはどれか。1つ選べ。\n\n厚生労働省において、2025年を目途に、高齢者の尊厳の保持と自立生活の支援の目的のもとで、可能な限り住み慣れた地域で、自分らしい暮らしを人生の最期まで続けることができるような仕組みを構築することを推進している。",
     "choices": [
@@ -2726,7 +2726,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 86,
     "section": "必須",
-    "subject": "衛生",
+    "subject": "実務",
     "category": "必須問題 - 問 86",
     "question_text": "風しんの流行の原因となる主要な感染経路はどれか。1つ選べ。",
     "choices": [
@@ -2828,7 +2828,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 89,
     "section": "必須",
-    "subject": "衛生",
+    "subject": "実務",
     "category": "必須問題 - 問 89",
     "question_text": "疾病の一次予防に該当するのはどれか。1つ選べ。",
     "choices": [
@@ -2862,7 +2862,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 90,
     "section": "必須",
-    "subject": "衛生",
+    "subject": "実務",
     "category": "必須問題 - 問 90",
     "question_text": "直近10年間の世界アンチドーピング規定において、禁止物質として指定されていない薬物はどれか。1つ選べ。",
     "choices": [
@@ -3236,7 +3236,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 101,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 101",
     "question_text": "D−リボースの構造を正しく表しているFischer投影式はどれか。１つ選べ。",
     "choices": [],
@@ -3442,7 +3442,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 110,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 110",
     "question_text": "図は、洞房結節細胞の自発性活動電位に対する自律神経の影響を示したものである。以下の記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3782,7 +3782,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 120,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 120",
     "question_text": "下表は、2020年10月1日現在の年齢区分別人口割合を示したものである。この表に基づく人口指標に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4170,7 +4170,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 133,
     "section": "理論",
-    "subject": "物理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 133,134,135",
     "question_text": "自宅の寝室で倒れている男性が救急搬送された。簡易検査の結果をもとに、直ちに対応する解毒薬が投与された。一方、寝室にはコップの中に大量の錠剤が沈んだ飲料水が残されていた。\n\n問133（物理・化学・生物）\n錠剤の成分が何かを調べるため、コップの中に残された薬剤に適切な処理をしたのち、1H NMRスペクトル（CDCl3溶媒中）を測定した。得られたスペクトルをデータベースと照合したところ、図に示したチャートとシグナル及び積分値が一致した。錠剤の成分として推定される医薬品Aの構造はどれか。１つ選べ。ただし、図はTMSを基準（0 ppm）とし、シグナルを積分曲線と共に示したもので、×は重溶媒中に微量に含まれるCHCl3のシグナルである。\n\n問134（法規・制度・倫理）\n法令上、この医薬品Aが該当するのはどれか。１つ選べ。\n\n問135（衛生）\nこの患者に投与された解毒薬として、適切なのはどれか。１つ選べ。",
     "choices": [
@@ -4205,7 +4205,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 134,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "衛生",
     "category": "",
     "question_text": "問 133−135            自宅の寝室で倒れている男性が救急搬送された。簡易検査の結果をもと\nに、直ちに対応する解毒薬が投与された。一方、寝室にはコップの中に大量の錠剤\nが沈んだ飲料水が残されていた。\n問 134（法規・制度・倫理）\n法令上、この医薬品Ａが該当するのはどれか。1つ選べ。\n1     麻薬\n2     向精神薬\n3     覚醒剤\n4     指定薬物\n5     要指導医薬品",
     "choices": [],
@@ -4403,7 +4403,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 141,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 141",
     "question_text": "室内環境と健康に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4437,7 +4437,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 142,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 142",
     "question_text": "薬剤師法に規定されている薬剤師の業務に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4471,7 +4471,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 143,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 143",
     "question_text": "医薬品の開発における臨床試験に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -4505,7 +4505,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 144,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 144",
     "question_text": "医薬品リスク管理計画に関する説明のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4539,7 +4539,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 145,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 145",
     "question_text": "次の分類のうち、コンタクトレンズに該当するのはどれか。１つ選べ。",
     "choices": [
@@ -4573,7 +4573,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 146,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 146",
     "question_text": "医薬品である覚醒剤原料について、薬局における法令に基づく取扱いとして、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4607,7 +4607,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 147,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 147",
     "question_text": "個人情報の保護に関する法律（個人情報保護法）に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4641,7 +4641,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 148,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 148",
     "question_text": "医療法に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4675,7 +4675,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 149,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 149",
     "question_text": "介護保険制度に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4709,7 +4709,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 150,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 150",
     "question_text": "新規感染症予防のために新しいワクチンが開発された。臨床試験ではワクチン接種群では2万人のうち、10人が発症、プラセボ接種群では2万人のうち200人が発症し、ワクチンの有効率は95％であった。この新しいワクチンの接種費用は1人あたり1万円で、その他の費用は考慮しない場合、このワクチンの増分費用効果比（1人の発症を防ぐための費用）として、最も近い値はどれか。１つ選べ。",
     "choices": [
@@ -4913,7 +4913,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 156,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 156,157",
     "question_text": "22 歳女性。近医を受診し、以下の経過を訴えたところ、精神科を紹介された。 \n\n「仕事が多忙で残業が続いていたある日、通勤時に電車内で突然動悸が始まり、 呼吸困難となり、今にも心臓が止まりそうになり、やっとの思いで次の駅で降りて救急車で病院へ運ばれたが、病院に着く頃には症状はだいぶ落ちついていた。念のため、診察を受けたが身体的には異常はなく、心電図や血液検査でも異常は認められなかった。1週間後、外出した時に、乗っていた電車の中で同じような動悸が始まり、一緒にいた友人に手を握ってもらって何とか我慢して家までたどり着いた。 それ以来、発作が怖くて電車に乗れなくなった。電車通勤はやめて親に送り迎えをしてもらい、どうにか仕事には行くことができている。」\n問 156（病態・薬物治療） \n\nこの疾患の病態と治療に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -4947,7 +4947,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 157,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 156−157   ₂₂ 歳女性。近医を受診し、以下の経過を訴えたところ、精神科を紹介され\nた。\n「仕事が多忙で残業が続いていたある日、通勤時に電車内で突然動悸が始まり、\n呼吸困難となり、今にも心臓が止まりそうになり、やっとの思いで次の駅で降りて\n救急車で病院へ運ばれたが、病院に着く頃には症状はだいぶ落ちついていた。念の\nため、診察を受けたが身体的には異常はなく、心電図や血液検査でも異常は認めら\nれなかった。 ₁ 週間後、外出した時に、乗っていた電車の中で同じような動悸が始\nまり、一緒にいた友人に手を握ってもらって何とか我慢して家までたどり着いた。\nそれ以来、発作が怖くて電車に乗れなくなった。電車通勤はやめて親に送り迎えを\nしてもらい、どうにか仕事には行くことができている。」\n4083_03_1DAY3_M.indd 5                                         2022/01/13 10:25\n問 157（薬理）\nこの患者の治療に用いられる可能性のある薬物に関する記述のうち、正しいのは\nどれか。2つ選べ。\n1     ロラゼパムは、c︲アミノ酪酸 GABAA 受容体複合体のベンゾジアゼピン結合部\n位に結合して、抗不安作用を示す。\n2     セルトラリンは、アドレナリン b1 受容体を遮断して、発作時の自律神経症状\nを改善する。\n3     エチゾラムは、中枢のヒスタミン H1 受容体を選択的に遮断して、静穏作用を\n示す。\n4     アルプラゾラムは、セロトニン ₅︲HT1A 受容体を刺激して、不安、焦燥、睡眠\n障害を改善する。\n5     パロキセチンは、セロトニンの再取り込みを選択的に阻害して、抑うつ状態を\n改善する。\n4083_03_1DAY3_M.indd 6                                              2022/01/13 10:25\n一般問題（薬学理論問題）【薬理】",
     "choices": [],
@@ -4961,7 +4961,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 158,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 158",
     "question_text": "アレルギー性疾患の治療に用いられる薬物に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4995,7 +4995,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 159,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 159,160",
     "question_text": "60歳男性。基礎疾患を指摘されたことはない。1週間前から1日に数回めまいを感じるようになった。今朝、強いめまいとふらつきを覚え、救急外来を受診した。来院時の血圧は118/84 mmHg、脈拍数32回/分であった。心電図ではP波とQRS波が全く無関係に出現し、PP間隔とRR間隔がそれぞれ一定で、PR間隔は不規則であった。また、P波よりQRS波の出現頻度が少なかった。\n問159（病態・薬物治療）\n\n　この患者の初期治療に適切な薬物はどれか。2つ選べ。",
     "choices": [
@@ -5029,7 +5029,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 160,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 159−160      ₆₀ 歳男性。基礎疾患を指摘されたことはない。 ₁ 週間前から ₁ 日に数回め\nまいを感じるようになった。今朝、強いめまいとふらつきを覚え、救急外来を受診\nした。来院時の血圧は ₁₁₈/₈₄ mmHg、脈拍数 ₃₂ 回/分であった。心電図では P 波\nと QRS 波が全く無関係に出現し、PP 間隔と RR 間隔がそれぞれ一定で、PR 間隔\nは不規則であった。また、P 波より QRS 波の出現頻度が少なかった。\n問 160（薬理）\n抗不整脈薬に関する記述のうち、正しいのはどれか。2つ選べ。\n1     ニフェカラントは、K チャネルを遮断して、心筋の活動電位の持続時間を延\n+\n長する。\n2     ピルシカイニドは、アドレナリン b1 受容体を遮断して、不応期を延長する。\n3     ベラパミルは、Ca        チャネルを遮断して、房室伝導速度を低下させる。\n2+\n4     プロカインアミドは、Na チャネル及び K チャネルを遮断して、心電図の\n+       +\nQT 間隔を短縮する。\n5     ジルチアゼムは、Na チャネルを遮断して、心筋の活動電位の立ち上がり（第\n+\n₀ 相）を抑制する。\n4083_03_1DAY3_M.indd 8                                                2022/01/13 10:25\n一般問題（薬学理論問題）【薬理】",
     "choices": [],
@@ -5043,7 +5043,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 161,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 161",
     "question_text": "泌尿器に作用する薬物に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5077,7 +5077,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 162,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 162",
     "question_text": "胃・十二指腸潰瘍治療薬に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5111,7 +5111,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 163,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 163",
     "question_text": "2型糖尿病の治療に使用される薬物に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5145,7 +5145,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 164,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 164",
     "question_text": "性ホルモン関連薬に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5179,7 +5179,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 165,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 165,166",
     "question_text": "60歳男性。仕事が忙しく睡眠不足が続いていた。ある日、右側胸部にかゆみを伴った皮疹が現れ、強い痛みも生じたため受診し、帯状疱疹と診断された。\n問165（病態・薬物治療）\n\nこの患者に関する記述のうち、適切なのはどれか。2つ選べ。",
     "choices": [
@@ -5213,7 +5213,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 166,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 165−166      ₆₀ 歳男性。仕事が忙しく睡眠不足が続いていた。ある日、右側胸部にかゆ\nみを伴った皮疹が現れ、強い痛みも生じたため受診し、帯状疱疹と診断された。\n問 166（薬理）\n抗ウイルス薬に関する記述のうち、正しいのはどれか。2つ選べ。\n1     アメナメビルは、帯状疱疹ウイルスのヘリカーゼ・プライマーゼ複合体の\nDNA 依存性 ATPase 活性を阻害して、mRNA の合成を阻害する。\n2     ガンシクロビルは、サイトメガロウイルスのチミジンキナーゼにより一リン酸\n化された後、宿主細胞キナーゼで三リン酸化体まで変換されて、ウイルスの\nRNA ポリメラーゼを阻害する。\n3     オセルタミビルは、インフルエンザウイルスが宿主細胞から遊離する際に働く\nノイラミニダーゼを阻害して、インフルエンザウイルスの増殖を抑制する。\n4     ホスカルネットは、サイトメガロウイルスの RNA ポリメラーゼのピロリン酸\n結合部位に結合して、RNA の合成を阻害する。\n5     アシクロビルは、三リン酸化体に変換されて、帯状疱疹ウイルスに感染した宿\n主細胞内でデオキシグアノシン三リン酸（dGTP）と競合して、ウイルスの DNA\nポリメラーゼを阻害する。\n4083_03_1DAY3_M.indd 11                                           2022/01/13 10:25\n一般問題（薬学理論問題）【薬理】",
     "choices": [],
@@ -5227,7 +5227,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 167,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 167",
     "question_text": "急性白血病治療薬に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5261,7 +5261,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 168,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 168",
     "question_text": "図のように薬物Aは酵素アに作用する。薬物A及び酵素アに関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5343,7 +5343,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 171,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 171",
     "question_text": "プラバスタチンの体内動態に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5377,7 +5377,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 172,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 172",
     "question_text": "細切した肝臓をホモジナイザーで破砕し遠心分離を繰り返すと細胞内小器官を大まかに分けることができる。主に薬物代謝に関わるシトクロムP450が存在する画分として、最も適切なのはどれか。１つ選べ。",
     "choices": [
@@ -5411,7 +5411,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 173,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 173",
     "question_text": "薬物の腸肝循環に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5445,7 +5445,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 174,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 174",
     "question_text": "薬物の血中濃度（C）の経時変化が下図のようになったため、体循環コンパートメントと末梢コンパートメントからなる線形2–コンパートメントモデルで解析し、次の式の形で表した。\nただし、A、B、α、βは定数、tは時間であり、投与量をDとする。このときの薬物動態パラメータに関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5479,7 +5479,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 175,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 175",
     "question_text": "フェニトイン100mg錠を1回1錠、1日3回服用するところ、誤って1回1錠、1日2回しか服用していなかった。その時の患者のフェニトインの血中濃度は4μg/mLであった。この患者が処方どおりに1日3回服用した場合のフェニトインの血中濃度（μg/mL）として、最も近い値はどれか。1つ選べ。ただし、フェニトインの血中濃度は定常状態における平均値であるものとし、フェニトインの体内からの消失はMichaelis–Menten式で表され、Michaelis定数を4μg/mL、バイオアベイラビリティを100%とする。",
     "choices": [
@@ -5513,7 +5513,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 176,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 176",
     "question_text": "図は、well–stirredmodelに基づいた肝臓からの薬物消失モでルを示したものである。このモデルに関する記述のうち、正しいのはどれか。2つ選べ。ただし、CLintは肝固有クリアランス、fuは血中タンパク非結合形分率、Cinは肝臓に流入する部位における血中薬物濃度、Coutは肝臓から流出する部位における血中薬物濃度、Qhは肝血流量とする。",
     "choices": [
@@ -5547,7 +5547,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 177,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 177",
     "question_text": "粉体の性質に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5581,7 +5581,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 178,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 178",
     "question_text": "固体薬物の溶解速度を回転円盤法を用いて温度一定の条件で測定したところ、図のような結果となった。試験液中の薬物濃度（C）が薬物の溶解度（Cs）の半分に達するまでの時間（min）に最も近いのはどれか。1つ選べ。ただし、実験開始時の試験液中の薬物濃度は0、円盤の有効表面積（1cm2）は試験中に変化せず、溶解はシンク条件において拡散律速で進行するものとする。なお、ln2=0.69とする。",
     "choices": [
@@ -5615,7 +5615,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 179,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 179",
     "question_text": "図の装置を用いて、懸濁剤に分散している球状の粉末粒子の粒子径を測定した。本測定に関する記述のうち、正しいのはどれか。2つ選べ。\n\nただし、分散媒、分散粒子の密度はそれぞれ1.0g/cm3、2.0g/cm3とする。",
     "choices": [
@@ -5649,7 +5649,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 180,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 180",
     "question_text": "図は、pH 7.4、37℃の緩衝液中におけるある弱酸性薬物の加水分解に対するシクロデキストリン添加の影響を示したものである。本実験条件において、この薬物とシクロデキストリンはモル比1：1で複合体を形成する。\nここで、kfは薬物自体の分解速度定数（2.26×10-3 h-1)、kobs (h-1)は見かけの薬物分解速度定数(h-1)、K1：1は複合体の安定度定数((mol/L) -1)、kcは複合体中の薬物分解速度定数(h-1)、[CD] tはシクロデキストリンの総濃度(mol/L)としたとき、次のような関係式が成立する。以下の記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5683,7 +5683,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 181,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 181",
     "question_text": "皮膚に使用する製剤に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5717,7 +5717,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 182,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 182",
     "question_text": "フルチカゾンプロピオン酸エステルを有効成分とする懸濁性点鼻液に含まれる添加物に関する記述のうち、正しいのはどれか。2つ選べ。\n\n〔添加物〕カルボキシビニルポリマー、L-アルギニン、ベンザルコニウム塩化物、エデト酸ナトリウム水和物、ポリソルベート80、濃グリセリン、塩化ナトリウム、水酸化ナトリウム、精製水",
     "choices": [
@@ -5751,7 +5751,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 183,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 183",
     "question_text": "薬物とターゲティング技術に関する記述として、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5853,7 +5853,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 186,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 186",
     "question_text": "貧血の病態に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5887,7 +5887,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 187,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 187",
     "question_text": "ネフローゼ症候群で必ずみられるのはどれか。2つ選べ。",
     "choices": [
@@ -5921,7 +5921,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 188,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 188",
     "question_text": "42 歳女性。最近、疲れやすいと感じることが多くなり、また徐々に食欲が低下し、何をするにも億劫でやる気が起こらなくなった。月経周期が乱れたため受診し、検査の結果、橋本病と診断された。この患者の状態として、考えられるのはどれか。2つ選べ。",
     "choices": [
@@ -5955,7 +5955,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 189,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 189",
     "question_text": "緑内障に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -5989,7 +5989,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 190,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 190",
     "question_text": "メニエール病の病態と治療に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -6023,7 +6023,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 191,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 191",
     "question_text": "B型インフルエンザに続発するライ（Reye）症候群に関する記述として、正しいのはどれか。1つ選べ。",
     "choices": [
@@ -6057,7 +6057,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 192,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 192",
     "question_text": "漢方薬に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -6091,7 +6091,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 193,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 193",
     "question_text": "幹細胞に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -6125,7 +6125,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 194,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 194",
     "question_text": "EBMの実践に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
@@ -6159,7 +6159,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
     "year": 107,
     "question_number": 195,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 195",
     "question_text": "試験期間が12ヶ月の臨床試験に参加した5名の被験者（A〜E）の経過が以下のようになった。\n\nAが2ヶ月後に死亡\nBが8ヶ月後に死亡\nCが12ヶ月後の試験終了時まで生存\nDが4ヶ月後に追跡不能となり打ち切り\nEが6ヶ月後に追跡不能となり打ち切り\n\nカプランマイヤー法を用いて表した生存曲線として、正しいのはどれか。１つ選べ。",
     "choices": [],

@@ -2595,7 +2595,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 80,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 80",
     "question_text": "コミュニケーションにおける言語メッセージはどれか。１つ選べ。",
     "choices": [
@@ -2663,7 +2663,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 82,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "実務",
     "category": "必須問題 - 問 82",
     "question_text": "臨床試験を遂行するに当たり、公開してはいけないのはどれか。１つ選べ。",
     "choices": [
@@ -2799,7 +2799,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 86,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "実務",
     "category": "必須問題 - 問 86",
     "question_text": "Common Terminology Criteria for Adverse Events（CTCAE）は、米国National Cancer Institute（NCI） が主導し世界共通で使用されることを意図して作成された  　A　  に関しての共通用語規準である。Aに入る語句として正しいのはどれか。１つ選べ。",
     "choices": [
@@ -2867,7 +2867,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 88,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "実務",
     "category": "必須問題 - 問 88",
     "question_text": "廃棄時に麻薬取締員又は保健所職員の立会いが必要なのはどれか。１つ選べ。",
     "choices": [
@@ -2935,7 +2935,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 90,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "実務",
     "category": "必須問題 - 問 90",
     "question_text": "副作用として特にCK（クレアチンキナーゼ）上昇に注意するのはどれか。１つ選べ。",
     "choices": [
@@ -3415,7 +3415,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 106,
     "section": "理論",
-    "subject": "物理",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 106",
     "question_text": "図は桂皮酸イソプロピルエステル［C6H5CH=CHCOOCH(CH3)2］の1H−NMRスペクトル［300 MHz、CDCl3、基準物質はテトラメチルシラン(TMS)］である。このスペクトルに関する記述のうち、正しいのはどれか。１つ選べ。なお、7.26 ppmのシグナルはCDCl3に含まれる微量のCHCl3に起因するものである。\n\n配置である。",
     "choices": [
@@ -3497,7 +3497,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 109,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 109",
     "question_text": "図はヒトにおける3種類の筋組織の模式図である。これらの筋組織に関する記述のうち、正しいのはどれか。２つ選べ。\n\nとカルモジュリンとの結合により起こる。\nが収縮に関与する。",
     "choices": [
@@ -3531,7 +3531,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 110,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 110",
     "question_text": "胃に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3783,7 +3783,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 118,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 118",
     "question_text": "A〜Eの構造をもつビタミンに関する記述のうち、正しいのはどれか。２つ選べ。\n\nによるメチル基転移を介して、ホモシステインからのメチオニンの生合成に関与する。\n\n−グルタミル化に関与する。",
     "choices": [
@@ -3817,7 +3817,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 119,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 119",
     "question_text": "食品添加物A〜Eに関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3851,7 +3851,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 120,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 120",
     "question_text": "自然毒による食中毒に関する記述のうち、正しいのはどれか。２つ選べ。\n\nチャネルを開口することにより神経症状を引き起こす。",
     "choices": [
@@ -4521,7 +4521,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 141,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 141",
     "question_text": "治験におけるインフォームド・コンセントに関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4555,7 +4555,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 142,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 142",
     "question_text": "医薬品等の広告に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -4589,7 +4589,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 143,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 143",
     "question_text": "希少疾病用医薬品に関する記述のうち、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -4623,7 +4623,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 144,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 144",
     "question_text": "薬剤師法に基づいて薬剤師又は薬局開設者が行った業務に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4657,7 +4657,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 145,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 145",
     "question_text": "一般病床に280人が入院し、外来患者に係る取扱い処方せん数が150枚である地域医療支援病院における、医療法で規定された薬剤師の員数について、正しいのはどれか。１つ選べ。ただし、この病院は特定機能病院又は臨床研究中核病院ではないものとする。",
     "choices": [
@@ -4691,7 +4691,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 146,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 146",
     "question_text": "独立行政法人医薬品医療機器総合機構法において規定されている副作用被害救済給付の対象となるのはどれか。２つ選べ。なお、いずれの場合も入院を要する程度の健康被害とする。",
     "choices": [
@@ -4721,7 +4721,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 147,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 147",
     "question_text": "2010年から2015年の薬事工業生産動態統計による我が国の医薬品の生産金額に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4755,7 +4755,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 148,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 148",
     "question_text": "治験に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4789,7 +4789,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 149,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 149",
     "question_text": "遺伝子診断によって起こりうる倫理的問題又はその対応に関する記述のうち、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -4823,7 +4823,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 150,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 150",
     "question_text": "医学研究に関する記述のうち、ヘルシンキ宣言に照らして、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -5027,7 +5027,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 156,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 156",
     "question_text": "問 156       利尿薬の主な作用機序及び作用部位の組合せのうち、正しいのはどれか。２つ\n選べ。\n薬物             主な作用機序     主な作用部位\n1   エプレレノン    バソプレシン V2 受容体遮断   集合管\n2   ブメタニド     Na /K 交換系阻害       ヘンレ係蹄上行脚\n+   +\n3   アセタゾラミド   炭酸脱水酵素阻害          集合管\n4   トリアムテレン   Na チャネル遮断         遠位尿細管、集合管\n+\n5   インダパミド    Na /Cl 共輸送系阻害     遠位尿細管\n+   -",
     "choices": [
@@ -5061,7 +5061,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 157,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 157",
     "question_text": "制吐薬の作用機序に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を遮断することで制吐作用を示す。\n受容体を遮断することで制吐作用を示す。\n受容体を刺激することで制吐作用を示す。\n受容体を遮断することで制吐作用を示す。\n受容体を遮断することで胃運動を抑制し、制吐作用を示す。",
     "choices": [
@@ -5095,7 +5095,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 158,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 158",
     "question_text": "抗C型肝炎ウイルス薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5129,7 +5129,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 159,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 159",
     "question_text": "成長ホルモン（GH）関連薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を刺激し、GHやプロラクチンの産生・分泌を抑制する。",
     "choices": [
@@ -5163,7 +5163,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 160,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 160",
     "question_text": "脂質異常症治療薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5197,7 +5197,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 161,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 161",
     "question_text": "血液・造血系に作用する薬物に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5231,7 +5231,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 162,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 162",
     "question_text": "抗真菌薬の作用機序に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5529,7 +5529,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 171,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 171",
     "question_text": "コロイド分散系の性質に関する記述のうち、正しいのはどれか。２つ選べ。\n\n＞Na＋＞Li＋である。",
     "choices": [
@@ -5563,7 +5563,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 172,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 172",
     "question_text": "球形粒子から成るある粉体を分級して得られた粉体A及びBの個数基準の粒度分布曲線を図に示した。この図から考えられることとして、適切なのはどれか。２つ選べ。\n\nmより大きくなる。",
     "choices": [
@@ -5597,7 +5597,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 173,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 173",
     "question_text": "ある固体薬物Aに粉砕や再結晶などの処理を行ったところ、下図の粉末X線回折パターンを示す固体a、b、cが得られた。別の方法で再結晶を行ったところ、異なる回折パターンを示す固体dが得られた。次の記述のうち、正しいのはどれか。２つ選べ。ただし、粉末X線回折測定に必要な前処理により、薬物Aの化学変化や固体組成の変化は生じないものとする。",
     "choices": [
@@ -5631,7 +5631,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 174,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 174",
     "question_text": "ある薬物の静注用の水性注射剤の製造工程を図に示した。本注射剤及びその製造工程に関する記述のうち、正しいのはどれか。１つ選べ。\n\n以下の無菌性保証水準が得られる条件で行われる。",
     "choices": [
@@ -5665,7 +5665,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 175,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 175",
     "question_text": "問 175   コーティングを施した固形製剤の溶出性を調べたところ、下図の結果が得られ\nた。この薬物溶出を示す製剤として最も適切なのはどれか。１つ選べ。ただし、薬\n物の溶解度は試験液の pH に依存せず、薬物と添加剤の相互作用はないものとす\nる。\n₁₀₀\n試験液 pH\npH ₁ . ₂\n₈₀\npH ₆ . ₀\n溶出率（％）\npH ₇ . ₀\n₆₀\n₄₀\n₂₀\n₀\n₀     ₂₀      ₄₀        ₆₀   ₈₀   ₁₀₀   ₁₂₀\n溶出時間（分）\n1   薬物を含む即放性顆粒\n薬物を含み、ヒプロメロースフタル酸エステル\nをコーティングした顆粒\n薬物を含む即放性顆粒\n2   薬物を含み、ヒプロメロースフタル酸エステル\nをコーティングした顆粒\nゼラチンカプセル\n3   薬物を含む素錠\nメタクリル酸コポリマー S の\nコーティング膜\n4   薬物を含む素錠\nヒプロメロースの\nコーティング膜\n薬物を含む内核\nメタクリル酸コポリマー S の\nコーティング膜\n薬物を含む即放性外層",
     "choices": [],
@@ -5679,7 +5679,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 176,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 176",
     "question_text": "容器・包装に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5713,7 +5713,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 177,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 177",
     "question_text": "放出制御型製剤に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6019,7 +6019,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 186,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 186",
     "question_text": "55歳男性。急性骨髄性白血病と診断され、血縁者からの末梢血幹細胞移植を行うこととなった。この患者の治療に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -6053,7 +6053,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 187,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 187",
     "question_text": "メタアナリシスに関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6087,7 +6087,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 188,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 188",
     "question_text": "73歳女性。数ヶ月前から腹痛を感じていたが、最近になって血便が認められたため来院し、StageⅢのS状結腸がんと診断された。外来にて、イリノテカン、レボホリナートカルシウム、フルオロウラシルを用いたがん化学療法を行うため、使用する薬物の代謝酵素の活性に変化をきたす遺伝子変異の有無を調べることになった。その遺伝子として、最も適切なのはどれか。１つ選べ。",
     "choices": [
@@ -6121,7 +6121,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 189,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 189",
     "question_text": "新生児及び小児の薬物治療に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6155,7 +6155,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 190,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 190,191",
     "question_text": "19歳女性。高校生の頃から、気がつくと授業中に眠っていることがしばしばあったが、夜間に受験勉強に励んでいることが原因と思っていた。大学に入学後も、授業中に突然眠ってしまったり、夜間に悪夢を見たりした。眠気により食生活が不規則にもなった。心配になり、友人や家族に相談したところ病院受診を勧められた。診察及び検査の結果、ナルコレプシーと診断され、処方1及び2で3ヶ月治療されたが、症状が改善されないため、処方1が処方3に変更となった。\n\n問190\n本症例に関する病態、検査及び薬物療法に関する記述のうち、正しいのはどれか。２つ選べ。\n\n問191\n前問の処方2及び処方3の薬物の作用機序として、正しいのはどれか。２つ選べ。\n\n−アミノ酪酸GABAA受容体遮断\n\n受容体遮断",
     "choices": [
@@ -6209,7 +6209,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 191,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "",
     "question_text": "問 190−191\n₁₉ 歳女性。高校生の頃から、気がつくと授業中に眠っていることがしばしば\nあったが、夜間に受験勉強に励んでいることが原因と思っていた。大学に入学後\nも、授業中に突然眠ってしまったり、夜間に悪夢を見たりした。眠気により食生活\nが不規則にもなった。心配になり、友人や家族に相談したところ病院受診を勧めら\nれた。診察及び検査の結果、ナルコレプシーと診断され、処方 ₁ 及び ₂ で ₃ ヶ月治\n療されたが、症状が改善されないため、処方 ₁ が処方 ₃ に変更となった。\n（処方 ₁ ）\nモダフィニル錠 ₁₀₀ mg           ₁ 回 ₂ 錠（ ₁ 日 ₂ 錠）\n₁日₁回    朝食後    ₁₄ 日分\n（処方 ₂ ）\nクロミプラミン塩酸塩錠 ₂₅ mg        ₁ 回 ₁ 錠（ ₁ 日 ₁ 錠）\n₁日₁回    就寝前    ₁₄ 日分\n（処方 ₃ ）\nメチルフェニデート塩酸塩錠 ₁₀ mg      ₁ 回 ₂ 錠（ ₁ 日 ₄ 錠）\n₁日₂回    朝昼食後    ₁₄ 日分",
     "choices": [],
@@ -6223,7 +6223,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 192,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 192,193",
     "question_text": "問192　\n35歳男性。身長172 cm、体重67 kg。頭痛と四肢の脱力感があり、血圧が180/110 mmHgであったため病院を受診した。血液検査の結果、血清カリウム値は3.0 mEq/Lであった。血中の甲状腺ホルモン値、カテコールアミン値、ACTH値には異常を認めず、腹部CT検査にて両側副腎の腫大を認めた。本症例に対する治療薬として適切なのはどれか。２つ選べ。\n\n問193　\n前問で選択した2つの薬物を長期服用したところ、女性化乳房が出現した。この副作用発現に関わる受容体として正しいのはどれか。２つ選べ。\n\n受容体",
     "choices": [
@@ -6277,7 +6277,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 193,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "",
     "question_text": "第104回 問193",
     "choices": [],
@@ -6291,7 +6291,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 194,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 194,195",
     "question_text": "問194　\n10歳男児。高熱、頭痛、咳嗽、喀痰、筋肉痛、関節痛のため、母親とともに来院した。問診により父親がインフルエンザに罹患していることが分かった。検査の結果、男児もインフルエンザウイルスに感染していた。この男児の診断、治療及び感染蔓延防止に関する記述のうち、正しいのはどれか。２つ選べ。\n\n問195　\nインフルエンザウイルス感染症及びその症状の緩和のために用いられる薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を刺激することで咳を静める。\n\nを阻害することでインフルエンザによる発熱を改善する。",
     "choices": [
@@ -6345,7 +6345,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
     "year": 104,
     "question_number": 195,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "",
     "question_text": "第104回 問195",
     "choices": [],

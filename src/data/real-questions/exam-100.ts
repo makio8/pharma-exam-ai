@@ -2609,7 +2609,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 81,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "実務",
     "category": "必須問題 - 問 81",
     "question_text": "EBMの実践手順で、 　　　  に入る適当な語句はどれか。１つ選べ。\n\n患者の問題の定式化 → 情報の収集 →  　　　 → 患者への適用",
     "choices": [
@@ -3047,7 +3047,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 94,
     "section": "理論",
-    "subject": "生物",
+    "subject": "物理",
     "category": "一般 理論問題 - 問 94",
     "question_text": "タンパク質の構造に関する記述のうち、正しいのはどれか。２つ選べ。\n\nヘリックスやβシートは、タンパク質中に見られる二次構造である。",
     "choices": [
@@ -4489,7 +4489,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 141,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 141",
     "question_text": "医薬品の製造又は製造販売に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4523,7 +4523,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 142,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 142",
     "question_text": "医薬品医療機器等法（旧称：薬事法）で規制される指定薬物に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -4557,7 +4557,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 143,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 143",
     "question_text": "希少疾病用医薬品として指定されたものに対して、国又は厚生労働大臣がとる施策として医薬品医療機器等法（旧称：薬事法）に規定されていないのはどれか。１つ選べ。",
     "choices": [
@@ -4591,7 +4591,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 144,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 144",
     "question_text": "保険薬局及び保険薬剤師療養担当規則に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4621,7 +4621,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 145,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 145",
     "question_text": "「医薬品○○」は、製薬企業Bが製造販売承認を得て、製造所Aが製造する一般用医薬品である。下図は「医薬品○○」の販売の流れを示している。「医薬品○○」を販売するにあたり、医薬品の販売業の許可を得る必要があるものとして、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -4659,7 +4659,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 146,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 146",
     "question_text": "医薬品の製造販売後安全対策に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4693,7 +4693,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 147,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 147",
     "question_text": "治験に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4727,7 +4727,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 148,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 148",
     "question_text": "文部科学省及び厚生労働省が定める遺伝子治療臨床研究に関する指針において、被験者の人権保護のために規定されている事項はどれか。２つ選べ。",
     "choices": [
@@ -4761,7 +4761,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 149,
     "section": "理論",
-    "subject": "実務",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 149",
     "question_text": "50歳男性。半年前に胃潰瘍と高血圧を指摘され、現在は、カルシウム拮抗薬を服用している。本日の診察で糖尿病を指摘され、α−グルコシダーゼ阻害薬が処方された。処方せんを持って保険薬局を訪ねたところ、薬剤師から症状について質問されたため、男性は「胃潰瘍も治り、血圧も下がっています。血糖値は高いのですが、症状は何もありません。それなのにまた薬が追加になって、がっかりしています。」と答えた。この患者の気持ちに対する共感的な発言として、最も適切なのはどれか。１つ選べ。",
     "choices": [
@@ -4795,7 +4795,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 150,
     "section": "理論",
-    "subject": "実務",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 150",
     "question_text": "65歳女性。検査目的で入院中であったが、本日、医師から膵臓がんの診断を告げられた。病棟の担当薬剤師が患者の様子を把握するために病室を訪問したところ、患者は笑顔で「こうなったのは運命ですから、仕方ないです。覚悟はできていますから、心配しないでください。」と話した。薬剤師はこの患者のふるまいは「防衛機制」によるものと感じた。防衛機制についての説明として、適切なのはどれか。１つ選べ。",
     "choices": [
@@ -4999,7 +4999,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 156,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 156",
     "question_text": "精神疾患治療薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を遮断する。\n受容体を刺激する。\n受容体を刺激する。",
     "choices": [
@@ -5033,7 +5033,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 157,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 157",
     "question_text": "心疾患治療薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\nチャネルの開口により抗狭心症作用を示す。\nチャネルを選択的に遮断する。",
     "choices": [
@@ -5067,7 +5067,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 158,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 158",
     "question_text": "気管支ぜん息治療薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を選択的に遮断する。",
     "choices": [
@@ -5101,7 +5101,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 159,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 159",
     "question_text": "消化器系に作用する薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を刺激し、便秘を改善する。",
     "choices": [
@@ -5135,7 +5135,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 160,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 160",
     "question_text": "糖質コルチコイドに関する記述のうち、正しいのはどれか。２つ選べ。\n\n及びK＋の排泄を促進する。",
     "choices": [
@@ -5169,7 +5169,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 161,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 161",
     "question_text": "呼吸器系に作用する薬物について、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5203,7 +5203,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 162,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 162",
     "question_text": "止血薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5237,7 +5237,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 163,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 163",
     "question_text": "関節リウマチの治療に用いる薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\n（TNF−α）と特異的に結合し、TNF−αの細胞膜受容体への結合を阻害する。",
     "choices": [
@@ -5271,7 +5271,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 164,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 164",
     "question_text": "ヒト免疫不全ウイルス（HIV）感染症治療薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5305,7 +5305,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 165,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 165",
     "question_text": "抗悪性腫瘍薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\nBの作用を阻害する。",
     "choices": [
@@ -5505,7 +5505,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 171,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 171",
     "question_text": "薬物Aをヒトに60 mg経口投与した後の血中濃度時間曲線下面積（AUC）が600 ng・h/mLであった。薬物Aを8時間毎に経口投与し、定常状態における平均血中濃度を150 ng/mLにしたい。投与量（mg）として、最も適切なのはどれか。１つ選べ。ただし、薬物Aの体内動態は、線形1−コンパートメントモデルに従うものとする。",
     "choices": [
@@ -5539,7 +5539,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 172,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 172",
     "question_text": "治療薬物モニタリング（TDM）に活用されている母集団薬物速度論に関する記述として、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5573,7 +5573,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 173,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 173",
     "question_text": "薬物の溶解及び放出に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5603,7 +5603,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 174,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 174",
     "question_text": "界面活性剤に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5637,7 +5637,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 175,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 175",
     "question_text": "高分子及びその溶液に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5671,7 +5671,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 176,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 176",
     "question_text": "真密度が1.2 g/cm3の粉体を500 mLの容器にすり切り充てんしたところ、粉体層の空隙率は25％であった。この容器をタッピングしたところ、粉体層の空隙率は17％となった。タッピング後の粉体層のかさ密度（g/cm3）に最も近い値はどれか。１つ選べ。",
     "choices": [
@@ -5705,7 +5705,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 177,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 177",
     "question_text": "注射剤の溶剤に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5739,7 +5739,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 178,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 178",
     "question_text": "下図は、乾燥工程中における乾燥時間と試料温度及び試料の含水率との関係を表している。乾燥に関する以下の記述のうち正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5773,7 +5773,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 179,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 179",
     "question_text": "滅菌に関する記述のうち、正しいのはどれか。２つ選べ。\n\n以下の無菌性保証水準が得られる条件で滅菌が行われる。",
     "choices": [
@@ -5807,7 +5807,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 180,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 180",
     "question_text": "ある液剤を25℃で保存すると、1次速度式に従って分解し、100時間後に薬物含量が96.0％に低下していた。この薬物の有効性と安全性を考慮すると、薬物含量が90.0％までは投与が可能である。この液剤の有効期間は何日か。１つ選べ。ただし、log2＝0.301、log3＝0.477とする。",
     "choices": [
@@ -6011,7 +6011,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 186,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 186",
     "question_text": "急性糸球体腎炎に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6045,7 +6045,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 187,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 187",
     "question_text": "間質性肺炎に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6079,7 +6079,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 188,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 188",
     "question_text": "原発性甲状腺機能低下症の臨床所見はどれか。２つ選べ。",
     "choices": [
@@ -6113,7 +6113,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 189,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 189",
     "question_text": "高尿酸血症及び痛風に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -6147,7 +6147,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 190,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 190",
     "question_text": "22歳女性。5日前、晴天の日に友人とハイキングに行った後、39〜40℃の発熱と関節痛が出現した。2日前より顔面に蝶形紅斑を認めた。医師により全身性エリテマトーデスを強く疑われた。この疾患に特徴的な症状及び臨床検査所見はどれか。２つ選べ。",
     "choices": [
@@ -6181,7 +6181,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 191,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 191",
     "question_text": "白内障とその治療に関する記述のうち、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -6215,7 +6215,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 192,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 192",
     "question_text": "医薬品A〜Eに関して、投与群と対照群の間でイベントXの発症率を比較した論文を収集したところ、以下の情報が得られた。なお、対照群はいずれも同じ標準薬を用いていた。\n\n・Aは、Xの発症率を対照群の1/5に減少させた。\n・Bを投与した被験者1,000名におけるXの発症者数は、25名であった。\n・C投与群のX発症の相対危険度は、0.25であった。\n・D投与群のX発症のオッズ比は、7/39であった。\n・Eは、Xの発症率を10%低下させた。\n・いずれの論文においても、対照群におけるXの発症率は12.5%であった。\n\n以上の結果から、Xの発症を抑制する効果が最も劣ると考えられるのはどれか。１つ選べ。",
     "choices": [
@@ -6249,7 +6249,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 193,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 193",
     "question_text": "問 193 試験期間 12ヶ月の臨床試験に参加した５名の被験者の経過が、以下のように\nなった。\n１名が２ヶ月後に死亡\n１名が４ヶ月後に追跡不能となり打ち切り\n１名が６ヶ月後に追跡不能となり打ち切り\n１名が８ヶ月後に死亡\n１名が 12ヶ月後の試験終了時まで生存\nカプラン‑マイヤー法を用いて表した生存曲線として、正しいのはどれか。                                   つ\n選べ。\n1     1.0                           2     1.0\n0.8                                 0.8\n生存率                                 生存率\n0.6                                 0.6\n0.4                                 0.4\n0.2                                 0.2\n0                                   0\n2 4 6 8 10 12                       2 4 6 8 10 12\n試験期間（月)                             試験期間（月)\n3     1.0                           4     1.0\n0.8                                 0.8\n生存率                                 生存率\n0.6                                 0.6\n0.4                                 0.4\n0.2                                 0.2\n0                                   0\n2 4 6 8 10 12                       2 4 6 8 10 12\n試験期間（月)                             試験期間（月)\n5     1.0                           6     1.0\n0.8                                 0.8\n生存率                                 生存率\n0.6                                 0.6\n0.4                                 0.4\n0.2                                 0.2\n0                                   0\n2 4 6 8 10 12                       2 4 6 8 10 12\n試験期間（月)                             試験期間（月)\n⎜ 20⎜",
     "choices": [
@@ -6287,7 +6287,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 194,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 194",
     "question_text": "骨粗鬆症治療薬である新薬Aの評価を行うため文献を収集した。椎体骨折予防効果を既存薬Yと比較した無作為化二重盲検比較試験のデータが得られ、新薬Aによる予防効果が大きいことが示されていた（図）。この結果から得られる新薬Aの治療必要数（NNT）が25であるとき、図の（ア）に入る数値として適切なのはどれか。１つ選べ。",
     "choices": [
@@ -6321,7 +6321,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "year": 100,
     "question_number": 195,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 195",
     "question_text": "20名の被験者において、CYP2D6の遺伝子型を解析したところ、以下の結果が得られた。\n\nこの被験者集団におけるCYP2D6遺伝子の＊10アレルの頻度として、正しいのはどれか。１つ選べ。なお、アレルの頻度とは、ある集団で、該当する遺伝子配座においてそのアレルが占める割合のことをいう。",
     "choices": [
