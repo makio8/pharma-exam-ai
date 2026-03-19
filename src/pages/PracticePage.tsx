@@ -21,6 +21,7 @@ import {
   CheckCircleOutlined,
   CloseCircleOutlined,
   MinusCircleOutlined,
+  FileImageOutlined,
 } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
 import { ALL_QUESTIONS } from '../data/all-questions'
@@ -298,6 +299,7 @@ export function PracticePage() {
                       <Tag color={sectionColor(q.section)}>{q.section}</Tag>
                       <Text strong>第{q.year}回</Text>
                       <Text type="secondary">問{q.question_number}</Text>
+                      {q.image_url && <FileImageOutlined style={{ color: '#1890ff', fontSize: 14 }} />}
                       <Text type="secondary">|</Text>
                       <Text>{q.subject}</Text>
                     </Space>
