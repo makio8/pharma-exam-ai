@@ -14,6 +14,7 @@ import {
   Select,
   Result,
   Alert,
+  Image,
 } from 'antd'
 import {
   ArrowLeftOutlined,
@@ -216,6 +217,24 @@ export function QuestionPage() {
           {question.question_text}
         </Paragraph>
       </Card>
+
+      {/* 問題画像（image_url がある場合のみ表示） */}
+      {question.image_url && (
+        <div style={{ marginBottom: 16, textAlign: 'center' }}>
+          <Image
+            src={question.image_url}
+            alt={`第${question.year}回 問${question.question_number} の図`}
+            style={{ maxHeight: '60vh', objectFit: 'contain' }}
+            width="100%"
+            fallback="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjVmNWY1Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj7nlLvlg4/jgpLoqq3jgb/ovrzjgoHjgb7jgZvjgpM8L3RleHQ+PC9zdmc+"
+            placeholder={
+              <div style={{ background: '#f5f5f5', height: 200, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                読み込み中...
+              </div>
+            }
+          />
+        </div>
+      )}
 
       {/* 自信度（回答前） */}
       {!isAnswered && (
