@@ -1055,7 +1055,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 36,
     "section": "必須",
-    "subject": "薬剤",
+    "subject": "薬理",
     "category": "必須問題 - 問 36",
     "question_text": "メテノロンのタンパク質同化作用の機序はどれか。１つ選べ。\n\n受容体刺激",
     "choices": [
@@ -1089,7 +1089,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 37,
     "section": "必須",
-    "subject": "薬剤",
+    "subject": "薬理",
     "category": "必須問題 - 問 37",
     "question_text": "問 37       アドレナリン a1、a2 及び b1 受容体に作用し、b2 受容体及びドパミン D1 受容体\nにはほとんど作用しないのはどれか。1つ選べ。\n1       HO     CH2CHCOOH\nNH2\nHO\n2   HO     CH2CH2NH2\nHO\n3   HO     CHCH2NH2\nOH\nHO\n4   HO     CHCH2NHCH3\nOH\nHO\nCH3\n5   HO     CHCH2NHCH\nOH         CH3\nHO",
     "choices": [
@@ -1119,7 +1119,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 38,
     "section": "必須",
-    "subject": "薬剤",
+    "subject": "薬理",
     "category": "必須問題 - 問 38",
     "question_text": "脂肪組織でのTG（トリグリセリド）の分解を阻害して肝臓への遊離脂肪酸の取込みを抑制し、肝臓におけるVLDL（超低密度リポタンパク質）の産生を低下させるのはどれか。１つ選べ。",
     "choices": [
@@ -1153,7 +1153,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 39,
     "section": "必須",
-    "subject": "薬剤",
+    "subject": "薬理",
     "category": "必須問題 - 問 39",
     "question_text": "RANKL（NF−κB活性化受容体リガンド）に特異的に結合し、破骨細胞による骨吸収を抑制するのはどれか。１つ選べ。",
     "choices": [
@@ -1187,7 +1187,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 40,
     "section": "必須",
-    "subject": "薬剤",
+    "subject": "薬理",
     "category": "必須問題 - 問 40",
     "question_text": "抗悪性腫瘍薬ノギテカンの作用機序はどれか。１つ選べ。",
     "choices": [
@@ -1331,7 +1331,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 46,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "必須問題 - 問 46",
     "question_text": "問 46       体内動態が線形 ₁︲コンパートメントモデルに従う薬物について、静脈内投与時\nの投与量に等しいのはどれか。1つ選べ。ただし、このときの血中濃度時間曲線下\n面積を AUC とし、全身クリアランスは CL tot、分布容積は Vd とする。\n1   CL tot・AUC\n2 CL tot・Vd\n3       CL tot・AUC・Vd\nCLtot・Vd\nAUC\nCLtot\nAUC・Vd",
     "choices": [],
@@ -1345,7 +1345,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 47,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "必須問題 - 問 47",
     "question_text": "体内動態が線形1-コンパートメントモデルに従う薬物を、消失半減期ごとに同量繰り返し投与した場合の蓄積率はどれか。１つ選べ。",
     "choices": [
@@ -1379,7 +1379,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 48,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "必須問題 - 問 48",
     "question_text": "濃度0.01 mol/kgの水溶液にしたとき、凝固点降下度が最も大きいのはどれか。１つ選べ。",
     "choices": [
@@ -1413,7 +1413,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 49,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "必須問題 - 問 49",
     "question_text": "一定温度の水に溶解したとき、表面張力が図中のAの挙動を示す物質はどれか。１つ選べ。",
     "choices": [
@@ -1447,7 +1447,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 50,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "必須問題 - 問 50",
     "question_text": "フォークトモデルにおいて、一定の力をかけ続けたときのひずみが時間経過とともに増加する現象はどれか。１つ選べ。",
     "choices": [
@@ -1481,7 +1481,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 51,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "必須問題 - 問 51",
     "question_text": "製剤に汎用される高分子のうち、温水に溶けて粘稠なゾルとなり、冷やすとゲル化する天然由来の高分子はどれか。１つ選べ。",
     "choices": [
@@ -1515,7 +1515,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 52,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "必須問題 - 問 52",
     "question_text": "日本薬局方において、「経口投与する、糖類又は甘味剤を含む粘稠性のある液状又は固形の製剤」と定義されているのはどれか。１つ選べ。",
     "choices": [
@@ -1549,7 +1549,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 53,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "必須問題 - 問 53",
     "question_text": "問 53    図は湿式顆粒圧縮法による錠剤の製造工程を示している。図中のアの単位操作\nで用いられる装置はどれか。1つ選べ。\n粉 砕    混 合   練 合        乾 燥   整 粒   混 合   打 錠\nア\nモーター\nボール\n高速攪拌羽根\n上下可動\n低速攪拌羽根\nモーター\n容器\n1                                    2\n試料投入口              モーター\n試料投入口\nスクリーン                        モーター\nスクリュー\n羽根\n試料取出し口                           試料取出し口\n3                                        4\n試料\nアトマイザー\n排気\n熱風送風器\nサイクロン捕集器\n微粉\n試料取出し口",
     "choices": [],
@@ -1563,7 +1563,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 54,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "必須問題 - 問 54",
     "question_text": "図に示す構造を有し、医療用医薬品として用いられる製造の適用部位はどれか。１つ選べ。",
     "choices": [
@@ -1597,7 +1597,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 55,
     "section": "必須",
-    "subject": "病態・薬物治療",
+    "subject": "薬剤",
     "category": "必須問題 - 問 55",
     "question_text": "遺伝子組換え医薬品のうち、標的細胞表面に発現している抗原タンパク質を認識して結合し、抗腫瘍効果を示すのはどれか。１つ選べ。",
     "choices": [
@@ -1631,7 +1631,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 56,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 56",
     "question_text": "「ショック」という用語で表される状態として適切なのはどれか。１つ選べ。",
     "choices": [
@@ -1665,7 +1665,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 57,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 57",
     "question_text": "小細胞肺がんの腫瘍マーカーとして有用なのはどれか。１つ選べ。",
     "choices": [
@@ -1699,7 +1699,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 58,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 58",
     "question_text": "横紋筋融解症で高値を示す血液検査所見はどれか。１つ選べ。",
     "choices": [
@@ -1733,7 +1733,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 59,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 59",
     "question_text": "フィラデルフィア染色体が高頻度に認められる疾患はどれか。１つ選べ。",
     "choices": [
@@ -1767,7 +1767,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 60,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 60",
     "question_text": "切迫早産の治療に用いられる薬物はどれか。１つ選べ。",
     "choices": [
@@ -1801,7 +1801,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 61,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 61",
     "question_text": "気管支喘息に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -1835,7 +1835,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 62,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 62",
     "question_text": "骨格筋の壊死と再生を繰り返し、徐々に筋萎縮や筋力低下が進行する遺伝性の疾患はどれか。１つ選べ。",
     "choices": [
@@ -1869,7 +1869,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 63,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 63",
     "question_text": "活動電位持続時間を短縮するのはどれか。１つ選べ。",
     "choices": [
@@ -1903,7 +1903,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 64,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 64",
     "question_text": "アトピー性皮膚炎の初期治療として適切なのはどれか。１つ選べ。",
     "choices": [
@@ -1937,7 +1937,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 65,
     "section": "必須",
-    "subject": "法規・制度・倫理",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 65",
     "question_text": "全身性エリテマトーデス（SLE）の症状として発現頻度が最も低いのはどれか。１つ選べ。",
     "choices": [
@@ -1971,7 +1971,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 66,
     "section": "必須",
-    "subject": "実務",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 66",
     "question_text": "モルヒネ換算比が最も小さい医療用麻薬製剤はどれか。１つ選べ。",
     "choices": [
@@ -2005,7 +2005,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 67,
     "section": "必須",
-    "subject": "実務",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 67",
     "question_text": "クラミジアに関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -2039,7 +2039,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 68,
     "section": "必須",
-    "subject": "実務",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 68",
     "question_text": "データ値の分布が正規分布に従う場合、「平均値 ± 1.96 × 標準偏差」の範囲にデータ全体の約   　　   ％が含まれる。  　　   に入る数値に最も近いのはどれか。１つ選べ。",
     "choices": [
@@ -2073,7 +2073,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 69,
     "section": "必須",
-    "subject": "実務",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 69",
     "question_text": "研究のデザインを、エビデンスのレベルが高い順に並べたのはどれか。１つ選べ。",
     "choices": [
@@ -2111,7 +2111,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 70,
     "section": "必須",
-    "subject": "実務",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 70",
     "question_text": "喘息患者の薬剤管理指導記録のうち、SOAPのSとして記載すべきものはどれか。１つ選べ。",
     "choices": [
@@ -2145,7 +2145,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 71,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 71",
     "question_text": "薬局開設者が、都道府県知事に別段の申出をしない限り、免許を受けたとみなされるのはどれか。１つ選べ。",
     "choices": [
@@ -2179,7 +2179,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 72,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 72",
     "question_text": "問 72        毒薬は、直接の容器又は直接の被包に「   ①   地に   ②   枠、   ②   字を\nもって、品名及び「毒」の文字」を記載する。色の組合せとして正しいのはどれ\nか。1つ選べ。\n①    ②\n1     黒    白\n2     白    黒\n3     赤    白\n4     白    赤\n5     黄    黒",
     "choices": [
@@ -2213,7 +2213,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 73,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 73",
     "question_text": "国民医療費の増加要因として、適切でないのはどれか。１つ選べ。",
     "choices": [
@@ -2247,7 +2247,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 74,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 74",
     "question_text": "以下の略語のうち、医薬品の開発段階から安全対策を実施することで、製造販売後の医薬品の安全性の確保を図ることを目的とするのはどれか。１つ選べ。",
     "choices": [
@@ -2281,7 +2281,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 75,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 75",
     "question_text": "法律において、条件及び期限付き承認の仕組みが規定されているのはどれか。１つ選べ。",
     "choices": [
@@ -2315,7 +2315,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 76,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 76",
     "question_text": "医療法の規定に基づく「医療計画」を定めることが義務づけられているのはどれか。１つ選べ。",
     "choices": [
@@ -2349,7 +2349,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 77,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 77",
     "question_text": "覚せい剤取締法で規制されるのはどれか。１つ選べ。",
     "choices": [
@@ -2383,7 +2383,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 78,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 78",
     "question_text": "治験に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -2417,7 +2417,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 79,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 79",
     "question_text": "薬剤師が業務上知り得た人の秘密を漏らすと、秘密漏示罪に問われる場合があるが、その根拠となる法律はどれか。１つ選べ。",
     "choices": [
@@ -2451,7 +2451,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 80,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 80",
     "question_text": "希少疾病用医薬品に関する記述のうち、適切なのはどれか。１つ選べ。",
     "choices": [
@@ -2485,7 +2485,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 81,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 81",
     "question_text": "薬局薬剤師の役割として正しいのはどれか。１つ選べ。",
     "choices": [
@@ -2553,7 +2553,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 83,
     "section": "必須",
-    "subject": "実務",
+    "subject": "病態・薬物治療",
     "category": "必須問題 - 問 83",
     "question_text": "器官形成期に該当し、薬剤による催奇形性のリスクが最も高いと考えられる妊娠週はどれか。１つ選べ。",
     "choices": [
@@ -2655,7 +2655,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 86,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 86",
     "question_text": "薬局間で譲渡を行う際、譲受・譲渡の記録が法律上必要なのはどれか。１つ選べ。",
     "choices": [
@@ -2689,7 +2689,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 87,
     "section": "必須",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 87",
     "question_text": "健康サポート薬局の活動・業務内容として適切でないのはどれか。１つ選べ。",
     "choices": [
@@ -2791,7 +2791,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 90,
     "section": "必須",
-    "subject": "実務",
+    "subject": "衛生",
     "category": "必須問題 - 問 90",
     "question_text": "学校薬剤師の業務として教室内の空気検査がある。シックハウス症候群の原因物質の1つで、室内空気中濃度に関する基準値が設定されているのはどれか。１つ選べ。",
     "choices": [
@@ -2995,7 +2995,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 96,
     "section": "理論",
-    "subject": "化学",
+    "subject": "物理",
     "category": "一般 理論問題 - 問 96",
     "question_text": "0.100 mol/Lリン酸二水素一ナトリウム水溶液10.00 mLを0.100 mol/L水酸化ナトリウム水溶液で中和滴定する。この滴定に関する記述のうち、正しいのはどれか。２つ選べ。ただし、リン酸は三塩基酸で、pKa1＝2.12、pKa2＝7.21、pKa3＝12.32であり、log102＝0.301、log103＝0.477とする。",
     "choices": [
@@ -3029,7 +3029,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 97,
     "section": "理論",
-    "subject": "化学",
+    "subject": "物理",
     "category": "一般 理論問題 - 問 97",
     "question_text": "以下の記述は、L−バリン（C5H11NO2）の薄層クロマトグラフィー（TLC）に関するものである。\n\n本品0.10 gを水25 mLに溶かし、試料溶液とする。試料溶液5 µLをTLC用シリカゲルを用いて調製した薄層板にスポットする。次に1−ブタノール/水/酢酸（100）混液（3：1：1）を展開溶媒として約10 cm展開した後、薄層板を80℃で30分間乾燥する。これに試薬  　A　  のアセトン溶液（1→50）を均等に噴霧した後、80℃で5分間加熱する。\nこのクロマトグラフィーに関する記述のうち、正しいのはどれか。２つ選べ。\n\n はニンヒドリンである。\n\nH13NO2）が混在するとき、そのRf値はL−バリンのRf値より小さい。\nf値より大きなRf値を与える不純物は、逆相分配クロマトグラフィーにおいては保持時間が一般にL−バリンより大きくなる。",
     "choices": [
@@ -3063,7 +3063,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 98,
     "section": "理論",
-    "subject": "化学",
+    "subject": "物理",
     "category": "一般 理論問題 - 問 98",
     "question_text": "問 98       分子間相互作用の名称と特徴の組合せとして正しいのはどれか。2つ選べ。\n名称                特徴\n無極性分子同士を含め、全ての物質の間にはたらく相互\n1   分散力\n作用で、物質の分極率が大きいほど強くなる。\n電気陰性度の大きな原子に結合した水素原子と、別の電\n2   水素結合       気陰性度の大きな原子間で形成される相互作用で、共有\n結合と同程度の相互作用エネルギーを示す。\n水中における疎水性分子同士の発熱的な相互作用で、相\n3   疎水性相互作用\n互作用エネルギーは分子間距離の ₆ 乗に反比例する。\nイオン間の相互作用で、その相互作用エネルギーはイオ\n4   静電的相互作用\nン間距離の ₂ 乗に反比例し、媒体の誘電率に比例する。\n電子供与体と電子受容体の間の相互作用であり、ヨウ素\n5   電荷移動相互作用\n（I 2 ）︲デンプン反応で青紫色に着色する要因となる。",
     "choices": [
@@ -3097,7 +3097,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 99,
     "section": "理論",
-    "subject": "化学",
+    "subject": "物理",
     "category": "一般 理論問題 - 問 99",
     "question_text": "放射線と物質の相互作用に関する記述のうち、正しいのはどれか。２つ選べ。\n\n線が原子核近傍を通過するときエネルギーの損失が起こり、そのエネルギーに見合ったX線が放射されることがある。",
     "choices": [
@@ -3131,7 +3131,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 100,
     "section": "理論",
-    "subject": "化学",
+    "subject": "物理",
     "category": "一般 理論問題 - 問 100",
     "question_text": "生体における膜電位の原理を理解するためには、濃淡電池の作動原理を知ることが必要である。電解質として用いる硫酸亜鉛の濃度のみが異なる2つの亜鉛半電池を塩橋でつないだ化学電池の模式図を以下に示す。標準圧力下、298Kにおいて半電池Rの硫酸亜鉛の初濃度を0.1 mol/L、半電池Lの硫酸亜鉛の初濃度をc1 mol/Lとする。\n\nなお、亜鉛半電池の反応は次式で表される。（E °は標準電位を表す）。\n\nまた、硫酸亜鉛は水中では完全に電離し、その活量は濃度に等しいとする。この場合の亜鉛半電池の電極電位E （単位V）は温度298 Kでは次式で表される。\n\nこの化学電池に関する記述のうち、正しいのはどれか。２つ選べ。\n\n1＝0.01のとき、半電池Lがアノード（負極）となる。\n\n1＝0.01のとき、この電池の起電力は約＋0.059 Vである。",
     "choices": [
@@ -3165,7 +3165,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 101,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 101",
     "question_text": "クエン酸（C6H8O7）に関する記述について、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -3199,7 +3199,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 102,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 102",
     "question_text": "図は、アルケンAからアルコールCまたはアルコールDを合成する経路を示している。この経路に含まれる反応又は化合物に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3233,7 +3233,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 103,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 103",
     "question_text": "臭化アルキル（R−Br）に求核剤（Y－）を作用させる置換反応について、反応の進行に伴う自由エネルギー変化を図示するとA又はBのようになる。以下の記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -3267,7 +3267,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 104,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 104",
     "question_text": "化合物Aの反応に関する記述のうち、正しいのはどれか。２つ選べ。\n\nが求電子剤として作用する置換反応である。",
     "choices": [
@@ -3301,7 +3301,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 105,
     "section": "理論",
-    "subject": "生物",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 105",
     "question_text": "一酸化窒素及び生体内における一酸化窒素の生成に関する記述のうち、正しいのはどれか。１つ選べ。\n\n）由来である。",
     "choices": [
@@ -3335,7 +3335,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 106,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 106",
     "question_text": "図は、アセチルコリンエステラーゼ（AChE）によってアセチルコリンが加水分解される際の初期段階の反応機構と2種類のAChE阻害剤A、Bの構造を示したものである。以下の記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3369,7 +3369,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 107,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "物理",
     "category": "一般 理論問題 - 問 107",
     "question_text": "問 107   図は、ある化合物Ａの H︲NMR スペクトル（₄₀₀ MHz、CDCl3、基準物質はテ\nトラメチルシラン）を示したものである。また、表は各シグナルの積分比を一覧に\nしたものである。化合物Ａの加水分解反応によって得られた化合物Ｂについて、同\n様の条件下で H︲NMR スペクトルの測定を行ったところ、アとウに相当するシグ\nナルが消失し、₁₁ ppm 付近に線幅の広い新たなシグナルが観測された。化合物Ａ\nの構造式はどれか。1つ選べ。なお、×印のシグナルは水又は CDCl3 中に含まれ\nる CHCl3 のプロトンに由来するシグナルである。\n表\nシグナル 積分比\nア        ₃\nイ        ₃\nウ        ₂\nエ        ₁\nオ        ₁\nカ        ₁\nキ        ₁\nク        ₁\n×\nイ                    アの拡大\nウの拡大\nエ～キの拡大\nキ               カ     オ       エ\n×ア\n×\nウ\nオ\nカエ\nキ\nク\n₉.₀       ₈.₀         ₇.₀       ₆.₀       ₅.₀           ₄.₀        ₃.₀   ₂.₀        ₁.₀       ₀ ppm\n1                                    2                                        3\nCH3                                   H                                     H\nH3C             N         O                           N    O\nN       O\nH3C                                      H3C\nO                       O                O               O\nHO                     O CH3                                            CH3                             CH3\n4                                               5\nH                                    H\nH3C       O           N     O                              N     O\nO CH3               HO               O\nCH3        CH3",
     "choices": [],
@@ -3383,7 +3383,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 108,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 108",
     "question_text": "問 108       日本薬局方に収載された生薬Ａの確認には、成分Ｂの検出を目的として、Ｃに\n示す試薬や方法を用いた試験が行われる。Ａ～Ｃの組合せのうち、正しいのはどれ\nか。2つ選べ。\nＡ         Ｂ                Ｃ\n薄層クロマトグラフィー、\n1   オウゴン    インドールアルカロイド\n紫外線照射\n2   キキョウ    トリテルペンサポニン    無水酢酸と硫酸\n₄︲ジメチルアミノベンズ\n3   ゴシュユ    ステロイドサポニン\nアルデヒド試液\n4   チンピ     フラボノイド        バニリン・塩酸試液\n薄層クロマトグラフィー、\n5   ベラドンナコン トロパンアルカロイド\nドラーゲンドルフ試液",
     "choices": [
@@ -3417,7 +3417,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 109,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "化学",
     "category": "一般 理論問題 - 問 109",
     "question_text": "問 109    以下のアルカロイドのうち、生合成前駆体となるアミノ酸がトリプトファンで\nあるのはどれか。2つ選べ。\nO                                                                                                          O H       CH3\nCH3                       H\nN                                                                                                OH\nO                         CH3                                        H       N                                 N\nH       H                                                                                        H\nO\nH3C                                                                  H                                 N\nO                                                                                                CH3\nCH3                                                                  H\nO\nO                                     H3C O            O         OH\nO\nCH3                                            HH                  HN\n1                                              2                                     3\nN\nH3C\nO                                                  H H\nH        H                                              H      OH\nN\nO\nHO                 H                  O     N CH3\nCH2                          H O\nH                            H H\n4                                              5",
     "choices": [],
@@ -3431,7 +3431,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 110,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 110",
     "question_text": "骨の成長とリモデリングに関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3465,7 +3465,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 111,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 111",
     "question_text": "図は視床下部－下垂体系を模式的に示したものである。下垂体の部位A又はBにおけるホルモンの分泌調節に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3499,7 +3499,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 112,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 112",
     "question_text": "成人の赤血球及び造血に関する記述のうち、正しいのはどれか。２つ選べ。\n\n が必要である。",
     "choices": [
@@ -3533,7 +3533,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 113,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 113",
     "question_text": "哺乳類細胞におけるコレステロール及びその代謝に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3567,7 +3567,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 114,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 114",
     "question_text": "下図のヌクレオチドに関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3601,7 +3601,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 115,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 115",
     "question_text": "ヒトの遺伝子多型に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3635,7 +3635,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 116,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 116",
     "question_text": "問 116   タンパク質Ｘは、細胞質内ではサブユニットＡ（分子量 ₆₀，₀₀₀）とサブユニッ\nトＢ（分子量 ₃₀，₀₀₀）がそれぞれ ₁ つずつ非共有結合で会合したヘテロ二量体を\n形成している。タンパク質Ｘは、増殖因子Ｆの刺激によりサブユニットＡのみチロ\nシン残基がリン酸化され、サブユニットＢと解離する。\n培養細胞を用いて以下の実験を行った。予想される結果として正しいのはどれ\nか。1つ選べ。\n①    Ｆでこの細胞を刺激した。同時に未刺激の細胞も用意した。\n②    それぞれの細胞を破砕して細胞抽出液を得た。\n③       各細胞抽出液に、サブユニットＡに対する抗体（抗Ａ）を添加して免疫沈\n降     を行った。\n（注 1）\n④       沈降物を三等分し、それぞれを SDS︲ポリアクリルアミドゲル電気泳動によ\nり分離した。\n⑤       分離したタンパク質をニトロセルロース膜に電気的に転写し、抗リン酸化チ\nロシン抗体（抗 Pi︲Tyr）   、抗Ａ、サブユニットＢに対する抗体（抗Ｂ）を\n（注 2）\nそれぞれ用いたウエスタンブロット法を行った。\nただし、Ｆによる刺激で、Ａ、Ｂ両サブユニットの発現量に変化はなく、分解も\n起こらないこと、また、チロシン残基がリン酸化されても、電気泳動移動度、抗Ａ\nによる免疫沈降及びウエスタンブロット法における認識には変化がないことを確認\nしている。\n注 ₁：抗体を添加後、生じた免疫複合体を不溶性担体に吸着させて遠心分離に\nよって回収する方法。\n注 ₂：タンパク質中のリン酸化されたチロシン残基を特異的に認識する抗体。\n抗 Pi︲Tyr   抗Ａ      抗Ｂ\n-    +     -   +   -        +\n泳動方向\n泳動方向\n泳動方向\n泳動方向\n泳動方向\n泳動方向\n+：増殖因子Ｆにより刺激した細胞からの抽出液\n-：未刺激の細胞からの抽出液",
     "choices": [],
@@ -3649,7 +3649,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 117,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 117",
     "question_text": "補体の活性化と機能に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3683,7 +3683,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 118,
     "section": "理論",
-    "subject": "衛生",
+    "subject": "生物",
     "category": "一般 理論問題 - 問 118",
     "question_text": "主要組織適合遺伝子複合体（MHC）に関する記述のうち、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -3839,7 +3839,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 122,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 122",
     "question_text": "ビタミン及びミネラルの欠乏症に関する記述のうち、正しいのはどれか。２つ選べ。\n\n欠乏は、ウェルニッケ脳症の原因となる。",
     "choices": [
@@ -3873,7 +3873,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 123,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 123",
     "question_text": "食品の腐敗とその防止方法に関する記述のうち、正しいのはどれか。２つ選べ。\n\n−オキシドが生成する。",
     "choices": [
@@ -3907,7 +3907,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 124,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 124",
     "question_text": "食品添加物A〜Dに関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3941,7 +3941,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 125,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 125",
     "question_text": "我が国における遺伝子組換え食品の取扱いに関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -3975,7 +3975,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 126,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 126",
     "question_text": "問 126       表は、₂₀₀₅ 年と ₂₀₁₈ 年の食中毒統計に示された主な食中毒原因物質による食\n中毒の発生状況である。このうち、Ｂ～Ｄに当てはまる原因物質の組合せとして正\nしいのはどれか。1つ選べ。\n表   主な食中毒原因物質による食中毒発生状況\n₂₀₀₅ 年                        ₂₀₁₈ 年\n原因物質\n患者数     件数     患者数／件数          患者数    件数     患者数／件数\nＡ    ₃₇₀₀    ₁₄₄      ₂₅ . ₇        ₆₄₀    ₁₈           ₃₅ . ₆\nＢ    ₂₃₀₁    ₁₁₃      ₂₀ . ₄        ₂₂₂    ₂₂           ₁₀ . ₁\nＣ    ₂₆₄₃     ₂₇      ₉₇ . ₉       ₂₃₁₉    ₃₂           ₇₂ . ₅\nＤ    ₃₄₃₉    ₆₄₅       ₅.₃         ₁₉₉₅    ₃₁₉           ₆.₃\nＥ    ₈₇₂₇    ₂₇₄      ₃₁ . ₉       ₈₄₇₅    ₂₅₆          ₃₃ . ₁\n厚生労働省食中毒統計より\nＢ                       Ｃ                    Ｄ\nカンピロバクター・ジェ\n1                      ウェルシュ菌                 腸炎ビブリオ\nジュニ／コリ\nカンピロバクター・ジェ\n2                      腸炎ビブリオ                 ウェルシュ菌\nジュニ／コリ\nカンピロバクター・ジェ\n3   ウェルシュ菌                                    腸炎ビブリオ\nジュニ／コリ\nカンピロバクター・ジェ\n4   ウェルシュ菌             腸炎ビブリオ\nジュニ／コリ\nカンピロバクター・ジェ\n5   腸炎ビブリオ             ウェルシュ菌\nジュニ／コリ\nカンピロバクター・ジェ\n6   腸炎ビブリオ                                    ウェルシュ菌\nジュニ／コリ",
     "choices": [
@@ -4013,7 +4013,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 127,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 127",
     "question_text": "食品に含まれる金属に関する記述のうち、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -4047,7 +4047,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 128,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 128",
     "question_text": "表は、我が国における男女別の死亡統計（人口千対）の推移を示したものである。この表及び我が国の死亡統計に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4081,7 +4081,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 129,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 129",
     "question_text": "表1は、年齢区分別人口割合の将来推計である。表2は、全国の保険薬局での処方調査から明らかになった同一の保険薬局で調剤された薬剤種類数の年齢区分別のデータである。これらの表に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4115,7 +4115,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 130,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 130",
     "question_text": "図は、我が国のある新興・再興感染症の発生動向調査に基づく患者数の年次推移を示したものである。この図に該当する感染症はどれか。１つ選べ。",
     "choices": [
@@ -4149,7 +4149,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 131,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 131",
     "question_text": "予防接種法に定める定期予防接種に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4183,7 +4183,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 132,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 132",
     "question_text": "モルヒネ及びその類似化合物が、生体内で受ける代謝に関する記述のうち、正しいのはどれか。２つ選べ。\n\n−脱メチル化されてモルヒネになる。",
     "choices": [
@@ -4217,7 +4217,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 133,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 133",
     "question_text": "化学物質A〜Eの代謝に関する記述のうち、正しいのはどれか。２つ選べ。\n\n−脱メチル化された後、DNA付加体を形成する。",
     "choices": [
@@ -4251,7 +4251,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 134,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 134",
     "question_text": "化学物質のグルクロン酸抱合に関する記述のうち、正しいのはどれか。２つ選べ。\n\n基を有している。",
     "choices": [
@@ -4285,7 +4285,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 135,
     "section": "理論",
-    "subject": "薬理",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 135",
     "question_text": "化学物質の毒性評価とその試験法に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4319,7 +4319,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 136,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 136",
     "question_text": "放射性物質を取り扱う際の放射線被ばくの防護に関する記述のうち、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -4353,7 +4353,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 137,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 137",
     "question_text": "水の浄化法に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4387,7 +4387,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 138,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 138",
     "question_text": "図は、公共用水域の環境基準（BOD又はCOD）達成率の年次推移を示したものである。BOD、COD及び図に関する記述のうち、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -4421,7 +4421,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 139,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 139",
     "question_text": "大気汚染物質の測定方法に関する記述のうち、正しいのはどれか。２つ選べ。\n\nはザルツマン試薬と直接反応しないため、NOに還元してから測定する。\nを遊離する大気汚染物質は、オゾンなどの酸化性物質である。\nmより大きい粒子を除去する分粒装置が用いられる。",
     "choices": [
@@ -4455,7 +4455,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 140,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "衛生",
     "category": "一般 理論問題 - 問 140",
     "question_text": "「化学物質の審査及び製造等の規制に関する法律」（化審法）及び「特定化学物質の環境への排出量の把握等及び管理の改善の促進に関する法律」（化管法）に関する記述のうち、誤っているのはどれか。１つ選べ。",
     "choices": [
@@ -4489,7 +4489,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 141,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 141",
     "question_text": "薬剤師法に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -4523,7 +4523,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 142,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 142",
     "question_text": "薬局に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -4557,7 +4557,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 143,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 143",
     "question_text": "平成29年度の国民医療費の内訳に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
@@ -4591,7 +4591,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 144,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 144",
     "question_text": "医薬分業に関する記述のうち、適切なのはどれか。２つ選べ。",
     "choices": [
@@ -4625,7 +4625,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 145,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "実務",
     "category": "一般 理論問題 - 問 145",
     "question_text": "患者とのコミュニケーションギャップを防ぐための医療従事者の対応として、適切でないのはどれか。１つ選べ。",
     "choices": [
@@ -4659,7 +4659,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 146,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 146",
     "question_text": "患者の自己決定に関する医療従事者の対応として、適切なのはどれか。２つ選べ。",
     "choices": [
@@ -4693,7 +4693,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 147,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 147",
     "question_text": "医薬品の製造販売の承認拒否事由として、適切でないのはどれか。１つ選べ。",
     "choices": [
@@ -4727,7 +4727,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 148,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 148",
     "question_text": "医療法に基づき、医療機関の管理者に求められる医療安全の確保に関する記述のうち、適切なのはどれか。２つ選べ。",
     "choices": [
@@ -4761,7 +4761,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 149,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 149",
     "question_text": "我が国の医療保険制度に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4795,7 +4795,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 150,
     "section": "理論",
-    "subject": "薬剤",
+    "subject": "法規・制度・倫理",
     "category": "一般 理論問題 - 問 150",
     "question_text": "薬価基準制度に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4829,7 +4829,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 151,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 151",
     "question_text": "受容体と細胞内情報伝達に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体が含まれる。\n受容体が含まれる。\n\n受容体が含まれる。",
     "choices": [
@@ -4863,7 +4863,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 152,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 152",
     "question_text": "副交感神経系に作用する薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を刺激して瞳孔散大筋を収縮させる。\n\n受容体を遮断して気管支平滑筋を弛緩させる。\n受容体を刺激して毛様体筋を収縮させる。\n受容体を遮断して排尿筋を弛緩させる。",
     "choices": [
@@ -4897,7 +4897,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 153,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 153",
     "question_text": "自律神経節遮断薬の効果とその説明に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -4931,7 +4931,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 154,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 154",
     "question_text": "催眠・鎮静作用をもつ薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体のGABA結合部位に結合し、Cl－チャネルの開口を促進することで鎮静・催眠作用を示す。\n受容体を遮断し、眠気を誘発する。\n\n受容体を刺激し、ノルアドレナリン放出を抑制することで鎮静作用を示す。\n受容体を遮断し、覚醒状態から睡眠状態へと移行させる。",
     "choices": [
@@ -4965,7 +4965,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 155,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 155",
     "question_text": "パーキンソン病治療薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\n）を阻害することで、脳内のドパミン代謝を抑制する。\n\n受容体を遮断することで、運動機能を回復させる。\n受容体を刺激することで、ドパミン神経系を活性化する。",
     "choices": [
@@ -4999,7 +4999,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 156,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 156",
     "question_text": "貧血の治療薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\nを補充し、DNA合成を促進することで、巨赤芽球性貧血を改善する。",
     "choices": [
@@ -5033,7 +5033,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 157,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 157",
     "question_text": "インドメタシンの副作用である消化性潰瘍の発症機序として正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5067,7 +5067,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 158,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 158",
     "question_text": "下部消化管に作用する薬物に関する記述のうち、正しいのはどれか。２つ選べ。\n\nチャネル2（ClC−2）を活性化することで、腸管腔内への水分分泌を促進する。",
     "choices": [
@@ -5101,7 +5101,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 159,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 159",
     "question_text": "図はステロイドホルモン様の薬理作用をもつ薬物の化学構造を示したものである。この薬物の構造と薬理活性に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5135,7 +5135,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 160,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 160",
     "question_text": "ホルモン関連薬に関する記述のうち、正しいのはどれか。２つ選べ。\n\n受容体を遮断し、利尿作用を示す。",
     "choices": [
@@ -5169,7 +5169,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 161,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 161",
     "question_text": "1型糖尿病の治療に用いられる下図の構造の薬物に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5203,7 +5203,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 162,
     "section": "理論",
-    "subject": "病態・薬物治療",
+    "subject": "薬理",
     "category": "一般 理論問題 - 問 162",
     "question_text": "抗ヒト免疫不全ウイルス（HIV）薬に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5359,7 +5359,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 166,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "病態・薬物治療",
     "category": "",
     "question_text": "問 165−166    ₃₅ 歳 女 性。 身 長 ₁₅₀ cm、 体 重 ₆₅ kg、 血 圧 ₁₃₈/₉₀ mmHg、 喫 煙 歴 あ り\n（₃₀ 本/日）。仕事が忙しくなりストレスが溜まり、暴飲暴食で早食いとなった。\nある日、突然、今までに経験したことがない心窩部痛におそわれ、心配になり近医\nを受診した。検査の結果、逆流性食道炎と診断され、下記の処方で治療が開始さ\nれ、 ₂ ヶ月ほどで軽快した。\n（処方 ₁ ）\nランソプラゾールカプセル ₃₀ mg              ₁ 回 ₁ カプセル（ ₁ 日 ₁ カプセル）\n₁日₁回    朝食後    ₇ 日分\n（処方 ₂ ）\nモサプリドクエン酸塩錠 ₅ mg                ₁ 回 ₁ 錠（ ₁ 日 ₃ 錠）\n₁日₃回    朝昼夕食後       ₇ 日分\n問 166（病態）\nこの患者に関する記述のうち、適切なのはどれか。2つ選べ。\n1    食道下部括約筋の収縮により、胃酸が逆流することにより発症した。\n2    内視鏡検査で食道に炎症やびらんが認められた。\n3    Ca    チャネル遮断薬を併用するとより症状が改善する。\n2+\n4   再発防止のため、この処方 ₂ を継続する必要がある。\n5   薬物療法に加えて禁煙や体重の減量などの生活指導が奏功する。",
     "choices": [],
@@ -5373,7 +5373,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 167,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "病態・薬物治療",
     "category": "一般 理論問題 - 問 167,168",
     "question_text": "47歳男性。身長172 cm、体重85 kg。38歳時より高血圧を指摘され、下記処方にて治療を受けていた。日常、ビールを飲むことが多い。\n\n子供の運動会で短距離走に出場した。運動会終了後、懇親会にて飲酒した次の日、右足母趾の腫脹と痛みを認めた。その後、痛みは徐々に増悪し、患部の赤く腫大した状態が2日間持続していると訴え受診した。\n\n問167（病態）\n患者が訴えている症状を速やか改善させるために処方される薬物として最も適切なのはどれか。１つ選べ。\n\n問168（薬理）\n精査の結果、この患者では左腎結石を認め、以下の検査の結果が得られた。\n検査値：血圧136/86 mmHg、空腹時血糖値110mg/dL、HbA1c6.1％（NGSP値）、LDL−C140 mg/dL、TG（トリグリセリド）210mg/dL、血清クレアチニン値1.1mg/dL、eGFR68mL/min/1.73m2、BUN21mg/dL、尿酸値10.5mg/dL\n\n患者が訴えている症状が寛解した後、その症状の再発を予防する目的で投与される薬物に関する記述のうち、最も適切などれか。１つ選べ。",
     "choices": [
@@ -5427,7 +5427,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 168,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "病態・薬物治療",
     "category": "",
     "question_text": "問 167−168   ₄₇ 歳男性。身長 ₁₇₂ cm、体重 ₈₅ kg。₃₈ 歳時より高血圧を指摘され、下\n記処方にて治療を受けていた。日常、ビールを飲むことが多い。\n（処方）\nカンデサルタンシレキセチル錠 ₈ mg        ₁ 回 ₁ 錠（ ₁ 日 ₁ 錠）\n₁日₁回    朝食後    ₁₄ 日分\n子供の運動会で短距離走に出場した。運動会終了後、懇親会にて飲酒した次の\n日、右足母趾の腫脹と痛みを認めた。その後、痛みは徐々に増悪し、患部の赤く腫\n大した状態が ₂ 日間持続していると訴え受診した。\n問 168（薬理）\n精査の結果、この患者では左腎結石を認め、以下の検査結果が得られた。\n検査値：血圧 ₁₃₆/₈₆ mmHg、空腹時血糖値 ₁₁₀ mg/dL、HbA₁c ₆ . ₁％\n（NGSP 値）\n、\nLDL︲C ₁₄₀ mg/dL、TG（トリグリセリド）₂₁₀ mg/dL、\n血清クレアチニン値 ₁.₁ mg/dL、eGFR ₆₈ mL/min/₁. ₇₃ m 、BUN ₂₁ mg/dL、\n尿酸値 ₁₀ . ₅ mg/dL\n患者が訴えている症状が寛解した後、その症状の再発を予防する目的で投与され\nる薬物に関する記述のうち、最も適切なのはどれか。1つ選べ。\n1   キサンチンオキシダーゼを阻害し、尿酸生成を抑制する。\n2   腎尿細管において、尿酸の再吸収を抑制する。\n3   尿酸をアラントインと過酸化水素に分解する。\n4   シクロオキシゲナーゼを阻害する。\n5   チュブリンと結合して微小管重合を阻害し、好中球の遊走を抑制する。\n一般問題（薬学理論問題）【薬剤】",
     "choices": [],
@@ -5441,7 +5441,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 169,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 169",
     "question_text": "薬物の吸収に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5475,7 +5475,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 170,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 170",
     "question_text": "薬物の生体内分布に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5509,7 +5509,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 171,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 171",
     "question_text": "問 171   1 ～ ５ のうち、アセトアミノフェンによる肝毒性に関与し、エタノールにより\n誘導される酵素が関わる代謝過程はどれか。1つ選べ。\nNHCOCH3                NHCOCH3                NHCOCH3\n1                     2\nCOOH\nOSO3H                  OH                      O\nO\nアセトアミノフェン                 OH\nHO\nOH\nNHCOCH3                         NCOCH3                 NHCOCH3\n4                     5\nS                                                      生体高分子\nHO H            O                 O                      OH\nHOOC    N                   COOH\nN\nO    H        NH2",
     "choices": [],
@@ -5523,7 +5523,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 172,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 172",
     "question_text": "ある薬物を患者に点滴静注により持続投与中である。定常状態における血中薬物濃度は5.0 µg/mLであり、定常状態到達時にいったん完全に排尿し、5時間後に再度排尿した尿の総量は300 mL、尿中薬物濃度は180 µg/mLであった。この患者における糸球体ろ過速度を120 mL/min、薬物の尿細管再吸収率を20％、血中非結合形分率を0.20としたとき、この薬物の尿細管分泌クリアランス（mL/min）に最も近い値はどれか。１つ選べ。",
     "choices": [
@@ -5557,7 +5557,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 173,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 173",
     "question_text": "薬物の胆汁中排泄に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -5591,7 +5591,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 174,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 174",
     "question_text": "治療薬物モニタリング（TDM）が有効な薬物の特徴として、適切でないのはどれか。１つ選べ。",
     "choices": [
@@ -5625,7 +5625,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 175,
     "section": "理論",
-    "subject": "法規・制度・倫理",
+    "subject": "薬剤",
     "category": "一般 理論問題 - 問 175",
     "question_text": "問 175       トランスポーターを介した薬物の尿細管分泌が併用薬によって阻害され、薬物\nの血中濃度上昇をもたらす薬物相互作用として、トランスポーター、薬物、併用薬\nの正しい組合せはどれか。2つ選べ。\nトランスポーター           薬物        併用薬\n中性アミノ酸トランスポーター\n1                          レボドパ       カルビドパ\nLAT₁\n2   P︲糖タンパク質               ジゴキシン      キニジン\n有機アニオントランスポーター\n3                          メトトレキサート   プロベネシド\nOAT₁ 、OAT₃\nペプチドトランスポーター\n4                          メトホルミン     シメチジン\nPEPT₁\nH /有機カチオン逆輸送体\n+\n5                          リチウム       ロキソプロフェン\nMATE₁ 、MATE₂︲K",
     "choices": [
@@ -6631,7 +6631,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 204,
     "section": "実践",
-    "subject": "実務",
+    "subject": "物理",
     "category": "一般 実践問題 - 問 204,205",
     "question_text": "細胞膜などの半透膜を介した水の移動は、膜で隔てられた溶液の浸透圧の差によって起こる。浸透圧の原理を利用した薬物も用いられている。\n\n問204（物理・化学・生物）\n膜により隔てられた二つの水相A、Bの浸透圧ΠA、ΠBと水の移動する方向を表す模式図として正しいのはどれか。１つ選べ。なお、図中の●は水に溶けている溶質で、その数の違いは濃度の大小を表し、矢印は水の移動する方向を表す。\n\n問205（実務）\n前問の浸透圧の原理に基づいた水の動きを利用した薬物はどれか。１つ選べ。",
     "choices": [
@@ -6679,7 +6679,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 206,
     "section": "実践",
-    "subject": "実務",
+    "subject": "薬剤",
     "category": "一般 実践問題 - 問 206,207",
     "question_text": "98歳女性。体重30 kg。逆流性食道炎のため、薬物アが処方された。\n\n薬剤師が処方監査を行ったところ、粉砕して服用すると問題があることが判明したため、処方の変更を医師に提案することとなった。\n\n問206（物理・化学・生物）\n薬物アが生体内において受ける変化（A〜D）に関する記述のうち、粉砕した後に服用すると問題が起こる理由と深く関連しているのはどれか。１つ選べ。\n\n問207（実務）\n粉砕して服用する場合の不都合を回避するために、当該病院の採用薬の中から薬剤師が提案する薬物として、適切でないのはどれか。１つ選べ。ただし、これらの薬剤は全て錠剤であり粉砕して用いるものとする。",
     "choices": [
@@ -6761,7 +6761,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 209,
     "section": "実践",
-    "subject": "実務",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 208−209    ₆₅ 歳男性。がんで入院中。当初、医療チームの方針として、アプレピタン\nトカプセルを制吐剤として投与することが計画されていたが、口内炎が悪化したた\nめ、ホスアプレピタントの点滴静注への変更について再度検討することとなった。\nO                                                        O\nNH       O       H CH3          F   F          HO          NH       O       H CH3          F   F\nHN                    H                                     N                    H\nN                                       HO                 N\nN                                                    P\nO                          F              N                O                          F\nO\nH                                                          H\nF                                                          F\nF                      F   F                               F                      F   F\nアプレピタント                                               ホスアプレピタント\n問 209（物理・化学・生物）\nアプレピタントからホスアプレピタントが創製されたのと同様な目的で開発され\nたプロドラッグはどれか。1つ選べ。\n1            H2N\nO                            2                                    O\nO H                   O          CH3                                           HN           N\nH3C      N                                  ・H3PO4                              H2N        N       N   ・HCI\nHH\nH O                                              H2N         H\nH3C                     O\nH3C                  CH3                                                               O\nCH3         O\nオセルタミビルリン酸塩                                                  バラシクロビル塩酸塩\n3                                                        O\nO         O\nH3C                                          HN          CH3\nH\nO                 N\nSCH3\nH\nO\nO\nH3C\nO         O\nドカルパミン\n4                  H   OH              CI                      5                                   CH3\nH\nN\nCI                                                         COONa\nH          O\nO 2N\nO                   COONa\nO\nO\nクロラムフェニコールコハク酸                                            ロキソプロフェンナトリウム\nエステルナトリウム",
     "choices": [],
@@ -7391,7 +7391,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 230,
     "section": "実践",
-    "subject": "実務",
+    "subject": "病態・薬物治療",
     "category": "",
     "question_text": "ジアゼパム錠を常用している32歳女性患者から主治医に、妊娠と薬の服用について相談があった。相談を受けた医師がジアゼパム錠の添付文書を確認したところ、次の記載があった。\n医師は、この記載の下線部の根拠についてさらに詳細な情報を得るため、医薬品情報室の薬剤師に相談した。薬剤師は、妊娠中のベンゾジアゼピン系薬剤の服用と胎児の奇形発生の関係に関する論文を検索した。\n問230（衛生）\n\n　薬剤師が検索した論文の1つに下表が掲載されていた。このデータから計算されるベンゾジアゼピン系薬剤の服用による奇形発生のオッズ比として最も近い値はどれか。１つ選べ。",
     "choices": [
@@ -7487,7 +7487,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 234,
     "section": "実践",
-    "subject": "実務",
+    "subject": "衛生",
     "category": "",
     "question_text": "問 234−235                ある新人薬剤師が、性的接触を介して感染する感染症と診断された患者に\n処方された薬剤の調剤を何例か経験したため、この感染症に関する情報を調べた。\n我が国において、この感染症は異性間よりも同性間の性的接触による感染の方が多\nく、また、症状が進行した場合はニューモシスチス肺炎やカンジダ症を合併するこ\nとが分かった。\n問 234（衛生）\n我が国におけるこの感染症の男女別の発生動向を示した図はどれか。1つ選べ。\n1                                                                  4\n₁ , ₂₀₀                                                   ₂₀ , ₀₀₀\n患者数︵全数把握︶                                                  患者数︵定点把握︶\n₈₀₀\n₁₀ , ₀₀₀\n₄₀₀\n₀                                                          ₀\n₂₀₀₀   ₂₀₀₅       ₂₀₁₀   ₂₀₁₅   年                          ₂₀₀₀       ₂₀₀₅           ₂₀₁₀   ₂₀₁₅   年\n2                                                                  5\n₃₀ , ₀₀₀\n患者数︵定点把握︶                                                  患者数︵全数把握︶\n₄ , ₀₀₀\n₂₀ , ₀₀₀\n₂ , ₀₀₀\n₁₀ , ₀₀₀\n₀                                                          ₀\n₂₀₀₀   ₂₀₀₅       ₂₀₁₀   ₂₀₁₅   年                          ₂₀₀₀       ₂₀₀₅           ₂₀₁₀   ₂₀₁₅   年\n₆ , ₀₀₀\n男          女\n患者数︵定点把握︶\n厚生労働省感染症発生\n₄ , ₀₀₀                                                        動向調査資料より\n₂ , ₀₀₀\n₀\n₂₀₀₀   ₂₀₀₅       ₂₀₁₀   ₂₀₁₅   年",
     "choices": [],
@@ -7645,7 +7645,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 241,
     "section": "実践",
-    "subject": "実務",
+    "subject": "衛生",
     "category": "",
     "question_text": "問 240−241   有名芸能人がコカインを所持し、使用していた事件が報道された。地域の\n自治会より、健康サポート薬局の薬剤師にコカインの特徴や問題点について講演依\n頼があった。\n問 241（衛生）\nコカインの構造、代謝及び作用機序に関する記述のうち、正しいのはどれか。2\nつ選べ。\n1   神経伝達物質ドパミンと同様の骨格を有している。\n2   バルビツール酸誘導体と同様に、中枢抑制作用を示す。\n3   耐性が生じるのは、代謝物として D9︲テトラヒドロカンナビノールが生成する\nためである。\n4   妊婦が摂取すると、血管収縮作用により胎児への血流量が減少する。\n5   体内で速やかに加水分解され、尿中に排泄される。",
     "choices": [
@@ -7713,7 +7713,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 243,
     "section": "実践",
-    "subject": "実務",
+    "subject": "物理",
     "category": "",
     "question_text": "問 242−243   ₆₈ 歳男性。認知症の検査のため入院。問診に加え、ドパミントランスポー\nターシンチグラフィーを行うことになった。担当医より薬剤部に放射性医薬品の準\n備依頼があった。\n問 243（衛生）\nこの検査で使用する画像診断法はどれか。1つ選べ。\n1   X 線 CT（X︲ray computed tomography）\n2   MRI（magnetic resonance imaging）\n3   PET（positron emission tomography）\n4   SPECT（single photon emission computed tomography）\n5   IVR（interventional radiology）",
     "choices": [
@@ -8069,7 +8069,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 257,
     "section": "実践",
-    "subject": "実務",
+    "subject": "薬理",
     "category": "",
     "question_text": "問 256−257   ₅₂ 歳女性。全身倦怠感と微熱、手足の関節痛と朝のこわばりを訴えて受診\nしたところ、関節リウマチと診断された。メトトレキサート過敏症の既往歴がある\nため、代替薬について、医師より薬剤師に相談があった。\n問 257（薬理）\n医師に推奨すべきそれぞれの薬物の作用機序はどれか。2つ選べ。\n1   シクロオキシゲナーゼ（COX）の阻害\n2   ピリミジンヌクレオチドの合成抑制\n3   T 細胞及びマクロファージでのサイトカイン産生抑制\n4   腫瘍壊死因子（TNF）︲ a の捕捉\n5   オピオイド n 受容体の刺激",
     "choices": [],
@@ -8639,7 +8639,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 282,
     "section": "実践",
-    "subject": "実務",
+    "subject": "薬剤",
     "category": "",
     "question_text": "73歳女性。卵巣がんStageⅢcに対してTC（パクリタキセル＋カルボプラチン）療法を施行していたが6ヶ月後に再発した。そこで2次療法として、ドキソルビシン塩酸塩をMPEG–DSPE（注）修飾リポソームに封入した注射剤（ドキシル®注）を導入することになった。\n問282（薬剤）\n\nドキシル®注に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
@@ -9215,7 +9215,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 306,
     "section": "実践",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "",
     "question_text": "焼き鳥屋に勤務している従業員が油で汚れた換気扇の掃除を行うため、20 w/v%水酸化ナトリウム溶液を買い求めに来局した。この焼き鳥屋は、毒物劇物営業者ではなく、今回初めてこの薬局を利用した。なお、この20 w/v%水酸化ナトリウム溶液は劇物である。\n問306（法規・制度・倫理）\n\nこの薬局の薬剤師が、20 w/v%水酸化ナトリウム溶液を販売する際の対応として、適切なのはどれか。２つ選べ。",
     "choices": [
@@ -9249,7 +9249,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 307,
     "section": "実践",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "",
     "question_text": "問 306−307   焼き鳥屋に勤務している従業員が油で汚れた換気扇の掃除を行うため、\n₂₀ w/v％水酸化ナトリウム溶液を買い求めに来局した。この焼き鳥屋は、毒物劇\n物営業者ではなく、今回初めてこの薬局を利用した。なお、この ₂₀ w/v％水酸化\nナトリウム溶液は劇物である。\n問 307（実務）\n販売することになった ₂₀ w/v％水酸化ナトリウム溶液の使用に関する薬剤師の\nアドバイスとして、適切でないのはどれか。1つ選べ。\n1   腐食性があるので、素手で触らないでください。\n2   失明のおそれがあるので、保護メガネなどを使ってください。\n3   危害防止のため、希薄な水溶液とし、中和した後、多量の水で希釈して廃棄し\nてください。\n4   誤飲防止のため、飲食をしながら使用しないでください。\n5   引火性があるので、火のそばで使わないでください。",
     "choices": [],
@@ -9373,7 +9373,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 313,
     "section": "実践",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "",
     "question_text": "問 310−313   ₄₆ 歳男性。 ₂ 年前に甲状腺全摘手術を受けた後、レボチロキシンナトリウ\nム錠内服による薬物治療を行っている。通院間隔が ₆ ヶ月に一度に変更になり、\n₁₈₀ 日分の処方箋を持って来局した。この患者の薬剤服用歴を確認すると、過去に\n服用忘れや、自己判断で服用を中断していた可能性が疑われた。長期処方への変更\nに伴い、薬剤師が服薬アドヒアランスに関連した注意事項を説明することになっ\nた。\n問 313（実務）\nこの介入研究において、レボチロキシンナトリウム錠の服薬アドヒアランスを評\n価する方法として、適切なのはどれか。2つ選べ。\n1   薬剤服用歴から、調剤した薬剤種類数を調べる。\n2   患者に持参してもらった残薬数から服薬率を算出する。\n3   患者から飲み忘れの有無を聞き取る。\n4   処方した医師に処方意図を確認する。\n5   併用薬との相互作用の有無を調べる。",
     "choices": [],
@@ -9469,7 +9469,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 317,
     "section": "実践",
-    "subject": "実務",
+    "subject": "薬剤",
     "category": "",
     "question_text": "問 316−317   ₆₈ 歳男性、肝硬変。低タンパク血症によると考えられる難治性の腹水が認\nめられたため、高張アルブミン製剤（献血アルブミン ₂₀％静注）による治療が開\n始された。初回投与前の血清アルブミン濃度は ₁ . ₉ g/dL であり、投与後の目標血\n清アルブミン濃度は ₃ . ₅ g/dL とされた。なお、この薬剤の容器には「特生物」の\n表示がある。\n問 317（法規・制度・倫理）\nこの薬剤を取り扱う薬剤師が行わなければならないこととして、適切なのはどれ\nか。2つ選べ。\n1   鍵のかかる場所で保管する。\n2   保管場所に白地に赤枠、赤字をもって「特生物」の表示を行う。\n3   使用した患者の氏名及び住所、使用した薬剤の名称及び製造番号又は製造記\n号、使用年月日、その他必要な事項を記録する。\n4   使用に関する記録を、その使用した日から少なくとも ₁₀ 年間保存する。\n5   使用による感染症の発生について、危害の発生を防止するために必要があると\n認めるときは、その旨を厚生労働大臣に報告する。",
     "choices": [
@@ -9503,7 +9503,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 318,
     "section": "実践",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "",
     "question_text": "保険薬局に勤務して3年が経過した薬剤師が、今年度から近隣の中学校の学校薬剤師を担当することになった。1ヶ月後には薬物乱用防止教室での講師を担当することになっている。そのため、学校保健安全法の内容を確認することにした。\n問318（法規・倫理・制度）\n\n　この法律に基づく学校薬剤師の職務として、適切でないのはどれか。１つ選べ。",
     "choices": [
@@ -9605,7 +9605,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 321,
     "section": "実践",
-    "subject": "実務",
+    "subject": "法規・制度・倫理",
     "category": "",
     "question_text": "問 320−321   ₃₆ 歳女性。以前から、関節リウマチに対して以下の薬剤による治療を受け\nていた。ある日、体調不良により緊急入院となり、この薬剤による間質性肺炎と診\n断された。この薬剤の服用開始時に、薬剤師が重大な副作用の初期症状を説明して\nいた。そのため、副作用である間質性肺炎が早期に発見され入院治療することがで\nきた。\n（処方）\nメトトレキサートカプセル ₂ mg    ₁ 回 ₁ カプセル（ ₁ 日 ₂ カプセル）\n毎週   日曜日   ₁日₂回   ₉ 時、₂₁ 時   ₄ 日分（投与実日数）\nメトトレキサートカプセル ₂ mg    ₁ 回 ₁ カプセル（ ₁ 日 ₁ カプセル）\n毎週   月曜日   ₁日₁回   ₉時   ₄ 日分（投与実日数）\n問 321（法規・制度・倫理）\nこの患者の家族から、医薬品副作用被害救済制度について質問を受けた。この制\n度の説明のうち、正しいのはどれか。2つ選べ。\n1   医療用医薬品は、どれでも救済給付の対象になります。\n2   救済給付の可否は、製造販売業者が決定します。\n3   救済給付を受けるためには、患者本人等による給付申請が必要です。\n4   症状や程度にかかわらず、給付額は一定です。\n5   入院治療を受けていても、救済給付が受けられない場合があります。",
     "choices": [],
@@ -9881,7 +9881,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "year": 105,
     "question_number": 331,
     "section": "実践",
-    "subject": "実務",
+    "subject": "薬剤",
     "category": "",
     "question_text": "40歳男性。MRSAへの感染が確認され、翌朝よりバンコマイシンを1回1,000mg、1日2回（8:00、20:00）、点滴時間を1時間で投与する予定である。バンコマイシンの投与量を決定するために最適な採血タイミングはどれか。１つ選べ。なお、この患者におけるバンコマイシンの消失半減期は12時間程度と見積もられている。",
     "choices": [
