@@ -60,6 +60,7 @@ export interface QuestionFilter {
   years?: number[]
   correctStatus?: 'all' | 'correct' | 'incorrect' | 'unanswered'
   hasNote?: boolean
+  hasImage?: boolean
   tags?: string[]
   keyword?: string
 }
