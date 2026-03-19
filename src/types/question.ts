@@ -36,6 +36,7 @@ export interface Question {
   tags: string[]            // キーワードタグ
   correct_rate?: number     // 正答率（0〜1）。60%以上が演習推奨
   image_url?: string        // 問題に図がある場合
+  question_text_original?: string  // クリーニング前のテキスト（ロールバック用）
 }
 
 /** 自信度 */
