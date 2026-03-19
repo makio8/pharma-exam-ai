@@ -1,5 +1,5 @@
 // 問題演習画面 - 4択・正誤判定・解説・付箋作成
-import { useState, useMemo, useCallback, useEffect, useRef } from 'react'
+import React, { useState, useMemo, useCallback, useEffect, useRef } from 'react'
 import {
   Card,
   Typography,
@@ -255,44 +255,95 @@ export function QuestionPage() {
       )}
 
       {/* 選択肢 */}
-      <Card size="small" style={{ marginBottom: 16 }}>
-        <Radio.Group
-          value={selectedAnswer}
-          onChange={(e) => {
-            if (!isAnswered) setSelectedAnswer(e.target.value as number)
-          }}
-          style={{ width: '100%' }}
-        >
-          <Space orientation="vertical" style={{ width: '100%' }}>
-            {question.choices.map((choice) => (
-              <Card
-                key={choice.key}
-                size="small"
-                hoverable={!isAnswered}
-                style={{
+      {question.choices.length === 0 ? (
+        /* 番号ボタンUI（choices空 = 画像問題） */
+        question.correct_answer === 0 ? (
+          <Card size="small" style={{ marginBottom: 16, textAlign: 'center' }}>
+            <Text type="secondary">この問題はデータ準備中です</Text>
+          </Card>
+        ) : (
+          <Card size="small" style={{ marginBottom: 16 }}>
+            <div style={{ display: 'flex', gap: 8, justifyContent: 'center' }}>
+              {Array.from({ length: Math.max(5, question.correct_answer) }, (_, i) => i + 1).map((num) => {
+                let btnStyle: React.CSSProperties = {
+                  flex: 1,
+                  minWidth: 48,
+                  height: 48,
+                  fontSize: 18,
+                  fontWeight: 'bold',
+                  border: '2px solid #d9d9d9',
+                  borderRadius: 8,
+                  background: 'white',
                   cursor: isAnswered ? 'default' : 'pointer',
-                  ...choiceStyle(choice.key),
-                }}
-                onClick={() => {
-                  if (!isAnswered) setSelectedAnswer(choice.key)
-                }}
-              >
-                <Radio value={choice.key} disabled={isAnswered}>
-                  <Text style={{ fontSize: 15 }}>
-                    {choice.key}. {choice.text}
-                  </Text>
-                  {isAnswered && choice.key === question.correct_answer && (
-                    <CheckCircleFilled style={{ color: '#52c41a', marginLeft: 8 }} />
-                  )}
-                  {isAnswered && choice.key === selectedAnswer && !isCorrect && choice.key !== question.correct_answer && (
-                    <CloseCircleFilled style={{ color: '#f5222d', marginLeft: 8 }} />
-                  )}
-                </Radio>
-              </Card>
-            ))}
-          </Space>
-        </Radio.Group>
-      </Card>
+                  transition: 'all 0.2s',
+                }
+
+                if (!isAnswered && selectedAnswer === num) {
+                  btnStyle = { ...btnStyle, borderColor: '#1890ff', background: '#e6f7ff', color: '#1890ff' }
+                } else if (isAnswered && num === question.correct_answer) {
+                  btnStyle = { ...btnStyle, borderColor: '#52c41a', background: '#f6ffed', color: '#52c41a' }
+                } else if (isAnswered && num === selectedAnswer && !isCorrect) {
+                  btnStyle = { ...btnStyle, borderColor: '#ff4d4f', background: '#fff2f0', color: '#ff4d4f' }
+                }
+
+                return (
+                  <button
+                    key={num}
+                    type="button"
+                    style={btnStyle}
+                    onClick={() => { if (!isAnswered) setSelectedAnswer(num) }}
+                    disabled={isAnswered}
+                  >
+                    {num}
+                    {isAnswered && num === question.correct_answer && ' ✓'}
+                    {isAnswered && num === selectedAnswer && !isCorrect && num !== question.correct_answer && ' ✗'}
+                  </button>
+                )
+              })}
+            </div>
+          </Card>
+        )
+      ) : (
+        /* 通常の選択肢UI（既存コードそのまま） */
+        <Card size="small" style={{ marginBottom: 16 }}>
+          <Radio.Group
+            value={selectedAnswer}
+            onChange={(e) => {
+              if (!isAnswered) setSelectedAnswer(e.target.value as number)
+            }}
+            style={{ width: '100%' }}
+          >
+            <Space orientation="vertical" style={{ width: '100%' }}>
+              {question.choices.map((choice) => (
+                <Card
+                  key={choice.key}
+                  size="small"
+                  hoverable={!isAnswered}
+                  style={{
+                    cursor: isAnswered ? 'default' : 'pointer',
+                    ...choiceStyle(choice.key),
+                  }}
+                  onClick={() => {
+                    if (!isAnswered) setSelectedAnswer(choice.key)
+                  }}
+                >
+                  <Radio value={choice.key} disabled={isAnswered}>
+                    <Text style={{ fontSize: 15 }}>
+                      {choice.key}. {choice.text}
+                    </Text>
+                    {isAnswered && choice.key === question.correct_answer && (
+                      <CheckCircleFilled style={{ color: '#52c41a', marginLeft: 8 }} />
+                    )}
+                    {isAnswered && choice.key === selectedAnswer && !isCorrect && choice.key !== question.correct_answer && (
+                      <CloseCircleFilled style={{ color: '#f5222d', marginLeft: 8 }} />
+                    )}
+                  </Radio>
+                </Card>
+              ))}
+            </Space>
+          </Radio.Group>
+        </Card>
+      )}
 
       {/* 回答ボタン */}
       {!isAnswered && (
@@ -300,7 +351,7 @@ export function QuestionPage() {
           type="primary"
           size="large"
           block
-          disabled={selectedAnswer === null}
+          disabled={selectedAnswer === null || question.correct_answer === 0}
           onClick={handleSubmitAnswer}
           style={{ marginBottom: 16 }}
         >
