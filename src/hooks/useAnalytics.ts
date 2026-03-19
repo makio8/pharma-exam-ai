@@ -126,6 +126,10 @@ export interface UseAnalyticsReturn {
   recentNotes: StickyNote[]
   /** データが空か（初回起動判定用） */
   isEmpty: boolean
+  /** 連続学習日数（今日または昨日から遡って連続で回答がある日数） */
+  streakDays: number
+  /** 昨日の不正解数 */
+  yesterdayMistakeCount: number
 }
 
 export function useAnalytics(): UseAnalyticsReturn {
@@ -282,6 +286,39 @@ export function useAnalytics(): UseAnalyticsReturn {
 
     const isEmpty = allHistory.length === 0 && allNotes.length === 0
 
+    // --- 連続学習日数（streakDays） ---
+    // 回答がある日付の集合を作成
+    const answeredDates = new Set<string>()
+    for (const h of allHistory) {
+      answeredDates.add(h.answered_at.slice(0, 10))
+    }
+    // 今日から遡ってカウント。今日回答がなければ昨日から開始
+    let streakDays = 0
+    const streakStart = new Date()
+    const todayKey = streakStart.toISOString().slice(0, 10)
+    if (!answeredDates.has(todayKey)) {
+      // 今日未回答 → 昨日から数え始める
+      streakStart.setDate(streakStart.getDate() - 1)
+    }
+    for (let i = 0; i < 365; i++) {
+      const d = new Date(streakStart)
+      d.setDate(d.getDate() - i)
+      const key = d.toISOString().slice(0, 10)
+      if (answeredDates.has(key)) {
+        streakDays++
+      } else {
+        break
+      }
+    }
+
+    // --- 昨日の不正解数 ---
+    const yesterday = new Date()
+    yesterday.setDate(yesterday.getDate() - 1)
+    const yesterdayKey = yesterday.toISOString().slice(0, 10)
+    const yesterdayMistakeCount = allHistory.filter(
+      (h) => h.answered_at.slice(0, 10) === yesterdayKey && !h.is_correct
+    ).length
+
     return {
       subjectAccuracies,
       weakQuestions,
@@ -294,6 +331,8 @@ export function useAnalytics(): UseAnalyticsReturn {
       recommendedQuestions: recommended,
       recentNotes,
       isEmpty,
+      streakDays,
+      yesterdayMistakeCount,
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []) // ページマウント時に1回だけ計算（localStorageはページ遷移で更新される）
