@@ -1,0 +1,249 @@
+/**
+ * 座標ベースで問題画像をクロップする
+ * pdftotext -bbox の座標情報を使い、問題ごとに必要な領域だけ切り出す
+ *
+ * npx tsx scripts/crop-question-images.ts --year 100       # 単年
+ * npx tsx scripts/crop-question-images.ts --year 100-110   # 範囲指定
+ * npx tsx scripts/crop-question-images.ts                  # デフォルト: 100-110
+ */
+
+import * as fs from 'fs'
+import * as path from 'path'
+import { execSync } from 'child_process'
+import { fileURLToPath } from 'url'
+import sharp from 'sharp'
+
+import { parseBboxPage, findQuestionPositions, isCoverPage } from './lib/bbox-parser.ts'
+import { calcCropRegion, cropImage } from './lib/crop-utils.ts'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+// --- PDF設定 ---
+interface PdfConfig {
+  file: string
+  prefix: string
+  section: string
+  qRange: [number, number]
+}
+
+function getPdfConfigs(year: number): PdfConfig[] {
+  return [
+    { file: `q${year}-hissu.pdf`, prefix: `q${year}-hissu`, section: '必須', qRange: [1, 90] },
+    { file: `q${year}-riron1.pdf`, prefix: `q${year}-riron1`, section: '理論', qRange: [91, 150] },
+    { file: `q${year}-riron2.pdf`, prefix: `q${year}-riron2`, section: '理論', qRange: [151, 195] },
+    { file: `q${year}-jissen1.pdf`, prefix: `q${year}-jissen1`, section: '実践', qRange: [196, 245] },
+    { file: `q${year}-jissen2.pdf`, prefix: `q${year}-jissen2`, section: '実践', qRange: [246, 285] },
+    { file: `q${year}-jissen3.pdf`, prefix: `q${year}-jissen3`, section: '実践', qRange: [286, 345] },
+  ]
+}
+
+// --- ユーティリティ ---
+function getPdfPageCount(pdfPath: string): number {
+  try {
+    const info = execSync(`pdfinfo "${pdfPath}" 2>/dev/null`, { encoding: 'utf-8' })
+    const m = info.match(/Pages:\s+(\d+)/)
+    return m ? parseInt(m[1]) : 0
+  } catch {
+    return 0
+  }
+}
+
+function getBboxHtml(pdfPath: string, page: number): string {
+  try {
+    return execSync(`pdftotext -bbox -f ${page} -l ${page} "${pdfPath}" -`, {
+      encoding: 'utf-8',
+      timeout: 10000,
+    })
+  } catch {
+    return ''
+  }
+}
+
+function findPageImage(pagesDir: string, prefix: string, page: number): string | null {
+  // 2桁パディングを試す
+  const pad2 = path.join(pagesDir, `${prefix}-${String(page).padStart(2, '0')}.png`)
+  if (fs.existsSync(pad2)) return pad2
+  // 3桁パディングを試す
+  const pad3 = path.join(pagesDir, `${prefix}-${String(page).padStart(3, '0')}.png`)
+  if (fs.existsSync(pad3)) return pad3
+  return null
+}
+
+/** exam-{year}.ts を読み込み、choices: [] の問題番号セットを返す */
+function loadEmptyChoicesQuestions(year: number): Set<number> {
+  const tsPath = path.join(__dirname, '..', 'src', 'data', 'real-questions', `exam-${year}.ts`)
+  if (!fs.existsSync(tsPath)) {
+    console.log(`  警告: ${tsPath} が見つかりません`)
+    return new Set()
+  }
+  const content = fs.readFileSync(tsPath, 'utf-8')
+  // JSONの配列部分を抽出（最初の [ から末尾まで）
+  const arrayStart = content.indexOf('[\n')
+  if (arrayStart === -1) {
+    console.log(`  警告: exam-${year}.ts のパースに失敗`)
+    return new Set()
+  }
+  // 末尾の余分なテキストを除去 — ] で終わる部分を探す
+  const jsonPart = content.substring(arrayStart).trimEnd()
+  try {
+    const questions = JSON.parse(jsonPart)
+    const emptySet = new Set<number>()
+    for (const q of questions) {
+      if (!q.choices || q.choices.length === 0) {
+        emptySet.add(q.question_number)
+      }
+    }
+    return emptySet
+  } catch (e) {
+    console.log(`  警告: exam-${year}.ts のJSONパースエラー: ${(e as Error).message}`)
+    return new Set()
+  }
+}
+
+// --- メイン処理 ---
+interface YearResult {
+  year: number
+  targetQuestions: number
+  cropped: number
+  skipped: number
+  errors: number
+}
+
+async function processYear(year: number): Promise<YearResult> {
+  console.log(`\n=== 第${year}回 ===`)
+
+  const pagesDir = `/tmp/claude/exam-pages/${year}`
+  const outputDir = path.join(__dirname, '..', 'public', 'images', 'questions', String(year))
+  fs.mkdirSync(outputDir, { recursive: true })
+
+  // choices: [] の問題番号を取得
+  const targetSet = loadEmptyChoicesQuestions(year)
+  console.log(`  対象問題（choices空）: ${targetSet.size}問`)
+
+  if (targetSet.size === 0) {
+    return { year, targetQuestions: 0, cropped: 0, skipped: 0, errors: 0 }
+  }
+
+  const pdfs = getPdfConfigs(year)
+  let cropped = 0
+  let skipped = 0
+  let errors = 0
+
+  for (const pdf of pdfs) {
+    const pdfPath = `/tmp/claude/${pdf.file}`
+    if (!fs.existsSync(pdfPath)) {
+      console.log(`  警告: ${pdfPath} が見つかりません — スキップ`)
+      continue
+    }
+
+    // この PDF の範囲に該当する対象問題があるか
+    const relevantTargets = [...targetSet].filter(
+      n => n >= pdf.qRange[0] && n <= pdf.qRange[1]
+    )
+    if (relevantTargets.length === 0) continue
+
+    const totalPages = getPdfPageCount(pdfPath)
+    console.log(`  ${pdf.file}: ${totalPages}ページ, 対象${relevantTargets.length}問`)
+
+    for (let p = 1; p <= totalPages; p++) {
+      const html = getBboxHtml(pdfPath, p)
+      if (!html) continue
+
+      const pageInfo = parseBboxPage(html)
+      if (isCoverPage(pageInfo)) continue
+
+      const positions = findQuestionPositions(pageInfo)
+      if (positions.length === 0) continue
+
+      // このページに対象問題があるか
+      const targetPositions = positions.filter(pos => targetSet.has(pos.questionNumber))
+      if (targetPositions.length === 0) continue
+
+      // ページ画像を探す
+      const imgPath = findPageImage(pagesDir, pdf.prefix, p)
+      if (!imgPath) {
+        console.log(`    警告: ページ画像なし ${pdf.prefix}-${p}`)
+        skipped += targetPositions.length
+        continue
+      }
+
+      // 画像の実際の高さを取得
+      const metadata = await sharp(imgPath).metadata()
+      const imageHeight = metadata.height ?? 0
+      if (imageHeight === 0) {
+        skipped += targetPositions.length
+        continue
+      }
+
+      // 各対象問題をクロップ
+      for (const tPos of targetPositions) {
+        // 次の問題の位置を探す（同じページ内の次の問題）
+        const posIdx = positions.findIndex(p => p.questionNumber === tPos.questionNumber)
+        const nextPos = posIdx < positions.length - 1 ? positions[posIdx + 1] : null
+
+        const region = calcCropRegion(
+          tPos,
+          nextPos,
+          pageInfo.width,
+          pageInfo.height,
+          imageHeight
+        )
+
+        const destFile = path.join(
+          outputDir,
+          `q${String(tPos.questionNumber).padStart(3, '0')}.png`
+        )
+
+        const ok = await cropImage(imgPath, region, destFile)
+        if (ok) {
+          cropped++
+        } else {
+          errors++
+        }
+      }
+    }
+  }
+
+  console.log(`  結果: クロップ ${cropped}枚 / スキップ ${skipped} / エラー ${errors}`)
+  return { year, targetQuestions: targetSet.size, cropped, skipped, errors }
+}
+
+async function main() {
+  const yearArg = process.argv.find((_, i) => process.argv[i - 1] === '--year')
+  let years: number[]
+  if (yearArg && yearArg.includes('-')) {
+    const [start, end] = yearArg.split('-').map(Number)
+    years = Array.from({ length: end - start + 1 }, (_, i) => start + i)
+  } else if (yearArg) {
+    years = [Number(yearArg)]
+  } else {
+    years = Array.from({ length: 11 }, (_, i) => 100 + i) // 100-110
+  }
+
+  console.log(`処理対象: 第${years[0]}回〜第${years[years.length - 1]}回`)
+
+  const results: YearResult[] = []
+  for (const year of years) {
+    results.push(await processYear(year))
+  }
+
+  // サマリー
+  console.log('\n=== サマリー ===')
+  let totalTarget = 0
+  let totalCropped = 0
+  let totalSkipped = 0
+  let totalErrors = 0
+  for (const r of results) {
+    console.log(
+      `第${r.year}回: 対象${r.targetQuestions}問 → クロップ${r.cropped}枚 / スキップ${r.skipped} / エラー${r.errors}`
+    )
+    totalTarget += r.targetQuestions
+    totalCropped += r.cropped
+    totalSkipped += r.skipped
+    totalErrors += r.errors
+  }
+  console.log(`合計: 対象${totalTarget}問 → クロップ${totalCropped}枚 / スキップ${totalSkipped} / エラー${totalErrors}`)
+}
+
+main().catch(console.error)
