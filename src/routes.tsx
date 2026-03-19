@@ -7,6 +7,8 @@ const PracticePage = React.lazy(() => import('./pages/PracticePage').then(m => (
 const QuestionPage = React.lazy(() => import('./pages/QuestionPage').then(m => ({ default: m.QuestionPage })))
 const NotesPage = React.lazy(() => import('./pages/NotesPage').then(m => ({ default: m.NotesPage })))
 const AnalysisPage = React.lazy(() => import('./pages/AnalysisPage').then(m => ({ default: m.AnalysisPage })))
+const FlashCardListPage = React.lazy(() => import('./pages/FlashCardListPage').then(m => ({ default: m.FlashCardListPage })))
+const FlashCardPage = React.lazy(() => import('./pages/FlashCardPage').then(m => ({ default: m.FlashCardPage })))
 const LoginPage = React.lazy(() => import('./pages/LoginPage').then(m => ({ default: m.LoginPage })))
 
 const Loading = () => <div style={{ padding: '2rem', textAlign: 'center' }}>読み込み中...</div>
@@ -31,6 +33,14 @@ export const router = createBrowserRouter([
   {
     path: '/notes',
     element: <AppLayout><Suspense fallback={<Loading />}><NotesPage /></Suspense></AppLayout>,
+  },
+  {
+    path: '/cards',
+    element: <AppLayout><Suspense fallback={<Loading />}><FlashCardListPage /></Suspense></AppLayout>,
+  },
+  {
+    path: '/cards/review',
+    element: <AppLayout><Suspense fallback={<Loading />}><FlashCardPage /></Suspense></AppLayout>,
   },
   {
     path: '/analysis',

@@ -2,7 +2,7 @@ import { Layout, Menu, Typography, Button, Avatar, Tooltip } from 'antd'
 import {
   HomeOutlined,
   ReadOutlined,
-  BulbOutlined,
+  CreditCardOutlined,
   BarChartOutlined,
   UserOutlined,
   LogoutOutlined,
@@ -16,7 +16,7 @@ const { Text } = Typography
 const NAV_ITEMS = [
   { key: '/', label: 'ホーム', icon: <HomeOutlined /> },
   { key: '/practice', label: '演習', icon: <ReadOutlined /> },
-  { key: '/notes', label: '付箋', icon: <BulbOutlined /> },
+  { key: '/cards', label: 'カード', icon: <CreditCardOutlined /> },
   { key: '/analysis', label: '分析', icon: <BarChartOutlined /> },
 ]
 

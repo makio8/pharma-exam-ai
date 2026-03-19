@@ -30,6 +30,9 @@ import { useAnswerHistory } from '../hooks/useAnswerHistory'
 import { NOTE_TYPE_CONFIG } from '../types/note'
 import type { NoteType, NoteVisibility, StickyNote } from '../types/note'
 import type { ConfidenceLevel } from '../types/question'
+import type { CardFormat } from '../types/flashcard'
+import { CARD_FORMAT_CONFIG } from '../types/flashcard'
+import { useFlashCards } from '../hooks/useFlashCards'
 
 const { Text, Paragraph } = Typography
 const { TextArea } = Input
@@ -92,6 +95,11 @@ export function QuestionPage() {
   const [noteModalOpen, setNoteModalOpen] = useState(false)
   const [form] = Form.useForm()
 
+  // --- 暗記カードモーダル ---
+  const [cardModalOpen, setCardModalOpen] = useState(false)
+  const [cardForm] = Form.useForm()
+  const { addCard } = useFlashCards()
+
   // 既存の回答があるか確認
   const existingResult = useMemo(
     () => (questionId ? getQuestionResult(questionId) : undefined),
@@ -149,6 +157,29 @@ export function QuestionPage() {
         // バリデーションエラー — フォームが表示するので何もしない
       })
   }, [form, question])
+
+  /** 暗記カードを保存 */
+  const handleSaveCard = useCallback(() => {
+    cardForm
+      .validateFields()
+      .then((values: { front: string; back: string; format: CardFormat; tags: string[] }) => {
+        addCard({
+          user_id: 'local_user',
+          question_id: question?.id ?? '',
+          topic_id: question?.category ?? '',
+          subject: question?.subject ?? '薬理',
+          front: values.front,
+          back: values.back,
+          format: values.format,
+          tags: values.tags ?? [],
+        })
+        setCardModalOpen(false)
+        cardForm.resetFields()
+      })
+      .catch(() => {
+        // バリデーションエラー — フォームが表示するので何もしない
+      })
+  }, [cardForm, question, addCard])
 
   /** 次の問題へ遷移（状態リセットのためページリロード的にnavigateする） */
   const goToQuestion = (id: string) => {
@@ -385,14 +416,20 @@ export function QuestionPage() {
             </Space>
           </Card>
 
-          {/* 付箋作成ボタン */}
-          <Button
-            icon={<FormOutlined />}
-            onClick={() => setNoteModalOpen(true)}
-            style={{ marginBottom: 16 }}
-          >
-            付箋を作成
-          </Button>
+          {/* 付箋作成・カード作成ボタン */}
+          <Space style={{ marginBottom: 16 }}>
+            <Button
+              icon={<FormOutlined />}
+              onClick={() => setNoteModalOpen(true)}
+            >
+              付箋を作成
+            </Button>
+            <Button
+              onClick={() => setCardModalOpen(true)}
+            >
+              暗記カードを作る
+            </Button>
+          </Space>
 
           <Divider />
         </>
@@ -476,6 +513,66 @@ export function QuestionPage() {
 
           <Form.Item name="visibility" label="公開範囲">
             <Radio.Group options={VISIBILITY_OPTIONS} optionType="button" />
+          </Form.Item>
+        </Form>
+      </Modal>
+
+      {/* 暗記カード作成モーダル */}
+      <Modal
+        title="暗記カードを作る"
+        open={cardModalOpen}
+        onOk={handleSaveCard}
+        onCancel={() => {
+          setCardModalOpen(false)
+          cardForm.resetFields()
+        }}
+        okText="保存"
+        cancelText="キャンセル"
+        destroyOnHidden
+      >
+        <Form
+          form={cardForm}
+          layout="vertical"
+          initialValues={{
+            format: 'question_answer' as CardFormat,
+            tags: [],
+            front: '',
+            back: '',
+          }}
+        >
+          <Form.Item name="format" label="フォーマット">
+            <Select
+              options={(Object.entries(CARD_FORMAT_CONFIG) as [CardFormat, typeof CARD_FORMAT_CONFIG[CardFormat]][]).map(
+                ([value, config]) => ({
+                  label: `${config.emoji} ${config.label}`,
+                  value,
+                }),
+              )}
+            />
+          </Form.Item>
+
+          <Form.Item
+            name="front"
+            label="表面（問い/用語）"
+            rules={[{ required: true, message: '表面を入力してください' }]}
+          >
+            <TextArea rows={3} placeholder="覚えたい問いや用語を入力..." />
+          </Form.Item>
+
+          <Form.Item
+            name="back"
+            label="裏面（答え/定義）"
+            rules={[{ required: true, message: '裏面を入力してください' }]}
+          >
+            <TextArea rows={3} placeholder="答えや定義を入力..." />
+          </Form.Item>
+
+          <Form.Item name="tags" label="タグ">
+            <Select
+              mode="tags"
+              placeholder="タグを入力してEnter"
+              style={{ width: '100%' }}
+            />
           </Form.Item>
         </Form>
       </Modal>
