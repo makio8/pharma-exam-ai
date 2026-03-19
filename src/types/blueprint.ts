@@ -24,6 +24,32 @@ export interface SubjectBlueprint {
 /** トピックID（MiddleCategory.id のエイリアス） */
 export type TopicId = string
 
+// --- 正規化データモデル（例示ベース） ---
+
+/** 小項目の例示（最小粒度、951個） */
+export interface Exemplar {
+  id: string              // "ex-physics-001"
+  minorCategory: string   // 小項目名
+  middleCategoryId: TopicId // 中項目ID（既存のIDを参照）
+  subject: QuestionSubject
+  text: string            // "化学結合の様式について説明できる。"
+}
+
+/** 問題↔例示の多対多マッピング */
+export interface QuestionExemplarMapping {
+  questionId: string      // "r110-001"
+  exemplarId: string      // "ex-physics-001"
+  isPrimary: boolean      // メインの例示かどうか
+}
+
+/** 例示の出題統計（集約ビュー） */
+export interface ExemplarStats {
+  exemplarId: string
+  yearsAppeared: number        // 出題された年度数（max 11）
+  totalQuestions: number       // 総出題数
+  yearDetails: { year: number; count: number }[]  // 年度別出題数
+}
+
 /** トピック別の習熟度 */
 export interface TopicMastery {
   topicId: TopicId
