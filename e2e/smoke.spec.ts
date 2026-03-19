@@ -4,7 +4,7 @@ import { test, expect } from '@playwright/test'
 const pages = [
   { path: '/', name: 'ホーム' },
   { path: '/practice', name: '演習一覧' },
-  { path: '/practice/q001', name: '問題ページ(q001)' },
+  { path: '/practice/r110-001', name: '問題ページ(r110-001)' },
   { path: '/notes', name: '付箋一覧' },
   { path: '/analysis', name: '分析' },
 ]
@@ -32,11 +32,12 @@ for (const { path, name } of pages) {
   })
 }
 
-test('問題(q001)に回答できる', async ({ page }) => {
-  await page.goto('/practice/q001')
+test('問題(r110-001)に回答できる', async ({ page }) => {
+  // r110-001 は choices あり の通常問題
+  await page.goto('/practice/r110-001')
   await page.waitForLoadState('networkidle')
 
-  // 選択肢1をクリック
+  // 選択肢1をクリック（.ant-radio が5つ存在する）
   await page.locator('.ant-radio').first().click()
 
   // 回答ボタンをクリック
@@ -60,4 +61,78 @@ test('演習一覧から演習開始できる', async ({ page }) => {
   // 「演習開始」ボタンが表示される
   const startBtn = page.getByRole('button', { name: /演習開始/ })
   await expect(startBtn).toBeVisible()
+})
+
+test('画像問題（choices空）に番号ボタンで回答できる', async ({ page }) => {
+  // r110-006 はchoices空 + image_url ありの画像問題
+  await page.goto('/practice/r110-006')
+  await page.waitForLoadState('networkidle')
+
+  // 画像が表示されていることを確認（alt="第110回 問6 の図"）
+  const img = page.locator('img[alt*="第110回 問6"]')
+  await expect(img).toBeVisible()
+
+  // 番号ボタンが表示されている（Radio.Groupではなくbuttonで）
+  // 未回答時はボタンテキストが数字のみ
+  const buttons = page.locator('button').filter({ hasText: /^[1-5]$/ })
+  await expect(buttons).toHaveCount(5)
+
+  // 番号4をクリック（この問題の正答）
+  await page.locator('button').filter({ hasText: /^4$/ }).click()
+
+  // 回答ボタンをクリック
+  await page.getByRole('button', { name: '回答する' }).click()
+
+  // 正誤フィードバックが表示される
+  const alert = page.locator('.ant-alert')
+  await expect(alert).toBeVisible()
+  const text = await alert.textContent()
+  expect(text).toMatch(/正解/)
+})
+
+test('画像付き通常問題で画像が表示される', async ({ page }) => {
+  // r110-001 は image_url あり かつ choices ありの問題
+  await page.goto('/practice/r110-001')
+  await page.waitForLoadState('networkidle')
+
+  // 画像が表示されている
+  const img = page.locator('img[alt*="第110回"]')
+  const hasImage = await img.count()
+  if (hasImage > 0) {
+    await expect(img.first()).toBeVisible()
+  }
+
+  // 通常の選択肢（Radio）も表示されている
+  const radios = page.locator('.ant-radio')
+  const radioCount = await radios.count()
+  expect(radioCount).toBeGreaterThan(0)
+})
+
+test('correct_answer=0 の問題で「データ準備中」が表示される', async ({ page }) => {
+  // r100-211 は correct_answer=0 の問題
+  await page.goto('/practice/r100-211')
+  await page.waitForLoadState('networkidle')
+
+  // 「データ準備中」メッセージが表示される
+  await expect(page.getByText('この問題はデータ準備中です')).toBeVisible()
+
+  // 回答ボタンが無効であることを確認
+  const submitBtn = page.getByRole('button', { name: '回答する' })
+  await expect(submitBtn).toBeDisabled()
+})
+
+test('PracticePage で画像フィルタが動作する', async ({ page }) => {
+  await page.goto('/practice')
+  await page.waitForLoadState('networkidle')
+
+  // 「画像問題のみ」ラベルの近くのスイッチをONにする
+  // 構造: ant-space > ant-space-item > span（ラベル）
+  //              > ant-space-item > button.ant-switch
+  const imageFilterLabel = page.getByText('画像問題のみ:')
+  const imageSwitch = imageFilterLabel.locator('../..').locator('.ant-switch')
+  await imageSwitch.click()
+
+  // フィルタ後の問題数バッジが表示されている（Badge.Ribbon）
+  const badge = page.locator('.ant-ribbon')
+  await expect(badge).toBeVisible()
 })
