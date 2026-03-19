@@ -1,0 +1,472 @@
+{
+  "timestamp": "2026-03-19T18:22:09.260Z",
+  "total": 867,
+  "passed": 838,
+  "failed": 29,
+  "pass_rate": "96.7%",
+  "by_year": {
+    "100": {
+      "total": 82,
+      "passed": 79,
+      "failed": 3
+    },
+    "101": {
+      "total": 84,
+      "passed": 84,
+      "failed": 0
+    },
+    "102": {
+      "total": 93,
+      "passed": 91,
+      "failed": 2
+    },
+    "103": {
+      "total": 57,
+      "passed": 55,
+      "failed": 2
+    },
+    "104": {
+      "total": 61,
+      "passed": 58,
+      "failed": 3
+    },
+    "105": {
+      "total": 83,
+      "passed": 80,
+      "failed": 3
+    },
+    "106": {
+      "total": 69,
+      "passed": 67,
+      "failed": 2
+    },
+    "107": {
+      "total": 88,
+      "passed": 86,
+      "failed": 2
+    },
+    "108": {
+      "total": 83,
+      "passed": 80,
+      "failed": 3
+    },
+    "109": {
+      "total": 81,
+      "passed": 80,
+      "failed": 1
+    },
+    "110": {
+      "total": 86,
+      "passed": 78,
+      "failed": 8
+    }
+  },
+  "failures": [
+    {
+      "id": "r100-233",
+      "year": 100,
+      "question_number": 233,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": false,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "cover_page",
+      "details": "注意事項ページを検出"
+    },
+    {
+      "id": "r100-239",
+      "year": 100,
+      "question_number": 239,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": false,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "cover_page",
+      "details": "注意事項ページを検出"
+    },
+    {
+      "id": "r100-317",
+      "year": 100,
+      "question_number": 317,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": false,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "cover_page",
+      "details": "注意事項ページを検出"
+    },
+    {
+      "id": "r102-255",
+      "year": 102,
+      "question_number": 255,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": false,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "cover_page",
+      "details": "注意事項ページを検出"
+    },
+    {
+      "id": "r102-281",
+      "year": 102,
+      "question_number": 281,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": false,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "cover_page",
+      "details": "注意事項ページを検出"
+    },
+    {
+      "id": "r103-006",
+      "year": 103,
+      "question_number": 6,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q6"
+    },
+    {
+      "id": "r103-007",
+      "year": 103,
+      "question_number": 7,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q7"
+    },
+    {
+      "id": "r104-007",
+      "year": 104,
+      "question_number": 7,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q7"
+    },
+    {
+      "id": "r104-008",
+      "year": 104,
+      "question_number": 8,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q8"
+    },
+    {
+      "id": "r104-009",
+      "year": 104,
+      "question_number": 9,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q9"
+    },
+    {
+      "id": "r105-001",
+      "year": 105,
+      "question_number": 1,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q1"
+    },
+    {
+      "id": "r105-006",
+      "year": 105,
+      "question_number": 6,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q6"
+    },
+    {
+      "id": "r105-009",
+      "year": 105,
+      "question_number": 9,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q9"
+    },
+    {
+      "id": "r106-006",
+      "year": 106,
+      "question_number": 6,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q6"
+    },
+    {
+      "id": "r106-007",
+      "year": 106,
+      "question_number": 7,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q7"
+    },
+    {
+      "id": "r107-006",
+      "year": 107,
+      "question_number": 6,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q6"
+    },
+    {
+      "id": "r107-007",
+      "year": 107,
+      "question_number": 7,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q7"
+    },
+    {
+      "id": "r108-006",
+      "year": 108,
+      "question_number": 6,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q6"
+    },
+    {
+      "id": "r108-007",
+      "year": 108,
+      "question_number": 7,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q7"
+    },
+    {
+      "id": "r108-009",
+      "year": 108,
+      "question_number": 9,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q9"
+    },
+    {
+      "id": "r109-008",
+      "year": 109,
+      "question_number": 8,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q8"
+    },
+    {
+      "id": "r110-006",
+      "year": 110,
+      "question_number": 6,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q6"
+    },
+    {
+      "id": "r110-008",
+      "year": 110,
+      "question_number": 8,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q8"
+    },
+    {
+      "id": "r110-009",
+      "year": 110,
+      "question_number": 9,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": true,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "q_not_in_crop",
+      "details": "PDF page not found for q9"
+    },
+    {
+      "id": "r110-213",
+      "year": 110,
+      "question_number": 213,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": false,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "cover_page",
+      "details": "注意事項ページを検出"
+    },
+    {
+      "id": "r110-243",
+      "year": 110,
+      "question_number": 243,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": false,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "cover_page",
+      "details": "注意事項ページを検出"
+    },
+    {
+      "id": "r110-281",
+      "year": 110,
+      "question_number": 281,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": false,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "cover_page",
+      "details": "注意事項ページを検出"
+    },
+    {
+      "id": "r110-309",
+      "year": 110,
+      "question_number": 309,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": false,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "cover_page",
+      "details": "注意事項ページを検出"
+    },
+    {
+      "id": "r110-311",
+      "year": 110,
+      "question_number": 311,
+      "checks": {
+        "file_exists": true,
+        "size_ok": true,
+        "not_cover": false,
+        "q_in_crop": false,
+        "text_clean": true
+      },
+      "reason": "cover_page",
+      "details": "注意事項ページを検出"
+    }
+  ]
+}
