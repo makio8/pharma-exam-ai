@@ -42,6 +42,8 @@ export default defineConfig({
           if (id.includes('node_modules/antd') || id.includes('node_modules/@ant-design')) return 'vendor-antd'
           if (id.includes('node_modules/@supabase')) return 'vendor-supabase'
           // 問題データを年度別に分割（100-110回）
+          if (id.includes('question-topic-map')) return 'data-topic-map'
+          if (id.includes('exam-blueprint')) return 'data-blueprint'
           if (id.includes('real-questions/exam-100')) return 'data-100'
           if (id.includes('real-questions/exam-101')) return 'data-101'
           if (id.includes('real-questions/exam-102')) return 'data-102'
