@@ -159,9 +159,9 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
               </Space>
             </div>
 
-            {/* 問題文（シナリオ部分 + 問番号ヘッダーを除去して表示） */}
+            {/* 問題文（シナリオ・他問のテキストを除去し、この問題の本文だけ表示） */}
             <Paragraph style={{ fontSize: 15, lineHeight: 1.8, whiteSpace: 'pre-wrap', marginBottom: 12 }}>
-              {stripScenarioFromText(q.question_text, scenario)}
+              {extractQuestionBody(q.question_text, q.question_number, scenario)}
             </Paragraph>
 
             {/* 問題個別の画像（choices空の問題のみ表示。選択肢テキストがある場合は冗長なので非表示） */}
@@ -289,24 +289,53 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
 }
 
 /**
- * question_text からシナリオ部分と問番号ヘッダーを除去
- * - シナリオテキストが question_text の冒頭に含まれている場合、除去
- * - 「問XXX（科目名）」のようなヘッダーを除去
+ * question_text から該当問題の本文だけを抽出
+ *
+ * 連問では1つの question_text に複数問分のテキストが結合されていることがある:
+ *   "シナリオ...\n問196（実務）\n質問文196...\n問197（実務）\n質問文197..."
+ *
+ * この関数は questionNumber に該当する部分だけを抽出する
  */
-function stripScenarioFromText(questionText: string, scenario: string): string {
+function extractQuestionBody(questionText: string, questionNumber: number, scenario: string): string {
+  // まずシナリオ部分を除去
   let text = questionText
-
-  // シナリオが question_text の冒頭に含まれる場合、除去
   if (scenario && text.startsWith(scenario)) {
     text = text.slice(scenario.length).trim()
   }
 
-  // 「問XXX」「問XXX（科目名）」ヘッダーを除去
-  text = text.replace(/^問\d+\s*（[^）]*）\s*\n*/g, '').trim()
-  text = text.replace(/^問\d+\s*\n+/g, '').trim()
+  // 「問XXX」マーカーで分割
+  const questionPattern = /問(\d+)\s*[（(]([^）)]*)[）)]\s*\n?/g
+  const markers: { num: number; start: number; end: number }[] = []
+  let m: RegExpExecArray | null
+  while ((m = questionPattern.exec(text)) !== null) {
+    markers.push({ num: parseInt(m[1], 10), start: m.index, end: m.index + m[0].length })
+  }
 
-  // 先頭の空行を除去
-  text = text.replace(/^\n+/, '').trim()
+  if (markers.length === 0) {
+    // マーカーがない場合：問番号ヘッダーだけ除去して返す
+    return text.replace(/^問\d+\s*[（(][^）)]*[）)]\s*\n*/g, '')
+      .replace(/^問\d+\s*\n+/g, '')
+      .trim() || questionText
+  }
 
-  return text || questionText // 空になったら元のテキストを返す
+  // 該当する問番号のマーカーを探す
+  const myMarker = markers.find((mk) => mk.num === questionNumber)
+  if (!myMarker) {
+    // 自分の番号がない場合（最初の問題にマーカーがないケース等）
+    // → 最初のマーカーの手前のテキストを使う
+    if (markers[0].start > 0) {
+      const beforeFirst = text.slice(0, markers[0].start).trim()
+      if (beforeFirst.length > 10) return beforeFirst
+    }
+    return text.replace(/^問\d+\s*[（(][^）)]*[）)]\s*\n*/g, '').trim() || questionText
+  }
+
+  // 自分のマーカーから次のマーカーまでを抽出
+  const myIndex = markers.indexOf(myMarker)
+  const nextMarker = markers[myIndex + 1]
+  const bodyStart = myMarker.end
+  const bodyEnd = nextMarker ? nextMarker.start : text.length
+  const body = text.slice(bodyStart, bodyEnd).trim()
+
+  return body || questionText
 }
