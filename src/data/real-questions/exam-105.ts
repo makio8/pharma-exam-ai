@@ -60,27 +60,27 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "物理",
     "category": "必須問題 - 問 3",
-    "question_text": "次の原子のうち、核スピンをもたない（核スピン量子数＝0）のはどれか。１つ選べ。\n\nH\t\nC\t\nC\t\nN\t\nN",
+    "question_text": "次の原子のうち、核スピンをもたない（核スピン量子数＝0）のはどれか。１つ選べ。",
     "choices": [
       {
         "key": 1,
-        "text": "1"
+        "text": "¹H"
       },
       {
         "key": 2,
-        "text": "12"
+        "text": "¹²C"
       },
       {
         "key": 3,
-        "text": "13"
+        "text": "¹³C"
       },
       {
         "key": 4,
-        "text": "14"
+        "text": "¹⁴N"
       },
       {
         "key": 5,
-        "text": "15"
+        "text": "¹⁵N"
       }
     ],
     "correct_answer": 2,
@@ -1294,23 +1294,27 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "薬理",
     "category": "必須問題 - 問 37",
-    "question_text": "問 37       アドレナリン a1、a2 及び b1 受容体に作用し、b2 受容体及びドパミン D1 受容体\nにはほとんど作用しないのはどれか。1つ選べ。\n1       HO     CH2CHCOOH\nNH2\nHO\n2   HO     CH2CH2NH2\nHO\n3   HO     CHCH2NH2\nOH\nHO\n4   HO     CHCH2NHCH3\nOH\nHO\nCH3\n5   HO     CHCH2NHCH\nOH         CH3\nHO",
+    "question_text": "アドレナリンα₁、α₂及びβ₁受容体に作用し、β₂受容体及びドパミンD₁受容体にはほとんど作用しないのはどれか。１つ選べ。",
     "choices": [
       {
         "key": 1,
-        "text": "HO     CH2CH2NH2"
+        "text": "構造式1（ドパ）"
       },
       {
         "key": 2,
-        "text": "HO     CHCH2NH2 OH HO"
+        "text": "構造式2（ドパミン）"
       },
       {
         "key": 3,
-        "text": "HO     CHCH2NHCH3 OH HO"
+        "text": "構造式3（ノルアドレナリン）"
       },
       {
         "key": 4,
-        "text": "HO     CHCH2NHCH OH         CH3 HO"
+        "text": "構造式4（アドレナリン）"
+      },
+      {
+        "key": 5,
+        "text": "構造式5（イソプレナリン）"
       }
     ],
     "correct_answer": 3,
@@ -3462,7 +3466,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "物理",
     "category": "一般 理論問題 - 問 97",
-    "question_text": "以下の記述は、L−バリン（C5H11NO2）の薄層クロマトグラフィー（TLC）に関するものである。\n\n本品0.10 gを水25 mLに溶かし、試料溶液とする。試料溶液5 µLをTLC用シリカゲルを用いて調製した薄層板にスポットする。次に1−ブタノール/水/酢酸（100）混液（3：1：1）を展開溶媒として約10 cm展開した後、薄層板を80℃で30分間乾燥する。これに試薬  　A　  のアセトン溶液（1→50）を均等に噴霧した後、80℃で5分間加熱する。\nこのクロマトグラフィーに関する記述のうち、正しいのはどれか。２つ選べ。\n\n はニンヒドリンである。\n\nH13NO2）が混在するとき、そのRf値はL−バリンのRf値より小さい。\nf値より大きなRf値を与える不純物は、逆相分配クロマトグラフィーにおいては保持時間が一般にL−バリンより大きくなる。",
+    "question_text": "以下の記述は、L−バリン（C₅H₁₁NO₂）の薄層クロマトグラフィー（TLC）に関するものである。\n\n本品0.10 gを水25 mLに溶かし、試料溶液とする。試料溶液5 µLをTLC用シリカゲルを用いて調製した薄層板にスポットする。次に1−ブタノール/水/酢酸（100）混液（3：1：1）を展開溶媒として約10 cm展開した後、薄層板を80℃で30分間乾燥する。これに試薬　A　のアセトン溶液（1→50）を均等に噴霧した後、80℃で5分間加熱する。\nこのクロマトグラフィーに関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
       {
         "key": 1,
@@ -3470,7 +3474,7 @@ export const EXAM_105_QUESTIONS: Question[] = [
       },
       {
         "key": 2,
-        "text": "試薬  　A"
+        "text": "試薬Aはニンヒドリンである。"
       },
       {
         "key": 3,
@@ -3478,11 +3482,11 @@ export const EXAM_105_QUESTIONS: Question[] = [
       },
       {
         "key": 4,
-        "text": "試料にL−ロイシン（C6"
+        "text": "試料にL−ロイシン（C₆H₁₃NO₂）が混在するとき、そのRf値はL−バリンのRf値より小さい。"
       },
       {
         "key": 5,
-        "text": "この試験でL−バリンのR"
+        "text": "この試験でL−バリンのRf値より大きなRf値を与える不純物は、逆相分配クロマトグラフィーにおいては保持時間が一般にL−バリンより大きくなる。"
       }
     ],
     "correct_answer": 2,

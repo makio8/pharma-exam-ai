@@ -11,27 +11,27 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "物理",
     "category": "必須問題 - 問 1",
-    "question_text": "次の関係式のうち、正しいのはどれか。１つ選べ。\n\n Hz\t\n m\t\n ％\ng＝1×10－3 g\t\n g/L",
+    "question_text": "次の関係式のうち、正しいのはどれか。１つ選べ。",
     "choices": [
       {
         "key": 1,
-        "text": "1 kHz＝1×106"
+        "text": "1 kHz＝1×10⁶ Hz"
       },
       {
         "key": 2,
-        "text": "1 nm＝1×10－9"
+        "text": "1 nm＝1×10⁻⁹ m"
       },
       {
         "key": 3,
-        "text": "1 ppm＝1×10－3"
+        "text": "1 ppm＝1×10⁻³ ％"
       },
       {
         "key": 4,
-        "text": "1 µ"
+        "text": "1 µg＝1×10⁻³ g"
       },
       {
         "key": 5,
-        "text": "1 w/v%＝1×102"
+        "text": "1 w/v%＝1×10² g/L"
       }
     ],
     "correct_answer": 2,
@@ -99,27 +99,27 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "物理",
     "category": "必須問題 - 問 3",
-    "question_text": "α壊変により放出されるα粒子はどの元素の原子核に相当するか。１つ選べ。\n\nH\t\nHe\t\nLi\t\nB\t\nC",
+    "question_text": "α壊変により放出されるα粒子はどの元素の原子核に相当するか。１つ選べ。",
     "choices": [
       {
         "key": 1,
-        "text": "1"
+        "text": "¹H"
       },
       {
         "key": 2,
-        "text": "4"
+        "text": "⁴He"
       },
       {
         "key": 3,
-        "text": "7"
+        "text": "⁷Li"
       },
       {
         "key": 4,
-        "text": "11"
+        "text": "¹¹B"
       },
       {
         "key": 5,
-        "text": "12"
+        "text": "¹²C"
       }
     ],
     "correct_answer": 2,
@@ -3671,7 +3671,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "物理",
     "category": "一般 理論問題 - 問 99",
-    "question_text": "核磁気共鳴スペクトル測定法に関する記述のうち、正しいのはどれか。２つ選べ。\n\nFを利用して有機化合物中にあるフッ素の核磁気共鳴スペクトルを測定できる。\n電子による遮蔽効果を受ける。",
+    "question_text": "核磁気共鳴スペクトル測定法に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
       {
         "key": 1,
@@ -3679,11 +3679,11 @@ export const EXAM_102_QUESTIONS: Question[] = [
       },
       {
         "key": 2,
-        "text": "19"
+        "text": "¹⁹Fを利用して有機化合物中にあるフッ素の核磁気共鳴スペクトルを測定できる。"
       },
       {
         "key": 3,
-        "text": "ベンゼンの水素は、π"
+        "text": "ベンゼンの水素は、π電子による遮蔽効果を受ける。"
       },
       {
         "key": 4,
@@ -3863,27 +3863,27 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "化学",
     "category": "一般 理論問題 - 問 103",
-    "question_text": "次の反応で得られる化合物中のH（a〜c）に関する記述のうち、正しいのはどれか。１つ選べ。\n\n由来である。\nO＋由来、cがLiAlH4由来である。\n由来、cがH3O＋由来である。\nO＋由来、もう一方とcがLiAlH4由来である。\n由来、もう一方とcがH3O＋由来である。",
+    "question_text": "次の反応で得られる化合物中のH（a〜c）に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
       {
         "key": 1,
-        "text": "a、b、cのすべてがLiAlH4"
+        "text": "a、b、cのすべてがLiAlH₄由来である。"
       },
       {
         "key": 2,
-        "text": "aとbがH3"
+        "text": "aとbがH₃O⁺由来、cがLiAlH₄由来である。"
       },
       {
         "key": 3,
-        "text": "aとbがLiAlH4"
+        "text": "aとbがLiAlH₄由来、cがH₃O⁺由来である。"
       },
       {
         "key": 4,
-        "text": "aとbのどちらか一方がH3"
+        "text": "aとbのどちらか一方がH₃O⁺由来、もう一方とcがLiAlH₄由来である。"
       },
       {
         "key": 5,
-        "text": "aとbのどちらか一方がLiAlH4"
+        "text": "aとbのどちらか一方がLiAlH₄由来、もう一方とcがH₃O⁺由来である。"
       }
     ],
     "correct_answer": 3,
@@ -4950,11 +4950,11 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "衛生",
     "category": "一般 理論問題 - 問 132",
-    "question_text": "化学物質の遺伝毒性試験に関する記述のうち、正しいのはどれか。２つ選べ。\n\n Typhimurium変異株の復帰突然変異の出現頻度により検出する方法である。\n\n小核試験では、細胞分裂が阻害されて生じる小核を検出する。",
+    "question_text": "化学物質の遺伝毒性試験に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
       {
         "key": 1,
-        "text": "Ames試験は、化学物質の遺伝毒性をSalmonella"
+        "text": "Ames試験は、化学物質の遺伝毒性をSalmonella Typhimurium変異株の復帰突然変異の出現頻度により検出する方法である。"
       },
       {
         "key": 2,
@@ -4966,7 +4966,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
       },
       {
         "key": 4,
-        "text": "ほ乳動物細胞を用いたin vitro"
+        "text": "ほ乳動物細胞を用いたin vitro小核試験では、細胞分裂が阻害されて生じる小核を検出する。"
       },
       {
         "key": 5,

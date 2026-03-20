@@ -3720,7 +3720,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "化学",
     "category": "一般 理論問題 - 問 104",
-    "question_text": "次の反応と生成物に関する記述のうち、正しいのはどれか。１つ選べ。\n\naが小さい。\nNH2は、塩基として働いている。",
+    "question_text": "次の反応と生成物に関する記述のうち、正しいのはどれか。１つ選べ。",
     "choices": [
       {
         "key": 1,
@@ -3728,11 +3728,11 @@ export const EXAM_106_QUESTIONS: Question[] = [
       },
       {
         "key": 2,
-        "text": "破線で囲んだ部分構造aよりも部分構造bの方が、脱離して生じるアニオンの共役酸のpK"
+        "text": "破線で囲んだ部分構造aよりも部分構造bの方が、脱離して生じるアニオンの共役酸のpKaが小さい。"
       },
       {
         "key": 3,
-        "text": "CH3"
+        "text": "CH₃NH₂は、塩基として働いている。"
       },
       {
         "key": 4,
@@ -5043,7 +5043,7 @@ export const EXAM_106_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "衛生",
     "category": "一般 理論問題 - 問 136",
-    "question_text": "電離放射線の防御に関する記述のうち、正しいのはどれか。２つ選べ。\n\nPから放出されるエネルギーの強いβ－線を遮へいする場合は、鉛板や鉛ブロックを用いる。\nIの蓄積を防ぐために投与される。",
+    "question_text": "電離放射線の防御に関する記述のうち、正しいのはどれか。２つ選べ。",
     "choices": [
       {
         "key": 1,
@@ -5055,11 +5055,11 @@ export const EXAM_106_QUESTIONS: Question[] = [
       },
       {
         "key": 3,
-        "text": "32"
+        "text": "³²Pから放出されるエネルギーの強いβ⁻線を遮へいする場合は、鉛板や鉛ブロックを用いる。"
       },
       {
         "key": 4,
-        "text": "安定ヨウ素剤は、甲状腺への131"
+        "text": "安定ヨウ素剤は、甲状腺への¹³¹Iの蓄積を防ぐために投与される。"
       },
       {
         "key": 5,

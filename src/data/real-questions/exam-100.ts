@@ -108,27 +108,27 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "物理",
     "category": "必須問題 - 問 3",
-    "question_text": "次に示す放射性核種のうち、放出されるγ線が診断に用いられるのはどれか。１つ選べ。\n\nH\t\nC\t\nP\t\nSr\t\nTl",
+    "question_text": "次に示す放射性核種のうち、放出されるγ線が診断に用いられるのはどれか。１つ選べ。",
     "choices": [
       {
         "key": 1,
-        "text": "3"
+        "text": "³H"
       },
       {
         "key": 2,
-        "text": "14"
+        "text": "¹⁴C"
       },
       {
         "key": 3,
-        "text": "32"
+        "text": "³²P"
       },
       {
         "key": 4,
-        "text": "90"
+        "text": "⁹⁰Sr"
       },
       {
         "key": 5,
-        "text": "201"
+        "text": "²⁰¹Tl"
       }
     ],
     "correct_answer": 5,
