@@ -159,13 +159,13 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
               </Space>
             </div>
 
-            {/* 問題文（シナリオ部分を除去して表示） */}
+            {/* 問題文（シナリオ部分 + 問番号ヘッダーを除去して表示） */}
             <Paragraph style={{ fontSize: 15, lineHeight: 1.8, whiteSpace: 'pre-wrap', marginBottom: 12 }}>
-              {q.question_text}
+              {stripScenarioFromText(q.question_text, scenario)}
             </Paragraph>
 
-            {/* 問題個別の画像 */}
-            {q.image_url && (
+            {/* 問題個別の画像（choices空の問題のみ表示。選択肢テキストがある場合は冗長なので非表示） */}
+            {q.image_url && q.choices.length === 0 && (
               <div style={{ marginBottom: 12, textAlign: 'center' }}>
                 <Image
                   src={q.image_url}
@@ -286,4 +286,27 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
       })}
     </div>
   )
+}
+
+/**
+ * question_text からシナリオ部分と問番号ヘッダーを除去
+ * - シナリオテキストが question_text の冒頭に含まれている場合、除去
+ * - 「問XXX（科目名）」のようなヘッダーを除去
+ */
+function stripScenarioFromText(questionText: string, scenario: string): string {
+  let text = questionText
+
+  // シナリオが question_text の冒頭に含まれる場合、除去
+  if (scenario && text.startsWith(scenario)) {
+    text = text.slice(scenario.length).trim()
+  }
+
+  // 「問XXX」「問XXX（科目名）」ヘッダーを除去
+  text = text.replace(/^問\d+\s*（[^）]*）\s*\n*/g, '').trim()
+  text = text.replace(/^問\d+\s*\n+/g, '').trim()
+
+  // 先頭の空行を除去
+  text = text.replace(/^\n+/, '').trim()
+
+  return text || questionText // 空になったら元のテキストを返す
 }

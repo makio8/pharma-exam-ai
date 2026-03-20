@@ -278,8 +278,8 @@ export function QuestionPage() {
         </Paragraph>
       </Card>
 
-      {/* 問題画像（image_url がある場合のみ表示） */}
-      {question.image_url && (
+      {/* 問題画像（choices空の画像問題のみ表示。選択肢テキストがある場合は冗長なので非表示） */}
+      {question.image_url && question.choices.length === 0 && (
         <div style={{ marginBottom: 16, textAlign: 'center' }}>
           <Image
             src={question.image_url}
