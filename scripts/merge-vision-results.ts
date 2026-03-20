@@ -32,12 +32,21 @@ interface VisionExtraction {
 }
 
 function loadExtractions(): VisionExtraction[] {
-  const resultsPath = path.join(__dirname, 'output', 'vision-extractions.jsonl')
-  if (!fs.existsSync(resultsPath)) {
-    console.error('エラー: vision-extractions.jsonl が見つかりません')
+  // 年度別dedup済みJSONLファイルを全て読み込む
+  const outputDir = path.join(__dirname, 'output')
+  const allLines: string[] = []
+  for (let y = 100; y <= 110; y++) {
+    const dedupPath = path.join(outputDir, `vision-extractions-year${y}-dedup.jsonl`)
+    if (fs.existsSync(dedupPath)) {
+      const yearLines = fs.readFileSync(dedupPath, 'utf-8').trim().split('\n')
+      allLines.push(...yearLines)
+    }
+  }
+  if (allLines.length === 0) {
+    console.error('エラー: vision-extractions-year*-dedup.jsonl が見つかりません')
     process.exit(1)
   }
-  const lines = fs.readFileSync(resultsPath, 'utf-8').trim().split('\n')
+  const lines = allLines
   const results: VisionExtraction[] = []
   for (const line of lines) {
     if (!line) continue

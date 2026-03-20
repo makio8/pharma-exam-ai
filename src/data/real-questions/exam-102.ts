@@ -45,13 +45,52 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "物理",
     "category": "必須問題 - 問 2",
-    "question_text": "問 2 陽イオン、陰イオンが水和している状態を最も適切に表しているのはどれか。\nつ選べ。",
-    "choices": [],
+    "question_text": "陽イオン、陰イオンが水和している状態を最も適切に表しているのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "陽イオンにO配向・陰イオンにO配向"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "陽イオンにO配向・陰イオンにH配向"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "陽イオンにH配向・陰イオンにH配向"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "陽イオンにH配向・陰イオンにO配向"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】水和（溶媒和）におけるイオンと水分子の配向を問う問題\n【正答の根拠】水分子の酸素は負電荷を帯びるため陽イオン側に配向し、水素は正電荷を帯びるため陰イオン側に配向する。この正しい水和状態を示す図が選択肢2である。\n【他の選択肢】\n1. ✗ 水分子の配向が逆になっている\n2. ○ 正答\n3. ✗ 水分子の配向が正しくない\n4. ✗ 水分子の配向が正しくない\n5. ✗ 水分子の配向が正しくない\n【覚え方💡】「陽イオンにはO（マイナス側）、陰イオンにはH（プラス側）」→ 異符号が引き合う。水分子はV字型で酸素が頂点、電気陰性度はO＞H。\n【関連知識】溶媒和のうち溶媒が水のものを特に水和という。イオンの水和エネルギーはイオン半径が小さいほど大きい。",
     "tags": [],
     "image_url": "/images/questions/102/q002.png",
-    "question_text_original": "問 2 陽イオン、陰イオンが水和している状態を最も適切に表しているのはどれか。\nつ選べ。\n1                        2                           3                       4\nH           H               H            H               H                       H\nO           H       O       O       H   O\nO                        O\n陽イオン                                                               H               H       H           H\nO   H                    O       H\nH       O               H       O                                H                       H\nH                            H               H       O               H       O\nH                        H\nH           H               H                        H               H           H\nO        H       O                                   O       H   O\nO                                                    O\n陰イオン                                  H                H                                   H           H\nO   H                                                O       H\nH       O                            H               H       O                           H\nH               H        O                               H           H       O\nH                                                    H"
+    "question_text_original": "問 2 陽イオン、陰イオンが水和している状態を最も適切に表しているのはどれか。\nつ選べ。\n1                        2                           3                       4\nH           H               H            H               H                       H\nO           H       O       O       H   O\nO                        O\n陽イオン                                                               H               H       H           H\nO   H                    O       H\nH       O               H       O                                H                       H\nH                            H               H       O               H       O\nH                        H\nH           H               H                        H               H           H\nO        H       O                                   O       H   O\nO                                                    O\n陰イオン                                  H                H                                   H           H\nO   H                                                O       H\nH       O                            H               H       O                           H\nH               H        O                               H           H       O\nH                                                    H",
+    "question_concepts": [
+      "水和",
+      "イオン",
+      "水分子の配向"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-003",
@@ -162,13 +201,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "化学",
     "category": "必須問題 - 問 6",
-    "question_text": "問 6 シスプラチン（(SP ‑4‑2)‑Diamminedichloroplatinum）はどれか。                   つ選べ。",
-    "choices": [],
+    "question_text": "シスプラチン（(SP-4-2)-Diamminedichloroplatinum）はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "cis-ジアンミンジクロロ白金(II)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "trans-ジアンミンジクロロ白金(II)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "cis-ジアクアジクロロ白金(II)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "cis-ジアミンジヒドロキソ白金(II)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "trans-アンミンヒドロキソ白金(II)"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】シスプラチンの構造を化学名から推定する問題（画像問題）\n【正答の根拠】シスプラチンはPt中心にNH₃×2とCl×2がシス配置で結合した平面四角形錯体。化学名(SP-4-2)-Diamminedichloroplatinumから、SP-4は平面四角形、Diammine=NH₃×2、Dichloro=Cl×2を意味する。\n【他の選択肢】\n1. ○ シスプラチンの正しい構造\n2. ✗ トランス配置など、正しくない構造\n3. ✗ 正しくない構造\n4. ✗ 正しくない構造\n5. ✗ 正しくない構造\n【覚え方💡】「シス＝同じ側」。シスプラチンはNH₃とClがそれぞれ隣同士（シス位）。トランスプラチンは向かい合い（トランス位）で抗腫瘍活性なし。\n【関連知識】シスプラチンはDNAの鎖内架橋（特にグアニン-グアニン間）を形成し、DNA複製を阻害する白金製剤。腎毒性が強く、大量補液が必要。",
     "tags": [],
     "image_url": "/images/questions/102/q006.png",
-    "question_text_original": "問 6 シスプラチン（(SP ‑4‑2)‑Diamminedichloroplatinum）はどれか。                   つ選べ。\nCl        NH3    Cl        NH3    Cl        OH2\nPt               Pt               Pt\nCl        NH3   H3N        Cl     Cl        OH2\n１                ２                ３\nH2\nHO        N      HO        NH3\nPt               Pt\nHO        N     H3N        OH\nH2\n４                ５\n⎜ 2⎜"
+    "question_text_original": "問 6 シスプラチン（(SP ‑4‑2)‑Diamminedichloroplatinum）はどれか。                   つ選べ。\nCl        NH3    Cl        NH3    Cl        OH2\nPt               Pt               Pt\nCl        NH3   H3N        Cl     Cl        OH2\n１                ２                ３\nH2\nHO        N      HO        NH3\nPt               Pt\nHO        N     H3N        OH\nH2\n４                ５\n⎜ 2⎜",
+    "question_concepts": [
+      "シスプラチン",
+      "配位化合物",
+      "立体化学"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-007",
@@ -177,13 +263,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "化学",
     "category": "必須問題 - 問 7",
-    "question_text": "問 7 キラルな化合物はどれか。                       つ選べ。",
-    "choices": [],
+    "question_text": "キラルな化合物はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "ブロモクロロシクロヘキサン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "ジブロモシクロヘキサン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "ジブロモノルボルナン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "ジブロモノルボルナン(メソ体)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "トリブロモノルボルナン"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 4,
     "explanation": "【ポイント】キラル（旋光性あり）な化合物を構造から判定する問題（画像問題）\n【正答の根拠】キラルな化合物は不斉炭素を持ち、かつ分子内対称面を持たない化合物。選択肢4は不斉炭素が2つあり対称面がないため、キラルな化合物である。\n【他の選択肢】\n1. ✗ 不斉炭素原子が存在しない\n2. ✗ 不斉炭素原子が存在しない\n3. ✗ 不斉炭素が2つあるがメソ体（分子内対称面あり）でアキラル\n4. ○ 不斉炭素2つ、対称面なし→キラル\n5. ✗ 不斉炭素原子が存在しない\n【覚え方💡】キラル判定3ステップ：①不斉炭素あり？②メソ体でない？③分子内対称面なし？→全てYESならキラル。\n【関連知識】メソ化合物は不斉炭素を持つがアキラル。酒石酸のメソ体が代表例。",
     "tags": [],
     "image_url": "/images/questions/102/q007.png",
-    "question_text_original": "問 7 キラルな化合物はどれか。                       つ選べ。\nBr   Cl                   Br    Br         Br   H            Br   H        Br   H\nBr             H\nH                 Br\nBr H\n1                         2                3                 4             5"
+    "question_text_original": "問 7 キラルな化合物はどれか。                       つ選べ。\nBr   Cl                   Br    Br         Br   H            Br   H        Br   H\nBr             H\nH                 Br\nBr H\n1                         2                3                 4             5",
+    "question_concepts": [
+      "キラリティー",
+      "不斉炭素",
+      "立体化学"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-008",
@@ -192,13 +325,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "化学",
     "category": "必須問題 - 問 8",
-    "question_text": "問 8 ラジカル中間体を経る反応はどれか。                                 つ選べ。",
-    "choices": [],
+    "question_text": "ラジカル中間体を経る反応はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "tert-ブタノールのHBrによる置換"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "tert-ブチルクロリドのNaOH脱離"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "トルエンのNBS光照射臭素化"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "ヨードメタンのNaOH求核置換"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "シクロペンタジエンのDiels-Alder反応"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】ラジカル中間体を経る有機反応を見分ける問題（画像問題）\n【正答の根拠】トルエンにNBS（N-ブロモスクシンイミド）を光照射下で反応させるベンジル位のラジカル置換反応は、安定なベンジルラジカル中間体を経由する。\n【他の選択肢】\n1. ✗ SN1反応（カルボカチオン中間体を経由）\n2. ✗ E2反応（一段階反応、中間体なし）\n3. ○ ラジカル置換反応（ベンジルラジカル中間体）\n4. ✗ SN2反応（一段階反応、中間体なし）\n5. ✗ Diels-Alder反応（ペリ環状反応、一段階）\n【覚え方💡】「NBS＋光＝ラジカル」で直結暗記。ラジカル反応の3段階：開始→成長→停止。ベンジル位ラジカルは共鳴安定化。\n【関連知識】ラジカル反応は光・過酸化物・AIBN等で開始する。イオン反応（SN1, SN2, E1, E2）とペリ環状反応と区別する。",
     "tags": [],
     "image_url": "/images/questions/102/q008.png",
-    "question_text_original": "問 8 ラジカル中間体を経る反応はどれか。                                 つ選べ。\nCH3                 HBr         CH3\n1 H3C        OH                      H3C     Br\nCH3                             CH3\nCH3             NaOH             CH3\n2 H3C        Cl                      H2C\nCH3                              CH3\nO\nBr N\nCH3                 O           CH2Br\n光照射\nNaOH\n4        H3C l                        H3C OH\nO\n5          ＋              CH3\nO\nCH2                            CH3\nO     O\n⎜ 3⎜"
+    "question_text_original": "問 8 ラジカル中間体を経る反応はどれか。                                 つ選べ。\nCH3                 HBr         CH3\n1 H3C        OH                      H3C     Br\nCH3                             CH3\nCH3             NaOH             CH3\n2 H3C        Cl                      H2C\nCH3                              CH3\nO\nBr N\nCH3                 O           CH2Br\n光照射\nNaOH\n4        H3C l                        H3C OH\nO\n5          ＋              CH3\nO\nCH2                            CH3\nO     O\n⎜ 3⎜",
+    "question_concepts": [
+      "ラジカル反応",
+      "反応機構",
+      "有機化学反応"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-009",
@@ -207,13 +387,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "化学",
     "category": "必須問題 - 問 9",
-    "question_text": "問 9 オゾン（O ）の構造式として最もふさわしいのはどれか。                                             つ選べ。",
-    "choices": [],
+    "question_text": "オゾン（O₃）の構造式として最もふさわしいのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "O₃共鳴構造(+/−電荷あり、折れ線)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "O₃共鳴構造(+/−電荷あり、折れ線)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "O₃二重結合2つ(折れ線)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "O₃(−/−電荷、折れ線)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "O₃環状構造"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】オゾン（O₃）の正しい構造式を問う問題（画像問題）\n【正答の根拠】オゾンは中央の酸素が2つの末端酸素と結合し、配位結合により中央Oは+電荷、末端Oは-電荷を帯びる。全ての酸素がオクテット則を満たす構造が正答。\n【他の選択肢】\n1. ○ 正しいオゾンの構造式（配位結合を含む）\n2. ✗ 電子配置が正しくない\n3. ✗ 電子配置が正しくない\n4. ✗ 電子配置が正しくない\n5. ✗ 電子配置が正しくない\n【覚え方💡】オゾンは「く」の字型。中央Oは配位結合で電子対を供与→形式電荷+1、受け取った末端Oは形式電荷-1。\n【関連知識】オゾンは強い酸化力を持ち、殺菌・脱臭に使われる。成層圏のオゾン層はUV-Cを吸収。フロンがオゾン層を破壊。",
     "tags": [],
     "image_url": "/images/questions/102/q009.png",
-    "question_text_original": "問 9 オゾン（O ）の構造式として最もふさわしいのはどれか。                                             つ選べ。\n＋                                                                            O\nO        −           ＋   O   −             O            −   O   −\nO        O             O         O     O           O       O        O\nO       O\n1                        2                 3                4                 5"
+    "question_text_original": "問 9 オゾン（O ）の構造式として最もふさわしいのはどれか。                                             つ選べ。\n＋                                                                            O\nO        −           ＋   O   −             O            −   O   −\nO        O             O         O     O           O       O        O\nO       O\n1                        2                 3                4                 5",
+    "question_concepts": [
+      "オゾン",
+      "共鳴構造",
+      "ルイス構造式"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-010",
@@ -222,13 +449,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "化学",
     "category": "必須問題 - 問 10",
-    "question_text": "問 10 次のアミノ酸のうち、破線で囲んだ部分の塩基性が最も強いのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "次のアミノ酸のうち、破線で囲んだ部分の塩基性が最も強いのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "アスパラギン酸"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "ヒスチジン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "アスパラギン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "トリプトファン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "ヒスチジン(イミダゾール)"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】アミノ酸の側鎖の塩基性の強さを比較する問題（画像問題）\n【正答の根拠】L-アルギニンのグアニジノ基は、プロトン化した共役酸が3つの窒素に共鳴安定化するため、極めて強い塩基性を示す（pKa約12.5）。\n【他の選択肢】\n1. ✗ L-アスパラギン酸のカルボキシ基は酸性であり塩基性を示さない\n2. ○ L-アルギニンのグアニジノ基は最も強い塩基性\n3. ✗ L-グルタミンのカルバモイル基はカルボニルとの共鳴でN上の電子が非局在化し塩基性弱い\n4. ✗ L-トリプトファンのインドール環のNは芳香族性に寄与し塩基性弱い\n5. ✗ L-ヒスチジンのイミダゾール環は塩基性あるがグアニジノ基より弱い\n【覚え方💡】塩基性アミノ酸＝「リジン・アルギニン・ヒスチジン」。塩基性の強さ：Arg＞Lys＞His。「ある（Arg）日リジ（Lys）ンがヒス（His）テリー」→塩基性順。\n【関連知識】グアニジノ基の共鳴構造は3つのN上に正電荷が分散するため安定性が極めて高い。",
     "tags": [],
     "image_url": "/images/questions/102/q010.png",
-    "question_text_original": "問 10 次のアミノ酸のうち、破線で囲んだ部分の塩基性が最も強いのはどれか。 つ選べ。\nNH                                 O\nCO2H\nHO2C                                                   CO2H                           CO2H\nH2N    N                           H2N\nH NH2                      H          H NH2                          H NH2\n1                                 2                              3\nN           CO2H\nCO2H\nH NH2\nH NH2                 N\nN                                 H\nH\n4                                 5\n⎜ 4⎜"
+    "question_text_original": "問 10 次のアミノ酸のうち、破線で囲んだ部分の塩基性が最も強いのはどれか。 つ選べ。\nNH                                 O\nCO2H\nHO2C                                                   CO2H                           CO2H\nH2N    N                           H2N\nH NH2                      H          H NH2                          H NH2\n1                                 2                              3\nN           CO2H\nCO2H\nH NH2\nH NH2                 N\nN                                 H\nH\n4                                 5\n⎜ 4⎜",
+    "question_concepts": [
+      "アミノ酸",
+      "塩基性",
+      "側鎖のpKa"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-011",
@@ -237,13 +511,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "生物",
     "category": "必須問題 - 問 11",
-    "question_text": "問 11 下図はヒトの消化器系の模式図である。１〜５のうち、直腸はどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "下図はヒトの消化器系の模式図である。1〜5のうち、直腸はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "1",
+        "semantic_labels": [
+          "十二指腸"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "2",
+        "semantic_labels": [
+          "小腸（空腸・回腸）"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "3",
+        "semantic_labels": [
+          "上行結腸"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "4",
+        "semantic_labels": [
+          "S状結腸"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "5",
+        "semantic_labels": [
+          "直腸"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 5,
     "explanation": "【ポイント】消化器系の模式図から直腸の位置を同定する問題（画像問題）\n【正答の根拠】直腸は肛門に直接つながる大腸の最終部分であり、図中の5番の位置に該当する。\n【他の選択肢】\n1. ✗ 胃\n2. ✗ 十二指腸\n3. ✗ 空腸\n4. ✗ 下行結腸\n5. ○ 直腸\n【覚え方💡】消化管の順序：口→食道→胃→十二指腸→空腸→回腸→盲腸→上行結腸→横行結腸→下行結腸→S状結腸→直腸→肛門\n【関連知識】直腸からの薬物吸収は門脈系を一部バイパスするため、初回通過効果を部分的に回避できる（坐剤の利点）。",
     "tags": [],
     "image_url": "/images/questions/102/q011.png",
-    "question_text_original": "問 11 下図はヒトの消化器系の模式図である。１〜５のうち、直腸はどれか。 つ選べ。\n肝臓\n胆のう                    1\n2                   膵臓\n肛門"
+    "question_text_original": "問 11 下図はヒトの消化器系の模式図である。１〜５のうち、直腸はどれか。 つ選べ。\n肝臓\n胆のう                    1\n2                   膵臓\n肛門",
+    "question_concepts": [
+      "消化器系",
+      "解剖学",
+      "直腸"
+    ],
+    "visual_content_type": "diagram"
   },
   {
     "id": "r102-012",
@@ -252,13 +573,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "生物",
     "category": "必須問題 - 問 12",
-    "question_text": "問 12 ω６系列（n‑6系列）の脂肪酸はどれか。     つ選べ。",
-    "choices": [],
+    "question_text": "ω6系列（n-6系列）の脂肪酸はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "飽和脂肪酸(ステアリン酸)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "オレイン酸(n-9)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "リノール酸(n-6)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "α-リノレン酸(n-3)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "アラキドン酸(n-6)"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 4,
     "explanation": "【ポイント】ω6系列（n-6系列）の脂肪酸を構造式から判定する問題（画像問題）\n【正答の根拠】ω6系列は末端メチル基から数えて6番目の炭素に最初の二重結合がある脂肪酸。選択肢4がこの条件を満たす（リノール酸18:2,Δ9,12）。\n【他の選択肢】\n1. ✗ 飽和脂肪酸（ステアリン酸18:0）\n2. ✗ ω9系列（オレイン酸18:1,Δ9）\n3. ✗ ω3系列（α-リノレン酸18:3,Δ9,12,15）\n4. ○ ω6系列（リノール酸18:2,Δ9,12）\n5. ✗ ω3系列（DHA 22:6,Δ4,7,10,13,16,19）\n【覚え方💡】ω6の代表＝「リノール酸→アラキドン酸」。ω3の代表＝「α-リノレン酸→EPA→DHA」。リノール酸は必須脂肪酸。\n【関連知識】アラキドン酸はω6系列で、プロスタグランジンやロイコトリエンの前駆体。EPAはω3系列で抗炎症作用。",
     "tags": [],
     "image_url": "/images/questions/102/q012.png",
-    "question_text_original": "問 12 ω６系列（n‑6系列）の脂肪酸はどれか。     つ選べ。\n1 HC                                 CO2H\n2 H3C                                 CO2H\n3 H3C                                 CO2H\n4 HC                                         CO2H\n5 HC                                                CO2H\n⎜ 5⎜"
+    "question_text_original": "問 12 ω６系列（n‑6系列）の脂肪酸はどれか。     つ選べ。\n1 HC                                 CO2H\n2 H3C                                 CO2H\n3 H3C                                 CO2H\n4 HC                                         CO2H\n5 HC                                                CO2H\n⎜ 5⎜",
+    "question_concepts": [
+      "脂肪酸",
+      "n-6系列",
+      "不飽和脂肪酸"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-013",
@@ -369,13 +737,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "衛生",
     "category": "必須問題 - 問 16",
-    "question_text": "問 16 リノール酸において、変質の開始反応となる水素の引き抜きが最も起こりやす\nい部位はどこか。       つ選べ。",
-    "choices": [],
+    "question_text": "リノール酸において、変質の開始反応となる水素の引き抜きが最も起こりやすい部位はどこか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "1",
+        "semantic_labels": [
+          "メチル末端"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "2",
+        "semantic_labels": [
+          "アリル位"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "3",
+        "semantic_labels": [
+          "ビスアリル位"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "4",
+        "semantic_labels": [
+          "アリル位"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "5",
+        "semantic_labels": [
+          "カルボキシル基側"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】リノール酸の変質開始反応（水素引き抜き）の起こりやすい位置\n【正答の根拠】高度不飽和脂肪酸では、2つの二重結合に挟まれた活性メチレン（ビスアリル位）の水素が最も引き抜かれやすい。リノール酸ではΔ9,12の間の11位炭素が該当する。\n【他の選択肢】\n1. ✗ 二重結合に挟まれていない位置\n2. ✗ 二重結合に挟まれていない位置\n3. ○ 活性メチレン（ビスアリル位）＝最も水素が引き抜かれやすい\n4. ✗ 二重結合に挟まれていない位置\n5. ✗ 二重結合に挟まれていない位置\n【覚え方💡】「活性メチレン＝二重結合サンドイッチのCH₂」。ここからHが抜けてラジカル化→過酸化脂質→変質。\n【関連知識】油脂の酸化：自動酸化（ラジカル連鎖反応）→過酸化物価上昇→カルボニル価上昇。抗酸化剤（BHT、ビタミンE）で防止。",
     "tags": [],
     "image_url": "/images/questions/102/q016.png",
-    "question_text_original": "問 16 リノール酸において、変質の開始反応となる水素の引き抜きが最も起こりやす\nい部位はどこか。       つ選べ。\nCO2H\nH3C\n1           2      3     4        5"
+    "question_text_original": "問 16 リノール酸において、変質の開始反応となる水素の引き抜きが最も起こりやす\nい部位はどこか。       つ選べ。\nCO2H\nH3C\n1           2      3     4        5",
+    "question_concepts": [
+      "リノール酸",
+      "脂質過酸化",
+      "ビスアリル位"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-017",
@@ -690,13 +1105,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "薬理",
     "category": "必須問題 - 問 26",
-    "question_text": "問 26 受容体刺激薬（アゴニスト）の結合部位に不可逆的に結合する遮断薬（アンタ\nゴニスト）を加えることにより、アゴニストの用量‑反応曲線が点線Ａから実線Ｂ\nのように変化した。正しいのはどれか。          つ選べ。ただし、余剰受容体はないもの\nとする。",
-    "choices": [],
+    "question_text": "受容体刺激薬（アゴニスト）の結合部位に不可逆的に結合する遮断薬（アンタゴニスト）を加えることにより、アゴニストの用量−反応曲線が点線Aから実線Bのように変化した。正しいのはどれか。1つ選べ。ただし、余剰受容体はないものとする。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "最大反応不変・右方移動"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "最大反応不変・左方移動"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "最大反応低下・右方移動"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "最大反応上昇・左方移動"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "最大反応低下・基底活性上昇"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】不可逆的アンタゴニスト添加後の用量-反応曲線の変化を問う問題（画像問題）\n【正答の根拠】不可逆的アンタゴニストが受容体に結合すると利用可能な受容体数が減少し、余剰受容体がない場合、アゴニストの最大反応が低下する（右方移動ではなく最大反応の低下）。\n【他の選択肢】\n1. ✗ 最大反応が変化しない曲線（競合的アンタゴニストの場合）\n2. ✗ 正しくないグラフ\n3. ○ 最大反応が低下したグラフ\n4. ✗ 正しくないグラフ\n5. ✗ 正しくないグラフ\n【覚え方💡】競合的＝右シフト（最大反応は同じ）、非競合的/不可逆的＝最大反応↓。余剰受容体がなければ不可逆的拮抗で最大反応が下がる。\n【関連知識】余剰受容体（受容体予備）がある場合、一部の不可逆的拮抗でも最大反応が維持されることがある。",
     "tags": [],
     "image_url": "/images/questions/102/q026.png",
-    "question_text_original": "問 26 受容体刺激薬（アゴニスト）の結合部位に不可逆的に結合する遮断薬（アンタ\nゴニスト）を加えることにより、アゴニストの用量‑反応曲線が点線Ａから実線Ｂ\nのように変化した。正しいのはどれか。          つ選べ。ただし、余剰受容体はないもの\nとする。\n1                       2\n反 100                   反 100\n応                       応      B    A\nA     B\n率 50                    率 50\n(％)                     (％)\n0                       0\nアゴニスト (対数用量)            アゴニスト (対数用量)\n3                       4\n反 100                   反 100\n応      A                応      B  A\n率 50      B             率 50\n(％)                     (％)\n0                       0\nアゴニスト (対数用量)            アゴニスト (対数用量)\n反 100\n応      A    B\n率 50\n(％)\nアゴニスト (対数用量)"
+    "question_text_original": "問 26 受容体刺激薬（アゴニスト）の結合部位に不可逆的に結合する遮断薬（アンタ\nゴニスト）を加えることにより、アゴニストの用量‑反応曲線が点線Ａから実線Ｂ\nのように変化した。正しいのはどれか。          つ選べ。ただし、余剰受容体はないもの\nとする。\n1                       2\n反 100                   反 100\n応                       応      B    A\nA     B\n率 50                    率 50\n(％)                     (％)\n0                       0\nアゴニスト (対数用量)            アゴニスト (対数用量)\n3                       4\n反 100                   反 100\n応      A                応      B  A\n率 50      B             率 50\n(％)                     (％)\n0                       0\nアゴニスト (対数用量)            アゴニスト (対数用量)\n反 100\n応      A    B\n率 50\n(％)\nアゴニスト (対数用量)",
+    "question_concepts": [
+      "用量反応曲線",
+      "不可逆的アンタゴニスト",
+      "受容体薬理学"
+    ],
+    "visual_content_type": "graph"
   },
   {
     "id": "r102-027",
@@ -1253,13 +1715,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "薬剤",
     "category": "必須問題 - 問 43",
-    "question_text": "問 43 ヒドロキシ基を有する薬物（R‑OH）のグルクロン酸抱合体を示す化学構造は\nどれか。             つ選べ。",
-    "choices": [],
+    "question_text": "ヒドロキシ基を有する薬物（R-OH）のグルクロン酸抱合体を示す化学構造はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "硫酸エステル抱合体"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "グルクロン酸抱合体"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "酢酸エステル"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "メチルエーテル"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "グリシン抱合体"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】R-OHのグルクロン酸抱合体の化学構造を問う問題（画像問題）\n【正答の根拠】グルクロン酸抱合はUDP-グルクロン酸を供与体として、ヒドロキシ基にグルクロン酸がエーテル結合した抱合体を形成する。選択肢2がこの構造。\n【他の選択肢】\n1. ✗ 硫酸抱合体の構造\n2. ○ グルクロン酸抱合体の構造\n3. ✗ アセチル抱合体の構造\n4. ✗ メチル抱合体の構造\n5. ✗ アミノ酸抱合体の構造\n【覚え方💡】第II相反応の抱合様式：グルクロン酸抱合（最も一般的）、硫酸抱合、グルタチオン抱合、アセチル抱合、メチル抱合、アミノ酸抱合。\n【関連知識】グルクロン酸抱合は肝臓のUGT（UDP-グルクロン酸転移酵素）が触媒。新生児ではUGT活性が未熟（グレイ症候群の原因）。",
     "tags": [],
     "image_url": "/images/questions/102/q043.png",
-    "question_text_original": "問 43 ヒドロキシ基を有する薬物（R‑OH）のグルクロン酸抱合体を示す化学構造は\nどれか。             つ選べ。\nCO2H              R\nO                        O    O\nO                                                      O\nR        S                   OH\nOH                                    R\nO                  HO                             O       CH3\nOH\n1                         2                        3\nO\nO               R\nR           CH3          O        N        CO2H\nH\n4                         5\n⎜ 15⎜"
+    "question_text_original": "問 43 ヒドロキシ基を有する薬物（R‑OH）のグルクロン酸抱合体を示す化学構造は\nどれか。             つ選べ。\nCO2H              R\nO                        O    O\nO                                                      O\nR        S                   OH\nOH                                    R\nO                  HO                             O       CH3\nOH\n1                         2                        3\nO\nO               R\nR           CH3          O        N        CO2H\nH\n4                         5\n⎜ 15⎜",
+    "question_concepts": [
+      "グルクロン酸抱合",
+      "薬物代謝",
+      "第II相反応"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-044",
@@ -1404,13 +1913,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "薬剤",
     "category": "必須問題 - 問 48",
-    "question_text": "（CL ）、腎クリアランス（CL ）及び肝血流速度（Q ）から肝抽出率を算出する\n式はどれか。       つ選べ。",
-    "choices": [],
+    "question_text": "肝代謝と腎排泄により体内から消失する薬物について、全身クリアランス（CL_tot）、腎クリアランス（CL_r）及び肝血流速度（Q_h）から肝抽出率を算出する式はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "CL_tot/Q_h − CL_r",
+        "semantic_labels": [
+          "肝抽出率の計算式"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "(CL_tot − CL_r)/Q_h",
+        "semantic_labels": [
+          "肝抽出率の計算式"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "Q_h/(CL_tot − CL_r)",
+        "semantic_labels": [
+          "肝抽出率の計算式"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "1 − (CL_tot − CL_r)/Q_h",
+        "semantic_labels": [
+          "肝抽出率の計算式"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "1 − Q_h/(CL_tot − CL_r)",
+        "semantic_labels": [
+          "肝抽出率の計算式"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】全身CL・腎CL・肝血流量から肝抽出率を求める式を問う問題（画像問題）\n【正答の根拠】CLtot＝CLr＋CLh→CLh＝CLtot-CLr。肝抽出率Eh＝CLh/Qh＝(CLtot-CLr)/Qh。\n【他の選択肢】\n1. ✗ 正しくない式\n2. ○ Eh＝(CLtot-CLr)/Qh\n3. ✗ 正しくない式\n4. ✗ 正しくない式\n5. ✗ 正しくない式\n【覚え方💡】肝CL＝全身CL−腎CL。肝抽出率＝肝CL÷肝血流量。Eh＝(CLtot-CLr)/Qh。\n【関連知識】肝抽出率が高い薬物（Eh＞0.7）はwell-stirred modelでCLh≒Qhとなり、肝血流量に依存する（血流量律速）。",
     "tags": [],
     "image_url": "/images/questions/102/q048.png",
-    "question_text_original": "問 48 肝代謝と腎排泄により体内から消失する薬物について、全 身 ク リ ア ラ ン ス\n（CL ）、腎クリアランス（CL ）及び肝血流速度（Q ）から肝抽出率を算出する\n式はどれか。       つ選べ。\nCL\n1        − CL\nQ\nCL − CL\nQ\nQ\nCL − CL\nCL − CL\n4 1−\nQ\nQ\n5 1−\nCL − CL\n⎜ 17⎜"
+    "question_text_original": "問 48 肝代謝と腎排泄により体内から消失する薬物について、全 身 ク リ ア ラ ン ス\n（CL ）、腎クリアランス（CL ）及び肝血流速度（Q ）から肝抽出率を算出する\n式はどれか。       つ選べ。\nCL\n1        − CL\nQ\nCL − CL\nQ\nQ\nCL − CL\nCL − CL\n4 1−\nQ\nQ\n5 1−\nCL − CL\n⎜ 17⎜",
+    "question_concepts": [
+      "肝抽出率",
+      "クリアランス",
+      "薬物動態"
+    ],
+    "visual_content_type": "mixed"
   },
   {
     "id": "r102-049",
@@ -3183,13 +3739,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "化学",
     "category": "一般 理論問題 - 問 101",
-    "question_text": "問 101 次の反応のうち、主生成物がラセミ体として生じるのはどれか。          つ選べ。",
-    "choices": [],
+    "question_text": "次の反応のうち、主生成物がラセミ体として生じるのはどれか。1つ選べ。（THF：テトラヒドロフラン）",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "ヒドロホウ素化-酸化反応"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "Baeyer-Villiger酸化"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "アルケンへのBr₂付加"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "アルケンへのH₂SO₄/H₂O付加"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "OsO₄によるジヒドロキシル化"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】ラセミ体が主生成物として生じる反応を選ぶ問題（画像問題）\n【正答の根拠】アルケンへのBH₃の付加（ヒドロホウ素化）は逆マルコフニコフ則に従いcis付加し、生成物に不斉炭素が1つ生じてラセミ体となる。\n【他の選択肢】\n1. ○ BH₃付加→不斉炭素1つ→ラセミ体\n2. ✗ 過酸によるエポキシ化→メソ体\n3. ✗ Br₂のtrans付加→メソ体\n4. ✗ H₂O/H⁺の付加→不斉炭素なし\n5. ✗ OsO₄のcis付加→メソ体\n【覚え方💡】ラセミ体判定：不斉炭素が1つで対称面なし→ラセミ体。不斉炭素2つで対称面あり→メソ体。\n【関連知識】ヒドロホウ素化-酸化（BH₃→H₂O₂/NaOH）はアルケンの逆マルコフニコフ型水和反応。syn付加。",
     "tags": [],
     "image_url": "/images/questions/102/q101.png",
-    "question_text_original": "問 101 次の反応のうち、主生成物がラセミ体として生じるのはどれか。          つ選べ。\n（THF：テトラヒドロフラン）\nCH2\n1)BH3,THF\n1   H3C\n2)H2O2,NaOH\nCH3       H2O\nO\nCl\nOOH\nBr2\n3 H3C       CH3\nCH2\nH2SO4\n4   H3C\nH2O\nCH3\n1)OsO4\n2)NaHSO3,H2O\n⎜ 7⎜"
+    "question_text_original": "問 101 次の反応のうち、主生成物がラセミ体として生じるのはどれか。          つ選べ。\n（THF：テトラヒドロフラン）\nCH2\n1)BH3,THF\n1   H3C\n2)H2O2,NaOH\nCH3       H2O\nO\nCl\nOOH\nBr2\n3 H3C       CH3\nCH2\nH2SO4\n4   H3C\nH2O\nCH3\n1)OsO4\n2)NaHSO3,H2O\n⎜ 7⎜",
+    "question_concepts": [
+      "ラセミ体",
+      "立体選択性",
+      "有機化学反応"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-102",
@@ -3198,13 +3801,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "化学",
     "category": "一般 理論問題 - 問 102",
-    "question_text": "問 102 次の反応で得られる主生成物Ａの構造式として、正しいのはどれか。",
-    "choices": [],
+    "question_text": "次の反応で得られる主生成物Aの構造式として、正しいのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "アルデヒド+ケトン(正しい開裂生成物)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "ラクトン生成物"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "ジアルデヒド"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "ジケトン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "環状エポキシド"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 5,
     "explanation": "【ポイント】環状アルケンのオゾン分解生成物を問う問題（画像問題）\n【正答の根拠】1-メチルシクロヘキセンをO₃で処理後、(CH₃)₂Sで還元すると、環が開裂して2つのカルボニル基を持つ直鎖化合物（6-oxoheptanal）が生成する。\n【他の選択肢】\n1. ✗ 正しくない構造\n2. ✗ 正しくない構造\n3. ✗ 正しくない構造\n4. ✗ 正しくない構造\n5. ○ 6-oxoheptanal（アルデヒド＋ケトン）\n【覚え方💡】オゾン分解＝二重結合を切断して2つのカルボニル化合物に。環状アルケンの場合は開環してジカルボニル化合物になる。\n【関連知識】酸化的処理（H₂O₂）だとカルボン酸が生成。還元的処理（Me₂S, Zn/AcOH）だとアルデヒドが残る。",
     "tags": [],
     "image_url": "/images/questions/102/q102.png",
-    "question_text_original": "問 102 次の反応で得られる主生成物Ａの構造式として、正しいのはどれか。                                                  つ選\nべ。\nCH3\n1)O3\nA\n2)(CH3)2S\nH        O                            H    O\nO                                                      O       O\nCH3\nH3C                   H           H3C                              H3C               H\nO\n1                                2                             3\nO           O                    O\nH\nH3C                    CH3        H3C\nO\n4                                5"
+    "question_text_original": "問 102 次の反応で得られる主生成物Ａの構造式として、正しいのはどれか。                                                  つ選\nべ。\nCH3\n1)O3\nA\n2)(CH3)2S\nH        O                            H    O\nO                                                      O       O\nCH3\nH3C                   H           H3C                              H3C               H\nO\n1                                2                             3\nO           O                    O\nH\nH3C                    CH3        H3C\nO\n4                                5",
+    "question_concepts": [
+      "オゾン分解",
+      "還元的後処理",
+      "カルボニル化合物"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-103",
@@ -3247,13 +3897,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "化学",
     "category": "一般 理論問題 - 問 104",
-    "question_text": "問 104 ジクロフェナクナトリウムは、化合物Ａから化合物Ｂを経由して合成できる。\n化合物Ｂはどれか。              つ選べ。",
-    "choices": [],
+    "question_text": "ジクロフェナクナトリウムは、化合物Aから化合物Bを経由して合成できる。化合物Bはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "ジクロロジフェニルアミン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "ジクロロフェニルアミド"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "ジクロロフェニルアミンN-アシル体"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "オキサゾール誘導体"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "ジクロロベンゾフェノンアミド"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 4,
     "explanation": "【ポイント】ジクロフェナク合成における中間体Bの構造を問う問題（画像問題）\n【正答の根拠】化合物Aから分子内フリーデル-クラフツアルキル化でBが生成。Bを加水分解するとジクロフェナクナトリウムが得られる。\n【他の選択肢】\n1. ✗ 正しくない構造\n2. ✗ 正しくない構造\n3. ✗ 正しくない構造\n4. ○ 分子内F-Cアルキル化→加水分解の中間体\n5. ✗ 正しくない構造\n【覚え方💡】フリーデル-クラフツ反応：ルイス酸触媒で芳香環にアルキル基やアシル基を導入。分子内反応で環化も可能。\n【関連知識】ジクロフェナクはNSAIDsの代表薬。アリール酢酸系でCOX-1/2を非選択的に阻害。",
     "tags": [],
     "image_url": "/images/questions/102/q104.png",
-    "question_text_original": "問 104 ジクロフェナクナトリウムは、化合物Ａから化合物Ｂを経由して合成できる。\n化合物Ｂはどれか。              つ選べ。\nCl\nCO2Na\nN        O         AlCl3               NaOH            NH\nB\nCl             Cl        160℃           CH3CH2OH       Cl         Cl\nH2O\n加熱還流\nA                                              ジクロフェナクナトリウム\nCl\nCl                                   Cl           Cl\nO\nN                            N                     N\nCl             Cl           Cl             Cl      Cl         Cl\n1                           2                     3\nO\nCl\nO\nN                            NH\nCl             Cl           Cl             Cl\n4                           5\n⎜ 9⎜"
+    "question_text_original": "問 104 ジクロフェナクナトリウムは、化合物Ａから化合物Ｂを経由して合成できる。\n化合物Ｂはどれか。              つ選べ。\nCl\nCO2Na\nN        O         AlCl3               NaOH            NH\nB\nCl             Cl        160℃           CH3CH2OH       Cl         Cl\nH2O\n加熱還流\nA                                              ジクロフェナクナトリウム\nCl\nCl                                   Cl           Cl\nO\nN                            N                     N\nCl             Cl           Cl             Cl      Cl         Cl\n1                           2                     3\nO\nCl\nO\nN                            NH\nCl             Cl           Cl             Cl\n4                           5\n⎜ 9⎜",
+    "question_concepts": [
+      "ジクロフェナクナトリウム",
+      "医薬品合成",
+      "Friedel-Crafts反応"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-105",
@@ -3262,13 +3959,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "化学",
     "category": "一般 理論問題 - 問 105",
-    "question_text": "問 105 体内でグアニンは、以下のようにキサンチンを経て尿酸へ変換される。キサン\nチンの構造式として正しいのはどれか。                                つ選べ。",
-    "choices": [],
+    "question_text": "体内でグアニンは、以下のようにキサンチンを経て尿酸へ変換される。キサンチンの構造式として正しいのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "ヒポキサンチン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "キサンチン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "プリン誘導体"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "8-オキソキサンチン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "ジヒドロキシプリン"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】グアニン→キサンチン→尿酸の変換においてキサンチンの構造を問う問題（画像問題）\n【正答の根拠】グアニンがグアニンデアミナーゼで脱アミノされるとキサンチンになる。キサンチンはプリン骨格の2,6-ジオキソ体。\n【他の選択肢】\n1. ✗ 正しくない構造\n2. ○ キサンチン（2,6-ジオキソプリン）\n3. ✗ 正しくない構造\n4. ✗ 正しくない構造\n5. ✗ 正しくない構造\n【覚え方💡】プリン代謝：アデニン→ヒポキサンチン→キサンチン→尿酸。グアニン→キサンチン→尿酸。キサンチンオキシダーゼが最終2段階を触媒。\n【関連知識】キサンチン誘導体：カフェイン(1,3,7-トリメチルキサンチン)、テオフィリン(1,3-ジメチル)、テオブロミン(3,7-ジメチル)。",
     "tags": [],
     "image_url": "/images/questions/102/q105.png",
-    "question_text_original": "問 105 体内でグアニンは、以下のようにキサンチンを経て尿酸へ変換される。キサン\nチンの構造式として正しいのはどれか。                                つ選べ。\nO                                                                   O\nH\nN        NH         加水分解                          酸化                N        NH\nキサンチン                        O\nN    N       NH2                                                    N    N    O\nH                                                                   H    H\nグアニン                                                               尿酸\nO                         O                          O\nN         NH                N       NH                         NH\nN\nN     N                     N   N    O            N        N\nH                           H   H                 H\n1                          2                         3\nO                             O\nH\nN           NH                N           NH\nO                             HO\nN       N                     N       N    OH\nH                             H\n4                             5"
+    "question_text_original": "問 105 体内でグアニンは、以下のようにキサンチンを経て尿酸へ変換される。キサン\nチンの構造式として正しいのはどれか。                                つ選べ。\nO                                                                   O\nH\nN        NH         加水分解                          酸化                N        NH\nキサンチン                        O\nN    N       NH2                                                    N    N    O\nH                                                                   H    H\nグアニン                                                               尿酸\nO                         O                          O\nN         NH                N       NH                         NH\nN\nN     N                     N   N    O            N        N\nH                           H   H                 H\n1                          2                         3\nO                             O\nH\nN           NH                N           NH\nO                             HO\nN       N                     N       N    OH\nH                             H\n4                             5",
+    "question_concepts": [
+      "キサンチン",
+      "プリン代謝",
+      "グアニン"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-106",
@@ -3341,13 +4085,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "化学",
     "category": "一般 理論問題 - 問 108",
-    "question_text": "問 108 下図は、ある化合物の H‑NM R スペクトル（400M Hz、CDCl 、基準物質は\nテトラメチルシラン(TM S)）である。この化合物の構造式として正しいのはどれ\nか。      つ選べ。なお、イのシグナルは一重線であり、拡大図Ａ、Ｂ及びＣの拡大率\nはそれぞれ異なる。また、エのシグナルはヒドロキシ基のプロトンに由来する。",
-    "choices": [],
+    "question_text": "下図は、ある化合物の¹H-NMRスペクトル（400 MHz、CDCl₃、基準物質はテトラメチルシラン（TMS））である。この化合物の構造式として正しいのはどれか。1つ選べ。なお、イのシグナルは一重線であり、拡大図A、B及びCの拡大率はそれぞれ異なる。また、エのシグナルはヒドロキシ基のプロトンに由来する。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "2-メチル-3-ブテン-2-オール"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "メトキシ-ジメチルフェノール"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "メトキシ-ジメチルフェノール(異性体)"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "メチルスチレノール"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "ジメチルスチレノール"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】¹H-NMRスペクトルから化合物の構造を推定する問題（画像問題）\n【正答の根拠】スペクトルの解析から、イソプロピル基(6H,二重線)＋メチル基(3H,一重線)＋三置換ベンゼン(3H)＋OH→チモールと推定される。\n【他の選択肢】\n1. ○ チモール（2-イソプロピル-5-メチルフェノール）\n2. ✗ 合計プロトン数やシグナルパターンが一致しない\n3. ✗ 合計プロトン数やシグナルパターンが一致しない\n4. ✗ 合計プロトン数やシグナルパターンが一致しない\n5. ✗ 合計プロトン数やシグナルパターンが一致しない\n【覚え方💡】NMRスペクトル解析の手順：①積分比から各シグナルのH数決定②分裂パターンから隣接H数推定③化学シフトから官能基推定④構造決定。\n【関連知識】チモールはシソ科タイム精油の主成分。抗菌・防腐作用があり、うがい薬に使用される。",
     "tags": [],
     "image_url": "/images/questions/102/q108.png",
-    "question_text_original": "問 108 下図は、ある化合物の H‑NM R スペクトル（400M Hz、CDCl 、基準物質は\nテトラメチルシラン(TM S)）である。この化合物の構造式として正しいのはどれ\nか。      つ選べ。なお、イのシグナルは一重線であり、拡大図Ａ、Ｂ及びＣの拡大率\nはそれぞれ異なる。また、エのシグナルはヒドロキシ基のプロトンに由来する。\n拡大図Ａ\nア\n拡大図Ｃ                                                      拡大図Ｂ                    6H               ア\nオ\n6H\n1H\nキ\n1H                                                        ウ\n1H        イ\n3H\nカ\n1H\nエ\nCHCl3\nキ                1H\n3.3   3.2   3.1\nカ                   ppm\n1H    オ\n1H\n1H                                 H2O\nウ                 1.5 1.4 1.3 1.2 1.1 1.0\nppm\n1H\n7.3 7.2 7.1 7.0 6.9 6.8 6.7 6.6\nppm                                                                               TMS\n12.0   11.0    10.0       9.0        8.0      7.0   6.0       5.0    4.0        3.0   2.0   1.0       0     −1.0       −2.0\nppm\nH3C              OH                               O           OH                          O             OH\nH3C                                     H3C\nCH3                                          CH3                                    CH3\nCH3\nCH3                                          CH3                                       CH3\n1                                           2                                       3\nH3C              OH                           H3C             OH\nCH3\nCH3\nCH3\n4                                           5\n⎜ 12⎜"
+    "question_text_original": "問 108 下図は、ある化合物の H‑NM R スペクトル（400M Hz、CDCl 、基準物質は\nテトラメチルシラン(TM S)）である。この化合物の構造式として正しいのはどれ\nか。      つ選べ。なお、イのシグナルは一重線であり、拡大図Ａ、Ｂ及びＣの拡大率\nはそれぞれ異なる。また、エのシグナルはヒドロキシ基のプロトンに由来する。\n拡大図Ａ\nア\n拡大図Ｃ                                                      拡大図Ｂ                    6H               ア\nオ\n6H\n1H\nキ\n1H                                                        ウ\n1H        イ\n3H\nカ\n1H\nエ\nCHCl3\nキ                1H\n3.3   3.2   3.1\nカ                   ppm\n1H    オ\n1H\n1H                                 H2O\nウ                 1.5 1.4 1.3 1.2 1.1 1.0\nppm\n1H\n7.3 7.2 7.1 7.0 6.9 6.8 6.7 6.6\nppm                                                                               TMS\n12.0   11.0    10.0       9.0        8.0      7.0   6.0       5.0    4.0        3.0   2.0   1.0       0     −1.0       −2.0\nppm\nH3C              OH                               O           OH                          O             OH\nH3C                                     H3C\nCH3                                          CH3                                    CH3\nCH3\nCH3                                          CH3                                       CH3\n1                                           2                                       3\nH3C              OH                           H3C             OH\nCH3\nCH3\nCH3\n4                                           5\n⎜ 12⎜",
+    "question_concepts": [
+      "¹H-NMR",
+      "スペクトル解析",
+      "構造決定"
+    ],
+    "visual_content_type": "mixed"
   },
   {
     "id": "r102-109",
@@ -4096,13 +4887,61 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "衛生",
     "category": "一般 理論問題 - 問 131",
-    "question_text": "問 131 染料などの工業原料に使用され、N ‑水酸化により代謝的活性化されて膀胱が\nんの原因となるのはどれか。                  つ選べ。",
-    "choices": [],
+    "question_text": "染料などの工業原料に使用され、N-水酸化により代謝的活性化されて膀胱がんの原因となるのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "2-アミノ-3-メチルイミダゾ[4,5-f]キノリン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "N,N-ジメチル-4-ニトロソアニリン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "4-アミノビフェニル"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "セロトニン(5-HT)誘導体"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "ベンジジン"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】N-水酸化で活性化され膀胱がんを引き起こす工業原料を問う問題（2つ選択・画像問題）\n【正答の根拠】o-トルイジン（選択肢3）とベンジジン（選択肢5）は染料原料で、N-水酸化→硫酸/アセチル抱合→ニトレニウムイオン→膀胱がんの原因。\n【他の選択肢】\n1. ✗ Trp-P-1＝加熱トリプトファン由来（肝がん）\n2. ✗ ジメチルニトロソアミン＝亜硝酸+アミン由来\n3. ○ o-トルイジン＝染料原料→膀胱がん\n4. ✗ サイロシン＝幻覚キノコ由来アルカロイド（麻薬）\n5. ○ ベンジジン＝染料原料→膀胱がん\n【覚え方💡】職業性膀胱がん＝芳香族アミン（ベンジジン、2-ナフチルアミン、o-トルイジン等）。活性化経路：N-水酸化→抱合→ニトレニウムイオン→DNA付加体。\n【関連知識】2015年にo-トルイジン取扱い事業所で膀胱がん多発が問題になった。特定化学物質障害予防規則の対象。",
     "tags": [],
     "image_url": "/images/questions/102/q131.png",
-    "question_text_original": "問 131 染料などの工業原料に使用され、N ‑水酸化により代謝的活性化されて膀胱が\nんの原因となるのはどれか。                  つ選べ。\nH3C\nH3C             CH3\nN\nN NO\nNH2                               NH2\nH3C\nN\nH         CH3\n1                         2             3\nH3C\nN CH3\nOH\nH2N               NH2\nN\nH\n4                         5"
+    "question_text_original": "問 131 染料などの工業原料に使用され、N ‑水酸化により代謝的活性化されて膀胱が\nんの原因となるのはどれか。                  つ選べ。\nH3C\nH3C             CH3\nN\nN NO\nNH2                               NH2\nH3C\nN\nH         CH3\n1                         2             3\nH3C\nN CH3\nOH\nH2N               NH2\nN\nH\n4                         5",
+    "question_concepts": [
+      "芳香族アミン",
+      "発がん性",
+      "N-水酸化",
+      "膀胱がん"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-132",
@@ -4379,13 +5218,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "衛生",
     "category": "一般 理論問題 - 問 140",
-    "question_text": "問 140 シックハウス症候群の原因物質として厚生労働省が定めた指針値があるのはど\nれか。   つ選べ。",
-    "choices": [],
+    "question_text": "シックハウス症候群の原因物質として厚生労働省が定めた指針値があるのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "クレゾール"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "ペンタクロロフェノール"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "HCHO",
+        "semantic_labels": [
+          "ホルムアルデヒド"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "NO₂",
+        "semantic_labels": [
+          "二酸化窒素"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "o-ジクロロベンゼン"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】シックハウス症候群の原因物質で厚労省の室内濃度指針値があるものを選ぶ問題（2つ選択・画像問題）\n【正答の根拠】ホルムアルデヒド（選択肢3）とパラジクロロベンゼン（選択肢5）は室内濃度指針値が設定されている。\n【他の選択肢】\n1. ✗ ベンジルアルコール→指針値なし\n2. ✗ ヘキサクロロシクロヘキサン（HCH）→有機塩素系農薬、指針値なし\n3. ○ ホルムアルデヒド→接着剤・防腐剤由来、指針値あり\n4. ✗ 二酸化窒素→大気汚染の環境基準はあるが室内濃度指針値ではない\n5. ○ パラジクロロベンゼン→防虫剤由来、指針値あり\n【覚え方💡】シックハウス指針値の代表物質：ホルムアルデヒド(100μg/m3)、トルエン、キシレン、パラジクロロベンゼン、エチルベンゼン、スチレンなど13物質。\n【関連知識】ホルムアルデヒドは建築基準法でも規制（F☆☆☆☆等級制度）。TVOC暫定目標値400μg/m3。",
     "tags": [],
     "image_url": "/images/questions/102/q140.png",
-    "question_text_original": "問 140 シックハウス症候群の原因物質として厚生労働省が定めた指針値があるのはど\nれか。   つ選べ。\nCl\nOH\nCl           Cl\nHCHO\nCl           Cl\nCl\n1           2           3\nNO2      Cl           Cl\n4           5\n⎜ 36⎜\n一般問題（薬学理論問題) 【法規・制度・倫理】"
+    "question_text_original": "問 140 シックハウス症候群の原因物質として厚生労働省が定めた指針値があるのはど\nれか。   つ選べ。\nCl\nOH\nCl           Cl\nHCHO\nCl           Cl\nCl\n1           2           3\nNO2      Cl           Cl\n4           5\n⎜ 36⎜\n一般問題（薬学理論問題) 【法規・制度・倫理】",
+    "question_concepts": [
+      "シックハウス症候群",
+      "室内空気汚染",
+      "ホルムアルデヒド"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-141",
@@ -4632,13 +5518,68 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "薬理",
     "category": "一般 理論問題 - 問 148",
-    "question_text": "問 148 下図は、平成 15（2003）年度及び平成 25（2013）年度の制度区分別国民医療\n費の給付分等の割合を示したものである。ア 、イ 、ウ 及び エ にあてはまるの\nはどれか。    つ選べ。",
-    "choices": [],
+    "question_text": "下図は、平成15（2003）年度及び平成25（2013）年度の制度区分別国民医療費の給付分等の割合を示したものである。ア、イ、ウ及びエにあてはまるのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "ア:医療保険 イ:老人保健 ウ:後期高齢者医療 エ:医療保険",
+        "semantic_labels": [
+          "医療保険制度の割合"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "ア:医療保険 イ:老人保健 ウ:医療保険 エ:後期高齢者医療",
+        "semantic_labels": [
+          "医療保険制度の割合"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "ア:老人保健 イ:医療保険 ウ:後期高齢者医療 エ:医療保険",
+        "semantic_labels": [
+          "医療保険制度の割合"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "ア:老人保健 イ:医療保険 ウ:医療保険 エ:後期高齢者医療",
+        "semantic_labels": [
+          "医療保険制度の割合"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "ア:医療保険 イ:後期高齢者医療 ウ:後期高齢者医療 エ:医療保険",
+        "semantic_labels": [
+          "医療保険制度の割合"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 6,
+        "text": "ア:医療保険 イ:後期高齢者医療 ウ:医療保険 エ:後期高齢者医療",
+        "semantic_labels": [
+          "医療保険制度の割合"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】国民医療費の制度区分別給付割合に関する問題（図表問題）\n【正答の根拠】H15年度は老人保健制度、H25年度は後期高齢者医療制度に移行。ア＝医療保険、イ＝老人保健、ウ＝医療保険、エ＝後期高齢者医療。\n【他の選択肢】\n1. ✗ 組合せが異なる\n2. ○ ア＝医療保険、イ＝老人保健、ウ＝医療保険、エ＝後期高齢者医療\n3. ✗ 組合せが異なる\n4. ✗ 組合せが異なる\n5. ✗ 組合せが異なる\n【覚え方💡】2008年の制度変更：老人保健法→高齢者医療確保法。前期高齢者(65-74歳)＝各医療保険、後期高齢者(75歳以上)＝広域連合。\n【関連知識】国民医療費の内訳：医療保険給付が最大(約47%)、次いで後期高齢者医療(約33%)、患者負担(約12%)。",
     "tags": [],
     "image_url": "/images/questions/102/q148.png",
-    "question_text_original": "問 148 下図は、平成 15（2003）年度及び平成 25（2013）年度の制度区分別国民医療\n費の給付分等の割合を示したものである。ア 、イ 、ウ 及び エ にあてはまるの\nはどれか。    つ選べ。\n患      公\n平成 15年度                                   者      費\nア               イ       負      負\n(2003)                                   担      担\n44.7％           33.8％   15.7％   5.8％\n患      公      そ\n者      費      の\n平成 25年度            ウ                 エ                  他\n負      負\n(2013)                                   担      担\n47.0％           32.7％   12.5％ 7.4％ 0.5％\n制度区分別国民医療費の構成割合\n注）厚生労働省「平成 15年度国民医療費の概況」及び「平成 25年度国民医療費の概況」\nを基に作成した。端数処理により、合計が 100％にならないものがある。\nア            イ              ウ               エ\n1 医療保険     老人保健             後期高齢者医療     医療保険\n2 医療保険     老人保健             医療保険        後期高齢者医療\n3 老人保健     医療保険             後期高齢者医療     医療保険\n4 老人保健     医療保険             医療保険        後期高齢者医療\n5 医療保険     後期高齢者医療          後期高齢者医療     医療保険\n6 医療保険     後期高齢者医療          医療保険        後期高齢者医療\n⎜ 41⎜"
+    "question_text_original": "問 148 下図は、平成 15（2003）年度及び平成 25（2013）年度の制度区分別国民医療\n費の給付分等の割合を示したものである。ア 、イ 、ウ 及び エ にあてはまるの\nはどれか。    つ選べ。\n患      公\n平成 15年度                                   者      費\nア               イ       負      負\n(2003)                                   担      担\n44.7％           33.8％   15.7％   5.8％\n患      公      そ\n者      費      の\n平成 25年度            ウ                 エ                  他\n負      負\n(2013)                                   担      担\n47.0％           32.7％   12.5％ 7.4％ 0.5％\n制度区分別国民医療費の構成割合\n注）厚生労働省「平成 15年度国民医療費の概況」及び「平成 25年度国民医療費の概況」\nを基に作成した。端数処理により、合計が 100％にならないものがある。\nア            イ              ウ               エ\n1 医療保険     老人保健             後期高齢者医療     医療保険\n2 医療保険     老人保健             医療保険        後期高齢者医療\n3 老人保健     医療保険             後期高齢者医療     医療保険\n4 老人保健     医療保険             医療保険        後期高齢者医療\n5 医療保険     後期高齢者医療          後期高齢者医療     医療保険\n6 医療保険     後期高齢者医療          医療保険        後期高齢者医療\n⎜ 41⎜",
+    "question_concepts": [
+      "国民医療費",
+      "医療保険制度",
+      "制度区分別"
+    ],
+    "visual_content_type": "mixed"
   },
   {
     "id": "r102-149",
@@ -5191,13 +6132,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "薬剤",
     "category": "一般 理論問題 - 問 165",
-    "question_text": "問 165 薬物の経口吸収に及ぼす食事の影響とそのメカニズムの組合せとして、正しい\nのはどれか。   つ選べ。",
-    "choices": [],
+    "question_text": "薬物の経口吸収に及ぼす食事の影響とそのメカニズムの組合せとして、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "インドメタシン ファルネシル / 吸収量増大 / 胆汁酸による可溶化",
+        "semantic_labels": [
+          "脂溶性薬物の吸収増大"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "エチドロン酸二ナトリウム / 吸収量増大 / 食物成分とのキレート形成",
+        "semantic_labels": [
+          "キレート形成"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "セファクロル / 吸収遅延 / 胃内容排出速度の低下",
+        "semantic_labels": [
+          "胃排出遅延"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "メナテトレノン / 吸収量低下 / 食物成分による分解",
+        "semantic_labels": [
+          "食物による分解"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "リボフラビン / 吸収量低下 / トランスポーターの飽和",
+        "semantic_labels": [
+          "トランスポーター飽和"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】薬物の経口吸収に及ぼす食事の影響とメカニズムの正しい組合せを選ぶ問題（2つ選択・画像問題）\n【正答の根拠】インドメタシンファルネシルは食事で胆汁酸分泌→溶解性改善→吸収増大（選択肢1）。セファクロルはGER低下で吸収遅延（選択肢3）。\n【他の選択肢】\n1. ○ インドメタシンファルネシル→食事で胆汁酸→溶解性改善→吸収↑\n2. ✗ エチドロン酸Na→金属イオンとキレート→吸収↓（キレートが正しいメカニズム）\n3. ○ セファクロル→食後GER低下→吸収遅延\n4. ✗ メナテトレノン→食事で胆汁酸→溶解性改善→吸収↑（↓ではない）\n5. ✗ リボフラビン→GER低下でトランスポーター飽和↓→吸収↑\n【覚え方💡】食事の影響パターン：脂溶性薬→胆汁酸で吸収↑、金属キレート形成薬→吸収↓、担体輸送薬→GER低下で吸収↑(飽和回避)。\n【関連知識】GER＝胃内容排出速度。食後にGERは低下。BP製剤は食事で吸収↓（空腹時服用）。",
     "tags": [],
     "image_url": "/images/questions/102/q165.png",
-    "question_text_original": "問 165 薬物の経口吸収に及ぼす食事の影響とそのメカニズムの組合せとして、正しい\nのはどれか。   つ選べ。\n薬物吸収の       食事による吸収変化の\n薬物\n変化       メカニズム\n1 インドメタシン ファルネシル    吸収量増大      胆汁酸による可溶化\n2 エチドロン酸二ナトリウム      吸収量増大      食物成分とのキレート形成\n3 セファクロル            吸収遅延       胃内容排出速度の低下\n4 メナテトレノン           吸収量低下      食物成分による分解\n5 リボフラビン            吸収量低下      トランスポーターの飽和\n⎜ 9⎜"
+    "question_text_original": "問 165 薬物の経口吸収に及ぼす食事の影響とそのメカニズムの組合せとして、正しい\nのはどれか。   つ選べ。\n薬物吸収の       食事による吸収変化の\n薬物\n変化       メカニズム\n1 インドメタシン ファルネシル    吸収量増大      胆汁酸による可溶化\n2 エチドロン酸二ナトリウム      吸収量増大      食物成分とのキレート形成\n3 セファクロル            吸収遅延       胃内容排出速度の低下\n4 メナテトレノン           吸収量低下      食物成分による分解\n5 リボフラビン            吸収量低下      トランスポーターの飽和\n⎜ 9⎜",
+    "question_concepts": [
+      "食事の影響",
+      "経口吸収",
+      "薬物動態"
+    ],
+    "visual_content_type": "table"
   },
   {
     "id": "r102-166",
@@ -5228,13 +6216,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "薬剤",
     "category": "一般 理論問題 - 問 167",
-    "question_text": "問 167 薬物とその活性代謝物の組合せとして、誤っているのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "薬物とその活性代謝物の組合せとして、誤っているのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "イミプラミン / デシプラミン",
+        "semantic_labels": [
+          "三環系抗うつ薬の代謝"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "サラゾスルファピリジン / 5-アミノサリチル酸",
+        "semantic_labels": [
+          "抗炎症薬の代謝"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "ニトラゼパム / ジアゼパム",
+        "semantic_labels": [
+          "ベンゾジアゼピン系の代謝"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "プリミドン / フェノバルビタール",
+        "semantic_labels": [
+          "抗てんかん薬の代謝"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "モルヒネ / モルヒネ-6-グルクロニド",
+        "semantic_labels": [
+          "オピオイドの代謝"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】薬物と活性代謝物の組合せで誤っているものを選ぶ問題（画像問題）\n【正答の根拠】ニトラゼパムには活性代謝物が報告されていない（選択肢3が誤り）。\n【他の選択肢】\n1. ○ イミプラミン→デシプラミン（N-脱メチル化）\n2. ○ サラゾスルファピリジン→5-アミノサリチル酸（腸内細菌で還元）\n3. ✗ ニトラゼパム→7-アミノニトラゼパム等は活性代謝物ではない\n4. ○ プリミドン→フェノバルビタール（肝酸化）\n5. ○ モルヒネ→モルヒネ-6-グルクロニド（グルクロン酸抱合）\n【覚え方💡】活性代謝物の代表例：ジアゼパム→デスメチルジアゼパム→オキサゼパム、コデイン→モルヒネ、エナラプリル→エナラプリラート。\n【関連知識】モルヒネ-6-グルクロニドはモルヒネより強い鎮痛活性。モルヒネ-3-グルクロニドは不活性。",
     "tags": [],
     "image_url": "/images/questions/102/q167.png",
-    "question_text_original": "問 167 薬物とその活性代謝物の組合せとして、誤っているのはどれか。 つ選べ。\n薬物                             活性代謝物\n1 イミプラミン                                  デシプラミン\n2 サラゾスルファピリジン                             5‑アミノサリチル酸\n3 ニトラゼパム                                  ジアゼパム\n4 プリミドン                                   フェノバルビタール\n5 モルヒネ                                    モルヒネ‑6‑グルクロニド\n⎜ 10⎜"
+    "question_text_original": "問 167 薬物とその活性代謝物の組合せとして、誤っているのはどれか。 つ選べ。\n薬物                             活性代謝物\n1 イミプラミン                                  デシプラミン\n2 サラゾスルファピリジン                             5‑アミノサリチル酸\n3 ニトラゼパム                                  ジアゼパム\n4 プリミドン                                   フェノバルビタール\n5 モルヒネ                                    モルヒネ‑6‑グルクロニド\n⎜ 10⎜",
+    "question_concepts": [
+      "活性代謝物",
+      "プロドラッグ",
+      "薬物代謝"
+    ],
+    "visual_content_type": "table"
   },
   {
     "id": "r102-168",
@@ -6181,13 +7216,65 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "法規・制度・倫理",
     "category": "",
-    "question_text": "問 195（薬理）\n患者に聞いたところ、次の成分を含む一般用医薬品を服用したことがわかった。\nジフェンヒドラミン   （睡眠改善薬）\nファモチジン      （胃腸薬）\nフェキソフェナジン   （アレルギー専用鼻炎薬）\nこれらの一般用医薬品服用後に生じた排尿困難の機序と考えられるのはどれか。\nつ選べ。",
-    "choices": [],
+    "question_text": "患者に聞いたところ、次の成分を含む一般用医薬品を服用したことがわかった。ジフェンヒドラミン（睡眠改善薬）、ファモチジン（胃腸薬）、フェキソフェナジン（アレルギー専用鼻炎薬）。これらの一般用医薬品服用後に生じた排尿困難の機序と考えられるのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "ヒスタミンH1受容体遮断",
+        "semantic_labels": [
+          "ヒスタミンH1受容体",
+          "抗ヒスタミン薬"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "ヒスタミンH2受容体遮断",
+        "semantic_labels": [
+          "ヒスタミンH2受容体",
+          "H2ブロッカー"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "アセチルコリンM3受容体遮断",
+        "semantic_labels": [
+          "ムスカリンM3受容体",
+          "抗コリン作用"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "アドレナリンα1受容体遮断",
+        "semantic_labels": [
+          "アドレナリンα1受容体",
+          "α遮断"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "ロイコトリエンCysLT1受容体遮断",
+        "semantic_labels": [
+          "ロイコトリエン受容体",
+          "CysLT1"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q195.png",
-    "question_text_original": "問 195（薬理）\n患者に聞いたところ、次の成分を含む一般用医薬品を服用したことがわかった。\nジフェンヒドラミン   （睡眠改善薬）\nファモチジン      （胃腸薬）\nフェキソフェナジン   （アレルギー専用鼻炎薬）\nこれらの一般用医薬品服用後に生じた排尿困難の機序と考えられるのはどれか。\nつ選べ。\n1 ヒスタミン H 受容体遮断\n2 ヒスタミン H 受容体遮断\n3 アセチルコリン M 受容体遮断\n4 アドレナリン α 受容体遮断\n5 ロイコトリエン CysLT 受容体遮断\n⎜ 26⎜"
+    "question_text_original": "問 195（薬理）\n患者に聞いたところ、次の成分を含む一般用医薬品を服用したことがわかった。\nジフェンヒドラミン   （睡眠改善薬）\nファモチジン      （胃腸薬）\nフェキソフェナジン   （アレルギー専用鼻炎薬）\nこれらの一般用医薬品服用後に生じた排尿困難の機序と考えられるのはどれか。\nつ選べ。\n1 ヒスタミン H 受容体遮断\n2 ヒスタミン H 受容体遮断\n3 アセチルコリン M 受容体遮断\n4 アドレナリン α 受容体遮断\n5 ロイコトリエン CysLT 受容体遮断\n⎜ 26⎜",
+    "question_concepts": [
+      "排尿困難",
+      "受容体遮断",
+      "一般用医薬品の副作用"
+    ],
+    "visual_content_type": "text_only"
   },
   {
     "id": "r102-196",
@@ -6250,13 +7337,65 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "物理",
     "category": "",
-    "question_text": "問 197（物理・化学・生物）\nM RI 及び M RI 造影剤に関する記述のうち、正しいのはどれか。   つ選べ。",
-    "choices": [],
+    "question_text": "MRI及びMRI造影剤に関する記述のうち、正しいのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "MRIでは放射線を使用しないが、X線による被曝を受ける。",
+        "semantic_labels": [
+          "放射線",
+          "X線被曝"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "MRIでは、体内の水などの水素原子核の緩和時間の差を利用している。",
+        "semantic_labels": [
+          "水素原子核",
+          "緩和時間"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "MRIでは、ドップラー効果により血流速度を測定することができる。",
+        "semantic_labels": [
+          "ドップラー効果",
+          "血流速度"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "ガドリニウム造影剤に含まれるGd3+イオンは、反磁性を示す。",
+        "semantic_labels": [
+          "ガドリニウム",
+          "反磁性"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "硫酸バリウムはMRI造影剤として用いられる。",
+        "semantic_labels": [
+          "硫酸バリウム",
+          "MRI造影剤"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q197.png",
-    "question_text_original": "問 197（物理・化学・生物）\nM RI 及び M RI 造影剤に関する記述のうち、正しいのはどれか。   つ選べ。\n1 M RI では放射線を使用しないが、Ｘ線による被曝を受ける。\n2 M RI では、体内の水などの水素原子核の緩和時間の差を利用している。\n3 M RI では、ドップラー効果により血流速度を測定することができる。\n4 ガドリニウム造影剤に含まれる Gd イオンは、反磁性を示す。\n5 硫酸バリウムは M RI 造影剤として用いられる。\n⎜ 2⎜\n問 198‑199 38歳女性。肝内胆管がんと診断され、肝臓を部分切除した。患者は術後の\n回復期にあり、食事を経口的に摂取しはじめ、高カロリー輸液療法の離脱を目指し\nている。また、肝性浮腫と痰のからみがあるため、図のような注射剤が投与されて\nいる。\n高カロリー輸液（糖・電解質・アミノ酸・\n総合ビタミン・微量元素液）1000mL\n40mL/hr\n酢酸リンゲル液 500mL\nブロムヘキシン塩酸塩 4mg/2mL\n20mL/hr\n生理食塩液 50mL\n100mL/hr              Ｂ\nＡ                                Ｃ\n中             末\n心             梢\n中                 ラ             ラ\n心                 イ             イ\nラ                 ン             ン\nイ                 主             主\nン                 管             管\n側\n管\n注射用カンレノ酸カリウム 200mg\nＥ                           Ｄ      生理食塩液 20mL\n１日２回ゆっくりと静脈内注射し、\n使用しない時はシリンジを外す。\n管注                            管注\n⎜ 3⎜"
+    "question_text_original": "問 197（物理・化学・生物）\nM RI 及び M RI 造影剤に関する記述のうち、正しいのはどれか。   つ選べ。\n1 M RI では放射線を使用しないが、Ｘ線による被曝を受ける。\n2 M RI では、体内の水などの水素原子核の緩和時間の差を利用している。\n3 M RI では、ドップラー効果により血流速度を測定することができる。\n4 ガドリニウム造影剤に含まれる Gd イオンは、反磁性を示す。\n5 硫酸バリウムは M RI 造影剤として用いられる。\n⎜ 2⎜\n問 198‑199 38歳女性。肝内胆管がんと診断され、肝臓を部分切除した。患者は術後の\n回復期にあり、食事を経口的に摂取しはじめ、高カロリー輸液療法の離脱を目指し\nている。また、肝性浮腫と痰のからみがあるため、図のような注射剤が投与されて\nいる。\n高カロリー輸液（糖・電解質・アミノ酸・\n総合ビタミン・微量元素液）1000mL\n40mL/hr\n酢酸リンゲル液 500mL\nブロムヘキシン塩酸塩 4mg/2mL\n20mL/hr\n生理食塩液 50mL\n100mL/hr              Ｂ\nＡ                                Ｃ\n中             末\n心             梢\n中                 ラ             ラ\n心                 イ             イ\nラ                 ン             ン\nイ                 主             主\nン                 管             管\n側\n管\n注射用カンレノ酸カリウム 200mg\nＥ                           Ｄ      生理食塩液 20mL\n１日２回ゆっくりと静脈内注射し、\n使用しない時はシリンジを外す。\n管注                            管注\n⎜ 3⎜",
+    "question_concepts": [
+      "MRI",
+      "造影剤",
+      "画像診断"
+    ],
+    "visual_content_type": "text_only"
   },
   {
     "id": "r102-198",
@@ -6319,13 +7458,65 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "物理",
     "category": "",
-    "question_text": "問 199（物理・化学・生物）\nフェニトインは治療薬物モニタリング（TDM ）対象薬であることから、イムノ\nアッセイによる血中薬物濃度測定を行った。イムノアッセイに関する記述のうち、\n正しいのはどれか。   つ選べ。",
-    "choices": [],
+    "question_text": "フェニトインは治療薬物モニタリング（TDM）対象薬であることから、イムノアッセイによる血中薬物濃度測定を行った。イムノアッセイに関する記述のうち、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "フェニトインなどの低分子は、サンドイッチ法により測定される。",
+        "semantic_labels": [
+          "サンドイッチ法",
+          "低分子測定"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "モノクローナル抗体は、一般にポリクローナル抗体に比べて交差反応性が大きい。",
+        "semantic_labels": [
+          "モノクローナル抗体",
+          "交差反応性"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "化学発光イムノアッセイでは、標識物質に励起光を照射することで生じる発光を測定する。",
+        "semantic_labels": [
+          "化学発光イムノアッセイ",
+          "励起光"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "免疫比濁法では、免疫複合体の形成により粒子が凝集する性質を利用している。",
+        "semantic_labels": [
+          "免疫比濁法",
+          "免疫複合体"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "ELISAでは、抗原あるいは抗体を固定化した固相が用いられる。",
+        "semantic_labels": [
+          "ELISA",
+          "固相法"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q199.png",
-    "question_text_original": "問 199（物理・化学・生物）\nフェニトインは治療薬物モニタリング（TDM ）対象薬であることから、イムノ\nアッセイによる血中薬物濃度測定を行った。イムノアッセイに関する記述のうち、\n正しいのはどれか。   つ選べ。\n1 フェニトインなどの低分子は、サンドイッチ法により測定される。\n2 モノクローナル抗体は、一般にポリクローナル抗体に比べて交差反応性が大き\nい。\n3 化学発光イムノアッセイでは、標識物質に励起光を照射することで生じる発光\nを測定する。\n4 免疫比濁法では、免疫複合体の形成により粒子が凝集する性質を利用してい\nる。\n5 ELISA では、抗原あるいは抗体を固定化した固相が用いられる。\n⎜ 4⎜\n問 200‑201 64歳男性。COPD（慢性閉塞性肺疾患）と診断され、チオトロピウム臭化\n物水和物（１日５μg）とサルメテロールキシナホ酸塩（１日 100μg）の吸入を継続\n的に行っていた。日常の薬物治療のアドヒアランスは良好であった。受診から２年\n後、この男性は呼吸困難と 38.1℃の発熱を訴え、肺からはラ音が聞こえたため感\n染症が疑われ緊急入院となった。パルスオキシメーター（オキシメトリー）で測定\nしたところ SpO （経皮的動脈血酸素飽和度）は 92％であった。喫煙歴 44年であ\nり、若い頃から１日 30〜40本吸っていた。COPD 発症を機会に禁煙指導を受けて\nいたが、１日 10本程度吸っていたという。\n酸素吸入の他に、増悪期の薬物治療として医師は以下に示した処方薬と注射用抗\n菌薬を投与することとした。\n(処方）\nアミノフィリン注射液 250mg\n注射用プレドニゾロンコハク酸エステルナトリウム 20mg\n上記を生理食塩液 250mL に溶解し、点滴静脈内投与"
+    "question_text_original": "問 199（物理・化学・生物）\nフェニトインは治療薬物モニタリング（TDM ）対象薬であることから、イムノ\nアッセイによる血中薬物濃度測定を行った。イムノアッセイに関する記述のうち、\n正しいのはどれか。   つ選べ。\n1 フェニトインなどの低分子は、サンドイッチ法により測定される。\n2 モノクローナル抗体は、一般にポリクローナル抗体に比べて交差反応性が大き\nい。\n3 化学発光イムノアッセイでは、標識物質に励起光を照射することで生じる発光\nを測定する。\n4 免疫比濁法では、免疫複合体の形成により粒子が凝集する性質を利用してい\nる。\n5 ELISA では、抗原あるいは抗体を固定化した固相が用いられる。\n⎜ 4⎜\n問 200‑201 64歳男性。COPD（慢性閉塞性肺疾患）と診断され、チオトロピウム臭化\n物水和物（１日５μg）とサルメテロールキシナホ酸塩（１日 100μg）の吸入を継続\n的に行っていた。日常の薬物治療のアドヒアランスは良好であった。受診から２年\n後、この男性は呼吸困難と 38.1℃の発熱を訴え、肺からはラ音が聞こえたため感\n染症が疑われ緊急入院となった。パルスオキシメーター（オキシメトリー）で測定\nしたところ SpO （経皮的動脈血酸素飽和度）は 92％であった。喫煙歴 44年であ\nり、若い頃から１日 30〜40本吸っていた。COPD 発症を機会に禁煙指導を受けて\nいたが、１日 10本程度吸っていたという。\n酸素吸入の他に、増悪期の薬物治療として医師は以下に示した処方薬と注射用抗\n菌薬を投与することとした。\n(処方）\nアミノフィリン注射液 250mg\n注射用プレドニゾロンコハク酸エステルナトリウム 20mg\n上記を生理食塩液 250mL に溶解し、点滴静脈内投与",
+    "question_concepts": [
+      "イムノアッセイ",
+      "TDM",
+      "フェニトイン"
+    ],
+    "visual_content_type": "text_only"
   },
   {
     "id": "r102-200",
@@ -6388,13 +7579,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "物理",
     "category": "",
-    "question_text": "問 201（物理・化学・生物）\n酸素飽和度は以下の式で表される。\n酸素が結合したヘモグロビン濃度     HbO\n酸素飽和度 ≒                      ＝\n全体のヘモグロビン濃度     HbO ＋ Hb\n酸素飽和度を測定するオキシメトリーでは、酸素が結合したヘモグロビン（HbO )\nと結合していないヘモグロビン（Hb）の吸光係数が異なることを利用している。\n図は HbO と Hb の吸光係数を表したグラフである。ある血液試料の 665nm と\n880nm における吸光度（A 、A ）を測定したところ、その比（A /A ）が\n0.8となった。このとき、血液試料の酸素飽和度に最も近い値はどれか。 つ選べ。\nただし、測定においてランベルト・ベール（Lambert‑Beer）の法則が成り立つ\nものとし、吸光度には Hb と HbO のみが寄与するものとする。",
-    "choices": [],
+    "question_text": "酸素飽和度は以下の式で表される。酸素飽和度≒酸素が結合したヘモグロビン濃度/全体のヘモグロビン濃度=[HbO2]/([HbO2]+[Hb])。酸素飽和度を測定するオキシメトリーでは、酸素が結合したヘモグロビン（HbO2）と結合していないヘモグロビン（Hb）の吸光係数が異なることを利用している。図はHbO2とHbの吸光係数を表したグラフである。ある血液試料の665 nmと880 nmにおける吸光度（A665、A880）を測定したところ、その比（A665/A880）が0.8となった。このとき、血液試料の酸素飽和度に最も近い値はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "89%",
+        "semantic_labels": [
+          "酸素飽和度値"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "91%",
+        "semantic_labels": [
+          "酸素飽和度値"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "94%",
+        "semantic_labels": [
+          "酸素飽和度値"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "96%",
+        "semantic_labels": [
+          "酸素飽和度値"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "99%",
+        "semantic_labels": [
+          "酸素飽和度値"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q201.png",
-    "question_text_original": "問 201（物理・化学・生物）\n酸素飽和度は以下の式で表される。\n酸素が結合したヘモグロビン濃度     HbO\n酸素飽和度 ≒                      ＝\n全体のヘモグロビン濃度     HbO ＋ Hb\n酸素飽和度を測定するオキシメトリーでは、酸素が結合したヘモグロビン（HbO )\nと結合していないヘモグロビン（Hb）の吸光係数が異なることを利用している。\n図は HbO と Hb の吸光係数を表したグラフである。ある血液試料の 665nm と\n880nm における吸光度（A 、A ）を測定したところ、その比（A /A ）が\n0.8となった。このとき、血液試料の酸素飽和度に最も近い値はどれか。 つ選べ。\nただし、測定においてランベルト・ベール（Lambert‑Beer）の法則が成り立つ\nものとし、吸光度には Hb と HbO のみが寄与するものとする。\n酸素が結合した\ncm         ヘモグロビン（HbO )\n× 10\nmol\n酸素が結合していない\nヘモグロビン（Hb)\n0.6\n吸\n光\n係\n数\n0.2\n0.15\n0.1\n665                880\n波長（nm)\n1 89％       2 91％   3 94％      4 96％   5 99％\n⎜ 6⎜\n問 202‑203 25歳女性。テニスで上腕部の筋肉痛を自覚し、これに効く消炎鎮痛薬の貼\n付剤を購入する目的で薬局を訪れた。応対した薬剤師はこの女性から以下の４つの\n情報を聴取した。\n・喘息の既往はない。\n・現在、妊娠はしていない。\n・貼付剤で皮膚がかぶれたことはない。\n・以前に日焼け止め剤を使用して過敏症を発症したことがある。"
+    "question_text_original": "問 201（物理・化学・生物）\n酸素飽和度は以下の式で表される。\n酸素が結合したヘモグロビン濃度     HbO\n酸素飽和度 ≒                      ＝\n全体のヘモグロビン濃度     HbO ＋ Hb\n酸素飽和度を測定するオキシメトリーでは、酸素が結合したヘモグロビン（HbO )\nと結合していないヘモグロビン（Hb）の吸光係数が異なることを利用している。\n図は HbO と Hb の吸光係数を表したグラフである。ある血液試料の 665nm と\n880nm における吸光度（A 、A ）を測定したところ、その比（A /A ）が\n0.8となった。このとき、血液試料の酸素飽和度に最も近い値はどれか。 つ選べ。\nただし、測定においてランベルト・ベール（Lambert‑Beer）の法則が成り立つ\nものとし、吸光度には Hb と HbO のみが寄与するものとする。\n酸素が結合した\ncm         ヘモグロビン（HbO )\n× 10\nmol\n酸素が結合していない\nヘモグロビン（Hb)\n0.6\n吸\n光\n係\n数\n0.2\n0.15\n0.1\n665                880\n波長（nm)\n1 89％       2 91％   3 94％      4 96％   5 99％\n⎜ 6⎜\n問 202‑203 25歳女性。テニスで上腕部の筋肉痛を自覚し、これに効く消炎鎮痛薬の貼\n付剤を購入する目的で薬局を訪れた。応対した薬剤師はこの女性から以下の４つの\n情報を聴取した。\n・喘息の既往はない。\n・現在、妊娠はしていない。\n・貼付剤で皮膚がかぶれたことはない。\n・以前に日焼け止め剤を使用して過敏症を発症したことがある。",
+    "question_concepts": [
+      "酸素飽和度",
+      "パルスオキシメトリー",
+      "Lambert-Beerの法則"
+    ],
+    "visual_content_type": "graph"
   },
   {
     "id": "r102-202",
@@ -6457,13 +7695,60 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "物理",
     "category": "",
-    "question_text": "問 203（物理・化学・生物）\n日焼け止め剤には、紫外線吸収剤や紫外線散乱剤が配合されている。ある紫外線\n吸収剤は共役系を持ち、その遷移エネルギーは 360kJ mol であった。この遷移\nエネルギーに相当する紫外線の波長（nm）として最も近いのはどれか。 つ選べ。\nただし、様々な物理定数は以下の値を用いることとする。",
-    "choices": [],
+    "question_text": "日焼け止め剤には、紫外線吸収剤や紫外線散乱剤が配合されている。ある紫外線吸収剤は共役系を持ち、その遷移エネルギーは360 kJ·mol⁻¹であった。この遷移エネルギーに相当する紫外線の波長（nm）として最も近いのはどれか。1つ選べ。ただし、様々な物理定数は以下の値を用いることとする。プランク定数 6.6×10⁻³⁴ J·s、光速度 3.0×10⁸ m·s⁻¹、アボガドロ数 6.0×10²³ mol⁻¹。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "240",
+        "semantic_labels": [
+          "波長(nm)"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "270",
+        "semantic_labels": [
+          "波長(nm)"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "300",
+        "semantic_labels": [
+          "波長(nm)"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "330",
+        "semantic_labels": [
+          "波長(nm)"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "360",
+        "semantic_labels": [
+          "波長(nm)"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q203.png",
-    "question_text_original": "問 203（物理・化学・生物）\n日焼け止め剤には、紫外線吸収剤や紫外線散乱剤が配合されている。ある紫外線\n吸収剤は共役系を持ち、その遷移エネルギーは 360kJ mol であった。この遷移\nエネルギーに相当する紫外線の波長（nm）として最も近いのはどれか。 つ選べ。\nただし、様々な物理定数は以下の値を用いることとする。\nプランク定数       6.6× 10   J s\n光速度     3.0× 10 m s\nアボガドロ数       6.0× 10 mol\n1 240      2 270       3 300      4 330   5 360\n⎜ 8⎜\n問 204‑205 75歳男性。体重 70kg。脳   塞により右半身の麻痺があり、処方１の薬剤\nを服用していた。その後、嚥下機能が低下し誤嚥性肺炎を起こし入院したが、刻み\n食を食べることができるまでに回復した。血圧の上昇が認められたため、退院時に\n処方２が追加され、介護者が以下の処方箋を持って薬局を訪れた。\n(処方１）\nアスピリン腸溶錠 100mg                １回１錠（１日１錠）粉砕\nアラセプリル錠 25mg                  １回１錠（１日１錠）粉砕\nランソプラゾール口腔内崩壊錠 15mg           １回１錠（１日１錠）\n１日１回   朝食後    14日分\n(処方２）\nニフェジピン腸溶細粒２％ 0.5g             １回１包（１日 2包）\n１日２回   朝夕食後    14日分"
+    "question_text_original": "問 203（物理・化学・生物）\n日焼け止め剤には、紫外線吸収剤や紫外線散乱剤が配合されている。ある紫外線\n吸収剤は共役系を持ち、その遷移エネルギーは 360kJ mol であった。この遷移\nエネルギーに相当する紫外線の波長（nm）として最も近いのはどれか。 つ選べ。\nただし、様々な物理定数は以下の値を用いることとする。\nプランク定数       6.6× 10   J s\n光速度     3.0× 10 m s\nアボガドロ数       6.0× 10 mol\n1 240      2 270       3 300      4 330   5 360\n⎜ 8⎜\n問 204‑205 75歳男性。体重 70kg。脳   塞により右半身の麻痺があり、処方１の薬剤\nを服用していた。その後、嚥下機能が低下し誤嚥性肺炎を起こし入院したが、刻み\n食を食べることができるまでに回復した。血圧の上昇が認められたため、退院時に\n処方２が追加され、介護者が以下の処方箋を持って薬局を訪れた。\n(処方１）\nアスピリン腸溶錠 100mg                １回１錠（１日１錠）粉砕\nアラセプリル錠 25mg                  １回１錠（１日１錠）粉砕\nランソプラゾール口腔内崩壊錠 15mg           １回１錠（１日１錠）\n１日１回   朝食後    14日分\n(処方２）\nニフェジピン腸溶細粒２％ 0.5g             １回１包（１日 2包）\n１日２回   朝夕食後    14日分",
+    "question_concepts": [
+      "紫外線吸収",
+      "遷移エネルギー",
+      "波長計算"
+    ],
+    "visual_content_type": "text_only"
   },
   {
     "id": "r102-204",
@@ -6506,13 +7791,65 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬剤",
     "category": "",
-    "question_text": "問 205（物理・化学・生物）\n腸溶性コーティングを目的とした高分子の模式図として最も適切なのはどれか。\nつ選べ。なお、模式図中の官能基については、腸溶化の目的にかなう主要なもの\nのみを示している。また、                           は高分子鎖を示している。",
-    "choices": [],
+    "question_text": "腸溶性コーティングを目的とした高分子の模式図として最も適切なのはどれか。1つ選べ。なお、模式図中の官能基については、腸溶化の目的にかなう主要なもののみを示している。また、〜〜〜は高分子鎖を示している。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "酢酸エステル基",
+          "メチルエステル"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "アミノ基",
+          "アミン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "カルボン酸基",
+          "ヒドロキシ基"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "ヒドロキシプロピル基",
+          "アルコール"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "エトキシ基",
+          "エーテル"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q205.png",
-    "question_text_original": "問 205（物理・化学・生物）\n腸溶性コーティングを目的とした高分子の模式図として最も適切なのはどれか。\nつ選べ。なお、模式図中の官能基については、腸溶化の目的にかなう主要なもの\nのみを示している。また、                           は高分子鎖を示している。\nO     CH3            O     CH3\nO    CH3             O    CH3            O    CH3\nNH2                  NH2\nNH2                  NH2                 NH2\nO     OH             O     OH\nO    OH              O    OH             O    OH\nO(CH2)3OH            O(CH2)3OH\nO(CH2)3OH            O(CH2)3OH           O(CH2)3OH\nOCH2CH3              OCH2CH3\nOCH2CH3              OCH2CH3             OCH2CH3\n⎜ 10⎜\n問 206‑207 28歳男性。悪性軟部腫瘍の転移が判明し、病棟カンファレンスにおいてイ\nホスファミドの投与が検討された。薬剤師は、イホスファミドによる治療及びメス\nナの投与に関して医療スタッフに説明を行った。"
+    "question_text_original": "問 205（物理・化学・生物）\n腸溶性コーティングを目的とした高分子の模式図として最も適切なのはどれか。\nつ選べ。なお、模式図中の官能基については、腸溶化の目的にかなう主要なもの\nのみを示している。また、                           は高分子鎖を示している。\nO     CH3            O     CH3\nO    CH3             O    CH3            O    CH3\nNH2                  NH2\nNH2                  NH2                 NH2\nO     OH             O     OH\nO    OH              O    OH             O    OH\nO(CH2)3OH            O(CH2)3OH\nO(CH2)3OH            O(CH2)3OH           O(CH2)3OH\nOCH2CH3              OCH2CH3\nOCH2CH3              OCH2CH3             OCH2CH3\n⎜ 10⎜\n問 206‑207 28歳男性。悪性軟部腫瘍の転移が判明し、病棟カンファレンスにおいてイ\nホスファミドの投与が検討された。薬剤師は、イホスファミドによる治療及びメス\nナの投与に関して医療スタッフに説明を行った。",
+    "question_concepts": [
+      "腸溶性コーティング",
+      "高分子",
+      "官能基"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-206",
@@ -6555,13 +7892,65 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "化学",
     "category": "",
-    "question_text": "問 207（物理・化学・生物）\nメスナは、イホスファミドの代謝物であるアクロレインと反応し、化合物Ａを生\n成する。化合物Ａの構造式として正しいのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "メスナは、イホスファミドの代謝物であるアクロレインと反応し、化合物Aを生成する。化合物Aの構造式として正しいのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "チオエーテル",
+          "アルデヒド"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "チオエーテル",
+          "メチレン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "チオエーテル",
+          "メチル"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "チオエーテル",
+          "メチレン"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "チオエーテル",
+          "アルデヒド"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q207.png",
-    "question_text_original": "問 207（物理・化学・生物）\nメスナは、イホスファミドの代謝物であるアクロレインと反応し、化合物Ａを生\n成する。化合物Ａの構造式として正しいのはどれか。 つ選べ。\nO\nSO3Na\n＋           CH2             Ａ\nHS                  H\nメスナ            アクロレイン\nSO3Na               SO3Na               SO3Na\nS                   S               O   S\nO                   H2C     O               H   CH3\nH\n1                   2                   3\nSO3Na               SO3Na\nO   S                   S\nH   CH2        O\nH\n4                   5\n⎜ 12⎜\n問 208‑209 22歳女性。体重 45kg。アセトアミノフェンを含有する OTC 医薬品を大\n量に服用し、救急搬送されてきた。服用後約４時間が経過しており、アセトアミノ\nフェンの摂取量から、解毒薬としてアセチルシステイン内用液 17.6％の投与が必\n要と判断された。"
+    "question_text_original": "問 207（物理・化学・生物）\nメスナは、イホスファミドの代謝物であるアクロレインと反応し、化合物Ａを生\n成する。化合物Ａの構造式として正しいのはどれか。 つ選べ。\nO\nSO3Na\n＋           CH2             Ａ\nHS                  H\nメスナ            アクロレイン\nSO3Na               SO3Na               SO3Na\nS                   S               O   S\nO                   H2C     O               H   CH3\nH\n1                   2                   3\nSO3Na               SO3Na\nO   S                   S\nH   CH2        O\nH\n4                   5\n⎜ 12⎜\n問 208‑209 22歳女性。体重 45kg。アセトアミノフェンを含有する OTC 医薬品を大\n量に服用し、救急搬送されてきた。服用後約４時間が経過しており、アセトアミノ\nフェンの摂取量から、解毒薬としてアセチルシステイン内用液 17.6％の投与が必\n要と判断された。",
+    "question_concepts": [
+      "メスナ",
+      "アクロレイン",
+      "付加反応"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-208",
@@ -6604,13 +7993,65 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "化学",
     "category": "",
-    "question_text": "問 209（物理・化学・生物）\nアセトアミノフェンが大量投与された際に生じる代謝物Ａは、グルタチオンとの\n間で付加体を生じる。この付加体の構造式として最も適切なのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "アセトアミノフェンが大量投与された際に生じる代謝物Aは、グルタチオンとの間で付加体を生じる。この付加体の構造式として最も適切なのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "グルタチオン付加体",
+          "チオエーテル結合"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "グルタチオン付加体",
+          "チオール"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "グルタチオン付加体",
+          "エステル結合"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "グルタチオン付加体",
+          "チオエーテル結合"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "グルタチオン付加体",
+          "チオエーテル結合"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q209.png",
-    "question_text_original": "問 209（物理・化学・生物）\nアセトアミノフェンが大量投与された際に生じる代謝物Ａは、グルタチオンとの\n間で付加体を生じる。この付加体の構造式として最も適切なのはどれか。 つ選べ。\nO                            O\nHN       CH3                  N       CH3\nSH\nO                                              CO2H\nH\nN    CO2H           R＝\nR       N                                    H2N       CH2CH2−\nH\nOH                            O                               O\nアセトアミノフェン                          Ａ                              グルタチオン\nO\nHN         CH3\nSH\nO                     O       O                                                     O\nH\nN                                                                                      O        O\nR       N                     N       CH3                                         HN        CH3\nH\nO                                                SH\nO                   O                           HS   HN\nH\nN\nR       N                       O                              O\nH\nOH                              O                    OH         O        NH\nR\n1                                                   2                                      3\nO                                   O\nHN         CH3                     HN          CH3\nR        O\nHN\nS\nOH                              S\nO        NH                                  O\nH\nN    CO2H\nCO2H                        R       N\nH\nO\n4                                          5\n⎜ 14⎜\n問 210‑211 １歳男児。耳鼻科を受診し中耳炎と診断され、以下の薬剤が処方された。\n母親が処方箋を持参し、薬局を訪れた。\n(処方）\nセフジトレン ピボキシル細粒 10％   １回 0.5g（１日 1.5g)\n１日３回 朝昼夕食後         ５日分"
+    "question_text_original": "問 209（物理・化学・生物）\nアセトアミノフェンが大量投与された際に生じる代謝物Ａは、グルタチオンとの\n間で付加体を生じる。この付加体の構造式として最も適切なのはどれか。 つ選べ。\nO                            O\nHN       CH3                  N       CH3\nSH\nO                                              CO2H\nH\nN    CO2H           R＝\nR       N                                    H2N       CH2CH2−\nH\nOH                            O                               O\nアセトアミノフェン                          Ａ                              グルタチオン\nO\nHN         CH3\nSH\nO                     O       O                                                     O\nH\nN                                                                                      O        O\nR       N                     N       CH3                                         HN        CH3\nH\nO                                                SH\nO                   O                           HS   HN\nH\nN\nR       N                       O                              O\nH\nOH                              O                    OH         O        NH\nR\n1                                                   2                                      3\nO                                   O\nHN         CH3                     HN          CH3\nR        O\nHN\nS\nOH                              S\nO        NH                                  O\nH\nN    CO2H\nCO2H                        R       N\nH\nO\n4                                          5\n⎜ 14⎜\n問 210‑211 １歳男児。耳鼻科を受診し中耳炎と診断され、以下の薬剤が処方された。\n母親が処方箋を持参し、薬局を訪れた。\n(処方）\nセフジトレン ピボキシル細粒 10％   １回 0.5g（１日 1.5g)\n１日３回 朝昼夕食後         ５日分",
+    "question_concepts": [
+      "アセトアミノフェン",
+      "グルタチオン抱合",
+      "代謝物"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-210",
@@ -6673,13 +8114,65 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "化学",
     "category": "",
-    "question_text": "問 211（物理・化学・生物）\nセフジトレン ピボキシルに関する記述のうち、正しいのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "セフジトレン ピボキシルに関する記述のうち、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "ペネム骨格を有している。",
+        "semantic_labels": [
+          "ペネム骨格",
+          "構造分類"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "β-ラクタム環のカルボニル基の炭素の求電子性は、一般的な鎖状アミドのカルボニル基の炭素に比べて低くなっている。",
+        "semantic_labels": [
+          "β-ラクタム環",
+          "求電子性"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "細菌中のペプチドグリカン合成酵素との間で、β-ラクタム環の開環を伴って共有結合を形成することにより、細胞壁の生合成を阻害する。",
+        "semantic_labels": [
+          "ペプチドグリカン合成酵素",
+          "細胞壁合成阻害"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "セフジトレンのカルボキシ基を構造修飾することにより、経口吸収性が改善されたプロドラッグである。",
+        "semantic_labels": [
+          "プロドラッグ",
+          "経口吸収性改善"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "生体内での加水分解反応によって、セフジトレン、酢酸及びピバル酸（2,2-dimethylpropanoic acid）を生じる。",
+        "semantic_labels": [
+          "加水分解",
+          "ピバル酸"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q211.png",
-    "question_text_original": "問 211（物理・化学・生物）\nセフジトレン ピボキシルに関する記述のうち、正しいのはどれか。 つ選べ。\nH3C CH3\nO\nCH3\nO       O       O\nCH3\nO     O\nN                 N\nH\nN             N                                 CH3\nS       S\nH2N                        H   H\nO                                 N\nS\nセフジトレン ピボキシル\n1 ペネム骨格を有している。\n2 β‑ラクタム環のカルボニル基の炭素の求電子性は、一般的な鎖状アミドのカル\nボニル基の炭素に比べて低くなっている。\n3 細菌中のペプチドグリカン合成酵素との間で、β‑ラクタム環の開環を伴って共\n有結合を形成することにより、細胞壁の生合成を阻害する。\n4 セフジトレンのカルボキシ基を構造修飾することにより、経口吸収性が改善さ\nれたプロドラッグである。\n5 生 体 内 で の 加 水 分 解 反 応 に よって、セ フ ジ ト レ ン、酢 酸 及 び ピ バ ル 酸\n(2,2‑dimethylpropanoic acid）を生じる。\n⎜ 16⎜\n問 212‑213 70歳女性。下記の生薬を含む漢方エキス細粒（釣藤散）の処方箋を持って\n薬局に来局した。なお、処方量は常用量である。\n釣藤散        生薬名     １日量          生薬名   １日量\nセッコウ     ５g       チョウトウコウ   ３g\nチンピ      ３g       ニンジン      ２g\nバクモンドウ   ３g       ボウフウ      ２g\nハンゲ      ３g       キクカ       ２g\nブクリョウ    ３g       カンゾウ      １g\nショウキョウ   １g"
+    "question_text_original": "問 211（物理・化学・生物）\nセフジトレン ピボキシルに関する記述のうち、正しいのはどれか。 つ選べ。\nH3C CH3\nO\nCH3\nO       O       O\nCH3\nO     O\nN                 N\nH\nN             N                                 CH3\nS       S\nH2N                        H   H\nO                                 N\nS\nセフジトレン ピボキシル\n1 ペネム骨格を有している。\n2 β‑ラクタム環のカルボニル基の炭素の求電子性は、一般的な鎖状アミドのカル\nボニル基の炭素に比べて低くなっている。\n3 細菌中のペプチドグリカン合成酵素との間で、β‑ラクタム環の開環を伴って共\n有結合を形成することにより、細胞壁の生合成を阻害する。\n4 セフジトレンのカルボキシ基を構造修飾することにより、経口吸収性が改善さ\nれたプロドラッグである。\n5 生 体 内 で の 加 水 分 解 反 応 に よって、セ フ ジ ト レ ン、酢 酸 及 び ピ バ ル 酸\n(2,2‑dimethylpropanoic acid）を生じる。\n⎜ 16⎜\n問 212‑213 70歳女性。下記の生薬を含む漢方エキス細粒（釣藤散）の処方箋を持って\n薬局に来局した。なお、処方量は常用量である。\n釣藤散        生薬名     １日量          生薬名   １日量\nセッコウ     ５g       チョウトウコウ   ３g\nチンピ      ３g       ニンジン      ２g\nバクモンドウ   ３g       ボウフウ      ２g\nハンゲ      ３g       キクカ       ２g\nブクリョウ    ３g       カンゾウ      １g\nショウキョウ   １g",
+    "question_concepts": [
+      "セフジトレンピボキシル",
+      "β-ラクタム系抗菌薬",
+      "プロドラッグ"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r102-212",
@@ -6742,13 +8235,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "化学",
     "category": "",
-    "question_text": "問 213（物理・化学・生物）\n釣藤散の構成生薬に関する記述のうち、正しいのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "釣藤散の構成生薬に関する記述のうち、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "チョウトウコウは、アルカロイドであるヒルスチンを含有する。",
+        "semantic_labels": [
+          "チョウトウコウ",
+          "ヒルスチン"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "セッコウは、天然の含水硫酸カルシウムである。",
+        "semantic_labels": [
+          "セッコウ",
+          "含水硫酸カルシウム"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "ショウキョウは、辛味成分であるリモニンを含有する。",
+        "semantic_labels": [
+          "ショウキョウ",
+          "リモニン"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "ボウフウは、フラボノイドであるアコニチンを含有する。",
+        "semantic_labels": [
+          "ボウフウ",
+          "アコニチン"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "カンゾウは、ジテルペンサポニンであるグリチルリチン酸を含有する。",
+        "semantic_labels": [
+          "カンゾウ",
+          "グリチルリチン酸"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q213.png",
-    "question_text_original": "問 213（物理・化学・生物）\n釣藤散の構成生薬に関する記述のうち、正しいのはどれか。 つ選べ。\n1 チョウトウコウは、アルカロイドであるヒルスチンを含有する。\n2 セッコウは、天然の含水硫酸カルシウムである。\n3 ショウキョウは、辛味成分であるリモニンを含有する。\n4 ボウフウは、フラボノイドであるアコニチンを含有する。\n5 カンゾウは、ジテルペンサポニンであるグリチルリチン酸を含有する。\n⎜ 17⎜\n問 214‑215 病院でバイオ後続品の採用を検討することになり、医師よりバイオ後続品\nの特性について薬剤部に問い合わせがあった。"
+    "question_text_original": "問 213（物理・化学・生物）\n釣藤散の構成生薬に関する記述のうち、正しいのはどれか。 つ選べ。\n1 チョウトウコウは、アルカロイドであるヒルスチンを含有する。\n2 セッコウは、天然の含水硫酸カルシウムである。\n3 ショウキョウは、辛味成分であるリモニンを含有する。\n4 ボウフウは、フラボノイドであるアコニチンを含有する。\n5 カンゾウは、ジテルペンサポニンであるグリチルリチン酸を含有する。\n⎜ 17⎜\n問 214‑215 病院でバイオ後続品の採用を検討することになり、医師よりバイオ後続品\nの特性について薬剤部に問い合わせがあった。",
+    "question_concepts": [
+      "釣藤散",
+      "生薬",
+      "構成成分"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-212-213",
+    "linked_scenario": "70歳女性。下記の生薬を含む漢方エキス細粒（釣藤散）の処方箋を持って薬局に来局した。なお、処方量は常用量である。釣藤散：セッコウ5g、チョウトウコウ3g、チンピ3g、ニンジン2g、バクモンドウ3g、ボウフウ2g、ハンゲ3g、キクカ2g、ブクリョウ3g、カンゾウ1g、ショウキョウ1g。"
   },
   {
     "id": "r102-214",
@@ -6803,13 +8350,58 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "生物",
     "category": "",
-    "question_text": "問 215（物理・化学・生物）\nバイオ医薬品として用いられる組換えタンパク質に関する記述のうち、正しいの\nはどれか。     つ選べ。",
-    "choices": [],
+    "question_text": "バイオ医薬品として用いられる組換えタンパク質に関する記述のうち、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "宿主として大腸菌とほ乳動物由来細胞を用いた場合、同一の遺伝子から発現させた組換えタンパク質では、同一の糖鎖が付加される。",
+        "semantic_labels": [
+          "大腸菌",
+          "糖鎖付加"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "ほ乳動物由来細胞を宿主とした場合、O結合型の糖鎖は、タンパク質のセリンまたはトレオニン残基に付加される。",
+        "semantic_labels": [
+          "O結合型糖鎖",
+          "セリン・トレオニン"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "バイオ医薬品として組換えタンパク質を生産させる際には、そのmRNAを化学合成して宿主細胞に導入する。",
+        "semantic_labels": [
+          "mRNA化学合成",
+          "宿主細胞"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "バイオ医薬品の中には、CHO細胞（チャイニーズハムスター卵巣細胞）を用いて生産されるものがある。",
+        "semantic_labels": [
+          "CHO細胞",
+          "タンパク質生産"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q215.png",
-    "question_text_original": "問 215（物理・化学・生物）\nバイオ医薬品として用いられる組換えタンパク質に関する記述のうち、正しいの\nはどれか。     つ選べ。\n1 宿主として大腸菌とほ乳動物由来細胞を用いた場合、同一の遺伝子から発現さ\nせた組換えタンパク質では、同一の糖鎖が付加される。\n2 ほ乳動物由来細胞を宿主とした場合、O 結合型の糖鎖は、タンパク質のセリン\nまたはトレオニン残基に付加される。\n3 バイオ医薬品として組換えタンパク質を生産させる際には、その mRNA を化\n学合成して宿主細胞に導入する。\n4 バイオ医薬品の中には、CHO 細胞（チャイニーズハムスター卵巣細胞）を用\nいて生産されるものがある。\n⎜ 18⎜\n問 216‑217 震度７の地震が発生し、多くの住民が家屋を失った。多数の人が狭い避難\n所や自家用車の中で１日の大部分を過ごしているので、過去の震災での経験から深\n部静脈血栓症/肺血栓塞栓症（いわゆるエコノミークラス症候群）の発症が危惧さ\nれた。"
+    "question_text_original": "問 215（物理・化学・生物）\nバイオ医薬品として用いられる組換えタンパク質に関する記述のうち、正しいの\nはどれか。     つ選べ。\n1 宿主として大腸菌とほ乳動物由来細胞を用いた場合、同一の遺伝子から発現さ\nせた組換えタンパク質では、同一の糖鎖が付加される。\n2 ほ乳動物由来細胞を宿主とした場合、O 結合型の糖鎖は、タンパク質のセリン\nまたはトレオニン残基に付加される。\n3 バイオ医薬品として組換えタンパク質を生産させる際には、その mRNA を化\n学合成して宿主細胞に導入する。\n4 バイオ医薬品の中には、CHO 細胞（チャイニーズハムスター卵巣細胞）を用\nいて生産されるものがある。\n⎜ 18⎜\n問 216‑217 震度７の地震が発生し、多くの住民が家屋を失った。多数の人が狭い避難\n所や自家用車の中で１日の大部分を過ごしているので、過去の震災での経験から深\n部静脈血栓症/肺血栓塞栓症（いわゆるエコノミークラス症候群）の発症が危惧さ\nれた。",
+    "question_concepts": [
+      "バイオ医薬品",
+      "組換えタンパク質",
+      "糖鎖修飾"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-214-215",
+    "linked_scenario": "病院でバイオ後続品の採用を検討することになり、医師よりバイオ後続品の特性について薬剤部に問い合わせがあった。"
   },
   {
     "id": "r102-216",
@@ -6872,13 +8464,65 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "生物",
     "category": "",
-    "question_text": "問 217（物理・化学・生物）\n肺血栓塞栓症において、下肢静脈で生じた血栓が肺へ到達する経路として、正し\nいのはどれか。   つ選べ。",
-    "choices": [],
+    "question_text": "肺血栓塞栓症において、下肢静脈で生じた血栓が肺へ到達する経路として、正しいのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "大腿静脈→総腸骨静脈→下大静脈→右心房→右心室→肺静脈→肺",
+        "semantic_labels": [
+          "静脈経路",
+          "右心系"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "大腿静脈→総腸骨静脈→下大静脈→右心房→右心室→肺動脈→肺",
+        "semantic_labels": [
+          "静脈経路",
+          "肺動脈"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "総腸骨静脈→大腿静脈→門脈→下大静脈→右心房→右心室→肺動脈→肺",
+        "semantic_labels": [
+          "門脈経路",
+          "肺動脈"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "総腸骨静脈→大腿静脈→下大静脈→左心房→左心室→肺静脈→肺",
+        "semantic_labels": [
+          "左心系",
+          "肺静脈"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "大腿静脈→総腸骨静脈→下大静脈→左心房→左心室→肺動脈→肺",
+        "semantic_labels": [
+          "左心系",
+          "肺動脈"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q217.png",
-    "question_text_original": "問 217（物理・化学・生物）\n肺血栓塞栓症において、下肢静脈で生じた血栓が肺へ到達する経路として、正し\nいのはどれか。   つ選べ。\n1 大腿静脈→総腸骨静脈→下大静脈→右心房→右心室→肺静脈→肺\n2 大腿静脈→総腸骨静脈→下大静脈→右心房→右心室→肺動脈→肺\n3 総腸骨静脈→大腿静脈→門脈→下大静脈→右心房→右心室→肺動脈→肺\n4 総腸骨静脈→大腿静脈→下大静脈→左心房→左心室→肺静脈→肺\n5 大腿静脈→総腸骨静脈→下大静脈→左心房→左心室→肺動脈→肺\n⎜ 20⎜\n問 218‑219 75歳女性。脳   塞で寝たきりとなり、仙骨部に褥瘡を形成したことから、\n褥瘡対策チームが対応した。なお、本患者には、心機能、肝機能、腎機能及び甲状\n腺機能の低下や各臓器からの出血はいずれも認められていなかった。"
+    "question_text_original": "問 217（物理・化学・生物）\n肺血栓塞栓症において、下肢静脈で生じた血栓が肺へ到達する経路として、正し\nいのはどれか。   つ選べ。\n1 大腿静脈→総腸骨静脈→下大静脈→右心房→右心室→肺静脈→肺\n2 大腿静脈→総腸骨静脈→下大静脈→右心房→右心室→肺動脈→肺\n3 総腸骨静脈→大腿静脈→門脈→下大静脈→右心房→右心室→肺動脈→肺\n4 総腸骨静脈→大腿静脈→下大静脈→左心房→左心室→肺静脈→肺\n5 大腿静脈→総腸骨静脈→下大静脈→左心房→左心室→肺動脈→肺\n⎜ 20⎜\n問 218‑219 75歳女性。脳   塞で寝たきりとなり、仙骨部に褥瘡を形成したことから、\n褥瘡対策チームが対応した。なお、本患者には、心機能、肝機能、腎機能及び甲状\n腺機能の低下や各臓器からの出血はいずれも認められていなかった。",
+    "question_concepts": [
+      "肺血栓塞栓症",
+      "静脈血栓",
+      "血液循環経路"
+    ],
+    "visual_content_type": "text_only"
   },
   {
     "id": "r102-218",
@@ -6921,13 +8565,74 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "実務",
     "category": "",
-    "question_text": "問 219（実務）\n褥瘡患部は、乾燥した厚い黒色壊死組織を形成し（黒色期）、滲出液はほとんど\nなかった。褥瘡対策チームにおいて薬剤師が処方薬を提案し、下記の経緯で治癒に\n至った。Ａ〜Ｃに入る薬剤として最も適切な組合せはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "褥瘡患部は、乾燥した厚い黒色壊死組織を形成し（黒色期）、滲出液はほとんどなかった。褥瘡対策チームにおいて薬剤師が処方薬を提案し、下記の経緯で治癒に至った。A〜Cに入る薬剤として最も適切な組合せはどれか。1つ選べ。Aが処方され、数日間塗布した後、医師により壊死組織が切除された。その後、黄色壊死組織（黄色期）はわずかになり滲出液を伴う赤色肉芽が見られたため（赤色期）、滲出液の吸収・肉芽形成を目的として、Bへ処方変更となった。Bは、ガーゼに薄くのばして、貼付した。数日後、肉芽が盛り上がり滲出液は減少してきた。湿潤を保持しながら創傷部周囲からの上皮化（白色期）を促進させる目的でCを塗布し、治癒へと至った。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "A:精製白糖・ポビドンヨード配合軟膏 B:スルファジアジン銀クリーム C:アルプロスタジルアルファデクス軟膏",
+        "semantic_labels": [
+          "褥瘡治療薬",
+          "組合せ"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "A:精製白糖・ポビドンヨード配合軟膏 B:アルプロスタジルアルファデクス軟膏 C:スルファジアジン銀クリーム",
+        "semantic_labels": [
+          "褥瘡治療薬",
+          "組合せ"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "A:スルファジアジン銀クリーム B:精製白糖・ポビドンヨード配合軟膏 C:アルプロスタジルアルファデクス軟膏",
+        "semantic_labels": [
+          "褥瘡治療薬",
+          "組合せ"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "A:スルファジアジン銀クリーム B:アルプロスタジルアルファデクス軟膏 C:精製白糖・ポビドンヨード配合軟膏",
+        "semantic_labels": [
+          "褥瘡治療薬",
+          "組合せ"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "A:アルプロスタジルアルファデクス軟膏 B:精製白糖・ポビドンヨード配合軟膏 C:スルファジアジン銀クリーム",
+        "semantic_labels": [
+          "褥瘡治療薬",
+          "組合せ"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 6,
+        "text": "A:アルプロスタジルアルファデクス軟膏 B:スルファジアジン銀クリーム C:精製白糖・ポビドンヨード配合軟膏",
+        "semantic_labels": [
+          "褥瘡治療薬",
+          "組合せ"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q219.png",
-    "question_text_original": "問 219（実務）\n褥瘡患部は、乾燥した厚い黒色壊死組織を形成し（黒色期）、滲出液はほとんど\nなかった。褥瘡対策チームにおいて薬剤師が処方薬を提案し、下記の経緯で治癒に\n至った。Ａ〜Ｃに入る薬剤として最も適切な組合せはどれか。 つ選べ。\nＡ      が処方され、数日間塗布した後、医師により壊死組織が切除された。\nその後、黄色壊死組織（黄色期）はわずかになり滲出液を伴う赤色肉芽が見られた\nため（赤色期）、滲出液の吸収・肉芽形成を目的として、            Ｂ   へ処方変更と\nなった。      Ｂ   は、ガーゼに薄くのばして、貼付した。数日後、肉芽が盛り上\nがり滲出液は減少してきた。湿潤を保持しながら創傷部周囲からの上皮化（白色\n期）を促進させる目的で        Ｃ   を塗布し、治癒へと至った。\nＡ          Ｂ         Ｃ\n精製白糖・ポビドン   スルファジアジン銀 アルプロスタジル\nヨード配合軟膏     クリーム        アルファデクス軟膏\n精製白糖・ポビドン   アルプロスタジル    スルファジアジン銀\nヨード配合軟膏     アルファデクス軟膏 クリーム\nスルファジアジン銀   精製白糖・ポビドン アルプロスタジル\nクリーム        ヨード配合軟膏     アルファデクス軟膏\nスルファジアジン銀   アルプロスタジル    精製白糖・ポビドン\nクリーム        アルファデクス軟膏 ヨード配合軟膏\nアルプロスタジル    精製白糖・ポビドン スルファジアジン銀\nアルファデクス軟膏   ヨード配合軟膏     クリーム\nアルプロスタジル    スルファジアジン銀 精製白糖・ポビドン\nアルファデクス軟膏   クリーム        ヨード配合軟膏\n⎜ 22⎜\n問 220‑221 22歳女性。統合失調症のため病院の精神科へ通院している。母親が薬局を\n訪れ、\n「娘が薬を時々飲み忘れて、症状が安定しないことから、リスペリドン持効\n性懸濁注射液を注射された。\n」と薬剤師に伝えた。また、母親は下記の処方箋を見\nて、注射剤と同じ薬物が内服薬としても処方されていることに疑問をもち、今後の\n薬物治療について薬剤師に質問した。\n(処方）\nリスペリドン錠２mg １回１錠（１日２錠）\n１日２回 朝夕食後               21日分\nなお、リスペリドン持効性懸濁注射液の添付文書には、次の２つのグラフが掲載さ\nれている（一部改変）。\nリスペリドン持効性懸濁注射液\n血漿中薬物濃度（ng/mL)\n25mg（n ＝ 12〜14)\n40                                     50mg（n ＝ 24〜26)\n0   7   14   21   28    35     42    49   56   63\n投与後（日)\n統合失調症患者にリスペリドン持効性懸濁注射液を単回筋肉内投与したときの\n血漿中薬物濃度推移（平均値 ＋ S.D.)\n⎜ 23⎜\nリスペリドン持効性懸濁注射液\n血漿中薬物濃度（ng/mL)\n25mg（n ＝７〜８)\n37.5mg（n ＝９)\n50mg（n ＝８〜９)\n0   14   28   42   56   70    84    98   112   126\n注射液初回投与後（日)\n統合失調症患者にリスペリドン持効性懸濁注射液を反復筋肉内投与（２週間隔で６回）\nしたときの血漿中薬物濃度推移（平均値 ＋ S.D.)\nただし、当該患者にはリスペリドン錠を注射液初回投与後３週間、経口投与した。"
+    "question_text_original": "問 219（実務）\n褥瘡患部は、乾燥した厚い黒色壊死組織を形成し（黒色期）、滲出液はほとんど\nなかった。褥瘡対策チームにおいて薬剤師が処方薬を提案し、下記の経緯で治癒に\n至った。Ａ〜Ｃに入る薬剤として最も適切な組合せはどれか。 つ選べ。\nＡ      が処方され、数日間塗布した後、医師により壊死組織が切除された。\nその後、黄色壊死組織（黄色期）はわずかになり滲出液を伴う赤色肉芽が見られた\nため（赤色期）、滲出液の吸収・肉芽形成を目的として、            Ｂ   へ処方変更と\nなった。      Ｂ   は、ガーゼに薄くのばして、貼付した。数日後、肉芽が盛り上\nがり滲出液は減少してきた。湿潤を保持しながら創傷部周囲からの上皮化（白色\n期）を促進させる目的で        Ｃ   を塗布し、治癒へと至った。\nＡ          Ｂ         Ｃ\n精製白糖・ポビドン   スルファジアジン銀 アルプロスタジル\nヨード配合軟膏     クリーム        アルファデクス軟膏\n精製白糖・ポビドン   アルプロスタジル    スルファジアジン銀\nヨード配合軟膏     アルファデクス軟膏 クリーム\nスルファジアジン銀   精製白糖・ポビドン アルプロスタジル\nクリーム        ヨード配合軟膏     アルファデクス軟膏\nスルファジアジン銀   アルプロスタジル    精製白糖・ポビドン\nクリーム        アルファデクス軟膏 ヨード配合軟膏\nアルプロスタジル    精製白糖・ポビドン スルファジアジン銀\nアルファデクス軟膏   ヨード配合軟膏     クリーム\nアルプロスタジル    スルファジアジン銀 精製白糖・ポビドン\nアルファデクス軟膏   クリーム        ヨード配合軟膏\n⎜ 22⎜\n問 220‑221 22歳女性。統合失調症のため病院の精神科へ通院している。母親が薬局を\n訪れ、\n「娘が薬を時々飲み忘れて、症状が安定しないことから、リスペリドン持効\n性懸濁注射液を注射された。\n」と薬剤師に伝えた。また、母親は下記の処方箋を見\nて、注射剤と同じ薬物が内服薬としても処方されていることに疑問をもち、今後の\n薬物治療について薬剤師に質問した。\n(処方）\nリスペリドン錠２mg １回１錠（１日２錠）\n１日２回 朝夕食後               21日分\nなお、リスペリドン持効性懸濁注射液の添付文書には、次の２つのグラフが掲載さ\nれている（一部改変）。\nリスペリドン持効性懸濁注射液\n血漿中薬物濃度（ng/mL)\n25mg（n ＝ 12〜14)\n40                                     50mg（n ＝ 24〜26)\n0   7   14   21   28    35     42    49   56   63\n投与後（日)\n統合失調症患者にリスペリドン持効性懸濁注射液を単回筋肉内投与したときの\n血漿中薬物濃度推移（平均値 ＋ S.D.)\n⎜ 23⎜\nリスペリドン持効性懸濁注射液\n血漿中薬物濃度（ng/mL)\n25mg（n ＝７〜８)\n37.5mg（n ＝９)\n50mg（n ＝８〜９)\n0   14   28   42   56   70    84    98   112   126\n注射液初回投与後（日)\n統合失調症患者にリスペリドン持効性懸濁注射液を反復筋肉内投与（２週間隔で６回）\nしたときの血漿中薬物濃度推移（平均値 ＋ S.D.)\nただし、当該患者にはリスペリドン錠を注射液初回投与後３週間、経口投与した。",
+    "question_concepts": [
+      "褥瘡治療",
+      "外用薬",
+      "創傷治癒過程"
+    ],
+    "visual_content_type": "table"
   },
   {
     "id": "r102-220",
@@ -6970,13 +8675,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "生物",
     "category": "",
-    "question_text": "問 221（物理・化学・生物）\n統合失調症では、様々な神経伝達物質との関連が示唆されている。神経伝達物質\nに関する記述のうち、正しいのはどれか。                                つ選べ。",
-    "choices": [],
+    "question_text": "統合失調症では、様々な神経伝達物質との関連が示唆されている。神経伝達物質に関する記述のうち、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "ノルアドレナリンの水酸化によりドパミンが生合成される。",
+        "semantic_labels": [
+          "ノルアドレナリン",
+          "ドパミン生合成"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "ドパミンは、酸化的脱アミノ化と水酸基のメチル化により代謝される。",
+        "semantic_labels": [
+          "ドパミン代謝",
+          "メチル化"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "セロトニンは、フェニルアラニンの水酸化と脱炭酸反応により生合成される。",
+        "semantic_labels": [
+          "セロトニン",
+          "生合成経路"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "グルタミン酸は、アスパラギン酸のアミノ基がオキサロ酢酸に転移されて生合成される。",
+        "semantic_labels": [
+          "グルタミン酸",
+          "アミノ基転移"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "グルタミン酸受容体は、イオンチャネル型と代謝調節型に分類される。",
+        "semantic_labels": [
+          "グルタミン酸受容体",
+          "受容体分類"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q221.png",
-    "question_text_original": "問 221（物理・化学・生物）\n統合失調症では、様々な神経伝達物質との関連が示唆されている。神経伝達物質\nに関する記述のうち、正しいのはどれか。                                つ選べ。\n1 ノルアドレナリンの水酸化によりドパミンが生合成される。\n2 ドパミンは、酸化的脱アミノ化と水酸基のメチル化により代謝される。\n3 セロトニンは、フェニルアラニンの水酸化と脱炭酸反応により生合成される。\n4 グルタミン酸は、アスパラギン酸のアミノ基がオキサロ酢酸に転移されて生合\n成される。\n5 グルタミン酸受容体は、イオンチャネル型と代謝調節型に分類される。\n⎜ 24⎜\n問 222‑225 50歳男性。体重 60kg。重症感染症のため一時的に高カロリー輸液ソフト\nバッグ製剤（1,003mL 中にブドウ糖 175g、総遊離アミノ酸 30g を含有）を中心\n静脈から投与することになった。この男性の腎機能は正常である。"
+    "question_text_original": "問 221（物理・化学・生物）\n統合失調症では、様々な神経伝達物質との関連が示唆されている。神経伝達物質\nに関する記述のうち、正しいのはどれか。                                つ選べ。\n1 ノルアドレナリンの水酸化によりドパミンが生合成される。\n2 ドパミンは、酸化的脱アミノ化と水酸基のメチル化により代謝される。\n3 セロトニンは、フェニルアラニンの水酸化と脱炭酸反応により生合成される。\n4 グルタミン酸は、アスパラギン酸のアミノ基がオキサロ酢酸に転移されて生合\n成される。\n5 グルタミン酸受容体は、イオンチャネル型と代謝調節型に分類される。\n⎜ 24⎜\n問 222‑225 50歳男性。体重 60kg。重症感染症のため一時的に高カロリー輸液ソフト\nバッグ製剤（1,003mL 中にブドウ糖 175g、総遊離アミノ酸 30g を含有）を中心\n静脈から投与することになった。この男性の腎機能は正常である。",
+    "question_concepts": [
+      "神経伝達物質",
+      "統合失調症",
+      "生合成・代謝"
+    ],
+    "visual_content_type": "graph",
+    "linked_group": "r102-220-221",
+    "linked_scenario": "22歳女性。統合失調症のため病院の精神科へ通院している。母親が薬局を訪れ、「娘が薬を時々飲み忘れて、症状が安定しないことから、リスペリドン持効性懸濁注射液を注射された。」と薬剤師に伝えた。また、母親は下記の処方箋を見て、注射剤と同じ薬物が内服薬としても処方されていることに疑問をもち、今後の薬物治療について薬剤師に質問した。（処方）リスペリドン錠2mg 1回1錠（1日2錠）1日2回 朝夕食後 21日分。なお、リスペリドン持効性懸濁注射液の添付文書には、2つのグラフが掲載されている（一部改変）。"
   },
   {
     "id": "r102-222",
@@ -7059,13 +8818,58 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬剤",
     "category": "",
-    "question_text": "問 223（物理・化学・生物）\nグルコースとアミノ酸を混合した場合、化学反応が起こることがある。反応速度\n定数を k とする①のような反応において、反応速度 v が②のように表されるとき、\n以下の記述のうち正しいのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "グルコースとアミノ酸を混合した場合、化学反応が起こることがある。反応速度定数をkとする①のような反応において、反応速度vが②のように表されるとき、以下の記述のうち正しいのはどれか。2つ選べ。aA + bB →(k) cC + dD ……①、v = k[A]^p[B]^q ……②。ただしA〜Dは物質を、a〜dは化学量論係数を表す。また、[A]〜[D]はそれぞれA〜Dの濃度を表すものとする。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "p = a, q = bの関係式が常に成り立つとは限らない。",
+        "semantic_labels": [
+          "反応次数",
+          "化学量論係数"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "p, qは必ず正の整数である。",
+        "semantic_labels": [
+          "反応次数",
+          "整数"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "各物質量の変化に注目すると下のような関係式が成り立つ。-a·d[A]/dt = -b·d[B]/dt = c·d[C]/dt = d·d[D]/dt",
+        "semantic_labels": [
+          "物質量変化",
+          "微分方程式"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "kは反応条件によって変化するが、反応物の濃度には無関係な値である。",
+        "semantic_labels": [
+          "反応速度定数",
+          "濃度非依存"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q223.png",
-    "question_text_original": "問 223（物理・化学・生物）\nグルコースとアミノ酸を混合した場合、化学反応が起こることがある。反応速度\n定数を k とする①のような反応において、反応速度 v が②のように表されるとき、\n以下の記述のうち正しいのはどれか。 つ選べ。\nk\naA ＋ bB       cC ＋ dD …………①\nv＝ k A    B     …………②\nただし A〜D は物質を、a〜d は化学量論係数を表す。また、 A 〜 D はそれぞ\nれ A〜D の濃度を表すものとする。\n1 p ＝ a, q ＝ b の関係式が常に成り立つとは限らない。\n2 p, q は必ず正の整数である。\n3 各物質量の変化に注目すると下のような関係式が成り立つ。\n−a d A ＝ −b d B ＝ c d C ＝ d d D\ndt       dt      dt      dt\n4 k は反応条件によって変化するが、反応物の濃度には無関係な値である。\n⎜ 25⎜"
+    "question_text_original": "問 223（物理・化学・生物）\nグルコースとアミノ酸を混合した場合、化学反応が起こることがある。反応速度\n定数を k とする①のような反応において、反応速度 v が②のように表されるとき、\n以下の記述のうち正しいのはどれか。 つ選べ。\nk\naA ＋ bB       cC ＋ dD …………①\nv＝ k A    B     …………②\nただし A〜D は物質を、a〜d は化学量論係数を表す。また、 A 〜 D はそれぞ\nれ A〜D の濃度を表すものとする。\n1 p ＝ a, q ＝ b の関係式が常に成り立つとは限らない。\n2 p, q は必ず正の整数である。\n3 各物質量の変化に注目すると下のような関係式が成り立つ。\n−a d A ＝ −b d B ＝ c d C ＝ d d D\ndt       dt      dt      dt\n4 k は反応条件によって変化するが、反応物の濃度には無関係な値である。\n⎜ 25⎜",
+    "question_concepts": [
+      "反応速度論",
+      "反応速度定数",
+      "反応次数"
+    ],
+    "visual_content_type": "formula",
+    "linked_group": "r102-222-225",
+    "linked_scenario": "50歳男性。体重60 kg。重症感染症のため一時的に高カロリー輸液ソフトバッグ製剤（1,003 mL中にブドウ糖175 g、総遊離アミノ酸30 gを含有）を中心静脈から投与することになった。この男性の腎機能は正常である。"
   },
   {
     "id": "r102-224",
@@ -7074,13 +8878,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "実務",
     "category": "",
-    "question_text": "問 224（実務）\n高カロリー輸液療法を施行するにあたって、高カロリー輸液の基本液として、糖\n質、電解質、アミノ酸及び総合ビタミンを含有するキット製剤を用いることとし\nた。このとき、以下の記述のうち正しいのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "高カロリー輸液療法を施行するにあたって、高カロリー輸液の基本液として、糖質、電解質、アミノ酸及び総合ビタミンを含有するキット製剤を用いることとした。このとき、以下の記述のうち正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "高カロリー輸液を末梢静脈から投与すると、静脈炎が起こりやすい。",
+        "semantic_labels": [
+          "末梢静脈",
+          "静脈炎"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "糖とアミノ酸で十分なカロリーを投与できる場合は、脂肪乳剤は投与しない方がよい。",
+        "semantic_labels": [
+          "脂肪乳剤",
+          "カロリー"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "調製後の高カロリー輸液を投与するときは、遮光カバーで被覆する。",
+        "semantic_labels": [
+          "遮光カバー",
+          "輸液調製"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "腎機能が低下している場合は、微量元素の添加量を増量する。",
+        "semantic_labels": [
+          "腎機能低下",
+          "微量元素"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "基本液のブドウ糖濃度は、10%以下に調整されている。",
+        "semantic_labels": [
+          "ブドウ糖濃度",
+          "基本液"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q224.png",
-    "question_text_original": "問 224（実務）\n高カロリー輸液療法を施行するにあたって、高カロリー輸液の基本液として、糖\n質、電解質、アミノ酸及び総合ビタミンを含有するキット製剤を用いることとし\nた。このとき、以下の記述のうち正しいのはどれか。 つ選べ。\n1 高カロリー輸液を末梢静脈から投与すると、静脈炎が起こりやすい。\n2 糖とアミノ酸で十分なカロリーを投与できる場合は、脂肪乳剤は投与しない方\nがよい。\n3 調製後の高カロリー輸液を投与するときは、遮光カバーで被覆する。\n4 腎機能が低下している場合は、微量元素の添加量を増量する。\n5 基本液のブドウ糖濃度は、10％以下に調整されている。"
+    "question_text_original": "問 224（実務）\n高カロリー輸液療法を施行するにあたって、高カロリー輸液の基本液として、糖\n質、電解質、アミノ酸及び総合ビタミンを含有するキット製剤を用いることとし\nた。このとき、以下の記述のうち正しいのはどれか。 つ選べ。\n1 高カロリー輸液を末梢静脈から投与すると、静脈炎が起こりやすい。\n2 糖とアミノ酸で十分なカロリーを投与できる場合は、脂肪乳剤は投与しない方\nがよい。\n3 調製後の高カロリー輸液を投与するときは、遮光カバーで被覆する。\n4 腎機能が低下している場合は、微量元素の添加量を増量する。\n5 基本液のブドウ糖濃度は、10％以下に調整されている。",
+    "question_concepts": [
+      "高カロリー輸液",
+      "TPN",
+      "キット製剤"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-222-225",
+    "linked_scenario": "50歳男性。体重60 kg。重症感染症のため一時的に高カロリー輸液ソフトバッグ製剤（1,003 mL中にブドウ糖175 g、総遊離アミノ酸30 gを含有）を中心静脈から投与することになった。この男性の腎機能は正常である。"
   },
   {
     "id": "r102-225",
@@ -7089,13 +8947,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "生物",
     "category": "",
-    "question_text": "問 225（物理・化学・生物）\n血液中でのグルコースによる糖化反応に関する記述のうち、正しいのはどれか。\nつ選べ。",
-    "choices": [],
+    "question_text": "血液中でのグルコースによる糖化反応に関する記述のうち、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "グルコースの3位または4位のヒドロキシ基が糖化反応に関与する。",
+        "semantic_labels": [
+          "グルコース",
+          "ヒドロキシ基"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "グルコースは、ヘモグロビンAの主にC末端カルボキシ基に結合する。",
+        "semantic_labels": [
+          "ヘモグロビンA",
+          "C末端"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "グルコースによるヘモグロビンAの糖化反応は、非酵素的に起こる。",
+        "semantic_labels": [
+          "非酵素的反応",
+          "糖化"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "血中アルブミンは、グルコースにより糖化される。",
+        "semantic_labels": [
+          "アルブミン",
+          "糖化"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "糖化ヘモグロビンA（HbA1c）値（%）は、血糖値の急激な変化を知るための指標として、糖尿病が急速に悪化した時の診断に利用される。",
+        "semantic_labels": [
+          "HbA1c",
+          "血糖コントロール指標"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q225.png",
-    "question_text_original": "問 225（物理・化学・生物）\n血液中でのグルコースによる糖化反応に関する記述のうち、正しいのはどれか。\nつ選べ。\n1 グルコースの３位または４位のヒドロキシ基が糖化反応に関与する。\n2 グルコースは、ヘモグロビン A の主に C 末端カルボキシ基に結合する。\n3 グルコースによるヘモグロビン A の糖化反応は、非酵素的に起こる。\n4 血中アルブミンは、グルコースにより糖化される。\n5 糖化ヘモグロビン A（HbA1c）値（％）は、血糖値の急激な変化を知るため\nの指標として、糖尿病が急速に悪化した時の診断に利用される。\n⎜ 26⎜\n問 226‑227 65歳女性。慢性腎不全にて通院治療中。最近、時々腰が痛くなり、寝付き\nも良くないので、整形外科を受診した。骨粗しょう症と診断され、処方箋を薬局に\n持参した。\n(処方１）\nラロキシフェン塩酸塩錠 60mg            １回１錠（１日１錠）\nアルファカルシドールカプセル 0.5μg １回１カプセル（１日１カプセル）\n１日１回朝食後 14日分\n(処方２）\nジクロフェナク Na 錠 25mg           １回１錠\n痛い時   ５回分 （５錠）"
+    "question_text_original": "問 225（物理・化学・生物）\n血液中でのグルコースによる糖化反応に関する記述のうち、正しいのはどれか。\nつ選べ。\n1 グルコースの３位または４位のヒドロキシ基が糖化反応に関与する。\n2 グルコースは、ヘモグロビン A の主に C 末端カルボキシ基に結合する。\n3 グルコースによるヘモグロビン A の糖化反応は、非酵素的に起こる。\n4 血中アルブミンは、グルコースにより糖化される。\n5 糖化ヘモグロビン A（HbA1c）値（％）は、血糖値の急激な変化を知るため\nの指標として、糖尿病が急速に悪化した時の診断に利用される。\n⎜ 26⎜\n問 226‑227 65歳女性。慢性腎不全にて通院治療中。最近、時々腰が痛くなり、寝付き\nも良くないので、整形外科を受診した。骨粗しょう症と診断され、処方箋を薬局に\n持参した。\n(処方１）\nラロキシフェン塩酸塩錠 60mg            １回１錠（１日１錠）\nアルファカルシドールカプセル 0.5μg １回１カプセル（１日１カプセル）\n１日１回朝食後 14日分\n(処方２）\nジクロフェナク Na 錠 25mg           １回１錠\n痛い時   ５回分 （５錠）",
+    "question_concepts": [
+      "糖化反応",
+      "HbA1c",
+      "グルコース"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-222-225",
+    "linked_scenario": "50歳男性。体重60 kg。重症感染症のため一時的に高カロリー輸液ソフトバッグ製剤（1,003 mL中にブドウ糖175 g、総遊離アミノ酸30 gを含有）を中心静脈から投与することになった。この男性の腎機能は正常である。"
   },
   {
     "id": "r102-226",
@@ -7158,13 +9070,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "衛生",
     "category": "",
-    "question_text": "問 227（衛生）\nアルファカルシドールカプセルはビタミン D 製剤である。ビタミン D の代謝反\n応のうち、慢性腎不全の患者において低下しているのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "アルファカルシドールカプセルはビタミンD製剤である。ビタミンDの代謝反応のうち、慢性腎不全の患者において低下しているのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "7-デヒドロコレステロールの開環反応",
+        "semantic_labels": [
+          "7-デヒドロコレステロール",
+          "開環反応"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "7-デヒドロコレステロールの1位の水酸化反応",
+        "semantic_labels": [
+          "7-デヒドロコレステロール",
+          "1位水酸化"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "25-(OH)ビタミンDの1位の水酸化反応",
+        "semantic_labels": [
+          "25-OHビタミンD",
+          "1α水酸化"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "1α-(OH)ビタミンDの25位の水酸化反応",
+        "semantic_labels": [
+          "1α-OHビタミンD",
+          "25位水酸化"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "25-(OH)ビタミンDの開環反応",
+        "semantic_labels": [
+          "25-OHビタミンD",
+          "開環反応"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q227.png",
-    "question_text_original": "問 227（衛生）\nアルファカルシドールカプセルはビタミン D 製剤である。ビタミン D の代謝反\n応のうち、慢性腎不全の患者において低下しているのはどれか。 つ選べ。\n1 7‑デヒドロコレステロールの開環反応\n2 7‑デヒドロコレステロールの１位の水酸化反応\n3 25‑\n（OH)ビタミン D の１位の水酸化反応\n4 1α‑\n（OH)ビタミン D の 25位の水酸化反応\n5 25‑\n（OH)ビタミン D の開環反応\n⎜ 27⎜\n問 228‑229 69歳女性。胃がんの手術後の入院中に、医師、看護師、管理栄養士及び薬\n剤師で構成された NST（Nutrition Support Team）による患者カンファレンスが\n行われた結果、脂肪乳剤輸液（10％、250mL）の投与が開始された。"
+    "question_text_original": "問 227（衛生）\nアルファカルシドールカプセルはビタミン D 製剤である。ビタミン D の代謝反\n応のうち、慢性腎不全の患者において低下しているのはどれか。 つ選べ。\n1 7‑デヒドロコレステロールの開環反応\n2 7‑デヒドロコレステロールの１位の水酸化反応\n3 25‑\n（OH)ビタミン D の１位の水酸化反応\n4 1α‑\n（OH)ビタミン D の 25位の水酸化反応\n5 25‑\n（OH)ビタミン D の開環反応\n⎜ 27⎜\n問 228‑229 69歳女性。胃がんの手術後の入院中に、医師、看護師、管理栄養士及び薬\n剤師で構成された NST（Nutrition Support Team）による患者カンファレンスが\n行われた結果、脂肪乳剤輸液（10％、250mL）の投与が開始された。",
+    "question_concepts": [
+      "ビタミンD代謝",
+      "慢性腎不全",
+      "水酸化反応"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-226-227",
+    "linked_scenario": "65歳女性。慢性腎不全にて通院治療中。最近、時々腰が痛くなり、寝付きも良くないので、整形外科を受診した。骨粗しょう症と診断され、処方箋を薬局に持参した。（処方1）ラロキシフェン塩酸塩錠60 mg 1回1錠（1日1錠）、アルファカルシドールカプセル0.5 μg 1回1カプセル（1日1カプセル）、1日1回朝食後 14日分。（処方2）ジクロフェナクNa錠25 mg 1回1錠 痛い時 5回分（5錠）。"
   },
   {
     "id": "r102-228",
@@ -7227,13 +9193,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "衛生",
     "category": "",
-    "question_text": "問 229（衛生）\n脂肪乳剤輸液に用いられる脂質に関する記述のうち、正しいのはどれか。",
-    "choices": [],
+    "question_text": "脂肪乳剤輸液に用いられる脂質に関する記述のうち、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "脂肪乳剤中の油脂には必須脂肪酸のリノール酸及びα-リノレン酸が含まれている。",
+        "semantic_labels": [
+          "必須脂肪酸",
+          "リノール酸"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "中鎖脂肪酸は長鎖脂肪酸に比べてエネルギーに変換されにくいので、中鎖脂肪酸を含む油脂は脂肪乳剤としては用いられない。",
+        "semantic_labels": [
+          "中鎖脂肪酸",
+          "エネルギー変換"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "脂肪乳剤中の脂質1 gあたりのエネルギー量は約9 kcalである。",
+        "semantic_labels": [
+          "脂質エネルギー",
+          "9kcal"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "脂肪乳剤中のトリアシルグリセロールは、リポタンパク質リパーゼによりモノアシルグリセロールと脂肪酸に分解され組織に吸収される。",
+        "semantic_labels": [
+          "トリアシルグリセロール",
+          "リポタンパク質リパーゼ"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "脂肪乳剤には乳化剤としてコレステロールが含まれている。",
+        "semantic_labels": [
+          "乳化剤",
+          "コレステロール"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q229.png",
-    "question_text_original": "問 229（衛生）\n脂肪乳剤輸液に用いられる脂質に関する記述のうち、正しいのはどれか。            つ選\nべ。\n1 脂肪乳剤中の油脂には必須脂肪酸のリノール酸及び α‑リノレン酸が含まれて\nいる。\n2 中鎖脂肪酸は長鎖脂肪酸に比べてエネルギーに変換されにくいので、中鎖脂肪\n酸を含む油脂は脂肪乳剤としては用いられない。\n3 脂肪乳剤中の脂質 1g あたりのエネルギー量は約９kcal である。\n4 脂肪乳剤中のトリアシルグリセロールは、リポタンパク質リパーゼによりモノ\nアシルグリセロールと脂肪酸に分解され組織に吸収される。\n5 脂肪乳剤には乳化剤としてコレステロールが含まれている。\n⎜ 28⎜\n問 230‑231 医薬品の適正使用のため、承認前には治験、承認後にも PM S（製造販売\n後調査 Post M arketing Surveillance）が行われている。"
+    "question_text_original": "問 229（衛生）\n脂肪乳剤輸液に用いられる脂質に関する記述のうち、正しいのはどれか。            つ選\nべ。\n1 脂肪乳剤中の油脂には必須脂肪酸のリノール酸及び α‑リノレン酸が含まれて\nいる。\n2 中鎖脂肪酸は長鎖脂肪酸に比べてエネルギーに変換されにくいので、中鎖脂肪\n酸を含む油脂は脂肪乳剤としては用いられない。\n3 脂肪乳剤中の脂質 1g あたりのエネルギー量は約９kcal である。\n4 脂肪乳剤中のトリアシルグリセロールは、リポタンパク質リパーゼによりモノ\nアシルグリセロールと脂肪酸に分解され組織に吸収される。\n5 脂肪乳剤には乳化剤としてコレステロールが含まれている。\n⎜ 28⎜\n問 230‑231 医薬品の適正使用のため、承認前には治験、承認後にも PM S（製造販売\n後調査 Post M arketing Surveillance）が行われている。",
+    "question_concepts": [
+      "脂肪乳剤",
+      "脂質",
+      "必須脂肪酸"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-228-229",
+    "linked_scenario": "69歳女性。胃がんの手術後の入院中に、医師、看護師、管理栄養士及び薬剤師で構成されたNST（Nutrition Support Team）による患者カンファレンスが行われた結果、脂肪乳剤輸液（10%、250 mL）の投与が開始された。"
   },
   {
     "id": "r102-230",
@@ -7296,13 +9316,65 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "衛生",
     "category": "",
-    "question_text": "問 231（衛生）\nある医薬品について免疫能を低下させる可能性が懸念された。そこで、治験に加\nえて、PMS においても感染症などの副作用の発現頻度を調査し、下表の結果を得\nた。この調査に関する記述のうち、誤っているのはどれか。       つ選べ。",
-    "choices": [],
+    "question_text": "ある医薬品について免疫能を低下させる可能性が懸念された。そこで、治験に加えて、PMSにおいても感染症などの副作用の発現頻度を調査し、下表の結果を得た。この調査に関する記述のうち、誤っているのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "このPMSでは3,000例の調査をしたことにより、治験では見つけられなかったニューモシスチス肺炎の発症を見出すことができた。",
+        "semantic_labels": [
+          "PMS",
+          "ニューモシスチス肺炎"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "治験とは異なり、PMSにおいてCOPD（慢性閉塞性肺疾患）の発現率が高くなったのは、PMSの対象患者に喫煙者が多かったことが一因と推定される。",
+        "semantic_labels": [
+          "COPD",
+          "喫煙者"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "治験とは異なり、PMSにおいて結核の発現率が高くなったのは、PMSの対象患者に後期高齢者が多かったことが一因と推定される。",
+        "semantic_labels": [
+          "結核",
+          "後期高齢者"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "いずれの肺炎の発現頻度も、治験の段階よりPMSの段階の方が高くなることがわかった。",
+        "semantic_labels": [
+          "肺炎発現頻度",
+          "治験vsPS"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "PMSは副作用の発現を調べることが目的であり、有効性に関する調査は行われない。",
+        "semantic_labels": [
+          "PMS目的",
+          "有効性調査"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q231.png",
-    "question_text_original": "問 231（衛生）\nある医薬品について免疫能を低下させる可能性が懸念された。そこで、治験に加\nえて、PMS においても感染症などの副作用の発現頻度を調査し、下表の結果を得\nた。この調査に関する記述のうち、誤っているのはどれか。       つ選べ。\n副作用発現頻度（例数)\n調査項目\n治験（N ＝ 300)    PM S（N ＝ 3,000)\n結核                   ２                45\nCOPD（慢性閉塞性肺疾患)       ２                50\nニューモシスチス肺炎           ０                ３\n細菌性肺炎                ６                60\n皮膚感染症                ３                30\n1 この PM S では 3,000例の調査をしたことにより、治験では見つけられなかっ\nたニューモシスチス肺炎の発症を見出すことができた。\n2 治験とは異なり、PM S において COPD（慢性閉塞性肺疾患）の発現率が高く\nなったのは、PMS の対象患者に喫煙者が多かったことが一因と推定される。\n3 治験とは異なり、PM S において結核の発現率が高くなったのは、PMS の対象\n患者に後期高齢者が多かったことが一因と推定される。\n4 いずれの肺炎の発現頻度も、治験の段階より PMS の段階の方が高くなること\nがわかった。\n5 PM S は副作用の発現を調べることが目的であり、有効性に関する調査は行わ\nれない。\n⎜ 30⎜\n問 232‑233 85歳男性。在宅にて要介護度５の寝たきり状態であったが、高熱のため入\n院した。入院時に患者に触れた看護師等の職員数名が数日後かゆみを伴う皮膚症状\nを訴えた。その後、患者が重度の角化型疥癬と診断されたため、院内感染対策委員\n会にて対応策が検討された。"
+    "question_text_original": "問 231（衛生）\nある医薬品について免疫能を低下させる可能性が懸念された。そこで、治験に加\nえて、PMS においても感染症などの副作用の発現頻度を調査し、下表の結果を得\nた。この調査に関する記述のうち、誤っているのはどれか。       つ選べ。\n副作用発現頻度（例数)\n調査項目\n治験（N ＝ 300)    PM S（N ＝ 3,000)\n結核                   ２                45\nCOPD（慢性閉塞性肺疾患)       ２                50\nニューモシスチス肺炎           ０                ３\n細菌性肺炎                ６                60\n皮膚感染症                ３                30\n1 この PM S では 3,000例の調査をしたことにより、治験では見つけられなかっ\nたニューモシスチス肺炎の発症を見出すことができた。\n2 治験とは異なり、PM S において COPD（慢性閉塞性肺疾患）の発現率が高く\nなったのは、PMS の対象患者に喫煙者が多かったことが一因と推定される。\n3 治験とは異なり、PM S において結核の発現率が高くなったのは、PMS の対象\n患者に後期高齢者が多かったことが一因と推定される。\n4 いずれの肺炎の発現頻度も、治験の段階より PMS の段階の方が高くなること\nがわかった。\n5 PM S は副作用の発現を調べることが目的であり、有効性に関する調査は行わ\nれない。\n⎜ 30⎜\n問 232‑233 85歳男性。在宅にて要介護度５の寝たきり状態であったが、高熱のため入\n院した。入院時に患者に触れた看護師等の職員数名が数日後かゆみを伴う皮膚症状\nを訴えた。その後、患者が重度の角化型疥癬と診断されたため、院内感染対策委員\n会にて対応策が検討された。",
+    "question_concepts": [
+      "PMS",
+      "副作用調査",
+      "治験との比較"
+    ],
+    "visual_content_type": "table"
   },
   {
     "id": "r102-232",
@@ -7345,13 +9417,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "衛生",
     "category": "",
-    "question_text": "問 233（衛生）\n院内感染を予防するために、陰圧個室に患者を収容するなど空気感染対策をとる\n必要がある感染症はどれか。   つ選べ。",
-    "choices": [],
+    "question_text": "院内感染を予防するために、陰圧個室に患者を収容するなど空気感染対策をとる必要がある感染症はどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "水痘",
+        "semantic_labels": [
+          "水痘",
+          "空気感染"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "結核",
+        "semantic_labels": [
+          "結核",
+          "空気感染"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "クロストリジウム・ディフィシル感染症",
+        "semantic_labels": [
+          "クロストリジウム・ディフィシル",
+          "接触感染"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "マイコプラズマ感染症",
+        "semantic_labels": [
+          "マイコプラズマ",
+          "飛沫感染"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "ノロウイルス感染症",
+        "semantic_labels": [
+          "ノロウイルス",
+          "接触感染"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q233.png",
-    "question_text_original": "問 233（衛生）\n院内感染を予防するために、陰圧個室に患者を収容するなど空気感染対策をとる\n必要がある感染症はどれか。   つ選べ。\n1 水痘\n2 結核\n3 クロストリジウム・ディフィシル感染症\n4 マイコプラズマ感染症\n5 ノロウイルス感染症\n⎜ 31⎜\n問 234‑235 20歳女性。性感染症の薬物治療のため薬局に処方箋を持参した。"
+    "question_text_original": "問 233（衛生）\n院内感染を予防するために、陰圧個室に患者を収容するなど空気感染対策をとる\n必要がある感染症はどれか。   つ選べ。\n1 水痘\n2 結核\n3 クロストリジウム・ディフィシル感染症\n4 マイコプラズマ感染症\n5 ノロウイルス感染症\n⎜ 31⎜\n問 234‑235 20歳女性。性感染症の薬物治療のため薬局に処方箋を持参した。",
+    "question_concepts": [
+      "空気感染対策",
+      "陰圧個室",
+      "院内感染予防"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-232-233",
+    "linked_scenario": "85歳男性。在宅にて要介護度5の寝たきり状態であったが、高熱のため入院した。入院時に患者に触れた看護師等の職員数名が数日後かゆみを伴う皮膚症状を訴えた。その後、患者が重度の角化型疥癬と診断されたため、院内感染対策委員会にて対応策が検討された。"
   },
   {
     "id": "r102-234",
@@ -7360,13 +9486,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "実務",
     "category": "",
-    "question_text": "問 234（実務）\n薬剤師は服薬指導の際、厚生労働省の資料を基に作成したリーフレットを手渡し\nた。下図はリーフレットの一部である。                 Ａ          は、陰部に潰瘍ができたり、リ\nンパ節の腫れ、全身の発疹などの症状を呈する。\nＡ    にあてはまる感染症はどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "薬剤師は服薬指導の際、厚生労働省の資料を基に作成したリーフレットを手渡した。下図はリーフレットの一部である。Aは、陰部に潰瘍ができたり、リンパ節の腫れ、全身の発疹などの症状を呈する。Aにあてはまる感染症はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "淋菌感染症",
+        "semantic_labels": [
+          "淋菌感染症",
+          "性感染症"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "性器クラミジア感染症",
+        "semantic_labels": [
+          "性器クラミジア",
+          "性感染症"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "性器ヘルペスウイルス感染症",
+        "semantic_labels": [
+          "性器ヘルペス",
+          "性感染症"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "尖圭コンジローマ",
+        "semantic_labels": [
+          "尖圭コンジローマ",
+          "性感染症"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "梅毒",
+        "semantic_labels": [
+          "梅毒",
+          "性感染症"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q234.png",
-    "question_text_original": "問 234（実務）\n薬剤師は服薬指導の際、厚生労働省の資料を基に作成したリーフレットを手渡し\nた。下図はリーフレットの一部である。                 Ａ          は、陰部に潰瘍ができたり、リ\nンパ節の腫れ、全身の発疹などの症状を呈する。\nＡ    にあてはまる感染症はどれか。 つ選べ。\n(件)                         Ａ         感染者届出数\n3000\n男性\n2500\n女性の    Ａ   感染者                女性\n届出数は、\n2000\n2010年の 124例から\n2015年の 763例へと、                                                        1934\n1500\n５年間で約６倍に増えました。\n1000                                          1284\n500              650        692\n497                                        763\n235   377\n124        177        183\n2010       2011       2012   2013   2014   2015 (年)\n1 淋菌感染症\n2 性器クラミジア感染症\n3 性器ヘルペスウイルス感染症\n4 尖圭コンジローマ\n5 梅毒"
+    "question_text_original": "問 234（実務）\n薬剤師は服薬指導の際、厚生労働省の資料を基に作成したリーフレットを手渡し\nた。下図はリーフレットの一部である。                 Ａ          は、陰部に潰瘍ができたり、リ\nンパ節の腫れ、全身の発疹などの症状を呈する。\nＡ    にあてはまる感染症はどれか。 つ選べ。\n(件)                         Ａ         感染者届出数\n3000\n男性\n2500\n女性の    Ａ   感染者                女性\n届出数は、\n2000\n2010年の 124例から\n2015年の 763例へと、                                                        1934\n1500\n５年間で約６倍に増えました。\n1000                                          1284\n500              650        692\n497                                        763\n235   377\n124        177        183\n2010       2011       2012   2013   2014   2015 (年)\n1 淋菌感染症\n2 性器クラミジア感染症\n3 性器ヘルペスウイルス感染症\n4 尖圭コンジローマ\n5 梅毒",
+    "question_concepts": [
+      "性感染症",
+      "感染者届出数",
+      "リーフレット"
+    ],
+    "visual_content_type": "chart",
+    "linked_group": "r102-234-235",
+    "linked_scenario": "20歳女性。性感染症の薬物治療のため薬局に処方箋を持参した。"
   },
   {
     "id": "r102-235",
@@ -7375,13 +9555,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "衛生",
     "category": "",
-    "question_text": "問 235（衛生）\n次の性感染症のうち、感染症発生動向調査において全数把握対象疾患として規定\nされているのはどれか。    つ選べ。",
-    "choices": [],
+    "question_text": "次の性感染症のうち、感染症発生動向調査において全数把握対象疾患として規定されているのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "淋菌感染症",
+        "semantic_labels": [
+          "淋菌感染症",
+          "定点把握"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "性器クラミジア感染症",
+        "semantic_labels": [
+          "性器クラミジア",
+          "定点把握"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "性器ヘルペスウイルス感染症",
+        "semantic_labels": [
+          "性器ヘルペス",
+          "定点把握"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "尖圭コンジローマ",
+        "semantic_labels": [
+          "尖圭コンジローマ",
+          "定点把握"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "梅毒",
+        "semantic_labels": [
+          "梅毒",
+          "全数把握"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q235.png",
-    "question_text_original": "問 235（衛生）\n次の性感染症のうち、感染症発生動向調査において全数把握対象疾患として規定\nされているのはどれか。    つ選べ。\n1 淋菌感染症\n2 性器クラミジア感染症\n3 性器ヘルペスウイルス感染症\n4 尖圭コンジローマ\n5 梅毒\n⎜ 32⎜\n問 236‑237\nある病院において、予防接種の頻度が上がり、患者からの薬剤部への問い合わせ\n件数も増加したため、ワクチンの接種法及び接種時期について確認作業を行った。"
+    "question_text_original": "問 235（衛生）\n次の性感染症のうち、感染症発生動向調査において全数把握対象疾患として規定\nされているのはどれか。    つ選べ。\n1 淋菌感染症\n2 性器クラミジア感染症\n3 性器ヘルペスウイルス感染症\n4 尖圭コンジローマ\n5 梅毒\n⎜ 32⎜\n問 236‑237\nある病院において、予防接種の頻度が上がり、患者からの薬剤部への問い合わせ\n件数も増加したため、ワクチンの接種法及び接種時期について確認作業を行った。",
+    "question_concepts": [
+      "感染症発生動向調査",
+      "全数把握",
+      "性感染症"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-234-235",
+    "linked_scenario": "20歳女性。性感染症の薬物治療のため薬局に処方箋を持参した。"
   },
   {
     "id": "r102-236",
@@ -7420,13 +9654,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "衛生",
     "category": "",
-    "question_text": "問 237（衛生）\n予防接種法に基づく定期の予防接種に関する記述のうち、正しいのはどれか。\nつ選べ。",
-    "choices": [],
+    "question_text": "予防接種法に基づく定期の予防接種に関する記述のうち、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "高齢者の肺炎球菌感染症は予防接種法におけるB類疾病に含まれ、65歳以上になると、肺炎球菌ワクチンは毎年度1回ずつ接種することができる。",
+        "semantic_labels": [
+          "肺炎球菌ワクチン",
+          "B類疾病"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "ポリオ（急性灰白髄炎）のワクチンは、ジフテリア、百日咳、破傷風のワクチンとともに、4種混合ワクチンとして接種される。",
+        "semantic_labels": [
+          "4種混合ワクチン",
+          "ポリオ"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "麻しん・風しん混合ワクチンは、免疫効果が強い生ワクチンなので、生後12〜24ヶ月の間に1回のみ接種される。",
+        "semantic_labels": [
+          "MRワクチン",
+          "生ワクチン"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "水痘は予防接種法におけるA類疾病に分類され、そのワクチンとしては弱毒生ワクチンが用いられる。",
+        "semantic_labels": [
+          "水痘ワクチン",
+          "A類疾病"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "インフルエンザ菌b型（Hib）に対するワクチンは、インフルエンザウイルスに対しても効果を示す。",
+        "semantic_labels": [
+          "Hibワクチン",
+          "インフルエンザ"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q237.png",
-    "question_text_original": "問 237（衛生）\n予防接種法に基づく定期の予防接種に関する記述のうち、正しいのはどれか。\nつ選べ。\n1 高齢者の肺炎球菌感染症は予防接種法におけるＢ類疾病に含まれ、65歳以上に\nなると、肺炎球菌ワクチンは毎年度１回ずつ接種することができる。\n2 ポリオ（急性灰白髄炎）のワクチンは、ジフテリア、百日咳、破傷風のワクチ\nンとともに、４種混合ワクチンとして接種される。\n3 麻しん・風しん混合ワクチンは、免疫効果が強い生ワクチンなので、生後\n12〜24ヶ月の間に１回のみ接種される。\n4 水痘は予防接種法におけるＡ類疾病に分類され、そのワクチンとしては弱毒生\nワクチンが用いられる。\n5 インフルエンザ菌ｂ型（Hib）に対するワクチンは、インフルエンザウイルス\nに対しても効果を示す。\n⎜ 33⎜\n問 238‑239 40歳男性。喫煙歴 20年、気管支ぜん息の治療のためテオフィリン製剤を\n服用している。最近、ぜん息症状が悪化してきたこともあり禁煙を試みたいと薬局\nを訪れた。薬剤師は、ニコチンガム、ニコチンパッチ及びバレニクリン酒石酸塩錠\nについて情報提供を求められた。"
+    "question_text_original": "問 237（衛生）\n予防接種法に基づく定期の予防接種に関する記述のうち、正しいのはどれか。\nつ選べ。\n1 高齢者の肺炎球菌感染症は予防接種法におけるＢ類疾病に含まれ、65歳以上に\nなると、肺炎球菌ワクチンは毎年度１回ずつ接種することができる。\n2 ポリオ（急性灰白髄炎）のワクチンは、ジフテリア、百日咳、破傷風のワクチ\nンとともに、４種混合ワクチンとして接種される。\n3 麻しん・風しん混合ワクチンは、免疫効果が強い生ワクチンなので、生後\n12〜24ヶ月の間に１回のみ接種される。\n4 水痘は予防接種法におけるＡ類疾病に分類され、そのワクチンとしては弱毒生\nワクチンが用いられる。\n5 インフルエンザ菌ｂ型（Hib）に対するワクチンは、インフルエンザウイルス\nに対しても効果を示す。\n⎜ 33⎜\n問 238‑239 40歳男性。喫煙歴 20年、気管支ぜん息の治療のためテオフィリン製剤を\n服用している。最近、ぜん息症状が悪化してきたこともあり禁煙を試みたいと薬局\nを訪れた。薬剤師は、ニコチンガム、ニコチンパッチ及びバレニクリン酒石酸塩錠\nについて情報提供を求められた。",
+    "question_concepts": [
+      "予防接種法",
+      "定期予防接種",
+      "ワクチン"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-236-237",
+    "linked_scenario": "ある病院において、予防接種の頻度が上がり、患者からの薬剤部への問い合わせ件数も増加したため、ワクチンの接種法及び接種時期について確認作業を行った。"
   },
   {
     "id": "r102-238",
@@ -7469,13 +9757,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "衛生",
     "category": "",
-    "question_text": "問 239（衛生）\nたばこの煙と喫煙に関する記述のうち、正しいのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "たばこの煙と喫煙に関する記述のうち、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "喫煙によりシトクロムP450のうち、主にCYP3A4が誘導される。",
+        "semantic_labels": [
+          "CYP3A4",
+          "酵素誘導"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "テオフィリン製剤を服用している喫煙者が禁煙すると、テオフィリンの血中濃度が低下する可能性がある。",
+        "semantic_labels": [
+          "テオフィリン",
+          "血中濃度"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "たばこの煙には、一酸化炭素や窒素酸化物が含まれている。",
+        "semantic_labels": [
+          "一酸化炭素",
+          "窒素酸化物"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "妊娠中の喫煙は、低体重児の出産のリスクを高める。",
+        "semantic_labels": [
+          "妊娠",
+          "低体重児"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "アルコールを摂取すると、喫煙によって誘導されるのと同じCYP分子種が誘導される。",
+        "semantic_labels": [
+          "アルコール",
+          "CYP誘導"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q239.png",
-    "question_text_original": "問 239（衛生）\nたばこの煙と喫煙に関する記述のうち、正しいのはどれか。 つ選べ。\n1 喫煙によりシトクロム P450 のうち、主に CYP3A4 が誘導される。\n2 テオフィリン製剤を服用している喫煙者が禁煙すると、テオフィリンの血中濃\n度が低下する可能性がある。\n3 たばこの煙には、一酸化炭素や窒素酸化物が含まれている。\n4 妊娠中の喫煙は、低体重児の出産のリスクを高める。\n5 アルコールを摂取すると、喫煙によって誘導されるのと同じ CYP 分子種が誘\n導される。\n⎜ 34⎜\n問 240‑241 学校薬剤師が中学校の校長から薬物乱用防止教室の講師を依頼された。"
+    "question_text_original": "問 239（衛生）\nたばこの煙と喫煙に関する記述のうち、正しいのはどれか。 つ選べ。\n1 喫煙によりシトクロム P450 のうち、主に CYP3A4 が誘導される。\n2 テオフィリン製剤を服用している喫煙者が禁煙すると、テオフィリンの血中濃\n度が低下する可能性がある。\n3 たばこの煙には、一酸化炭素や窒素酸化物が含まれている。\n4 妊娠中の喫煙は、低体重児の出産のリスクを高める。\n5 アルコールを摂取すると、喫煙によって誘導されるのと同じ CYP 分子種が誘\n導される。\n⎜ 34⎜\n問 240‑241 学校薬剤師が中学校の校長から薬物乱用防止教室の講師を依頼された。",
+    "question_concepts": [
+      "喫煙",
+      "たばこの煙",
+      "CYP誘導"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-238-239",
+    "linked_scenario": "40歳男性。喫煙歴20年、気管支ぜん息の治療のためテオフィリン製剤を服用している。最近、ぜん息症状が悪化してきたこともあり禁煙を試みたいと薬局を訪れた。薬剤師は、ニコチンガム、ニコチンパッチ及びバレニクリン酒石酸塩錠について情報提供を求められた。"
   },
   {
     "id": "r102-240",
@@ -7518,13 +9860,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "衛生",
     "category": "",
-    "question_text": "問 241（衛生）\n危険ドラッグに含まれる可能性が高い薬物を幅広く規制するため、基本骨格が同\nじ物質を一括して指定する「包括指定」が活用されている。包括指定される指定薬\n物の基本骨格に該当するのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "危険ドラッグに含まれる可能性が高い薬物を幅広く規制するため、基本骨格が同じ物質を一括して指定する「包括指定」が活用されている。包括指定される指定薬物の基本骨格に該当するのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "カチノン骨格",
+          "フェネチルアミン系"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "合成カンナビノイド骨格",
+          "インダゾール系"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "テルペン系骨格",
+          "フェノール系"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "インダン骨格",
+          "合成カンナビノイド"
+        ],
+        "choice_type": "image"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "ナフトイルインドール骨格",
+          "合成カンナビノイド"
+        ],
+        "choice_type": "image"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q241.png",
-    "question_text_original": "問 241（衛生）\n危険ドラッグに含まれる可能性が高い薬物を幅広く規制するため、基本骨格が同\nじ物質を一括して指定する「包括指定」が活用されている。包括指定される指定薬\n物の基本骨格に該当するのはどれか。 つ選べ。\nR                                     CH3\nN\nO\nOH\nNH2\nR\nH3C\nO                                          O        R\nHO             OH                         H3C\n1                     2                    3\nO\nCH3\nR        R2             N\nR1\n4                    5\n⎜ 35⎜\n問 242‑243 学校薬剤師が小学校の水道水の水質検査を行った。結果は以下の通りで\nあった。\n一般細菌            36集落/mL\n大腸菌             検出されず\n塩化物イオン          27mg/L\n全有機炭素（TOC）      1mg/L\npH 値            7.0\n味               異常なし\n臭気              異常なし\n色度              0.5度\n濁度              0.1度\n遊離残留塩素          0.3mg/L"
+    "question_text_original": "問 241（衛生）\n危険ドラッグに含まれる可能性が高い薬物を幅広く規制するため、基本骨格が同\nじ物質を一括して指定する「包括指定」が活用されている。包括指定される指定薬\n物の基本骨格に該当するのはどれか。 つ選べ。\nR                                     CH3\nN\nO\nOH\nNH2\nR\nH3C\nO                                          O        R\nHO             OH                         H3C\n1                     2                    3\nO\nCH3\nR        R2             N\nR1\n4                    5\n⎜ 35⎜\n問 242‑243 学校薬剤師が小学校の水道水の水質検査を行った。結果は以下の通りで\nあった。\n一般細菌            36集落/mL\n大腸菌             検出されず\n塩化物イオン          27mg/L\n全有機炭素（TOC）      1mg/L\npH 値            7.0\n味               異常なし\n臭気              異常なし\n色度              0.5度\n濁度              0.1度\n遊離残留塩素          0.3mg/L",
+    "question_concepts": [
+      "危険ドラッグ",
+      "包括指定",
+      "指定薬物"
+    ],
+    "visual_content_type": "chemical_structure",
+    "linked_group": "r102-240-241",
+    "linked_scenario": "学校薬剤師が中学校の校長から薬物乱用防止教室の講師を依頼された。"
   },
   {
     "id": "r102-242",
@@ -7567,13 +9963,69 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "衛生",
     "category": "",
-    "question_text": "問 243（衛生）\nこの水道水の水質検査に関する次の記述のうち、正しいのはどれか。    つ選べ。",
-    "choices": [],
+    "question_text": "この水道水の水質検査に関する次の記述のうち、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "大腸菌は検出されていないが、一般細菌が検出されているので、水質基準を満たしていない。",
+        "semantic_labels": [
+          "大腸菌",
+          "一般細菌",
+          "水質基準"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "塩化物イオン濃度は、し尿等の混入があると値が増加する。",
+        "semantic_labels": [
+          "塩化物イオン",
+          "し尿混入"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "全有機炭素（TOC）の測定値は、水道水中の還元性無機イオンの影響を受けにくい。",
+        "semantic_labels": [
+          "TOC",
+          "還元性無機イオン"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "トリハロメタンの濃度が高いと色度、濁度のいずれも高くなる。",
+        "semantic_labels": [
+          "トリハロメタン",
+          "色度",
+          "濁度"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "遊離残留塩素が水質基準を超えているため、このままでは飲料に適さない。",
+        "semantic_labels": [
+          "遊離残留塩素",
+          "水質基準"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（要確認）",
     "tags": [],
     "image_url": "/images/questions/102/q243.png",
-    "question_text_original": "問 243（衛生）\nこの水道水の水質検査に関する次の記述のうち、正しいのはどれか。    つ選べ。\n1 大腸菌は検出されていないが、一般細菌が検出されているので、水質基準を満\nたしていない。\n2 塩化物イオン濃度は、し尿等の混入があると値が増加する。\n3 全有機炭素（TOC）の測定値は、水道水中の還元性無機イオンの影響を受けに\nくい。\n4 トリハロメタンの濃度が高いと色度、濁度のいずれも高くなる。\n5 遊離残留塩素が水質基準を超えているため、このままでは飲料に適さない。\n⎜ 36⎜\n問 244‑245 病院薬剤部において高カロリー輸液の調製を行う際に排出される廃棄物の\n処理方法を検討することとなった。"
+    "question_text_original": "問 243（衛生）\nこの水道水の水質検査に関する次の記述のうち、正しいのはどれか。    つ選べ。\n1 大腸菌は検出されていないが、一般細菌が検出されているので、水質基準を満\nたしていない。\n2 塩化物イオン濃度は、し尿等の混入があると値が増加する。\n3 全有機炭素（TOC）の測定値は、水道水中の還元性無機イオンの影響を受けに\nくい。\n4 トリハロメタンの濃度が高いと色度、濁度のいずれも高くなる。\n5 遊離残留塩素が水質基準を超えているため、このままでは飲料に適さない。\n⎜ 36⎜\n問 244‑245 病院薬剤部において高カロリー輸液の調製を行う際に排出される廃棄物の\n処理方法を検討することとなった。",
+    "question_concepts": [
+      "水質検査",
+      "水道水",
+      "水質基準"
+    ],
+    "visual_content_type": "table",
+    "linked_group": "r102-242-243",
+    "linked_scenario": "学校薬剤師が小学校の水道水の水質検査を行った。結果は以下の通りであった。一般細菌:36集落/mL、大腸菌:検出されず、塩化物イオン:27mg/L、全有機炭素(TOC):1mg/L、pH値:7.0、味:異常なし、臭気:異常なし、色度:0.5度、濁度:0.1度、遊離残留塩素:0.3mg/L。"
   },
   {
     "id": "r102-244",
@@ -7616,13 +10068,58 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "衛生",
     "category": "",
-    "question_text": "問 245（衛生）\n感染性廃棄物に関する記述のうち、正しいのはどれか。   つ選べ。",
-    "choices": [],
+    "question_text": "感染性廃棄物に関する記述のうち、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "薬剤師は、感染性廃棄物に係る特別管理産業廃棄物管理責任者になることができる。",
+        "semantic_labels": [
+          "特別管理産業廃棄物",
+          "管理責任者"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "感染性廃棄物は滅菌処理した後も、全て指定された容器に分別しなければならない。",
+        "semantic_labels": [
+          "滅菌処理",
+          "容器分別"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "感染性産業廃棄物の処理は、指定を受けた契約業者に委託するためマニフェスト制度の対象外である。",
+        "semantic_labels": [
+          "マニフェスト制度",
+          "委託処理"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "感染性廃棄物を入れる容器にはバイオハザードマークを付けるか、感染性廃棄物であることを明記する必要がある。",
+        "semantic_labels": [
+          "バイオハザードマーク",
+          "容器表示"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q245.png",
-    "question_text_original": "問 245（衛生）\n感染性廃棄物に関する記述のうち、正しいのはどれか。   つ選べ。\n1 薬剤師は、感染性廃棄物に係る特別管理産業廃棄物管理責任者になることがで\nきる。\n2 感染性廃棄物は滅菌処理した後も、全て指定された容器に分別しなければなら\nない。\n3 感染性産業廃棄物の処理は、指定を受けた契約業者に委託するためマニフェス\nト制度の対象外である。\n4 感染性廃棄物を入れる容器にはバイオハザードマークを付けるか、感染性廃棄\n物であることを明記する必要がある。\n⎜ 37⎜"
+    "question_text_original": "問 245（衛生）\n感染性廃棄物に関する記述のうち、正しいのはどれか。   つ選べ。\n1 薬剤師は、感染性廃棄物に係る特別管理産業廃棄物管理責任者になることがで\nきる。\n2 感染性廃棄物は滅菌処理した後も、全て指定された容器に分別しなければなら\nない。\n3 感染性産業廃棄物の処理は、指定を受けた契約業者に委託するためマニフェス\nト制度の対象外である。\n4 感染性廃棄物を入れる容器にはバイオハザードマークを付けるか、感染性廃棄\n物であることを明記する必要がある。\n⎜ 37⎜",
+    "question_concepts": [
+      "感染性廃棄物",
+      "廃棄物処理",
+      "マニフェスト制度"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-244-245",
+    "linked_scenario": "病院薬剤部において高カロリー輸液の調製を行う際に排出される廃棄物の処理方法を検討することとなった。"
   },
   {
     "id": "r102-246",
@@ -7665,13 +10162,66 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬理",
     "category": "",
-    "question_text": "問 247（薬理）\n処方された薬物及び前問で挙げた薬物の作用機序として、正しいのはどれか。\nつ選べ。",
-    "choices": [],
+    "question_text": "処方された薬物及び前問で挙げた薬物の作用機序として、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "プロスタグランジンE2の産生を抑制する。",
+        "semantic_labels": [
+          "PGE2産生抑制",
+          "NSAIDs"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "尿酸を酸化してアラントインと過酸化水素に分解する。",
+        "semantic_labels": [
+          "尿酸酸化",
+          "ラスブリカーゼ"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "代謝物のオキシプリノール（アロキサンチン）がキサンチンオキシダーゼを阻害する。",
+        "semantic_labels": [
+          "キサンチンオキシダーゼ阻害",
+          "アロプリノール"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "腎臓の尿細管において尿酸トランスポーターを阻害する。",
+        "semantic_labels": [
+          "尿酸トランスポーター阻害",
+          "尿酸排泄促進薬"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "T細胞のチューブリンに結合し、微小管の脱重合を抑制して安定化する。",
+        "semantic_labels": [
+          "チューブリン結合",
+          "微小管安定化"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q247.png",
-    "question_text_original": "問 247（薬理）\n処方された薬物及び前問で挙げた薬物の作用機序として、正しいのはどれか。\nつ選べ。\n1 プロスタグランジン E の産生を抑制する。\n2 尿酸を酸化してアラントインと過酸化水素に分解する。\n3 代謝物のオキシプリノール（アロキサンチン）がキサンチンオキシダーゼを阻\n害する。\n4 腎臓の尿細管において尿酸トランスポーターを阻害する。\n5 Ｔ細胞のチューブリンに結合し、微小管の脱重合を抑制して安定化する。\n⎜ 2⎜\n問 248‑249 26歳女性。妊娠 30週。妊娠高血圧症候群で経過観察中、切迫早産のため\n入院し、以下が処方された。\n(処方１）\nリトドリン塩酸塩注射液（50mg/アンプル   １本）   50mg\n10％マルトース注射液                   500mL\n30mL/h で点滴静注\n(処方２）\nメチルドパ錠 250mg                  １回１錠（１日２錠）\n１日２回 朝夕食後 ３日分"
+    "question_text_original": "問 247（薬理）\n処方された薬物及び前問で挙げた薬物の作用機序として、正しいのはどれか。\nつ選べ。\n1 プロスタグランジン E の産生を抑制する。\n2 尿酸を酸化してアラントインと過酸化水素に分解する。\n3 代謝物のオキシプリノール（アロキサンチン）がキサンチンオキシダーゼを阻\n害する。\n4 腎臓の尿細管において尿酸トランスポーターを阻害する。\n5 Ｔ細胞のチューブリンに結合し、微小管の脱重合を抑制して安定化する。\n⎜ 2⎜\n問 248‑249 26歳女性。妊娠 30週。妊娠高血圧症候群で経過観察中、切迫早産のため\n入院し、以下が処方された。\n(処方１）\nリトドリン塩酸塩注射液（50mg/アンプル   １本）   50mg\n10％マルトース注射液                   500mL\n30mL/h で点滴静注\n(処方２）\nメチルドパ錠 250mg                  １回１錠（１日２錠）\n１日２回 朝夕食後 ３日分",
+    "question_concepts": [
+      "痛風治療薬",
+      "作用機序",
+      "薬理"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-246-247"
   },
   {
     "id": "r102-248",
@@ -7714,13 +10264,66 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬理",
     "category": "",
-    "question_text": "問 249（薬理）\n処方 2の作用機序に関する記述として正しいのはどれか。   つ選べ。",
-    "choices": [],
+    "question_text": "処方2の作用機序に関する記述として正しいのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "アドレナリンβ1受容体を選択的に遮断することにより、心拍出量を減少させる。",
+        "semantic_labels": [
+          "β1受容体遮断",
+          "心拍出量減少"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "エンドセリンETA受容体を遮断することにより、血管平滑筋を弛緩させる。",
+        "semantic_labels": [
+          "ETA受容体遮断",
+          "血管弛緩"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "アドレナリンα1受容体を選択的に遮断することにより、血管平滑筋を弛緩させる。",
+        "semantic_labels": [
+          "α1受容体遮断",
+          "血管弛緩"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "中枢性のアドレナリンα2受容体を刺激することにより、交感神経活性を低下させる。",
+        "semantic_labels": [
+          "α2受容体刺激",
+          "交感神経抑制"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "ドパミンに変換されてドパミンD2受容体を刺激することにより、交感神経活性を低下させる。",
+        "semantic_labels": [
+          "ドパミンD2受容体刺激",
+          "交感神経抑制"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q249.png",
-    "question_text_original": "問 249（薬理）\n処方 2の作用機序に関する記述として正しいのはどれか。   つ選べ。\n1 アドレナリン β 受容体を選択的に遮断することにより、心拍出量を減少させ\nる。\n2 エンドセリン ET 受容体を遮断することにより、血管平滑筋を弛緩させる。\n3 アドレナリン α 受容体を選択的に遮断することにより、血管平滑筋を弛緩さ\nせる。\n4 中枢性のアドレナリン α 受容体を刺激することにより、交感神経活性を低下\nさせる。\n5 ドパミンに変換されてドパミン D 受容体を刺激することにより、交感神経活\n性を低下させる。\n⎜ 4⎜\n問 250‑251 72歳男性。腎実質性高血圧症で循環器内科を受診し、以下の処方箋を持っ\nて薬局を訪れた。\n循環器内科\n(処方１）\nエホニジピン塩酸塩エタノール付加物錠 20mg １回１錠（１日１錠）\nイミダプリル塩酸塩錠 5mg             １回１錠（１日１錠）\n１日１回 朝食後 28日分\nお薬手帳で併用薬を確認したところ、他の医療機関（消化器内科）で処方された以\n下の薬を服用中であった。患者は消化器内科の薬について、循環器内科の医師に伝\nえていないとのことであった。薬剤師として処方医（循環器内科）に併用薬の情報\n提供と処方内容の確認が必要と考えた。\n消化器内科\n(処方２）\nラニチジン錠 75mg                １回１錠（１日２錠）\n１日２回   朝食後、就寝前   28日分\n(処方３）\nテルミサルタン錠 40mg              １回１錠（１日１錠）\n１日１回 朝食後 28日分"
+    "question_text_original": "問 249（薬理）\n処方 2の作用機序に関する記述として正しいのはどれか。   つ選べ。\n1 アドレナリン β 受容体を選択的に遮断することにより、心拍出量を減少させ\nる。\n2 エンドセリン ET 受容体を遮断することにより、血管平滑筋を弛緩させる。\n3 アドレナリン α 受容体を選択的に遮断することにより、血管平滑筋を弛緩さ\nせる。\n4 中枢性のアドレナリン α 受容体を刺激することにより、交感神経活性を低下\nさせる。\n5 ドパミンに変換されてドパミン D 受容体を刺激することにより、交感神経活\n性を低下させる。\n⎜ 4⎜\n問 250‑251 72歳男性。腎実質性高血圧症で循環器内科を受診し、以下の処方箋を持っ\nて薬局を訪れた。\n循環器内科\n(処方１）\nエホニジピン塩酸塩エタノール付加物錠 20mg １回１錠（１日１錠）\nイミダプリル塩酸塩錠 5mg             １回１錠（１日１錠）\n１日１回 朝食後 28日分\nお薬手帳で併用薬を確認したところ、他の医療機関（消化器内科）で処方された以\n下の薬を服用中であった。患者は消化器内科の薬について、循環器内科の医師に伝\nえていないとのことであった。薬剤師として処方医（循環器内科）に併用薬の情報\n提供と処方内容の確認が必要と考えた。\n消化器内科\n(処方２）\nラニチジン錠 75mg                １回１錠（１日２錠）\n１日２回   朝食後、就寝前   28日分\n(処方３）\nテルミサルタン錠 40mg              １回１錠（１日１錠）\n１日１回 朝食後 28日分",
+    "question_concepts": [
+      "降圧薬",
+      "作用機序",
+      "受容体"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-248-249"
   },
   {
     "id": "r102-250",
@@ -7763,13 +10366,65 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬理",
     "category": "",
-    "question_text": "問 251（薬理）\n前問の「生じる可能性が最も高い事象」の発現機序として正しいのはどれか。\nつ選べ。",
-    "choices": [],
+    "question_text": "前問の「生じる可能性が最も高い事象」の発現機序として正しいのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "L型Ca2+チャネル遮断",
+        "semantic_labels": [
+          "Caチャネル遮断",
+          "降圧作用"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "ドパミンD2受容体遮断",
+        "semantic_labels": [
+          "D2受容体遮断",
+          "制吐作用"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "ヒスタミンH2受容体遮断",
+        "semantic_labels": [
+          "H2受容体遮断",
+          "胃酸分泌抑制"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "アルドステロン分泌抑制",
+        "semantic_labels": [
+          "アルドステロン",
+          "分泌抑制"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "インスリン分泌抑制",
+        "semantic_labels": [
+          "インスリン",
+          "分泌抑制"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q251.png",
-    "question_text_original": "問 251（薬理）\n前問の「生じる可能性が最も高い事象」の発現機序として正しいのはどれか。\nつ選べ。\n1 L 型 Ca チャネル遮断\n2 ドパミン D 受容体遮断\n3 ヒスタミン H 受容体遮断\n4 アルドステロン分泌抑制\n5 インスリン分泌抑制\n⎜ 6⎜\n問 252‑253 20歳女性。統合失調症と診断され、３ヶ月間、薬物治療が継続されてい\nた。副作用は特にみられなかったが症状が改善されないため、主治医はクロルプロ\nマジン塩酸塩錠を１日 300mg から 450mg へ増量した。\n(処方）\nクロルプロマジン塩酸塩錠 100mg １回１錠（１日３錠）\nクロルプロマジン塩酸塩錠 50mg   １回１錠（１日３錠）\n１日３回   朝昼夕食後 14日分"
+    "question_text_original": "問 251（薬理）\n前問の「生じる可能性が最も高い事象」の発現機序として正しいのはどれか。\nつ選べ。\n1 L 型 Ca チャネル遮断\n2 ドパミン D 受容体遮断\n3 ヒスタミン H 受容体遮断\n4 アルドステロン分泌抑制\n5 インスリン分泌抑制\n⎜ 6⎜\n問 252‑253 20歳女性。統合失調症と診断され、３ヶ月間、薬物治療が継続されてい\nた。副作用は特にみられなかったが症状が改善されないため、主治医はクロルプロ\nマジン塩酸塩錠を１日 300mg から 450mg へ増量した。\n(処方）\nクロルプロマジン塩酸塩錠 100mg １回１錠（１日３錠）\nクロルプロマジン塩酸塩錠 50mg   １回１錠（１日３錠）\n１日３回   朝昼夕食後 14日分",
+    "question_concepts": [
+      "副作用発現機序",
+      "薬理"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-250-251"
   },
   {
     "id": "r102-252",
@@ -7812,13 +10467,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬理",
     "category": "",
-    "question_text": "問 253（薬理）\nこの処方が引き起こす可能性がある副作用について、その発現機序はどれか。\nつ選べ。",
-    "choices": [],
+    "question_text": "この処方が引き起こす可能性がある副作用について、その発現機序はどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "アンギオテンシンII AT1受容体遮断により歯肉肥厚が起こる。",
+        "semantic_labels": [
+          "AT1受容体遮断",
+          "歯肉肥厚"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "アセチルコリンM3受容体遮断により眼圧亢進が起こる。",
+        "semantic_labels": [
+          "M3受容体遮断",
+          "眼圧亢進"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "ヒスタミンH1受容体遮断により眠気が起こる。",
+        "semantic_labels": [
+          "H1受容体遮断",
+          "眠気"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "アドレナリンα1受容体遮断により錐体外路障害が起こる。",
+        "semantic_labels": [
+          "α1受容体遮断",
+          "錐体外路障害"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "ドパミンD2受容体遮断により起立性低血圧が起こる。",
+        "semantic_labels": [
+          "D2受容体遮断",
+          "起立性低血圧"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q253.png",
-    "question_text_original": "問 253（薬理）\nこの処方が引き起こす可能性がある副作用について、その発現機序はどれか。\nつ選べ。\n1 アンギオテンシン    AT 受容体遮断により歯肉肥厚が起こる。\n2 アセチルコリン M 受容体遮断により眼圧亢進が起こる。\n3 ヒスタミン H 受容体遮断により眠気が起こる。\n4 アドレナリン α 受容体遮断により錐体外路障害が起こる。\n5 ドパミン D 受容体遮断により起立性低血圧が起こる。\n⎜ 7⎜\n問 254‑255 68歳女性。脳   塞で１ヶ月間入院した後退院し、以下の処方箋を持って薬\n局を訪れた。\n(処方）\nクロピドグレル錠 75mg          １回１錠（１日１錠）\nエナラプリルマレイン酸塩錠 5mg １回１錠（１日１錠）\nラベプラゾール Na 錠 10mg      １回１錠（１日１錠）\nフェノフィブラート錠 80mg        １回２錠（１日２錠）\n１日１回   朝食後   28日分"
+    "question_text_original": "問 253（薬理）\nこの処方が引き起こす可能性がある副作用について、その発現機序はどれか。\nつ選べ。\n1 アンギオテンシン    AT 受容体遮断により歯肉肥厚が起こる。\n2 アセチルコリン M 受容体遮断により眼圧亢進が起こる。\n3 ヒスタミン H 受容体遮断により眠気が起こる。\n4 アドレナリン α 受容体遮断により錐体外路障害が起こる。\n5 ドパミン D 受容体遮断により起立性低血圧が起こる。\n⎜ 7⎜\n問 254‑255 68歳女性。脳   塞で１ヶ月間入院した後退院し、以下の処方箋を持って薬\n局を訪れた。\n(処方）\nクロピドグレル錠 75mg          １回１錠（１日１錠）\nエナラプリルマレイン酸塩錠 5mg １回１錠（１日１錠）\nラベプラゾール Na 錠 10mg      １回１錠（１日１錠）\nフェノフィブラート錠 80mg        １回２錠（１日２錠）\n１日１回   朝食後   28日分",
+    "question_concepts": [
+      "クロルプロマジン",
+      "副作用",
+      "発現機序"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-252-253",
+    "linked_scenario": "20歳女性。統合失調症と診断され、3ヶ月間、薬物治療が継続されていた。副作用は特にみられなかったが症状が改善されないため、主治医はクロルプロマジン塩酸塩錠を1日300mgから450mgへ増量した。処方：クロルプロマジン塩酸塩錠100mg 1回1錠（1日3錠）、クロルプロマジン塩酸塩錠50mg 1回1錠（1日3錠）、1日3回 朝昼夕食後 14日分。"
   },
   {
     "id": "r102-254",
@@ -7910,13 +10619,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬理",
     "category": "",
-    "question_text": "問 257（薬理）\n前問の「注意すべき副作用」の発現機序として誤っているのはどれか。",
-    "choices": [],
+    "question_text": "前問の「注意すべき副作用」の発現機序として誤っているのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "心臓におけるアドレナリンβ1受容体の刺激",
+        "semantic_labels": [
+          "β1受容体刺激",
+          "心臓"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "傍糸球体細胞におけるアドレナリンβ2受容体の刺激",
+        "semantic_labels": [
+          "β2受容体刺激",
+          "傍糸球体細胞"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "心臓におけるアセチルコリンM2受容体の遮断",
+        "semantic_labels": [
+          "M2受容体遮断",
+          "心臓"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "唾液腺におけるアセチルコリンM3受容体の遮断",
+        "semantic_labels": [
+          "M3受容体遮断",
+          "唾液腺"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "T細胞でのサイトカイン産生抑制による免疫抑制",
+        "semantic_labels": [
+          "サイトカイン産生抑制",
+          "免疫抑制"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q257.png",
-    "question_text_original": "問 257（薬理）\n前問の「注意すべき副作用」の発現機序として誤っているのはどれか。 つ選\nべ。\n1 心臓におけるアドレナリン β 受容体の刺激\n2 傍糸球体細胞におけるアドレナリン β 受容体の刺激\n3 心臓におけるアセチルコリン M 受容体の遮断\n4 唾液腺におけるアセチルコリン M 受容体の遮断\n5 Ｔ細胞でのサイトカイン産生抑制による免疫抑制\n⎜ 9⎜\n問 258‑259 36歳女性。乳がん手術後、以下の薬物療法が開始された。\n(処方）\n１）         Ａ       錠 10mg         １回２錠（１日２錠）\n１日１回朝食後 28日分\n２）         Ｂ       注射用 3.75mg 全１本\n１回 3.75mg ４週間ごとに１回 皮下注射\nこの処方の服薬指導として、                  Ａ     は、子宮体がんのリスクを上げるため、定\n期的な検査を行うよう患者に指導した。また、                      Ｂ   は、ほてりやのぼせ、抑\nうつなどの更年期症状がみられることがあると患者に説明した。"
+    "question_text_original": "問 257（薬理）\n前問の「注意すべき副作用」の発現機序として誤っているのはどれか。 つ選\nべ。\n1 心臓におけるアドレナリン β 受容体の刺激\n2 傍糸球体細胞におけるアドレナリン β 受容体の刺激\n3 心臓におけるアセチルコリン M 受容体の遮断\n4 唾液腺におけるアセチルコリン M 受容体の遮断\n5 Ｔ細胞でのサイトカイン産生抑制による免疫抑制\n⎜ 9⎜\n問 258‑259 36歳女性。乳がん手術後、以下の薬物療法が開始された。\n(処方）\n１）         Ａ       錠 10mg         １回２錠（１日２錠）\n１日１回朝食後 28日分\n２）         Ｂ       注射用 3.75mg 全１本\n１回 3.75mg ４週間ごとに１回 皮下注射\nこの処方の服薬指導として、                  Ａ     は、子宮体がんのリスクを上げるため、定\n期的な検査を行うよう患者に指導した。また、                      Ｂ   は、ほてりやのぼせ、抑\nうつなどの更年期症状がみられることがあると患者に説明した。",
+    "question_concepts": [
+      "COPD治療薬",
+      "副作用",
+      "発現機序"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-256-257",
+    "linked_scenario": "65歳男性。COPD（慢性閉塞性肺疾患）治療のため、以下の処方箋を持って薬局を訪れた。処方1：インダカテロールマレイン酸塩吸入用カプセル150μg 全28カプセル 1回1カプセル 1日1回 朝吸入。処方2：チオトロピウム臭化物水和物2.5μg吸入用カートリッジ60吸入 全1本 1回2吸入 1日1回 就寝前 吸入。"
   },
   {
     "id": "r102-258",
@@ -7959,13 +10722,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬理",
     "category": "",
-    "question_text": "問 259（薬理）\nＡ      の薬物の作用機序として正しいのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "Aの薬物の作用機序として正しいのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "乳腺のエストロゲン受容体（ER）を遮断する。",
+        "semantic_labels": [
+          "ER遮断",
+          "抗エストロゲン"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "ヒト上皮増殖因子受容体2型（HER2）を遮断する。",
+        "semantic_labels": [
+          "HER2遮断",
+          "分子標的"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "アロマターゼを阻害する。",
+        "semantic_labels": [
+          "アロマターゼ阻害",
+          "エストロゲン合成抑制"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "活性酸素を発生させ、DNA鎖を切断する。",
+        "semantic_labels": [
+          "活性酸素",
+          "DNA切断"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "ゴナドトロピン放出ホルモン（GnRH）受容体を刺激する。",
+        "semantic_labels": [
+          "GnRH受容体刺激",
+          "ホルモン療法"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q259.png",
-    "question_text_original": "問 259（薬理）\nＡ      の薬物の作用機序として正しいのはどれか。 つ選べ。\n1 乳腺のエストロゲン受容体（ER）を遮断する。\n2 ヒト上皮増殖因子受容体２型（HER2）を遮断する。\n3 アロマターゼを阻害する。\n4 活性酸素を発生させ、DNA 鎖を切断する。\n5 ゴナドトロピン放出ホルモン（GnRH）受容体を刺激する。\n⎜ 10⎜\n問 260‑261 38歳男性。急性リンパ性白血病と診断され、以下の化学療法が開始され\nた。\n(処方１）\n注射用シクロホスファミド水和物 1,200mg/m （無水物換算）\n３時間で点滴静注        Day1\n(処方２）\n注射用ダウノルビシン塩酸塩 60mg/m       １時間で点滴静注        Day1〜3\n(処方３）\n注射用ビンクリスチン硫酸塩 1.3mg/m      静注   Day1,8,15,22\n(処方４）\n注射用アスパラギナーゼ 3,000U/m\n３時間で点滴静注   Day9,11,13,16,18,20\n(処方５）\nプレドニゾロン錠 60mg/m            分２ 経口 Day1〜21"
+    "question_text_original": "問 259（薬理）\nＡ      の薬物の作用機序として正しいのはどれか。 つ選べ。\n1 乳腺のエストロゲン受容体（ER）を遮断する。\n2 ヒト上皮増殖因子受容体２型（HER2）を遮断する。\n3 アロマターゼを阻害する。\n4 活性酸素を発生させ、DNA 鎖を切断する。\n5 ゴナドトロピン放出ホルモン（GnRH）受容体を刺激する。\n⎜ 10⎜\n問 260‑261 38歳男性。急性リンパ性白血病と診断され、以下の化学療法が開始され\nた。\n(処方１）\n注射用シクロホスファミド水和物 1,200mg/m （無水物換算）\n３時間で点滴静注        Day1\n(処方２）\n注射用ダウノルビシン塩酸塩 60mg/m       １時間で点滴静注        Day1〜3\n(処方３）\n注射用ビンクリスチン硫酸塩 1.3mg/m      静注   Day1,8,15,22\n(処方４）\n注射用アスパラギナーゼ 3,000U/m\n３時間で点滴静注   Day9,11,13,16,18,20\n(処方５）\nプレドニゾロン錠 60mg/m            分２ 経口 Day1〜21",
+    "question_concepts": [
+      "乳がん治療薬",
+      "作用機序",
+      "抗がん剤"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-258-259",
+    "linked_scenario": "36歳女性。乳がん手術後、以下の薬物療法が開始された。処方：1) A錠10mg 1回2錠（1日2錠）1日1回朝食後 28日分、2) B注射用3.75mg 全1本 1回3.75mg 4週間ごとに1回 皮下注射。この処方の服薬指導として、Aは子宮体がんのリスクを上げるため定期的な検査を行うよう患者に指導した。また、Bはほてりやのぼせ、抑うつなどの更年期症状がみられることがあると患者に説明した。"
   },
   {
     "id": "r102-260",
@@ -8008,13 +10825,66 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬理",
     "category": "",
-    "question_text": "問 261（薬理）\n前問の支持療法に用いる薬物の作用機序で、正しいのはどれか。   つ選べ。",
-    "choices": [],
+    "question_text": "前問の支持療法に用いる薬物の作用機序で、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "尿酸トランスポーターを阻害する。",
+        "semantic_labels": [
+          "尿酸トランスポーター阻害",
+          "高尿酸血症治療"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "DNAをアルキル化し、DNA合成を阻害する。",
+        "semantic_labels": [
+          "DNAアルキル化",
+          "抗がん剤"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "セロトニン5-HT3受容体を遮断する。",
+        "semantic_labels": [
+          "5-HT3受容体遮断",
+          "制吐薬"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "G-CSF（顆粒球コロニー刺激因子）受容体を刺激する。",
+        "semantic_labels": [
+          "G-CSF",
+          "好中球増加"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "PPARγ（ペルオキシソーム増殖剤応答性受容体γ）を阻害する。",
+        "semantic_labels": [
+          "PPARγ阻害",
+          "ペルオキシソーム"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q261.png",
-    "question_text_original": "問 261（薬理）\n前問の支持療法に用いる薬物の作用機序で、正しいのはどれか。   つ選べ。\n1 尿酸トランスポーターを阻害する。\n2 DNA をアルキル化し、DNA 合成を阻害する。\n3 セロトニン 5‑HT 受容体を遮断する。\n4 G‑CSF（顆粒球コロニー刺激因子）受容体を刺激する。\n5 PPARγ（ペルオキシソーム増殖剤応答性受容体 γ）を阻害する。\n⎜ 12⎜\n問 262‑263 50歳女性。発熱、咽頭痛を主訴として受診し、入院することとなった。入\n院時に薬剤師が持参薬を確認したところ、下記の薬剤を服用していることが分かっ\nた。服薬コンプライアンスは良好であった。\n入院時検査値：体温 38.7℃、血圧 108/72mmHg、赤血球数 180× 10/μL、\n白血球数 2,200/μL、血小板 3× 10/μL、\n血清クレアチニン値 0.7mg/dL、BUN 18mg/dL、\nAST 25IU/L、ALT 30IU/L、空腹時血糖値 96mg/dL、\nNa 140mEq/L、K 4.2mEq/L、M g 2mEq/L、\n胸部Ｘ線検査では肺に異常所見なし。\n持参薬の内容\n(薬袋１）\nリセドロン酸 Na 錠 17.5mg     １回１錠（１日１錠）\n毎週月曜日１日１回 朝起床時          ２日分\n（投与実日数）\n(薬袋２）\nプレドニゾロン錠 5mg           １回半錠（１日半錠）\n１日１回    朝食後 14日分\n(薬袋３）\nメトトレキサートカプセル 2mg       １回４カプセル（１日８カプセル）\n毎週月曜日１日２回 朝夕食後          ２日分\n（投与実日数）\n(薬袋４）\n酪酸菌錠（宮入菌として）20mg １回１錠（１日３錠）\nスクラルファート細粒 90％         １回 1g（１日 3g）\n１日３回    朝昼夕食後    14日分\n⎜ 13⎜"
+    "question_text_original": "問 261（薬理）\n前問の支持療法に用いる薬物の作用機序で、正しいのはどれか。   つ選べ。\n1 尿酸トランスポーターを阻害する。\n2 DNA をアルキル化し、DNA 合成を阻害する。\n3 セロトニン 5‑HT 受容体を遮断する。\n4 G‑CSF（顆粒球コロニー刺激因子）受容体を刺激する。\n5 PPARγ（ペルオキシソーム増殖剤応答性受容体 γ）を阻害する。\n⎜ 12⎜\n問 262‑263 50歳女性。発熱、咽頭痛を主訴として受診し、入院することとなった。入\n院時に薬剤師が持参薬を確認したところ、下記の薬剤を服用していることが分かっ\nた。服薬コンプライアンスは良好であった。\n入院時検査値：体温 38.7℃、血圧 108/72mmHg、赤血球数 180× 10/μL、\n白血球数 2,200/μL、血小板 3× 10/μL、\n血清クレアチニン値 0.7mg/dL、BUN 18mg/dL、\nAST 25IU/L、ALT 30IU/L、空腹時血糖値 96mg/dL、\nNa 140mEq/L、K 4.2mEq/L、M g 2mEq/L、\n胸部Ｘ線検査では肺に異常所見なし。\n持参薬の内容\n(薬袋１）\nリセドロン酸 Na 錠 17.5mg     １回１錠（１日１錠）\n毎週月曜日１日１回 朝起床時          ２日分\n（投与実日数）\n(薬袋２）\nプレドニゾロン錠 5mg           １回半錠（１日半錠）\n１日１回    朝食後 14日分\n(薬袋３）\nメトトレキサートカプセル 2mg       １回４カプセル（１日８カプセル）\n毎週月曜日１日２回 朝夕食後          ２日分\n（投与実日数）\n(薬袋４）\n酪酸菌錠（宮入菌として）20mg １回１錠（１日３錠）\nスクラルファート細粒 90％         １回 1g（１日 3g）\n１日３回    朝昼夕食後    14日分\n⎜ 13⎜",
+    "question_concepts": [
+      "支持療法",
+      "抗がん剤",
+      "作用機序"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-260-261"
   },
   {
     "id": "r102-262",
@@ -8057,13 +10927,66 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬理",
     "category": "",
-    "question_text": "問 263（薬理）\n前問の「原因となった可能性の高い持参薬」の標的分子として正しいのはどれ\nか。   つ選べ。",
-    "choices": [],
+    "question_text": "前問の「原因となった可能性の高い持参薬」の標的分子として正しいのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "グルココルチコイド受容体",
+        "semantic_labels": [
+          "グルココルチコイド受容体",
+          "ステロイド"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "シクロオキシゲナーゼ",
+        "semantic_labels": [
+          "COX",
+          "NSAIDs"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "カルシニューリン",
+        "semantic_labels": [
+          "カルシニューリン",
+          "免疫抑制"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "ジヒドロ葉酸還元酵素",
+        "semantic_labels": [
+          "DHFR",
+          "メトトレキサート"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "ファルネシルピロリン酸合成酵素",
+        "semantic_labels": [
+          "ファルネシルピロリン酸合成酵素",
+          "ビスホスホネート"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q263.png",
-    "question_text_original": "問 263（薬理）\n前問の「原因となった可能性の高い持参薬」の標的分子として正しいのはどれ\nか。   つ選べ。\n1 グルココルチコイド受容体\n2 シクロオキシゲナーゼ\n3 カルシニューリン\n4 ジヒドロ葉酸還元酵素\n5 ファルネシルピロリン酸合成酵素\n⎜ 14⎜\n問 264‑267 58歳男性。手術不能の直腸がんと診断され、以下に示すレジメンに従った\n化学療法を施行することとなった。\n（レジメン）\n１日目   ２日目     ３日目\nベバシズマブ     5mg/kg （90分で点滴静注)        ↓\nイリノテカン塩酸塩水和物       150mg/m\n↓\n（120分で点滴静注)\nレボホリナートカルシウム       200mg/m\n↓\n（120分で点滴静注)\nフルオロウラシル     400mg/m     （５分で静注)    ↓\nフルオロウラシル     2,400mg/m\n→     →       →\n（46時間で持続静注)\n(持続静注終了)\n２週間を１クールとする"
+    "question_text_original": "問 263（薬理）\n前問の「原因となった可能性の高い持参薬」の標的分子として正しいのはどれ\nか。   つ選べ。\n1 グルココルチコイド受容体\n2 シクロオキシゲナーゼ\n3 カルシニューリン\n4 ジヒドロ葉酸還元酵素\n5 ファルネシルピロリン酸合成酵素\n⎜ 14⎜\n問 264‑267 58歳男性。手術不能の直腸がんと診断され、以下に示すレジメンに従った\n化学療法を施行することとなった。\n（レジメン）\n１日目   ２日目     ３日目\nベバシズマブ     5mg/kg （90分で点滴静注)        ↓\nイリノテカン塩酸塩水和物       150mg/m\n↓\n（120分で点滴静注)\nレボホリナートカルシウム       200mg/m\n↓\n（120分で点滴静注)\nフルオロウラシル     400mg/m     （５分で静注)    ↓\nフルオロウラシル     2,400mg/m\n→     →       →\n（46時間で持続静注)\n(持続静注終了)\n２週間を１クールとする",
+    "question_concepts": [
+      "副作用原因薬",
+      "標的分子",
+      "薬理"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-262-263"
   },
   {
     "id": "r102-264",
@@ -8102,13 +11025,66 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "実務",
     "category": "",
-    "question_text": "問 265（実務）\n薬剤師による初回面談の際に説明すべき処方薬の副作用として適切なのはどれ\nか。   つ選べ。",
-    "choices": [],
+    "question_text": "薬剤師による初回面談の際に説明すべき処方薬の副作用として適切なのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "高血圧",
+        "semantic_labels": [
+          "高血圧",
+          "副作用"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "ざ瘡様皮疹",
+        "semantic_labels": [
+          "ざ瘡様皮疹",
+          "副作用"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "下痢",
+        "semantic_labels": [
+          "下痢",
+          "副作用"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "認知機能障害",
+        "semantic_labels": [
+          "認知機能障害",
+          "副作用"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "高血糖",
+        "semantic_labels": [
+          "高血糖",
+          "副作用"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q265.png",
-    "question_text_original": "問 265（実務）\n薬剤師による初回面談の際に説明すべき処方薬の副作用として適切なのはどれ\nか。   つ選べ。\n1 高血圧\n2 ざ瘡様皮疹\n3 下痢\n4 認知機能障害\n5 高血糖"
+    "question_text_original": "問 265（実務）\n薬剤師による初回面談の際に説明すべき処方薬の副作用として適切なのはどれ\nか。   つ選べ。\n1 高血圧\n2 ざ瘡様皮疹\n3 下痢\n4 認知機能障害\n5 高血糖",
+    "question_concepts": [
+      "初回面談",
+      "副作用説明",
+      "処方薬"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-264-265-266-267"
   },
   {
     "id": "r102-266",
@@ -8117,13 +11093,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬剤",
     "category": "",
-    "question_text": "問 266（薬剤）\n患者の検査値を確認したところ、血中間接ビリルビン値が 2.8mg/dL と高値を\n示すが、直接ビリルビン値は正常範囲内であった。患者と面談したところ、以前他\n院にて体質性黄疸と診断されたが、特に治療は行っていないことが判明した。処方\n薬の副作用を予測するために、推奨すべき遺伝子診断の対象となる遺伝子はどれ\nか。   つ選べ。",
-    "choices": [],
+    "question_text": "患者の検査値を確認したところ、血中間接ビリルビン値が2.8mg/dLと高値を示すが、直接ビリルビン値は正常範囲内であった。患者と面談したところ、以前他院にて体質性黄疸と診断されたが、特に治療は行っていないことが判明した。処方薬の副作用を予測するために、推奨すべき遺伝子診断の対象となる遺伝子はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "ALDH2",
+        "semantic_labels": [
+          "ALDH2",
+          "アルデヒド脱水素酵素"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "CYP2C19",
+        "semantic_labels": [
+          "CYP2C19",
+          "薬物代謝酵素"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "CYP2D6",
+        "semantic_labels": [
+          "CYP2D6",
+          "薬物代謝酵素"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "NAT2",
+        "semantic_labels": [
+          "NAT2",
+          "アセチル化酵素"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "UGT1A1",
+        "semantic_labels": [
+          "UGT1A1",
+          "グルクロン酸転移酵素"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q266.png",
-    "question_text_original": "問 266（薬剤）\n患者の検査値を確認したところ、血中間接ビリルビン値が 2.8mg/dL と高値を\n示すが、直接ビリルビン値は正常範囲内であった。患者と面談したところ、以前他\n院にて体質性黄疸と診断されたが、特に治療は行っていないことが判明した。処方\n薬の副作用を予測するために、推奨すべき遺伝子診断の対象となる遺伝子はどれ\nか。   つ選べ。\n1 ALDH2\n2 CYP2C19\n3 CYP2D6\n4 NAT2\n5 UGT1A1"
+    "question_text_original": "問 266（薬剤）\n患者の検査値を確認したところ、血中間接ビリルビン値が 2.8mg/dL と高値を\n示すが、直接ビリルビン値は正常範囲内であった。患者と面談したところ、以前他\n院にて体質性黄疸と診断されたが、特に治療は行っていないことが判明した。処方\n薬の副作用を予測するために、推奨すべき遺伝子診断の対象となる遺伝子はどれ\nか。   つ選べ。\n1 ALDH2\n2 CYP2C19\n3 CYP2D6\n4 NAT2\n5 UGT1A1",
+    "question_concepts": [
+      "遺伝子診断",
+      "体質性黄疸",
+      "UGT1A1",
+      "ビリルビン"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-264-265-266-267"
   },
   {
     "id": "r102-267",
@@ -8132,13 +11162,75 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "実務",
     "category": "",
-    "question_text": "問 267（実務）\n前問の遺伝子診断の結果、酵素活性の低下を伴う遺伝子型であることが判明し\nた。この患者の治療上、注意すべき内容として最も適切なのはどれか。    つ選べ。",
-    "choices": [],
+    "question_text": "前問の遺伝子診断の結果、酵素活性の低下を伴う遺伝子型であることが判明した。この患者の治療上、注意すべき内容として最も適切なのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "ベバシズマブの薬効減弱",
+        "semantic_labels": [
+          "ベバシズマブ",
+          "薬効減弱"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "ベバシズマブの副作用発現",
+        "semantic_labels": [
+          "ベバシズマブ",
+          "副作用"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "イリノテカンの薬効減弱",
+        "semantic_labels": [
+          "イリノテカン",
+          "薬効減弱"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "イリノテカンの副作用発現",
+        "semantic_labels": [
+          "イリノテカン",
+          "副作用"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "フルオロウラシルの薬効減弱",
+        "semantic_labels": [
+          "フルオロウラシル",
+          "薬効減弱"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 6,
+        "text": "フルオロウラシルの副作用発現",
+        "semantic_labels": [
+          "フルオロウラシル",
+          "副作用"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q267.png",
-    "question_text_original": "問 267（実務）\n前問の遺伝子診断の結果、酵素活性の低下を伴う遺伝子型であることが判明し\nた。この患者の治療上、注意すべき内容として最も適切なのはどれか。    つ選べ。\n1 ベバシズマブの薬効減弱\n2 ベバシズマブの副作用発現\n3 イリノテカンの薬効減弱\n4 イリノテカンの副作用発現\n5 フルオロウラシルの薬効減弱\n6 フルオロウラシルの副作用発現\n⎜ 16⎜\n問 268‑269 40歳女性。卵巣がんを原発とした多発性骨転移による疼痛があり、以下の\n処方が出されている。疼痛コントロールは良好であったが、２日前から、突然に我\n慢できない痛みが１日２〜３回程度出現するようになった。主治医よりレスキュー\n薬の問い合わせがあった。\n(処方）\nオキシコドン塩酸塩水和物徐放錠 40mg １回１錠（１日２錠）\n１日２回    朝夕食後   14日分"
+    "question_text_original": "問 267（実務）\n前問の遺伝子診断の結果、酵素活性の低下を伴う遺伝子型であることが判明し\nた。この患者の治療上、注意すべき内容として最も適切なのはどれか。    つ選べ。\n1 ベバシズマブの薬効減弱\n2 ベバシズマブの副作用発現\n3 イリノテカンの薬効減弱\n4 イリノテカンの副作用発現\n5 フルオロウラシルの薬効減弱\n6 フルオロウラシルの副作用発現\n⎜ 16⎜\n問 268‑269 40歳女性。卵巣がんを原発とした多発性骨転移による疼痛があり、以下の\n処方が出されている。疼痛コントロールは良好であったが、２日前から、突然に我\n慢できない痛みが１日２〜３回程度出現するようになった。主治医よりレスキュー\n薬の問い合わせがあった。\n(処方）\nオキシコドン塩酸塩水和物徐放錠 40mg １回１錠（１日２錠）\n１日２回    朝夕食後   14日分",
+    "question_concepts": [
+      "遺伝子診断",
+      "酵素活性低下",
+      "副作用注意"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-264-265-266-267"
   },
   {
     "id": "r102-268",
@@ -8147,13 +11239,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "実務",
     "category": "",
-    "question_text": "問 268（実務）\n医師に提案する薬剤とその１回用量の組合せとして適切なのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "医師に提案する薬剤とその1回用量の組合せとして適切なのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "オキシコドン塩酸塩水和物徐放錠 40mg",
+        "semantic_labels": [
+          "オキシコドン徐放錠",
+          "用量"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "オキシコドン塩酸塩水和物散 60mg",
+        "semantic_labels": [
+          "オキシコドン散",
+          "用量"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "モルヒネ硫酸塩水和物徐放錠 120mg",
+        "semantic_labels": [
+          "モルヒネ徐放錠",
+          "用量"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "フェンタニルクエン酸塩舌下錠 100μg",
+        "semantic_labels": [
+          "フェンタニル舌下錠",
+          "用量"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "フェンタニルクエン酸塩経皮吸収型製剤 6mg",
+        "semantic_labels": [
+          "フェンタニル経皮",
+          "用量"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q268.png",
-    "question_text_original": "問 268（実務）\n医師に提案する薬剤とその１回用量の組合せとして適切なのはどれか。 つ選べ。\n薬剤            用量【原薬量】\n1 オキシコドン塩酸塩水和物徐放錠          40mg\n2 オキシコドン塩酸塩水和物散            60mg\n3 モルヒネ硫酸塩水和物徐放錠            120mg\n4 フェンタニルクエン酸塩舌下錠           100μg\n5 フェンタニルクエン酸塩経皮吸収型製剤           6mg"
+    "question_text_original": "問 268（実務）\n医師に提案する薬剤とその１回用量の組合せとして適切なのはどれか。 つ選べ。\n薬剤            用量【原薬量】\n1 オキシコドン塩酸塩水和物徐放錠          40mg\n2 オキシコドン塩酸塩水和物散            60mg\n3 モルヒネ硫酸塩水和物徐放錠            120mg\n4 フェンタニルクエン酸塩舌下錠           100μg\n5 フェンタニルクエン酸塩経皮吸収型製剤           6mg",
+    "question_concepts": [
+      "レスキュー薬",
+      "オピオイド換算",
+      "疼痛管理"
+    ],
+    "visual_content_type": "table",
+    "linked_group": "r102-268-269",
+    "linked_scenario": "40歳女性。卵巣がんを原発とした多発性骨転移による疼痛があり、以下の処方が出されている。疼痛コントロールは良好であったが、2日前から、突然に我慢できない痛みが1日2〜3回程度出現するようになった。主治医よりレスキュー薬の問い合わせがあった。処方：オキシコドン塩酸塩水和物徐放錠40mg 1回1錠（1日2錠）1日2回 朝夕食後 14日分。"
   },
   {
     "id": "r102-269",
@@ -8162,13 +11308,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬剤",
     "category": "",
-    "question_text": "問 269（薬剤）\nオキシコドンの体内動態に関する記述のうち、正しいのはどれか。            つ選べ。",
-    "choices": [],
+    "question_text": "オキシコドンの体内動態に関する記述のうち、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "オキシコドン塩酸塩水和物徐放錠は、肝初回通過効果の回避を目的とした製剤であり、薬物は主に直腸から吸収される。",
+        "semantic_labels": [
+          "徐放錠",
+          "肝初回通過効果"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "オキシコドンは水溶性が高く、主に能動輸送により消化管から吸収される。",
+        "semantic_labels": [
+          "水溶性",
+          "能動輸送"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "母乳のpHは、一般に血漿pHと比較して酸性側にあるため、弱塩基性薬物であるオキシコドンは母乳中に移行しやすい。",
+        "semantic_labels": [
+          "母乳移行",
+          "弱塩基性"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "オキシコドンは、大部分が肝代謝により消失するため、健常人に比べ肝障害のある患者では血中濃度時間曲線下面積が増大する。",
+        "semantic_labels": [
+          "肝代謝",
+          "AUC増大"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "オキシコドンは、臨床用量の範囲において投与量と血中濃度の関係が非線形性を示すため、治療薬物モニタリング（TDM）を行うことが推奨される。",
+        "semantic_labels": [
+          "非線形性",
+          "TDM"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q269.png",
-    "question_text_original": "問 269（薬剤）\nオキシコドンの体内動態に関する記述のうち、正しいのはどれか。            つ選べ。\n1 オキシコドン塩酸塩水和物徐放錠は、肝初回通過効果の回避を目的とした製剤\nであり、薬物は主に直腸から吸収される。\n2 オキシコドンは水溶性が高く、主に能動輸送により消化管から吸収される。\n3 母乳の pH は、一般に血漿 pH と比   して酸性側にあるため、弱塩基性薬物で\nあるオキシコドンは母乳中に移行しやすい。\n4 オキシコドンは、大部分が肝代謝により消失するため、健常人に比べ肝障害の\nある患者では血中濃度時間曲線下面積が増大する。\n5 オキシコドンは、臨床用量の範囲において投与量と血中濃度の関係が非線形性\nを示すため、治療薬物モニタリング（TDM ）を行うことが推奨される。\n⎜ 17⎜\n問 270‑271 76歳男性。１年ほど前から安静時に手足の震えや硬直が認められ、パーキ\nンソン病と診断された。現在までレボドパ・ベンセラジド配合錠が処方され、症状\nは改善されている。"
+    "question_text_original": "問 269（薬剤）\nオキシコドンの体内動態に関する記述のうち、正しいのはどれか。            つ選べ。\n1 オキシコドン塩酸塩水和物徐放錠は、肝初回通過効果の回避を目的とした製剤\nであり、薬物は主に直腸から吸収される。\n2 オキシコドンは水溶性が高く、主に能動輸送により消化管から吸収される。\n3 母乳の pH は、一般に血漿 pH と比   して酸性側にあるため、弱塩基性薬物で\nあるオキシコドンは母乳中に移行しやすい。\n4 オキシコドンは、大部分が肝代謝により消失するため、健常人に比べ肝障害の\nある患者では血中濃度時間曲線下面積が増大する。\n5 オキシコドンは、臨床用量の範囲において投与量と血中濃度の関係が非線形性\nを示すため、治療薬物モニタリング（TDM ）を行うことが推奨される。\n⎜ 17⎜\n問 270‑271 76歳男性。１年ほど前から安静時に手足の震えや硬直が認められ、パーキ\nンソン病と診断された。現在までレボドパ・ベンセラジド配合錠が処方され、症状\nは改善されている。",
+    "question_concepts": [
+      "オキシコドン",
+      "体内動態",
+      "薬物動態"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-268-269",
+    "linked_scenario": "40歳女性。卵巣がんを原発とした多発性骨転移による疼痛があり、以下の処方が出されている。疼痛コントロールは良好であったが、2日前から、突然に我慢できない痛みが1日2〜3回程度出現するようになった。主治医よりレスキュー薬の問い合わせがあった。処方：オキシコドン塩酸塩水和物徐放錠40mg 1回1錠（1日2錠）1日2回 朝夕食後 14日分。"
   },
   {
     "id": "r102-270",
@@ -8211,13 +11411,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "実務",
     "category": "",
-    "question_text": "問 271（実務）\n３日前より尿が出にくいという症状が現れたため、泌尿器科を受診し、神経因性\n膀胱による排尿困難と診断された。本患者に適切でない薬剤はどれか。     つ選べ。",
-    "choices": [],
+    "question_text": "3日前より尿が出にくいという症状が現れたため、泌尿器科を受診し、神経因性膀胱による排尿困難と診断された。本患者に適切でない薬剤はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "ウラピジル",
+        "semantic_labels": [
+          "ウラピジル",
+          "α1遮断薬"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "タムスロシン塩酸塩",
+        "semantic_labels": [
+          "タムスロシン",
+          "α1A遮断薬"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "ナフトピジル",
+        "semantic_labels": [
+          "ナフトピジル",
+          "α1D遮断薬"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "プラゾシン塩酸塩",
+        "semantic_labels": [
+          "プラゾシン",
+          "α1遮断薬"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "ベタネコール塩化物",
+        "semantic_labels": [
+          "ベタネコール",
+          "コリン作動薬"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 5,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q271.png",
-    "question_text_original": "問 271（実務）\n３日前より尿が出にくいという症状が現れたため、泌尿器科を受診し、神経因性\n膀胱による排尿困難と診断された。本患者に適切でない薬剤はどれか。     つ選べ。\n1 ウラピジル\n2 タムスロシン塩酸塩\n3 ナフトピジル\n4 プラゾシン塩酸塩\n5 ベタネコール塩化物\n⎜ 18⎜\n問 272‑273 30歳女性。排尿痛、頻尿の症状があり、近医を受診した。急性単純性膀胱\n炎と診断され、以下の処方箋を薬局に持参した。薬歴を確認すると、同一の医師よ\nり消化性潰瘍治療のためスクラルファート細粒 90％の処方があり、毎食後に服用\n中であった。\n(処方）\nシプロフロキサシン錠 100mg １回１錠（１日２錠）\n１日２回 朝夕食後   14日分"
+    "question_text_original": "問 271（実務）\n３日前より尿が出にくいという症状が現れたため、泌尿器科を受診し、神経因性\n膀胱による排尿困難と診断された。本患者に適切でない薬剤はどれか。     つ選べ。\n1 ウラピジル\n2 タムスロシン塩酸塩\n3 ナフトピジル\n4 プラゾシン塩酸塩\n5 ベタネコール塩化物\n⎜ 18⎜\n問 272‑273 30歳女性。排尿痛、頻尿の症状があり、近医を受診した。急性単純性膀胱\n炎と診断され、以下の処方箋を薬局に持参した。薬歴を確認すると、同一の医師よ\nり消化性潰瘍治療のためスクラルファート細粒 90％の処方があり、毎食後に服用\n中であった。\n(処方）\nシプロフロキサシン錠 100mg １回１錠（１日２錠）\n１日２回 朝夕食後   14日分",
+    "question_concepts": [
+      "排尿困難",
+      "神経因性膀胱",
+      "パーキンソン病"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-270-271",
+    "linked_scenario": "76歳男性。1年ほど前から安静時に手足の震えや硬直が認められ、パーキンソン病と診断された。現在までレボドパ・ベンセラジド配合錠が処方され、症状は改善されている。"
   },
   {
     "id": "r102-272",
@@ -8260,13 +11514,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬剤",
     "category": "",
-    "question_text": "問 273（薬剤）\n前問での提案の理由となるシプロフロキサシンとスクラルファートの相互作用の\n機序として、最も適切なのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "前問での提案の理由となるシプロフロキサシンとスクラルファートの相互作用の機序として、最も適切なのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "胃内pHの変化に伴う溶解性の低下",
+        "semantic_labels": [
+          "pH変化",
+          "溶解性低下"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "消化管内における難溶性キレートの形成",
+        "semantic_labels": [
+          "キレート形成",
+          "吸収低下"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "消化管吸収に関わるトランスポーターの阻害",
+        "semantic_labels": [
+          "トランスポーター阻害",
+          "吸収阻害"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "血漿タンパク結合の阻害",
+        "semantic_labels": [
+          "タンパク結合阻害",
+          "遊離型増加"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "腎尿細管における再吸収の阻害",
+        "semantic_labels": [
+          "尿細管再吸収",
+          "排泄促進"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q273.png",
-    "question_text_original": "問 273（薬剤）\n前問での提案の理由となるシプロフロキサシンとスクラルファートの相互作用の\n機序として、最も適切なのはどれか。 つ選べ。\n1 胃内 pH の変化に伴う溶解性の低下\n2 消化管内における難溶性キレートの形成\n3 消化管吸収に関わるトランスポーターの阻害\n4 血漿タンパク結合の阻害\n5 腎尿細管における再吸収の阻害\n⎜ 20⎜\n問 274‑275 73歳男性。体重 60kg。メチシリン耐性黄色ブドウ球菌（M RSA）肺炎の\n治療目的でアルベカシン硫酸塩の投与が開始された。\n(処方）\n点滴静注      アルベカシン硫酸塩注射液                150mg\n生理食塩液                       100mL\n１日１回   30分かけて投与    ７日連日投与\n投与開始から３日目に血中アルベカシン濃度の測定依頼があり、測定の結果、トラ\nフ値は 3.5μg/mL、ピーク値（点滴終了 30分後採血）は 15μg/mL であった。\n検査値（３日目）\n：白血球数 9,500/μL、CRP 4.8mg/dL、\n血清クレアチニン 2.84mg/dL"
+    "question_text_original": "問 273（薬剤）\n前問での提案の理由となるシプロフロキサシンとスクラルファートの相互作用の\n機序として、最も適切なのはどれか。 つ選べ。\n1 胃内 pH の変化に伴う溶解性の低下\n2 消化管内における難溶性キレートの形成\n3 消化管吸収に関わるトランスポーターの阻害\n4 血漿タンパク結合の阻害\n5 腎尿細管における再吸収の阻害\n⎜ 20⎜\n問 274‑275 73歳男性。体重 60kg。メチシリン耐性黄色ブドウ球菌（M RSA）肺炎の\n治療目的でアルベカシン硫酸塩の投与が開始された。\n(処方）\n点滴静注      アルベカシン硫酸塩注射液                150mg\n生理食塩液                       100mL\n１日１回   30分かけて投与    ７日連日投与\n投与開始から３日目に血中アルベカシン濃度の測定依頼があり、測定の結果、トラ\nフ値は 3.5μg/mL、ピーク値（点滴終了 30分後採血）は 15μg/mL であった。\n検査値（３日目）\n：白血球数 9,500/μL、CRP 4.8mg/dL、\n血清クレアチニン 2.84mg/dL",
+    "question_concepts": [
+      "相互作用",
+      "シプロフロキサシン",
+      "スクラルファート",
+      "キレート形成"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-272-273"
   },
   {
     "id": "r102-274",
@@ -8381,13 +11689,66 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "実務",
     "category": "",
-    "question_text": "問 277（実務）\n薬剤師が患者の家族に説明する内容として適切でないのはどれか。   つ選べ。",
-    "choices": [],
+    "question_text": "薬剤師が患者の家族に説明する内容として適切でないのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "処方1は、ステロイドの作用の強さの5段階分類の中で最も弱い薬です。",
+        "semantic_labels": [
+          "ステロイドランク",
+          "服薬指導"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "夕方（夜）は、入浴後に塗るようにしてください。",
+        "semantic_labels": [
+          "塗布タイミング",
+          "入浴後"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "白色ワセリンには皮膚保護作用があります。",
+        "semantic_labels": [
+          "白色ワセリン",
+          "保護作用"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "お薬のほかに、室内環境の整備や皮膚を清潔に保つことも重要です。",
+        "semantic_labels": [
+          "生活指導",
+          "環境整備"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "タクロリムス軟膏は、顔には使用しないでください。",
+        "semantic_labels": [
+          "タクロリムス",
+          "使用部位"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q277.png",
-    "question_text_original": "問 277（実務）\n薬剤師が患者の家族に説明する内容として適切でないのはどれか。   つ選べ。\n1 処方１は、ステロイドの作用の強さの５段階分類の中で最も弱い薬です。\n2 夕方（夜）は、入浴後に塗るようにしてください。\n3 白色ワセリンには皮膚保護作用があります。\n4 お薬のほかに、室内環境の整備や皮膚を清潔に保つことも重要です。\n5 タクロリムス軟膏は、顔には使用しないでください。\n⎜ 24⎜\n問 278‑279 33歳女性。鼻づまりの症状が続いていたため、耳鼻科を受診したところ、\n花粉症と診断され、以下の処方箋を薬局に持参した。\n(処方１）\nプランルカストカプセル 112.5mg １回２カプセル（１日４カプセル）\n１日２回   朝夕食後    14日分\n(処方２）\nエバスチン錠 10mg           １回１錠（１日１錠）\n１日１回   朝食後    14日分\n(処方３）\nフルチカゾンプロピオン酸エステル点鼻液 50μg 56噴霧用         １本\n１回各鼻腔に１噴霧        １日２回     朝夕   噴霧\n(処方４）\nトラマゾリン塩酸塩点鼻液 0.118％   10mL\n鼻閉時 １回各鼻腔に１噴霧            １日４回まで"
+    "question_text_original": "問 277（実務）\n薬剤師が患者の家族に説明する内容として適切でないのはどれか。   つ選べ。\n1 処方１は、ステロイドの作用の強さの５段階分類の中で最も弱い薬です。\n2 夕方（夜）は、入浴後に塗るようにしてください。\n3 白色ワセリンには皮膚保護作用があります。\n4 お薬のほかに、室内環境の整備や皮膚を清潔に保つことも重要です。\n5 タクロリムス軟膏は、顔には使用しないでください。\n⎜ 24⎜\n問 278‑279 33歳女性。鼻づまりの症状が続いていたため、耳鼻科を受診したところ、\n花粉症と診断され、以下の処方箋を薬局に持参した。\n(処方１）\nプランルカストカプセル 112.5mg １回２カプセル（１日４カプセル）\n１日２回   朝夕食後    14日分\n(処方２）\nエバスチン錠 10mg           １回１錠（１日１錠）\n１日１回   朝食後    14日分\n(処方３）\nフルチカゾンプロピオン酸エステル点鼻液 50μg 56噴霧用         １本\n１回各鼻腔に１噴霧        １日２回     朝夕   噴霧\n(処方４）\nトラマゾリン塩酸塩点鼻液 0.118％   10mL\n鼻閉時 １回各鼻腔に１噴霧            １日４回まで",
+    "question_concepts": [
+      "実務",
+      "服薬指導",
+      "外用薬",
+      "アトピー性皮膚炎"
+    ],
+    "visual_content_type": "text_only"
   },
   {
     "id": "r102-278",
@@ -8430,13 +11791,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬剤",
     "category": "",
-    "question_text": "問 279（薬剤）\n処方３の薬剤に関する記述のうち、正しいのはどれか。   つ選べ。\nなお、本剤には、結晶セルロース、カルメロースナトリウム、ポリソルベート 80、\nフェニルエチルアルコールなどが添加されている。",
-    "choices": [],
+    "question_text": "処方3の薬剤に関する記述のうち、正しいのはどれか。2つ選べ。なお、本剤には、結晶セルロース、カルメロースナトリウム、ポリソルベート80、フェニルエチルアルコールなどが添加されている。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "本剤は、無菌試験法に適合する。",
+        "semantic_labels": [
+          "無菌試験",
+          "品質管理"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "本剤は、定量噴霧式の点鼻液であり、1噴霧当たりの有効成分含量は約0.9 μg である。",
+        "semantic_labels": [
+          "定量噴霧",
+          "含量"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "フルチカゾンプロピオン酸エステルは、投与部位で活性を示した後、その部位で速やかに代謝・不活化されるアンテドラッグである。",
+        "semantic_labels": [
+          "アンテドラッグ",
+          "局所代謝"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "本剤は、難水溶性のフルチカゾンプロピオン酸エステルが分散した水性懸濁液である。",
+        "semantic_labels": [
+          "水性懸濁液",
+          "難水溶性"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "ポリソルベート80は、微生物の発育を阻止する目的で添加されている。",
+        "semantic_labels": [
+          "ポリソルベート80",
+          "添加剤"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q279.png",
-    "question_text_original": "問 279（薬剤）\n処方３の薬剤に関する記述のうち、正しいのはどれか。   つ選べ。\nなお、本剤には、結晶セルロース、カルメロースナトリウム、ポリソルベート 80、\nフェニルエチルアルコールなどが添加されている。\n1 本剤は、無菌試験法に適合する。\n2 本剤は、定量噴霧式の点鼻液であり、１噴霧当たりの有効成分含量は約 0.9μg\nである。\n3 フルチカゾンプロピオン酸エステルは、投与部位で活性を示した後、その部位\nで速やかに代謝・不活化されるアンテドラッグである。\n4 本剤は、難水溶性のフルチカゾンプロピオン酸エステルが分散した水性懸濁液\nである。\n5 ポリソルベート 80は、微生物の発育を阻止する目的で添加されている。\n⎜ 26⎜\n問 280‑281 68歳男性。慢性閉塞性動脈硬化症における安静時疼痛に対し、アルプロス\nタジル注射液 10μg（リピッドマイクロスフェア製剤）を輸液と混合し、持続投与\nすることになった。病棟の看護師から、本剤の使用上の注意事項について薬剤師に\n問い合わせがあった。"
+    "question_text_original": "問 279（薬剤）\n処方３の薬剤に関する記述のうち、正しいのはどれか。   つ選べ。\nなお、本剤には、結晶セルロース、カルメロースナトリウム、ポリソルベート 80、\nフェニルエチルアルコールなどが添加されている。\n1 本剤は、無菌試験法に適合する。\n2 本剤は、定量噴霧式の点鼻液であり、１噴霧当たりの有効成分含量は約 0.9μg\nである。\n3 フルチカゾンプロピオン酸エステルは、投与部位で活性を示した後、その部位\nで速やかに代謝・不活化されるアンテドラッグである。\n4 本剤は、難水溶性のフルチカゾンプロピオン酸エステルが分散した水性懸濁液\nである。\n5 ポリソルベート 80は、微生物の発育を阻止する目的で添加されている。\n⎜ 26⎜\n問 280‑281 68歳男性。慢性閉塞性動脈硬化症における安静時疼痛に対し、アルプロス\nタジル注射液 10μg（リピッドマイクロスフェア製剤）を輸液と混合し、持続投与\nすることになった。病棟の看護師から、本剤の使用上の注意事項について薬剤師に\n問い合わせがあった。",
+    "question_concepts": [
+      "薬剤",
+      "点鼻薬",
+      "製剤学",
+      "フルチカゾンプロピオン酸エステル",
+      "アンテドラッグ"
+    ],
+    "visual_content_type": "text_only"
   },
   {
     "id": "r102-280",
@@ -8528,13 +11943,68 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬剤",
     "category": "",
-    "question_text": "問 283（薬剤）\n本剤に関する記述のうち、誤っているのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "本剤に関する記述のうち、誤っているのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "支持体に展延された薬物を含む膏体が、ライナーで被覆されている。",
+        "semantic_labels": [
+          "貼付剤構造",
+          "膏体"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "多くの水を保持した基剤を用いた貼付剤である。",
+        "semantic_labels": [
+          "含水基剤",
+          "パップ剤"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "皮膚に適用する製剤の放出試験法に適合する。",
+        "semantic_labels": [
+          "放出試験",
+          "品質評価"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "粘着力試験法により、皮膚への粘着性が評価されている。",
+        "semantic_labels": [
+          "粘着力試験",
+          "品質評価"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "全身作用を期待した製剤である。",
+        "semantic_labels": [
+          "全身作用",
+          "局所作用"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q283.png",
-    "question_text_original": "問 283（薬剤）\n本剤に関する記述のうち、誤っているのはどれか。 つ選べ。\n1 支持体に展延された薬物を含む膏体が、ライナーで被覆されている。\n2 多くの水を保持した基剤を用いた貼付剤である。\n3 皮膚に適用する製剤の放出試験法に適合する。\n4 粘着力試験法により、皮膚への粘着性が評価されている。\n5 全身作用を期待した製剤である。\n⎜ 28⎜\n問 284‑285 65歳男性。２型糖尿病。インスリン導入目的で入院となった。入院後は、\n看護師が１日３回インスリンを注射し、血糖コントロールは良好となった。退院に\n向け、以下のインスリンカートリッジ製剤が処方され、自己注射の指導に薬剤師が\n加わることになった。\n(処方）\nレベミル注   ペンフィル     １本（３mL）\n１回６単位（１日６単位）     １日１回 就寝前\n⎧                                            ⎫\n＊：成分名：インスリン     デテミル（遺伝子組換え）   （100単位／mL)\n⎩                                            ⎭"
+    "question_text_original": "問 283（薬剤）\n本剤に関する記述のうち、誤っているのはどれか。 つ選べ。\n1 支持体に展延された薬物を含む膏体が、ライナーで被覆されている。\n2 多くの水を保持した基剤を用いた貼付剤である。\n3 皮膚に適用する製剤の放出試験法に適合する。\n4 粘着力試験法により、皮膚への粘着性が評価されている。\n5 全身作用を期待した製剤である。\n⎜ 28⎜\n問 284‑285 65歳男性。２型糖尿病。インスリン導入目的で入院となった。入院後は、\n看護師が１日３回インスリンを注射し、血糖コントロールは良好となった。退院に\n向け、以下のインスリンカートリッジ製剤が処方され、自己注射の指導に薬剤師が\n加わることになった。\n(処方）\nレベミル注   ペンフィル     １本（３mL）\n１回６単位（１日６単位）     １日１回 就寝前\n⎧                                            ⎫\n＊：成分名：インスリン     デテミル（遺伝子組換え）   （100単位／mL)\n⎩                                            ⎭",
+    "question_concepts": [
+      "薬剤",
+      "貼付剤",
+      "リドカインテープ",
+      "製剤学"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-282-283",
+    "linked_scenario": "病棟で、患者からある訴えがあり、医師が以下の処方を追加した。（処方）リドカインテープ18 mg/枚 1回1枚 10回分（全10枚）"
   },
   {
     "id": "r102-284",
@@ -9236,13 +12706,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "法規・制度・倫理",
     "category": "",
-    "question_text": "問 313（法規・制度・倫理）\n医療事故への対応などは、医療法の医療の安全の確保に関する規定において定め\nられている。この規定において、医療の安全を確保するための措置を講ずる義務又\nは責務を課されていないのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "医療事故への対応などは、医療法の医療の安全の確保に関する規定において定められている。この規定において、医療の安全を確保するための措置を講ずる義務又は責務を課されていないのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "国",
+        "semantic_labels": [
+          "行政機関",
+          "国"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "地方公共団体",
+        "semantic_labels": [
+          "行政機関",
+          "地方公共団体"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "病院の開設者",
+        "semantic_labels": [
+          "医療機関管理",
+          "開設者"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "病院の管理者",
+        "semantic_labels": [
+          "医療機関管理",
+          "管理者"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "診療所の管理者",
+        "semantic_labels": [
+          "医療機関管理",
+          "診療所"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q313.png",
-    "question_text_original": "問 313（法規・制度・倫理）\n医療事故への対応などは、医療法の医療の安全の確保に関する規定において定め\nられている。この規定において、医療の安全を確保するための措置を講ずる義務又\nは責務を課されていないのはどれか。 つ選べ。\n1 国\n2 地方公共団体\n3 病院の開設者\n4 病院の管理者\n5 診療所の管理者\n⎜ 24⎜\n問 314‑315 麻薬診療施設である病院の病棟において、がん患者に対して生理食塩液で\n希釈したモルヒネ塩酸塩注射液の持続静注を行った。その後、看護師がルート周辺\nを確認したところ、シリンジと三方活栓の接続部から薬液が多量に漏れ出ていた。"
+    "question_text_original": "問 313（法規・制度・倫理）\n医療事故への対応などは、医療法の医療の安全の確保に関する規定において定め\nられている。この規定において、医療の安全を確保するための措置を講ずる義務又\nは責務を課されていないのはどれか。 つ選べ。\n1 国\n2 地方公共団体\n3 病院の開設者\n4 病院の管理者\n5 診療所の管理者\n⎜ 24⎜\n問 314‑315 麻薬診療施設である病院の病棟において、がん患者に対して生理食塩液で\n希釈したモルヒネ塩酸塩注射液の持続静注を行った。その後、看護師がルート周辺\nを確認したところ、シリンジと三方活栓の接続部から薬液が多量に漏れ出ていた。",
+    "question_concepts": [
+      "医療法",
+      "医療安全",
+      "安全確保義務"
+    ],
+    "visual_content_type": "none",
+    "linked_group": "r102-312-313",
+    "linked_scenario": "65歳男性。肝硬変にて入院となり、ラクツロースゼリーが処方された。ラクツロースゼリーを調剤すべきところを誤ってポリスチレンスルホン酸カルシウムゼリーを調剤した。病棟にて、薬剤師が気づき、服用させずに済んだ。"
   },
   {
     "id": "r102-314",
@@ -9285,13 +12809,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "法規・制度・倫理",
     "category": "",
-    "question_text": "問 315（法規・制度・倫理）\n麻薬診療施設における麻薬の管理者に関する記述として、正しいのはどれか。\nつ選べ。",
-    "choices": [],
+    "question_text": "麻薬診療施設における麻薬の管理者に関する記述として、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "2人以上の麻薬施用者が診療に従事する麻薬診療施設の開設者は、当該麻薬診療施設に麻薬管理者を置かなければならない。",
+        "semantic_labels": [
+          "麻薬管理者設置義務",
+          "麻薬施用者"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "管理している麻薬を廃棄する際には、廃棄してから30日以内に厚生労働大臣に届け出なければならない。",
+        "semantic_labels": [
+          "麻薬廃棄届出",
+          "厚生労働大臣"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "麻薬の滅失や盗取等の事故が発生した場合における、麻薬管理者が行う品名及び数量等の届け出先は、厚生労働大臣である。",
+        "semantic_labels": [
+          "麻薬事故届",
+          "届出先"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "麻薬管理者は事故の届け出をした麻薬の品名及び数量を麻薬診療施設に備えた帳簿に記載しなければならない。",
+        "semantic_labels": [
+          "麻薬帳簿記載",
+          "事故届出"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "麻薬管理者の免許は、医師でなければ受けることができない。",
+        "semantic_labels": [
+          "麻薬管理者免許",
+          "資格要件"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 1,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q315.png",
-    "question_text_original": "問 315（法規・制度・倫理）\n麻薬診療施設における麻薬の管理者に関する記述として、正しいのはどれか。\nつ選べ。\n1 ２人以上の麻薬施用者が診療に従事する麻薬診療施設の開設者は、当該麻薬診\n療施設に麻薬管理者を置かなければならない。\n2 管理している麻薬を廃棄する際には、廃棄してから 30日以内に厚生労働大臣\nに届け出なければならない。\n3 麻薬の滅失や盗取等の事故が発生した場合における、麻薬管理者が行う品名及\nび数量等の届け出先は、厚生労働大臣である。\n4 麻薬管理者は事故の届け出をした麻薬の品名及び数量を麻薬診療施設に備えた\n帳簿に記載しなければならない。\n5 麻薬管理者の免許は、医師でなければ受けることができない。\n⎜ 25⎜\n問 316‑317 漬物製造工場の野菜洗浄室で清掃中、作業員が誤って塩酸タンクを倒し、\n隣接した次亜塩素酸ナトリウム溶液タンクのバルブを破損した。その際、漏出した\n塩酸と次亜塩素酸ナトリウムが反応してガスが発生し、吸引した作業者は、激しい\n目の痛みと呼吸困難を訴えた。その直後、作業員は近隣の総合病院に救急搬送された。"
+    "question_text_original": "問 315（法規・制度・倫理）\n麻薬診療施設における麻薬の管理者に関する記述として、正しいのはどれか。\nつ選べ。\n1 ２人以上の麻薬施用者が診療に従事する麻薬診療施設の開設者は、当該麻薬診\n療施設に麻薬管理者を置かなければならない。\n2 管理している麻薬を廃棄する際には、廃棄してから 30日以内に厚生労働大臣\nに届け出なければならない。\n3 麻薬の滅失や盗取等の事故が発生した場合における、麻薬管理者が行う品名及\nび数量等の届け出先は、厚生労働大臣である。\n4 麻薬管理者は事故の届け出をした麻薬の品名及び数量を麻薬診療施設に備えた\n帳簿に記載しなければならない。\n5 麻薬管理者の免許は、医師でなければ受けることができない。\n⎜ 25⎜\n問 316‑317 漬物製造工場の野菜洗浄室で清掃中、作業員が誤って塩酸タンクを倒し、\n隣接した次亜塩素酸ナトリウム溶液タンクのバルブを破損した。その際、漏出した\n塩酸と次亜塩素酸ナトリウムが反応してガスが発生し、吸引した作業者は、激しい\n目の痛みと呼吸困難を訴えた。その直後、作業員は近隣の総合病院に救急搬送された。",
+    "question_concepts": [
+      "麻薬管理者",
+      "麻薬及び向精神薬取締法",
+      "麻薬診療施設"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-314-315",
+    "linked_scenario": "麻薬診療施設である病院の病棟において、がん患者に対して生理食塩液で希釈したモルヒネ塩酸塩注射液の持続静注を行った。その後、看護師がルート周辺を確認したところ、シリンジと三方活栓の接続部から薬液が多量に漏れ出ていた。"
   },
   {
     "id": "r102-316",
@@ -9334,13 +12912,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "法規・制度・倫理",
     "category": "",
-    "question_text": "問 317（法規・制度・倫理）\nこの漬物製造工場は、近くの薬局から劇物である塩酸と次亜塩素酸ナトリウムを\n購入していた。薬局及び漬物製造工場におけるこれらの劇物の取扱いに関する記述\nとして、適切なのはどれか。    つ選べ。",
-    "choices": [],
+    "question_text": "この漬物製造工場は、近くの薬局から劇物である塩酸と次亜塩素酸ナトリウムを購入していた。薬局及び漬物製造工場におけるこれらの劇物の取扱いに関する記述として、適切なのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "薬局で販売するためには、毒物又は劇物の販売業（毒物劇物販売業）の登録を受けなければならない。",
+        "semantic_labels": [
+          "毒物劇物販売業登録",
+          "薬局"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "薬局で販売する場合、漬物製造工場の購入者の氏名及び住所を確認した後でなければ交付してはならない。",
+        "semantic_labels": [
+          "購入者確認義務",
+          "交付制限"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "漬物製造工場の責任者は、薬局から購入した劇物の名称と数量を帳簿に記載しなければならない。",
+        "semantic_labels": [
+          "帳簿記載義務",
+          "劇物管理"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "漬物製造工場では、貯蔵する場所に「医薬用外」及び「劇物」の文字を表示しなければならない。",
+        "semantic_labels": [
+          "劇物表示義務",
+          "貯蔵場所"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "漬物製造工場で廃棄する場合は、中和等により劇物に該当しないものにしなければならない。",
+        "semantic_labels": [
+          "劇物廃棄方法",
+          "中和処理"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 0,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q317.png",
-    "question_text_original": "問 317（法規・制度・倫理）\nこの漬物製造工場は、近くの薬局から劇物である塩酸と次亜塩素酸ナトリウムを\n購入していた。薬局及び漬物製造工場におけるこれらの劇物の取扱いに関する記述\nとして、適切なのはどれか。    つ選べ。\n1 薬局で販売するためには、毒物又は劇物の販売業（毒物劇物販売業）の登録を\n受けなければならない。\n2 薬局で販売する場合、漬物製造工場の購入者の氏名及び住所を確認した後でな\nければ交付してはならない。\n3 漬物製造工場の責任者は、薬局から購入した劇物の名称と数量を帳簿に記載し\nなければならない。\n4 漬物製造工場では、貯蔵する場所に「医薬用外」及び「劇物」の文字を表示し\nなければならない。\n5 漬物製造工場で廃棄する場合は、中和等により劇物に該当しないものにしなけ\nればならない。\n⎜ 27⎜\n問 318‑319 87歳女性。寝たきり。この患者に対して発行された処方箋と残薬を、家族\nが薬局に持参した。\n(持参した残薬の一覧）\nカンデサルタンシレキセチル錠 8mg 75錠\nシルニジピン錠 20mg              135錠\nヒドロクロロチアジド錠 25mg          72錠\nアトルバスタチン錠 10mg            37錠\n酸化マグネシウム錠 250mg           232錠\n(持参した処方箋の内容）\n(処方１）\nカンデサルタンシレキセチル錠 8mg １回１錠（１日１錠）\nシルニジピン錠 20mg              １回１錠（１日１錠）\nヒドロクロロチアジド錠 25mg          １回１錠（１日１錠）\nタモキシフェン錠 20mg             １回１錠（１日１錠）\n１日１回   朝食後   30日分\n(処方２）\nアトルバスタチン錠 10mg            １回１錠（１日１錠）\n１日１回   夕食後   30日分\n(処方３）\n酸化マグネシウム錠 250mg           １回１錠（１日３錠）\n１日３回   朝昼夕食後 30日分\n⎜ 28⎜"
+    "question_text_original": "問 317（法規・制度・倫理）\nこの漬物製造工場は、近くの薬局から劇物である塩酸と次亜塩素酸ナトリウムを\n購入していた。薬局及び漬物製造工場におけるこれらの劇物の取扱いに関する記述\nとして、適切なのはどれか。    つ選べ。\n1 薬局で販売するためには、毒物又は劇物の販売業（毒物劇物販売業）の登録を\n受けなければならない。\n2 薬局で販売する場合、漬物製造工場の購入者の氏名及び住所を確認した後でな\nければ交付してはならない。\n3 漬物製造工場の責任者は、薬局から購入した劇物の名称と数量を帳簿に記載し\nなければならない。\n4 漬物製造工場では、貯蔵する場所に「医薬用外」及び「劇物」の文字を表示し\nなければならない。\n5 漬物製造工場で廃棄する場合は、中和等により劇物に該当しないものにしなけ\nればならない。\n⎜ 27⎜\n問 318‑319 87歳女性。寝たきり。この患者に対して発行された処方箋と残薬を、家族\nが薬局に持参した。\n(持参した残薬の一覧）\nカンデサルタンシレキセチル錠 8mg 75錠\nシルニジピン錠 20mg              135錠\nヒドロクロロチアジド錠 25mg          72錠\nアトルバスタチン錠 10mg            37錠\n酸化マグネシウム錠 250mg           232錠\n(持参した処方箋の内容）\n(処方１）\nカンデサルタンシレキセチル錠 8mg １回１錠（１日１錠）\nシルニジピン錠 20mg              １回１錠（１日１錠）\nヒドロクロロチアジド錠 25mg          １回１錠（１日１錠）\nタモキシフェン錠 20mg             １回１錠（１日１錠）\n１日１回   朝食後   30日分\n(処方２）\nアトルバスタチン錠 10mg            １回１錠（１日１錠）\n１日１回   夕食後   30日分\n(処方３）\n酸化マグネシウム錠 250mg           １回１錠（１日３錠）\n１日３回   朝昼夕食後 30日分\n⎜ 28⎜",
+    "question_concepts": [
+      "劇物取扱い",
+      "毒物及び劇物取締法",
+      "薬局販売"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-316-317",
+    "linked_scenario": "漬物製造工場の野菜洗浄室で清掃中、作業員が誤って塩酸タンクを倒し、隣接した次亜塩素酸ナトリウム溶液タンクのバルブを破損した。その際、漏出した塩酸と次亜塩素酸ナトリウムが反応してガスが発生し、吸引した作業者は、激しい目の痛みと呼吸困難を訴えた。その直後、作業員は近隣の総合病院に救急搬送された。"
   },
   {
     "id": "r102-318",
@@ -9383,13 +13015,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "法規・制度・倫理",
     "category": "",
-    "question_text": "問 319（法規・制度・倫理）\nその後、この患者の服薬アドヒアランスを向上させるため、処方医の指示により\n薬剤師が患者宅を訪問した。患者の居宅で行うことができない業務はどれか。",
-    "choices": [],
+    "question_text": "その後、この患者の服薬アドヒアランスを向上させるため、処方医の指示により薬剤師が患者宅を訪問した。患者の居宅で行うことができない業務はどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "処方箋を受け取ること",
+        "semantic_labels": [
+          "処方箋受領",
+          "在宅制限"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "薬剤を粉砕すること",
+        "semantic_labels": [
+          "粉砕調剤",
+          "在宅業務"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "疑義照会をすること",
+        "semantic_labels": [
+          "疑義照会",
+          "薬剤師業務"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "薬剤を一包化すること",
+        "semantic_labels": [
+          "一包化",
+          "在宅調剤"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "薬剤を交付すること",
+        "semantic_labels": [
+          "薬剤交付",
+          "在宅業務"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q319.png",
-    "question_text_original": "問 319（法規・制度・倫理）\nその後、この患者の服薬アドヒアランスを向上させるため、処方医の指示により\n薬剤師が患者宅を訪問した。患者の居宅で行うことができない業務はどれか。   つ\n選べ。\n1 処方箋を受け取ること\n2 薬剤を粉砕すること\n3 疑義照会をすること\n4 薬剤を一包化すること\n5 薬剤を交付すること\n⎜ 29⎜\n問 320‑321 下記の医薬品を卸売販売業者の担当者が納品に来たので、薬剤師が薬局の\nカウンターにおいて検収を行った。なお、薬局は、向精神薬営業者に関して別段の\n申し出はしていないものとする。\nセレギリン塩酸塩錠 2.5mg\nアムロジピン錠 5mg\nアミオダロン塩酸塩錠 100mg\nメチルフェニデート塩酸塩錠 10mg\nフルニトラゼパム錠 2mg\nペンタゾシン塩酸塩錠 25mg\nトリメブチンマレイン酸塩 100mg（要指導医薬品）"
+    "question_text_original": "問 319（法規・制度・倫理）\nその後、この患者の服薬アドヒアランスを向上させるため、処方医の指示により\n薬剤師が患者宅を訪問した。患者の居宅で行うことができない業務はどれか。   つ\n選べ。\n1 処方箋を受け取ること\n2 薬剤を粉砕すること\n3 疑義照会をすること\n4 薬剤を一包化すること\n5 薬剤を交付すること\n⎜ 29⎜\n問 320‑321 下記の医薬品を卸売販売業者の担当者が納品に来たので、薬剤師が薬局の\nカウンターにおいて検収を行った。なお、薬局は、向精神薬営業者に関して別段の\n申し出はしていないものとする。\nセレギリン塩酸塩錠 2.5mg\nアムロジピン錠 5mg\nアミオダロン塩酸塩錠 100mg\nメチルフェニデート塩酸塩錠 10mg\nフルニトラゼパム錠 2mg\nペンタゾシン塩酸塩錠 25mg\nトリメブチンマレイン酸塩 100mg（要指導医薬品）",
+    "question_concepts": [
+      "在宅業務",
+      "居宅療養管理指導",
+      "薬剤師業務範囲"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-318-319",
+    "linked_scenario": "87歳女性。寝たきり。この患者に対して発行された処方箋と残薬を、家族が薬局に持参した。"
   },
   {
     "id": "r102-320",
@@ -9432,13 +13118,65 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "法規・制度・倫理",
     "category": "",
-    "question_text": "問 321（法規・制度・倫理）\n検収した医薬品のその後の取扱いに関する記述のうち、適切なのはどれか。",
-    "choices": [],
+    "question_text": "検収した医薬品のその後の取扱いに関する記述のうち、適切なのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "検収した医薬品を、麻薬を保管している金庫に入れた。",
+        "semantic_labels": [
+          "麻薬金庫",
+          "保管方法"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "要指導医薬品を来局者の手に取りやすい場所に陳列した。",
+        "semantic_labels": [
+          "要指導医薬品",
+          "陳列規制"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "毒薬に相当する医薬品を無施錠で陳列した。",
+        "semantic_labels": [
+          "毒薬管理",
+          "施錠義務"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "過剰在庫となった向精神薬を向精神薬卸売業者に返品した。",
+        "semantic_labels": [
+          "向精神薬",
+          "返品・譲渡"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "親に頼まれて来局した小学生に毒薬を販売した。",
+        "semantic_labels": [
+          "毒薬販売制限",
+          "年齢制限"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 4,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q321.png",
-    "question_text_original": "問 321（法規・制度・倫理）\n検収した医薬品のその後の取扱いに関する記述のうち、適切なのはどれか。   つ\n選べ。\n1 検収した医薬品を、麻薬を保管している金庫に入れた。\n2 要指導医薬品を来局者の手に取りやすい場所に陳列した。\n3 毒薬に相当する医薬品を無施錠で陳列した。\n4 過剰在庫となった向精神薬を向精神薬卸売業者に返品した。\n5 親に頼まれて来局した小学生に毒薬を販売した。\n⎜ 31⎜\n問 322‑323 68歳男性。前立腺がん患者を対象とした治験に参加している。当該患者か\nら担当の CRC（治験コーディネータ）である薬剤師に電話があり「今朝から、お\n腹のあたりに真っ赤な湿疹ができている。」と連絡があった。湿疹は、この治験薬\nの代表的な副作用の１つで、参加同意を得る際にも説明していた。"
+    "question_text_original": "問 321（法規・制度・倫理）\n検収した医薬品のその後の取扱いに関する記述のうち、適切なのはどれか。   つ\n選べ。\n1 検収した医薬品を、麻薬を保管している金庫に入れた。\n2 要指導医薬品を来局者の手に取りやすい場所に陳列した。\n3 毒薬に相当する医薬品を無施錠で陳列した。\n4 過剰在庫となった向精神薬を向精神薬卸売業者に返品した。\n5 親に頼まれて来局した小学生に毒薬を販売した。\n⎜ 31⎜\n問 322‑323 68歳男性。前立腺がん患者を対象とした治験に参加している。当該患者か\nら担当の CRC（治験コーディネータ）である薬剤師に電話があり「今朝から、お\n腹のあたりに真っ赤な湿疹ができている。」と連絡があった。湿疹は、この治験薬\nの代表的な副作用の１つで、参加同意を得る際にも説明していた。",
+    "question_concepts": [
+      "医薬品管理",
+      "検収後取扱い",
+      "薬局管理"
+    ],
+    "visual_content_type": "text_only"
   },
   {
     "id": "r102-322",
@@ -9481,13 +13219,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "実務",
     "category": "",
-    "question_text": "問 323（実務）\nCRC の対応として誤っているのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "CRCの対応として誤っているのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "男性から聴取した情報を記録する。",
+        "semantic_labels": [
+          "情報記録",
+          "CRC業務"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "男性が受診すべきかどうかを治験責任医師に相談する。",
+        "semantic_labels": [
+          "受診判断",
+          "治験責任医師"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "重篤な有害事象と判断した場合、直ちに実施医療機関の長に報告する。",
+        "semantic_labels": [
+          "重篤有害事象報告",
+          "実施医療機関"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "有害事象及びその治療が、逸脱や中止基準に該当するかどうか治験責任医師と確認する。",
+        "semantic_labels": [
+          "逸脱・中止基準",
+          "治験責任医師"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "治験薬による有害事象と判断された場合、副作用被害救済制度の利用について、男性に情報提供する。",
+        "semantic_labels": [
+          "副作用被害救済制度",
+          "治験薬"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q323.png",
-    "question_text_original": "問 323（実務）\nCRC の対応として誤っているのはどれか。 つ選べ。\n1 男性から聴取した情報を記録する。\n2 男性が受診すべきかどうかを治験責任医師に相談する。\n3 重篤な有害事象と判断した場合、直ちに実施医療機関の長に報告する。\n4 有害事象及びその治療が、逸脱や中止基準に該当するかどうか治験責任医師と\n確認する。\n5 治験薬による有害事象と判断された場合、副作用被害救済制度の利用につい\nて、男性に情報提供する。\n⎜ 33⎜\n問 324‑325 70歳男性。高血圧症で処方１を服用していた。ある日胸部不快感を自覚\nし、かかりつけのクリニックを受診した。心房細動の疑いがあることから、精査目\n的で市内の総合病院を紹介され受診したところ、心房細動、心不全と診断され、処\n方２が追加となった。\n(処方１）\nエナラプリルマレイン酸塩錠 5mg          １回１錠（１日１錠）\n１日１回 朝食後\n(処方２）\nカルベジロール錠 2.5mg             １回１錠（１日２錠）\nダビガトランエテキシラートメタンスルホン酸塩カプセル 126.83mg\n１回１カプセル（１日２カプセル）\n１日２回 朝夕食後\n（本剤はダビガトランエテキシラートとして 110mg を含有している。）"
+    "question_text_original": "問 323（実務）\nCRC の対応として誤っているのはどれか。 つ選べ。\n1 男性から聴取した情報を記録する。\n2 男性が受診すべきかどうかを治験責任医師に相談する。\n3 重篤な有害事象と判断した場合、直ちに実施医療機関の長に報告する。\n4 有害事象及びその治療が、逸脱や中止基準に該当するかどうか治験責任医師と\n確認する。\n5 治験薬による有害事象と判断された場合、副作用被害救済制度の利用につい\nて、男性に情報提供する。\n⎜ 33⎜\n問 324‑325 70歳男性。高血圧症で処方１を服用していた。ある日胸部不快感を自覚\nし、かかりつけのクリニックを受診した。心房細動の疑いがあることから、精査目\n的で市内の総合病院を紹介され受診したところ、心房細動、心不全と診断され、処\n方２が追加となった。\n(処方１）\nエナラプリルマレイン酸塩錠 5mg          １回１錠（１日１錠）\n１日１回 朝食後\n(処方２）\nカルベジロール錠 2.5mg             １回１錠（１日２錠）\nダビガトランエテキシラートメタンスルホン酸塩カプセル 126.83mg\n１回１カプセル（１日２カプセル）\n１日２回 朝夕食後\n（本剤はダビガトランエテキシラートとして 110mg を含有している。）",
+    "question_concepts": [
+      "CRC業務",
+      "治験",
+      "有害事象対応"
+    ],
+    "visual_content_type": "text_only",
+    "linked_group": "r102-322-323",
+    "linked_scenario": "68歳男性。前立腺がん患者を対象とした治験に参加している。当該患者から担当のCRC（治験コーディネータ）である薬剤師に電話があり「今朝から、お腹のあたりに真っ赤な湿疹ができている。」と連絡があった。湿疹は、この治験薬の代表的な副作用の1つで、参加同意を得る際にも説明していた。"
   },
   {
     "id": "r102-324",
@@ -9530,13 +13322,67 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "法規・制度・倫理",
     "category": "",
-    "question_text": "問 325（法規・制度・倫理）\n重篤な副作用を回避するための確認は行われていたものの、後日、この男性に重\n大な副作用が発現した。\n薬剤師は主治医と相談のうえ、この男性の副作用について、医薬品・医療機器等\n安全性情報報告制度に基づき報告することを決めた。下図は、記入途中の医薬品安\n全性情報報告書の一部である。この制度の説明として、正しいのはどれか。 つ選べ。",
-    "choices": [],
+    "question_text": "重篤な副作用を回避するための確認は行われていたものの、後日、この男性に重大な副作用が発現した。薬剤師は主治医と相談のうえ、この男性の副作用について、医薬品・医療機器等安全性情報報告制度に基づき報告することを決めた。下図は、記入途中の医薬品安全性情報報告書の一部である。この制度の説明として、正しいのはどれか。2つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "この男性の場合、厚生労働大臣への報告期限は、発生を知った日から30日以内である。",
+        "semantic_labels": [
+          "報告期限",
+          "厚生労働大臣"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "添付文書などから予測できない未知の症例についても報告する。",
+        "semantic_labels": [
+          "未知症例報告",
+          "添付文書"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "患者情報のうち、アに記載された内容は、公開されることはない。",
+        "semantic_labels": [
+          "患者情報保護",
+          "公開制限"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "イの項目はすべて記入しなければならない。",
+        "semantic_labels": [
+          "記載項目",
+          "必須記入"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "クリニックで処方された（処方1）の薬剤も、ウに記載する。",
+        "semantic_labels": [
+          "併用薬記載",
+          "報告書記入"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q325.png",
-    "question_text_original": "問 325（法規・制度・倫理）\n重篤な副作用を回避するための確認は行われていたものの、後日、この男性に重\n大な副作用が発現した。\n薬剤師は主治医と相談のうえ、この男性の副作用について、医薬品・医療機器等\n安全性情報報告制度に基づき報告することを決めた。下図は、記入途中の医薬品安\n全性情報報告書の一部である。この制度の説明として、正しいのはどれか。 つ選べ。\n1 この男性の場合、厚生労働大臣への報告期限は、発生を知った日から 30日以\n内である。\n2 添付文書などから予測できない未知の症例についても報告する。\n3 患者情報のうち、アに記載された内容は、公開されることはない。\n4 イの項目はすべて記入しなければならない。\n5 クリニックで処方された（処方１）の薬剤も、ウに記載する。\nア\nイ\nウ\n⎜ 35⎜\n一般問題（薬学実践問題) 【実務】"
+    "question_text_original": "問 325（法規・制度・倫理）\n重篤な副作用を回避するための確認は行われていたものの、後日、この男性に重\n大な副作用が発現した。\n薬剤師は主治医と相談のうえ、この男性の副作用について、医薬品・医療機器等\n安全性情報報告制度に基づき報告することを決めた。下図は、記入途中の医薬品安\n全性情報報告書の一部である。この制度の説明として、正しいのはどれか。 つ選べ。\n1 この男性の場合、厚生労働大臣への報告期限は、発生を知った日から 30日以\n内である。\n2 添付文書などから予測できない未知の症例についても報告する。\n3 患者情報のうち、アに記載された内容は、公開されることはない。\n4 イの項目はすべて記入しなければならない。\n5 クリニックで処方された（処方１）の薬剤も、ウに記載する。\nア\nイ\nウ\n⎜ 35⎜\n一般問題（薬学実践問題) 【実務】",
+    "question_concepts": [
+      "医薬品安全性情報報告制度",
+      "副作用報告",
+      "報告書記載"
+    ],
+    "visual_content_type": "form",
+    "linked_group": "r102-324-325",
+    "linked_scenario": "70歳男性。高血圧症で処方1を服用していた。ある日胸部不快感を自覚し、かかりつけのクリニックを受診した。心房細動の疑いがあることから、精査目的で市内の総合病院を紹介され受診したところ、心房細動、心不全と診断され、処方2が追加となった。"
   },
   {
     "id": "r102-326",
@@ -9651,13 +13497,101 @@ export const EXAM_102_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "実務",
     "category": "",
-    "question_text": "問 329 以下の会話はショック状態で集中治療室に入室した患者に対して、医師と薬剤\n師が治療方針について協議している状況である。\n医   師   「昨夜から意識レベルの低下を認めて、気管挿管を行いました。血圧は\n90前後です。CKD ですので CHDF を開始しようと思います。現在 DIC\nの状態です。DIC に対してトロンボモデュリン アルファを使用します。\n透析患者の減量基準はありますか。\n」\n薬剤師     「腎機能に問題なければ、380U/kg を投与しますが、CHDF 患者の場合\nは 130U/kg を投与します。」\n略語の意味の組合せとして正しいのはどれか。            つ選べ。",
-    "choices": [],
+    "question_text": "以下の会話はショック状態で集中治療室に入室した患者に対して、医師と薬剤師が治療方針について協議している状況である。略語の意味の組合せとして正しいのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "CHDF: 持続的血液濾過透析法 / CKD: 慢性腎臓病 / DIC: 溶血性尿毒症症候群",
+        "semantic_labels": [
+          "CHDF",
+          "CKD",
+          "DIC"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 2,
+        "text": "CHDF: 持続的血液濾過透析法 / CKD: 慢性腎臓病 / DIC: 播種性血管内凝固症候群",
+        "semantic_labels": [
+          "CHDF",
+          "CKD",
+          "DIC"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 3,
+        "text": "CHDF: 持続的血液濾過透析法 / CKD: 急性腎不全 / DIC: 溶血性尿毒症症候群",
+        "semantic_labels": [
+          "CHDF",
+          "CKD",
+          "DIC"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 4,
+        "text": "CHDF: 持続的血液濾過透析法 / CKD: 急性腎不全 / DIC: 播種性血管内凝固症候群",
+        "semantic_labels": [
+          "CHDF",
+          "CKD",
+          "DIC"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 5,
+        "text": "CHDF: 腹膜透析法 / CKD: 慢性腎臓病 / DIC: 溶血性尿毒症症候群",
+        "semantic_labels": [
+          "CHDF",
+          "CKD",
+          "DIC"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 6,
+        "text": "CHDF: 腹膜透析法 / CKD: 慢性腎臓病 / DIC: 播種性血管内凝固症候群",
+        "semantic_labels": [
+          "CHDF",
+          "CKD",
+          "DIC"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 7,
+        "text": "CHDF: 腹膜透析法 / CKD: 急性腎不全 / DIC: 溶血性尿毒症症候群",
+        "semantic_labels": [
+          "CHDF",
+          "CKD",
+          "DIC"
+        ],
+        "choice_type": "text"
+      },
+      {
+        "key": 8,
+        "text": "CHDF: 腹膜透析法 / CKD: 急性腎不全 / DIC: 播種性血管内凝固症候群",
+        "semantic_labels": [
+          "CHDF",
+          "CKD",
+          "DIC"
+        ],
+        "choice_type": "text"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】問題データ不完全（選択肢なし）",
     "tags": [],
     "image_url": "/images/questions/102/q329.png",
-    "question_text_original": "問 329 以下の会話はショック状態で集中治療室に入室した患者に対して、医師と薬剤\n師が治療方針について協議している状況である。\n医   師   「昨夜から意識レベルの低下を認めて、気管挿管を行いました。血圧は\n90前後です。CKD ですので CHDF を開始しようと思います。現在 DIC\nの状態です。DIC に対してトロンボモデュリン アルファを使用します。\n透析患者の減量基準はありますか。\n」\n薬剤師     「腎機能に問題なければ、380U/kg を投与しますが、CHDF 患者の場合\nは 130U/kg を投与します。」\n略語の意味の組合せとして正しいのはどれか。            つ選べ。\nCHDF        CKD         DIC\n1 持続的血液濾過透析法 慢性腎臓病          溶血性尿毒症症候群\n2 持続的血液濾過透析法 慢性腎臓病          播種性血管内凝固症候群\n3 持続的血液濾過透析法 急性腎不全          溶血性尿毒症症候群\n4 持続的血液濾過透析法 急性腎不全          播種性血管内凝固症候群\n5 腹膜透析法           慢性腎臓病     溶血性尿毒症症候群\n6 腹膜透析法           慢性腎臓病     播種性血管内凝固症候群\n7 腹膜透析法           急性腎不全     溶血性尿毒症症候群\n8 腹膜透析法           急性腎不全     播種性血管内凝固症候群\n⎜ 38⎜"
+    "question_text_original": "問 329 以下の会話はショック状態で集中治療室に入室した患者に対して、医師と薬剤\n師が治療方針について協議している状況である。\n医   師   「昨夜から意識レベルの低下を認めて、気管挿管を行いました。血圧は\n90前後です。CKD ですので CHDF を開始しようと思います。現在 DIC\nの状態です。DIC に対してトロンボモデュリン アルファを使用します。\n透析患者の減量基準はありますか。\n」\n薬剤師     「腎機能に問題なければ、380U/kg を投与しますが、CHDF 患者の場合\nは 130U/kg を投与します。」\n略語の意味の組合せとして正しいのはどれか。            つ選べ。\nCHDF        CKD         DIC\n1 持続的血液濾過透析法 慢性腎臓病          溶血性尿毒症症候群\n2 持続的血液濾過透析法 慢性腎臓病          播種性血管内凝固症候群\n3 持続的血液濾過透析法 急性腎不全          溶血性尿毒症症候群\n4 持続的血液濾過透析法 急性腎不全          播種性血管内凝固症候群\n5 腹膜透析法           慢性腎臓病     溶血性尿毒症症候群\n6 腹膜透析法           慢性腎臓病     播種性血管内凝固症候群\n7 腹膜透析法           急性腎不全     溶血性尿毒症症候群\n8 腹膜透析法           急性腎不全     播種性血管内凝固症候群\n⎜ 38⎜",
+    "question_concepts": [
+      "医療略語",
+      "CHDF",
+      "CKD",
+      "DIC"
+    ],
+    "visual_content_type": "table"
   },
   {
     "id": "r102-330",

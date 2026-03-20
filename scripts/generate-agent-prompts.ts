@@ -39,7 +39,8 @@ function main() {
   }
 
   const pages = [...byPage.entries()]
-  const batchSize = 19
+  const batchSizeArg = process.argv.find((_, i) => process.argv[i - 1] === '--batch-size')
+  const batchSize = batchSizeArg ? Number(batchSizeArg) : 15
   const numBatches = Math.ceil(pages.length / batchSize)
 
   const outputDir = path.join(__dirname, 'output', 'agent-prompts')
