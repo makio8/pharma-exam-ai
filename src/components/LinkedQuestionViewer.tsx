@@ -134,21 +134,30 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
             key={q.id}
             size="small"
             style={{
-              marginBottom: 16,
-              borderColor: q.id === currentQuestionId ? '#1890ff' : undefined,
+              marginBottom: 20,
+              borderLeft: '4px solid #722ed1',
+              borderColor: '#d3adf7',
+              background: '#fafafa',
             }}
             id={`linked-q-${q.id}`}
           >
             {/* 問題ヘッダー */}
-            <Space wrap style={{ marginBottom: 8 }}>
-              <Tag color="purple">問{q.question_number}</Tag>
-              <Tag>{q.subject}</Tag>
+            <div style={{
+              background: '#f0e6ff',
+              margin: '-12px -12px 12px -12px',
+              padding: '8px 12px',
+              borderBottom: '1px solid #d3adf7',
+            }}>
+              <Space wrap>
+                <Tag color="purple" style={{ fontSize: 14, padding: '2px 8px' }}>問{q.question_number}</Tag>
+                <Tag>{q.subject}</Tag>
               {state.isAnswered && (
                 state.isCorrect
                   ? <Tag color="success">正解</Tag>
                   : <Tag color="error">不正解</Tag>
               )}
-            </Space>
+              </Space>
+            </div>
 
             {/* 問題文（シナリオ部分を除去して表示） */}
             <Paragraph style={{ fontSize: 15, lineHeight: 1.8, whiteSpace: 'pre-wrap', marginBottom: 12 }}>
@@ -271,7 +280,7 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
               </>
             )}
 
-            {idx < group.questions.length - 1 && <Divider style={{ margin: '8px 0 0 0' }} />}
+            {/* カード間の余白は marginBottom: 20 で確保 */}
           </Card>
         )
       })}
