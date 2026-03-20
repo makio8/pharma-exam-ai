@@ -347,7 +347,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
       "鼓膜",
       "解剖学"
     ],
-    "visual_content_type": "anatomy_diagram"
+    "visual_content_type": "diagram"
   },
   {
     "id": "r104-012",
@@ -443,7 +443,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
       "RNA",
       "糖の立体化学"
     ],
-    "visual_content_type": "chemical_structure"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r104-014",
@@ -3157,7 +3157,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
       "確認試験",
       "医薬品分析"
     ],
-    "visual_content_type": "table_with_structures"
+    "visual_content_type": "table"
   },
   {
     "id": "r104-093",
@@ -3513,7 +3513,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
       "SN反応",
       "有機反応機構"
     ],
-    "visual_content_type": "reaction_scheme"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r104-103",
@@ -3699,7 +3699,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
       "局所麻酔薬",
       "構造活性相関"
     ],
-    "visual_content_type": "chemical_structure"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r104-108",
@@ -3973,7 +3973,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
       "DNA修復",
       "酵素"
     ],
-    "visual_content_type": "diagram_with_table"
+    "visual_content_type": "mixed"
   },
   {
     "id": "r104-115",
@@ -4444,7 +4444,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
       "補酵素",
       "PAPS"
     ],
-    "visual_content_type": "chemical_structure"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r104-128",
@@ -4881,7 +4881,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
       "脂肪酸代謝",
       "補酵素"
     ],
-    "visual_content_type": "reaction_pathway"
+    "visual_content_type": "diagram"
   },
   {
     "id": "r104-139",
@@ -4962,7 +4962,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
       "新生児マススクリーニング",
       "脂肪酸代謝異常症"
     ],
-    "visual_content_type": "bar_chart"
+    "visual_content_type": "graph"
   },
   {
     "id": "r104-141",
@@ -6127,7 +6127,7 @@ export const EXAM_104_QUESTIONS: Question[] = [
       "溶出試験",
       "腸溶性製剤"
     ],
-    "visual_content_type": "line_graph"
+    "visual_content_type": "graph"
   },
   {
     "id": "r104-176",

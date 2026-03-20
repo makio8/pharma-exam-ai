@@ -8867,7 +8867,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
       "反応速度定数",
       "反応次数"
     ],
-    "visual_content_type": "formula",
+    "visual_content_type": "structural_formula",
     "linked_group": "r102-222-225",
     "linked_scenario": "50歳男性。体重60 kg。重症感染症のため一時的に高カロリー輸液ソフトバッグ製剤（1,003 mL中にブドウ糖175 g、総遊離アミノ酸30 gを含有）を中心静脈から投与することになった。この男性の腎機能は正常である。"
   },
@@ -9544,7 +9544,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
       "感染者届出数",
       "リーフレット"
     ],
-    "visual_content_type": "chart",
+    "visual_content_type": "graph",
     "linked_group": "r102-234-235",
     "linked_scenario": "20歳女性。性感染症の薬物治療のため薬局に処方箋を持参した。"
   },
@@ -9918,7 +9918,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
       "包括指定",
       "指定薬物"
     ],
-    "visual_content_type": "chemical_structure",
+    "visual_content_type": "structural_formula",
     "linked_group": "r102-240-241",
     "linked_scenario": "学校薬剤師が中学校の校長から薬物乱用防止教室の講師を依頼された。"
   },
@@ -13557,7 +13557,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
       "医療安全",
       "安全確保義務"
     ],
-    "visual_content_type": "none",
+    "visual_content_type": "text_only",
     "linked_group": "r102-312-313",
     "linked_scenario": "65歳男性。肝硬変にて入院となり、ラクツロースゼリーが処方された。ラクツロースゼリーを調剤すべきところを誤ってポリスチレンスルホン酸カルシウムゼリーを調剤した。病棟にて、薬剤師が気づき、服用させずに済んだ。"
   },
@@ -14173,7 +14173,7 @@ export const EXAM_102_QUESTIONS: Question[] = [
       "副作用報告",
       "報告書記載"
     ],
-    "visual_content_type": "form",
+    "visual_content_type": "prescription",
     "linked_group": "r102-324-325",
     "linked_scenario": "70歳男性。高血圧症で処方1を服用していた。ある日胸部不快感を自覚し、かかりつけのクリニックを受診した。心房細動の疑いがあることから、精査目的で市内の総合病院を紹介され受診したところ、心房細動、心不全と診断され、処方2が追加となった。"
   },

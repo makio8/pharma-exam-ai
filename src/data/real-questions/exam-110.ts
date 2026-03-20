@@ -8717,7 +8717,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
       "高血圧",
       "糖尿病"
     ],
-    "visual_content_type": "text_with_prescription",
+    "visual_content_type": "prescription",
     "linked_group": "r110-234-235",
     "linked_scenario": "薬剤師の助言として適しているのはどれか（健康フェアにおける生活習慣病予防の場面）。"
   },
@@ -9016,7 +9016,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
       "鉛中毒",
       "ポルフィリン合成"
     ],
-    "visual_content_type": "biochemical_pathway"
+    "visual_content_type": "diagram"
   },
   {
     "id": "r110-242",
@@ -9206,7 +9206,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
       "バイオハザード",
       "特別管理産業廃棄物"
     ],
-    "visual_content_type": "text_with_figure",
+    "visual_content_type": "diagram",
     "linked_group": "r110-244-245",
     "linked_scenario": "シクロホスファミド水和物の溶解調製及び事故時の対応に関して、新人薬剤師が指導を受ける内容として正しいのはどれか。"
   },
@@ -9404,7 +9404,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
       "作用機序",
       "ナルコレプシー"
     ],
-    "visual_content_type": "text_with_prescription"
+    "visual_content_type": "prescription"
   },
   {
     "id": "r110-250",
@@ -9575,7 +9575,7 @@ export const EXAM_110_QUESTIONS: Question[] = [
       "アセトアミノフェン",
       "患者説明"
     ],
-    "visual_content_type": "text_with_prescription",
+    "visual_content_type": "prescription",
     "linked_group": "r110-252-253",
     "linked_scenario": "28歳女性。高校教員として勤務している。ここ数ケ月、仕事のストレスから風邪をひきやすく、体調が優れない日が続いていた。最近になり、左胸背部に赤い発疹が多く現れ、ピリピリとする痛みが出てきたことから、近医を受診した。診断の結果、帯状疱疹と診断され、以下の処方箋を持って薬局を訪れた。（処方）バラシクロビル錠500 mg 1回2錠（1日6錠）、アセトアミノフェン錠500 mg 1回1錠（1日3錠）1日3回 朝昼夕食後 7日分"
   },

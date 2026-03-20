@@ -22,7 +22,23 @@ export type ChoiceType =
   | 'structural_formula'
   | 'graph'
   | 'equation'
+  | 'image'
   | 'image_other'
+  | 'chemical_structure'
+  | 'formula'
+  | 'diagram'
+  | 'image_region'
+  | 'image_with_label'
+  | 'numeric'
+  | 'image_and_text'
+  | 'graph_line'
+  | 'diagram_region'
+  | 'diagram_label'
+  | 'structural_formula_region'
+  | 'reaction_scheme'
+  | 'reaction_mechanism'
+  | 'image_label'
+  | 'structural_formula_pair'
 
 /** 問題の選択肢 */
 export interface Choice {

@@ -11591,7 +11591,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
       "薬物動態",
       "血中濃度推移"
     ],
-    "visual_content_type": "graph_and_table",
+    "visual_content_type": "mixed",
     "linked_group": "r101-276-277"
   },
   {
@@ -13856,7 +13856,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
       "一般用医薬品",
       "PMDA"
     ],
-    "visual_content_type": "chart",
+    "visual_content_type": "graph",
     "linked_group": "r101-320-321",
     "linked_scenario": "下図は、製造販売業者から独立行政法人医薬品医療機器総合機構（PMDA）へ報告された、一般用医薬品が原因と疑われる副作用の数を円グラフで示したものである。"
   },
@@ -14401,7 +14401,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
       "散剤調剤",
       "軟膏混合"
     ],
-    "visual_content_type": "photograph"
+    "visual_content_type": "mixed"
   },
   {
     "id": "r101-332",
@@ -14657,7 +14657,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
       "規制区分",
       "向精神薬・麻薬管理"
     ],
-    "visual_content_type": "diagram_and_table"
+    "visual_content_type": "mixed"
   },
   {
     "id": "r101-337",

@@ -757,7 +757,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
       "老年化指数",
       "高齢化"
     ],
-    "visual_content_type": "equation"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r100-019",
@@ -2860,7 +2860,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
       "薬事制度",
       "医療制度"
     ],
-    "visual_content_type": "equation"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r100-080",
@@ -3625,7 +3625,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
       "有機化合物の分離",
       "pKa"
     ],
-    "visual_content_type": "structural_formula_with_flowchart"
+    "visual_content_type": "mixed"
   },
   {
     "id": "r100-102",
@@ -3813,7 +3813,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
       "求核置換反応",
       "求電子付加反応"
     ],
-    "visual_content_type": "reaction_mechanism"
+    "visual_content_type": "diagram"
   },
   {
     "id": "r100-105",
@@ -4776,7 +4776,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
       "酸化反応",
       "CYP"
     ],
-    "visual_content_type": "reaction_scheme"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r100-131",
@@ -7184,7 +7184,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
       "平衡定数",
       "プロスタグランジン"
     ],
-    "visual_content_type": "text_with_calculation",
+    "visual_content_type": "mixed",
     "linked_group": "r100-197-199",
     "linked_scenario": "アルプロスタジル注射液10 μgのリポ化製剤に関する連問"
   },
@@ -7249,7 +7249,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
       "分散体",
       "内圧"
     ],
-    "visual_content_type": "formula",
+    "visual_content_type": "structural_formula",
     "linked_group": "r100-197-199",
     "linked_scenario": "アルプロスタジル注射液10 μgのリポ化製剤に関する連問"
   },
@@ -7678,7 +7678,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
       "代謝活性化",
       "不可逆的阻害"
     ],
-    "visual_content_type": "reaction_scheme_and_structural_formula"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r100-208",
@@ -7800,7 +7800,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
       "ペプチド",
       "タンパク質構造"
     ],
-    "visual_content_type": "peptide_sequence"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r100-210",
@@ -7986,7 +7986,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
       "基質",
       "医薬品の作用機序"
     ],
-    "visual_content_type": "structural_formula_table"
+    "visual_content_type": "table"
   },
   {
     "id": "r100-214",
@@ -8107,7 +8107,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
       "漢方薬",
       "アントラキノン"
     ],
-    "visual_content_type": "structural_formula_and_text"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r100-216",

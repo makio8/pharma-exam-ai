@@ -270,7 +270,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
       "共役系",
       "環状化合物"
     ],
-    "visual_content_type": "chemical_structure"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r103-009",
@@ -1586,7 +1586,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
       "薬物代謝",
       "酵素阻害"
     ],
-    "visual_content_type": "chemical_structure"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r103-046",
@@ -3759,7 +3759,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
       "フルクトース1,6-ビスリン酸",
       "糖リン酸"
     ],
-    "visual_content_type": "chemical_structure"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r103-107",
@@ -3828,7 +3828,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
       "構造決定",
       "芳香族化合物"
     ],
-    "visual_content_type": "spectrum"
+    "visual_content_type": "graph"
   },
   {
     "id": "r103-108",
@@ -4802,7 +4802,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
       "カーバメート系",
       "衛生化学"
     ],
-    "visual_content_type": "chemical_structure"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r103-134",
@@ -7592,7 +7592,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
       "総合感冒薬",
       "リボフラビン"
     ],
-    "visual_content_type": "chemical_structure",
+    "visual_content_type": "structural_formula",
     "linked_scenario": "患者情報は前問から続く連問形式"
   },
   {
@@ -7719,7 +7719,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
       "レボドパ",
       "カルビドパ"
     ],
-    "visual_content_type": "chemical_structure"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r103-210",
@@ -7826,7 +7826,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
       "小児",
       "服薬指導"
     ],
-    "visual_content_type": "none",
+    "visual_content_type": "text_only",
     "linked_group": "r103-210-211",
     "linked_scenario": "6歳男児。体重20kg。身長120cm。扁桃炎と診断され、この男児の処方箋を、母親が薬局に持参した（処方1）。（処方1）セフジニル細粒10% 1回0.5g（1日1.5g）1日3回 朝昼夕食後 5日分。セフジニル10%の添付文書には、「通常、小児に対してセフジニルとして1日量9〜18mg（力価）/kgを3回に分割して経口投与する」と記載されている。お薬手帳を確認したところ、男児は鉄欠乏性貧血で溶性ピロリン酸第二鉄を服用していることが判明した（処方2）。（処方2）溶性ピロリン酸第二鉄シロップ5% 1回4mL（1日12mL）1日3回 朝昼夕食後 14日分"
   },
@@ -7940,7 +7940,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
       "プロトンポンプ阻害薬",
       "代謝活性化"
     ],
-    "visual_content_type": "chemical_reaction_scheme"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r103-214",
@@ -8230,7 +8230,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
       "服薬指導",
       "大腸内視鏡検査"
     ],
-    "visual_content_type": "none",
+    "visual_content_type": "text_only",
     "linked_group": "r103-218-219",
     "linked_scenario": "50歳男性。糖尿病（グリメピリド錠にて加療中）。10年前にS状結腸がんI期T1軽度浸潤と診断され、内視鏡的粘膜切除術（EMR）を受けた。定期検診のため、かかりつけ医を受診し、以下の投薬指示が出された。（投薬）経口腸管洗浄剤1袋（1袋を水に溶解して約2Lとし、溶解液とする）前日21時より絶食し、検査当日7時より溶解液2Lを1時間あたり約1Lの速度で経口投与。注：1袋を水に溶解して2Lとした溶解液の電解質濃度はNa+ 125mEq/L、K+ 10mEq/L、Cl- 35mEq/L、HCO3- 20mEq/L、SO4 2- 80mEq/Lである。pHは約8.0、浸透圧比は約1である。"
   },
@@ -8532,7 +8532,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
       "構造類似性",
       "ベンゾフェノン構造"
     ],
-    "visual_content_type": "chemical_structure"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r103-225",
@@ -8763,7 +8763,7 @@ export const EXAM_103_QUESTIONS: Question[] = [
       "Payneの式",
       "電解質異常"
     ],
-    "visual_content_type": "formula"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r103-229",
