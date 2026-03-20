@@ -351,7 +351,13 @@ export function PracticePage() {
                       <Button
                         type="link"
                         size="small"
-                        onClick={() => navigate(`/practice/${q.id}`)}
+                        onClick={() => {
+                          localStorage.setItem(
+                            'practice_session',
+                            JSON.stringify(filteredQuestions.map((fq) => fq.id)),
+                          )
+                          navigate(`/practice/${q.id}`)
+                        }}
                       >
                         解く
                       </Button>

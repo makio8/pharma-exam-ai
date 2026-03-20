@@ -33,6 +33,8 @@ import type { ConfidenceLevel } from '../types/question'
 import type { CardFormat } from '../types/flashcard'
 import { CARD_FORMAT_CONFIG } from '../types/flashcard'
 import { useFlashCards } from '../hooks/useFlashCards'
+import { useLinkedQuestions } from '../hooks/useLinkedQuestions'
+import { LinkedQuestionViewer } from '../components/LinkedQuestionViewer'
 
 const { Text, Paragraph } = Typography
 const { TextArea } = Input
@@ -66,17 +68,31 @@ export function QuestionPage() {
   const sessionIds = useMemo<string[]>(() => {
     try {
       const raw = localStorage.getItem('practice_session')
-      if (!raw) return []
-      return JSON.parse(raw) as string[]
+      if (raw) {
+        const ids = JSON.parse(raw) as string[]
+        if (ids.length > 0) return ids
+      }
     } catch {
-      return []
+      // パースエラーは無視
     }
+    // フォールバック: 全問題のIDリスト（年度→問題番号順）
+    return ALL_QUESTIONS.map((q) => q.id)
   }, [])
 
-  const currentIndex = sessionIds.indexOf(questionId ?? '')
-  const prevId = currentIndex > 0 ? sessionIds[currentIndex - 1] : null
-  const nextId = currentIndex >= 0 && currentIndex < sessionIds.length - 1
-    ? sessionIds[currentIndex + 1]
+  const linkedGroup = useLinkedQuestions(questionId)
+
+  // 連問タブ等でセッション外の問題に遷移した場合のフォールバック
+  const effectiveIds = useMemo(() => {
+    if (questionId && !sessionIds.includes(questionId)) {
+      return ALL_QUESTIONS.map((q) => q.id)
+    }
+    return sessionIds
+  }, [sessionIds, questionId])
+
+  const currentIndex = effectiveIds.indexOf(questionId ?? '')
+  const prevId = currentIndex > 0 ? effectiveIds[currentIndex - 1] : null
+  const nextId = currentIndex >= 0 && currentIndex < effectiveIds.length - 1
+    ? effectiveIds[currentIndex + 1]
     : null
 
   // --- 回答状態 ---
@@ -231,6 +247,15 @@ export function QuestionPage() {
         <Tag>{question.subject}</Tag>
         <Tag color="default">{question.category}</Tag>
       </Space>
+
+      {/* 連問グループ表示 */}
+      {linkedGroup && (
+        <LinkedQuestionViewer
+          group={linkedGroup}
+          currentQuestionId={questionId ?? ''}
+          onNavigate={goToQuestion}
+        />
+      )}
 
       {/* 既存回答があれば表示 */}
       {existingResult && !isAnswered && (
