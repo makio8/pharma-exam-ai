@@ -89,7 +89,8 @@ interface VisionExtraction {
 
 interface VisionChoice {
   key: number                      // 1-5
-  text: string | null              // テキスト化可能ならテキスト、不可ならnull
+  text: string                     // テキスト化可能ならテキスト、不可なら""（空文字）
+                                   // ※ Choice.text: string との後方互換性を維持
   semantic_labels: string[]        // 意味ラベル（化合物名、概念名、特徴など）
   choice_type:
     | "text"                       // プレーンテキスト（「希釈する場合は...」）
@@ -135,11 +136,11 @@ interface VisionChoice {
   "visual_content_type": "structural_formula",
   "choices_extractable": false,
   "choices": [
-    {"key": 1, "text": null, "semantic_labels": ["2,3-ジブロモブタン", "Br置換", "メソ体候補"], "choice_type": "structural_formula"},
-    {"key": 2, "text": null, "semantic_labels": ["2,3-ジクロロブタン", "Cl置換"], "choice_type": "structural_formula"},
-    {"key": 3, "text": null, "semantic_labels": ["ブタン誘導体", "Me置換のみ"], "choice_type": "structural_formula"},
-    {"key": 4, "text": null, "semantic_labels": ["2-エチル-3-ヒドロキシブタン", "HO,Et置換"], "choice_type": "structural_formula"},
-    {"key": 5, "text": null, "semantic_labels": ["2-ヒドロキシ-3-メチルブタン", "HO,Me置換"], "choice_type": "structural_formula"}
+    {"key": 1, "text": "", "semantic_labels": ["2,3-ジブロモブタン", "Br置換", "メソ体候補"], "choice_type": "structural_formula"},
+    {"key": 2, "text": "", "semantic_labels": ["2,3-ジクロロブタン", "Cl置換"], "choice_type": "structural_formula"},
+    {"key": 3, "text": "", "semantic_labels": ["ブタン誘導体", "Me置換のみ"], "choice_type": "structural_formula"},
+    {"key": 4, "text": "", "semantic_labels": ["2-エチル-3-ヒドロキシブタン", "HO,Et置換"], "choice_type": "structural_formula"},
+    {"key": 5, "text": "", "semantic_labels": ["2-ヒドロキシ-3-メチルブタン", "HO,Me置換"], "choice_type": "structural_formula"}
   ],
   "confidence": 0.85,
   "notes": "構造式のIUPAC名は画像から推定。正式名称は化学DBで要検証"
@@ -280,7 +281,7 @@ src/types/
 ## 成功基準
 
 - [ ] 867問の画像余白が除去されている
-- [ ] 200-300問の choices が復元されている（choices_extractable: true）
+- [ ] 200問以上の choices が復元されている（choices_extractable: true）
 - [ ] 全867問に question_concepts と visual_content_type が付与されている
 - [ ] 全867問の choices に semantic_labels が付与されている
 - [ ] confidence < 0.7 の問題がリストアップされ、手動レビュー可能な状態

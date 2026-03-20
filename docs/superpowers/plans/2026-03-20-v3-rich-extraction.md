@@ -99,7 +99,7 @@ export interface VisionExtraction {
 
 export interface VisionChoice {
   key: number
-  text: string | null
+  text: string              // テキスト化不可なら""（空文字）。Choice.text: string と互換
   semantic_labels: string[]
   choice_type: ChoiceType
 }
@@ -760,7 +760,7 @@ interface VisionExtraction {
   choices_extractable: boolean
   choices: {
     key: number
-    text: string | null
+    text: string              // テキスト化不可なら""（空文字）。Choice.text: string と互換
     semantic_labels: string[]
     choice_type: string
   }[]
@@ -856,7 +856,7 @@ function main() {
       if (ext.choices_extractable && ext.confidence >= 0.7 && ext.choices.length > 0) {
         q.choices = ext.choices.map(c => ({
           key: c.key,
-          text: c.text ?? '',  // null → 空文字（型互換のため）
+          text: c.text || '',  // 空文字保証（型互換）
           semantic_labels: c.semantic_labels,
           choice_type: c.choice_type,
         }))
