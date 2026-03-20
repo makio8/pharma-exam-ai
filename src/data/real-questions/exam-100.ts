@@ -45,13 +45,61 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "物理",
     "category": "必須問題 - 問 2",
-    "question_text": "問 2 正逆反応とも一次反応で進行する反応を考える。\nA           B\nk ＝ 0.01min 、k ＝ 0.02min のとき、反応物Ａと生成物Ｂの割合は時間とと\nもにどのように変化するか。                             つ選べ。ただし、反応開始時の反応物Ａの割合を１\nとする。",
-    "choices": [],
+    "question_text": "正逆反応とも一次反応で進行する反応を考える。A ⇌ B（k1, k-1）k1 = 0.01 min⁻¹、k-1 = 0.02 min⁻¹のとき、反応物Aと生成物Bの割合は時間とともにどのように変化するか。1つ選べ。ただし、反応開始時の反応物Aの割合を1とする。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "Aが減少しBが増加、A平衡値約0.1"
+        ],
+        "choice_type": "graph"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "Aが減少しBが増加、A平衡値約0.2"
+        ],
+        "choice_type": "graph"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "Aが減少しBが増加、A平衡値約0.4"
+        ],
+        "choice_type": "graph"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "Bが増加しAが減少、交差あり、A平衡値約0.2"
+        ],
+        "choice_type": "graph"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "Bが大きく増加、A平衡値約0.2"
+        ],
+        "choice_type": "graph"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】可逆反応の平衡定数から平衡時の組成比を求める問題\n【正答の根拠】平衡定数K=k₁/k₋₁=0.01/0.02=0.5。[B]eq/[A]eq=0.5なので、[A]eq:[B]eq=2:1。初期[A]=1とすると、[A]eq≈0.67、[B]eq≈0.33に収束するグラフが正答。\n【他の選択肢】\n1. ✗ 平衡組成比が異なるグラフ\n2. ○ A=0.67、B=0.33に収束する正しいグラフ（正答）\n3. ✗ 平衡組成比が異なるグラフ\n4. ✗ 平衡組成比が異なるグラフ\n5. ✗ 平衡組成比が異なるグラフ\n【覚え方💡】K=k正/k逆。K<1なら原系（A）が多く残る。K>1なら生成系（B）が多い。分数の比で平衡組成が決まる！\n【関連知識】正逆反応が一次反応の場合、平衡定数K=k₁/k₋₁の関係が成り立つ",
     "tags": [],
     "image_url": "/images/questions/100/q002.png",
-    "question_text_original": "問 2 正逆反応とも一次反応で進行する反応を考える。\nA           B\nk ＝ 0.01min 、k ＝ 0.02min のとき、反応物Ａと生成物Ｂの割合は時間とと\nもにどのように変化するか。                             つ選べ。ただし、反応開始時の反応物Ａの割合を１\nとする。\n1                     2                       3                     4                     5\n反応物と生成物の割合\n1                     1                       1                     1                     1\nＡ                                                                                         Ｂ\n0.8                   0.8                     0.8                   0.8                   0.8\nＡ                       Ａ                     Ｂ\n0.6                   0.6                     0.6                   0.6                   0.6\n0.4                   0.4                     0.4                   0.4                   0.4\nＢ                     Ａ\n0.2                   0.2\nＢ       0.2                   0.2                   0.2\nＢ                                                                                         Ａ\n0                     0                       0                     0                     0\n0       100   200     0       100   200       0       100   200     0       100   200     0       100   200\n反応時間（分)"
+    "question_text_original": "問 2 正逆反応とも一次反応で進行する反応を考える。\nA           B\nk ＝ 0.01min 、k ＝ 0.02min のとき、反応物Ａと生成物Ｂの割合は時間とと\nもにどのように変化するか。                             つ選べ。ただし、反応開始時の反応物Ａの割合を１\nとする。\n1                     2                       3                     4                     5\n反応物と生成物の割合\n1                     1                       1                     1                     1\nＡ                                                                                         Ｂ\n0.8                   0.8                     0.8                   0.8                   0.8\nＡ                       Ａ                     Ｂ\n0.6                   0.6                     0.6                   0.6                   0.6\n0.4                   0.4                     0.4                   0.4                   0.4\nＢ                     Ａ\n0.2                   0.2\nＢ       0.2                   0.2                   0.2\nＢ                                                                                         Ａ\n0                     0                       0                     0                     0\n0       100   200     0       100   200       0       100   200     0       100   200     0       100   200\n反応時間（分)",
+    "question_concepts": [
+      "反応速度論",
+      "一次反応",
+      "可逆反応",
+      "化学平衡"
+    ],
+    "visual_content_type": "graph"
   },
   {
     "id": "r100-003",
@@ -162,12 +210,59 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "化学",
     "category": "必須問題 - 問 6",
-    "question_text": "1828年に、ウェーラー（Wöhler）によって無機化合物（シアン酸アンモニウム：NH4OCN）から初めて合成された有機化合物はどれか。１つ選べ。",
-    "choices": [],
+    "question_text": "1828年に、ウェーラー（Wöhler）によって無機化合物（シアン酸アンモニウム：NH4OCN）から初めて合成された有機化合物はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "酢酸"
+        ],
+        "choice_type": "structural_formula"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "ホルムアルデヒド"
+        ],
+        "choice_type": "structural_formula"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "N,N-ジメチルホルムアミド"
+        ],
+        "choice_type": "structural_formula"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "尿素"
+        ],
+        "choice_type": "structural_formula"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "酢酸メチル"
+        ],
+        "choice_type": "structural_formula"
+      }
+    ],
     "correct_answer": 4,
     "explanation": "【ポイント】有機化学史上初の有機化合物人工合成（ウェーラー合成）を問う問題\n【正答の根拠】1828年、ウェーラーがシアン酸アンモニウム（NH₄OCN、無機化合物）を加熱して尿素（CO(NH₂)₂）を合成した。これにより無機物から有機物が合成できることが証明された。\n【他の選択肢】\n1. ✗ 選択肢の構造は尿素ではない\n2. ✗ 選択肢の構造は尿素ではない\n3. ✗ 選択肢の構造は尿素ではない\n4. ○ 尿素CO(NH₂)₂（正答）\n5. ✗ 選択肢の構造は尿素ではない\n【覚え方💡】「ウェーラーが尿素を作った」→有機化学の夜明け。「ウェー（尿）ラー」で尿素と結びつける！\n【関連知識】これ以前は「生気説」（有機物は生物のみが作れる）が信じられていた",
     "tags": [],
-    "image_url": "/images/questions/100/q006.png"
+    "image_url": "/images/questions/100/q006.png",
+    "question_concepts": [
+      "有機化学史",
+      "ウェーラー合成",
+      "尿素"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r100-007",
@@ -176,13 +271,61 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "化学",
     "category": "必須問題 - 問 7",
-    "question_text": "問 7 非共有電子対（孤立電子対）が sp 混成軌道に収容されているのはどれか。\nつ選べ。",
-    "choices": [],
+    "question_text": "非共有電子対（孤立電子対）がsp²混成軌道に収容されているのはどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "アセトニトリル"
+        ],
+        "choice_type": "structural_formula"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "フラン"
+        ],
+        "choice_type": "structural_formula"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "アニリン"
+        ],
+        "choice_type": "structural_formula"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "ピロール"
+        ],
+        "choice_type": "structural_formula"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "トリエチルアミン"
+        ],
+        "choice_type": "structural_formula"
+      }
+    ],
     "correct_answer": 2,
     "explanation": "【ポイント】非共有電子対がsp²混成軌道に収容されている化合物を問う問題\n【正答の根拠】フランの酸素原子はsp²混成軌道をとり、2対の非共有電子対のうち1対はsp²混成軌道に、もう1対は芳香族性に関与するp軌道に収容されている。\n【他の選択肢】\n1. ✗ アセトニトリルのN：sp混成軌道→非共有電子対はsp軌道に収容\n2. ○ フランのO：sp²混成→非共有電子対の一方がsp²軌道に収容（正答）\n3. ✗ アニリンのN：共鳴時sp²→非共有電子対はp軌道に収容\n4. ✗ ピロールのN：sp²混成→非共有電子対はp軌道（芳香族性に関与）\n5. ✗ トリエチルアミンのN：sp³混成→非共有電子対はsp³軌道\n【覚え方💡】芳香族ヘテロ環の判定法：「ピロール型＝電子対がp軌道で芳香族性に参加」「ピリジン型＝電子対がsp²で芳香族性に不参加」。フランはピリジン型の電子対を1つ持つ\n【関連知識】Hückel則（4n+2個のπ電子）と混成軌道の関係を整理しておく",
     "tags": [],
     "image_url": "/images/questions/100/q007.png",
-    "question_text_original": "問 7 非共有電子対（孤立電子対）が sp 混成軌道に収容されているのはどれか。\nつ選べ。\nNH2\nCH2CH3\nCH3CN                                                                N\nO                                 N\nH            H3CH2C   CH2CH3\n1            2            3                    4                      5\n⎜ 2⎜"
+    "question_text_original": "問 7 非共有電子対（孤立電子対）が sp 混成軌道に収容されているのはどれか。\nつ選べ。\nNH2\nCH2CH3\nCH3CN                                                                N\nO                                 N\nH            H3CH2C   CH2CH3\n1            2            3                    4                      5\n⎜ 2⎜",
+    "question_concepts": [
+      "混成軌道",
+      "非共有電子対",
+      "sp2混成",
+      "有機化学"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r100-008",
@@ -191,13 +334,61 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "化学",
     "category": "必須問題 - 問 8",
-    "question_text": "問 8 メソ化合物はどれか。            つ選べ。",
-    "choices": [],
+    "question_text": "メソ化合物はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "",
+        "semantic_labels": [
+          "2,3-ジブロモブタン（meso体候補）"
+        ],
+        "choice_type": "structural_formula"
+      },
+      {
+        "key": 2,
+        "text": "",
+        "semantic_labels": [
+          "2,3-ジクロロブタン"
+        ],
+        "choice_type": "structural_formula"
+      },
+      {
+        "key": 3,
+        "text": "",
+        "semantic_labels": [
+          "2,3-ジメチルブタン"
+        ],
+        "choice_type": "structural_formula"
+      },
+      {
+        "key": 4,
+        "text": "",
+        "semantic_labels": [
+          "3-エチル-4-メチルヘキサン-3,4-ジオール"
+        ],
+        "choice_type": "structural_formula"
+      },
+      {
+        "key": 5,
+        "text": "",
+        "semantic_labels": [
+          "3-メチルブタン-2,3-ジオール"
+        ],
+        "choice_type": "structural_formula"
+      }
+    ],
     "correct_answer": 5,
     "explanation": "【ポイント】メソ化合物の定義と判別を問う問題\n【正答の根拠】メソ化合物は複数の不斉炭素を持ちながら分子内に対称面があるため、光学活性を示さない化合物。選択肢5が不斉炭素2つ＋分子内対称面を持つメソ化合物。\n【他の選択肢】\n1. ✗ 不斉炭素2つあるが分子内対称面なし（光学活性体）\n2. ✗ 不斉炭素2つあるが分子内対称面なし（光学活性体）\n3. ✗ 不斉炭素を持たない（メソ化合物の定義を満たさない）\n4. ✗ 不斉炭素2つあるが分子内対称面なし（光学活性体）\n5. ○ 不斉炭素2つ＋分子内対称面あり→メソ化合物（正答）\n【覚え方💡】メソの判定3ステップ：①不斉炭素が複数あるか？→②分子を半分に折って対称面があるか？→③両方YESならメソ！\n【関連知識】メソ酒石酸が代表例。メソ体はラセミ体と異なり分割できない",
     "tags": [],
     "image_url": "/images/questions/100/q008.png",
-    "question_text_original": "問 8 メソ化合物はどれか。            つ選べ。\nBr       Br    Cl       Me      Me       Me     HO       Et   Me       OH\nMe       Me    Me       Cl      Me       Me     Me       Me   HO       Me\n1              2                3               4             5"
+    "question_text_original": "問 8 メソ化合物はどれか。            つ選べ。\nBr       Br    Cl       Me      Me       Me     HO       Et   Me       OH\nMe       Me    Me       Cl      Me       Me     Me       Me   HO       Me\n1              2                3               4             5",
+    "question_concepts": [
+      "立体化学",
+      "メソ化合物",
+      "不斉炭素",
+      "対称面"
+    ],
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r100-009",
@@ -512,13 +703,61 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "衛生",
     "category": "必須問題 - 問 18",
-    "question_text": "問 18 老年化指数を表す式はどれか。        つ選べ。",
-    "choices": [],
+    "question_text": "老年化指数を表す式はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "老年人口 / 生産年齢人口 × 100",
+        "semantic_labels": [
+          "老年人口依存率"
+        ],
+        "choice_type": "equation"
+      },
+      {
+        "key": 2,
+        "text": "老年人口 / 総人口 × 100",
+        "semantic_labels": [
+          "高齢化率"
+        ],
+        "choice_type": "equation"
+      },
+      {
+        "key": 3,
+        "text": "老年人口 / 年少人口 × 100",
+        "semantic_labels": [
+          "老年化指数"
+        ],
+        "choice_type": "equation"
+      },
+      {
+        "key": 4,
+        "text": "年少人口 / 老年人口 × 100",
+        "semantic_labels": [
+          "年少化指数"
+        ],
+        "choice_type": "equation"
+      },
+      {
+        "key": 5,
+        "text": "(年少人口 + 老年人口) / 生産年齢人口 × 100",
+        "semantic_labels": [
+          "従属人口指数"
+        ],
+        "choice_type": "equation"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】老年化指数の計算式を問う問題\n【正答の根拠】老年化指数＝老年人口÷年少人口×100。高齢化の進行度を年少人口との比で表す指標。\n【他の選択肢】\n1. ✗ 老年人口÷生産年齢人口×100＝老年人口指数\n2. ✗ 老年人口÷総人口×100＝老年人口割合\n3. ○ 老年人口÷年少人口×100＝老年化指数（正答）\n4. ✗ 該当する指標名なし\n5. ✗ （年少人口＋老年人口）÷生産年齢人口×100＝従属人口指数\n【覚え方💡】「老年化指数＝お年寄り÷子ども」。老年人口割合は「÷総人口」。指数と割合を混同しない！\n【関連知識】年少人口：0-14歳、生産年齢人口：15-64歳、老年人口：65歳以上",
     "tags": [],
     "image_url": "/images/questions/100/q018.png",
-    "question_text_original": "問 18 老年化指数を表す式はどれか。        つ選べ。\n老年人口                       老年人口\n1           × 100            2        × 100\n生産年齢人口                      総人口\n老年人口                        年少人口\n3         × 100              4        × 100\n年少人口                        老年人口\n年少人口 ＋ 老年人口\n5                × 100\n生産年齢人口"
+    "question_text_original": "問 18 老年化指数を表す式はどれか。        つ選べ。\n老年人口                       老年人口\n1           × 100            2        × 100\n生産年齢人口                      総人口\n老年人口                        年少人口\n3         × 100              4        × 100\n年少人口                        老年人口\n年少人口 ＋ 老年人口\n5                × 100\n生産年齢人口",
+    "question_concepts": [
+      "衛生学",
+      "人口統計",
+      "老年化指数",
+      "高齢化"
+    ],
+    "visual_content_type": "equation"
   },
   {
     "id": "r100-019",
@@ -2567,13 +2806,61 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "法規・制度・倫理",
     "category": "必須問題 - 問 79",
-    "question_text": "問 79 医薬分業率（％）を表す計算式はどれか。       つ選べ。",
-    "choices": [],
+    "question_text": "医薬分業率（%）を表す計算式はどれか。1つ選べ。",
+    "choices": [
+      {
+        "key": 1,
+        "text": "薬局への処方せん枚数 / 外来患者数 × 100",
+        "semantic_labels": [
+          "処方せん枚数対外来患者数"
+        ],
+        "choice_type": "equation"
+      },
+      {
+        "key": 2,
+        "text": "外来処方せん件数 / 外来患者数 × 100",
+        "semantic_labels": [
+          "外来処方せん率"
+        ],
+        "choice_type": "equation"
+      },
+      {
+        "key": 3,
+        "text": "薬局への処方せん枚数 / 外来処方件数 × 100",
+        "semantic_labels": [
+          "医薬分業率"
+        ],
+        "choice_type": "equation"
+      },
+      {
+        "key": 4,
+        "text": "薬局への処方せん枚数 / (外来処方件数 + 入院処方件数) × 100",
+        "semantic_labels": [
+          "薬局処方割合（全処方対比）"
+        ],
+        "choice_type": "equation"
+      },
+      {
+        "key": 5,
+        "text": "処方せん発行医療機関数 / 全医療機関数 × 100",
+        "semantic_labels": [
+          "処方せん発行機関割合"
+        ],
+        "choice_type": "equation"
+      }
+    ],
     "correct_answer": 3,
     "explanation": "【ポイント】医薬分業率の計算式\n【正答の根拠】医薬分業率＝院外処方せん枚数÷（院外処方せん枚数＋院内投薬を含む全処方件数）×100。外来患者のみ対象。\n【他の選択肢】\n1. ✗ 該当しない計算式\n2. ✗ 該当しない計算式\n3. ○ 正しい計算式（正答）\n4. ✗ 該当しない計算式\n5. ✗ 該当しない計算式\n【覚え方💡】分業率＝「院外処方せん枚数÷全投薬に対する処方件数×100」。入院は含まない\n【関連知識】日本の医薬分業率は約75%以上に達している",
     "tags": [],
     "image_url": "/images/questions/100/q079.png",
-    "question_text_original": "問 79 医薬分業率（％）を表す計算式はどれか。       つ選べ。\n薬局への処方せん枚数\n1              × 100\n外来患者数\n外来処方せん件数\n2            × 100\n外来患者数\n薬局への処方せん枚数\n3              × 100\n外来処方件数\n薬局への処方せん枚数\n4                   × 100\n外来処方件数 ＋ 入院処方件数\n処方せん発行医療機関数\n5               × 100\n全医療機関数"
+    "question_text_original": "問 79 医薬分業率（％）を表す計算式はどれか。       つ選べ。\n薬局への処方せん枚数\n1              × 100\n外来患者数\n外来処方せん件数\n2            × 100\n外来患者数\n薬局への処方せん枚数\n3              × 100\n外来処方件数\n薬局への処方せん枚数\n4                   × 100\n外来処方件数 ＋ 入院処方件数\n処方せん発行医療機関数\n5               × 100\n全医療機関数",
+    "question_concepts": [
+      "医薬分業",
+      "処方せん",
+      "薬事制度",
+      "医療制度"
+    ],
+    "visual_content_type": "equation"
   },
   {
     "id": "r100-080",
@@ -3306,7 +3593,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 3,
         "text": "",
         "semantic_labels": [
-          "カテコール"
+          "レゾルシノール"
         ],
         "choice_type": "structural_formula"
       },
@@ -3322,7 +3609,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 5,
         "text": "",
         "semantic_labels": [
-          "カルバゾール"
+          "ジフェニルアミン"
         ],
         "choice_type": "structural_formula"
       }
@@ -3333,11 +3620,12 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "image_url": "/images/questions/100/q101.png",
     "question_text_original": "問 101 有機化合物１〜５がそれぞれ 100mg 溶解しているジエチルエーテル（エーテ\nル）溶液 100mL について、エーテルと同体積の各水溶液を用いて、分液ロートに\nよる以下の抽出操作を行った。主としてエーテル層Ａに含まれる有機化合物はどれ\nか。   つ選べ。\n有機化合物１〜５を含むジエチルエーテル溶液\n飽和 NaHCO 水溶液を用いる分液操作\n水層                  エーテル層\n2mol/L NaOH 水溶液を用いる分液操作\n水層                       エーテル層\n2mol/L 塩酸を用いる分液操作\n水層                      エーテル層Ａ\nH\nCO2H        OH                          NH2        N\nOH\nHO\n1       2              3            4              5\n⎜ 8⎜",
     "question_concepts": [
-      "分液抽出",
-      "酸塩基分離",
-      "有機化合物の酸性・塩基性"
+      "分液操作",
+      "酸塩基抽出",
+      "有機化合物の分離",
+      "pKa"
     ],
-    "visual_content_type": "flowchart_and_structural_formula"
+    "visual_content_type": "structural_formula_with_flowchart"
   },
   {
     "id": "r100-102",
@@ -3368,7 +3656,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 3,
         "text": "",
         "semantic_labels": [
-          "1,2-ジオール体"
+          "cis-2-メチルシクロペンタン-1,2-ジオール"
         ],
         "choice_type": "structural_formula"
       },
@@ -3376,7 +3664,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 4,
         "text": "",
         "semantic_labels": [
-          "1-メチルシクロペンタノール"
+          "trans-2-メチルシクロペンタン-1,3-ジオール"
         ],
         "choice_type": "structural_formula"
       },
@@ -3384,7 +3672,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 5,
         "text": "",
         "semantic_labels": [
-          "2-メチルシクロペンタノール異性体"
+          "cis-3-メチルシクロペンタン-1,2-ジオール"
         ],
         "choice_type": "structural_formula"
       }
@@ -3397,9 +3685,10 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_concepts": [
       "ヒドロホウ素化",
       "酸化反応",
-      "立体化学"
+      "立体化学",
+      "anti-Markovnikov付加"
     ],
-    "visual_content_type": "reaction_scheme_and_structural_formula"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r100-103",
@@ -3408,13 +3697,13 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "section": "理論",
     "subject": "化学",
     "category": "一般 理論問題 - 問 103",
-    "question_text": "カルボニル化合物Aをアルケンcに変換するのに必要な試薬Bはどれか。1つ選べ。",
+    "question_text": "カルボニル化合物AをアルケンCに変換するのに必要な試薬Bはどれか。1つ選べ。",
     "choices": [
       {
         "key": 1,
         "text": "",
         "semantic_labels": [
-          "ホスホニウム塩（分岐型）"
+          "(C6H5)3P⁺-C(=CCH2CH3)(H)(CH2CH3) Br⁻"
         ],
         "choice_type": "structural_formula"
       },
@@ -3422,7 +3711,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 2,
         "text": "",
         "semantic_labels": [
-          "メチルトリフェニルホスホニウム塩"
+          "(C6H5)3P⁺-CH2CH3 Br⁻"
         ],
         "choice_type": "structural_formula"
       },
@@ -3430,7 +3719,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 3,
         "text": "",
         "semantic_labels": [
-          "エチルトリフェニルホスホニウム塩"
+          "(C6H5)3P⁺-CHCH2CH3(CH2CH3) Br⁻"
         ],
         "choice_type": "structural_formula"
       },
@@ -3438,7 +3727,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 4,
         "text": "",
         "semantic_labels": [
-          "ビニルホスホニウム塩"
+          "(C6H5)3P⁺-C(=CHCH2CH3)(H) Br⁻"
         ],
         "choice_type": "structural_formula"
       },
@@ -3446,7 +3735,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 5,
         "text": "",
         "semantic_labels": [
-          "ブチルトリフェニルホスホニウム塩"
+          "(C6H5)3P⁺-CH2CH2CH3 Br⁻"
         ],
         "choice_type": "structural_formula"
       }
@@ -3458,10 +3747,10 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text_original": "問 103 カルボニル化合物ＡをアルケンＣに変換するのに必要な試薬Ｂはどれか。                                                                   つ\n選べ。\nＢ\nCH3CH2CH2CH2Li\nO                     ホスホニウムイリド                   CH3CH2C CHCH2CH3\nCH3CH2            CH2CH3                                                     CH2CH3\nＡ                                                                Ｃ\n＋                                            ＋                                 ＋\n(C6H5)3P C CCH2CH3                        (C6H5)3P CH2CH3                       (C6H5)3P CHCH2CH3\n−                                            −                                   −\nBr       H CH2CH3                            Br                                Br       CH2CH3\n1                                        2                                     3\n＋                                          ＋\n(C6H5)3P C CHCH2CH3                          (C6H5)3P CH2CH2CH3\n−                                          −\nBr       H                                 Br\n4                                          5\n⎜ 9⎜",
     "question_concepts": [
       "Wittig反応",
-      "ホスホニウムイリド",
-      "カルボニル化合物"
+      "ホスホニウム塩",
+      "アルケン合成"
     ],
-    "visual_content_type": "reaction_scheme_and_structural_formula"
+    "visual_content_type": "structural_formula"
   },
   {
     "id": "r100-104",
@@ -3476,8 +3765,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 1,
         "text": "",
         "semantic_labels": [
-          "酢酸のエステル化",
-          "求核アシル置換"
+          "酢酸のエステル化（求核アシル置換）"
         ],
         "choice_type": "reaction_mechanism"
       },
@@ -3485,8 +3773,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 2,
         "text": "",
         "semantic_labels": [
-          "SN2反応",
-          "エーテル生成"
+          "tert-ブチルブロミドのSN2反応"
         ],
         "choice_type": "reaction_mechanism"
       },
@@ -3494,8 +3781,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 3,
         "text": "",
         "semantic_labels": [
-          "ニトロ化",
-          "芳香族求電子置換"
+          "ニトロベンゼンの求電子芳香族置換"
         ],
         "choice_type": "reaction_mechanism"
       },
@@ -3503,8 +3789,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 4,
         "text": "",
         "semantic_labels": [
-          "芳香族求核置換",
-          "アミノ化"
+          "クロロベンゼンの求核芳香族置換"
         ],
         "choice_type": "reaction_mechanism"
       },
@@ -3512,8 +3797,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 5,
         "text": "",
         "semantic_labels": [
-          "SN1反応",
-          "ハロゲン化"
+          "ネオペンタンの塩素化（ラジカル反応）"
         ],
         "choice_type": "reaction_mechanism"
       }
@@ -3525,9 +3809,9 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text_original": "問 104 電子移動を示す矢印（細い矢印）で記した機構が主となって、実際に進行し生\n成物が得られる反応はどれか。                                 つ選べ。\nO                                              −                                       O\n−                          ：O\n1         C              ：OCH3                                                                   C                    −\nH3C       OH                               H3C C OCH3                                H3C         OCH3 ＋         OH\nOH\n−\n：Br\nH               H3C                             H   CH3                                    CH3\nH3C                                   ＋CH3                                    CH3\n2    O：                C Br                           O C                                    O C     ＋              HBr\nH              H3C                              H        CH3                             H       CH3\n−                       −                      −                      −\nO                 O                    O                       O                        O\n＋             ＋ H  ＋                  H ＋                     H ＋                        ＋\nN                 N                    N                       N                        N\n3                  O\nO                       O                      O                      O         ＋\n＋ H\n＋                                ＋\nCl             −\nNH2\n4                        ：NH2\n−\n＋ Cl\nH Cl\nCH3                                       CH3                                              CH3\nCl Cl\n5 HC C H                                      H3C C\n＋\n：Cl\n−\nH3C C Cl\nCH3                                       CH3                                              CH3\n⎜ 10⎜",
     "question_concepts": [
       "反応機構",
+      "電子移動",
       "求核置換反応",
-      "求核付加反応",
-      "電子移動"
+      "求電子付加反応"
     ],
     "visual_content_type": "reaction_mechanism"
   },
@@ -3544,8 +3828,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 1,
         "text": "",
         "semantic_labels": [
-          "ホスホマイシン",
-          "リン酸エステル"
+          "オメプラゾール"
         ],
         "choice_type": "structural_formula"
       },
@@ -3553,8 +3836,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 2,
         "text": "",
         "semantic_labels": [
-          "プラバスタチン",
-          "HMG-CoA還元酵素阻害薬"
+          "クラリスロマイシン"
         ],
         "choice_type": "structural_formula"
       },
@@ -3562,8 +3844,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 3,
         "text": "",
         "semantic_labels": [
-          "フルオロウラシル",
-          "代謝拮抗薬"
+          "フルオロウラシル"
         ],
         "choice_type": "structural_formula"
       },
@@ -3571,8 +3852,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 4,
         "text": "",
         "semantic_labels": [
-          "スルファチアゾール",
-          "サルファ剤"
+          "セファゾリン"
         ],
         "choice_type": "structural_formula"
       },
@@ -3580,8 +3860,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 5,
         "text": "",
         "semantic_labels": [
-          "ペニシリン系",
-          "β-ラクタム"
+          "ペニシリン系抗菌薬"
         ],
         "choice_type": "structural_formula"
       }
@@ -3592,9 +3871,10 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "image_url": "/images/questions/100/q105.png",
     "question_text_original": "問 105 次の医薬品のうち、医薬品そのもの、または代謝物が、標的酵素の活性部位と\n共有結合を形成するのはどれか。                                  つ選べ。\nO                                           HO\nH2N                                                 O                     CO2Na\nH\nO H                 O     CH3                                       H OH\nH3C       O\nH H       H\nH3C       N                                             H3C H               CH3\nHH                          ・H3PO4\nH O                                                           H\nH3C               CH3                          HO\nH\n1                                           2\nH                                                                              H CO2K\nN     O                                     NH2 O O                      O\nNH2                                                       N        CH3\nN                  S                      H\nNH                               S        N    NH2                  N              CH3\nF                  H2N          N                                                          S\nS                                              H H\nO                                                                   O\n3                                    4                                   5",
     "question_concepts": [
-      "共有結合性阻害",
+      "共有結合形成",
+      "酵素阻害",
       "プロドラッグ",
-      "標的酵素"
+      "不可逆阻害"
     ],
     "visual_content_type": "structural_formula"
   },
@@ -4147,8 +4427,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 1,
         "text": "",
         "semantic_labels": [
-          "パラフェニレンジアミン系",
-          "アミノナフトール"
+          "パラローズアニリン系色素"
         ],
         "choice_type": "structural_formula"
       },
@@ -4156,8 +4435,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 2,
         "text": "",
         "semantic_labels": [
-          "アゾ色素",
-          "スルホン酸ナトリウム"
+          "アゾ色素（スルホン酸ナトリウム含有）"
         ],
         "choice_type": "structural_formula"
       },
@@ -4165,8 +4443,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 3,
         "text": "",
         "semantic_labels": [
-          "ローズベンガル",
-          "ヨウ素含有色素"
+          "ローズベンガル（ヨウ素含有色素）"
         ],
         "choice_type": "structural_formula"
       },
@@ -4174,8 +4451,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 4,
         "text": "",
         "semantic_labels": [
-          "フェノールフタレイン系",
-          "スルホン酸"
+          "インジゴ系色素"
         ],
         "choice_type": "structural_formula"
       },
@@ -4183,8 +4459,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 5,
         "text": "",
         "semantic_labels": [
-          "トリフェニルメタン系",
-          "アゾ色素"
+          "トリフェニルメタン系色素"
         ],
         "choice_type": "structural_formula"
       }
@@ -4198,7 +4473,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
       "食品添加物",
       "禁止着色料",
       "アゾ色素",
-      "食品衛生"
+      "衛生化学"
     ],
     "visual_content_type": "structural_formula"
   },
@@ -4453,8 +4728,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 1,
         "text": "",
         "semantic_labels": [
-          "四塩化炭素の脱塩素",
-          "ラジカル生成"
+          "四塩化炭素の脱ハロゲン化（ラジカル生成）"
         ],
         "choice_type": "reaction_scheme"
       },
@@ -4462,8 +4736,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 2,
         "text": "",
         "semantic_labels": [
-          "トルエンの水酸化",
-          "ベンジルアルコール"
+          "トルエンのベンジル位酸化"
         ],
         "choice_type": "reaction_scheme"
       },
@@ -4471,8 +4744,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 3,
         "text": "",
         "semantic_labels": [
-          "アセトアニリドのO-脱エチル化",
-          "フェノール生成"
+          "フェナセチンのO-脱アルキル化"
         ],
         "choice_type": "reaction_scheme"
       },
@@ -4480,8 +4752,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 4,
         "text": "",
         "semantic_labels": [
-          "マラチオンの加水分解",
-          "エステラーゼ"
+          "マラチオンのエステル加水分解"
         ],
         "choice_type": "reaction_scheme"
       },
@@ -4503,7 +4774,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
       "シトクロムP450",
       "薬物代謝",
       "酸化反応",
-      "脱ハロゲン化"
+      "CYP"
     ],
     "visual_content_type": "reaction_scheme"
   },
@@ -6794,13 +7065,13 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬剤",
     "category": "",
-    "question_text": "アルプロスタジル注射液10 μgは、以下の組成のリポ化製剤である。薬剤師が、医師に対して提供するアルプロスタジル注射液の情報として、正しいのはどれか。2つ選べ。",
+    "question_text": "アルプロスタジル注射液10 μgは、以下の組成のリポ化製剤である。（アルプロスタジル 10 μg、精製ダイズ油 200 mg、高度精製卵黄レシチン 36 mg、オレイン酸 4.8 mg、濃グリセリン 44.2 mg、pH調整剤）薬剤師が、医師に対して提供するアルプロスタジル注射液の情報として、正しいのはどれか。2つ選べ。",
     "choices": [
       {
         "key": 1,
         "text": "澄明な溶液である。",
         "semantic_labels": [
-          "製剤の外観"
+          "外観"
         ],
         "choice_type": "text"
       },
@@ -6808,7 +7079,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 2,
         "text": "凍結して保存する。",
         "semantic_labels": [
-          "保存条件"
+          "保存方法"
         ],
         "choice_type": "text"
       },
@@ -6816,8 +7087,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 3,
         "text": "5％ブドウ糖注射液に混和して、点滴静注することができる。",
         "semantic_labels": [
-          "配合変化",
-          "投与方法"
+          "配合変化"
         ],
         "choice_type": "text"
       },
@@ -6825,8 +7095,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 4,
         "text": "ポリ塩化ビニル製の輸液セットを用いる必要がある。",
         "semantic_labels": [
-          "輸液セット",
-          "吸着"
+          "輸液セット"
         ],
         "choice_type": "text"
       },
@@ -6834,8 +7103,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 5,
         "text": "病変部位に集積する性質をもつ。",
         "semantic_labels": [
-          "DDS",
-          "標的指向性"
+          "ターゲティング"
         ],
         "choice_type": "text"
       }
@@ -6846,14 +7114,14 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "image_url": "/images/questions/100/q197.png",
     "question_text_original": "問 197（実務）\nアルプロスタジル注射液 10μg は、以下の組成のリポ化製剤である。\nアルプロスタジル          10μg\n精製ダイズ油           200mg\n高度精製卵黄レシチン        36mg\nオレイン酸            4.8mg\n濃グリセリン           44.2mg\npH 調整剤\n薬剤師が、医師に対して提供するアルプロスタジル注射液の情報として、正しい\nのはどれか。        つ選べ。\n1 澄明な溶液である。\n2 凍結して保存する。\n3 ５％ブドウ糖注射液に混和して、点滴静注することができる。\n4 ポリ塩化ビニル製の輸液セットを用いる必要がある。\n5 病変部位に集積する性質をもつ。",
     "question_concepts": [
-      "アルプロスタジル",
       "リポ化製剤",
+      "アルプロスタジル",
       "注射剤",
-      "製剤学"
+      "脂肪乳剤"
     ],
-    "visual_content_type": "table_and_text",
+    "visual_content_type": "table",
     "linked_group": "r100-197-199",
-    "linked_scenario": "アルプロスタジル注射液"
+    "linked_scenario": "アルプロスタジル注射液10 μgのリポ化製剤に関する連問"
   },
   {
     "id": "r100-198",
@@ -6862,47 +7130,47 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "物理",
     "category": "",
-    "question_text": "注射用アルプロスタジルアルファデクス中のα-シクロデキストリンは、プロスタグランジンE1をモル比1:1で包接する。注射用アルプロスタジルアルファデクス（20 μg）を25℃、1 mL注射用水に溶解した。この時、65%のプロスタグランジンE1がα-シクロデキストリンから解離していた。プロスタグランジンE1のα-シクロデキストリンへの包接化の平衡定数（L·mol⁻¹）として最も近いのはどれか。1つ選べ。ただし、この注射用粉末にはプロスタグランジンE1が56.4 nmol、α-シクロデキストリンが685 nmol含まれるとする。",
+    "question_text": "注射用アルプロスタジルアルファデクス中のα-シクロデキストリンは、プロスタグランジンE1をモル比1:1で包接する。注射用アルプロスタジルアルファデクス（20 μg）を25℃、1 mL注射用水に溶解した。この時、65%のプロスタグランジンE1がα-シクロデキストリンから解離していた。プロスタグランジンE1のα-シクロデキストリンへの包接化の平衡定数（L・mol⁻¹）として最も近いのはどれか。1つ選べ。ただし、この注射用粉末にはプロスタグランジンE1が56.4 nmol、α-シクロデキストリンが685 nmol含まれるとする。",
     "choices": [
       {
         "key": 1,
-        "text": "8.1×10²",
+        "text": "8.1 × 10²",
         "semantic_labels": [
           "平衡定数"
         ],
-        "choice_type": "text"
+        "choice_type": "numeric"
       },
       {
         "key": 2,
-        "text": "9.0×10²",
+        "text": "9.0 × 10²",
         "semantic_labels": [
           "平衡定数"
         ],
-        "choice_type": "text"
+        "choice_type": "numeric"
       },
       {
         "key": 3,
-        "text": "9.0×10³",
+        "text": "9.0 × 10³",
         "semantic_labels": [
           "平衡定数"
         ],
-        "choice_type": "text"
+        "choice_type": "numeric"
       },
       {
         "key": 4,
-        "text": "8.1×10⁴",
+        "text": "8.1 × 10⁴",
         "semantic_labels": [
           "平衡定数"
         ],
-        "choice_type": "text"
+        "choice_type": "numeric"
       },
       {
         "key": 5,
-        "text": "9.0×10⁵",
+        "text": "9.0 × 10⁵",
         "semantic_labels": [
           "平衡定数"
         ],
-        "choice_type": "text"
+        "choice_type": "numeric"
       }
     ],
     "correct_answer": 1,
@@ -6912,13 +7180,13 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text_original": "問 198（物理・化学・生物）\n注射用アルプロスタジルアルファデクス中の α‑シクロデキストリンは、プロス\nタグランジン E をモル比 1：1で包接する。注射用アルプロスタジルアルファデク\nス（20μg）を 25℃、１mL 注射用水に溶解した。この時、65％のプロスタグラン\nジン E が α‑シクロデキストリンから解離していた。プロスタグランジン E の\nα‑シクロデキストリンへの包接化の平衡定数（L mol ）として最も近いのはどれ\nか。    つ 選 べ。た だ し、こ の 注 射 用 粉 末 に は プ ロ ス タ グ ラ ン ジ ン E が 56.4\nnmol、α‑シクロデキストリンが 685nmol 含まれるとする。\n1 8.1× 10       2 9.0× 10      3 9.0× 10\n4 8.1× 10       5 9.0× 10\n⎜ 2⎜",
     "question_concepts": [
       "シクロデキストリン",
-      "包接化",
+      "包接化合物",
       "平衡定数",
-      "計算問題"
+      "プロスタグランジン"
     ],
-    "visual_content_type": "text_only",
+    "visual_content_type": "text_with_calculation",
     "linked_group": "r100-197-199",
-    "linked_scenario": "アルプロスタジル注射液"
+    "linked_scenario": "アルプロスタジル注射液10 μgのリポ化製剤に関する連問"
   },
   {
     "id": "r100-199",
@@ -6927,47 +7195,47 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "薬剤",
     "category": "",
-    "question_text": "リポ化製剤であるアルプロスタジル注射液は、ダイズ油を分散体の主成分とする油滴分散体である。この分散体を球体としたとき、分散体の内圧は、外圧に対してどの程度高いか。最も近い値はどれか。1つ選べ。ただし、以下に示すヤング・ラプラスの式が成り立つとし、油滴分散体の直径は、約120 nm、分散体の主成分であるダイズ油の注射液界面に対する界面ギブズエネルギーは、25 mJ/m²とする。ただし、分散体中の界面活性剤の影響はないものとする。",
+    "question_text": "リポ化製剤であるアルプロスタジル注射液は、ダイズ油を分散体の主成分とする油滴分散体である。この分散体を球体としたとき、分散体の内圧は、外圧に対してどの程度高いか。最も近い値はどれか。1つ選べ。ただし、以下に示すヤング・ラプラスの式が成り立つとし、油滴分散体の直径は、約120 nm、分散体の主成分であるダイズ油の注射液界面に対する界面ギブズエネルギーは、25 mJ/m²とする。ただし、分散体中の界面活性剤の影響はないものとする。ΔP = γ・2/r",
     "choices": [
       {
         "key": 1,
-        "text": "8.3×10⁴ Pa",
+        "text": "8.3 × 10⁴ Pa",
         "semantic_labels": [
-          "圧力"
+          "圧力値"
         ],
-        "choice_type": "text"
+        "choice_type": "numeric"
       },
       {
         "key": 2,
-        "text": "1.7×10⁵ Pa",
+        "text": "1.7 × 10⁵ Pa",
         "semantic_labels": [
-          "圧力"
+          "圧力値"
         ],
-        "choice_type": "text"
+        "choice_type": "numeric"
       },
       {
         "key": 3,
-        "text": "4.2×10⁵ Pa",
+        "text": "4.2 × 10⁵ Pa",
         "semantic_labels": [
-          "圧力"
+          "圧力値"
         ],
-        "choice_type": "text"
+        "choice_type": "numeric"
       },
       {
         "key": 4,
-        "text": "8.3×10⁵ Pa",
+        "text": "8.3 × 10⁵ Pa",
         "semantic_labels": [
-          "圧力"
+          "圧力値"
         ],
-        "choice_type": "text"
+        "choice_type": "numeric"
       },
       {
         "key": 5,
-        "text": "1.7×10⁶ Pa",
+        "text": "1.7 × 10⁶ Pa",
         "semantic_labels": [
-          "圧力"
+          "圧力値"
         ],
-        "choice_type": "text"
+        "choice_type": "numeric"
       }
     ],
     "correct_answer": 4,
@@ -6981,9 +7249,9 @@ export const EXAM_100_QUESTIONS: Question[] = [
       "分散体",
       "内圧"
     ],
-    "visual_content_type": "equation_and_text",
+    "visual_content_type": "formula",
     "linked_group": "r100-197-199",
-    "linked_scenario": "アルプロスタジル注射液"
+    "linked_scenario": "アルプロスタジル注射液10 μgのリポ化製剤に関する連問"
   },
   {
     "id": "r100-200",
@@ -7114,13 +7382,13 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "section": "実践",
     "subject": "物理",
     "category": "",
-    "question_text": "血漿中ボリコナゾール濃度の定量に際し、下記の除タンパク操作を行った。「血漿試料に内標準物質、□、および酢酸エチルを加えて振とう・混和し、遠心分離を行って上層の有機層を回収する。溶媒を留去し、液体クロマトグラフィー用移動相に溶解して液体クロマトグラフィー／質量分析法（LC/MS）で分析する」□に入る最も適切な試薬はどれか。1つ選べ。",
+    "question_text": "血漿中ボリコナゾール濃度の定量に際し、下記の除タンパク操作を行った。「血漿試料に内標準物質、［　　　］、および酢酸エチルを加えて振とう・混和し、遠心分離を行って上層の有機層を回収する。溶媒を留去し、液体クロマトグラフィー用移動相に溶解して液体クロマトグラフィー／質量分析法（LC/MS）で分析する」。［　　　］に入る最も適切な試薬はどれか。1つ選べ。",
     "choices": [
       {
         "key": 1,
         "text": "希塩酸",
         "semantic_labels": [
-          "酸"
+          "酸性試薬"
         ],
         "choice_type": "text"
       },
@@ -7163,12 +7431,13 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "image_url": "/images/questions/100/q203.png",
     "question_text_original": "問 203（物理・化学・生物）\n血漿中ボリコナゾール濃度の定量に際し、下記の除タンパク操作を行った。\nに入る最も適切な試薬はどれか。           つ選べ。\nN\nF\nH    N\nN\nH3C        N\nOH       N\nF\nF              ボリコナゾール\n血漿試料に内標準物質、         、および酢酸エチルを加えて振とう・混和し、\n遠心分離を行って上層の有機層を回収する。溶媒を留去し、液体クロマトグラ\nフィー用移動相に溶解して液体クロマトグラフィー／質量分析法（LC/M S）で分\n析する」\n1 希塩酸\n2 エタノール\n3 エチレンジアミン四酢酸（EDTA）水溶液\n4 過酸化水素水\n5 飽和炭酸水素ナトリウム水溶液\n⎜ 7⎜\n問 204‑205 悪性リンパ腫の患者に対し、注射用シクロホスファミド水和物 950mg を\n500mL の生理食塩液に溶解し、90分間かけて点滴静注することになった。",
     "question_concepts": [
-      "LC/MS",
       "除タンパク",
+      "LC/MS",
       "ボリコナゾール",
-      "分析化学"
+      "TDM",
+      "前処理"
     ],
-    "visual_content_type": "structural_formula_and_text",
+    "visual_content_type": "structural_formula",
     "linked_group": "r100-203-205",
     "linked_scenario": "ボリコナゾール"
   },
@@ -7239,8 +7508,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 1,
         "text": "本薬物は難揮発性物質であるので、トリメチルシリル（TMS）化などの誘導体化が必要である。",
         "semantic_labels": [
-          "誘導体化",
-          "TMS化"
+          "誘導体化"
         ],
         "choice_type": "text"
       },
@@ -7248,8 +7516,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 2,
         "text": "本薬物は、大気圧イオン化法であるエレクトロスプレーイオン化（ESI）法によりイオン化される。",
         "semantic_labels": [
-          "ESI",
-          "イオン化法"
+          "ESIイオン化"
         ],
         "choice_type": "text"
       },
@@ -7257,8 +7524,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 3,
         "text": "塩素の安定同位体は、整数原子量が35と37のものがほぼ3:1で存在するため、本薬物の分子イオンピークをMとすると、質量数がM、M+2、M+4の3本のピークは、強度比約1:2:1で観測される。",
         "semantic_labels": [
-          "同位体パターン",
-          "塩素"
+          "塩素同位体パターン"
         ],
         "choice_type": "text"
       },
@@ -7266,8 +7532,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 4,
         "text": "本薬物の定量に重水素標識体を内標準物質として用いる際には、その放射性があるため、使用場所が制限される。",
         "semantic_labels": [
-          "重水素標識",
-          "内標準"
+          "重水素標識体"
         ],
         "choice_type": "text"
       },
@@ -7275,8 +7540,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "key": 5,
         "text": "本薬物のような低分子の測定では、タンデム型質量分析計を用い、プリカーサーイオン（前駆イオン）とそこから生成するプロダクトイオンを選択することで、薬物に対する選択性が向上する。",
         "semantic_labels": [
-          "タンデム質量分析",
-          "MRM"
+          "タンデム質量分析"
         ],
         "choice_type": "text"
       }
@@ -7289,10 +7553,10 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_concepts": [
       "シクロホスファミド",
       "LC/MS",
-      "質量分析",
-      "抗がん剤曝露"
+      "抗がん剤曝露",
+      "質量分析"
     ],
-    "visual_content_type": "structural_formula_and_text",
+    "visual_content_type": "structural_formula",
     "linked_group": "r100-203-205",
     "linked_scenario": "ボリコナゾール"
   },
