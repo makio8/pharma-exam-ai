@@ -397,11 +397,11 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "化学",
     "category": "必須問題 - 問 9",
-    "question_text": "問９　不対電子を1つもつのはどれか。１つ選べ。\n\n\t\n\nO\t\n−",
+    "question_text": "不対電子を1つもつのはどれか。１つ選べ。",
     "choices": [
       {
         "key": 1,
-        "text": "NO＋"
+        "text": "NO⁺"
       },
       {
         "key": 2,
@@ -409,15 +409,15 @@ export const EXAM_100_QUESTIONS: Question[] = [
       },
       {
         "key": 3,
-        "text": "N2"
+        "text": "N₂"
       },
       {
         "key": 4,
-        "text": "NO3"
+        "text": "NO₃⁻"
       },
       {
         "key": 5,
-        "text": "HNO3"
+        "text": "HNO₃"
       }
     ],
     "correct_answer": 2,

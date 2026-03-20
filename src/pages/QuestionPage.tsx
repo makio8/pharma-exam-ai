@@ -205,6 +205,7 @@ export function QuestionPage() {
     setIsCorrect(false)
     setConfidence('medium')
     navigate(`/practice/${id}`)
+    window.scrollTo(0, 0)
   }
 
   // --- 問題が見つからない場合 ---
@@ -248,14 +249,17 @@ export function QuestionPage() {
         <Tag color="default">{question.category}</Tag>
       </Space>
 
-      {/* 連問グループ表示 */}
+      {/* 連問グループ表示（エメリー方式: 1ページに全問縦並び） */}
       {linkedGroup && (
         <LinkedQuestionViewer
           group={linkedGroup}
           currentQuestionId={questionId ?? ''}
-          onNavigate={goToQuestion}
         />
       )}
+
+      {/* 連問の場合は以下の個別表示をスキップ（LinkedQuestionViewerが全問表示する） */}
+      {linkedGroup ? null : (
+      <>
 
       {/* 既存回答があれば表示 */}
       {existingResult && !isAnswered && (
@@ -458,6 +462,9 @@ export function QuestionPage() {
 
           <Divider />
         </>
+      )}
+
+      </>
       )}
 
       {/* ナビゲーション */}

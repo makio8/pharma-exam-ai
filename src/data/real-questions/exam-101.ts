@@ -11,7 +11,7 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "物理",
     "category": "必須問題 - 問 1",
-    "question_text": "同圧下で最も沸点の高いのはどれか。１つ選べ。\n\nO\t\nS",
+    "question_text": "同圧下で最も沸点の高いのはどれか。１つ選べ。",
     "choices": [
       {
         "key": 1,
@@ -27,11 +27,11 @@ export const EXAM_101_QUESTIONS: Question[] = [
       },
       {
         "key": 4,
-        "text": "H2"
+        "text": "H₂O"
       },
       {
         "key": 5,
-        "text": "H2"
+        "text": "H₂S"
       }
     ],
     "correct_answer": 4,
@@ -243,27 +243,27 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "化学",
     "category": "必須問題 - 問 7",
-    "question_text": "下線で示した元素の酸化数が＋2のものはどれか。１つ選べ。\n\nO3\nO2\t\n[Fe(CN)6]\t\nSO4\t\n2O",
+    "question_text": "下線で示した元素の酸化数が＋2のものはどれか。１つ選べ。",
     "choices": [
       {
         "key": 1,
-        "text": "Cr"
+        "text": "CrO₃"
       },
       {
         "key": 2,
-        "text": "Mn"
+        "text": "MnO₂"
       },
       {
         "key": 3,
-        "text": "K3"
+        "text": "K₃[Fe(CN)₆]"
       },
       {
         "key": 4,
-        "text": "Cu"
+        "text": "CuSO₄"
       },
       {
         "key": 5,
-        "text": "Ag"
+        "text": "Ag₂O"
       }
     ],
     "correct_answer": 4,
@@ -402,23 +402,27 @@ export const EXAM_101_QUESTIONS: Question[] = [
     "section": "必須",
     "subject": "化学",
     "category": "必須問題 - 問 10",
-    "question_text": "最も酸性度が高いのはどれか。１つ選べ。\n\nSH\t\nCO2H\t\nCO2H\t\n４  \nCH2OH",
+    "question_text": "最も酸性度が高いのはどれか。１つ選べ。",
     "choices": [
       {
         "key": 1,
-        "text": "CH3"
+        "text": "CH₃SH"
       },
       {
         "key": 2,
-        "text": "CF3"
+        "text": "CF₃CO₂H"
       },
       {
         "key": 3,
-        "text": "CH3"
+        "text": "CH₃CO₂H"
+      },
+      {
+        "key": 4,
+        "text": "フェノール"
       },
       {
         "key": 5,
-        "text": "CF3"
+        "text": "CF₃CH₂OH"
       }
     ],
     "correct_answer": 2,
