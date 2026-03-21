@@ -15,16 +15,21 @@ export function hasMultiSelectInstruction(questionText: string): boolean {
 }
 
 /**
- * 「Nつ選べ」のNを取得する（デフォルト1）
+ * 「Nつ選べ」のNを取得する
+ * correctAnswerが配列ならその長さをフォールバックに使う（画像問題でテキストに「つ選べ」がない場合）
  */
-export function getRequiredSelections(questionText: string): number {
+export function getRequiredSelections(questionText: string, correctAnswer?: number | number[]): number {
   const match = questionText.match(/([2-9２-９二三四五])[つ]選べ/)
-  if (!match) return 1
-  const num = match[1]
-  const kanjiMap: Record<string, number> = { '二': 2, '三': 3, '四': 4, '五': 5 }
-  if (kanjiMap[num]) return kanjiMap[num]
-  const halfWidth = num.replace(/[２-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xFEE0))
-  return parseInt(halfWidth) || 2
+  if (match) {
+    const num = match[1]
+    const kanjiMap: Record<string, number> = { '二': 2, '三': 3, '四': 4, '五': 5 }
+    if (kanjiMap[num]) return kanjiMap[num]
+    const halfWidth = num.replace(/[２-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xFEE0))
+    return parseInt(halfWidth) || 2
+  }
+  // フォールバック: correct_answerの配列長を使用（画像問題等でテキストに「つ選べ」がない場合）
+  if (Array.isArray(correctAnswer)) return correctAnswer.length
+  return 1
 }
 
 /**

@@ -146,7 +146,7 @@ export function LinkedQuestionViewer({ group }: Props) {
       {group.questions.map((q, _idx) => {
         const state = states[q.id] ?? { selectedAnswer: null, selectedAnswers: [], isAnswered: false, isCorrect: false }
         const multi = isMultiAnswer(q)
-        const requiredCount = multi ? getRequiredSelections(q.question_text) : 1
+        const requiredCount = multi ? getRequiredSelections(q.question_text, q.correct_answer) : 1
 
         return (
           <Card
@@ -170,7 +170,7 @@ export function LinkedQuestionViewer({ group }: Props) {
               <Space wrap>
                 <Tag color="purple" style={{ fontSize: 14, padding: '2px 8px' }}>問{q.question_number}</Tag>
                 <Tag>{q.subject}</Tag>
-                {hasMultiSelectInstruction(q.question_text) && <Tag color="orange">{getRequiredSelections(q.question_text)}つ選べ</Tag>}
+                {(hasMultiSelectInstruction(q.question_text) || multi) && <Tag color="orange">{getRequiredSelections(q.question_text, q.correct_answer)}つ選べ</Tag>}
               {state.isAnswered && (
                 state.isCorrect
                   ? <Tag color="success">正解</Tag>

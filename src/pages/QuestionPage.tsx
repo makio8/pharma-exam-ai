@@ -148,7 +148,7 @@ export function QuestionPage() {
 
   // 複数選択判定
   const multiAnswer = question ? isMultiAnswer(question) : false
-  const requiredCount = question ? getRequiredSelections(question.question_text) : 1
+  const requiredCount = question ? getRequiredSelections(question.question_text, question.correct_answer) : 1
 
   // questionId が変わったら startTime をリセット
   useEffect(() => {
@@ -305,7 +305,7 @@ export function QuestionPage() {
         <Text type="secondary">問{question.question_number}</Text>
         <Tag>{question.subject}</Tag>
         <Tag color="default">{question.category}</Tag>
-        {hasMultiSelectInstruction(question.question_text) && <Tag color="orange">{getRequiredSelections(question.question_text)}つ選べ</Tag>}
+        {(hasMultiSelectInstruction(question.question_text) || isMultiAnswer(question)) && <Tag color="orange">{getRequiredSelections(question.question_text, question.correct_answer)}つ選べ</Tag>}
       </Space>
 
       {/* 連問グループ表示（エメリー方式: 1ページに全問縦並び） */}
