@@ -15,6 +15,7 @@ import {
   Result,
   Alert,
   Image,
+  Checkbox,
 } from 'antd'
 import {
   ArrowLeftOutlined,
@@ -35,6 +36,7 @@ import { CARD_FORMAT_CONFIG } from '../types/flashcard'
 import { useFlashCards } from '../hooks/useFlashCards'
 import { useLinkedQuestions } from '../hooks/useLinkedQuestions'
 import { LinkedQuestionViewer } from '../components/LinkedQuestionViewer'
+import { isMultiAnswer, isCorrectAnswer, isCorrectKey, getRequiredSelections } from '../utils/question-helpers'
 
 const { Text, Paragraph } = Typography
 const { TextArea } = Input
@@ -138,10 +140,15 @@ export function QuestionPage() {
 
   // --- 回答状態 ---
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
+  const [selectedAnswers, setSelectedAnswers] = useState<number[]>([])
   const [isAnswered, setIsAnswered] = useState(false)
   const [isCorrect, setIsCorrect] = useState(false)
   const [confidence, setConfidence] = useState<ConfidenceLevel>('medium')
   const startTimeRef = useRef(Date.now())
+
+  // 複数選択判定
+  const multiAnswer = question ? isMultiAnswer(question) : false
+  const requiredCount = question ? getRequiredSelections(question.question_text) : 1
 
   // questionId が変わったら startTime をリセット
   useEffect(() => {
@@ -165,8 +172,12 @@ export function QuestionPage() {
 
   /** 回答する */
   const handleSubmitAnswer = useCallback(() => {
-    if (selectedAnswer === null || !question) return
-    const correct = selectedAnswer === question.correct_answer
+    if (!question) return
+    const multi = isMultiAnswer(question)
+    const selected = multi ? selectedAnswers : selectedAnswer
+    if (multi && selectedAnswers.length === 0) return
+    if (!multi && selectedAnswer === null) return
+    const correct = isCorrectAnswer(question.correct_answer, selected as number | number[])
     setIsCorrect(correct)
     setIsAnswered(true)
 
@@ -174,13 +185,13 @@ export function QuestionPage() {
     saveAnswer({
       user_id: 'local_user',
       question_id: question.id,
-      selected_answer: selectedAnswer,
+      selected_answer: selected as number | number[],
       is_correct: correct,
       answered_at: new Date().toISOString(),
       confidence_level: confidence,
       time_spent_seconds: timeSpent,
     })
-  }, [selectedAnswer, question, confidence, startTimeRef, saveAnswer])
+  }, [selectedAnswer, selectedAnswers, question, confidence, startTimeRef, saveAnswer])
 
   /** 付箋を保存 */
   const handleSaveNote = useCallback(() => {
@@ -242,6 +253,7 @@ export function QuestionPage() {
   const goToQuestion = (id: string) => {
     // Reactの状態をリセットするためkeyを変えるかページ遷移
     setSelectedAnswer(null)
+    setSelectedAnswers([])
     setIsAnswered(false)
     setIsCorrect(false)
     setConfidence('medium')
@@ -270,10 +282,13 @@ export function QuestionPage() {
   // --- 選択肢の背景色（回答後） ---
   const choiceStyle = (key: number) => {
     if (!isAnswered) return {}
-    if (key === question.correct_answer) {
+    if (isCorrectKey(question.correct_answer, key)) {
       return { background: '#f6ffed', borderColor: '#b7eb8f' }
     }
-    if (key === selectedAnswer && !isCorrect) {
+    const wasSelected = multiAnswer
+      ? selectedAnswers.includes(key)
+      : key === selectedAnswer
+    if (wasSelected && !isCorrect) {
       return { background: '#fff2f0', borderColor: '#ffccc7' }
     }
     return {}
@@ -288,6 +303,7 @@ export function QuestionPage() {
         <Text type="secondary">問{question.question_number}</Text>
         <Tag>{question.subject}</Tag>
         <Tag color="default">{question.category}</Tag>
+        {multiAnswer && <Tag color="orange">{requiredCount}つ選べ</Tag>}
       </Space>
 
       {/* 連問グループ表示（エメリー方式: 1ページに全問縦並び） */}
@@ -359,14 +375,14 @@ export function QuestionPage() {
       {/* 選択肢 */}
       {question.choices.length === 0 ? (
         /* 番号ボタンUI（choices空 = 画像問題） */
-        question.correct_answer === 0 ? (
+        (Array.isArray(question.correct_answer) ? false : question.correct_answer === 0) ? (
           <Card size="small" style={{ marginBottom: 16, textAlign: 'center' }}>
             <Text type="secondary">この問題はデータ準備中です</Text>
           </Card>
         ) : (
           <Card size="small" style={{ marginBottom: 16 }}>
             <div style={{ display: 'flex', gap: 8, justifyContent: 'center' }}>
-              {Array.from({ length: Math.max(5, question.correct_answer) }, (_, i) => i + 1).map((num) => {
+              {Array.from({ length: Math.max(5, Array.isArray(question.correct_answer) ? Math.max(...question.correct_answer) : question.correct_answer) }, (_, i) => i + 1).map((num) => {
                 let btnStyle: React.CSSProperties = {
                   flex: 1,
                   minWidth: 48,
@@ -382,7 +398,7 @@ export function QuestionPage() {
 
                 if (!isAnswered && selectedAnswer === num) {
                   btnStyle = { ...btnStyle, borderColor: '#1890ff', background: '#e6f7ff', color: '#1890ff' }
-                } else if (isAnswered && num === question.correct_answer) {
+                } else if (isAnswered && isCorrectKey(question.correct_answer, num)) {
                   btnStyle = { ...btnStyle, borderColor: '#52c41a', background: '#f6ffed', color: '#52c41a' }
                 } else if (isAnswered && num === selectedAnswer && !isCorrect) {
                   btnStyle = { ...btnStyle, borderColor: '#ff4d4f', background: '#fff2f0', color: '#ff4d4f' }
@@ -397,16 +413,62 @@ export function QuestionPage() {
                     disabled={isAnswered}
                   >
                     {num}
-                    {isAnswered && num === question.correct_answer && ' ✓'}
-                    {isAnswered && num === selectedAnswer && !isCorrect && num !== question.correct_answer && ' ✗'}
+                    {isAnswered && isCorrectKey(question.correct_answer, num) && ' ✓'}
+                    {isAnswered && num === selectedAnswer && !isCorrect && !isCorrectKey(question.correct_answer, num) && ' ✗'}
                   </button>
                 )
               })}
             </div>
           </Card>
         )
+      ) : multiAnswer ? (
+        /* 複数選択UI（Checkbox.Group） */
+        <Card size="small" style={{ marginBottom: 16 }}>
+          <Checkbox.Group
+            value={selectedAnswers}
+            onChange={(values) => {
+              if (!isAnswered) setSelectedAnswers(values as number[])
+            }}
+            style={{ width: '100%' }}
+          >
+            <Space direction="vertical" style={{ width: '100%' }}>
+              {question.choices.map((choice) => (
+                <Card
+                  key={choice.key}
+                  size="small"
+                  hoverable={!isAnswered}
+                  style={{
+                    cursor: isAnswered ? 'default' : 'pointer',
+                    ...choiceStyle(choice.key),
+                  }}
+                  onClick={() => {
+                    if (!isAnswered) {
+                      setSelectedAnswers((prev) =>
+                        prev.includes(choice.key)
+                          ? prev.filter((v) => v !== choice.key)
+                          : [...prev, choice.key]
+                      )
+                    }
+                  }}
+                >
+                  <Checkbox value={choice.key} disabled={isAnswered}>
+                    <Text style={{ fontSize: 15 }}>
+                      {choice.key}. {choice.text}
+                    </Text>
+                    {isAnswered && isCorrectKey(question.correct_answer, choice.key) && (
+                      <CheckCircleFilled style={{ color: '#52c41a', marginLeft: 8 }} />
+                    )}
+                    {isAnswered && selectedAnswers.includes(choice.key) && !isCorrect && !isCorrectKey(question.correct_answer, choice.key) && (
+                      <CloseCircleFilled style={{ color: '#f5222d', marginLeft: 8 }} />
+                    )}
+                  </Checkbox>
+                </Card>
+              ))}
+            </Space>
+          </Checkbox.Group>
+        </Card>
       ) : (
-        /* 通常の選択肢UI（既存コードそのまま） */
+        /* 通常の選択肢UI（単一選択 Radio.Group） */
         <Card size="small" style={{ marginBottom: 16 }}>
           <Radio.Group
             value={selectedAnswer}
@@ -415,7 +477,7 @@ export function QuestionPage() {
             }}
             style={{ width: '100%' }}
           >
-            <Space orientation="vertical" style={{ width: '100%' }}>
+            <Space direction="vertical" style={{ width: '100%' }}>
               {question.choices.map((choice) => (
                 <Card
                   key={choice.key}
@@ -433,10 +495,10 @@ export function QuestionPage() {
                     <Text style={{ fontSize: 15 }}>
                       {choice.key}. {choice.text}
                     </Text>
-                    {isAnswered && choice.key === question.correct_answer && (
+                    {isAnswered && isCorrectKey(question.correct_answer, choice.key) && (
                       <CheckCircleFilled style={{ color: '#52c41a', marginLeft: 8 }} />
                     )}
-                    {isAnswered && choice.key === selectedAnswer && !isCorrect && choice.key !== question.correct_answer && (
+                    {isAnswered && choice.key === selectedAnswer && !isCorrect && !isCorrectKey(question.correct_answer, choice.key) && (
                       <CloseCircleFilled style={{ color: '#f5222d', marginLeft: 8 }} />
                     )}
                   </Radio>
@@ -453,7 +515,11 @@ export function QuestionPage() {
           type="primary"
           size="large"
           block
-          disabled={selectedAnswer === null || question.correct_answer === 0}
+          disabled={
+            multiAnswer
+              ? selectedAnswers.length === 0 || (Array.isArray(question.correct_answer) ? false : question.correct_answer === 0)
+              : selectedAnswer === null || (Array.isArray(question.correct_answer) ? false : question.correct_answer === 0)
+          }
           onClick={handleSubmitAnswer}
           style={{ marginBottom: 16 }}
         >

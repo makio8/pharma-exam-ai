@@ -68,7 +68,7 @@ export interface Question {
   category: string          // 単元（例:「薬物動態」）
   question_text: string
   choices: Choice[]
-  correct_answer: number    // 1〜5
+  correct_answer: number | number[]    // 1〜5（複数選択問題は配列）
   explanation: string
   tags: string[]            // キーワードタグ
   correct_rate?: number     // 正答率（0〜1）。60%以上が演習推奨
@@ -88,7 +88,7 @@ export interface AnswerHistory {
   id: string
   user_id: string
   question_id: string
-  selected_answer: number
+  selected_answer: number | number[]
   is_correct: boolean
   answered_at: string       // ISO8601
   confidence_level: ConfidenceLevel

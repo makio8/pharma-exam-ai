@@ -72,7 +72,7 @@ export class SupabaseAnswerHistoryRepo implements IAnswerHistoryRepo {
       id: row.id as string,
       user_id: row.user_id as string,
       question_id: row.question_id as string,
-      selected_answer: row.selected_answer as number,
+      selected_answer: row.selected_answer as number | number[],
       is_correct: row.is_correct as boolean,
       answered_at: row.answered_at as string,
       confidence_level: row.confidence_level as AnswerHistory['confidence_level'],

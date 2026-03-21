@@ -1,9 +1,10 @@
 import { useState, useCallback } from 'react'
-import { Card, Tag, Typography, Space, Image, Radio, Button, Alert, Divider } from 'antd'
+import { Card, Tag, Typography, Space, Image, Radio, Button, Alert, Checkbox } from 'antd'
 import { LinkOutlined, CheckCircleFilled, CloseCircleFilled } from '@ant-design/icons'
 import type { LinkedGroup } from '../hooks/useLinkedQuestions'
 import type { Question, ConfidenceLevel } from '../types/question'
 import { useAnswerHistory } from '../hooks/useAnswerHistory'
+import { isMultiAnswer, isCorrectAnswer, isCorrectKey, getRequiredSelections } from '../utils/question-helpers'
 
 const { Text, Paragraph } = Typography
 
@@ -14,6 +15,7 @@ interface Props {
 
 interface QuestionState {
   selectedAnswer: number | null
+  selectedAnswers: number[]
   isAnswered: boolean
   isCorrect: boolean
 }
@@ -32,8 +34,10 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
     const init: Record<string, QuestionState> = {}
     for (const q of group.questions) {
       const existing = getQuestionResult(q.id)
+      const existingAnswer = existing?.selected_answer ?? null
       init[q.id] = {
-        selectedAnswer: existing?.selected_answer ?? null,
+        selectedAnswer: Array.isArray(existingAnswer) ? null : existingAnswer,
+        selectedAnswers: Array.isArray(existingAnswer) ? existingAnswer : [],
         isAnswered: !!existing,
         isCorrect: existing?.is_correct ?? false,
       }
@@ -48,10 +52,20 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
     }))
   }, [])
 
+  const handleMultiSelect = useCallback((questionId: string, values: number[]) => {
+    setStates((prev) => ({
+      ...prev,
+      [questionId]: { ...prev[questionId], selectedAnswers: values },
+    }))
+  }, [])
+
   const handleSubmit = useCallback((question: Question) => {
     const state = states[question.id]
-    if (state.selectedAnswer === null) return
-    const correct = state.selectedAnswer === question.correct_answer
+    const multi = isMultiAnswer(question)
+    const selected = multi ? state.selectedAnswers : state.selectedAnswer
+    if (multi && state.selectedAnswers.length === 0) return
+    if (!multi && state.selectedAnswer === null) return
+    const correct = isCorrectAnswer(question.correct_answer, selected as number | number[])
     setStates((prev) => ({
       ...prev,
       [question.id]: { ...prev[question.id], isAnswered: true, isCorrect: correct },
@@ -59,7 +73,7 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
     saveAnswer({
       user_id: 'local_user',
       question_id: question.id,
-      selected_answer: state.selectedAnswer,
+      selected_answer: selected as number | number[],
       is_correct: correct,
       answered_at: new Date().toISOString(),
       confidence_level: 'medium' as ConfidenceLevel,
@@ -70,10 +84,14 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
   /** 選択肢の背景色 */
   const choiceStyle = (question: Question, key: number, state: QuestionState) => {
     if (!state.isAnswered) return {}
-    if (key === question.correct_answer) {
+    const multi = isMultiAnswer(question)
+    if (isCorrectKey(question.correct_answer, key)) {
       return { background: '#f6ffed', borderColor: '#b7eb8f' }
     }
-    if (key === state.selectedAnswer && !state.isCorrect) {
+    const wasSelected = multi
+      ? state.selectedAnswers.includes(key)
+      : key === state.selectedAnswer
+    if (wasSelected && !state.isCorrect) {
       return { background: '#fff2f0', borderColor: '#ffccc7' }
     }
     return {}
@@ -126,8 +144,10 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
       </Card>
 
       {/* 各問題を縦並び */}
-      {group.questions.map((q, idx) => {
-        const state = states[q.id] ?? { selectedAnswer: null, isAnswered: false, isCorrect: false }
+      {group.questions.map((q, _idx) => {
+        const state = states[q.id] ?? { selectedAnswer: null, selectedAnswers: [], isAnswered: false, isCorrect: false }
+        const multi = isMultiAnswer(q)
+        const requiredCount = multi ? getRequiredSelections(q.question_text) : 1
 
         return (
           <Card
@@ -151,6 +171,7 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
               <Space wrap>
                 <Tag color="purple" style={{ fontSize: 14, padding: '2px 8px' }}>問{q.question_number}</Tag>
                 <Tag>{q.subject}</Tag>
+                {multi && <Tag color="orange">{requiredCount}つ選べ</Tag>}
               {state.isAnswered && (
                 state.isCorrect
                   ? <Tag color="success">正解</Tag>
@@ -178,49 +199,96 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
 
             {/* 選択肢 */}
             {q.choices.length > 0 ? (
-              <Radio.Group
-                value={state.selectedAnswer}
-                onChange={(e) => {
-                  if (!state.isAnswered) handleSelect(q.id, e.target.value as number)
-                }}
-                style={{ width: '100%' }}
-              >
-                <Space direction="vertical" style={{ width: '100%' }}>
-                  {q.choices.map((choice) => (
-                    <Card
-                      key={choice.key}
-                      size="small"
-                      hoverable={!state.isAnswered}
-                      style={{
-                        cursor: state.isAnswered ? 'default' : 'pointer',
-                        ...choiceStyle(q, choice.key, state),
-                      }}
-                      onClick={() => {
-                        if (!state.isAnswered) handleSelect(q.id, choice.key)
-                      }}
-                    >
-                      <Radio value={choice.key} disabled={state.isAnswered}>
-                        <Text style={{ fontSize: 15 }}>
-                          {choice.key}. {choice.text}
-                        </Text>
-                        {state.isAnswered && choice.key === q.correct_answer && (
-                          <CheckCircleFilled style={{ color: '#52c41a', marginLeft: 8 }} />
-                        )}
-                        {state.isAnswered && choice.key === state.selectedAnswer && !state.isCorrect && choice.key !== q.correct_answer && (
-                          <CloseCircleFilled style={{ color: '#f5222d', marginLeft: 8 }} />
-                        )}
-                      </Radio>
-                    </Card>
-                  ))}
-                </Space>
-              </Radio.Group>
+              multi ? (
+                /* 複数選択（Checkbox.Group） */
+                <Checkbox.Group
+                  value={state.selectedAnswers}
+                  onChange={(values) => {
+                    if (!state.isAnswered) handleMultiSelect(q.id, values as number[])
+                  }}
+                  style={{ width: '100%' }}
+                >
+                  <Space direction="vertical" style={{ width: '100%' }}>
+                    {q.choices.map((choice) => (
+                      <Card
+                        key={choice.key}
+                        size="small"
+                        hoverable={!state.isAnswered}
+                        style={{
+                          cursor: state.isAnswered ? 'default' : 'pointer',
+                          ...choiceStyle(q, choice.key, state),
+                        }}
+                        onClick={() => {
+                          if (!state.isAnswered) {
+                            const current = state.selectedAnswers
+                            const next = current.includes(choice.key)
+                              ? current.filter((v) => v !== choice.key)
+                              : [...current, choice.key]
+                            handleMultiSelect(q.id, next)
+                          }
+                        }}
+                      >
+                        <Checkbox value={choice.key} disabled={state.isAnswered}>
+                          <Text style={{ fontSize: 15 }}>
+                            {choice.key}. {choice.text}
+                          </Text>
+                          {state.isAnswered && isCorrectKey(q.correct_answer, choice.key) && (
+                            <CheckCircleFilled style={{ color: '#52c41a', marginLeft: 8 }} />
+                          )}
+                          {state.isAnswered && state.selectedAnswers.includes(choice.key) && !state.isCorrect && !isCorrectKey(q.correct_answer, choice.key) && (
+                            <CloseCircleFilled style={{ color: '#f5222d', marginLeft: 8 }} />
+                          )}
+                        </Checkbox>
+                      </Card>
+                    ))}
+                  </Space>
+                </Checkbox.Group>
+              ) : (
+                /* 単一選択（Radio.Group） */
+                <Radio.Group
+                  value={state.selectedAnswer}
+                  onChange={(e) => {
+                    if (!state.isAnswered) handleSelect(q.id, e.target.value as number)
+                  }}
+                  style={{ width: '100%' }}
+                >
+                  <Space direction="vertical" style={{ width: '100%' }}>
+                    {q.choices.map((choice) => (
+                      <Card
+                        key={choice.key}
+                        size="small"
+                        hoverable={!state.isAnswered}
+                        style={{
+                          cursor: state.isAnswered ? 'default' : 'pointer',
+                          ...choiceStyle(q, choice.key, state),
+                        }}
+                        onClick={() => {
+                          if (!state.isAnswered) handleSelect(q.id, choice.key)
+                        }}
+                      >
+                        <Radio value={choice.key} disabled={state.isAnswered}>
+                          <Text style={{ fontSize: 15 }}>
+                            {choice.key}. {choice.text}
+                          </Text>
+                          {state.isAnswered && isCorrectKey(q.correct_answer, choice.key) && (
+                            <CheckCircleFilled style={{ color: '#52c41a', marginLeft: 8 }} />
+                          )}
+                          {state.isAnswered && choice.key === state.selectedAnswer && !state.isCorrect && !isCorrectKey(q.correct_answer, choice.key) && (
+                            <CloseCircleFilled style={{ color: '#f5222d', marginLeft: 8 }} />
+                          )}
+                        </Radio>
+                      </Card>
+                    ))}
+                  </Space>
+                </Radio.Group>
+              )
             ) : (
               /* 番号ボタンUI（choices空 = 画像問題） */
-              q.correct_answer === 0 ? (
+              (Array.isArray(q.correct_answer) ? false : q.correct_answer === 0) ? (
                 <Text type="secondary">この問題はデータ準備中です</Text>
               ) : (
                 <div style={{ display: 'flex', gap: 8, justifyContent: 'center' }}>
-                  {Array.from({ length: Math.max(5, q.correct_answer) }, (_, i) => i + 1).map((num) => {
+                  {Array.from({ length: Math.max(5, Array.isArray(q.correct_answer) ? Math.max(...q.correct_answer) : q.correct_answer) }, (_, i) => i + 1).map((num) => {
                     let btnStyle: React.CSSProperties = {
                       flex: 1, minWidth: 48, height: 48, fontSize: 18, fontWeight: 'bold',
                       border: '2px solid #d9d9d9', borderRadius: 8, background: 'white',
@@ -228,7 +296,7 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
                     }
                     if (!state.isAnswered && state.selectedAnswer === num) {
                       btnStyle = { ...btnStyle, borderColor: '#1890ff', background: '#e6f7ff', color: '#1890ff' }
-                    } else if (state.isAnswered && num === q.correct_answer) {
+                    } else if (state.isAnswered && isCorrectKey(q.correct_answer, num)) {
                       btnStyle = { ...btnStyle, borderColor: '#52c41a', background: '#f6ffed', color: '#52c41a' }
                     } else if (state.isAnswered && num === state.selectedAnswer && !state.isCorrect) {
                       btnStyle = { ...btnStyle, borderColor: '#ff4d4f', background: '#fff2f0', color: '#ff4d4f' }
@@ -239,8 +307,8 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
                         disabled={state.isAnswered}
                       >
                         {num}
-                        {state.isAnswered && num === q.correct_answer && ' ✓'}
-                        {state.isAnswered && num === state.selectedAnswer && !state.isCorrect && num !== q.correct_answer && ' ✗'}
+                        {state.isAnswered && isCorrectKey(q.correct_answer, num) && ' ✓'}
+                        {state.isAnswered && num === state.selectedAnswer && !state.isCorrect && !isCorrectKey(q.correct_answer, num) && ' ✗'}
                       </button>
                     )
                   })}
@@ -253,7 +321,7 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
               <Button
                 type="primary"
                 block
-                disabled={state.selectedAnswer === null}
+                disabled={multi ? state.selectedAnswers.length === 0 : state.selectedAnswer === null}
                 onClick={() => handleSubmit(q)}
                 style={{ marginTop: 12 }}
               >
