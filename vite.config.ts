@@ -56,6 +56,7 @@ export default defineConfig({
           if (id.includes('real-questions/exam-108')) return 'data-108'
           if (id.includes('real-questions/exam-109')) return 'data-109'
           if (id.includes('real-questions/exam-110')) return 'data-110'
+          if (id.includes('real-questions/exam-111')) return 'data-111'
         },
       },
     },

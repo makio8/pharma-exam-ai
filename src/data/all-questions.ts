@@ -1,5 +1,5 @@
-// 問題データ（厚労省実データ 第100〜110回 全3,795問）
-// 実データ: 厚労省 第100〜110回薬剤師国家試験より取得（id: r100-xxx 〜 r110-xxx）
+// 問題データ（第100〜111回 全4,140問）
+// 実データ: 第100〜110回は厚労省PDF、第111回は薬ゼミPDF（Vision AI抽出）
 
 import type { Question } from '../types/question'
 import { EXAM_100_QUESTIONS } from './real-questions/exam-100'
@@ -13,8 +13,9 @@ import { EXAM_107_QUESTIONS } from './real-questions/exam-107'
 import { EXAM_108_QUESTIONS } from './real-questions/exam-108'
 import { EXAM_109_QUESTIONS } from './real-questions/exam-109'
 import { EXAM_110_QUESTIONS } from './real-questions/exam-110'
+import { EXAM_111_QUESTIONS } from './real-questions/exam-111'
 
-/** 全問題データ（第100〜110回） */
+/** 全問題データ（第100〜111回） */
 export const ALL_QUESTIONS: Question[] = [
   ...EXAM_100_QUESTIONS,
   ...EXAM_101_QUESTIONS,
@@ -27,6 +28,7 @@ export const ALL_QUESTIONS: Question[] = [
   ...EXAM_108_QUESTIONS,
   ...EXAM_109_QUESTIONS,
   ...EXAM_110_QUESTIONS,
+  ...EXAM_111_QUESTIONS,
 ]
 
 // 後方互換: 旧名称でもアクセス可能
