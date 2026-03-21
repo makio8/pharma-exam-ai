@@ -8032,7 +8032,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（物理・化学・生物）移植臓器に対する拒絶反応及びその制御に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "臓器提供者（ドナー）と受容者（レシピエント）が親子であれば、一般に拒絶反応は起こらない。",
         "semantic_labels": [
           "ドナー",
@@ -8042,7 +8042,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "ドナーとレシピエントのヒト白血球抗原（HLA）の不適合は、拒絶反応の要因となる。",
         "semantic_labels": [
           "HLA",
@@ -8051,7 +8051,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "移植された臓器が、レシピエントの免疫反応により傷害される反応を移植片対宿主反応（graft-versus-host reaction, GVHR）という。",
         "semantic_labels": [
           "GVHR",
@@ -8060,7 +8060,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "移植後、数日から数週間で起こる急性拒絶反応に、T細胞は関与しない。",
         "semantic_labels": [
           "急性拒絶反応",
@@ -8069,7 +8069,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "タクロリムスは、細胞内の特定のタンパク質と複合体を形成し、転写因子の活性化に関わるホスファターゼを阻害する。",
         "semantic_labels": [
           "タクロリムス",
@@ -8139,7 +8139,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（物理・化学・生物）糖尿病では血糖値の異常がおこる。グルコース代謝に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "血糖値は、筋肉から血中へグルコースが放出されることにより、維持される。",
         "semantic_labels": [
           "血糖値",
@@ -8149,7 +8149,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "インスリンは、血液から筋肉へのグルコースの取り込みを促進させ、血糖値を低下させる。",
         "semantic_labels": [
           "インスリン",
@@ -8159,7 +8159,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "筋肉中で嫌気的代謝により生成した乳酸は、肝臓に運ばれてグルコースに変換される。",
         "semantic_labels": [
           "乳酸",
@@ -8169,7 +8169,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "飢餓時には、肝臓でタンパク質が分解され、生成したアラニンが筋肉へ運ばれてグルコースに変換される。",
         "semantic_labels": [
           "飢餓時",
@@ -8179,7 +8179,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "筋肉でのグリコーゲンの合成と分解は、肝臓とは異なり、同一の酵素によって触媒される。",
         "semantic_labels": [
           "グリコーゲン",
@@ -8250,7 +8250,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（物理・化学・生物）ピロリ菌は、菌に特徴的な代謝反応を利用して胃内で生存することができる。この反応は、菌による感染の診断法として用いられている。この代謝反応はどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "L-グルタミンからL-グルタミン酸とアンモニアを生成する反応",
         "semantic_labels": [
           "グルタミナーゼ",
@@ -8259,7 +8259,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "ホスホエノールピルビン酸とADPからピルビン酸とATPを生成する反応",
         "semantic_labels": [
           "ピルビン酸キナーゼ",
@@ -8268,7 +8268,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "尿素からアンモニアと二酸化炭素を生成する反応",
         "semantic_labels": [
           "ウレアーゼ",
@@ -8277,7 +8277,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "L-アルギニンから尿素とL-オルニチンを生成する反応",
         "semantic_labels": [
           "アルギナーゼ",
@@ -8286,7 +8286,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "アセチルCoAとオキザロ酢酸から補酵素A（CoA）とクエン酸を生成する反応",
         "semantic_labels": [
           "クエン酸シンターゼ",
@@ -8355,7 +8355,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（実務）今回の処方薬との相互作用が問題となるものはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "アザチオプリン",
         "semantic_labels": [
           "アザチオプリン",
@@ -8364,7 +8364,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "テプレノン",
         "semantic_labels": [
           "テプレノン",
@@ -8373,7 +8373,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "イミプラミン塩酸塩",
         "semantic_labels": [
           "イミプラミン",
@@ -8382,7 +8382,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "タムスロシン塩酸塩",
         "semantic_labels": [
           "タムスロシン",
@@ -8391,7 +8391,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "ジゴキシン",
         "semantic_labels": [
           "ジゴキシン",
@@ -8461,7 +8461,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（実務）国際大会出場予定の男子レスリング選手が、ヒゲを濃くする成分を含有した塗り薬があることを友人から聞いて来局した。選手なので強そうな風貌になりたいとのことであった。この薬局の薬剤師が、顧客に十分な説明をした上で、とるべき対応として最も適切なのはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "テストステロンを含有する軟膏を販売した。",
         "semantic_labels": [
           "テストステロン",
@@ -8470,7 +8470,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "エストラジオールを含有する軟膏を販売した。",
         "semantic_labels": [
           "エストラジオール",
@@ -8479,7 +8479,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "ミノキシジルを含有するローション剤を販売した。",
         "semantic_labels": [
           "ミノキシジル",
@@ -8488,7 +8488,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "ヒドロコルチゾン酢酸エステルを含有するクリームを販売した。",
         "semantic_labels": [
           "ヒドロコルチゾン",
@@ -8497,7 +8497,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "男性ホルモンを主成分とした軟膏はあったが、販売しなかった。",
         "semantic_labels": [
           "販売拒否",
@@ -8568,7 +8568,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（衛生）栄養素及び栄養状態に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "タンパク質・エネルギー低栄養状態が長期に続くと、体内の窒素平衡は正となる。",
         "semantic_labels": [
           "窒素平衡",
@@ -8577,7 +8577,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "n-3系脂肪酸は小腸からの吸収の際、胆汁酸とミセルを形成しない。",
         "semantic_labels": [
           "n-3系脂肪酸",
@@ -8587,7 +8587,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "銅の小腸からの吸収は、過剰の亜鉛の摂取により阻害される。",
         "semantic_labels": [
           "銅",
@@ -8597,7 +8597,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "非ヘム鉄の小腸からの吸収は、ビタミンCにより促進される。",
         "semantic_labels": [
           "非ヘム鉄",
@@ -8607,7 +8607,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "Body mass index（BMI）が22の場合、「やせ」と判定される。",
         "semantic_labels": [
           "BMI",
@@ -8678,7 +8678,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（衛生）商品Aの許可表示として最もふさわしいのはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "コレステロールが気になる方の食生活の改善に役立ちます。",
         "semantic_labels": [
           "コレステロール",
@@ -8687,7 +8687,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "動脈硬化症の発症を抑えるのに役立ちます。",
         "semantic_labels": [
           "動脈硬化症",
@@ -8696,7 +8696,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "食後の急激な血糖値の上昇を抑えます。",
         "semantic_labels": [
           "血糖値",
@@ -8705,7 +8705,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "血圧が高めの方、気になる方に適します。",
         "semantic_labels": [
           "血圧",
@@ -8714,7 +8714,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "食事中の脂肪の吸収を抑え、体脂肪が気になる方に適します。",
         "semantic_labels": [
           "脂肪吸収",
@@ -8784,7 +8784,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（衛生）この症状の原因となる可能性が高い特定原材料及びそれらを用いた加工食品の表示に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "食品衛生法で、当該原材料を含む旨の表示が義務付けられている。",
         "semantic_labels": [
           "食品衛生法",
@@ -8793,7 +8793,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "現在、表示が義務付けられている特定原材料は、えび、かに、たこなど7品目である。",
         "semantic_labels": [
           "特定原材料",
@@ -8802,7 +8802,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "当該原材料が重量で5％以上含まれている場合に表示義務が生じる。",
         "semantic_labels": [
           "5%基準",
@@ -8811,7 +8811,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "対面販売や量り売り販売の場合は、表示義務はない。",
         "semantic_labels": [
           "対面販売",
@@ -8821,7 +8821,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "当該原材料を使用した食品添加物については、表示が免除されている。",
         "semantic_labels": [
           "食品添加物",
@@ -8942,7 +8942,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（衛生）下図は、我が国における糖尿病、悪性新生物、脳血管疾患、心疾患及び高血圧症の総患者数の年次推移を表したものである。糖尿病に該当するのはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "",
         "semantic_labels": [
           "点線四角マーカー",
@@ -8951,7 +8951,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "image"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "",
         "semantic_labels": [
           "実線丸マーカー",
@@ -8960,7 +8960,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "image"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "",
         "semantic_labels": [
           "実線黒丸マーカー",
@@ -8969,7 +8969,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "image"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "",
         "semantic_labels": [
           "破線三角マーカー",
@@ -8978,7 +8978,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "image"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "",
         "semantic_labels": [
           "実線黒三角マーカー",
@@ -9048,7 +9048,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（衛生）腟カンジダ症に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "カンジダ属菌は常在真菌であり、日和見感染を引き起こす。",
         "semantic_labels": [
           "常在真菌",
@@ -9057,7 +9057,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "性交経験がない女性にも発症することがある。",
         "semantic_labels": [
           "性交経験",
@@ -9067,7 +9067,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "感染症法では5類感染症に分類される。",
         "semantic_labels": [
           "感染症法",
@@ -9076,7 +9076,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "女性から男性へのカンジダ属菌の感染はない。",
         "semantic_labels": [
           "性感染",
@@ -9195,7 +9195,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（衛生）乱用が問題となっている下記の薬物のうち、向精神薬でないものはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "",
         "semantic_labels": [
           "ジアゼパム",
@@ -9204,7 +9204,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "image"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "",
         "semantic_labels": [
           "セコバルビタール",
@@ -9213,7 +9213,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "image"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "",
         "semantic_labels": [
           "クロルプロマジン",
@@ -9222,7 +9222,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "image"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "",
         "semantic_labels": [
           "サリドマイド",
@@ -9231,7 +9231,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "image"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "",
         "semantic_labels": [
           "ケタミン",
@@ -9301,7 +9301,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（衛生）この患者に投与すべき薬剤から放出され、疼痛緩和に寄与する放射線に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "放射線荷重係数は、20である。",
         "semantic_labels": [
           "放射線荷重係数",
@@ -9310,7 +9310,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "低LET（線エネルギー付与）放射線である。",
         "semantic_labels": [
           "低LET",
@@ -9319,7 +9319,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "粒子線である。",
         "semantic_labels": [
           "粒子線"
@@ -9327,7 +9327,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "内部被曝による生体影響はない。",
         "semantic_labels": [
           "内部被曝",
@@ -9336,7 +9336,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "薄い紙一枚で遮蔽できる。",
         "semantic_labels": [
           "遮蔽",
@@ -9407,7 +9407,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（衛生）検査項目とその測定法の組合せのうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "揮発性有機化合物濃度 —— モール法",
         "semantic_labels": [
           "揮発性有機化合物",
@@ -9416,7 +9416,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "二酸化炭素濃度 —— パラロザニリン法",
         "semantic_labels": [
           "二酸化炭素",
@@ -9425,7 +9425,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "一酸化炭素濃度 —— 赤外線吸収法",
         "semantic_labels": [
           "一酸化炭素",
@@ -9434,7 +9434,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "二酸化窒素濃度 —— ザルツマン法",
         "semantic_labels": [
           "二酸化窒素",
@@ -9443,7 +9443,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "ダニまたはダニアレルゲン量 —— 標準寒天培地法",
         "semantic_labels": [
           "ダニアレルゲン",
@@ -9513,7 +9513,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（薬理）この患者に関連する薬物依存・耐性の記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "ゾピクロンとニコチンは、いずれも精神的依存を起こすが、身体的依存は生じない。",
         "semantic_labels": [
           "精神的依存",
@@ -9522,7 +9522,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "ゾピクロンとニコチンは、いずれも耐性を生じない。",
         "semantic_labels": [
           "耐性"
@@ -9530,7 +9530,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "ニコチンは、中脳辺縁ドパミン神経系を活性化する。",
         "semantic_labels": [
           "ドパミン神経系",
@@ -9539,7 +9539,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "バレニクリンは、ニコチン性アセチルコリン受容体の部分刺激薬であり、ニコチン依存症の喫煙者の禁煙による退薬症候を軽減する。",
         "semantic_labels": [
           "バレニクリン",
@@ -9611,7 +9611,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（薬理）トロピカミドによる仮性近視改善に関わる機序はどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "ムスカリン性アセチルコリン受容体の刺激により毛様体筋が収縮し、水晶体の厚さが増して屈折率が上昇する。",
         "semantic_labels": [
           "ムスカリン刺激",
@@ -9621,7 +9621,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "ムスカリン性アセチルコリン受容体の刺激により毛様体筋が弛緩し、水晶体は扁平化して屈折率が減少する。",
         "semantic_labels": [
           "ムスカリン刺激",
@@ -9631,7 +9631,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "ムスカリン性アセチルコリン受容体の遮断により毛様体筋が収縮し、水晶体の厚さが増して屈折率が上昇する。",
         "semantic_labels": [
           "ムスカリン遮断",
@@ -9641,7 +9641,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "ムスカリン性アセチルコリン受容体の遮断により毛様体筋が弛緩し、水晶体は扁平化して屈折率が減少する。",
         "semantic_labels": [
           "ムスカリン遮断",
@@ -9651,7 +9651,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "コリンエステラーゼの活性化により毛様体筋が収縮し、水晶体の厚さが増して屈折率が上昇する。",
         "semantic_labels": [
           "コリンエステラーゼ",
@@ -9660,7 +9660,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "6",
+        "key": 6,
         "text": "コリンエステラーゼの活性化により毛様体筋が弛緩し、水晶体は扁平化して屈折率が減少する。",
         "semantic_labels": [
           "コリンエステラーゼ",
@@ -9731,7 +9731,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（薬理）処方薬および前問中の薬物に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "カルビドパは、末梢性芳香族L-アミノ酸デカルボキシラーゼ阻害薬で、レボドパが末梢でドパミンに変換されるのを抑制する。",
         "semantic_labels": [
           "カルビドパ",
@@ -9741,7 +9741,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "プラミペキソールは、ドパミン神経からのドパミン遊離を促進する。",
         "semantic_labels": [
           "プラミペキソール",
@@ -9750,7 +9750,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "エンタカポンは、ドパミンD2受容体を刺激する。",
         "semantic_labels": [
           "エンタカポン",
@@ -9759,7 +9759,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "セレギリンは、モノアミン酸化酵素Bを阻害することによりドパミンの代謝を抑制する。",
         "semantic_labels": [
           "セレギリン",
@@ -9769,7 +9769,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "チアプリドは、カテコール-O-メチルトランスフェラーゼを阻害する。",
         "semantic_labels": [
           "チアプリド",
@@ -9840,7 +9840,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（実務）この患者への服薬指導および処方薬に関する説明の内容として、適切でないのはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "月経不順となることがあります。",
         "semantic_labels": [
           "月経不順",
@@ -9849,7 +9849,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "口渇が現れることがあります。",
         "semantic_labels": [
           "口渇",
@@ -9858,7 +9858,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "服用中は自動車の運転など危険を伴う作業をしないようにしてください。",
         "semantic_labels": [
           "運転禁止",
@@ -9867,7 +9867,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "リスペリドン口腔内崩壊錠は、通常、徐々に減量する薬剤です。",
         "semantic_labels": [
           "リスペリドン",
@@ -9876,7 +9876,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "ブロチゾラム口腔内崩壊錠は、服用後に一時的な記憶の抜け落ちを起こすことのある薬剤です。",
         "semantic_labels": [
           "ブロチゾラム",
@@ -9947,7 +9947,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "（実務）この患者への説明および指導の内容として、適切なのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "アスピリン腸溶錠は、術後の経過が良ければ、一週間程度で中止します。",
         "semantic_labels": [
           "アスピリン",
@@ -9956,7 +9956,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "チクロピジン塩酸塩錠には、狭くなった血管を拡げる作用があります。",
         "semantic_labels": [
           "チクロピジン",
@@ -9965,7 +9965,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "定期的に血液検査を必要とする薬剤が処方されていますので、2週間後に受診してください。",
         "semantic_labels": [
           "血液検査",
@@ -9975,7 +9975,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "筋肉痛や脱力感が起こることがありますが、一時的なものなので心配ありません。",
         "semantic_labels": [
           "筋肉痛",
@@ -9985,7 +9985,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "出血しやすくなるので、歯肉や鼻などからの出血があれば受診してください。",
         "semantic_labels": [
           "出血傾向",
@@ -10057,7 +10057,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "前問の薬剤のうち、血管平滑筋細胞に直接作用して血管を拡張させるのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "シルニジピン錠",
         "semantic_labels": [
           "シルニジピン",
@@ -10067,7 +10067,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "イミダプリル塩酸塩錠",
         "semantic_labels": [
           "イミダプリル",
@@ -10076,7 +10076,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "テルミサルタン錠",
         "semantic_labels": [
           "テルミサルタン",
@@ -10085,7 +10085,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "クロニジン塩酸塩錠",
         "semantic_labels": [
           "クロニジン",
@@ -10094,7 +10094,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "カルテオロール塩酸塩徐放性カプセル",
         "semantic_labels": [
           "カルテオロール",
@@ -10165,7 +10165,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "薬剤1の作用機序として正しいのはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "ヒスタミンH2受容体を遮断する。",
         "semantic_labels": [
           "H2受容体遮断",
@@ -10174,7 +10174,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "DNAの二本鎖を切断する。",
         "semantic_labels": [
           "DNA切断",
@@ -10183,7 +10183,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "リボソームの50Sサブユニットと結合し、タンパク質合成を阻害する。",
         "semantic_labels": [
           "50Sサブユニット",
@@ -10192,7 +10192,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "H+,K+-ATPaseを非可逆的に阻害する。",
         "semantic_labels": [
           "プロトンポンプ阻害",
@@ -10201,7 +10201,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "ウレアーゼを阻害する。",
         "semantic_labels": [
           "ウレアーゼ阻害"
@@ -10270,7 +10270,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "この患者への服薬に関する説明および指導の内容として、適切なのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "処方1の薬剤を使い始めたころに、一時的に尿の出が悪くなることがあります。",
         "semantic_labels": [
           "ゴセレリン",
@@ -10280,7 +10280,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "処方2の薬剤使用中は、出血が止まりにくくなるので、抜歯などは控えてください。",
         "semantic_labels": [
           "ゾレドロン酸",
@@ -10290,7 +10290,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "処方3の薬剤は、痛みをやわらげたり、骨折を予防するのに有効です。",
         "semantic_labels": [
           "ビカルタミド",
@@ -10299,7 +10299,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "処方4の薬剤は、挿入による刺激で便意が起こることがあるので、できるだけ排便後に使用してください。",
         "semantic_labels": [
           "ジクロフェナク坐剤",
@@ -10371,7 +10371,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "薬剤師はこの処方に関して医師へ疑義照会を行った。疑義が生じた薬剤として最も可能性が高いのはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "ラロキシフェン塩酸塩錠",
         "semantic_labels": [
           "ラロキシフェン",
@@ -10380,7 +10380,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "アルファカルシドールカプセル",
         "semantic_labels": [
           "アルファカルシドール",
@@ -10389,7 +10389,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "L-アスパラギン酸カルシウム錠",
         "semantic_labels": [
           "L-アスパラギン酸カルシウム",
@@ -10398,7 +10398,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "メナテトレノンカプセル",
         "semantic_labels": [
           "メナテトレノン",
@@ -10407,7 +10407,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "セレコキシブ錠",
         "semantic_labels": [
           "セレコキシブ",
@@ -10478,7 +10478,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "ダルベポエチンアルファの薬理作用および副作用に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "単球および単球系前駆細胞に作用して、増殖を促進する。",
         "semantic_labels": [
           "単球系前駆細胞",
@@ -10487,7 +10487,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "エリスロポエチン（EPO）のEPO受容体に対する親和性を高める。",
         "semantic_labels": [
           "EPO受容体",
@@ -10496,7 +10496,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "エポエチンアルファと比較して、持続的な赤血球造血作用を示す。",
         "semantic_labels": [
           "持続的造血作用",
@@ -10505,7 +10505,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "血圧低下を起こしやすい。",
         "semantic_labels": [
           "血圧低下",
@@ -10514,7 +10514,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "血液粘稠度が上昇し、血栓塞栓症を誘発するおそれがある。",
         "semantic_labels": [
           "血液粘稠度上昇",
@@ -10581,7 +10581,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "この患者は、日常的に牛乳を飲用していることがわかった。リセドロン酸Na錠の牛乳による服用についての記述のうち、正しいのはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "牛乳中の油脂成分によりリセドロン酸の溶解が促進され、良好に吸収される。",
         "semantic_labels": [
           "油脂成分",
@@ -10590,7 +10590,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "牛乳中の油脂成分により胃粘膜が保護されるので、服用後、すぐに横になって良い。",
         "semantic_labels": [
           "胃粘膜保護",
@@ -10599,7 +10599,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "リセドロン酸は、牛乳中のカルシウムイオンとキレートを形成するので、吸収が低下する。",
         "semantic_labels": [
           "カルシウムキレート",
@@ -10608,7 +10608,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "カルシウム補給のためにも、牛乳での服用が推奨されている。",
         "semantic_labels": [
           "カルシウム補給",
@@ -10617,7 +10617,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "リセドロン酸は、牛乳中の成分とは特に相互作用しないので、水で服用した場合と比べて、吸収に違いは認められない。",
         "semantic_labels": [
           "相互作用なし",
@@ -10689,7 +10689,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "薬物の胎盤透過に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "一般に、分子量5,000以上の薬物も透過して胎児へ移行する。",
         "semantic_labels": [
           "分子量5000以上",
@@ -10698,7 +10698,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "胎盤にはP-糖タンパク質が発現し、薬物の胎児への移行を促進している。",
         "semantic_labels": [
           "P-糖タンパク質",
@@ -10707,7 +10707,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "多くの薬物の胎盤透過は、pH分配仮説に従う。",
         "semantic_labels": [
           "pH分配仮説",
@@ -10716,7 +10716,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "一般に、母体中の血漿タンパク質結合形薬物は、胎児へ移行しない。",
         "semantic_labels": [
           "タンパク結合形",
@@ -10725,7 +10725,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "一般に、水溶性の高い薬物ほど胎盤を透過しやすい。",
         "semantic_labels": [
           "水溶性",
@@ -10797,7 +10797,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "シクロスポリンの経口投与時の体内動態および投与設計に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "シクロスポリンの投与量は、腎移植後の日数に関わらず一定に保つことが推奨される。",
         "semantic_labels": [
           "投与量一定",
@@ -10806,7 +10806,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "シクロスポリンの投与設計は、一般にトラフ濃度に基づいて行われる。",
         "semantic_labels": [
           "トラフ濃度",
@@ -10815,7 +10815,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "シクロスポリンによる腎移植後の拒絶反応のコントロールが不良の場合は、シクロスポリンとタクロリムスの併用を行う。",
         "semantic_labels": [
           "タクロリムス併用",
@@ -10824,7 +10824,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "血清クレアチニン値の上昇が観察された場合は、シクロスポリンによる副作用の可能性があるため、直ちに休薬する必要がある。",
         "semantic_labels": [
           "クレアチニン上昇",
@@ -10833,7 +10833,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "自己乳化型マイクロエマルション製剤投与後のシクロスポリンの消化管吸収は、胆汁分泌量や食事の影響を受けにくい。",
         "semantic_labels": [
           "マイクロエマルション製剤",
@@ -10905,7 +10905,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "テイコプラニンの静脈内投与終了後の血中濃度推移について、分布終了後の遅い時間（消失相）の血中濃度データを用いて線形1-コンパートメントモデルで解析した場合と、初期の分布相のデータも含めて線形2-コンパートメントモデルで解析した場合では、得られる薬物動態パラメータの値が異なる。薬物動態パラメータの関係について正しい記述はどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "2-コンパートメントモデルから得られる全身クリアランスは、1-コンパートメントモデルから得られる値よりも小さい。",
         "semantic_labels": [
           "全身クリアランス",
@@ -10914,7 +10914,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "2-コンパートメントモデルにより推定される投与終了直後の血中濃度は、1-コンパートメントモデルから得られる値よりも小さい。",
         "semantic_labels": [
           "初期血中濃度",
@@ -10923,7 +10923,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "2-コンパートメントモデルから得られる中央コンパートメントの分布容積は、1-コンパートメントモデルから得られる分布容積よりも小さい。",
         "semantic_labels": [
           "中央コンパートメント",
@@ -10932,7 +10932,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "2-コンパートメントモデルから得られる消失相の半減期は、1-コンパートメントモデルから得られる半減期よりも短い。",
         "semantic_labels": [
           "消失相半減期",
@@ -10941,7 +10941,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "2-コンパートメントモデルから得られる血中濃度時間曲線下面積は、1-コンパートメントモデルから得られる値よりも小さい。",
         "semantic_labels": [
           "AUC",
@@ -11013,7 +11013,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "この薬物0.75mgを急速静脈内投与するとき、7日後の血中濃度に最も近い値はどれか。1つ選べ。ただし、この薬物の体内動態は線形1-コンパートメントモデルに従うものとし、分布容積は750Lとする。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "0.25 μg/mL",
         "semantic_labels": [
           "0.25μg/mL"
@@ -11021,7 +11021,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "0.125 μg/mL",
         "semantic_labels": [
           "0.125μg/mL"
@@ -11029,7 +11029,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "0.0625 μg/mL",
         "semantic_labels": [
           "0.0625μg/mL"
@@ -11037,7 +11037,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "0.25 ng/mL",
         "semantic_labels": [
           "0.25ng/mL"
@@ -11045,7 +11045,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "0.125 ng/mL",
         "semantic_labels": [
           "0.125ng/mL"
@@ -11053,7 +11053,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "6",
+        "key": 6,
         "text": "0.0625 ng/mL",
         "semantic_labels": [
           "0.0625ng/mL"
@@ -11124,7 +11124,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "本テープ剤に関する記述のうち、誤っているのはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "室温で保存する。",
         "semantic_labels": [
           "保存条件",
@@ -11133,7 +11133,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "製剤均一性試験法の適用を受ける。",
         "semantic_labels": [
           "製剤均一性試験"
@@ -11141,7 +11141,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "溶出試験法の適用外である。",
         "semantic_labels": [
           "溶出試験",
@@ -11150,7 +11150,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "膏体は支持体に展延されている。",
         "semantic_labels": [
           "膏体",
@@ -11160,7 +11160,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "水を含む基剤を用いた貼付剤である。",
         "semantic_labels": [
           "水性基剤",
@@ -11232,7 +11232,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "本坐剤の基剤には、半合成油脂性基剤であるハードファット（ウィテプゾール）が用いられている。ハードファットに関する記述のうち、正しいのはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "直腸内の水分により速やかに溶解し、主薬を放出する。",
         "semantic_labels": [
           "水分溶解",
@@ -11241,7 +11241,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "冷所保存してはならない。",
         "semantic_labels": [
           "冷所保存",
@@ -11250,7 +11250,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "飽和脂肪酸のモノ、ジ、トリグリセリドの混合物である。",
         "semantic_labels": [
           "飽和脂肪酸",
@@ -11259,7 +11259,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "坐剤の成形にプラスチック製容器は使用できない。",
         "semantic_labels": [
           "プラスチック容器",
@@ -11268,7 +11268,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "結晶多形が存在する。",
         "semantic_labels": [
           "結晶多形"
@@ -11339,7 +11339,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "本吸入剤に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "添加されている乳糖粒子は、薬物粒子同士の過度な凝集を抑える働きがある。",
         "semantic_labels": [
           "乳糖粒子",
@@ -11348,7 +11348,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "薬物粒子は、吸入時に効率よく気道に到達する空気力学径である20 μm前後の粒子径に設計されている。",
         "semantic_labels": [
           "空気力学径",
@@ -11357,7 +11357,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "薬物粒子が吸湿すると流動性が低下するため、防湿性の包装が施されている。",
         "semantic_labels": [
           "吸湿",
@@ -11366,7 +11366,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "吸入時に、薬物粒子が二次粒子を形成するように設計されている。",
         "semantic_labels": [
           "二次粒子形成",
@@ -11438,7 +11438,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "アシクロビルのプロドラッグであるバラシクロビルに関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "アシクロビルにエチレングリコールを結合させた化合物で、体内吸収後の血中滞留性はアシクロビルより優れている。",
         "semantic_labels": [
           "エチレングリコール",
@@ -11447,7 +11447,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "主に肝臓のエステラーゼで加水分解されてアシクロビルに変換される。",
         "semantic_labels": [
           "肝臓エステラーゼ",
@@ -11456,7 +11456,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "経口投与後のアシクロビルとしてのバイオアベイラビリティは、消化管からの吸収率が高まるため、アシクロビル経口投与時のそれより高くなる。",
         "semantic_labels": [
           "バイオアベイラビリティ",
@@ -11465,7 +11465,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "経口投与後のアシクロビルとしてのバイオアベイラビリティは、肝臓での代謝を回避できるため、アシクロビル経口投与時のそれより高くなる。",
         "semantic_labels": [
           "初回通過効果回避",
@@ -11533,7 +11533,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "処方された口腔内崩壊錠に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "錠剤表面が、水不溶性高分子でコーティングされている。",
         "semantic_labels": [
           "水不溶性高分子",
@@ -11542,7 +11542,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "錠剤表面が、腸溶性高分子でコーティングされている。",
         "semantic_labels": [
           "腸溶性高分子",
@@ -11551,7 +11551,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "口腔粘膜からの薬物吸収を期待した製剤である。",
         "semantic_labels": [
           "口腔粘膜吸収",
@@ -11560,7 +11560,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "滑沢剤として、ステアリン酸塩が添加されている。",
         "semantic_labels": [
           "滑沢剤",
@@ -11569,7 +11569,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "水に溶け易い糖類が、添加されている。",
         "semantic_labels": [
           "水溶性糖類",
@@ -11641,7 +11641,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "薬剤師が、プレガバリンカプセルの添付文書を確認したところ、クレアチニンクリアランス（mL/min）≧60の場合の初期投与量「1回75mg、1日2回」、≧30−＜60の場合の初期投与量「1回75mg、1日1回」、≧15−＜30の場合の初期投与量「1回50mg、1日1回」と記載されていた。この患者の薬物治療に対する薬剤師の対応として、最も適切なのはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "お薬手帳の処方1の薬剤とプレガバリンとの併用は禁忌であると考えて、お薬手帳に記載された内科医に疑義照会した。",
         "semantic_labels": [
           "併用禁忌",
@@ -11651,7 +11651,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "お薬手帳の処方2の薬剤とプレガバリンとの併用は禁忌であると考えて、今回の処方医に疑義照会した。",
         "semantic_labels": [
           "併用禁忌",
@@ -11661,7 +11661,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "プレガバリンの投与量が少ないと考えて、今回の処方医に疑義照会した。",
         "semantic_labels": [
           "投与量不足",
@@ -11670,7 +11670,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "プレガバリンの投与量が少ないと考えて、お薬手帳に記載された内科医に疑義照会した。",
         "semantic_labels": [
           "投与量不足",
@@ -11679,7 +11679,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "適切な用量の処方であると判断して、調剤を行った。",
         "semantic_labels": [
           "用量適切",
@@ -11715,7 +11715,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "外科の担当医より、手術前のワルファリンの休薬期間とその代替薬について外科病棟担当薬剤師に質問があった。以下の組合せのうち、最も適切なのはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "24時間 — ヘパリン",
         "semantic_labels": [
           "24時間休薬",
@@ -11724,7 +11724,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "24時間 — シロスタゾール",
         "semantic_labels": [
           "24時間休薬",
@@ -11733,7 +11733,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "4日 — ヘパリン",
         "semantic_labels": [
           "4日休薬",
@@ -11742,7 +11742,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "4日 — シロスタゾール",
         "semantic_labels": [
           "4日休薬",
@@ -11751,7 +11751,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "14日 — ヘパリン",
         "semantic_labels": [
           "14日休薬",
@@ -11760,7 +11760,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "6",
+        "key": 6,
         "text": "14日 — シロスタゾール",
         "semantic_labels": [
           "14日休薬",
@@ -11796,7 +11796,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "上記の処方薬剤に関する記述のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "ジソピラミドリン酸塩徐放錠は、不応期を短縮させ房室ブロックに用いる。",
         "semantic_labels": [
           "ジソピラミド",
@@ -11806,7 +11806,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "ワルファリンカリウム錠は、血栓形成を抑制し、脳梗塞の発症を予防する。",
         "semantic_labels": [
           "ワルファリン",
@@ -11816,7 +11816,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "ランソプラゾール口腔内崩壊錠は、併用薬の酸化的分解の抑制のため用いる。",
         "semantic_labels": [
           "ランソプラゾール",
@@ -11825,7 +11825,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "ニフェジピン徐放錠は、労作時狭心症発作時の治療に用いる。",
         "semantic_labels": [
           "ニフェジピン",
@@ -11834,7 +11834,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "レボセチリジン塩酸塩錠は、鼻汁分泌を抑制し、アレルギー性鼻炎に用いる。",
         "semantic_labels": [
           "レボセチリジン",
@@ -11907,7 +11907,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "薬剤師は、患者宅を訪問して対応することとした。患者の質問に対する現状での回答内容として、適切なのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "食事が摂れなくてもインスリン製剤の使用は続ける。",
         "semantic_labels": [
           "インスリン継続",
@@ -11916,7 +11916,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "下痢をしていない時の食事内容を続ける。",
         "semantic_labels": [
           "通常食事",
@@ -11925,7 +11925,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "野菜スープなどミネラル分を含むものを中心に水分摂取を心掛ける。",
         "semantic_labels": [
           "水分補給",
@@ -11935,7 +11935,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "炭水化物の摂取は、下痢をしていない時の食事よりも少なくする。",
         "semantic_labels": [
           "炭水化物制限",
@@ -12007,7 +12007,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "この患者の血漿アンモニア窒素値は、180 μg/dL（正常値12〜66 μg/dL）であった。この原因として、最も可能性が高いのはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "ミオクローヌス発作にともなう筋障害",
         "semantic_labels": [
           "ミオクローヌス",
@@ -12016,7 +12016,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "ミオクローヌス発作にともなう低酸素血症",
         "semantic_labels": [
           "ミオクローヌス",
@@ -12025,7 +12025,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "ミオクローヌス発作にともなう腎血流の低下",
         "semantic_labels": [
           "ミオクローヌス",
@@ -12034,7 +12034,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "バルプロ酸による肝実質細胞の障害",
         "semantic_labels": [
           "バルプロ酸",
@@ -12043,7 +12043,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "バルプロ酸による尿素サイクルの阻害",
         "semantic_labels": [
           "バルプロ酸",
@@ -12052,7 +12052,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "6",
+        "key": 6,
         "text": "バルプロ酸による腸内のウレアーゼの阻害",
         "semantic_labels": [
           "バルプロ酸",
@@ -12123,7 +12123,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "アルツハイマー型認知症の病因・病態として、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "脳内コリン作動性神経系の著しい亢進を認める。",
         "semantic_labels": [
           "コリン作動性神経",
@@ -12132,7 +12132,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "前頭葉を中心として全般的脳萎縮を認める。",
         "semantic_labels": [
           "前頭葉",
@@ -12141,7 +12141,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "アミロイドβオリゴマーが、神経細胞周囲に蓄積する。",
         "semantic_labels": [
           "アミロイドβオリゴマー",
@@ -12150,7 +12150,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "大脳皮質を中心に、老人斑と神経原線維変化を認める。",
         "semantic_labels": [
           "老人斑",
@@ -12159,7 +12159,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "中核症状として徘徊がある。",
         "semantic_labels": [
           "中核症状",
@@ -12230,7 +12230,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "この副作用はどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "肝機能障害",
         "semantic_labels": [
           "肝機能障害"
@@ -12238,7 +12238,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "高血糖",
         "semantic_labels": [
           "高血糖"
@@ -12246,7 +12246,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "高カリウム血症",
         "semantic_labels": [
           "高カリウム血症"
@@ -12254,7 +12254,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "腎機能障害",
         "semantic_labels": [
           "腎機能障害"
@@ -12262,7 +12262,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "横紋筋融解症",
         "semantic_labels": [
           "横紋筋融解症"
@@ -12332,7 +12332,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "この患者に対して適切でないと判断された一般用医薬品について、その理由にあてはまるのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "症状を改善させる成分が含まれていない。",
         "semantic_labels": [
           "有効成分不足"
@@ -12340,7 +12340,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "現在使用中の薬物により代謝が阻害され、QT延長を引き起こす成分が含まれている。",
         "semantic_labels": [
           "QT延長",
@@ -12349,7 +12349,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "排尿筋を弛緩させ、排尿困難を悪化させる成分が含まれている。",
         "semantic_labels": [
           "排尿筋弛緩",
@@ -12358,7 +12358,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "腺細胞を増殖させ、排尿困難を悪化させる成分が含まれている。",
         "semantic_labels": [
           "腺細胞増殖",
@@ -12367,7 +12367,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "尿道括約筋を弛緩させ、排尿困難を悪化させる成分が含まれている。",
         "semantic_labels": [
           "尿道括約筋弛緩",
@@ -12438,7 +12438,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "この患者から、「その点滴する薬を使用する前に、検査をして確認することがあると医師に言われたが、何を検査するのか。」と質問された。対応した薬剤師の回答として適切なのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "リウマトイド因子",
         "semantic_labels": [
           "リウマトイド因子"
@@ -12446,7 +12446,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "胸部レントゲン",
         "semantic_labels": [
           "胸部レントゲン"
@@ -12454,7 +12454,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "血糖値",
         "semantic_labels": [
           "血糖値"
@@ -12462,7 +12462,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "ヘモグロビン値",
         "semantic_labels": [
           "ヘモグロビン値"
@@ -12470,7 +12470,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "ツベルクリン反応",
         "semantic_labels": [
           "ツベルクリン反応"
@@ -12504,7 +12504,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "学校薬剤師は小学校を訪れて児童に手洗いの指導を行った。手洗いが不充分になりやすく、指導の優先度が高い部位は以下のどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "指先",
         "semantic_labels": [
           "指先",
@@ -12513,7 +12513,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "image_with_label"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "手の甲",
         "semantic_labels": [
           "手の甲",
@@ -12522,7 +12522,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "image_with_label"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "手のひら",
         "semantic_labels": [
           "手のひら",
@@ -12531,7 +12531,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "image_with_label"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "指の付け根の間",
         "semantic_labels": [
           "指の付け根の間",
@@ -12566,7 +12566,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "手洗いが、感染防止に有効である可能性の高い感染症はどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "C型肝炎",
         "semantic_labels": [
           "C型肝炎"
@@ -12574,7 +12574,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "デング熱",
         "semantic_labels": [
           "デング熱"
@@ -12582,7 +12582,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "インフルエンザ",
         "semantic_labels": [
           "インフルエンザ"
@@ -12590,7 +12590,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "日本脳炎",
         "semantic_labels": [
           "日本脳炎"
@@ -12598,7 +12598,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "O-157感染症",
         "semantic_labels": [
           "O-157感染症"
@@ -12668,7 +12668,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "この患者に対して、イトラコナゾール注射剤は使用できないと病棟薬剤師は判断した。その理由として、正しいのはどれか。1つ選べ。なお、イトラコナゾール注射剤には、1％イトラコナゾールの他に添加剤としてヒドロキシプロピル-β-シクロデキストリン、プロピレングリコール、塩酸を含む。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "イトラコナゾールがアスペルギルス症に対して無効であるため",
         "semantic_labels": [
           "無効"
@@ -12676,7 +12676,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "イトラコナゾールが腎排泄型薬物であるため",
         "semantic_labels": [
           "腎排泄型"
@@ -12684,7 +12684,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "イトラコナゾールが肺に移行しないため",
         "semantic_labels": [
           "肺移行性なし"
@@ -12692,7 +12692,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "添加物が腎機能を低下させるため",
         "semantic_labels": [
           "添加物",
@@ -12701,7 +12701,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "添加物が造血幹細胞の増殖を抑制するため",
         "semantic_labels": [
           "添加物",
@@ -12710,7 +12710,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "6",
+        "key": 6,
         "text": "添加物に催奇形性があるため",
         "semantic_labels": [
           "添加物",
@@ -12781,7 +12781,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "この患者に関する情報の薬局における取扱いとして適切なのはどれか。2つ選べ。なお、必要な事項は薬歴に記載している。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "患者から薬歴開示の求めがあったが、薬歴は薬局の情報であるという理由で開示を拒否した。",
         "semantic_labels": [
           "薬歴開示拒否"
@@ -12789,7 +12789,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "患者が不慮の事故で亡くなったので、薬歴の情報を家族の同意を得ずに第三者に提供した。",
         "semantic_labels": [
           "第三者提供",
@@ -12798,7 +12798,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "患者の勤務先から、健康診断の準備のために処方内容の問い合わせがあったが、患者の同意がないとの理由で回答を拒否した。",
         "semantic_labels": [
           "勤務先問い合わせ",
@@ -12807,7 +12807,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "処方せんに疑義が生じたため、患者の同意を得ずに処方医に疑義照会した。",
         "semantic_labels": [
           "疑義照会",
@@ -12874,7 +12874,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "医薬品安全管理のために、薬剤師が病棟における薬剤の在庫確認を行った。内科病棟を巡回した際、医療安全の観点から、病棟に在庫することが適切でない成分を含む注射剤として、指摘すべきものはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "ペンタゾシン",
         "semantic_labels": [
           "ペンタゾシン"
@@ -12882,7 +12882,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "ヒドロコルチゾンコハク酸エステルナトリウム",
         "semantic_labels": [
           "ヒドロコルチゾンコハク酸エステルナトリウム"
@@ -12890,7 +12890,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "L-アスパラギン酸カリウム",
         "semantic_labels": [
           "L-アスパラギン酸カリウム"
@@ -12898,7 +12898,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "リドカイン塩酸塩",
         "semantic_labels": [
           "リドカイン塩酸塩"
@@ -12906,7 +12906,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "アドレナリン",
         "semantic_labels": [
           "アドレナリン"
@@ -12976,7 +12976,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "後日、この患者の処方せんを薬局がファクシミリで受け取った。薬剤師は、再度患者宅を訪問し、以下の業務を行った。適切なのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "薬剤の効果を確かめるために、患者から同意を得た上で採血を行い血糖を測定した。",
         "semantic_labels": [
           "採血",
@@ -12985,7 +12985,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "患者が服薬しやすいように服薬カレンダーに薬剤をセットした。",
         "semantic_labels": [
           "服薬カレンダー",
@@ -12994,7 +12994,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "患者宅の残薬が服用可能であったため、薬剤師の判断で処方された数量を変更して調剤した。",
         "semantic_labels": [
           "残薬調整",
@@ -13003,7 +13003,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "薬剤の効果が不十分と考えられたため、処方医に疑義照会した。",
         "semantic_labels": [
           "疑義照会",
@@ -13012,7 +13012,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "薬剤の副作用が発現していると考えられたため、薬剤師の判断で服用量の減量を指示した。",
         "semantic_labels": [
           "副作用",
@@ -13083,7 +13083,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "免疫グロブリン製剤等の血漿分画製剤の国内自給を推進するために必要とされている国の方針でないのはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "必要な献血量の確保",
         "semantic_labels": [
           "献血量確保"
@@ -13091,7 +13091,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "原料血漿の有効利用",
         "semantic_labels": [
           "原料血漿有効利用"
@@ -13099,7 +13099,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "国内製造品の製造費用の補助",
         "semantic_labels": [
           "製造費用補助"
@@ -13107,7 +13107,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "医療関係者に対する意義の啓発",
         "semantic_labels": [
           "意義啓発"
@@ -13115,7 +13115,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "適正使用の推進",
         "semantic_labels": [
           "適正使用推進"
@@ -13185,7 +13185,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "オキシコドンは麻薬として規制されている。麻薬に関する規制のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "薬局の開設者は、特段の申し出がない限り、麻薬小売業者の免許を受けた者とみなされる。",
         "semantic_labels": [
           "麻薬小売業者免許",
@@ -13194,7 +13194,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "麻薬小売業者が麻薬処方せんを受け付ける場合は、麻薬施用者の医師免許番号が記載されていることを確認しなければならない。",
         "semantic_labels": [
           "処方せん確認",
@@ -13203,7 +13203,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "麻薬小売業者は、麻薬の滅失等の事故が生じたときは、すみやかに都道府県知事に届け出なければならない。",
         "semantic_labels": [
           "事故届出",
@@ -13212,7 +13212,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "麻薬小売業者は、特段の許可なく、別の麻薬小売業者に麻薬を譲渡することができる。",
         "semantic_labels": [
           "麻薬譲渡",
@@ -13221,7 +13221,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "麻薬小売業者は、年に1回、1年間に譲渡、譲受した麻薬の品名及び数量を都道府県知事に届け出なければならない。",
         "semantic_labels": [
           "年間届出",
@@ -13337,7 +13337,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "この女性から、購入した一般用医薬品の外箱に表示された「医薬品副作用被害救済制度」について質問された。この制度の説明として正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "救済の内容としては、医療費、医療手当、障害年金などの給付があります。",
         "semantic_labels": [
           "給付内容",
@@ -13346,7 +13346,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "医療用医薬品も対象となりますが、一部、この制度の対象とならないものもあります。",
         "semantic_labels": [
           "対象範囲",
@@ -13355,7 +13355,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "副作用被害が生じた場合、担当医師が独立行政法人医薬品医療機器総合機構（PMDA）に対して、医療費等の給付の請求を行うことになります。",
         "semantic_labels": [
           "請求手続き",
@@ -13364,7 +13364,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "製造販売業者の賠償責任が明らかな健康被害が生じた場合でも、この制度による救済が行われることがあります。",
         "semantic_labels": [
           "賠償責任",
@@ -13373,7 +13373,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "海外で買ってきた、外国でのみ製造販売承認を受けた医薬品もこの制度の対象になります。",
         "semantic_labels": [
           "海外医薬品",
@@ -13444,7 +13444,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "この患者は、後発医薬品への切り替えを希望した。当該患者への後発医薬品に関する説明のうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "後発医薬品は、先発医薬品の再評価が終了した後に市場で提供されます。",
         "semantic_labels": [
           "再評価",
@@ -13453,7 +13453,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "後発医薬品は、先発医薬品と同等の臨床効果、作用が得られる医薬品です。",
         "semantic_labels": [
           "同等効果",
@@ -13462,7 +13462,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "後発医薬品は、先発医薬品と比べて多くの場合、価格が安くなります。",
         "semantic_labels": [
           "価格",
@@ -13471,7 +13471,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "後発医薬品に含まれる添加剤は、どれも先発医薬品と同一です。",
         "semantic_labels": [
           "添加剤",
@@ -13480,7 +13480,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "日本は欧米諸国に比べて、後発医薬品の使用割合が高い状況です。",
         "semantic_labels": [
           "使用割合",
@@ -13551,7 +13551,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "これらの2つの薬剤の効果と費用はいずれも異なっている。薬剤師は、エルゴタミンを含む配合剤に対するリザトリプタン安息香酸塩錠の費用対効果を評価した資料を調べた。この資料では、質調整生存年（QALY）を用いた効果の期待値と費用の期待値から増分費用効果比が算出されていた。この薬剤経済分析の手法として最も適切なのはどれか。1つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "費用最小化分析",
         "semantic_labels": [
           "費用最小化分析"
@@ -13559,7 +13559,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "費用効果分析",
         "semantic_labels": [
           "費用効果分析"
@@ -13567,7 +13567,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "費用効用分析",
         "semantic_labels": [
           "費用効用分析"
@@ -13575,7 +13575,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "費用便益分析",
         "semantic_labels": [
           "費用便益分析"
@@ -13583,7 +13583,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "費用感度分析",
         "semantic_labels": [
           "費用感度分析"
@@ -13651,7 +13651,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "処方された薬剤の用量を誤って調剤した場合、医療事故につながる可能性がある。下図は、公益財団法人日本医療機能評価機構で収集した医療機関におけるヒヤリ・ハット事例の報告件数に基づいて作成されている。図のア〜オに入る語句として適切なのはどれか。1つ選べ。なお、この報告件数には以下の①〜③に該当する事例が含まれている。①医療に誤りがあったが、患者に実施される前に発見された事例。②誤った医療が実施されたが、患者への影響が認められなかった事例又は軽微な処置・治療を要した事例。③誤った医療が実施されたが、患者への影響が不明な事例。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "ア:薬剤 イ:医療機器等 ウ:医師 エ:看護師 オ:薬剤師",
         "semantic_labels": [
           "薬剤",
@@ -13663,7 +13663,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "ア:薬剤 イ:医療機器等 ウ:看護師 エ:薬剤師 オ:医師",
         "semantic_labels": [
           "薬剤",
@@ -13675,7 +13675,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "ア:薬剤 イ:医療機器等 ウ:薬剤師 エ:医師 オ:看護師",
         "semantic_labels": [
           "薬剤",
@@ -13687,7 +13687,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "ア:医療機器等 イ:薬剤 ウ:医師 エ:看護師 オ:薬剤師",
         "semantic_labels": [
           "医療機器",
@@ -13699,7 +13699,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "ア:医療機器等 イ:薬剤 ウ:看護師 エ:薬剤師 オ:医師",
         "semantic_labels": [
           "医療機器",
@@ -13711,7 +13711,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "6",
+        "key": 6,
         "text": "ア:医療機器等 イ:薬剤 ウ:薬剤師 エ:医師 オ:看護師",
         "semantic_labels": [
           "医療機器",
@@ -14045,7 +14045,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "漢方処方とその主な効能・効果の組み合わせのうち、正しいのはどれか。2つ選べ。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "半夏厚朴湯 ー 下痢、腸閉塞予防",
         "semantic_labels": [
           "半夏厚朴湯",
@@ -14055,7 +14055,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "小青竜湯 ー 気管支喘息、鼻炎",
         "semantic_labels": [
           "小青竜湯",
@@ -14065,7 +14065,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "六君子湯 ー 花粉症、アトピー性皮膚炎",
         "semantic_labels": [
           "六君子湯",
@@ -14075,7 +14075,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "抑肝散 ー 神経症、不眠症",
         "semantic_labels": [
           "抑肝散",
@@ -14085,7 +14085,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "大建中湯 ー 腰痛、筋肉痛",
         "semantic_labels": [
           "大建中湯",
@@ -14353,7 +14353,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
     "question_text": "次の5名の健康診断の情報から、メタボリックシンドローム（内臓脂肪症候群）として特定健康診査・特定健康指導を受けるように強く指導すべき対象者の番号はどれか。1つ選べ。ただし、対象者はすべて喫煙歴はないものとする。",
     "choices": [
       {
-        "key": "1",
+        "key": 1,
         "text": "対象者1：32歳男性、腹囲78cm、トリグリセリド161mg/dL、収縮期血圧137mmHg、空腹時血糖値95mg/dL",
         "semantic_labels": [
           "32歳男性",
@@ -14362,7 +14362,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "2",
+        "key": 2,
         "text": "対象者2：45歳男性、腹囲88cm、トリグリセリド140mg/dL、収縮期血圧124mmHg、空腹時血糖値132mg/dL",
         "semantic_labels": [
           "45歳男性",
@@ -14371,7 +14371,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "3",
+        "key": 3,
         "text": "対象者3：57歳女性、腹囲87cm、トリグリセリド165mg/dL、収縮期血圧108mmHg、空腹時血糖値88mg/dL",
         "semantic_labels": [
           "57歳女性",
@@ -14380,7 +14380,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "4",
+        "key": 4,
         "text": "対象者4：62歳女性、腹囲92cm、トリグリセリド124mg/dL、収縮期血圧140mmHg、空腹時血糖値126mg/dL",
         "semantic_labels": [
           "62歳女性",
@@ -14389,7 +14389,7 @@ export const EXAM_100_QUESTIONS: Question[] = [
         "choice_type": "text"
       },
       {
-        "key": "5",
+        "key": 5,
         "text": "対象者5：28歳女性、腹囲101cm、トリグリセリド150mg/dL、収縮期血圧114mmHg、空腹時血糖値130mg/dL",
         "semantic_labels": [
           "28歳女性",
