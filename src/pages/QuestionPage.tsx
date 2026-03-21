@@ -441,15 +441,6 @@ export function QuestionPage() {
                     cursor: isAnswered ? 'default' : 'pointer',
                     ...choiceStyle(choice.key),
                   }}
-                  onClick={() => {
-                    if (!isAnswered) {
-                      setSelectedAnswers((prev) =>
-                        prev.includes(choice.key)
-                          ? prev.filter((v) => v !== choice.key)
-                          : [...prev, choice.key]
-                      )
-                    }
-                  }}
                 >
                   <Checkbox value={choice.key} disabled={isAnswered}>
                     <Text style={{ fontSize: 15 }}>
@@ -517,7 +508,7 @@ export function QuestionPage() {
           block
           disabled={
             multiAnswer
-              ? selectedAnswers.length === 0 || (Array.isArray(question.correct_answer) ? false : question.correct_answer === 0)
+              ? selectedAnswers.length !== requiredCount || (Array.isArray(question.correct_answer) ? false : question.correct_answer === 0)
               : selectedAnswer === null || (Array.isArray(question.correct_answer) ? false : question.correct_answer === 0)
           }
           onClick={handleSubmitAnswer}

@@ -218,15 +218,6 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
                           cursor: state.isAnswered ? 'default' : 'pointer',
                           ...choiceStyle(q, choice.key, state),
                         }}
-                        onClick={() => {
-                          if (!state.isAnswered) {
-                            const current = state.selectedAnswers
-                            const next = current.includes(choice.key)
-                              ? current.filter((v) => v !== choice.key)
-                              : [...current, choice.key]
-                            handleMultiSelect(q.id, next)
-                          }
-                        }}
                       >
                         <Checkbox value={choice.key} disabled={state.isAnswered}>
                           <Text style={{ fontSize: 15 }}>
@@ -321,7 +312,7 @@ export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
               <Button
                 type="primary"
                 block
-                disabled={multi ? state.selectedAnswers.length === 0 : state.selectedAnswer === null}
+                disabled={multi ? state.selectedAnswers.length !== requiredCount : state.selectedAnswer === null}
                 onClick={() => handleSubmit(q)}
                 style={{ marginTop: 12 }}
               >
