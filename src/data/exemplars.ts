@@ -956,6 +956,22 @@ export const EXEMPLARS: Exemplar[] = [
   { id: 'ex-practice-115', minorCategory: '選択した薬局製剤（漢方製剤含む）、要指導医薬品、一般用医薬品、健康食品、サプリメント、医療機器等の使用方法や注意点（副作', middleCategoryId: 'practice-community-health', subject: '実務', text: '災害時における地域の医薬品供給体制・医療救護体制について説明できる。' },
   { id: 'ex-practice-116', minorCategory: '選択した薬局製剤（漢方製剤含む）、要指導医薬品、一般用医薬品、健康食品、サプリメント、医療機器等の使用方法や注意点（副作', middleCategoryId: 'practice-community-health', subject: '実務', text: '災害発生時における病院・薬局の役割と薬剤師の活動について説明できる。' },
   { id: 'ex-practice-117', minorCategory: '選択した薬局製剤（漢方製剤含む）、要指導医薬品、一般用医薬品、健康食品、サプリメント、医療機器等の使用方法や注意点（副作', middleCategoryId: 'practice-community-health', subject: '実務', text: '災害時に派遣される医療チームと薬剤師の関わりを説明できる。' },
+  // --- H1追加: 近年の臨床・制度トピック対応（15件） ---
+  { id: 'ex-practice-118', minorCategory: 'スポーツファーマシスト', middleCategoryId: 'practice-community-health', subject: '実務', text: 'ドーピング禁止物質を含む医薬品の確認と選手への適切な情報提供ができる。' },
+  { id: 'ex-practice-119', minorCategory: 'ハイアラート薬管理', middleCategoryId: 'practice-risk-management', subject: '実務', text: 'ハイアラート薬（高濃度カリウム製剤等）の管理方法と安全対策について説明できる。' },
+  { id: 'ex-practice-120', minorCategory: '抗菌薬適正使用', middleCategoryId: 'practice-team-medicine', subject: '実務', text: '抗菌薬適正使用支援（AST）の考え方とデ・エスカレーション等の最適化戦略について説明できる。' },
+  { id: 'ex-practice-121', minorCategory: '検査前処置', middleCategoryId: 'practice-dispensing', subject: '実務', text: '検査前処置（大腸内視鏡検査等）に用いる医薬品の使用方法と注意事項について患者に説明できる。' },
+  { id: 'ex-practice-122', minorCategory: '感染対策', middleCategoryId: 'practice-risk-management', subject: '実務', text: 'ノロウイルス等の感染性胃腸炎における吐瀉物処理と環境消毒の手順について説明できる。' },
+  { id: 'ex-practice-123', minorCategory: 'DOAC中和薬', middleCategoryId: 'practice-pharmacotherapy', subject: '実務', text: '直接経口抗凝固薬（DOAC）の特異的中和薬の適応と使用法について説明できる。' },
+  { id: 'ex-practice-124', minorCategory: '大量化学療法支持療法', middleCategoryId: 'practice-pharmacotherapy', subject: '実務', text: '大量メトトレキサート療法におけるロイコボリンレスキュー等の支持療法について説明できる。' },
+  { id: 'ex-practice-125', minorCategory: '酸塩基平衡異常', middleCategoryId: 'practice-pharmacotherapy', subject: '実務', text: '酸塩基平衡異常（乳酸アシドーシス等）の病態と診断に必要な検査所見について説明できる。' },
+  { id: 'ex-practice-126', minorCategory: 'シックデイ管理', middleCategoryId: 'practice-pharmacotherapy', subject: '実務', text: '糖尿病患者のシックデイにおけるインスリン・経口薬の調整と受診勧奨基準について説明できる。' },
+  { id: 'ex-practice-127', minorCategory: '服薬フォローアップ', middleCategoryId: 'practice-dispensing', subject: '実務', text: '服薬フォローアップ（継続的服薬指導）の法的根拠と実施方法について説明できる。' },
+  { id: 'ex-practice-128', minorCategory: 'RMP', middleCategoryId: 'practice-risk-management', subject: '実務', text: '医薬品リスク管理計画（RMP）の構成要素と薬剤師の活用方法について説明できる。' },
+  { id: 'ex-practice-129', minorCategory: 'PCA', middleCategoryId: 'practice-pharmacotherapy', subject: '実務', text: 'PCA（患者自己管理鎮痛法）ポンプの仕組みと使用方法について患者・家族に説明できる。' },
+  { id: 'ex-practice-130', minorCategory: '小児誤飲対応', middleCategoryId: 'practice-community-health', subject: '実務', text: '小児の家庭内事故（たばこ・医薬品等の誤飲）に対する初期対応と受診勧奨の判断ができる。' },
+  { id: 'ex-practice-131', minorCategory: 'アルコール依存症治療', middleCategoryId: 'practice-pharmacotherapy', subject: '実務', text: 'アルコール依存症の治療薬（抗酒薬、飲酒量低減薬等）の作用機序と服薬指導上の注意点を説明できる。' },
+  { id: 'ex-hygiene-080', minorCategory: '室内環境', middleCategoryId: 'hygiene-environment', subject: '衛生', text: '室内空気環境の測定（CO、CO₂、NO₂等）と燃焼器具使用時の追加検査項目について説明できる。' },
 ]
 
 // ヘルパー: IDで高速検索するためのMap
