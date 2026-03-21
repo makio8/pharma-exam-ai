@@ -121,6 +121,42 @@ test('correct_answer=0 の問題で「データ準備中」が表示される', 
   await expect(submitBtn).toBeDisabled()
 })
 
+test('連問シナリオが表示される', async ({ page }) => {
+  // r110-120 は linked_group: "r110-120-121" の連問（2問セット）
+  await page.goto('/practice/r110-120')
+  await page.waitForLoadState('networkidle')
+
+  // 連問ヘッダーが表示される（「連問（2問セット）」）
+  await expect(page.getByText(/連問（\d+問セット）/)).toBeVisible()
+
+  // シナリオ（共通文）が表示される（紫背景のCardの中）
+  const scenarioCard = page.locator('div').filter({ has: page.getByText(/連問/) }).first()
+  await expect(scenarioCard).toBeVisible()
+
+  // 各問題カードが縦に並んでいる（問120, 問121）
+  await expect(page.getByText('問120')).toBeVisible()
+  await expect(page.getByText('問121')).toBeVisible()
+})
+
+test('複数選択問題でCheckboxが表示される', async ({ page }) => {
+  // r110-091 は「2つ選べ」の複数選択問題
+  await page.goto('/practice/r110-091')
+  await page.waitForLoadState('networkidle')
+
+  // 「2つ選べ」タグが表示される
+  await expect(page.getByText(/つ選べ/)).toBeVisible()
+
+  // Checkbox UIが表示される（Radio ではなく Checkbox）
+  const checkboxes = page.locator('.ant-checkbox')
+  const checkboxCount = await checkboxes.count()
+  expect(checkboxCount).toBeGreaterThan(0)
+
+  // Radio は表示されない（Checkboxのみ）
+  const radios = page.locator('.ant-radio')
+  const radioCount = await radios.count()
+  expect(radioCount).toBe(0)
+})
+
 test('PracticePage で画像フィルタが動作する', async ({ page }) => {
   await page.goto('/practice')
   await page.waitForLoadState('networkidle')

@@ -10,7 +10,6 @@ const { Text, Paragraph } = Typography
 
 interface Props {
   group: LinkedGroup
-  currentQuestionId: string
 }
 
 interface QuestionState {
@@ -25,7 +24,7 @@ interface QuestionState {
  * - 共通シナリオを1回だけ表示
  * - 各問題を縦に並べて表示（回答可能）
  */
-export function LinkedQuestionViewer({ group, currentQuestionId }: Props) {
+export function LinkedQuestionViewer({ group }: Props) {
   const scenarioImage = group.questions.find((q) => q.image_url)?.image_url
   const { saveAnswer, getQuestionResult } = useAnswerHistory()
 

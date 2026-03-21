@@ -311,7 +311,6 @@ export function QuestionPage() {
         <LinkedQuestionViewer
           key={linkedGroup.groupId}
           group={linkedGroup}
-          currentQuestionId={questionId ?? ''}
         />
       )}
 
