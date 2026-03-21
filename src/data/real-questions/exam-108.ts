@@ -7978,7 +7978,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 3,
+    "correct_answer": [3, 5],
     "explanation": "【ポイント】経口糖尿病治療薬の構造式から薬物を特定し、低血糖リスクを評価する問題\n【正答の根拠】問題のquestion_textに含まれる選択肢と構造式情報に基づいて正答を判定。SU薬（グリメピリド等）は低血糖リスクが高い。\n【覚え方💡】低血糖を起こしやすい糖尿病薬：「SU薬（〜グリド/〜アミド）、インスリン」。起こしにくい：「メトホルミン、SGLT2阻害薬、DPP-4阻害薬」。\n【関連知識】SU薬はK-ATP チャネルを遮断→インスリン分泌促進。血糖非依存的にインスリンを出すため低血糖のリスクが高い。",
     "tags": [],
     "image_url": "/images/questions/108/q219.png",
@@ -8080,7 +8080,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 5],
     "explanation": "【ポイント】散剤の調製・保存に関する物理化学的知識を問う実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢情報に基づいて正答を判定。散剤の吸湿性・安定性・粒度と薬効の関係が問われる。\n【覚え方💡】散剤の品質管理：「吸湿→固結→流動性低下→分包ばらつき」。乾燥剤の同封、密閉容器での保存が重要。\n【関連知識】粉体の流動性は粒子径・形状・水分含量に依存する。安息角が小さいほど流動性良好。",
     "tags": [],
     "image_url": "/images/questions/108/q221.png",
@@ -8183,7 +8183,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 4,
+    "correct_answer": [4, 5],
     "explanation": "【ポイント】注射剤の配合変化に関する物理化学的知識を問う実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢情報に基づいて正答を判定。pH変動による薬物の析出や分解が配合変化の主因。\n【覚え方💡】配合変化の3大原因：「pH変動→析出」「酸化還元→分解」「キレート形成→不溶性塩」。混合前のpH確認が重要。\n【関連知識】注射剤の配合変化試験では外観変化（混濁・沈殿・変色）、pH変動、含量変化を確認する。",
     "tags": [],
     "image_url": "/images/questions/108/q223.png",
@@ -8420,7 +8420,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 2,
+    "correct_answer": [2, 3],
     "explanation": "【ポイント】薬物の体内動態に関する計算問題（実践）\n【正答の根拠】問題のquestion_textに含まれる薬物動態パラメータと計算式に基づいて正答を判定。\n【覚え方💡】薬物動態の基本式：「CL=Dose/AUC」「Vd=Dose/(ke・AUC)」「t1/2=0.693/ke」。\n【関連知識】腎機能低下時は腎排泄型薬物の投与量調節が必要。Cockcroft-Gault式でCCrを推定。",
     "tags": [],
     "image_url": "/images/questions/108/q229.png",
@@ -8519,7 +8519,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 3,
+    "correct_answer": [3, 4],
     "explanation": "【ポイント】製剤の安定性や品質管理に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢情報に基づいて正答を判定。\n【覚え方💡】製剤の安定性試験：「加速試験（40℃/75%RH/6ヶ月）」「長期保存試験（25℃/60%RH/36ヶ月）」。\n【関連知識】ICH Q1Aガイドラインに基づく安定性試験が医薬品承認の必須要件。",
     "tags": [],
     "image_url": "/images/questions/108/q231.png",
@@ -8622,7 +8622,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 2,
+    "correct_answer": [2, 3],
     "explanation": "【ポイント】薬物相互作用に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢と薬物情報に基づいて正答を判定。CYP阻害・誘導による相互作用が問われる。\n【覚え方💡】CYP相互作用の主要薬物：「3A4阻害＝アゾール系、マクロライド」「3A4誘導＝リファンピシン、カルバマゼピン」「2D6阻害＝パロキセチン」。\n【関連知識】薬物相互作用は薬物動態学的（吸収・代謝・排泄）と薬力学的（作用部位での相加・相乗・拮抗）に分類される。",
     "tags": [],
     "image_url": "/images/questions/108/q233.png",
@@ -8825,7 +8825,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 3,
+    "correct_answer": [3, 5],
     "explanation": "【ポイント】注射剤の調製・投与に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢と処方情報に基づいて正答を判定。\n【覚え方💡】注射剤調製の注意：「無菌操作」「配合変化の確認」「投与速度の確認」が三原則。\n【関連知識】抗がん薬の調製は安全キャビネット内で行う。曝露防止のため個人防護具（PPE）を着用する。",
     "tags": [],
     "image_url": "/images/questions/108/q237.png",
@@ -8891,7 +8891,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "image"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [2, 4],
     "explanation": "【ポイント】臨床検査値の解釈に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる検査値と選択肢情報に基づいて正答を判定。\n【覚え方💡】腎機能指標：「BUN/Cr比>20→腎前性」「Cr上昇＋BUN上昇→腎性」「eGFR<60→CKD」。\n【関連知識】薬物投与量の腎機能による調節にはeGFR（推算糸球体ろ過量）を用いる。",
     "tags": [],
     "image_url": "/images/questions/108/q238.png",
@@ -9090,7 +9090,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 2,
+    "correct_answer": [2, 5],
     "explanation": "【ポイント】副作用モニタリングに関する実践問題\n【正答の根拠】問題のquestion_textに含まれる薬物情報と選択肢に基づいて正答を判定。\n【覚え方💡】副作用早期発見の検査：「バンコマイシン→TDM+腎機能」「ワルファリン→PT-INR」「MTX→血球+肝機能」。\n【関連知識】副作用報告制度（PMDA）：重篤な副作用は医薬品医療機器等法に基づき報告義務がある。",
     "tags": [],
     "image_url": "/images/questions/108/q241.png",
@@ -9502,7 +9502,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 2,
+    "correct_answer": [2, 4],
     "explanation": "【ポイント】チーム医療・薬剤師の役割に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢情報に基づいて正答を判定。\n【覚え方💡】チーム医療における薬剤師の役割：「処方提案」「TDM」「副作用モニタリング」「服薬指導」「抗菌薬適正使用支援」。\n【関連知識】ICT（感染制御チーム）、NST（栄養サポートチーム）、PCT（緩和ケアチーム）に薬剤師が参画。",
     "tags": [],
     "image_url": "/images/questions/108/q249.png",
@@ -9712,7 +9712,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 4],
     "explanation": "【ポイント】在宅医療・地域連携に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢情報に基づいて正答を判定。\n【覚え方💡】在宅薬剤師の業務：「残薬確認」「服薬状況の評価」「副作用チェック」「多職種との情報共有」。\n【関連知識】薬局薬剤師は訪問薬剤管理指導（医療保険）・居宅療養管理指導（介護保険）で在宅患者を支援。",
     "tags": [],
     "image_url": "/images/questions/108/q253.png",
@@ -9816,7 +9816,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 4],
     "explanation": "【ポイント】臨床薬理・薬物治療に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢と臨床情報に基づいて正答を判定。\n【覚え方💡】薬物治療の原則：「エビデンスに基づく治療（EBM）」「個別化」「モニタリング」「副作用管理」。\n【関連知識】ガイドラインは推奨の強さ（推奨度）とエビデンスの質（エビデンスレベル）で評価される。",
     "tags": [],
     "image_url": "/images/questions/108/q255.png",
@@ -10125,7 +10125,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 3,
+    "correct_answer": [3, 5],
     "explanation": "【ポイント】緩和医療・疼痛管理に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢と臨床情報に基づいて正答を判定。\n【覚え方💡】WHO三段階除痛ラダー：「Step1 NSAIDs→Step2 弱オピオイド→Step3 強オピオイド」。レスキュー量は1日量の1/6。\n【関連知識】オピオイド副作用の便秘は耐性が形成されないため、投与中は緩下薬を併用する。",
     "tags": [],
     "image_url": "/images/questions/108/q261.png",
@@ -10227,7 +10227,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 4,
+    "correct_answer": [4, 5],
     "explanation": "【ポイント】妊婦・授乳婦への薬物療法に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢と臨床情報に基づいて正答を判定。\n【覚え方💡】妊婦禁忌の代表薬：「ワルファリン」「ACE阻害薬/ARB」「メトトレキサート」「レチノイド」。\n【関連知識】FDA旧妊婦カテゴリー（A/B/C/D/X）は廃止され、現在は具体的リスク記述方式に変更。",
     "tags": [],
     "image_url": "/images/questions/108/q263.png",
@@ -10332,7 +10332,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 4],
     "explanation": "【ポイント】高齢者への薬物療法に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢と臨床情報に基づいて正答を判定。\n【覚え方💡】高齢者の薬物動態変化：「肝血流↓→初回通過効果↓」「腎機能↓→排泄遅延」「体脂肪↑→脂溶性薬物のVd↑」。\n【関連知識】ポリファーマシー（多剤併用）は6剤以上で有害事象リスク増加。「高齢者の安全な薬物療法GL」を参照。",
     "tags": [],
     "image_url": "/images/questions/108/q265.png",
@@ -11396,7 +11396,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 3,
+    "correct_answer": [2, 3],
     "explanation": "【ポイント】公衆衛生・予防医学に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢と疫学情報に基づいて正答を判定。\n【覚え方💡】予防の3段階：「一次予防＝健康増進・予防接種」「二次予防＝早期発見・健診」「三次予防＝リハビリ・再発防止」。\n【関連知識】日本のがん検診は対策型検診（市区町村）と任意型検診（人間ドック等）の2種類。",
     "tags": [],
     "image_url": "/images/questions/108/q287.png",
@@ -11498,7 +11498,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 2],
     "explanation": "【ポイント】医療制度・保険制度に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢情報に基づいて正答を判定。\n【覚え方💡】日本の医療保険：「国民健康保険」「被用者保険」「後期高齢者医療制度」。国民皆保険が基本理念。\n【関連知識】調剤報酬の仕組み：技術料（調剤基本料＋調剤料＋薬学管理料）＋薬剤料。",
     "tags": [],
     "image_url": "/images/questions/108/q289.png",
@@ -11803,7 +11803,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 5],
     "explanation": "【ポイント】薬物乱用・依存に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢情報に基づいて正答を判定。\n【覚え方💡】薬物依存の3要素：「精神的依存」「身体的依存」「耐性」。麻薬・覚せい剤・大麻は法律で厳格に規制。\n【関連知識】麻薬及び向精神薬取締法、覚醒剤取締法、大麻取締法がそれぞれ規制法。",
     "tags": [],
     "image_url": "/images/questions/108/q295.png",
@@ -12006,7 +12006,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 5],
     "explanation": "【ポイント】OTC医薬品・セルフメディケーションに関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢情報に基づいて正答を判定。\n【覚え方💡】OTC分類：「要指導医薬品」「第1類（薬剤師対面）」「第2類」「第3類」。受診勧奨も重要な判断。\n【関連知識】セルフメディケーション税制：スイッチOTC購入で医療費控除の特例が受けられる。",
     "tags": [],
     "image_url": "/images/questions/108/q299.png",
@@ -12512,7 +12512,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 2],
     "explanation": "【ポイント】内分泌・代謝疾患の薬物治療に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢と臨床情報に基づいて正答を判定。\n【覚え方💡】糖尿病薬の分類：「インスリン分泌促進（SU/グリニド/DPP-4阻害/GLP-1受容体作動）」「インスリン抵抗性改善（メトホルミン/チアゾリジン）」「糖排泄促進（SGLT2阻害）」。\n【関連知識】甲状腺機能亢進症にはチアマゾール、甲状腺機能低下症にはレボチロキシンが第一選択。",
     "tags": [],
     "image_url": "/images/questions/108/q309.png",
@@ -12715,7 +12715,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 4],
     "explanation": "【ポイント】腎疾患の薬物治療に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢と臨床情報に基づいて正答を判定。\n【覚え方💡】CKDの進行抑制：「RAS阻害薬（ACE阻害/ARB）」「SGLT2阻害薬」「減塩」「血圧130/80mmHg未満」。\n【関連知識】透析患者ではリン吸着薬（炭酸ランタン等）、ESA（エリスロポエチン）、活性型VD3が基本薬。",
     "tags": [],
     "image_url": "/images/questions/108/q313.png",
@@ -12918,7 +12918,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 4],
     "explanation": "【ポイント】眼科疾患の薬物治療に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢と臨床情報に基づいて正答を判定。\n【覚え方💡】緑内障点眼薬の順番：「PG関連薬（第一選択）→β遮断→α2刺激→CAI→ROCK阻害」。配合点眼で遵守率向上。\n【関連知識】閉塞隅角緑内障には散瞳薬禁忌。抗コリン薬の投与前に緑内障の病型確認が必要。",
     "tags": [],
     "image_url": "/images/questions/108/q317.png",
@@ -13332,7 +13332,7 @@ export const EXAM_108_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 4,
+    "correct_answer": [4, 5],
     "explanation": "【ポイント】免疫・移植医療に関する実践問題\n【正答の根拠】問題のquestion_textに含まれる選択肢と臨床情報に基づいて正答を判定。\n【覚え方💡】免疫抑制薬の3本柱：「カルシニューリン阻害薬（タクロリムス/シクロスポリン）」「代謝拮抗薬（MMF/アザチオプリン）」「ステロイド」。\n【関連知識】タクロリムスはTDM必須（トラフ値で管理）。腎毒性・糖尿病誘発に注意。CYP3A4で代謝。",
     "tags": [],
     "image_url": "/images/questions/108/q325.png",
