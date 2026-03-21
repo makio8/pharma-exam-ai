@@ -45,9 +45,19 @@ export interface QuestionExemplarMapping {
 /** 例示の出題統計（集約ビュー） */
 export interface ExemplarStats {
   exemplarId: string
-  yearsAppeared: number        // 出題された年度数（max 11）
-  totalQuestions: number       // 総出題数
-  yearDetails: { year: number; count: number }[]  // 年度別出題数
+  subject: QuestionSubject
+  // 全体（マッピング件数ベース）
+  yearsAppeared: number          // 出題年度数（0-12）
+  totalQuestions: number         // マッピング件数の合計（primary + secondary）
+  yearDetails: { year: number; count: number }[]
+  // primary/secondary 内訳（マッピング件数ベース）
+  primaryQuestions: number       // isPrimary=true のマッピング件数
+  secondaryQuestions: number     // isPrimary=false のマッピング件数
+  primaryYearsAppeared: number   // primary で出題された年度数
+  // 連問補正指標
+  linkedGroupCount: number       // linked_group でユニークなシナリオ数
+  // 派生指標
+  avgQuestionsPerYear: number    // totalQuestions / yearsAppeared（0除算は0）
 }
 
 /** トピック別の習熟度 */
