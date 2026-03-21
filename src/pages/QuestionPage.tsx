@@ -29,7 +29,7 @@ import { ALL_QUESTIONS } from '../data/all-questions'
 import { useAnswerHistory } from '../hooks/useAnswerHistory'
 import { NOTE_TYPE_CONFIG } from '../types/note'
 import type { NoteType, NoteVisibility, StickyNote } from '../types/note'
-import type { ConfidenceLevel } from '../types/question'
+import type { ConfidenceLevel, Question } from '../types/question'
 import type { CardFormat } from '../types/flashcard'
 import { CARD_FORMAT_CONFIG } from '../types/flashcard'
 import { useFlashCards } from '../hooks/useFlashCards'
@@ -89,11 +89,52 @@ export function QuestionPage() {
     return sessionIds
   }, [sessionIds, questionId])
 
-  const currentIndex = effectiveIds.indexOf(questionId ?? '')
-  const prevId = currentIndex > 0 ? effectiveIds[currentIndex - 1] : null
-  const nextId = currentIndex >= 0 && currentIndex < effectiveIds.length - 1
-    ? effectiveIds[currentIndex + 1]
-    : null
+  const { prevId, nextId } = useMemo(() => {
+    if (!questionId) return { prevId: null, nextId: null }
+
+    const currentQ = ALL_QUESTIONS.find(q => q.id === questionId)
+    if (!currentQ) return { prevId: null, nextId: null }
+
+    // Helper to get linked group's first question ID
+    const getGroupStartId = (q: typeof currentQ): string => {
+      if (!q.linked_group) return q.id
+      const match = q.linked_group.match(/^r(\d+)-(\d+)-(\d+)$/)
+      if (!match) return q.id
+      return `r${match[1]}-${match[2]}`
+    }
+
+    // Find current group boundaries
+    let currentGroupStart = currentQ.question_number
+    let currentGroupEnd = currentQ.question_number
+    if (currentQ.linked_group) {
+      const match = currentQ.linked_group.match(/^r(\d+)-(\d+)-(\d+)$/)
+      if (match) {
+        currentGroupStart = parseInt(match[2], 10)
+        currentGroupEnd = parseInt(match[3], 10)
+      }
+    }
+
+    // Build a Map for O(1) lookup
+    const questionMap = new Map(ALL_QUESTIONS.map(q => [q.id, q]))
+    const effectiveQuestions = effectiveIds.map(id => questionMap.get(id)).filter((q): q is Question => !!q)
+
+    // Find next: first question in effectiveIds after current group end
+    const nextQuestion = effectiveQuestions.find(q =>
+      (q.year === currentQ.year && q.question_number > currentGroupEnd) ||
+      q.year > currentQ.year
+    )
+
+    // Find prev: last question in effectiveIds before current group start
+    const prevQuestion = [...effectiveQuestions].reverse().find(q =>
+      (q.year === currentQ.year && q.question_number < currentGroupStart) ||
+      q.year < currentQ.year
+    )
+
+    return {
+      prevId: prevQuestion ? getGroupStartId(prevQuestion) : null,
+      nextId: nextQuestion ? getGroupStartId(nextQuestion) : null,
+    }
+  }, [questionId, effectiveIds])
 
   // --- 回答状態 ---
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
@@ -252,6 +293,7 @@ export function QuestionPage() {
       {/* 連問グループ表示（エメリー方式: 1ページに全問縦並び） */}
       {linkedGroup && (
         <LinkedQuestionViewer
+          key={linkedGroup.groupId}
           group={linkedGroup}
           currentQuestionId={questionId ?? ''}
         />
