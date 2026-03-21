@@ -36,7 +36,7 @@ import { CARD_FORMAT_CONFIG } from '../types/flashcard'
 import { useFlashCards } from '../hooks/useFlashCards'
 import { useLinkedQuestions } from '../hooks/useLinkedQuestions'
 import { LinkedQuestionViewer } from '../components/LinkedQuestionViewer'
-import { isMultiAnswer, isCorrectAnswer, isCorrectKey, getRequiredSelections } from '../utils/question-helpers'
+import { isMultiAnswer, hasMultiSelectInstruction, isCorrectAnswer, isCorrectKey, getRequiredSelections } from '../utils/question-helpers'
 
 const { Text, Paragraph } = Typography
 const { TextArea } = Input
@@ -182,6 +182,8 @@ export function QuestionPage() {
     setIsAnswered(true)
 
     const timeSpent = Math.round((Date.now() - startTimeRef.current) / 1000)
+    // TODO: Supabase schema needs migration: answer_history.selected_answer int → jsonb
+    // Currently only localStorage supports array values
     saveAnswer({
       user_id: 'local_user',
       question_id: question.id,
@@ -303,7 +305,7 @@ export function QuestionPage() {
         <Text type="secondary">問{question.question_number}</Text>
         <Tag>{question.subject}</Tag>
         <Tag color="default">{question.category}</Tag>
-        {multiAnswer && <Tag color="orange">{requiredCount}つ選べ</Tag>}
+        {hasMultiSelectInstruction(question.question_text) && <Tag color="orange">{getRequiredSelections(question.question_text)}つ選べ</Tag>}
       </Space>
 
       {/* 連問グループ表示（エメリー方式: 1ページに全問縦並び） */}

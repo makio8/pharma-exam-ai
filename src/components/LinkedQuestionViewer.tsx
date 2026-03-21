@@ -4,7 +4,7 @@ import { LinkOutlined, CheckCircleFilled, CloseCircleFilled } from '@ant-design/
 import type { LinkedGroup } from '../hooks/useLinkedQuestions'
 import type { Question, ConfidenceLevel } from '../types/question'
 import { useAnswerHistory } from '../hooks/useAnswerHistory'
-import { isMultiAnswer, isCorrectAnswer, isCorrectKey, getRequiredSelections } from '../utils/question-helpers'
+import { isMultiAnswer, hasMultiSelectInstruction, isCorrectAnswer, isCorrectKey, getRequiredSelections } from '../utils/question-helpers'
 
 const { Text, Paragraph } = Typography
 
@@ -170,7 +170,7 @@ export function LinkedQuestionViewer({ group }: Props) {
               <Space wrap>
                 <Tag color="purple" style={{ fontSize: 14, padding: '2px 8px' }}>問{q.question_number}</Tag>
                 <Tag>{q.subject}</Tag>
-                {multi && <Tag color="orange">{requiredCount}つ選べ</Tag>}
+                {hasMultiSelectInstruction(q.question_text) && <Tag color="orange">{getRequiredSelections(q.question_text)}つ選べ</Tag>}
               {state.isAnswered && (
                 state.isCorrect
                   ? <Tag color="success">正解</Tag>

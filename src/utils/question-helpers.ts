@@ -1,10 +1,17 @@
 /**
- * 複数選択問題かどうかを判定する
- * correct_answerが配列、または問題文に「2つ選べ」等を含む場合true
+ * 複数選択問題かどうかを判定する（UIモード切替用）
+ * correct_answerが配列の場合のみtrue（データ移行済みの問題のみCheckbox化）
  */
 export function isMultiAnswer(question: { question_text: string; correct_answer: number | number[] }): boolean {
-  if (Array.isArray(question.correct_answer)) return true
-  return /[2-9２-９二三四五][つ]選べ/.test(question.question_text)
+  return Array.isArray(question.correct_answer)
+}
+
+/**
+ * 問題文に「Nつ選べ」が含まれるかを検出（バッジ表示用）
+ * ※ correct_answerが配列でなくても表示する（データ未移行の目印）
+ */
+export function hasMultiSelectInstruction(questionText: string): boolean {
+  return /[2-9２-９二三四五][つ]選べ/.test(questionText)
 }
 
 /**
