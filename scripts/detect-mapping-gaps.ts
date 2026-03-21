@@ -16,6 +16,11 @@ const __dirname = path.dirname(__filename)
 
 const threshold = parseFloat(process.argv.find(a => a.startsWith('--threshold='))?.split('=')[1] || '0.3')
 
+if (!Number.isFinite(threshold) || threshold < 0 || threshold > 1) {
+  console.error(`❌ 閾値が不正です: ${threshold}（0〜1の範囲で指定してください）`)
+  process.exit(1)
+}
+
 // 未使用例示を特定
 const usedExemplarIds = new Set(QUESTION_EXEMPLAR_MAP.map(m => m.exemplarId))
 const unusedExemplars = EXEMPLARS.filter(e => !usedExemplarIds.has(e.id))

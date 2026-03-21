@@ -6,6 +6,7 @@
  */
 import { EXEMPLARS } from '../src/data/exemplars'
 import { QUESTION_EXEMPLAR_MAP } from '../src/data/question-exemplar-map'
+import { ALL_QUESTIONS } from '../src/data/all-questions'
 
 interface ValidationResult {
   name: string
@@ -59,7 +60,18 @@ function validate(): ValidationResult[] {
       : `${duplicates}件の重複あり`,
   })
 
-  // Check 4: 基本数量レポート
+  // Check 4: questionId が ALL_QUESTIONS に存在する
+  const allQuestionIds = new Set(ALL_QUESTIONS.map(q => q.id))
+  const missingQuestions = [...new Set(QUESTION_EXEMPLAR_MAP.map(m => m.questionId))].filter(id => !allQuestionIds.has(id))
+  results.push({
+    name: 'questionId参照整合性',
+    passed: missingQuestions.length === 0,
+    message: missingQuestions.length === 0
+      ? `全マッピングのquestionIdが存在`
+      : `${missingQuestions.length}件の不明questionId: ${missingQuestions.slice(0, 5).join(', ')}`,
+  })
+
+  // Check 5: 基本数量レポート
   // TODO: 2回目以降は前回の数量と比較し ±10% 以内であることを検証する
   //       scripts/output/.last-validation.json に前回値を保存する方式を検討
   const usedExemplars = new Set(QUESTION_EXEMPLAR_MAP.map(m => m.exemplarId))
