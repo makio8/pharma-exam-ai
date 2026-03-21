@@ -4605,7 +4605,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "chemical_structure"
       }
     ],
-    "correct_answer": 2,
+    "correct_answer": [2, 4],
     "explanation": "【ポイント】加熱＋アミノ酸関与で生じる発がん物質を選ぶ問題（2つ選べ）\n【正答の根拠】Trp-P-1（Trp熱分解物、選択肢2）とアクリルアミド（Asn＋糖のメイラード反応、選択肢4）。\n【覚え方💡】「ヘテロサイクリックアミン＝アミノ酸の熱分解」「アクリルアミド＝メイラード反応」\n【関連知識】CYPで代謝活性化後に発がん性を示す。",
     "tags": [],
     "image_url": "/images/questions/107/q130.png",
@@ -5621,7 +5621,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 5],
     "explanation": "【ポイント】パニック障害治療薬の薬理作用を問う問題（2つ選べ）\n【正答の根拠】ロラゼパム（GABAA-BZP結合、選択肢1）とパロキセチン（SSRI、選択肢5）。\n【覚え方💡】「パニック障害第一選択＝SSRI」「BZP＝急性期補助」\n【関連知識】パロキセチン、セルトラリンがパニック障害に適応あり。",
     "tags": [],
     "image_url": "/images/questions/107/q157.png",
@@ -5761,7 +5761,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 3],
     "explanation": "【ポイント】抗不整脈薬の作用機序を問う問題（2つ選べ）\n【正答の根拠】ニフェカラント（K⁺ch遮断→APD延長、選択肢1）とベラパミル（Ca²⁺ch遮断→AV伝導低下、選択肢3）。\n【覚え方💡】「VW分類：I＝Na、II＝β、III＝K、IV＝Ca」\n【関連知識】III度AVブロック治療＝アトロピン＋イソプレナリン。",
     "tags": [],
     "image_url": "/images/questions/107/q160.png",
@@ -6002,7 +6002,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 3,
+    "correct_answer": [3, 5],
     "explanation": "【ポイント】抗ウイルス薬の作用機序を問う問題（2つ選べ）\n【正答の根拠】オセルタミビル（NA阻害、選択肢3）とアシクロビル（三リン酸化→DNAポリメラーゼ阻害、選択肢5）。\n【覚え方💡】「オセルタミビル＝NA阻害＝遊離阻止」「アシクロビル＝核酸アナログ＝DNAポリメラーゼ阻害」\n【関連知識】アメナメビルはヘリカーゼ阻害→腎調節不要。",
     "tags": [],
     "image_url": "/images/questions/107/q166.png",
@@ -7254,7 +7254,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 3],
     "explanation": "【ポイント】コロイド性鉄剤の性質を問う問題（2つ選べ）\n【正答の根拠】疎水コロイドFe(OH)3をショ糖で安定化（選択肢1）、pH変化で不安定化（選択肢3）。\n【覚え方💡】「含糖酸化鉄＝疎水コロイド＋ショ糖」「希釈はブドウ糖液で。生食NG」\n【関連知識】電解質添加→電気二重層圧縮→凝集。",
     "tags": [],
     "image_url": "/images/questions/107/q199.png",
@@ -7466,7 +7466,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 3,
+    "correct_answer": [3, 4],
     "explanation": "【ポイント】セフジニンの旋光度測定で正しい記述を選ぶ問題（2つ選べ）\n【正答の根拠】鉄剤共存でも比旋光度不変（選択肢3）、旋光度＝-0.58〜-0.66°（選択肢4）。\n【覚え方💡】「比旋光度＝物質固有値」「旋光度α＝比旋光度×c×l/100」\n【関連知識】光源はNaランプD線。負＝左旋性。",
     "tags": [],
     "image_url": "/images/questions/107/q203.png",
@@ -7572,7 +7572,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 5],
     "explanation": "【ポイント】副腎皮質ステロイド噴霧剤の使用説明で適切なものを選ぶ問題（2つ選べ）\n【正答の根拠】炎症症状改善（選択肢1）と火気注意（選択肢5）。\n【覚え方💡】「ステロイドスプレー＝可燃性ガス→火気注意」「眼瞼×、傷×」\n【関連知識】フルオシノニドはベリーストロング。",
     "tags": [],
     "image_url": "/images/questions/107/q205.png",
@@ -7645,7 +7645,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 5],
     "explanation": "【ポイント】光線過敏症を誘発する電磁波（紫外線）の記述を問う問題（2つ選べ）\n【正答の根拠】キセノンランプに含まれる（選択肢1）、n-π*/π-π*遷移を起こす（選択肢5）。\n【覚え方💡】「紫外線＝電子遷移」「ラジオ波＝核スピン」「マイクロ波＝回転」「γ線＝PET/SPECT」\n【関連知識】光線過敏症は主にUVAで誘発。",
     "tags": [],
     "image_url": "/images/questions/107/q206.png",
@@ -7928,7 +7928,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 2,
+    "correct_answer": [2, 5],
     "explanation": "【ポイント】バレニクリンとニコチンの化学的性質を問う問題（2つ選べ）\n【正答の根拠】生体内でカチオン性N（選択肢2）とNの水素結合受容体機能（選択肢5）。\n【覚え方💡】「塩基性N＝生体内でプロトン化→カチオン」\n【関連知識】バレニクリンはアキラル（分子内対称面あり）。ニコチンの不斉中心はS配置。",
     "tags": [],
     "image_url": "/images/questions/107/q211.png",
@@ -8343,7 +8343,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 2],
     "explanation": "【ポイント】実践問題（画像問題のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢テキストを確認して学習すること\n【関連知識】実践問題は臨床シナリオの応用問題。",
     "tags": [],
     "image_url": "/images/questions/107/q219.png",
@@ -8590,7 +8590,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 5,
+    "correct_answer": [2, 5],
     "explanation": "【ポイント】多剤耐性緑膿菌に対する抗菌薬療法を問う問題\n【正答の根拠】コリスチン基本の併用療法（選択肢5）。多剤耐性菌の最終手段。\n【覚え方💡】「MDRP→コリスチン（ラストリゾート）」\n【関連知識】コリスチンは腎毒性・神経毒性に注意。",
     "tags": [],
     "image_url": "/images/questions/107/q225.png",
@@ -8839,7 +8839,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 3,
+    "correct_answer": [3, 4],
     "explanation": "【ポイント】インフルエンザワクチンに関する正しい記述を選ぶ問題（2つ選べ）\n【正答の根拠】鶏卵アレルギー注意（選択肢3）と健康被害救済制度対象（選択肢4）。\n【覚え方💡】「インフルワクチン＝不活化＝鶏卵培養＝B類疾病」\n【関連知識】A類＝集団予防（努力義務あり）、B類＝個人予防（努力義務なし）。",
     "tags": [],
     "image_url": "/images/questions/107/q229.png",
@@ -9251,7 +9251,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 4],
     "explanation": "【ポイント】ビタミンB12に関する正しい記述を問う問題（2つ選べ）\n【正答の根拠】動物性食品摂取不足（選択肢1）と葉酸代謝のメチル基転位反応に関与（選択肢4）。\n【覚え方💡】「B12＝内因子＋回腸吸収」「胃全摘→B12欠乏→巨赤芽球性貧血」\n【関連知識】B12の補酵素型：メチルコバラミン、アデノシルコバラミン。",
     "tags": [],
     "image_url": "/images/questions/107/q237.png",
@@ -9548,7 +9548,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "image_with_label"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 4],
     "explanation": "【ポイント】WBGT測定に必要な器具を問う問題（2つ選べ）\n【正答の根拠】乾湿球温度計（選択肢1）と黒球温度計（選択肢4）。\n【覚え方💡】「WBGT＝0.7×湿球＋0.2×黒球＋0.1×乾球」→3温度が必要\n【関連知識】WBGT 31℃以上＝運動原則中止。",
     "tags": [],
     "image_url": "/images/questions/107/q243.png",
@@ -9795,7 +9795,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 4],
     "explanation": "【ポイント】アリピプラゾールに関する適切な記述を問う問題（2つ選べ）\n【正答の根拠】EPS発現しにくい（選択肢1）と血糖値モニタリング必要（選択肢4）。\n【覚え方💡】「アリピプラゾール＝D2部分作動薬＝EPS少・高PRL少」「非定型→血糖モニタリング」\n【関連知識】好中球モニタリングが必要なのはクロザピン。",
     "tags": [],
     "image_url": "/images/questions/107/q247.png",
@@ -10001,7 +10001,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 2],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q251.png",
@@ -10432,7 +10432,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 2],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q259.png",
@@ -11073,7 +11073,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 3,
+    "correct_answer": [3, 4],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q271.png",
@@ -11180,7 +11180,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 4],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q273.png",
@@ -11251,7 +11251,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 5],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q274.png",
@@ -11431,7 +11431,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 3,
+    "correct_answer": [3, 4],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q277.png",
@@ -11757,7 +11757,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 3,
+    "correct_answer": [3, 4],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q283.png",
@@ -11864,7 +11864,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 2],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q285.png",
@@ -12071,7 +12071,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 3,
+    "correct_answer": [3, 5],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q289.png",
@@ -12180,7 +12180,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 2,
+    "correct_answer": [2, 4],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q291.png",
@@ -12293,7 +12293,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 2,
+    "correct_answer": [2, 3],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q293.png",
@@ -12608,7 +12608,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 2,
+    "correct_answer": [2, 4],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q299.png",
@@ -12717,7 +12717,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 2,
+    "correct_answer": [2, 3],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q301.png",
@@ -12829,7 +12829,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 2,
+    "correct_answer": [2, 4],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q303.png",
@@ -12939,7 +12939,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 2,
+    "correct_answer": [2, 4],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q305.png",
@@ -13048,7 +13048,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 4],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q307.png",
@@ -13155,7 +13155,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 5],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q309.png",
@@ -13262,7 +13262,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 4,
+    "correct_answer": [4, 5],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q311.png",
@@ -13364,7 +13364,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 3],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q313.png",
@@ -13471,7 +13471,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 5],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q315.png",
@@ -13685,7 +13685,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 4],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q319.png",
@@ -13792,7 +13792,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 3],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q321.png",
@@ -13896,7 +13896,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 1,
+    "correct_answer": [1, 3],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q323.png",
@@ -14000,7 +14000,7 @@ export const EXAM_107_QUESTIONS: Question[] = [
         "choice_type": "text"
       }
     ],
-    "correct_answer": 3,
+    "correct_answer": [3, 5],
     "explanation": "【ポイント】実践問題（画像のためテキスト情報から生成）\n【正答の根拠】question_textとcorrect_answerに基づく。\n【覚え方💡】問題文の選択肢を確認して学習\n【関連知識】実践問題は複合問題が多い。",
     "tags": [],
     "image_url": "/images/questions/107/q325.png",
