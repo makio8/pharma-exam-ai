@@ -124,27 +124,88 @@ export function PracticePage() {
     return result
   }, [easyOnly, imageOnly, selectedSubjects, selectedYears, selectedSections, correctStatus, keyword, getQuestionResult])
 
+  // --- 連問をセット単位で表示するための問題リスト ---
+  const displayQuestions = useMemo(() => {
+    const seen = new Set<string>()
+    return filteredQuestions.filter(q => {
+      if (!q.linked_group) return true
+      if (seen.has(q.linked_group)) return false
+      seen.add(q.linked_group)
+      return true
+    })
+  }, [filteredQuestions])
+
   // --- セッション開始 ---
   const handleStartSession = () => {
     let questions = [...filteredQuestions]
 
-    if (randomOrder) {
-      // Fisher-Yates シャッフル
-      for (let i = questions.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [questions[i], questions[j]] = [questions[j], questions[i]]
+    // Ensure complete linked sets
+    const questionIds = new Set(questions.map(q => q.id))
+    const addedIds = new Set<string>()
+    for (const q of questions) {
+      if (!q.linked_group) continue
+      const match = q.linked_group.match(/^r(\d+)-(\d+)-(\d+)$/)
+      if (!match) continue
+      const [, year, startStr, endStr] = match
+      const start = parseInt(startStr, 10)
+      const end = parseInt(endStr, 10)
+      for (let n = start; n <= end; n++) {
+        const id = `r${year}-${n}`
+        if (!questionIds.has(id) && !addedIds.has(id)) {
+          const linkedQ = ALL_QUESTIONS.find(aq => aq.id === id)
+          if (linkedQ) {
+            questions.push(linkedQ)
+            addedIds.add(id)
+          }
+        }
       }
     }
 
-    const count = sessionCount === 0 ? questions.length : sessionCount
-    questions = questions.slice(0, count)
+    questions.sort((a, b) => a.year - b.year || a.question_number - b.question_number)
+
+    if (randomOrder) {
+      // Set-based shuffle
+      const chunks: typeof questions[] = []
+      let i = 0
+      while (i < questions.length) {
+        const q = questions[i]
+        if (q.linked_group) {
+          const chunk = [q]
+          while (i + 1 < questions.length && questions[i + 1].linked_group === q.linked_group) {
+            chunk.push(questions[++i])
+          }
+          chunks.push(chunk)
+        } else {
+          chunks.push([q])
+        }
+        i++
+      }
+      for (let i = chunks.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [chunks[i], chunks[j]] = [chunks[j], chunks[i]]
+      }
+      questions = chunks.flat()
+    }
+
+    // Set-boundary-aware slicing
+    if (sessionCount > 0) {
+      const sliced: typeof questions = []
+      const seen = new Set<string>()
+      for (const q of questions) {
+        if (sliced.length >= sessionCount && !q.linked_group) break
+        if (q.linked_group && seen.has(q.linked_group)) {
+          sliced.push(q)
+          continue
+        }
+        if (sliced.length >= sessionCount) break
+        sliced.push(q)
+        if (q.linked_group) seen.add(q.linked_group)
+      }
+      questions = sliced
+    }
 
     if (questions.length > 0) {
-      // セッションの問題IDリストをlocalStorageに保存
-      localStorage.setItem(
-        'practice_session',
-        JSON.stringify(questions.map((q) => q.id)),
-      )
+      localStorage.setItem('practice_session', JSON.stringify(questions.map(q => q.id)))
       navigate(`/practice/${questions[0].id}`)
     }
   }
@@ -311,9 +372,9 @@ export function PracticePage() {
       </Card>
 
       {/* 問題一覧 */}
-      <Badge.Ribbon text={`${filteredQuestions.length}問`} color="blue">
+      <Badge.Ribbon text={`${displayQuestions.length}問`} color="blue">
         <Card size="small">
-          {filteredQuestions
+          {displayQuestions
             .slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE)
             .map((q, idx) => (
               <div key={q.id}>
@@ -325,6 +386,12 @@ export function PracticePage() {
                       <Text strong>第{q.year}回</Text>
                       <Text type="secondary">問{q.question_number}</Text>
                       {q.image_url && <FileImageOutlined style={{ color: '#1890ff', fontSize: 14 }} />}
+                      {q.linked_group && (() => {
+                        const match = q.linked_group.match(/^r(\d+)-(\d+)-(\d+)$/)
+                        if (!match) return null
+                        const [, , start, end] = match
+                        return <Tag color="purple">連問 {start}-{end}</Tag>
+                      })()}
                       <Text type="secondary">|</Text>
                       <Text>{q.subject}</Text>
                     </Space>
@@ -356,7 +423,13 @@ export function PracticePage() {
                             'practice_session',
                             JSON.stringify(filteredQuestions.map((fq) => fq.id)),
                           )
-                          navigate(`/practice/${q.id}`)
+                          const targetId = q.linked_group
+                            ? (() => {
+                                const match = q.linked_group.match(/^r(\d+)-(\d+)-(\d+)$/)
+                                return match ? `r${match[1]}-${match[2]}` : q.id
+                              })()
+                            : q.id
+                          navigate(`/practice/${targetId}`)
                         }}
                       >
                         解く
@@ -366,15 +439,15 @@ export function PracticePage() {
                 </Row>
               </div>
             ))}
-          {filteredQuestions.length === 0 && (
+          {displayQuestions.length === 0 && (
             <Text type="secondary">条件に一致する問題がありません</Text>
           )}
-          {filteredQuestions.length > PAGE_SIZE && (
+          {displayQuestions.length > PAGE_SIZE && (
             <div style={{ textAlign: 'center', marginTop: 16 }}>
               <Pagination
                 current={currentPage}
                 pageSize={PAGE_SIZE}
-                total={filteredQuestions.length}
+                total={displayQuestions.length}
                 onChange={setCurrentPage}
                 size="small"
                 showSizeChanger={false}
