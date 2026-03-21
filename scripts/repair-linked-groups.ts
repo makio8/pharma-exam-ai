@@ -216,14 +216,40 @@ function extractScenario(leadQ: QuestionInfo, allGroupQuestions: QuestionInfo[])
   // Strategy 1: Use question_text_original of the lead question
   if (leadQ.questionTextOriginal) {
     const orig = leadQ.questionTextOriginal
-    // Split on 問XXX（科目） markers
+
+    // 1a: Use the specific lead question number for marker (most accurate)
+    const leadNum = leadQ.questionNumber
+    const specificMarker = new RegExp(`問\\s*${leadNum}\\s*[（(]`)
+    const specificMatch = orig.match(specificMarker)
+    if (specificMatch && specificMatch.index !== undefined && specificMatch.index > 20) {
+      const scenario = orig.slice(0, specificMatch.index).trim()
+        .replace(/\\n/g, '\n')
+        .replace(/\n+/g, ' ')
+        .trim()
+      if (scenario.length > 10) return escapeForJson(scenario)
+    }
+
+    // 1b: Fallback — use group's minimum question number
+    const minNum = Math.min(...allGroupQuestions.map(q => q.questionNumber))
+    if (minNum !== leadNum) {
+      const minMarker = new RegExp(`問\\s*${minNum}\\s*[（(]`)
+      const minMatch = orig.match(minMarker)
+      if (minMatch && minMatch.index !== undefined && minMatch.index > 20) {
+        const scenario = orig.slice(0, minMatch.index).trim()
+          .replace(/\\n/g, '\n')
+          .replace(/\n+/g, ' ')
+          .trim()
+        if (scenario.length > 10) return escapeForJson(scenario)
+      }
+    }
+
+    // 1c: Final fallback — generic marker (only if specific ones didn't work)
     const markerRegex = /問\s*\d+\s*[（(]/
     const markerMatch = orig.match(markerRegex)
     if (markerMatch && markerMatch.index !== undefined && markerMatch.index > 20) {
-      // Text before first marker is the scenario
       const scenario = orig.slice(0, markerMatch.index).trim()
-        .replace(/\\n/g, '\n')  // unescape
-        .replace(/\n+/g, ' ')   // join lines
+        .replace(/\\n/g, '\n')
+        .replace(/\n+/g, ' ')
         .trim()
       if (scenario.length > 10) return escapeForJson(scenario)
     }
