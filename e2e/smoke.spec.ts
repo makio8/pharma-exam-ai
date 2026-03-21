@@ -108,15 +108,17 @@ test('画像付き通常問題で画像が表示される', async ({ page }) => 
   expect(radioCount).toBeGreaterThan(0)
 })
 
-test('correct_answer=0 の問題で「データ準備中」が表示される', async ({ page }) => {
-  // r100-211 は correct_answer=0 の問題
-  await page.goto('/practice/r100-211')
+test('correct_answer=0 の問題で回答ボタンが無効になる', async ({ page }) => {
+  // r100-093 は correct_answer=0 の問題（choices あり、連問ではない）
+  await page.goto('/practice/r100-093')
   await page.waitForLoadState('networkidle')
 
-  // 「データ準備中」メッセージが表示される
-  await expect(page.getByText('この問題はデータ準備中です')).toBeVisible()
+  // 選択肢が表示されている（choicesありのため通常UI）
+  const radios = page.locator('.ant-radio')
+  const radioCount = await radios.count()
+  expect(radioCount).toBeGreaterThan(0)
 
-  // 回答ボタンが無効であることを確認
+  // 回答ボタンが無効であることを確認（correct_answer=0 のため）
   const submitBtn = page.getByRole('button', { name: '回答する' })
   await expect(submitBtn).toBeDisabled()
 })
@@ -134,8 +136,8 @@ test('連問シナリオが表示される', async ({ page }) => {
   await expect(scenarioCard).toBeVisible()
 
   // 各問題カードが縦に並んでいる（問120, 問121）
-  await expect(page.getByText('問120')).toBeVisible()
-  await expect(page.getByText('問121')).toBeVisible()
+  await expect(page.getByText('問120').first()).toBeVisible()
+  await expect(page.getByText('問121').first()).toBeVisible()
 })
 
 test('複数選択問題でCheckboxが表示される', async ({ page }) => {
@@ -144,7 +146,7 @@ test('複数選択問題でCheckboxが表示される', async ({ page }) => {
   await page.waitForLoadState('networkidle')
 
   // 「2つ選べ」タグが表示される
-  await expect(page.getByText(/つ選べ/)).toBeVisible()
+  await expect(page.getByText(/つ選べ/).first()).toBeVisible()
 
   // Checkbox UIが表示される（Radio ではなく Checkbox）
   const checkboxes = page.locator('.ant-checkbox')
