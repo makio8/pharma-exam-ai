@@ -241,7 +241,10 @@ function replaceExplanationInFile(filePath: string, questionId: string, newExpla
     `"explanation": "${escaped}"` +
     content.substring(replaceTo)
 
-  fs.writeFileSync(filePath, newContent, 'utf-8')
+  // 一時ファイル経由で安全に書き込み（途中でプロセスが落ちてもファイルが壊れない）
+  const tmpPath = filePath + '.tmp'
+  fs.writeFileSync(tmpPath, newContent, 'utf-8')
+  fs.renameSync(tmpPath, filePath)
   return true
 }
 
