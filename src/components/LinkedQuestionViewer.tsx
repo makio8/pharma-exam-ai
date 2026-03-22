@@ -172,20 +172,36 @@ export function LinkedQuestionViewer({ group }: Props) {
             {/* 問題文 or 画像（displayModeで切り替え） */}
             {(() => {
               const displayMode = getDisplayMode(q)
-              return displayMode === 'image' ? (
-                <div style={{ marginBottom: 12, textAlign: 'center' }}>
-                  <Image
-                    src={q.image_url}
-                    alt={`問${q.question_number} の図`}
-                    style={{ maxHeight: '60vh', objectFit: 'contain' }}
-                    width="100%"
-                    fallback="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5Ij7lm7Pjgr7jg7zjg4nlpLHmlZc8L3RleHQ+PC9zdmc+"
-                  />
-                </div>
-              ) : (
-                <Paragraph style={{ fontSize: 15, lineHeight: 1.8, whiteSpace: 'pre-wrap', marginBottom: 12 }}>
-                  {normalizeForDisplay(extractQuestionBody(q.question_text, q.question_number, scenario))}
-                </Paragraph>
+              if (displayMode === 'image') {
+                return (
+                  <div style={{ marginBottom: 12, textAlign: 'center' }}>
+                    <Image
+                      src={q.image_url}
+                      alt={`問${q.question_number} の図`}
+                      style={{ maxHeight: '60vh', objectFit: 'contain' }}
+                      width="100%"
+                      fallback="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5Ij7lm7Pjgr7jg7zjg4nlpLHmlZc8L3RleHQ+PC9zdmc+"
+                    />
+                  </div>
+                )
+              }
+              // 'text' or 'both': テキストを表示
+              return (
+                <>
+                  <Paragraph style={{ fontSize: 15, lineHeight: 1.8, whiteSpace: 'pre-wrap', marginBottom: 12 }}>
+                    {normalizeForDisplay(extractQuestionBody(q.question_text, q.question_number, scenario))}
+                  </Paragraph>
+                  {displayMode === 'both' && q.image_url && (
+                    <div style={{ marginBottom: 12, textAlign: 'center' }}>
+                      <Image
+                        src={q.image_url}
+                        alt={`問${q.question_number} の図`}
+                        style={{ maxHeight: '50vh', objectFit: 'contain' }}
+                        width="100%"
+                      />
+                    </div>
+                  )}
+                </>
               )
             })()}
 

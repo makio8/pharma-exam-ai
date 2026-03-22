@@ -334,26 +334,40 @@ export function QuestionPage() {
       {/* 問題文 or 画像（displayModeで切り替え） */}
       {(() => {
         const displayMode = getDisplayMode(question)
-        return displayMode === 'image' ? (
-          <div style={{ marginBottom: 16, textAlign: 'center' }}>
-            <Image
-              src={question.image_url}
-              alt={`第${question.year}回 問${question.question_number} の図`}
-              style={{ maxHeight: '60vh', objectFit: 'contain' }}
-              width="100%"
-              fallback="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjVmNWY1Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj7nlLvlg4/jgpLoqq3jgb/ovrzjgoHjgb7jgZvjgpM8L3RleHQ+PC9zdmc+"
-              placeholder={
-                <div style={{ background: '#f5f5f5', height: 200, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  読み込み中...
-                </div>
-              }
-            />
-          </div>
-        ) : (
+        if (displayMode === 'image') {
+          return (
+            <div style={{ marginBottom: 16, textAlign: 'center' }}>
+              <Image
+                src={question.image_url}
+                alt={`第${question.year}回 問${question.question_number} の図`}
+                style={{ maxHeight: '60vh', objectFit: 'contain' }}
+                width="100%"
+                fallback="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjVmNWY1Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj7nlLvlg4/jgpLoqq3jgb/ovrzjgoHjgb7jgZvjgpM8L3RleHQ+PC9zdmc+"
+                placeholder={
+                  <div style={{ background: '#f5f5f5', height: 200, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    読み込み中...
+                  </div>
+                }
+              />
+            </div>
+          )
+        }
+        // 'text' or 'both': テキスト表示 + 画像補足
+        return (
           <Card style={{ marginBottom: 16 }}>
             <Paragraph style={{ fontSize: 16, lineHeight: 1.8, whiteSpace: 'pre-wrap', marginBottom: 0 }}>
               {normalizeForDisplay(question.question_text)}
             </Paragraph>
+            {displayMode === 'both' && question.image_url && (
+              <div style={{ marginTop: 12, textAlign: 'center' }}>
+                <Image
+                  src={question.image_url}
+                  alt={`第${question.year}回 問${question.question_number} の図`}
+                  style={{ maxHeight: '50vh', objectFit: 'contain' }}
+                  width="100%"
+                />
+              </div>
+            )}
           </Card>
         )
       })()}

@@ -36,9 +36,10 @@ export function getDisplayMode(question: {
   // choices空の画像問題 → 画像のみ（数字ボタンUI）
   if (question.choices.length === 0) return 'image'
 
-  // visual_content_typeが非テキスト → 画像優先（テキストはPDF崩れの可能性大）
+  // visual_content_typeが非テキスト → テキスト+画像の両方表示
+  // （テキストに問いかけ文があり、画像は図表・構造式等の補足）
   if (question.visual_content_type && question.visual_content_type !== 'text_only') {
-    return 'image'
+    return 'both'
   }
 
   // それ以外 → テキストのみ（画像はあるが表示不要）
