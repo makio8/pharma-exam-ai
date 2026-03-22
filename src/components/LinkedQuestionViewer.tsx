@@ -126,7 +126,7 @@ export function LinkedQuestionViewer({ group }: Props) {
               borderRadius: 6,
             }}
           >
-            {scenario}
+            {scenario.replace(/\\n/g, '\n')}
           </Paragraph>
         )}
 
@@ -331,7 +331,7 @@ export function LinkedQuestionViewer({ group }: Props) {
                 {q.explanation && (
                   <Card size="small" style={{ borderColor: state.isCorrect ? '#b7eb8f' : '#ffccc7' }}>
                     <Paragraph style={{ fontSize: 14, lineHeight: 1.7, whiteSpace: 'pre-wrap', marginBottom: 0 }}>
-                      {q.explanation}
+                      {q.explanation.replace(/\\n/g, '\n')}
                     </Paragraph>
                   </Card>
                 )}

@@ -535,7 +535,7 @@ export function QuestionPage() {
             style={{ marginBottom: 16, borderColor: isCorrect ? '#b7eb8f' : '#ffccc7' }}
           >
             <Paragraph style={{ fontSize: 15, lineHeight: 1.8, whiteSpace: 'pre-wrap', marginBottom: 0 }}>
-              {question.explanation}
+              {question.explanation?.replace(/\\n/g, '\n')}
             </Paragraph>
             <Divider style={{ margin: '12px 0' }} />
             <Space wrap>
