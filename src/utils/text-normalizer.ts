@@ -18,3 +18,29 @@ export function hasVisualContent(question: { visual_content_type?: string; image
   if (!question.visual_content_type) return false
   return question.visual_content_type !== 'text_only'
 }
+
+/**
+ * 問題の表示モードを判定
+ * - 'text': テキストのみ表示（通常の問題）
+ * - 'image': 画像のみ表示（数式・構造式・グラフ等）
+ * - 'both': テキスト+画像の両方表示（テキストはきれいだが画像で補完）
+ */
+export function getDisplayMode(question: {
+  visual_content_type?: string
+  image_url?: string
+  choices: { key: number; text: string }[]
+}): 'text' | 'image' | 'both' {
+  // 画像がなければテキストのみ
+  if (!question.image_url) return 'text'
+
+  // choices空の画像問題 → 画像のみ（数字ボタンUI）
+  if (question.choices.length === 0) return 'image'
+
+  // visual_content_typeが非テキスト → 画像優先（テキストはPDF崩れの可能性大）
+  if (question.visual_content_type && question.visual_content_type !== 'text_only') {
+    return 'image'
+  }
+
+  // それ以外 → テキストのみ（画像はあるが表示不要）
+  return 'text'
+}

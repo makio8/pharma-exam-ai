@@ -5,7 +5,7 @@ import type { LinkedGroup } from '../hooks/useLinkedQuestions'
 import type { Question, ConfidenceLevel } from '../types/question'
 import { useAnswerHistory } from '../hooks/useAnswerHistory'
 import { isMultiAnswer, hasMultiSelectInstruction, isCorrectAnswer, isCorrectKey, getRequiredSelections } from '../utils/question-helpers'
-import { normalizeForDisplay, hasVisualContent } from '../utils/text-normalizer'
+import { normalizeForDisplay, getDisplayMode } from '../utils/text-normalizer'
 
 const { Text, Paragraph } = Typography
 
@@ -169,23 +169,25 @@ export function LinkedQuestionViewer({ group }: Props) {
               </Space>
             </div>
 
-            {/* 問題文（シナリオ・他問のテキストを除去し、この問題の本文だけ表示） */}
-            <Paragraph style={{ fontSize: 15, lineHeight: 1.8, whiteSpace: 'pre-wrap', marginBottom: 12 }}>
-              {normalizeForDisplay(extractQuestionBody(q.question_text, q.question_number, scenario))}
-            </Paragraph>
-
-            {/* 問題個別の画像（choices空の問題のみ表示。選択肢テキストがある場合は冗長なので非表示） */}
-            {q.image_url && (q.choices.length === 0 || hasVisualContent(q)) && (
-              <div style={{ marginBottom: 12, textAlign: 'center' }}>
-                <Image
-                  src={q.image_url}
-                  alt={`問${q.question_number} の図`}
-                  style={{ maxHeight: '50vh', objectFit: 'contain' }}
-                  width="100%"
-                  fallback="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5Ij7lm7Pjgr7jg7zjg4nlpLHmlZc8L3RleHQ+PC9zdmc+"
-                />
-              </div>
-            )}
+            {/* 問題文 or 画像（displayModeで切り替え） */}
+            {(() => {
+              const displayMode = getDisplayMode(q)
+              return displayMode === 'image' ? (
+                <div style={{ marginBottom: 12, textAlign: 'center' }}>
+                  <Image
+                    src={q.image_url}
+                    alt={`問${q.question_number} の図`}
+                    style={{ maxHeight: '60vh', objectFit: 'contain' }}
+                    width="100%"
+                    fallback="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5Ij7lm7Pjgr7jg7zjg4nlpLHmlZc8L3RleHQ+PC9zdmc+"
+                  />
+                </div>
+              ) : (
+                <Paragraph style={{ fontSize: 15, lineHeight: 1.8, whiteSpace: 'pre-wrap', marginBottom: 12 }}>
+                  {normalizeForDisplay(extractQuestionBody(q.question_text, q.question_number, scenario))}
+                </Paragraph>
+              )
+            })()}
 
             {/* 選択肢 */}
             {q.choices.length > 0 ? (

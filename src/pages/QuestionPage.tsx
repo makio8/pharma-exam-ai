@@ -37,7 +37,7 @@ import { useFlashCards } from '../hooks/useFlashCards'
 import { useLinkedQuestions } from '../hooks/useLinkedQuestions'
 import { LinkedQuestionViewer } from '../components/LinkedQuestionViewer'
 import { isMultiAnswer, hasMultiSelectInstruction, isCorrectAnswer, isCorrectKey, getRequiredSelections } from '../utils/question-helpers'
-import { normalizeForDisplay, hasVisualContent } from '../utils/text-normalizer'
+import { normalizeForDisplay, getDisplayMode } from '../utils/text-normalizer'
 
 const { Text, Paragraph } = Typography
 const { TextArea } = Input
@@ -331,30 +331,32 @@ export function QuestionPage() {
         />
       )}
 
-      {/* 問題文 */}
-      <Card style={{ marginBottom: 16 }}>
-        <Paragraph style={{ fontSize: 16, lineHeight: 1.8, whiteSpace: 'pre-wrap', marginBottom: 0 }}>
-          {normalizeForDisplay(question.question_text)}
-        </Paragraph>
-      </Card>
-
-      {/* 問題画像（choices空の画像問題のみ表示。選択肢テキストがある場合は冗長なので非表示） */}
-      {question.image_url && (question.choices.length === 0 || hasVisualContent(question)) && (
-        <div style={{ marginBottom: 16, textAlign: 'center' }}>
-          <Image
-            src={question.image_url}
-            alt={`第${question.year}回 問${question.question_number} の図`}
-            style={{ maxHeight: '60vh', objectFit: 'contain' }}
-            width="100%"
-            fallback="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjVmNWY1Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj7nlLvlg4/jgpLoqq3jgb/ovrzjgoHjgb7jgZvjgpM8L3RleHQ+PC9zdmc+"
-            placeholder={
-              <div style={{ background: '#f5f5f5', height: 200, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                読み込み中...
-              </div>
-            }
-          />
-        </div>
-      )}
+      {/* 問題文 or 画像（displayModeで切り替え） */}
+      {(() => {
+        const displayMode = getDisplayMode(question)
+        return displayMode === 'image' ? (
+          <div style={{ marginBottom: 16, textAlign: 'center' }}>
+            <Image
+              src={question.image_url}
+              alt={`第${question.year}回 問${question.question_number} の図`}
+              style={{ maxHeight: '60vh', objectFit: 'contain' }}
+              width="100%"
+              fallback="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjVmNWY1Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj7nlLvlg4/jgpLoqq3jgb/ovrzjgoHjgb7jgZvjgpM8L3RleHQ+PC9zdmc+"
+              placeholder={
+                <div style={{ background: '#f5f5f5', height: 200, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  読み込み中...
+                </div>
+              }
+            />
+          </div>
+        ) : (
+          <Card style={{ marginBottom: 16 }}>
+            <Paragraph style={{ fontSize: 16, lineHeight: 1.8, whiteSpace: 'pre-wrap', marginBottom: 0 }}>
+              {normalizeForDisplay(question.question_text)}
+            </Paragraph>
+          </Card>
+        )
+      })()}
 
       {/* 自信度（回答前） */}
       {!isAnswered && (
