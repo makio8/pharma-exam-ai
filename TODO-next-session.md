@@ -1,99 +1,101 @@
 # pharma-exam-ai 次セッション要件書
 
-## 前回セッションの成果（2026-03-19）
-- **100-106回**: 全データパイプライン完了（e-REC + yakugakulab + 厚労省PDF + 画像）
-- **アプリ統合**: all-questions.ts に11年分統合、ダミー問題削除、ビルド成功
-- **解説カバー率**: 3,542/3,795問 = 93.3%（詳細解説）
-- **画像問題**: 529枚のPDFページ画像を配置、image_url設定済み
-- **スキル**: `~/.claude/skills/pharma-exam-add-year.md` 作成（111回追加パイプライン）
+## 前回セッションの成果（2026-03-23）
+
+### getDisplayMode 全体最適化
+- **P0修正**: choices空テキスト（131件）が `both` → `image` に正しく分類
+- **P2修正**: VCT未設定（42件）が `text` → `both` にフォールバック（画像表示される）
+- **GPT-5.4レビュー反映**: image判定の保守化 + trim()対応
+- **display_mode_override**: Question型にフィールド追加。実機確認ベースで個別上書き可能
+- **画像トリミング**: 全11年分906枚のページ番号除去（安全版: 下端80px一律カット）
+  - ⚠ `sharp.trim(threshold=20)` は危険（文字削りバグ）→ 廃止済み
+- **選択肢クロップスクリプト**: 実験的。OCRテキスト比率ベースは精度不足。tesseract/Vision API要
+
+### 注意: worktreeの扱い
+- devサーバーはメインリポ `/Users/ai/projects/personal/pharma-exam-ai/` から起動中
+- worktree の変更はdevサーバーに反映されない
+- **メインリポで直接作業すること**（worktree不要）
 
 ## 今回やること
 
-### 1. 画像問題の表示修正 — 最優先 🔴
+### 1. 画像欠落問題の修復 — 最優先 🔴
 
-**現状の問題**:
-- QuestionPage.tsx で `image_url` フィールドが完全に無視されている
-- 画像問題（構造式・グラフ等）がテキスト崩れで表示される
-- 選択肢が空（choices: []）の問題は「回答する」ボタンが無効化
+**現状**: 172問が画像を参照（「下図」「構造式」等）しているが `image_url` が未設定
 
-**参考アプリ（スクショ確認済み）**:
-- **e-REC**: 問題文テキスト + 反応式/構造式/グラフの画像をインライン表示
-- **yakugakulab**: 同上
-- **エメリー**: PDFページ画像をインライン表示 + 選択肢は番号（1-5）のみでタップ回答
+| 優先度 | 状況 | 件数 |
+|--------|------|------|
+| Tier 1 | 回答不能（下図/この図） | 95問 |
+| Tier 2 | 画像推奨（グラフ/模式図） | 66問 |
+| Tier 3 | テキスト代替可能（下表等） | 11問 |
 
-**必要な実装**:
-1. **QuestionPage.tsx に画像表示を追加**
-   - `question.image_url` がある場合、問題文の下にPDFページ画像を表示
-   - Ant Design の `<Image>` コンポーネント（ピンチズーム対応）推奨
-2. **choices空の問題に番号選択UIを追加**
-   - エメリー方式: 選択肢テキストがなくても 1-5 の番号ボタンで回答可能
-   - `choices: []` かつ `image_url` あり → 画像内の選択肢を見て番号で回答
-3. **PracticePage.tsx の一覧表示も対応**
-   - 画像問題にアイコンを付けて区別（📷マーク等）
+**具体例**: r100-224（ホルモンA/Bの構造式なし → 回答不能）
 
-**テスト方法**:
-- Playwright E2Eテスト: 全年度の画像問題が正しく表示されるか
-- 手動テスト: iPhoneから100回問2、108回問9を確認
-- 確認ポイント: 画像のピンチズーム、選択肢の番号タップ、正誤判定
+**対応方法**:
+1. 厚労省サイトからPDFをダウンロード（100-109回分）
+2. `scripts/extract-question-images.ts` で画像抽出
+3. 172問に `image_url` を設定
+4. `scripts/trim-image-whitespace.ts` でページ番号除去
 
-**ファイル**:
-- `src/pages/QuestionPage.tsx` — メイン修正対象
-- `src/pages/PracticePage.tsx` — 一覧での画像問題表示
-- `src/types/question.ts` — image_url フィールド（既に定義済み）
+**PDF取得先**: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iyakuhin/yakuzaishi-shiken/kakomon/
 
-### 2. 残り不完全解説の再生成 — 中
+### 2. 連問シナリオの表・処方箋のUI改善 — 中
 
-- 約288問がchoices空（画像問題）で「問題データ不完全」
-- 画像表示が実装されれば、正答番号のみの解説でもUIとして成立する
-- 余裕があれば画像を読み取って具体的な解説に差し替え
+**現状**: q228のような連問シナリオに表（成分分析表等）がある場合、テキスト羅列で読みづらい
+**方針**: テキストUIでの表レンダリング改善（画像より文字が大きく読みやすい）
+- linked_scenario 内の表パターンを検出
+- HTML `<table>` でフォーマット
+- または question_text の表パターンを正規化
 
-### 3. 暗記カード自動生成 — オプション
+### 3. VCT=text_only 監査 — 低
+
+- 531件のうち誤分類がないか監査スクリプトで確認
+- GPT-5.4指摘: text_only は推定ラベル（無条件マージ）なので全面信用は危険
+
+### 4. 暗記カード自動生成 — オプション
 
 解説テキストの【覚え方💡】セクションから一問一答形式の暗記カードを自動生成。
 
-### 4. Supabaseデータ投入 — オプション
+### 5. Supabaseデータ投入 — オプション
 
 ローカルのexam-{year}.tsデータをSupabaseに投入し、クラウド同期を有効化。
 
-## 設計メモ: エメリー方式の画像問題対応
+## コミット履歴（今セッション）
 
-```tsx
-// QuestionPage.tsx での実装イメージ
-{question.image_url && (
-  <Image
-    src={question.image_url}
-    alt={`第${question.year}回 問${question.question_number}`}
-    style={{ width: '100%', maxHeight: '60vh' }}
-    preview={{ mask: 'タップで拡大' }}
-  />
-)}
-
-// choices空の場合、番号ボタンで代替
-{question.choices.length === 0 && question.image_url && (
-  <Radio.Group>
-    {[1, 2, 3, 4, 5].map(n => (
-      <Radio.Button key={n} value={n}>{n}</Radio.Button>
-    ))}
-  </Radio.Group>
-)}
 ```
+775f306 chore: 全11年分906枚の画像ページ番号除去（安全版トリミング）
+a838598 Revert "chore: 全11年分906枚の画像余白トリミング（ページ番号除去+白余白除去）"
+3fe570f chore: 全11年分906枚の画像余白トリミング（ページ番号除去+白余白除去）
+8aa4b64 feat: getDisplayMode全体最適化 — P0バグ修正+P2フォールバック改善+display_mode_override
+```
+
+## 主要ファイル
+
+| ファイル | 説明 |
+|---------|------|
+| `src/utils/text-normalizer.ts` | getDisplayMode 定義（表示モード判定） |
+| `src/types/question.ts` | Question型（display_mode_override追加） |
+| `src/pages/QuestionPage.tsx` | 問題表示UI |
+| `src/components/LinkedQuestionViewer.tsx` | 連問表示UI |
+| `scripts/trim-image-whitespace.ts` | 画像トリミング（安全版） |
+| `scripts/crop-choices-from-images.ts` | 選択肢クロップ（実験的） |
+| `docs/superpowers/specs/2026-03-23-display-mode-optimization.md` | 設計書 |
 
 ## コマンドリファレンス
 
 ```bash
-# 開発サーバー起動
+# 開発サーバー起動（メインリポから）
+cd /Users/ai/projects/personal/pharma-exam-ai
 npm run dev -- --host
-
-# Playwrightテスト
-npx playwright test
-npx playwright test --ui      # UIモード
-npx playwright test --headed   # ブラウザ表示
-
-# 解説マージ
-npx tsx scripts/merge-explanations.ts
 
 # ビルド確認
 npm run build
+
+# 画像トリミング（安全版: ページ番号のみ除去）
+npx tsx scripts/trim-image-whitespace.ts --year 100 --dry-run
+npx tsx scripts/trim-image-whitespace.ts
+
+# 選択肢クロップ（実験的）
+npx tsx scripts/crop-choices-from-images.ts --dry-run
 ```
 
 ## スキル参照
