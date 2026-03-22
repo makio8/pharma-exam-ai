@@ -15,6 +15,7 @@ import sharp from 'sharp'
 
 import { parseBboxPage, findQuestionPositions, isCoverPage } from './lib/bbox-parser.ts'
 import { calcCropRegion, cropImage } from './lib/crop-utils.ts'
+import { PAGES_DIR, OUTPUT_DIR, REAL_QUESTIONS_DIR, PDF_DIR } from './lib/paths.ts'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -70,31 +71,48 @@ function findPageImage(pagesDir: string, prefix: string, page: number): string |
   return null
 }
 
-/** exam-{year}.ts を読み込み、choices: [] の問題番号セットを返す */
-function loadEmptyChoicesQuestions(year: number): Set<number> {
-  const tsPath = path.join(__dirname, '..', 'src', 'data', 'real-questions', `exam-${year}.ts`)
+const IMAGE_KEYWORDS = /下図|この図|次の図|図[1-9１-９]|構造式[をがはの]|下の構造|模式図|グラフ[をがはの]|以下の図|図に示|スキーム|下表|処方[箋せん]/
+
+/** 確定IDリスト（missing-image-ids.json）を読み込む */
+function loadConfirmedIds(): Set<string> {
+  const listPath = path.join(REAL_QUESTIONS_DIR, 'missing-image-ids.json')
+  if (!fs.existsSync(listPath)) return new Set()
+  const data = JSON.parse(fs.readFileSync(listPath, 'utf-8'))
+  return new Set(data.ids as string[])
+}
+
+const confirmedIds = loadConfirmedIds()
+
+/** 画像抽出対象の問題番号セットを返す（拡張版） */
+function loadTargetQuestions(year: number): Set<number> {
+  const tsPath = path.join(REAL_QUESTIONS_DIR, `exam-${year}.ts`)
   if (!fs.existsSync(tsPath)) {
     console.log(`  警告: ${tsPath} が見つかりません`)
     return new Set()
   }
   const content = fs.readFileSync(tsPath, 'utf-8')
-  // JSONの配列部分を抽出（最初の [ から末尾まで）
   const arrayStart = content.indexOf('[\n')
   if (arrayStart === -1) {
     console.log(`  警告: exam-${year}.ts のパースに失敗`)
     return new Set()
   }
-  // 末尾の余分なテキストを除去 — ] で終わる部分を探す
   const jsonPart = content.substring(arrayStart).trimEnd()
   try {
     const questions = JSON.parse(jsonPart)
-    const emptySet = new Set<number>()
+    const targets = new Set<number>()
     for (const q of questions) {
-      if (!q.choices || q.choices.length === 0) {
-        emptySet.add(q.question_number)
+      // 既に image_url が設定済みの問題はスキップ（保護）
+      if (q.image_url) continue
+
+      const inConfirmedList = confirmedIds.has(q.id)
+      const emptyChoices = !q.choices || q.choices.length === 0
+      const keywordHit = IMAGE_KEYWORDS.test(q.question_text || '')
+
+      if (inConfirmedList || emptyChoices || keywordHit) {
+        targets.add(q.question_number)
       }
     }
-    return emptySet
+    return targets
   } catch (e) {
     console.log(`  警告: exam-${year}.ts のJSONパースエラー: ${(e as Error).message}`)
     return new Set()
@@ -108,21 +126,24 @@ interface YearResult {
   cropped: number
   skipped: number
   errors: number
+  newFiles: string[]
 }
 
 async function processYear(year: number): Promise<YearResult> {
   console.log(`\n=== 第${year}回 ===`)
 
-  const pagesDir = `/tmp/claude/exam-pages/${year}`
-  const outputDir = path.join(__dirname, '..', 'public', 'images', 'questions', String(year))
+  const pagesDir = path.join(PAGES_DIR, String(year))
+  const outputDir = path.join(OUTPUT_DIR, String(year))
   fs.mkdirSync(outputDir, { recursive: true })
 
-  // choices: [] の問題番号を取得
-  const targetSet = loadEmptyChoicesQuestions(year)
-  console.log(`  対象問題（choices空）: ${targetSet.size}問`)
+  const dryRun = process.argv.includes('--dry-run')
+  const newFiles: string[] = []
+
+  const targetSet = loadTargetQuestions(year)
+  console.log(`  対象問題: ${targetSet.size}問（確定ID + choices空 + キーワード）`)
 
   if (targetSet.size === 0) {
-    return { year, targetQuestions: 0, cropped: 0, skipped: 0, errors: 0 }
+    return { year, targetQuestions: 0, cropped: 0, skipped: 0, errors: 0, newFiles }
   }
 
   const pdfs = getPdfConfigs(year)
@@ -131,7 +152,7 @@ async function processYear(year: number): Promise<YearResult> {
   let errors = 0
 
   for (const pdf of pdfs) {
-    const pdfPath = `/tmp/claude/${pdf.file}`
+    const pdfPath = path.join(PDF_DIR, pdf.file)
     if (!fs.existsSync(pdfPath)) {
       console.log(`  警告: ${pdfPath} が見つかりません — スキップ`)
       continue
@@ -178,6 +199,23 @@ async function processYear(year: number): Promise<YearResult> {
 
       // 各対象問題をクロップ
       for (const tPos of targetPositions) {
+        const destFile = path.join(
+          outputDir,
+          `q${String(tPos.questionNumber).padStart(3, '0')}.png`
+        )
+
+        // 既存画像はスキップ（上書き防止）
+        if (fs.existsSync(destFile)) {
+          skipped++
+          continue
+        }
+
+        if (dryRun) {
+          console.log(`    [dry-run] q${tPos.questionNumber}: would crop from page`)
+          cropped++
+          continue
+        }
+
         // 次の問題の位置を探す（同じページ内の次の問題）
         const posIdx = positions.findIndex(p => p.questionNumber === tPos.questionNumber)
         const nextPos = posIdx < positions.length - 1 ? positions[posIdx + 1] : null
@@ -190,13 +228,9 @@ async function processYear(year: number): Promise<YearResult> {
           imageHeight
         )
 
-        const destFile = path.join(
-          outputDir,
-          `q${String(tPos.questionNumber).padStart(3, '0')}.png`
-        )
-
         const ok = await cropImage(imgPath, region, destFile)
         if (ok) {
+          newFiles.push(destFile)
           cropped++
         } else {
           errors++
@@ -206,7 +240,10 @@ async function processYear(year: number): Promise<YearResult> {
   }
 
   console.log(`  結果: クロップ ${cropped}枚 / スキップ ${skipped} / エラー ${errors}`)
-  return { year, targetQuestions: targetSet.size, cropped, skipped, errors }
+  if (newFiles.length > 0) {
+    console.log(`  新規画像: ${newFiles.length}枚`)
+  }
+  return { year, targetQuestions: targetSet.size, cropped, skipped, errors, newFiles }
 }
 
 async function main() {
@@ -244,6 +281,14 @@ async function main() {
     totalErrors += r.errors
   }
   console.log(`合計: 対象${totalTarget}問 → クロップ${totalCropped}枚 / スキップ${totalSkipped} / エラー${totalErrors}`)
+
+  // 新規画像リストをファイルに出力（トリムステップ用）
+  const allNewFiles = results.flatMap(r => r.newFiles)
+  if (allNewFiles.length > 0) {
+    const listPath = path.join(OUTPUT_DIR, '..', 'new-crop-files.txt')
+    fs.writeFileSync(listPath, allNewFiles.join('\n') + '\n', 'utf-8')
+    console.log(`\n新規画像リスト: ${listPath} (${allNewFiles.length}ファイル)`)
+  }
 }
 
 main().catch(console.error)
