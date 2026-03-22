@@ -1,0 +1,2077 @@
+{
+  "description": "画像参照キーワードを含むが image_url 未設定の問題IDリスト（凍結版）",
+  "generated": "2026-03-22",
+  "frozen": true,
+  "total": 258,
+  "tier1": 78,
+  "tier2": 59,
+  "tier3": 121,
+  "ids": [
+    "r100-011",
+    "r100-031",
+    "r100-048",
+    "r100-111",
+    "r100-116",
+    "r100-119",
+    "r100-124",
+    "r100-131",
+    "r100-145",
+    "r100-149",
+    "r100-178",
+    "r100-220",
+    "r100-240",
+    "r100-258",
+    "r100-262",
+    "r100-286",
+    "r100-294",
+    "r100-300",
+    "r100-306",
+    "r100-320",
+    "r100-324",
+    "r100-329",
+    "r100-333",
+    "r100-345",
+    "r101-002",
+    "r101-087",
+    "r101-091",
+    "r101-096",
+    "r101-108",
+    "r101-111",
+    "r101-112",
+    "r101-113",
+    "r101-114",
+    "r101-116",
+    "r101-118",
+    "r101-126",
+    "r101-127",
+    "r101-133",
+    "r101-148",
+    "r101-195",
+    "r101-197",
+    "r101-202",
+    "r101-242",
+    "r101-268",
+    "r101-328",
+    "r101-329",
+    "r101-338",
+    "r101-344",
+    "r102-021",
+    "r102-049",
+    "r102-080",
+    "r102-093",
+    "r102-094",
+    "r102-111",
+    "r102-112",
+    "r102-114",
+    "r102-121",
+    "r102-127",
+    "r102-128",
+    "r102-138",
+    "r102-149",
+    "r102-150",
+    "r102-172",
+    "r102-174",
+    "r102-179",
+    "r102-218",
+    "r102-250",
+    "r102-254",
+    "r102-256",
+    "r102-272",
+    "r102-275",
+    "r102-276",
+    "r102-278",
+    "r102-318",
+    "r102-340",
+    "r102-341",
+    "r102-342",
+    "r103-092",
+    "r103-093",
+    "r103-105",
+    "r103-112",
+    "r103-113",
+    "r103-119",
+    "r103-172",
+    "r103-192",
+    "r103-217",
+    "r103-223",
+    "r103-225",
+    "r103-250",
+    "r103-252",
+    "r103-272",
+    "r103-280",
+    "r103-282",
+    "r103-296",
+    "r103-297",
+    "r103-306",
+    "r103-314",
+    "r103-316",
+    "r103-324",
+    "r103-325",
+    "r103-328",
+    "r103-342",
+    "r103-344",
+    "r104-047",
+    "r104-058",
+    "r104-085",
+    "r104-109",
+    "r104-115",
+    "r104-117",
+    "r104-123",
+    "r104-132",
+    "r104-137",
+    "r104-145",
+    "r104-172",
+    "r104-173",
+    "r104-174",
+    "r104-220",
+    "r104-233",
+    "r104-296",
+    "r104-303",
+    "r104-334",
+    "r104-337",
+    "r104-338",
+    "r105-054",
+    "r105-082",
+    "r105-095",
+    "r105-100",
+    "r105-114",
+    "r105-130",
+    "r105-161",
+    "r105-178",
+    "r105-179",
+    "r105-204",
+    "r105-210",
+    "r105-230",
+    "r105-232",
+    "r105-310",
+    "r105-329",
+    "r105-332",
+    "r105-338",
+    "r105-340",
+    "r105-342",
+    "r105-345",
+    "r106-054",
+    "r106-055",
+    "r106-076",
+    "r106-092",
+    "r106-093",
+    "r106-100",
+    "r106-111",
+    "r106-113",
+    "r106-116",
+    "r106-119",
+    "r106-128",
+    "r106-154",
+    "r106-174",
+    "r106-178",
+    "r106-196",
+    "r106-201",
+    "r106-215",
+    "r106-216",
+    "r106-266",
+    "r106-274",
+    "r106-288",
+    "r106-294",
+    "r106-298",
+    "r106-302",
+    "r106-322",
+    "r106-323",
+    "r106-334",
+    "r106-342",
+    "r106-344",
+    "r107-003",
+    "r107-041",
+    "r107-071",
+    "r107-095",
+    "r107-111",
+    "r107-114",
+    "r107-120",
+    "r107-136",
+    "r107-174",
+    "r107-202",
+    "r107-212",
+    "r107-224",
+    "r107-238",
+    "r107-258",
+    "r107-276",
+    "r107-312",
+    "r107-314",
+    "r107-320",
+    "r107-342",
+    "r107-345",
+    "r108-001",
+    "r108-017",
+    "r108-099",
+    "r108-102",
+    "r108-105",
+    "r108-107",
+    "r108-112",
+    "r108-113",
+    "r108-114",
+    "r108-117",
+    "r108-122",
+    "r108-123",
+    "r108-139",
+    "r108-175",
+    "r108-216",
+    "r108-226",
+    "r108-242",
+    "r108-246",
+    "r108-250",
+    "r108-258",
+    "r108-262",
+    "r108-272",
+    "r108-310",
+    "r108-314",
+    "r108-324",
+    "r108-338",
+    "r108-340",
+    "r109-019",
+    "r109-025",
+    "r109-041",
+    "r109-052",
+    "r109-055",
+    "r109-090",
+    "r109-106",
+    "r109-112",
+    "r109-115",
+    "r109-116",
+    "r109-119",
+    "r109-124",
+    "r109-136",
+    "r109-140",
+    "r109-151",
+    "r109-170",
+    "r109-175",
+    "r109-179",
+    "r109-182",
+    "r109-184",
+    "r109-194",
+    "r109-206",
+    "r109-220",
+    "r109-260",
+    "r109-266",
+    "r109-278",
+    "r109-282",
+    "r109-334",
+    "r109-344",
+    "r110-222",
+    "r110-246",
+    "r110-254",
+    "r110-262",
+    "r110-270",
+    "r110-300",
+    "r110-312",
+    "r110-318",
+    "r110-330",
+    "r110-341"
+  ],
+  "details": [
+    {
+      "id": "r100-011",
+      "year": 100,
+      "question_number": 11,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r100-031",
+      "year": 100,
+      "question_number": 31,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r100-048",
+      "year": 100,
+      "question_number": 48,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r100-111",
+      "year": 100,
+      "question_number": 111,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r100-116",
+      "year": 100,
+      "question_number": 116,
+      "tier": 3,
+      "keyword_match": "下表"
+    },
+    {
+      "id": "r100-119",
+      "year": 100,
+      "question_number": 119,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r100-124",
+      "year": 100,
+      "question_number": 124,
+      "tier": 1,
+      "keyword_match": "この図"
+    },
+    {
+      "id": "r100-131",
+      "year": 100,
+      "question_number": 131,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r100-145",
+      "year": 100,
+      "question_number": 145,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r100-149",
+      "year": 100,
+      "question_number": 149,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r100-178",
+      "year": 100,
+      "question_number": 178,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r100-220",
+      "year": 100,
+      "question_number": 220,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r100-240",
+      "year": 100,
+      "question_number": 240,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r100-258",
+      "year": 100,
+      "question_number": 258,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r100-262",
+      "year": 100,
+      "question_number": 262,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r100-286",
+      "year": 100,
+      "question_number": 286,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r100-294",
+      "year": 100,
+      "question_number": 294,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r100-300",
+      "year": 100,
+      "question_number": 300,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r100-306",
+      "year": 100,
+      "question_number": 306,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r100-320",
+      "year": 100,
+      "question_number": 320,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r100-324",
+      "year": 100,
+      "question_number": 324,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r100-329",
+      "year": 100,
+      "question_number": 329,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r100-333",
+      "year": 100,
+      "question_number": 333,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r100-345",
+      "year": 100,
+      "question_number": 345,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r101-002",
+      "year": 101,
+      "question_number": 2,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r101-087",
+      "year": 101,
+      "question_number": 87,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r101-091",
+      "year": 101,
+      "question_number": 91,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r101-096",
+      "year": 101,
+      "question_number": 96,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r101-108",
+      "year": 101,
+      "question_number": 108,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r101-111",
+      "year": 101,
+      "question_number": 111,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r101-112",
+      "year": 101,
+      "question_number": 112,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r101-113",
+      "year": 101,
+      "question_number": 113,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r101-114",
+      "year": 101,
+      "question_number": 114,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r101-116",
+      "year": 101,
+      "question_number": 116,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r101-118",
+      "year": 101,
+      "question_number": 118,
+      "tier": 1,
+      "keyword_match": "模式図"
+    },
+    {
+      "id": "r101-126",
+      "year": 101,
+      "question_number": 126,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r101-127",
+      "year": 101,
+      "question_number": 127,
+      "tier": 2,
+      "keyword_match": "以下の図"
+    },
+    {
+      "id": "r101-133",
+      "year": 101,
+      "question_number": 133,
+      "tier": 3,
+      "keyword_match": "下の構造"
+    },
+    {
+      "id": "r101-148",
+      "year": 101,
+      "question_number": 148,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r101-195",
+      "year": 101,
+      "question_number": 195,
+      "tier": 2,
+      "keyword_match": "以下の図"
+    },
+    {
+      "id": "r101-197",
+      "year": 101,
+      "question_number": 197,
+      "tier": 2,
+      "keyword_match": "グラフが"
+    },
+    {
+      "id": "r101-202",
+      "year": 101,
+      "question_number": 202,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r101-242",
+      "year": 101,
+      "question_number": 242,
+      "tier": 3,
+      "keyword_match": "下表"
+    },
+    {
+      "id": "r101-268",
+      "year": 101,
+      "question_number": 268,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r101-328",
+      "year": 101,
+      "question_number": 328,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r101-329",
+      "year": 101,
+      "question_number": 329,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r101-338",
+      "year": 101,
+      "question_number": 338,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r101-344",
+      "year": 101,
+      "question_number": 344,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r102-021",
+      "year": 102,
+      "question_number": 21,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r102-049",
+      "year": 102,
+      "question_number": 49,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r102-080",
+      "year": 102,
+      "question_number": 80,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r102-093",
+      "year": 102,
+      "question_number": 93,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r102-094",
+      "year": 102,
+      "question_number": 94,
+      "tier": 2,
+      "keyword_match": "グラフの"
+    },
+    {
+      "id": "r102-111",
+      "year": 102,
+      "question_number": 111,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r102-112",
+      "year": 102,
+      "question_number": 112,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r102-114",
+      "year": 102,
+      "question_number": 114,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r102-121",
+      "year": 102,
+      "question_number": 121,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r102-127",
+      "year": 102,
+      "question_number": 127,
+      "tier": 3,
+      "keyword_match": "下表"
+    },
+    {
+      "id": "r102-128",
+      "year": 102,
+      "question_number": 128,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r102-138",
+      "year": 102,
+      "question_number": 138,
+      "tier": 3,
+      "keyword_match": "下表"
+    },
+    {
+      "id": "r102-149",
+      "year": 102,
+      "question_number": 149,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r102-150",
+      "year": 102,
+      "question_number": 150,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r102-172",
+      "year": 102,
+      "question_number": 172,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r102-174",
+      "year": 102,
+      "question_number": 174,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r102-179",
+      "year": 102,
+      "question_number": 179,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r102-218",
+      "year": 102,
+      "question_number": 218,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r102-250",
+      "year": 102,
+      "question_number": 250,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r102-254",
+      "year": 102,
+      "question_number": 254,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r102-256",
+      "year": 102,
+      "question_number": 256,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r102-272",
+      "year": 102,
+      "question_number": 272,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r102-275",
+      "year": 102,
+      "question_number": 275,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r102-276",
+      "year": 102,
+      "question_number": 276,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r102-278",
+      "year": 102,
+      "question_number": 278,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r102-318",
+      "year": 102,
+      "question_number": 318,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r102-340",
+      "year": 102,
+      "question_number": 340,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r102-341",
+      "year": 102,
+      "question_number": 341,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r102-342",
+      "year": 102,
+      "question_number": 342,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-092",
+      "year": 103,
+      "question_number": 92,
+      "tier": 1,
+      "keyword_match": "この図"
+    },
+    {
+      "id": "r103-093",
+      "year": 103,
+      "question_number": 93,
+      "tier": 2,
+      "keyword_match": "グラフは"
+    },
+    {
+      "id": "r103-105",
+      "year": 103,
+      "question_number": 105,
+      "tier": 1,
+      "keyword_match": "この図"
+    },
+    {
+      "id": "r103-112",
+      "year": 103,
+      "question_number": 112,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r103-113",
+      "year": 103,
+      "question_number": 113,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r103-119",
+      "year": 103,
+      "question_number": 119,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r103-172",
+      "year": 103,
+      "question_number": 172,
+      "tier": 2,
+      "keyword_match": "グラフの"
+    },
+    {
+      "id": "r103-192",
+      "year": 103,
+      "question_number": 192,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r103-217",
+      "year": 103,
+      "question_number": 217,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-223",
+      "year": 103,
+      "question_number": 223,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-225",
+      "year": 103,
+      "question_number": 225,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-250",
+      "year": 103,
+      "question_number": 250,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-252",
+      "year": 103,
+      "question_number": 252,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-272",
+      "year": 103,
+      "question_number": 272,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-280",
+      "year": 103,
+      "question_number": 280,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-282",
+      "year": 103,
+      "question_number": 282,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r103-296",
+      "year": 103,
+      "question_number": 296,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-297",
+      "year": 103,
+      "question_number": 297,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-306",
+      "year": 103,
+      "question_number": 306,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-314",
+      "year": 103,
+      "question_number": 314,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-316",
+      "year": 103,
+      "question_number": 316,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-324",
+      "year": 103,
+      "question_number": 324,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-325",
+      "year": 103,
+      "question_number": 325,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-328",
+      "year": 103,
+      "question_number": 328,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-342",
+      "year": 103,
+      "question_number": 342,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r103-344",
+      "year": 103,
+      "question_number": 344,
+      "tier": 2,
+      "keyword_match": "以下の図"
+    },
+    {
+      "id": "r104-047",
+      "year": 104,
+      "question_number": 47,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r104-058",
+      "year": 104,
+      "question_number": 58,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r104-085",
+      "year": 104,
+      "question_number": 85,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r104-109",
+      "year": 104,
+      "question_number": 109,
+      "tier": 2,
+      "keyword_match": "模式図"
+    },
+    {
+      "id": "r104-115",
+      "year": 104,
+      "question_number": 115,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r104-117",
+      "year": 104,
+      "question_number": 117,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r104-123",
+      "year": 104,
+      "question_number": 123,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r104-132",
+      "year": 104,
+      "question_number": 132,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r104-137",
+      "year": 104,
+      "question_number": 137,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r104-145",
+      "year": 104,
+      "question_number": 145,
+      "tier": 3,
+      "keyword_match": "処方せ"
+    },
+    {
+      "id": "r104-172",
+      "year": 104,
+      "question_number": 172,
+      "tier": 1,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r104-173",
+      "year": 104,
+      "question_number": 173,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r104-174",
+      "year": 104,
+      "question_number": 174,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r104-220",
+      "year": 104,
+      "question_number": 220,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r104-233",
+      "year": 104,
+      "question_number": 233,
+      "tier": 2,
+      "keyword_match": "構造式は"
+    },
+    {
+      "id": "r104-296",
+      "year": 104,
+      "question_number": 296,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r104-303",
+      "year": 104,
+      "question_number": 303,
+      "tier": 3,
+      "keyword_match": "下表"
+    },
+    {
+      "id": "r104-334",
+      "year": 104,
+      "question_number": 334,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r104-337",
+      "year": 104,
+      "question_number": 337,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r104-338",
+      "year": 104,
+      "question_number": 338,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r105-054",
+      "year": 105,
+      "question_number": 54,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r105-082",
+      "year": 105,
+      "question_number": 82,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r105-095",
+      "year": 105,
+      "question_number": 95,
+      "tier": 2,
+      "keyword_match": "グラフは"
+    },
+    {
+      "id": "r105-100",
+      "year": 105,
+      "question_number": 100,
+      "tier": 2,
+      "keyword_match": "模式図"
+    },
+    {
+      "id": "r105-114",
+      "year": 105,
+      "question_number": 114,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r105-130",
+      "year": 105,
+      "question_number": 130,
+      "tier": 1,
+      "keyword_match": "この図"
+    },
+    {
+      "id": "r105-161",
+      "year": 105,
+      "question_number": 161,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r105-178",
+      "year": 105,
+      "question_number": 178,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r105-179",
+      "year": 105,
+      "question_number": 179,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r105-204",
+      "year": 105,
+      "question_number": 204,
+      "tier": 2,
+      "keyword_match": "模式図"
+    },
+    {
+      "id": "r105-210",
+      "year": 105,
+      "question_number": 210,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r105-230",
+      "year": 105,
+      "question_number": 230,
+      "tier": 3,
+      "keyword_match": "下表"
+    },
+    {
+      "id": "r105-232",
+      "year": 105,
+      "question_number": 232,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r105-310",
+      "year": 105,
+      "question_number": 310,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r105-329",
+      "year": 105,
+      "question_number": 329,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r105-332",
+      "year": 105,
+      "question_number": 332,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r105-338",
+      "year": 105,
+      "question_number": 338,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r105-340",
+      "year": 105,
+      "question_number": 340,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r105-342",
+      "year": 105,
+      "question_number": 342,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r105-345",
+      "year": 105,
+      "question_number": 345,
+      "tier": 2,
+      "keyword_match": "以下の図"
+    },
+    {
+      "id": "r106-054",
+      "year": 106,
+      "question_number": 54,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r106-055",
+      "year": 106,
+      "question_number": 55,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r106-076",
+      "year": 106,
+      "question_number": 76,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r106-092",
+      "year": 106,
+      "question_number": 92,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r106-093",
+      "year": 106,
+      "question_number": 93,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r106-100",
+      "year": 106,
+      "question_number": 100,
+      "tier": 2,
+      "keyword_match": "以下の図"
+    },
+    {
+      "id": "r106-111",
+      "year": 106,
+      "question_number": 111,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r106-113",
+      "year": 106,
+      "question_number": 113,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r106-116",
+      "year": 106,
+      "question_number": 116,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r106-119",
+      "year": 106,
+      "question_number": 119,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r106-128",
+      "year": 106,
+      "question_number": 128,
+      "tier": 1,
+      "keyword_match": "この図"
+    },
+    {
+      "id": "r106-154",
+      "year": 106,
+      "question_number": 154,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r106-174",
+      "year": 106,
+      "question_number": 174,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r106-178",
+      "year": 106,
+      "question_number": 178,
+      "tier": 1,
+      "keyword_match": "この図"
+    },
+    {
+      "id": "r106-196",
+      "year": 106,
+      "question_number": 196,
+      "tier": 2,
+      "keyword_match": "模式図"
+    },
+    {
+      "id": "r106-201",
+      "year": 106,
+      "question_number": 201,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r106-215",
+      "year": 106,
+      "question_number": 215,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r106-216",
+      "year": 106,
+      "question_number": 216,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r106-266",
+      "year": 106,
+      "question_number": 266,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r106-274",
+      "year": 106,
+      "question_number": 274,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r106-288",
+      "year": 106,
+      "question_number": 288,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r106-294",
+      "year": 106,
+      "question_number": 294,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r106-298",
+      "year": 106,
+      "question_number": 298,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r106-302",
+      "year": 106,
+      "question_number": 302,
+      "tier": 3,
+      "keyword_match": "下表"
+    },
+    {
+      "id": "r106-322",
+      "year": 106,
+      "question_number": 322,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r106-323",
+      "year": 106,
+      "question_number": 323,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r106-334",
+      "year": 106,
+      "question_number": 334,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r106-342",
+      "year": 106,
+      "question_number": 342,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r106-344",
+      "year": 106,
+      "question_number": 344,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r107-003",
+      "year": 107,
+      "question_number": 3,
+      "tier": 2,
+      "keyword_match": "模式図"
+    },
+    {
+      "id": "r107-041",
+      "year": 107,
+      "question_number": 41,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r107-071",
+      "year": 107,
+      "question_number": 71,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r107-095",
+      "year": 107,
+      "question_number": 95,
+      "tier": 2,
+      "keyword_match": "グラフは"
+    },
+    {
+      "id": "r107-111",
+      "year": 107,
+      "question_number": 111,
+      "tier": 1,
+      "keyword_match": "この図"
+    },
+    {
+      "id": "r107-114",
+      "year": 107,
+      "question_number": 114,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r107-120",
+      "year": 107,
+      "question_number": 120,
+      "tier": 3,
+      "keyword_match": "下表"
+    },
+    {
+      "id": "r107-136",
+      "year": 107,
+      "question_number": 136,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r107-174",
+      "year": 107,
+      "question_number": 174,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r107-202",
+      "year": 107,
+      "question_number": 202,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r107-212",
+      "year": 107,
+      "question_number": 212,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r107-224",
+      "year": 107,
+      "question_number": 224,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r107-238",
+      "year": 107,
+      "question_number": 238,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r107-258",
+      "year": 107,
+      "question_number": 258,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r107-276",
+      "year": 107,
+      "question_number": 276,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r107-312",
+      "year": 107,
+      "question_number": 312,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r107-314",
+      "year": 107,
+      "question_number": 314,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r107-320",
+      "year": 107,
+      "question_number": 320,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r107-342",
+      "year": 107,
+      "question_number": 342,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r107-345",
+      "year": 107,
+      "question_number": 345,
+      "tier": 2,
+      "keyword_match": "構造式は"
+    },
+    {
+      "id": "r108-001",
+      "year": 108,
+      "question_number": 1,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r108-017",
+      "year": 108,
+      "question_number": 17,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r108-099",
+      "year": 108,
+      "question_number": 99,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r108-102",
+      "year": 108,
+      "question_number": 102,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r108-105",
+      "year": 108,
+      "question_number": 105,
+      "tier": 2,
+      "keyword_match": "下の構造"
+    },
+    {
+      "id": "r108-107",
+      "year": 108,
+      "question_number": 107,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r108-112",
+      "year": 108,
+      "question_number": 112,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r108-113",
+      "year": 108,
+      "question_number": 113,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r108-114",
+      "year": 108,
+      "question_number": 114,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r108-117",
+      "year": 108,
+      "question_number": 117,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r108-122",
+      "year": 108,
+      "question_number": 122,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r108-123",
+      "year": 108,
+      "question_number": 123,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r108-139",
+      "year": 108,
+      "question_number": 139,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r108-175",
+      "year": 108,
+      "question_number": 175,
+      "tier": 2,
+      "keyword_match": "グラフの"
+    },
+    {
+      "id": "r108-216",
+      "year": 108,
+      "question_number": 216,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r108-226",
+      "year": 108,
+      "question_number": 226,
+      "tier": 3,
+      "keyword_match": "下表"
+    },
+    {
+      "id": "r108-242",
+      "year": 108,
+      "question_number": 242,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r108-246",
+      "year": 108,
+      "question_number": 246,
+      "tier": 2,
+      "keyword_match": "構造式を"
+    },
+    {
+      "id": "r108-250",
+      "year": 108,
+      "question_number": 250,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r108-258",
+      "year": 108,
+      "question_number": 258,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r108-262",
+      "year": 108,
+      "question_number": 262,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r108-272",
+      "year": 108,
+      "question_number": 272,
+      "tier": 2,
+      "keyword_match": "模式図"
+    },
+    {
+      "id": "r108-310",
+      "year": 108,
+      "question_number": 310,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r108-314",
+      "year": 108,
+      "question_number": 314,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r108-324",
+      "year": 108,
+      "question_number": 324,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r108-338",
+      "year": 108,
+      "question_number": 338,
+      "tier": 3,
+      "keyword_match": "下表"
+    },
+    {
+      "id": "r108-340",
+      "year": 108,
+      "question_number": 340,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r109-019",
+      "year": 109,
+      "question_number": 19,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r109-025",
+      "year": 109,
+      "question_number": 25,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r109-041",
+      "year": 109,
+      "question_number": 41,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r109-052",
+      "year": 109,
+      "question_number": 52,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r109-055",
+      "year": 109,
+      "question_number": 55,
+      "tier": 2,
+      "keyword_match": "模式図"
+    },
+    {
+      "id": "r109-090",
+      "year": 109,
+      "question_number": 90,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r109-106",
+      "year": 109,
+      "question_number": 106,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r109-112",
+      "year": 109,
+      "question_number": 112,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r109-115",
+      "year": 109,
+      "question_number": 115,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r109-116",
+      "year": 109,
+      "question_number": 116,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r109-119",
+      "year": 109,
+      "question_number": 119,
+      "tier": 2,
+      "keyword_match": "図に示"
+    },
+    {
+      "id": "r109-124",
+      "year": 109,
+      "question_number": 124,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r109-136",
+      "year": 109,
+      "question_number": 136,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r109-140",
+      "year": 109,
+      "question_number": 140,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r109-151",
+      "year": 109,
+      "question_number": 151,
+      "tier": 2,
+      "keyword_match": "グラフは"
+    },
+    {
+      "id": "r109-170",
+      "year": 109,
+      "question_number": 170,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r109-175",
+      "year": 109,
+      "question_number": 175,
+      "tier": 3,
+      "keyword_match": "下表"
+    },
+    {
+      "id": "r109-179",
+      "year": 109,
+      "question_number": 179,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r109-182",
+      "year": 109,
+      "question_number": 182,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r109-184",
+      "year": 109,
+      "question_number": 184,
+      "tier": 2,
+      "keyword_match": "図1"
+    },
+    {
+      "id": "r109-194",
+      "year": 109,
+      "question_number": 194,
+      "tier": 3,
+      "keyword_match": "下表"
+    },
+    {
+      "id": "r109-206",
+      "year": 109,
+      "question_number": 206,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r109-220",
+      "year": 109,
+      "question_number": 220,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r109-260",
+      "year": 109,
+      "question_number": 260,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r109-266",
+      "year": 109,
+      "question_number": 266,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r109-278",
+      "year": 109,
+      "question_number": 278,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r109-282",
+      "year": 109,
+      "question_number": 282,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r109-334",
+      "year": 109,
+      "question_number": 334,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r109-344",
+      "year": 109,
+      "question_number": 344,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r110-222",
+      "year": 110,
+      "question_number": 222,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r110-246",
+      "year": 110,
+      "question_number": 246,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r110-254",
+      "year": 110,
+      "question_number": 254,
+      "tier": 1,
+      "keyword_match": "下図"
+    },
+    {
+      "id": "r110-262",
+      "year": 110,
+      "question_number": 262,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r110-270",
+      "year": 110,
+      "question_number": 270,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r110-300",
+      "year": 110,
+      "question_number": 300,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r110-312",
+      "year": 110,
+      "question_number": 312,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r110-318",
+      "year": 110,
+      "question_number": 318,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r110-330",
+      "year": 110,
+      "question_number": 330,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    },
+    {
+      "id": "r110-341",
+      "year": 110,
+      "question_number": 341,
+      "tier": 3,
+      "keyword_match": "処方箋"
+    }
+  ]
+}
