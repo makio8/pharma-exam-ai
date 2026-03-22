@@ -25,7 +25,6 @@ interface QuestionState {
  * - 各問題を縦に並べて表示（回答可能）
  */
 export function LinkedQuestionViewer({ group }: Props) {
-  const scenarioImage = group.questions.find((q) => q.image_url)?.image_url
   const { saveAnswer, getQuestionResult } = useAnswerHistory()
 
   // 各問題の回答状態を管理
@@ -130,16 +129,6 @@ export function LinkedQuestionViewer({ group }: Props) {
           </Paragraph>
         )}
 
-        {scenarioImage && (
-          <div style={{ marginBottom: 8, textAlign: 'center' }}>
-            <Image
-              src={scenarioImage}
-              alt="連問の共通資料"
-              style={{ maxHeight: '50vh', objectFit: 'contain' }}
-              width="100%"
-            />
-          </div>
-        )}
       </Card>
 
       {/* 各問題を縦並び */}
@@ -192,6 +181,7 @@ export function LinkedQuestionViewer({ group }: Props) {
                   alt={`問${q.question_number} の図`}
                   style={{ maxHeight: '50vh', objectFit: 'contain' }}
                   width="100%"
+                  fallback="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5Ij7lm7Pjgr7jg7zjg4nlpLHmlZc8L3RleHQ+PC9zdmc+"
                 />
               </div>
             )}
