@@ -37,6 +37,7 @@ import { useFlashCards } from '../hooks/useFlashCards'
 import { useLinkedQuestions } from '../hooks/useLinkedQuestions'
 import { LinkedQuestionViewer } from '../components/LinkedQuestionViewer'
 import { isMultiAnswer, hasMultiSelectInstruction, isCorrectAnswer, isCorrectKey, getRequiredSelections } from '../utils/question-helpers'
+import { normalizeForDisplay, hasVisualContent } from '../utils/text-normalizer'
 
 const { Text, Paragraph } = Typography
 const { TextArea } = Input
@@ -333,12 +334,12 @@ export function QuestionPage() {
       {/* 問題文 */}
       <Card style={{ marginBottom: 16 }}>
         <Paragraph style={{ fontSize: 16, lineHeight: 1.8, whiteSpace: 'pre-wrap', marginBottom: 0 }}>
-          {question.question_text}
+          {normalizeForDisplay(question.question_text)}
         </Paragraph>
       </Card>
 
       {/* 問題画像（choices空の画像問題のみ表示。選択肢テキストがある場合は冗長なので非表示） */}
-      {question.image_url && question.choices.length === 0 && (
+      {question.image_url && (question.choices.length === 0 || hasVisualContent(question)) && (
         <div style={{ marginBottom: 16, textAlign: 'center' }}>
           <Image
             src={question.image_url}
@@ -535,7 +536,7 @@ export function QuestionPage() {
             style={{ marginBottom: 16, borderColor: isCorrect ? '#b7eb8f' : '#ffccc7' }}
           >
             <Paragraph style={{ fontSize: 15, lineHeight: 1.8, whiteSpace: 'pre-wrap', marginBottom: 0 }}>
-              {question.explanation?.replace(/\\n/g, '\n')}
+              {question.explanation ? normalizeForDisplay(question.explanation) : undefined}
             </Paragraph>
             <Divider style={{ margin: '12px 0' }} />
             <Space wrap>

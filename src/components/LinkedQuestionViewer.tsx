@@ -5,6 +5,7 @@ import type { LinkedGroup } from '../hooks/useLinkedQuestions'
 import type { Question, ConfidenceLevel } from '../types/question'
 import { useAnswerHistory } from '../hooks/useAnswerHistory'
 import { isMultiAnswer, hasMultiSelectInstruction, isCorrectAnswer, isCorrectKey, getRequiredSelections } from '../utils/question-helpers'
+import { normalizeForDisplay, hasVisualContent } from '../utils/text-normalizer'
 
 const { Text, Paragraph } = Typography
 
@@ -125,7 +126,7 @@ export function LinkedQuestionViewer({ group }: Props) {
               borderRadius: 6,
             }}
           >
-            {scenario.replace(/\\n/g, '\n')}
+            {normalizeForDisplay(scenario)}
           </Paragraph>
         )}
 
@@ -170,11 +171,11 @@ export function LinkedQuestionViewer({ group }: Props) {
 
             {/* 問題文（シナリオ・他問のテキストを除去し、この問題の本文だけ表示） */}
             <Paragraph style={{ fontSize: 15, lineHeight: 1.8, whiteSpace: 'pre-wrap', marginBottom: 12 }}>
-              {extractQuestionBody(q.question_text, q.question_number, scenario)}
+              {normalizeForDisplay(extractQuestionBody(q.question_text, q.question_number, scenario))}
             </Paragraph>
 
             {/* 問題個別の画像（choices空の問題のみ表示。選択肢テキストがある場合は冗長なので非表示） */}
-            {q.image_url && q.choices.length === 0 && (
+            {q.image_url && (q.choices.length === 0 || hasVisualContent(q)) && (
               <div style={{ marginBottom: 12, textAlign: 'center' }}>
                 <Image
                   src={q.image_url}
@@ -321,7 +322,7 @@ export function LinkedQuestionViewer({ group }: Props) {
                 {q.explanation && (
                   <Card size="small" style={{ borderColor: state.isCorrect ? '#b7eb8f' : '#ffccc7' }}>
                     <Paragraph style={{ fontSize: 14, lineHeight: 1.7, whiteSpace: 'pre-wrap', marginBottom: 0 }}>
-                      {q.explanation.replace(/\\n/g, '\n')}
+                      {normalizeForDisplay(q.explanation)}
                     </Paragraph>
                   </Card>
                 )}
