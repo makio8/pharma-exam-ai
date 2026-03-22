@@ -1,5 +1,5 @@
 // ヒートマップデータ（自動生成: generate-heatmap-data.ts）
-// 生成日: 2026-03-21
+// 生成日: 2026-03-22
 // cells のみ永続化。bySubjectYear / byExemplarYear はランタイムで計算する。
 
 import type { QuestionSubject } from '../types/question'
@@ -22944,5 +22944,397 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "year": 111,
     "count": 1,
     "primaryCount": 1
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-009",
+    "year": 100,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-009",
+    "year": 102,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-009",
+    "year": 105,
+    "count": 2,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-009",
+    "year": 106,
+    "count": 2,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-009",
+    "year": 107,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-009",
+    "year": 108,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-030",
+    "year": 101,
+    "count": 3,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-030",
+    "year": 103,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-030",
+    "year": 104,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-030",
+    "year": 105,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-030",
+    "year": 106,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-030",
+    "year": 107,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-030",
+    "year": 108,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-030",
+    "year": 109,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-030",
+    "year": 110,
+    "count": 2,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-034",
+    "year": 101,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-045",
+    "year": 104,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-045",
+    "year": 108,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-066",
+    "year": 110,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-087",
+    "year": 100,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-088",
+    "year": 100,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-088",
+    "year": 107,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "物理",
+    "exemplarId": "ex-physics-097",
+    "year": 107,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "化学",
+    "exemplarId": "ex-chemistry-019",
+    "year": 101,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "化学",
+    "exemplarId": "ex-chemistry-041",
+    "year": 101,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "化学",
+    "exemplarId": "ex-chemistry-041",
+    "year": 102,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "化学",
+    "exemplarId": "ex-chemistry-046",
+    "year": 103,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "化学",
+    "exemplarId": "ex-chemistry-046",
+    "year": 109,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "化学",
+    "exemplarId": "ex-chemistry-106",
+    "year": 101,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "化学",
+    "exemplarId": "ex-chemistry-106",
+    "year": 102,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "化学",
+    "exemplarId": "ex-chemistry-106",
+    "year": 106,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "化学",
+    "exemplarId": "ex-chemistry-106",
+    "year": 110,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "化学",
+    "exemplarId": "ex-chemistry-109",
+    "year": 101,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "化学",
+    "exemplarId": "ex-chemistry-109",
+    "year": 102,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "化学",
+    "exemplarId": "ex-chemistry-109",
+    "year": 106,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "化学",
+    "exemplarId": "ex-chemistry-109",
+    "year": 110,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "生物",
+    "exemplarId": "ex-biology-002",
+    "year": 108,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "生物",
+    "exemplarId": "ex-biology-013",
+    "year": 101,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "生物",
+    "exemplarId": "ex-biology-025",
+    "year": 104,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "薬剤",
+    "exemplarId": "ex-pharmaceutics-021",
+    "year": 103,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "薬剤",
+    "exemplarId": "ex-pharmaceutics-021",
+    "year": 105,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "薬剤",
+    "exemplarId": "ex-pharmaceutics-021",
+    "year": 110,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "薬剤",
+    "exemplarId": "ex-pharmaceutics-068",
+    "year": 105,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "病態・薬物治療",
+    "exemplarId": "ex-pathology-040",
+    "year": 101,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "病態・薬物治療",
+    "exemplarId": "ex-pathology-040",
+    "year": 102,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "病態・薬物治療",
+    "exemplarId": "ex-pathology-040",
+    "year": 103,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "病態・薬物治療",
+    "exemplarId": "ex-pathology-040",
+    "year": 110,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "病態・薬物治療",
+    "exemplarId": "ex-pathology-058",
+    "year": 101,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "病態・薬物治療",
+    "exemplarId": "ex-pathology-058",
+    "year": 102,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "病態・薬物治療",
+    "exemplarId": "ex-pathology-058",
+    "year": 103,
+    "count": 2,
+    "primaryCount": 0
+  },
+  {
+    "subject": "病態・薬物治療",
+    "exemplarId": "ex-pathology-058",
+    "year": 109,
+    "count": 2,
+    "primaryCount": 0
+  },
+  {
+    "subject": "病態・薬物治療",
+    "exemplarId": "ex-pathology-058",
+    "year": 110,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "実務",
+    "exemplarId": "ex-practice-126",
+    "year": 100,
+    "count": 2,
+    "primaryCount": 0
+  },
+  {
+    "subject": "実務",
+    "exemplarId": "ex-practice-128",
+    "year": 104,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "実務",
+    "exemplarId": "ex-practice-120",
+    "year": 110,
+    "count": 1,
+    "primaryCount": 0
+  },
+  {
+    "subject": "実務",
+    "exemplarId": "ex-practice-123",
+    "year": 108,
+    "count": 1,
+    "primaryCount": 0
   }
 ]

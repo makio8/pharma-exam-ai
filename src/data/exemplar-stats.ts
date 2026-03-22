@@ -1,5 +1,5 @@
 // 例示別出題統計（自動生成: compute-exemplar-stats.ts）
-// 生成日: 2026-03-21
+// 生成日: 2026-03-22
 
 import type { ExemplarStats } from '../types/blueprint'
 
@@ -3437,6 +3437,55 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryYearsAppeared": 5,
     "linkedGroupCount": 13,
     "avgQuestionsPerYear": 2.6
+  },
+  {
+    "exemplarId": "ex-physics-030",
+    "subject": "物理",
+    "yearsAppeared": 9,
+    "totalQuestions": 12,
+    "yearDetails": [
+      {
+        "year": 101,
+        "count": 3
+      },
+      {
+        "year": 103,
+        "count": 1
+      },
+      {
+        "year": 104,
+        "count": 1
+      },
+      {
+        "year": 105,
+        "count": 1
+      },
+      {
+        "year": 106,
+        "count": 1
+      },
+      {
+        "year": 107,
+        "count": 1
+      },
+      {
+        "year": 108,
+        "count": 1
+      },
+      {
+        "year": 109,
+        "count": 1
+      },
+      {
+        "year": 110,
+        "count": 2
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 12,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 12,
+    "avgQuestionsPerYear": 1.33
   },
   {
     "exemplarId": "ex-biology-112",
@@ -7489,6 +7538,43 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1.29
   },
   {
+    "exemplarId": "ex-physics-009",
+    "subject": "物理",
+    "yearsAppeared": 6,
+    "totalQuestions": 8,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 102,
+        "count": 1
+      },
+      {
+        "year": 105,
+        "count": 2
+      },
+      {
+        "year": 106,
+        "count": 2
+      },
+      {
+        "year": 107,
+        "count": 1
+      },
+      {
+        "year": 108,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 8,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 8,
+    "avgQuestionsPerYear": 1.33
+  },
+  {
     "exemplarId": "ex-chemistry-077",
     "subject": "化学",
     "yearsAppeared": 7,
@@ -9858,6 +9944,39 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryYearsAppeared": 7,
     "linkedGroupCount": 7,
     "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-pathology-058",
+    "subject": "病態・薬物治療",
+    "yearsAppeared": 5,
+    "totalQuestions": 7,
+    "yearDetails": [
+      {
+        "year": 101,
+        "count": 1
+      },
+      {
+        "year": 102,
+        "count": 1
+      },
+      {
+        "year": 103,
+        "count": 2
+      },
+      {
+        "year": 109,
+        "count": 2
+      },
+      {
+        "year": 110,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 7,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 7,
+    "avgQuestionsPerYear": 1.4
   },
   {
     "exemplarId": "ex-pathology-060",
@@ -14386,6 +14505,64 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1
   },
   {
+    "exemplarId": "ex-chemistry-106",
+    "subject": "化学",
+    "yearsAppeared": 4,
+    "totalQuestions": 4,
+    "yearDetails": [
+      {
+        "year": 101,
+        "count": 1
+      },
+      {
+        "year": 102,
+        "count": 1
+      },
+      {
+        "year": 106,
+        "count": 1
+      },
+      {
+        "year": 110,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 4,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 4,
+    "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-chemistry-109",
+    "subject": "化学",
+    "yearsAppeared": 4,
+    "totalQuestions": 4,
+    "yearDetails": [
+      {
+        "year": 101,
+        "count": 1
+      },
+      {
+        "year": 102,
+        "count": 1
+      },
+      {
+        "year": 106,
+        "count": 1
+      },
+      {
+        "year": 110,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 4,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 4,
+    "avgQuestionsPerYear": 1
+  },
+  {
     "exemplarId": "ex-biology-005",
     "subject": "生物",
     "yearsAppeared": 3,
@@ -15214,6 +15391,35 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryYearsAppeared": 3,
     "linkedGroupCount": 4,
     "avgQuestionsPerYear": 1.33
+  },
+  {
+    "exemplarId": "ex-pathology-040",
+    "subject": "病態・薬物治療",
+    "yearsAppeared": 4,
+    "totalQuestions": 4,
+    "yearDetails": [
+      {
+        "year": 101,
+        "count": 1
+      },
+      {
+        "year": 102,
+        "count": 1
+      },
+      {
+        "year": 103,
+        "count": 1
+      },
+      {
+        "year": 110,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 4,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 4,
+    "avgQuestionsPerYear": 1
   },
   {
     "exemplarId": "ex-pathology-042",
@@ -17406,6 +17612,31 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1
   },
   {
+    "exemplarId": "ex-pharmaceutics-021",
+    "subject": "薬剤",
+    "yearsAppeared": 3,
+    "totalQuestions": 3,
+    "yearDetails": [
+      {
+        "year": 103,
+        "count": 1
+      },
+      {
+        "year": 105,
+        "count": 1
+      },
+      {
+        "year": 110,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 3,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 3,
+    "avgQuestionsPerYear": 1
+  },
+  {
     "exemplarId": "ex-pharmaceutics-046",
     "subject": "薬剤",
     "yearsAppeared": 3,
@@ -18375,6 +18606,27 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1
   },
   {
+    "exemplarId": "ex-physics-045",
+    "subject": "物理",
+    "yearsAppeared": 2,
+    "totalQuestions": 2,
+    "yearDetails": [
+      {
+        "year": 104,
+        "count": 1
+      },
+      {
+        "year": 108,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 2,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 2,
+    "avgQuestionsPerYear": 1
+  },
+  {
     "exemplarId": "ex-physics-046",
     "subject": "物理",
     "yearsAppeared": 2,
@@ -18606,6 +18858,27 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1
   },
   {
+    "exemplarId": "ex-physics-088",
+    "subject": "物理",
+    "yearsAppeared": 2,
+    "totalQuestions": 2,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 107,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 2,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 2,
+    "avgQuestionsPerYear": 1
+  },
+  {
     "exemplarId": "ex-physics-090",
     "subject": "物理",
     "yearsAppeared": 2,
@@ -18812,6 +19085,48 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryQuestions": 1,
     "secondaryQuestions": 1,
     "primaryYearsAppeared": 1,
+    "linkedGroupCount": 2,
+    "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-chemistry-041",
+    "subject": "化学",
+    "yearsAppeared": 2,
+    "totalQuestions": 2,
+    "yearDetails": [
+      {
+        "year": 101,
+        "count": 1
+      },
+      {
+        "year": 102,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 2,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 2,
+    "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-chemistry-046",
+    "subject": "化学",
+    "yearsAppeared": 2,
+    "totalQuestions": 2,
+    "yearDetails": [
+      {
+        "year": 103,
+        "count": 1
+      },
+      {
+        "year": 109,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 2,
+    "primaryYearsAppeared": 0,
     "linkedGroupCount": 2,
     "avgQuestionsPerYear": 1
   },
@@ -20598,6 +20913,23 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1
   },
   {
+    "exemplarId": "ex-practice-126",
+    "subject": "実務",
+    "yearsAppeared": 1,
+    "totalQuestions": 2,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 2
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 2,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 2,
+    "avgQuestionsPerYear": 2
+  },
+  {
     "exemplarId": "ex-physics-001",
     "subject": "物理",
     "yearsAppeared": 1,
@@ -20785,6 +21117,23 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1
   },
   {
+    "exemplarId": "ex-physics-034",
+    "subject": "物理",
+    "yearsAppeared": 1,
+    "totalQuestions": 1,
+    "yearDetails": [
+      {
+        "year": 101,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 1,
+    "avgQuestionsPerYear": 1
+  },
+  {
     "exemplarId": "ex-physics-035",
     "subject": "物理",
     "yearsAppeared": 1,
@@ -20836,6 +21185,23 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1
   },
   {
+    "exemplarId": "ex-physics-066",
+    "subject": "物理",
+    "yearsAppeared": 1,
+    "totalQuestions": 1,
+    "yearDetails": [
+      {
+        "year": 110,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 1,
+    "avgQuestionsPerYear": 1
+  },
+  {
     "exemplarId": "ex-physics-075",
     "subject": "物理",
     "yearsAppeared": 1,
@@ -20866,6 +21232,40 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryQuestions": 1,
     "secondaryQuestions": 0,
     "primaryYearsAppeared": 1,
+    "linkedGroupCount": 1,
+    "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-physics-087",
+    "subject": "物理",
+    "yearsAppeared": 1,
+    "totalQuestions": 1,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 1,
+    "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-physics-097",
+    "subject": "物理",
+    "yearsAppeared": 1,
+    "totalQuestions": 1,
+    "yearDetails": [
+      {
+        "year": 107,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 0,
     "linkedGroupCount": 1,
     "avgQuestionsPerYear": 1
   },
@@ -20985,6 +21385,23 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryQuestions": 1,
     "secondaryQuestions": 0,
     "primaryYearsAppeared": 1,
+    "linkedGroupCount": 1,
+    "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-chemistry-019",
+    "subject": "化学",
+    "yearsAppeared": 1,
+    "totalQuestions": 1,
+    "yearDetails": [
+      {
+        "year": 101,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 0,
     "linkedGroupCount": 1,
     "avgQuestionsPerYear": 1
   },
@@ -21482,6 +21899,23 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1
   },
   {
+    "exemplarId": "ex-biology-002",
+    "subject": "生物",
+    "yearsAppeared": 1,
+    "totalQuestions": 1,
+    "yearDetails": [
+      {
+        "year": 108,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 1,
+    "avgQuestionsPerYear": 1
+  },
+  {
     "exemplarId": "ex-biology-007",
     "subject": "生物",
     "yearsAppeared": 1,
@@ -21523,6 +21957,23 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "yearDetails": [
       {
         "year": 100,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 1,
+    "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-biology-013",
+    "subject": "生物",
+    "yearsAppeared": 1,
+    "totalQuestions": 1,
+    "yearDetails": [
+      {
+        "year": 101,
         "count": 1
       }
     ],
@@ -21614,6 +22065,23 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryQuestions": 1,
     "secondaryQuestions": 0,
     "primaryYearsAppeared": 1,
+    "linkedGroupCount": 1,
+    "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-biology-025",
+    "subject": "生物",
+    "yearsAppeared": 1,
+    "totalQuestions": 1,
+    "yearDetails": [
+      {
+        "year": 104,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 0,
     "linkedGroupCount": 1,
     "avgQuestionsPerYear": 1
   },
@@ -22328,6 +22796,23 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryQuestions": 1,
     "secondaryQuestions": 0,
     "primaryYearsAppeared": 1,
+    "linkedGroupCount": 1,
+    "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-pharmaceutics-068",
+    "subject": "薬剤",
+    "yearsAppeared": 1,
+    "totalQuestions": 1,
+    "yearDetails": [
+      {
+        "year": 105,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 0,
     "linkedGroupCount": 1,
     "avgQuestionsPerYear": 1
   },
@@ -23080,6 +23565,57 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1
   },
   {
+    "exemplarId": "ex-practice-120",
+    "subject": "実務",
+    "yearsAppeared": 1,
+    "totalQuestions": 1,
+    "yearDetails": [
+      {
+        "year": 110,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 1,
+    "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-practice-123",
+    "subject": "実務",
+    "yearsAppeared": 1,
+    "totalQuestions": 1,
+    "yearDetails": [
+      {
+        "year": 108,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 1,
+    "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-practice-128",
+    "subject": "実務",
+    "yearsAppeared": 1,
+    "totalQuestions": 1,
+    "yearDetails": [
+      {
+        "year": 104,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 1,
+    "avgQuestionsPerYear": 1
+  },
+  {
     "exemplarId": "ex-physics-003",
     "subject": "物理",
     "yearsAppeared": 0,
@@ -23093,18 +23629,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
   },
   {
     "exemplarId": "ex-physics-007",
-    "subject": "物理",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-physics-009",
     "subject": "物理",
     "yearsAppeared": 0,
     "totalQuestions": 0,
@@ -23140,18 +23664,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 0
   },
   {
-    "exemplarId": "ex-physics-030",
-    "subject": "物理",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
     "exemplarId": "ex-physics-033",
     "subject": "物理",
     "yearsAppeared": 0,
@@ -23164,31 +23676,7 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 0
   },
   {
-    "exemplarId": "ex-physics-034",
-    "subject": "物理",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
     "exemplarId": "ex-physics-036",
-    "subject": "物理",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-physics-045",
     "subject": "物理",
     "yearsAppeared": 0,
     "totalQuestions": 0,
@@ -23236,18 +23724,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 0
   },
   {
-    "exemplarId": "ex-physics-066",
-    "subject": "物理",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
     "exemplarId": "ex-physics-076",
     "subject": "物理",
     "yearsAppeared": 0,
@@ -23284,30 +23760,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 0
   },
   {
-    "exemplarId": "ex-physics-087",
-    "subject": "物理",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-physics-088",
-    "subject": "物理",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
     "exemplarId": "ex-physics-093",
     "subject": "物理",
     "yearsAppeared": 0,
@@ -23321,18 +23773,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
   },
   {
     "exemplarId": "ex-physics-096",
-    "subject": "物理",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-physics-097",
     "subject": "物理",
     "yearsAppeared": 0,
     "totalQuestions": 0,
@@ -23369,18 +23809,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
   },
   {
     "exemplarId": "ex-chemistry-010",
-    "subject": "化学",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-chemistry-019",
     "subject": "化学",
     "yearsAppeared": 0,
     "totalQuestions": 0,
@@ -23441,30 +23869,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
   },
   {
     "exemplarId": "ex-chemistry-036",
-    "subject": "化学",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-chemistry-041",
-    "subject": "化学",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-chemistry-046",
     "subject": "化学",
     "yearsAppeared": 0,
     "totalQuestions": 0,
@@ -23692,30 +24096,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 0
   },
   {
-    "exemplarId": "ex-chemistry-106",
-    "subject": "化学",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-chemistry-109",
-    "subject": "化学",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
     "exemplarId": "ex-chemistry-111",
     "subject": "化学",
     "yearsAppeared": 0,
@@ -23764,30 +24144,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 0
   },
   {
-    "exemplarId": "ex-biology-002",
-    "subject": "生物",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-biology-013",
-    "subject": "生物",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
     "exemplarId": "ex-biology-014",
     "subject": "生物",
     "yearsAppeared": 0,
@@ -23801,18 +24157,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
   },
   {
     "exemplarId": "ex-biology-021",
-    "subject": "生物",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-biology-025",
     "subject": "生物",
     "yearsAppeared": 0,
     "totalQuestions": 0,
@@ -24280,31 +24624,7 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 0
   },
   {
-    "exemplarId": "ex-pharmaceutics-021",
-    "subject": "薬剤",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
     "exemplarId": "ex-pharmaceutics-065",
-    "subject": "薬剤",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-pharmaceutics-068",
     "subject": "薬剤",
     "yearsAppeared": 0,
     "totalQuestions": 0,
@@ -24353,30 +24673,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
   },
   {
     "exemplarId": "ex-pathology-028",
-    "subject": "病態・薬物治療",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-pathology-040",
-    "subject": "病態・薬物治療",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-pathology-058",
     "subject": "病態・薬物治療",
     "yearsAppeared": 0,
     "totalQuestions": 0,
@@ -25312,18 +25608,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 0
   },
   {
-    "exemplarId": "ex-practice-120",
-    "subject": "実務",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
     "exemplarId": "ex-practice-121",
     "subject": "実務",
     "yearsAppeared": 0,
@@ -25337,18 +25621,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
   },
   {
     "exemplarId": "ex-practice-122",
-    "subject": "実務",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-practice-123",
     "subject": "実務",
     "yearsAppeared": 0,
     "totalQuestions": 0,
@@ -25384,31 +25656,7 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 0
   },
   {
-    "exemplarId": "ex-practice-126",
-    "subject": "実務",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
     "exemplarId": "ex-practice-127",
-    "subject": "実務",
-    "yearsAppeared": 0,
-    "totalQuestions": 0,
-    "yearDetails": [],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 0,
-    "avgQuestionsPerYear": 0
-  },
-  {
-    "exemplarId": "ex-practice-128",
     "subject": "実務",
     "yearsAppeared": 0,
     "totalQuestions": 0,
