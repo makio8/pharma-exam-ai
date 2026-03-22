@@ -1,9 +1,9 @@
 #!/bin/bash
-# 100-106回の試験問題PDFをダウンロード
+# 100-110回の試験問題PDFをダウンロード
 # Usage: bash scripts/download-exam-pdfs.sh
 
 BASE="https://www.mhlw.go.jp"
-DIR="/tmp/claude"
+DIR="data/pdfs"
 mkdir -p "$DIR"
 
 echo "=== 第100回 ==="
@@ -62,9 +62,41 @@ curl -sL "$BASE/content/000756022.pdf" -o "$DIR/q106-jissen1.pdf"
 curl -sL "$BASE/content/000756023.pdf" -o "$DIR/q106-jissen2.pdf"
 curl -sL "$BASE/content/000756024.pdf" -o "$DIR/q106-jissen3.pdf"
 
+echo "=== 第107回 ==="
+curl -sL "$BASE/content/000915525.pdf" -o "$DIR/q107-hissu.pdf"
+curl -sL "$BASE/content/000915526.pdf" -o "$DIR/q107-riron1.pdf"
+curl -sL "$BASE/content/000915527.pdf" -o "$DIR/q107-riron2.pdf"
+curl -sL "$BASE/content/000915529.pdf" -o "$DIR/q107-jissen1.pdf"
+curl -sL "$BASE/content/000915530.pdf" -o "$DIR/q107-jissen2.pdf"
+curl -sL "$BASE/content/000915531.pdf" -o "$DIR/q107-jissen3.pdf"
+
+echo "=== 第108回 ==="
+curl -sL "$BASE/content/001074628.pdf" -o "$DIR/q108-hissu.pdf"
+curl -sL "$BASE/content/001074629.pdf" -o "$DIR/q108-riron1.pdf"
+curl -sL "$BASE/content/001074630.pdf" -o "$DIR/q108-riron2.pdf"
+curl -sL "$BASE/content/001074631.pdf" -o "$DIR/q108-jissen1.pdf"
+curl -sL "$BASE/content/001074632.pdf" -o "$DIR/q108-jissen2.pdf"
+curl -sL "$BASE/content/001074633.pdf" -o "$DIR/q108-jissen3.pdf"
+
+echo "=== 第109回 ==="
+curl -sL "$BASE/content/001226759.pdf" -o "$DIR/q109-hissu.pdf"
+curl -sL "$BASE/content/001226760.pdf" -o "$DIR/q109-riron1.pdf"
+curl -sL "$BASE/content/001226761.pdf" -o "$DIR/q109-riron2.pdf"
+curl -sL "$BASE/content/001226762.pdf" -o "$DIR/q109-jissen1.pdf"
+curl -sL "$BASE/content/001226763.pdf" -o "$DIR/q109-jissen2.pdf"
+curl -sL "$BASE/content/001226764.pdf" -o "$DIR/q109-jissen3.pdf"
+
+echo "=== 第110回 ==="
+curl -sL "$BASE/content/001455149.pdf" -o "$DIR/q110-hissu.pdf"
+curl -sL "$BASE/content/001455152.pdf" -o "$DIR/q110-riron1.pdf"
+curl -sL "$BASE/content/001455159.pdf" -o "$DIR/q110-riron2.pdf"
+curl -sL "$BASE/content/001455160.pdf" -o "$DIR/q110-jissen1.pdf"
+curl -sL "$BASE/content/001455161.pdf" -o "$DIR/q110-jissen2.pdf"
+curl -sL "$BASE/content/001455162.pdf" -o "$DIR/q110-jissen3.pdf"
+
 echo ""
 echo "=== ダウンロード結果 ==="
-for y in 100 101 102 103 104 105 106; do
+for y in 100 101 102 103 104 105 106 107 108 109 110; do
   count=$(ls -1 "$DIR"/q${y}-*.pdf 2>/dev/null | wc -l | tr -d ' ')
   total_size=$(du -sh "$DIR"/q${y}-*.pdf 2>/dev/null | tail -1 | cut -f1)
   echo "第${y}回: ${count}ファイル"
