@@ -28,20 +28,31 @@ export function hasVisualContent(question: { visual_content_type?: string; image
 export function getDisplayMode(question: {
   visual_content_type?: string
   image_url?: string
+  question_text?: string
   choices: { key: number; text: string }[]
+  display_mode_override?: 'text' | 'image' | 'both'
 }): 'text' | 'image' | 'both' {
+  // 問題ごとの上書き設定（実機確認に基づく手動指定）が最優先
+  if (question.display_mode_override) return question.display_mode_override
+
   // 画像がなければテキストのみ
   if (!question.image_url) return 'text'
 
-  // choices空の画像問題 → 画像のみ（数字ボタンUI）
-  if (question.choices.length === 0) return 'image'
-
-  // visual_content_typeが非テキスト → テキスト+画像の両方表示
-  // （テキストに問いかけ文があり、画像は図表・構造式等の補足）
-  if (question.visual_content_type && question.visual_content_type !== 'text_only') {
-    return 'both'
+  // choices空 or 全選択肢テキスト空の画像問題 → 画像のみ（数字ボタンUI）
+  // ただしquestion_textに実質的な内容がある場合はbothにフォールバック（GPT-5.4指摘: 本文ロス防止）
+  const choicesEmpty = question.choices.length === 0
+    || question.choices.every(c => c.text.trim() === '')  // trim()でOCR由来の空白も検出
+  if (choicesEmpty) {
+    const hasSubstantialText = (question.question_text?.trim().length ?? 0) > 30
+    return hasSubstantialText ? 'both' : 'image'
   }
 
-  // それ以外 → テキストのみ（画像はあるが表示不要）
-  return 'text'
+  // visual_content_typeがtext_only → テキストのみ（画像は表示不要）
+  if (question.visual_content_type === 'text_only') {
+    return 'text'
+  }
+
+  // image_urlがあり、VCTが非テキスト or 未設定 → テキスト+画像の両方表示
+  // （VCT未設定でもimage_urlがある以上、画像を表示すべき）
+  return 'both'
 }
