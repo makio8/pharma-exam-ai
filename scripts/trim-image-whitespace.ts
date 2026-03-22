@@ -19,7 +19,8 @@ const __dirname = path.dirname(__filename)
 
 const IMAGES_DIR = path.join(__dirname, '..', 'public', 'images', 'questions')
 const PAGE_NUMBER_STRIP_HEIGHT = 80  // px: ページ番号領域の高さ
-const TRIM_THRESHOLD = 20           // 余白と見なす色差しきい値
+// sharp.trim は使用しない（コンテンツ端の文字を削るリスクがあるため）
+// ページ番号領域のみ安全に除去する
 
 interface TrimResult {
   file: string
@@ -34,35 +35,32 @@ async function trimImage(imgPath: string, dryRun: boolean): Promise<TrimResult |
   const origH = originalMeta.height ?? 0
   if (origW === 0 || origH === 0) return null
 
-  // Step 1: ページ番号領域をカット（下端80px）
-  const contentHeight = Math.max(100, origH - PAGE_NUMBER_STRIP_HEIGHT)
+  // ページ番号パターン（「− N −」）が下端にあるかピクセルレベルで検出は難しいため、
+  // 下端80px を一律カット。ただし画像が小さすぎる場合はスキップ。
+  if (origH <= PAGE_NUMBER_STRIP_HEIGHT + 100) return null  // 小さい画像はカット不要
 
-  // Step 2: 下端カット → バッファ経由で trim（chaining だと sharp v0.34 で extract_area エラーになるため）
-  const extractedBuf = await sharp(imgPath)
-    .extract({ left: 0, top: 0, width: origW, height: contentHeight })
-    .toBuffer()
-  const trimmed = sharp(extractedBuf).trim({ threshold: TRIM_THRESHOLD })
+  const contentHeight = origH - PAGE_NUMBER_STRIP_HEIGHT
 
   if (dryRun) {
-    const info = await trimmed.toBuffer({ resolveWithObject: true })
     return {
       file: path.basename(imgPath),
       originalSize: { width: origW, height: origH },
-      trimmedSize: { width: info.info.width, height: info.info.height },
-      savedBytes: (origW * origH) - (info.info.width * info.info.height),
+      trimmedSize: { width: origW, height: contentHeight },
+      savedBytes: origW * PAGE_NUMBER_STRIP_HEIGHT,
     }
   }
 
   // 上書き保存（tmpに書いてからmv）
   const tmpPath = imgPath + '.tmp.png'
-  await trimmed.toFile(tmpPath)
+  await sharp(imgPath)
+    .extract({ left: 0, top: 0, width: origW, height: contentHeight })
+    .toFile(tmpPath)
   fs.renameSync(tmpPath, imgPath)
 
-  const newMeta = await sharp(imgPath).metadata()
   return {
     file: path.basename(imgPath),
     originalSize: { width: origW, height: origH },
-    trimmedSize: { width: newMeta.width ?? 0, height: newMeta.height ?? 0 },
+    trimmedSize: { width: origW, height: contentHeight },
     savedBytes: 0,
   }
 }
