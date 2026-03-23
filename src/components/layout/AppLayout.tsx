@@ -24,10 +24,17 @@ interface AppLayoutProps {
   children: React.ReactNode
 }
 
+/** リデザイン済みページ（Soft Companion）はAnt Designのヘッダー/フッターを非表示 */
+const REDESIGNED_PATHS = ['/', '/practice']
+
 export function AppLayout({ children }: AppLayoutProps) {
   const location = useLocation()
   const navigate = useNavigate()
   const { user, signOut } = useAuth()
+
+  const isRedesigned = REDESIGNED_PATHS.some(
+    p => location.pathname === p || location.pathname.startsWith(p + '/')
+  )
 
   const handleSignOut = async () => {
     await signOut()
@@ -36,8 +43,8 @@ export function AppLayout({ children }: AppLayoutProps) {
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      {/* ヘッダー（デスクトップ） */}
-      <Header
+      {/* ヘッダー（デスクトップ）— リデザイン済みページでは非表示 */}
+      {!isRedesigned && <Header
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -89,15 +96,15 @@ export function AppLayout({ children }: AppLayoutProps) {
             </Button>
           )}
         </div>
-      </Header>
+      </Header>}
 
       {/* メインコンテンツ */}
-      <Content style={{ padding: '24px 16px', maxWidth: 960, margin: '0 auto', width: '100%' }}>
+      <Content style={isRedesigned ? { padding: 0 } : { padding: '24px 16px', maxWidth: 960, margin: '0 auto', width: '100%' }}>
         {children}
       </Content>
 
-      {/* フッター（モバイルナビ） */}
-      <Footer
+      {/* フッター（モバイルナビ）— リデザイン済みページでは非表示（FloatingNav を各ページが描画） */}
+      {!isRedesigned && <Footer
         style={{
           padding: 0,
           position: 'sticky',
@@ -137,7 +144,7 @@ export function AppLayout({ children }: AppLayoutProps) {
             )
           })}
         </nav>
-      </Footer>
+      </Footer>}
     </Layout>
   )
 }
