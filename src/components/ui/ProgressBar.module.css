@@ -1,0 +1,20 @@
+.bar {
+  height: 8px;
+  background: #f0ecf4;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.green { background: linear-gradient(90deg, #10b981, #34d399); }
+.yellow { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+.red { background: linear-gradient(90deg, #ef4444, #f87171); }
+.gray { background: #d1d5db; }
+.accent { background: linear-gradient(90deg, var(--accent), #8b5cf6); }
+
+.small { height: 4px; }

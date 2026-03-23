@@ -1,0 +1,55 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-card);
+  padding: 12px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: var(--accent-border);
+}
+
+.active {
+  border-color: rgba(170, 59, 255, 0.4);
+  background: rgba(170, 59, 255, 0.04);
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: 8px;
+  background: linear-gradient(135deg, var(--accent), #8b5cf6);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.emoji {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.desc {
+  font-size: 10px;
+  color: var(--text-2);
+  margin-top: 2px;
+}
