@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import { getMajorCategoriesForSubject } from '../../utils/blueprint-helpers'
 import type { QuestionSubject } from '../../types/question'
 import styles from './SubFieldChips.module.css'

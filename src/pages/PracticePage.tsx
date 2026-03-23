@@ -115,10 +115,19 @@ export function PracticePage() {
   }, [toggleArrayItem])
 
   const handleMajorToggle = useCallback((subject: string, majorName: string) => {
-    setSelectedMajors(prev => ({
-      ...prev,
-      [subject]: toggleArrayItem(prev[subject] ?? [], majorName),
-    }))
+    setSelectedMajors(prev => {
+      const next = toggleArrayItem(prev[subject] ?? [], majorName)
+      // 大項目を解除したら、その配下の中項目もクリア
+      if (!next.includes(majorName)) {
+        const majors = getMajorCategoriesForSubject(subject as QuestionSubject)
+        const major = majors.find(m => m.name === majorName)
+        if (major) {
+          const middleIdsToRemove = new Set(major.middleCategories.map(mc => mc.id))
+          setSelectedMiddles(prev => prev.filter(id => !middleIdsToRemove.has(id)))
+        }
+      }
+      return { ...prev, [subject]: next }
+    })
     setActivePreset(null)
   }, [toggleArrayItem])
 
