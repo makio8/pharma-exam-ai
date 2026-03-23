@@ -1,0 +1,25 @@
+/* Reset & base styles for Soft Companion pages */
+.sc-page {
+  background: var(--bg);
+  font-family: var(--font);
+  color: var(--text);
+  min-height: 100dvh;
+  padding: 20px 16px 160px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.sc-page *,
+.sc-page *::before,
+.sc-page *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}

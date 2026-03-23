@@ -1,0 +1,46 @@
+/* Soft Companion Design Tokens */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Brand Colors */
+  --accent: #aa3bff;
+  --accent-light: rgba(170, 59, 255, 0.08);
+  --accent-mid: rgba(170, 59, 255, 0.15);
+  --accent-border: rgba(170, 59, 255, 0.25);
+
+  /* Backgrounds */
+  --bg: #fef7ed;
+  --card: #ffffff;
+
+  /* Text */
+  --text: #3d2c1e;
+  --text-2: #8b7355;
+  --text-3: #9ca3af;
+
+  /* Borders */
+  --border: #e8e5ee;
+
+  /* Status Colors */
+  --ok: #10b981;
+  --ng: #ef4444;
+  --warn: #f59e0b;
+  --blue: #2563eb;
+  --orange: #ea580c;
+  --green: #16a34a;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-cta: 0 4px 16px rgba(170, 59, 255, 0.3);
+
+  /* Radii */
+  --r: 14px;
+  --r-sm: 10px;
+  --r-chip: 20px;
+  --r-nav: 28px;
+  --r-card: 16px;
+
+  /* Font */
+  --font: 'Quicksand', 'Noto Sans JP', sans-serif;
+}
