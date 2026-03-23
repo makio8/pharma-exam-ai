@@ -1,0 +1,152 @@
+.header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.header p {
+  font-size: 12px;
+  color: var(--text-2);
+  margin: 4px 0 16px;
+}
+
+.detailBtn {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px dashed #d1cdd9;
+  border-radius: 12px;
+  background: transparent;
+  text-align: center;
+  font-size: 12px;
+  font-family: var(--font);
+  color: var(--text-2);
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.detailBtn:hover {
+  border-color: var(--accent-border);
+}
+
+.resultBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.resultCount {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.resultCount span {
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.sortBtn {
+  font-size: 11px;
+  color: var(--text-2);
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font);
+}
+
+/* BottomSheet filter items */
+.filterGroup {
+  margin-bottom: 20px;
+}
+
+.filterLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.statusBtns {
+  display: flex;
+  gap: 8px;
+}
+
+.statusBtn {
+  flex: 1;
+  padding: 10px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-sm);
+  background: var(--card);
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.statusBtn.selected {
+  border-color: var(--accent-border);
+  background: var(--accent-light);
+}
+
+.toggleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.toggleLabel {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.toggle {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  border: none;
+  background: var(--border);
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.toggle.on {
+  background: var(--accent);
+}
+
+.toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s;
+}
+
+.toggle.on::after {
+  transform: translateX(20px);
+}
+
+.keywordInput {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-sm);
+  font-size: 13px;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--card);
+  outline: none;
+}
+
+.keywordInput:focus {
+  border-color: var(--accent-border);
+}
