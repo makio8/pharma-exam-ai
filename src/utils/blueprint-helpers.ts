@@ -57,7 +57,10 @@ export function getFrequentExemplarQuestionIds(
   for (const exemplar of frequentExemplars) {
     const mappings = getQuestionsForExemplar(exemplar.exemplarId)
     for (const m of mappings) {
-      questionIdSet.add(m.questionId)
+      // isPrimary のみ採用（副次的マッピングは的外れな問題を混入させるため除外）
+      if (m.isPrimary) {
+        questionIdSet.add(m.questionId)
+      }
     }
   }
 
