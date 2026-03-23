@@ -20,7 +20,13 @@ const statusIcon = { correct: '✅', incorrect: '❌', unanswered: '—' }
 export function QuestionCard({ question, status, fieldName, frequency, onClick }: QuestionCardProps) {
   const badge = sectionBadge[question.section]
   return (
-    <div className={styles.card} onClick={onClick} role={onClick ? 'button' : undefined}>
+    <div
+      className={styles.card}
+      onClick={onClick}
+      onKeyDown={onClick ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick() } } : undefined}
+      role={onClick ? 'button' : undefined}
+      tabIndex={onClick ? 0 : undefined}
+    >
       <div className={styles.top}>
         <span className={`${styles.badge} ${badge.class}`}>{badge.label}</span>
         <span className={styles.number}>第{question.year}回 問{question.question_number}</span>

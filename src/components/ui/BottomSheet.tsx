@@ -15,7 +15,11 @@ export function BottomSheet({ open, onClose, title, children }: BottomSheetProps
         className={`${styles.overlay} ${open ? styles.overlayOpen : ''}`}
         onClick={onClose}
       />
-      <div className={`${styles.sheet} ${open ? styles.sheetOpen : ''}`}>
+      <div
+        className={`${styles.sheet} ${open ? styles.sheetOpen : ''}`}
+        aria-hidden={!open}
+        inert={!open ? true : undefined}
+      >
         <div className={styles.handle} />
         {title && <div className={styles.title}>{title}</div>}
         {children}
