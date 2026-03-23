@@ -25,16 +25,15 @@ interface AppLayoutProps {
 }
 
 /** リデザイン済みページ（Soft Companion）はAnt Designのヘッダー/フッターを非表示 */
-const REDESIGNED_PATHS = ['/', '/practice']
+const REDESIGNED_EXACT = ['/', '/practice']
 
 export function AppLayout({ children }: AppLayoutProps) {
   const location = useLocation()
   const navigate = useNavigate()
   const { user, signOut } = useAuth()
 
-  const isRedesigned = REDESIGNED_PATHS.some(
-    p => location.pathname === p || location.pathname.startsWith(p + '/')
-  )
+  // 完全一致のみ（/practice/r101-1 等のサブルートは従来通りAnt Designレイアウト）
+  const isRedesigned = REDESIGNED_EXACT.includes(location.pathname)
 
   const handleSignOut = async () => {
     await signOut()

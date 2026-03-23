@@ -83,7 +83,17 @@ export function PracticePage() {
   [])
 
   const handleSubjectToggle = useCallback((subject: QuestionSubject) => {
-    setSelectedSubjects(prev => toggleArrayItem(prev, subject))
+    setSelectedSubjects(prev => {
+      const next = toggleArrayItem(prev, subject)
+      // 科目を解除したら、その科目のmajorフィルターもクリア
+      if (!next.includes(subject)) {
+        setSelectedMajors(prevMajors => {
+          const { [subject]: _, ...rest } = prevMajors
+          return rest
+        })
+      }
+      return next
+    })
     setActivePreset(null)
   }, [toggleArrayItem])
 
@@ -183,6 +193,18 @@ export function PracticePage() {
     return qs
   }, [selectedSubjects, selectedMajors, selectedYears, selectedSections,
       correctStatus, imageOnly, keyword, activePreset, answerMap, answeredIds, frequentQuestionIds])
+
+  // Display order: apply randomOrder to the visible list
+  const displayQuestions = useMemo(() => {
+    if (!randomOrder) return filteredQuestions
+    // Deterministic-ish shuffle seeded on filter result length (re-shuffles when filters change)
+    const shuffled = [...filteredQuestions]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    return shuffled
+  }, [filteredQuestions, randomOrder])
 
   // Get question status helper
   const getStatus = (q: Question): 'correct' | 'incorrect' | 'unanswered' => {
@@ -317,8 +339,8 @@ export function PracticePage() {
         </button>
       </div>
 
-      {/* Question cards (show first 20) */}
-      {filteredQuestions.slice(0, 20).map(q => (
+      {/* Question cards (show first 20, respecting display order) */}
+      {displayQuestions.slice(0, 20).map(q => (
         <QuestionCard
           key={q.id}
           question={q}
@@ -326,15 +348,15 @@ export function PracticePage() {
           fieldName={getFieldName(q)}
           onClick={() => {
             // Save full filtered list so QuestionPage can navigate prev/next
-            localStorage.setItem('practice_session', JSON.stringify(filteredQuestions.map(qq => qq.id)))
+            localStorage.setItem('practice_session', JSON.stringify(displayQuestions.map(qq => qq.id)))
             navigate(`/practice/${q.id}`)
           }}
         />
       ))}
 
-      {filteredQuestions.length > 20 && (
+      {displayQuestions.length > 20 && (
         <p style={{ textAlign: 'center', color: 'var(--text-3)', fontSize: 12, margin: '16px 0' }}>
-          他 {filteredQuestions.length - 20} 問...「演習開始」で出題されます
+          他 {displayQuestions.length - 20} 問...「演習開始」で出題されます
         </p>
       )}
 
