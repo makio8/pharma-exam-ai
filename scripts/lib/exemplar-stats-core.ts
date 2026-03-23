@@ -54,6 +54,8 @@ export function computeExemplarStats(
     const primaryYears = new Set<number>()
     const yearCounts = new Map<number, number>()
     const linkedKeys = new Set<string>()
+    let unresolvedCount = 0
+    const unresolvedIds: string[] = []
 
     for (const m of myMappings) {
       if (m.isPrimary) {
@@ -63,7 +65,11 @@ export function computeExemplarStats(
       }
 
       const q = questionMap.get(m.questionId)
-      if (!q) continue
+      if (!q) {
+        unresolvedCount++
+        if (unresolvedIds.length < 5) unresolvedIds.push(m.questionId)
+        continue
+      }
 
       yearCounts.set(q.year, (yearCounts.get(q.year) || 0) + 1)
 
@@ -75,6 +81,12 @@ export function computeExemplarStats(
         ? `${q.year}-${q.linked_group}`
         : q.id
       linkedKeys.add(linkedKey)
+    }
+
+    if (unresolvedCount > 0) {
+      console.warn(
+        `⚠️ ${unresolvedCount}件のquestionIdが問題データに見つかりませんでした (exemplar: ${exemplar.id}): ${unresolvedIds.join(', ')}`,
+      )
     }
 
     const yearDetails = Array.from(yearCounts.entries())

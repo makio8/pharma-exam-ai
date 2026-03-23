@@ -71,6 +71,17 @@ function validate(): ValidationResult[] {
       : `${missingQuestions.length}件の不明questionId: ${missingQuestions.slice(0, 5).join(', ')}`,
   })
 
+  // Check 6: 未マッピング問題の検出
+  const mappedQuestions = new Set(QUESTION_EXEMPLAR_MAP.map(m => m.questionId))
+  const unmappedQuestions = ALL_QUESTIONS.filter(q => !mappedQuestions.has(q.id))
+  results.push({
+    name: '未マッピング問題',
+    passed: true, // warning only, not a failure
+    message: unmappedQuestions.length === 0
+      ? `全問題にマッピングあり`
+      : `${unmappedQuestions.length}問にマッピングなし（情報）: ${unmappedQuestions.slice(0, 5).map(q => q.id).join(', ')}...`,
+  })
+
   // Check 5: 基本数量レポート
   // TODO: 2回目以降は前回の数量と比較し ±10% 以内であることを検証する
   //       scripts/output/.last-validation.json に前回値を保存する方式を検討
