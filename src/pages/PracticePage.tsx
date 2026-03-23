@@ -5,6 +5,7 @@ import { QUESTION_TOPIC_MAP } from '../data/question-topic-map'
 import { ALL_TOPICS } from '../data/exam-blueprint'
 import { useAnswerHistory } from '../hooks/useAnswerHistory'
 import {
+  getMajorCategoriesForSubject,
   getQuestionIdsForMajorCategory,
   getFrequentExemplarQuestionIds,
 } from '../utils/blueprint-helpers'
@@ -54,6 +55,7 @@ export function PracticePage() {
   // Filter state
   const [selectedSubjects, setSelectedSubjects] = useState<QuestionSubject[]>([])
   const [selectedMajors, setSelectedMajors] = useState<Record<string, string[]>>({}) // subject → majorName[]
+  const [selectedMiddles, setSelectedMiddles] = useState<string[]>([]) // middleCategory ids
   const [selectedYears, setSelectedYears] = useState<number[]>([])
   const [selectedSections, setSelectedSections] = useState<QuestionSection[]>([])
   const [correctStatus, setCorrectStatus] = useState<CorrectStatus>('all')
@@ -94,12 +96,18 @@ export function PracticePage() {
   const handleSubjectToggle = useCallback((subject: QuestionSubject) => {
     setSelectedSubjects(prev => {
       const next = toggleArrayItem(prev, subject)
-      // 科目を解除したら、その科目のmajorフィルターもクリア
+      // 科目を解除したら、その科目のmajor/middleフィルターもクリア
       if (!next.includes(subject)) {
         setSelectedMajors(prevMajors => {
           const { [subject]: _, ...rest } = prevMajors
           return rest
         })
+        // その科目に属するmiddleカテゴリもクリア
+        const majorsForSubject = getMajorCategoriesForSubject(subject)
+        const middleIdsToRemove = new Set(
+          majorsForSubject.flatMap(m => m.middleCategories.map(mc => mc.id))
+        )
+        setSelectedMiddles(prev => prev.filter(id => !middleIdsToRemove.has(id)))
       }
       return next
     })
@@ -111,6 +119,11 @@ export function PracticePage() {
       ...prev,
       [subject]: toggleArrayItem(prev[subject] ?? [], majorName),
     }))
+    setActivePreset(null)
+  }, [toggleArrayItem])
+
+  const handleMiddleToggle = useCallback((middleId: string) => {
+    setSelectedMiddles(prev => toggleArrayItem(prev, middleId))
     setActivePreset(null)
   }, [toggleArrayItem])
 
@@ -149,16 +162,25 @@ export function PracticePage() {
       qs = qs.filter(q => selectedSubjects.includes(q.subject))
     }
 
-    // Major category filter
-    const activeMajorIds = new Set<string>()
-    for (const [subject, majors] of Object.entries(selectedMajors)) {
-      for (const majorName of majors) {
-        const ids = getQuestionIdsForMajorCategory(majorName, subject as QuestionSubject)
-        ids.forEach(id => activeMajorIds.add(id))
+    // Middle category filter (最優先: 中項目が選択されていればそれで絞る)
+    if (selectedMiddles.length > 0) {
+      const middleSet = new Set(selectedMiddles)
+      qs = qs.filter(q => {
+        const topicId = QUESTION_TOPIC_MAP[q.id]
+        return topicId ? middleSet.has(topicId) : false
+      })
+    } else {
+      // Major category filter (中項目未選択時のみ大項目で絞る)
+      const activeMajorIds = new Set<string>()
+      for (const [subject, majors] of Object.entries(selectedMajors)) {
+        for (const majorName of majors) {
+          const ids = getQuestionIdsForMajorCategory(majorName, subject as QuestionSubject)
+          ids.forEach(id => activeMajorIds.add(id))
+        }
       }
-    }
-    if (activeMajorIds.size > 0) {
-      qs = qs.filter(q => activeMajorIds.has(q.id))
+      if (activeMajorIds.size > 0) {
+        qs = qs.filter(q => activeMajorIds.has(q.id))
+      }
     }
 
     // Year filter
@@ -200,7 +222,7 @@ export function PracticePage() {
     }
 
     return qs
-  }, [selectedSubjects, selectedMajors, selectedYears, selectedSections,
+  }, [selectedSubjects, selectedMajors, selectedMiddles, selectedYears, selectedSections,
       correctStatus, imageOnly, keyword, activePreset, answerMap, answeredIds, frequentQuestionIds])
 
   // Display order: apply randomOrder to the visible list
@@ -322,13 +344,15 @@ export function PracticePage() {
         onToggle={handleSubjectToggle}
       />
 
-      {/* Sub-field chips (dynamic) */}
+      {/* Sub-field chips (dynamic: 大項目 → 中項目の2階層) */}
       {selectedSubjects.map(subject => (
         <SubFieldChips
           key={subject}
           subject={subject}
           selectedMajors={selectedMajors[subject] ?? []}
-          onToggle={(majorName) => handleMajorToggle(subject, majorName)}
+          onToggleMajor={(majorName) => handleMajorToggle(subject, majorName)}
+          selectedMiddles={selectedMiddles}
+          onToggleMiddle={handleMiddleToggle}
         />
       ))}
 
