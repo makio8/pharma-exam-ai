@@ -17,7 +17,11 @@ export function FloatingNav() {
         <Link
           key={item.path}
           to={item.path}
-          className={`${styles.item} ${pathname === item.path ? styles.active : ''}`}
+          className={`${styles.item} ${
+            item.path === '/'
+              ? pathname === '/' ? styles.active : ''
+              : pathname.startsWith(item.path) ? styles.active : ''
+          }`}
         >
           <span className={styles.icon}>{item.icon}</span>
           {item.label}
