@@ -40,7 +40,7 @@ export function TodayMenu({
       {hasPriority && (
         <div
           className={`${styles.card} ${styles.priority}`}
-          onClick={() => navigate('/practice')}
+          onClick={() => navigate(`/practice?subject=${encodeURIComponent(weakestTopic!.subject)}`)}
         >
           <span className={styles.icon}>🔴</span>
           <div className={styles.content}>
@@ -77,7 +77,7 @@ export function TodayMenu({
       {hasChallenge && (
         <div
           className={`${styles.card} ${styles.challenge}`}
-          onClick={() => navigate('/practice')}
+          onClick={() => navigate(`/practice?subject=${encodeURIComponent(almostMasteredTopic!.subject)}`)}
         >
           <span className={styles.icon}>🟣</span>
           <div className={styles.content}>

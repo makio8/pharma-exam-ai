@@ -1,5 +1,5 @@
-import { useState, useMemo, useCallback } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState, useMemo, useCallback, useEffect } from 'react'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { ALL_QUESTIONS } from '../data/all-questions'
 import { QUESTION_TOPIC_MAP } from '../data/question-topic-map'
 import { ALL_TOPICS } from '../data/exam-blueprint'
@@ -48,6 +48,7 @@ for (const t of ALL_TOPICS) {
 
 export function PracticePage() {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const { history } = useAnswerHistory()
 
   // Filter state
@@ -62,6 +63,14 @@ export function PracticePage() {
   const [sessionCount, setSessionCount] = useState<10 | 20 | 0>(10)
   const [activePreset, setActivePreset] = useState<string | null>(null)
   const [bottomSheetOpen, setBottomSheetOpen] = useState(false)
+
+  // URL パラメータから科目を初期設定（TodayMenu等からのディープリンク対応）
+  useEffect(() => {
+    const subjectParam = searchParams.get('subject')
+    if (subjectParam && SUBJECTS.includes(subjectParam as QuestionSubject)) {
+      setSelectedSubjects([subjectParam as QuestionSubject])
+    }
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Answer history lookup
   const answerMap = useMemo(() => {
@@ -221,6 +230,29 @@ export function PracticePage() {
   // Start session (preserve linked_group logic from original)
   const handleStartSession = () => {
     let questions = [...filteredQuestions]
+
+    // Ensure complete linked sets: add missing siblings
+    const questionIds = new Set(questions.map(q => q.id))
+    const addedIds = new Set<string>()
+    for (const q of questions) {
+      if (!q.linked_group) continue
+      const match = q.linked_group.match(/^r(\d+)-(\d+)-(\d+)$/)
+      if (!match) continue
+      const [, year, startStr, endStr] = match
+      const start = parseInt(startStr, 10)
+      const end = parseInt(endStr, 10)
+      for (let n = start; n <= end; n++) {
+        const id = `r${year}-${n}`
+        if (!questionIds.has(id) && !addedIds.has(id)) {
+          const linkedQ = ALL_QUESTIONS.find(aq => aq.id === id)
+          if (linkedQ) {
+            questions.push(linkedQ)
+            addedIds.add(id)
+          }
+        }
+      }
+    }
+    questions.sort((a, b) => a.year - b.year || a.question_number - b.question_number)
 
     if (randomOrder) {
       // Shuffle preserving linked_group sets
