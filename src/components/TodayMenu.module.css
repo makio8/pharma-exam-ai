@@ -1,0 +1,76 @@
+.card {
+  background: var(--card);
+  border-radius: var(--r-card);
+  padding: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+
+.priority::before { background: linear-gradient(180deg, #ef4444, #f87171); }
+.review::before { background: linear-gradient(180deg, #f59e0b, #fbbf24); }
+.challenge::before { background: linear-gradient(180deg, var(--accent), #c084fc); }
+
+.card:nth-child(2) { transform: rotate(-0.3deg); }
+.card:nth-child(3) { transform: rotate(0.2deg); }
+
+.icon { font-size: 28px; flex-shrink: 0; }
+
+.content { flex: 1; }
+
+.badge {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+.badgeRed { background: rgba(239, 68, 68, 0.1); color: var(--ng); }
+.badgeYellow { background: rgba(245, 158, 11, 0.1); color: var(--warn); }
+.badgePurple { background: rgba(170, 59, 255, 0.1); color: var(--accent); }
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.desc {
+  font-size: 11px;
+  color: var(--text-2);
+}
+
+.arrow {
+  color: #d1cdd9;
+  font-size: 18px;
+}
+
+.fallback {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-3);
+  font-size: 13px;
+}
