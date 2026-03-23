@@ -1,0 +1,56 @@
+.section {
+  margin-left: 12px;
+  padding-left: 12px;
+  border-left: 2px solid rgba(170, 59, 255, 0.15);
+  margin-bottom: 14px;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.label {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 10px;
+  font-weight: 600;
+  border: 1px solid rgba(170, 59, 255, 0.15);
+  background: rgba(170, 59, 255, 0.03);
+  color: var(--text-2);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.chip:hover {
+  border-color: var(--accent-border);
+}
+
+.active {
+  background: rgba(170, 59, 255, 0.1);
+  color: var(--accent);
+  border-color: rgba(170, 59, 255, 0.3);
+}
