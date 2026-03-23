@@ -75,11 +75,15 @@ function findPageImage(pagesDir: string, prefix: string, page: number): string |
 // to prevent target drift. The crop filter uses confirmedIds + emptyChoices only.
 const IMAGE_KEYWORDS = /下図|この図|次の図|図[1-9１-９]|構造式[をがはの]|下の構造|模式図|グラフ[をがはの]|以下の図|図に示|スキーム|下表|処方[箋せん]/
 
-/** 確定IDリスト（missing-image-ids.json）を読み込む */
+/** 確定IDリスト（missing-image-ids.json）を読み込む。frozen===true を必須とする */
 function loadConfirmedIds(): Set<string> {
   const listPath = path.join(REAL_QUESTIONS_DIR, 'missing-image-ids.json')
   if (!fs.existsSync(listPath)) return new Set()
   const data = JSON.parse(fs.readFileSync(listPath, 'utf-8'))
+  if (!data.frozen) {
+    console.warn('⚠ missing-image-ids.json が frozen ではありません。確定IDリストを無視します。')
+    return new Set()
+  }
   return new Set(data.ids as string[])
 }
 
@@ -112,10 +116,12 @@ function loadTargetQuestions(year: number): Set<number> {
 
       const inConfirmedList = confirmedIds.has(q.id)
       const emptyChoices = !q.choices || q.choices.length === 0
-      // keywordHit は使わない（ドリフト防止のため）
-      // const keywordHit = IMAGE_KEYWORDS.test(q.question_text || '')
 
-      if (inConfirmedList || emptyChoices) {
+      if (inConfirmedList) {
+        targets.add(q.question_number)
+      } else if (emptyChoices) {
+        // emptyChoices は確定リスト外のドリフト要因だが、構造的に画像問題なので許容
+        // ただしログで可視化して監視する
         targets.add(q.question_number)
       }
     }
@@ -298,4 +304,7 @@ async function main() {
   }
 }
 
-main().catch(console.error)
+main().catch((e) => {
+  console.error(e)
+  process.exitCode = 1
+})
