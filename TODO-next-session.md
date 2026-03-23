@@ -1,87 +1,81 @@
 # pharma-exam-ai 次セッション要件書
 
-## 前回セッションの成果（2026-03-23）
+## 前回セッションの成果（2026-03-23 #2）
 
-### getDisplayMode 全体最適化
-- **P0修正**: choices空テキスト（131件）が `both` → `image` に正しく分類
-- **P2修正**: VCT未設定（42件）が `text` → `both` にフォールバック（画像表示される）
-- **GPT-5.4レビュー反映**: image判定の保守化 + trim()対応
-- **display_mode_override**: Question型にフィールド追加。実機確認ベースで個別上書き可能
-- **画像トリミング**: 全11年分906枚のページ番号除去（安全版: 下端80px一律カット）
-  - ⚠ `sharp.trim(threshold=20)` は危険（文字削りバグ）→ 廃止済み
-- **選択肢クロップスクリプト**: 実験的。OCRテキスト比率ベースは精度不足。tesseract/Vision API要
+### 画像欠落修復パイプライン（最優先タスク完了 ✅）
+- **256問にimage_url設定**（確定リスト258問中、カバー率99.2%）
+- 画像総数: 909枚 → 1,165枚に拡充
+- 既存画像は一切上書きなし（保護確認済み）
+- 残り2問（r102-254, r105-310）は処方箋テキスト問題で画像不要（偽陽性）
+- 107-110回のPDFダウンロード+ページ画像生成完了
+- ページ画像を `/tmp/claude/` → `data/exam-pages/` に永続化（100-110全年度）
+
+### マルチモデルレビュー（Claude + GPT-5.4）
+- GPT-5.4による設計レビュー: 🔴3件 🟡3件 → 全て設計に反映
+- GPT-5.4による計画レビュー: 🔴3件 🟡4件 → 全て実装に反映
+- GPT-5.4による実装レビュー: 🔴2件 🟡3件 → 将来改善項目として記録
+
+### 新規・変更ファイル
+| ファイル | 変更内容 |
+|---------|---------|
+| `scripts/crop-question-images.ts` | フィルタ拡張（確定IDリスト+キーワード+dry-run+既存保護） |
+| `scripts/add-image-urls-batch.ts` | ファイルスキャン方式+既存値保護+dry-run |
+| `scripts/generate-missing-image-ids.ts` | 新規: 確定IDリスト生成 |
+| `scripts/lib/paths.ts` | 新規: パス定数一元管理 |
+| `scripts/download-exam-pdfs.sh` | 107-110回URL追加+出力先data/pdfs/ |
+| `src/data/real-questions/missing-image-ids.json` | 新規: 確定IDリスト（258問、凍結版） |
+| `.gitignore` | data/pdfs/, data/exam-pages/ 追加 |
+| `src/data/real-questions/exam-{100-110}.ts` | 256問にimage_url追加 |
 
 ### 注意: worktreeの扱い
 - devサーバーはメインリポ `/Users/ai/projects/personal/pharma-exam-ai/` から起動中
-- worktree の変更はdevサーバーに反映されない
 - **メインリポで直接作業すること**（worktree不要）
 
 ## 今回やること
 
-### 1. 画像欠落問題の修復 — 最優先 🔴
+### 1. GPT-5.4指摘の堅牢性改善 — 中
 
-**現状**: 172問が画像を参照（「下図」「構造式」等）しているが `image_url` が未設定
+#### 1a. DLスクリプトの失敗検知（GPT-5.4 🔴）
+- `download-exam-pdfs.sh` に `set -euo pipefail` + `curl -f` 追加
+- PDFファイルサイズ検証（0バイトや小さすぎるファイルを警告）
 
-| 優先度 | 状況 | 件数 |
-|--------|------|------|
-| Tier 1 | 回答不能（下図/この図） | 95問 |
-| Tier 2 | 画像推奨（グラフ/模式図） | 66問 |
-| Tier 3 | テキスト代替可能（下表等） | 11問 |
+#### 1b. 確定IDリストのドリフト防止（GPT-5.4 🔴）
+- `crop-question-images.ts` のフィルタから `keywordHit` を除去し、`confirmedIds || emptyChoices` のみにする
+- 偽陽性2問（r102-254, r105-310）をdenylistに追加
+- `generate-missing-image-ids.ts` を実行しても既存JSONを上書きしない仕組み
 
-**具体例**: r100-224（ホルモンA/Bの構造式なし → 回答不能）
+#### 1c. bbox-parserの「問N」1トークン対応
+- `findQuestionPositions()` に「問3」のような結合トークンパターンも検出するよう拡張
+- テスト追加
 
-**対応方法**:
-1. 厚労省サイトからPDFをダウンロード（100-109回分）
-2. `scripts/extract-question-images.ts` で画像抽出
-3. 172問に `image_url` を設定
-4. `scripts/trim-image-whitespace.ts` でページ番号除去
+### 2. Tier 1 目視確認 — 高 ⚠️
+- Tier 1（78問）の画像が正しい問題を指しているか、devサーバーで全件確認
+- `npm run dev -- --host` で起動し、各問題ページを確認
 
-**PDF取得先**: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iyakuhin/yakuzaishi-shiken/kakomon/
-
-### 2. 連問シナリオの表・処方箋のUI改善 — 中
-
-**現状**: q228のような連問シナリオに表（成分分析表等）がある場合、テキスト羅列で読みづらい
-**方針**: テキストUIでの表レンダリング改善（画像より文字が大きく読みやすい）
+### 3. 連問シナリオの表・処方箋のUI改善 — 中
 - linked_scenario 内の表パターンを検出
 - HTML `<table>` でフォーマット
-- または question_text の表パターンを正規化
 
-### 3. VCT=text_only 監査 — 低
+### 4. VCT=text_only 監査 — 低
+- 531件のうち誤分類がないか監査
 
-- 531件のうち誤分類がないか監査スクリプトで確認
-- GPT-5.4指摘: text_only は推定ラベル（無条件マージ）なので全面信用は危険
+### 5. 暗記カード自動生成 — オプション
+- 解説テキストの【覚え方💡】セクションから一問一答形式の暗記カード自動生成
 
-### 4. 暗記カード自動生成 — オプション
-
-解説テキストの【覚え方💡】セクションから一問一答形式の暗記カードを自動生成。
-
-### 5. Supabaseデータ投入 — オプション
-
-ローカルのexam-{year}.tsデータをSupabaseに投入し、クラウド同期を有効化。
+### 6. Supabaseデータ投入 — オプション
+- ローカルのexam-{year}.tsデータをSupabaseに投入
 
 ## コミット履歴（今セッション）
-
 ```
-775f306 chore: 全11年分906枚の画像ページ番号除去（安全版トリミング）
-a838598 Revert "chore: 全11年分906枚の画像余白トリミング（ページ番号除去+白余白除去）"
-3fe570f chore: 全11年分906枚の画像余白トリミング（ページ番号除去+白余白除去）
-8aa4b64 feat: getDisplayMode全体最適化 — P0バグ修正+P2フォールバック改善+display_mode_override
+4fa1615 feat: 画像欠落256問にimage_url設定（909→1165枚に拡充）
+d89c662 feat: crop-question-images フィルタ拡張（確定IDリスト+キーワード+dry-run+既存保護）
+b9426bf feat: add-image-urls-batch 全年度対応+既存値保護+ファイルスキャン方式
+f322f42 feat: download-exam-pdfs.sh 107-110回対応+出力先をdata/pdfs/に変更
+0fc157c chore: paths.ts新設 + data/ディレクトリをgitignore追加
+fcbd92f feat: 画像欠落問題の確定IDリスト生成（凍結版）
 ```
-
-## 主要ファイル
-
-| ファイル | 説明 |
-|---------|------|
-| `src/utils/text-normalizer.ts` | getDisplayMode 定義（表示モード判定） |
-| `src/types/question.ts` | Question型（display_mode_override追加） |
-| `src/pages/QuestionPage.tsx` | 問題表示UI |
-| `src/components/LinkedQuestionViewer.tsx` | 連問表示UI |
-| `scripts/trim-image-whitespace.ts` | 画像トリミング（安全版） |
-| `scripts/crop-choices-from-images.ts` | 選択肢クロップ（実験的） |
-| `docs/superpowers/specs/2026-03-23-display-mode-optimization.md` | 設計書 |
 
 ## コマンドリファレンス
-
 ```bash
 # 開発サーバー起動（メインリポから）
 cd /Users/ai/projects/personal/pharma-exam-ai
@@ -90,12 +84,17 @@ npm run dev -- --host
 # ビルド確認
 npm run build
 
-# 画像トリミング（安全版: ページ番号のみ除去）
-npx tsx scripts/trim-image-whitespace.ts --year 100 --dry-run
-npx tsx scripts/trim-image-whitespace.ts
+# 画像パイプライン（再実行安全: 冪等性あり）
+npx tsx scripts/crop-question-images.ts --dry-run    # 確認
+npx tsx scripts/crop-question-images.ts              # 実行
+npx tsx scripts/add-image-urls-batch.ts --dry-run    # 確認
+npx tsx scripts/add-image-urls-batch.ts              # 実行
 
-# 選択肢クロップ（実験的）
-npx tsx scripts/crop-choices-from-images.ts --dry-run
+# PDFダウンロード
+bash scripts/download-exam-pdfs.sh
+
+# 画像トリミング（既存画像注意: 新規ファイルリストを使うこと）
+npx tsx scripts/trim-image-whitespace.ts --dry-run
 ```
 
 ## スキル参照
