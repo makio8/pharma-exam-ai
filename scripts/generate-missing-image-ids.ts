@@ -26,6 +26,17 @@ function classifyTier(text: string): 1 | 2 | 3 {
   return 3
 }
 
+// Check if frozen list already exists
+const existingPath = path.join(dataDir, 'missing-image-ids.json')
+if (fs.existsSync(existingPath)) {
+  const existing = JSON.parse(fs.readFileSync(existingPath, 'utf-8'))
+  if (existing.frozen) {
+    console.error('❌ missing-image-ids.json は frozen=true です。上書きを拒否します。')
+    console.error('   手動で frozen を false に変更するか、ファイルを削除してから再実行してください。')
+    process.exit(1)
+  }
+}
+
 const results: MissingEntry[] = []
 
 for (let year = 100; year <= 110; year++) {

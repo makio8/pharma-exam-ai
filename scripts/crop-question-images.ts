@@ -71,6 +71,8 @@ function findPageImage(pagesDir: string, prefix: string, page: number): string |
   return null
 }
 
+// Note: IMAGE_KEYWORDS is kept for reference/diagnostics but NOT used in the crop filter
+// to prevent target drift. The crop filter uses confirmedIds + emptyChoices only.
 const IMAGE_KEYWORDS = /下図|この図|次の図|図[1-9１-９]|構造式[をがはの]|下の構造|模式図|グラフ[をがはの]|以下の図|図に示|スキーム|下表|処方[箋せん]/
 
 /** 確定IDリスト（missing-image-ids.json）を読み込む */
@@ -82,6 +84,9 @@ function loadConfirmedIds(): Set<string> {
 }
 
 const confirmedIds = loadConfirmedIds()
+
+/** 偽陽性として確認済みのID（画像不要） */
+const denyIds = new Set(['r102-254', 'r105-310'])
 
 /** 画像抽出対象の問題番号セットを返す（拡張版） */
 function loadTargetQuestions(year: number): Set<number> {
@@ -103,12 +108,14 @@ function loadTargetQuestions(year: number): Set<number> {
     for (const q of questions) {
       // 既に image_url が設定済みの問題はスキップ（保護）
       if (q.image_url) continue
+      if (denyIds.has(q.id)) continue  // 偽陽性（画像不要と確認済み）
 
       const inConfirmedList = confirmedIds.has(q.id)
       const emptyChoices = !q.choices || q.choices.length === 0
-      const keywordHit = IMAGE_KEYWORDS.test(q.question_text || '')
+      // keywordHit は使わない（ドリフト防止のため）
+      // const keywordHit = IMAGE_KEYWORDS.test(q.question_text || '')
 
-      if (inConfirmedList || emptyChoices || keywordHit) {
+      if (inConfirmedList || emptyChoices) {
         targets.add(q.question_number)
       }
     }
@@ -140,7 +147,7 @@ async function processYear(year: number): Promise<YearResult> {
   const newFiles: string[] = []
 
   const targetSet = loadTargetQuestions(year)
-  console.log(`  対象問題: ${targetSet.size}問（確定ID + choices空 + キーワード）`)
+  console.log(`  対象問題: ${targetSet.size}問（確定ID + choices空）`)
 
   if (targetSet.size === 0) {
     return { year, targetQuestions: 0, cropped: 0, skipped: 0, errors: 0, newFiles }
