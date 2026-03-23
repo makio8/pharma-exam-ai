@@ -23079,34 +23079,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 0
   },
   {
-    "subject": "物理",
-    "exemplarId": "ex-physics-087",
-    "year": 100,
-    "count": 1,
-    "primaryCount": 0
-  },
-  {
-    "subject": "物理",
-    "exemplarId": "ex-physics-088",
-    "year": 100,
-    "count": 1,
-    "primaryCount": 0
-  },
-  {
-    "subject": "物理",
-    "exemplarId": "ex-physics-088",
-    "year": 107,
-    "count": 1,
-    "primaryCount": 0
-  },
-  {
-    "subject": "物理",
-    "exemplarId": "ex-physics-097",
-    "year": 107,
-    "count": 1,
-    "primaryCount": 0
-  },
-  {
     "subject": "化学",
     "exemplarId": "ex-chemistry-019",
     "year": 101,
@@ -23164,13 +23136,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "化学",
-    "exemplarId": "ex-chemistry-106",
-    "year": 110,
-    "count": 1,
-    "primaryCount": 0
-  },
-  {
-    "subject": "化学",
     "exemplarId": "ex-chemistry-109",
     "year": 101,
     "count": 1,
@@ -23187,13 +23152,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "化学",
     "exemplarId": "ex-chemistry-109",
     "year": 106,
-    "count": 1,
-    "primaryCount": 0
-  },
-  {
-    "subject": "化学",
-    "exemplarId": "ex-chemistry-109",
-    "year": 110,
     "count": 1,
     "primaryCount": 0
   },
