@@ -98,7 +98,7 @@ function readCSV(filePath: string): CandidateRow[] {
 }
 
 function hasValidKeywords(matchedKeywords: string): boolean {
-  const keywords = matchedKeywords.split(/[,、]/).map(k => k.trim()).filter(k => k.length > 0)
+  const keywords = matchedKeywords.split(';').map(k => k.trim()).filter(k => k.length > 0)
   return keywords.some(kw => kw.length >= MIN_KEYWORD_LEN && !NOISE_KEYWORDS.has(kw))
 }
 

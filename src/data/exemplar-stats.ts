@@ -9946,39 +9946,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1
   },
   {
-    "exemplarId": "ex-pathology-058",
-    "subject": "病態・薬物治療",
-    "yearsAppeared": 5,
-    "totalQuestions": 7,
-    "yearDetails": [
-      {
-        "year": 101,
-        "count": 1
-      },
-      {
-        "year": 102,
-        "count": 1
-      },
-      {
-        "year": 103,
-        "count": 2
-      },
-      {
-        "year": 109,
-        "count": 2
-      },
-      {
-        "year": 110,
-        "count": 1
-      }
-    ],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 7,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 7,
-    "avgQuestionsPerYear": 1.4
-  },
-  {
     "exemplarId": "ex-pathology-060",
     "subject": "病態・薬物治療",
     "yearsAppeared": 6,
@@ -15391,35 +15358,6 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryYearsAppeared": 3,
     "linkedGroupCount": 4,
     "avgQuestionsPerYear": 1.33
-  },
-  {
-    "exemplarId": "ex-pathology-040",
-    "subject": "病態・薬物治療",
-    "yearsAppeared": 4,
-    "totalQuestions": 4,
-    "yearDetails": [
-      {
-        "year": 101,
-        "count": 1
-      },
-      {
-        "year": 102,
-        "count": 1
-      },
-      {
-        "year": 103,
-        "count": 1
-      },
-      {
-        "year": 110,
-        "count": 1
-      }
-    ],
-    "primaryQuestions": 0,
-    "secondaryQuestions": 4,
-    "primaryYearsAppeared": 0,
-    "linkedGroupCount": 4,
-    "avgQuestionsPerYear": 1
   },
   {
     "exemplarId": "ex-pathology-042",
@@ -22851,6 +22789,23 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1
   },
   {
+    "exemplarId": "ex-pathology-040",
+    "subject": "病態・薬物治療",
+    "yearsAppeared": 1,
+    "totalQuestions": 1,
+    "yearDetails": [
+      {
+        "year": 102,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 1,
+    "avgQuestionsPerYear": 1
+  },
+  {
     "exemplarId": "ex-pathology-047",
     "subject": "病態・薬物治療",
     "yearsAppeared": 1,
@@ -22881,6 +22836,23 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryQuestions": 1,
     "secondaryQuestions": 0,
     "primaryYearsAppeared": 1,
+    "linkedGroupCount": 1,
+    "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-pathology-058",
+    "subject": "病態・薬物治療",
+    "yearsAppeared": 1,
+    "totalQuestions": 1,
+    "yearDetails": [
+      {
+        "year": 109,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 0,
     "linkedGroupCount": 1,
     "avgQuestionsPerYear": 1
   },

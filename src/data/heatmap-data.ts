@@ -1,5 +1,5 @@
 // ヒートマップデータ（自動生成: generate-heatmap-data.ts）
-// 生成日: 2026-03-22
+// 生成日: 2026-03-23
 // cells のみ永続化。bySubjectYear / byExemplarYear はランタイムで計算する。
 
 import type { QuestionSubject } from '../types/question'
@@ -23249,63 +23249,14 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "病態・薬物治療",
     "exemplarId": "ex-pathology-040",
-    "year": 101,
-    "count": 1,
-    "primaryCount": 0
-  },
-  {
-    "subject": "病態・薬物治療",
-    "exemplarId": "ex-pathology-040",
     "year": 102,
     "count": 1,
-    "primaryCount": 0
-  },
-  {
-    "subject": "病態・薬物治療",
-    "exemplarId": "ex-pathology-040",
-    "year": 103,
-    "count": 1,
-    "primaryCount": 0
-  },
-  {
-    "subject": "病態・薬物治療",
-    "exemplarId": "ex-pathology-040",
-    "year": 110,
-    "count": 1,
-    "primaryCount": 0
-  },
-  {
-    "subject": "病態・薬物治療",
-    "exemplarId": "ex-pathology-058",
-    "year": 101,
-    "count": 1,
-    "primaryCount": 0
-  },
-  {
-    "subject": "病態・薬物治療",
-    "exemplarId": "ex-pathology-058",
-    "year": 102,
-    "count": 1,
-    "primaryCount": 0
-  },
-  {
-    "subject": "病態・薬物治療",
-    "exemplarId": "ex-pathology-058",
-    "year": 103,
-    "count": 2,
     "primaryCount": 0
   },
   {
     "subject": "病態・薬物治療",
     "exemplarId": "ex-pathology-058",
     "year": 109,
-    "count": 2,
-    "primaryCount": 0
-  },
-  {
-    "subject": "病態・薬物治療",
-    "exemplarId": "ex-pathology-058",
-    "year": 110,
     "count": 1,
     "primaryCount": 0
   },
