@@ -1,0 +1,35 @@
+.chip {
+  padding: 5px 14px;
+  border-radius: var(--r-chip);
+  font-size: 11px;
+  font-weight: 600;
+  border: 1.5px solid var(--border);
+  background: var(--card);
+  color: #6b7280;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.chip:hover {
+  border-color: var(--accent-border);
+}
+
+.active {
+  background: var(--accent-light);
+  color: var(--accent);
+  border-color: var(--accent-border);
+}
+
+.activeBlue {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--blue);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.activeGreen {
+  background: rgba(22, 163, 74, 0.08);
+  color: var(--green);
+  border-color: rgba(22, 163, 74, 0.3);
+}

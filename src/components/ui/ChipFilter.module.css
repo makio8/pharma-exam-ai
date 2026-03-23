@@ -1,0 +1,24 @@
+.section {
+  margin-bottom: 14px;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-2);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
