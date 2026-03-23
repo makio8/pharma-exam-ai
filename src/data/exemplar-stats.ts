@@ -1,5 +1,5 @@
 // 例示別出題統計（自動生成: compute-exemplar-stats.ts）
-// 生成日: 2026-03-22
+// 生成日: 2026-03-23
 
 import type { ExemplarStats } from '../types/blueprint'
 
