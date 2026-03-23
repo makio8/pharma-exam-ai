@@ -1,0 +1,6 @@
+.wave {
+  height: 4px;
+  background: linear-gradient(90deg, #f97316, #fb923c, #fdba74, #fed7aa);
+  border-radius: 2px;
+  margin-bottom: 16px;
+}

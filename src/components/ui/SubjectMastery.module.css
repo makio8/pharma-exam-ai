@@ -1,0 +1,84 @@
+.card {
+  background: var(--card);
+  border-radius: var(--r-card);
+  padding: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 16px;
+}
+
+.row { margin-bottom: 12px; }
+.row:last-child { margin-bottom: 0; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.pct {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.subFields {
+  padding: 8px 0 0 16px;
+  border-left: 2px solid rgba(170, 59, 255, 0.1);
+  margin-left: 4px;
+  margin-top: 8px;
+}
+
+.subField {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.subField:last-child { margin-bottom: 0; }
+
+.sfName {
+  font-size: 11px;
+  color: var(--text);
+  flex: 1;
+}
+
+.sfBar {
+  width: 80px;
+  height: 4px;
+  background: #f0ecf4;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.sfFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+.sfPct {
+  font-size: 10px;
+  font-weight: 700;
+  width: 32px;
+  text-align: right;
+}
+
+.sfLink {
+  font-size: 10px;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: var(--font);
+}
