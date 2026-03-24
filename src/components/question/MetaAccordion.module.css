@@ -1,0 +1,76 @@
+.container {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-card);
+  overflow: hidden;
+  font-family: var(--font);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+
+.header:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+.headerText {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+.body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.bodyOpen {
+  max-height: 400px;
+}
+
+.content {
+  padding: 0 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.rowLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-3);
+  min-width: 48px;
+  flex-shrink: 0;
+}
+
+.rowValue {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.tagsRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
