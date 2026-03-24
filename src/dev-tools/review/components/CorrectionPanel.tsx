@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import type { Question } from '../../../types/question'
 import type { Correction } from '../types'
 import styles from './CorrectionPanel.module.css'
@@ -60,18 +60,6 @@ export function CorrectionPanel({
     )
     setActiveTab('text')
   }, [question.id, question.choices, question.correct_answer])
-
-  // C キーで開閉
-  const handleKey = useCallback((e: KeyboardEvent) => {
-    const tag = (e.target as HTMLElement).tagName
-    if (tag === 'INPUT' || tag === 'TEXTAREA') return
-    if (e.key === 'c' || e.key === 'C') onToggle()
-  }, [onToggle])
-
-  useEffect(() => {
-    window.addEventListener('keydown', handleKey)
-    return () => window.removeEventListener('keydown', handleKey)
-  }, [handleKey])
 
   // ===== テキスト修正の適用 =====
   function applyText() {

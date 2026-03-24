@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=390">
+<title>国試ノート — 演習モード</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --accent: #aa3bff;
+  --accent-light: rgba(170, 59, 255, 0.08);
+  --accent-mid: rgba(170, 59, 255, 0.15);
+  --accent-border: rgba(170, 59, 255, 0.25);
+  --bg: #f8f7fa;
+  --card: #ffffff;
+  --text: #1a1a2e;
+  --text-2: #6b7280;
+  --text-3: #9ca3af;
+  --border: #e8e5ee;
+  --ok: #10b981;
+  --ok-bg: #d1fae5;
+  --ng: #ef4444;
+  --ng-bg: #fee2e2;
+  --warn: #f59e0b;
+  --warn-bg: #fef3c7;
+  --blue: #2563eb;
+  --blue-bg: #eff6ff;
+  --orange: #ea580c;
+  --orange-bg: #fff7ed;
+  --green: #16a34a;
+  --green-bg: #f0fdf4;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+  --r: 14px;
+  --r-sm: 10px;
+  --r-chip: 20px;
+}
+body {
+  font-family: 'DM Sans', 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  width: 390px;
+  min-height: 1500px;
+  margin: 0 auto;
+  padding-bottom: 140px;
+  -webkit-font-smoothing: antialiased;
+}
+.content { padding: 0 20px; }
+.header {
+  padding: 16px 20px 4px;
+}
+.header-title { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.header-sub { font-size: 12px; color: var(--text-2); }
+.section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 20px 0 10px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Presets grid */
+.presets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.preset {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r);
+  padding: 14px;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.2s;
+}
+.preset:hover { border-color: var(--accent-border); }
+.preset.active {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+.preset-icon { font-size: 22px; margin-bottom: 6px; }
+.preset-name { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.preset-desc { font-size: 11px; color: var(--text-2); line-height: 1.4; }
+.preset-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--accent-mid);
+  color: var(--accent);
+}
+
+/* Chips */
+.chips-section { margin-bottom: 12px; }
+.chips-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-3);
+  margin-bottom: 6px;
+}
+.chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+.chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex-shrink: 0;
+  padding: 8px 14px;
+  border-radius: var(--r-chip);
+  border: 1.5px solid var(--border);
+  background: var(--card);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.chip.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(170,59,255,0.25);
+}
+.chip.active-blue {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+.chip.active-green {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+/* Detail filter button */
+.detail-filter {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 2px dashed var(--border);
+  border-radius: var(--r);
+  background: transparent;
+  font-size: 13px;
+  color: var(--text-2);
+  cursor: pointer;
+  font-family: inherit;
+  margin: 12px 0;
+  text-align: center;
+}
+.detail-filter:hover { border-color: var(--accent-border); }
+
+/* Result bar */
+.result-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0 12px;
+}
+.result-count { font-size: 16px; font-weight: 700; }
+.result-count span { color: var(--accent); }
+.sort-btn {
+  font-size: 13px;
+  color: var(--text-2);
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Question cards */
+.q-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+}
+.q-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.q-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+.badge-blue { background: var(--blue-bg); color: var(--blue); }
+.badge-green { background: var(--green-bg); color: var(--green); }
+.badge-orange { background: var(--orange-bg); color: var(--orange); }
+.q-ref { font-size: 12px; color: var(--text-3); }
+.q-subject {
+  font-size: 11px;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.q-status {
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: auto;
+}
+.q-status-ok { color: var(--ok); }
+.q-status-ng { color: var(--ng); }
+.q-status-none { color: var(--text-3); }
+.q-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.q-bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.q-diff {
+  font-size: 11px;
+  color: var(--text-3);
+}
+.q-prog {
+  flex: 1;
+  height: 4px;
+  background: #f3f4f6;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.q-prog-fill { height: 100%; border-radius: 2px; }
+.q-rate { font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* Sticky bottom */
+.sticky-bottom {
+  position: fixed;
+  bottom: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px;
+  padding: 12px 20px;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 100;
+}
+.start-btn {
+  flex: 1;
+  padding: 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--r);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 0 4px 16px rgba(170,59,255,0.3);
+}
+.settings-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  background: var(--card);
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bottom nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px;
+  height: 72px;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 8px;
+  z-index: 101;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  color: var(--text-3);
+  cursor: pointer;
+}
+.nav-item.active { color: var(--accent); }
+.nav-icon { font-size: 22px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-title">💊 演習モード</div>
+  <div class="header-sub">3,470問から出題 ・ 11年分の過去問</div>
+</div>
+
+<div class="content">
+  <!-- Smart Presets -->
+  <div class="section-title">スマートプリセット</div>
+  <div class="presets">
+    <div class="preset active">
+      <div class="preset-badge">おすすめ</div>
+      <div class="preset-icon">🎯</div>
+      <div class="preset-name">苦手克服</div>
+      <div class="preset-desc">間違えた問題を重点復習</div>
+    </div>
+    <div class="preset">
+      <div class="preset-icon">📋</div>
+      <div class="preset-name">直前対策</div>
+      <div class="preset-desc">正答率60%以上・未回答</div>
+    </div>
+    <div class="preset">
+      <div class="preset-icon">⭐</div>
+      <div class="preset-name">未回答を潰す</div>
+      <div class="preset-desc">まだ解いていない問題</div>
+    </div>
+    <div class="preset">
+      <div class="preset-icon">🔄</div>
+      <div class="preset-name">ランダム演習</div>
+      <div class="preset-desc">全範囲からランダム出題</div>
+    </div>
+  </div>
+
+  <!-- Subject chips -->
+  <div class="chips-section">
+    <div class="chips-label">科目</div>
+    <div class="chips">
+      <div class="chip active">物理</div>
+      <div class="chip active">化学</div>
+      <div class="chip">生物</div>
+      <div class="chip">薬理</div>
+      <div class="chip">薬剤</div>
+      <div class="chip">病態</div>
+      <div class="chip">法規</div>
+      <div class="chip">実務</div>
+      <div class="chip">衛生</div>
+    </div>
+  </div>
+
+  <!-- Year chips -->
+  <div class="chips-section">
+    <div class="chips-label">年度（回）</div>
+    <div class="chips">
+      <div class="chip">100</div>
+      <div class="chip">101</div>
+      <div class="chip">102</div>
+      <div class="chip active">103</div>
+      <div class="chip active">104</div>
+      <div class="chip active">105</div>
+      <div class="chip">106</div>
+      <div class="chip">107</div>
+      <div class="chip">108</div>
+      <div class="chip">109</div>
+      <div class="chip">110</div>
+    </div>
+  </div>
+
+  <!-- Category toggles -->
+  <div class="chips-section">
+    <div class="chips-label">区分</div>
+    <div class="chips">
+      <div class="chip active-blue">必須</div>
+      <div class="chip">理論</div>
+      <div class="chip active-green">実践</div>
+    </div>
+  </div>
+
+  <!-- Detail filter -->
+  <button class="detail-filter">🔍 詳細フィルター（正答率・キーワード・画像問題）</button>
+
+  <!-- Result bar -->
+  <div class="result-bar">
+    <div class="result-count"><span>248</span> 問ヒット</div>
+    <button class="sort-btn">▼ 年度順</button>
+  </div>
+
+  <!-- Question cards -->
+  <div class="q-card">
+    <div class="q-top">
+      <span class="q-badge badge-blue">必須</span>
+      <span class="q-ref">第105回 問12</span>
+      <span class="q-subject">薬理</span>
+      <span class="q-status q-status-ng">✕</span>
+    </div>
+    <div class="q-text">アドレナリンα1受容体を遮断する薬物はどれか。1つ選べ。</div>
+    <div class="q-bottom">
+      <span class="q-diff">🔨 標準</span>
+      <div class="q-prog"><div class="q-prog-fill" style="width: 33%; background: var(--ng);"></div></div>
+      <span class="q-rate" style="color: var(--ng);">33%</span>
+    </div>
+  </div>
+
+  <div class="q-card">
+    <div class="q-top">
+      <span class="q-badge badge-green">実践</span>
+      <span class="q-ref">第103回 問198</span>
+      <span class="q-subject">化学</span>
+      <span class="q-status q-status-ok">✓</span>
+    </div>
+    <div class="q-text">ベンゼン環にメチル基が置換された化合物の命名法として正しいのはどれか。</div>
+    <div class="q-bottom">
+      <span class="q-diff">🔨 易</span>
+      <div class="q-prog"><div class="q-prog-fill" style="width: 78%; background: var(--ok);"></div></div>
+      <span class="q-rate" style="color: var(--ok);">78%</span>
+    </div>
+  </div>
+
+  <div class="q-card">
+    <div class="q-top">
+      <span class="q-badge badge-blue">必須</span>
+      <span class="q-ref">第104回 問8</span>
+      <span class="q-subject">物理</span>
+      <span class="q-status q-status-none">—</span>
+    </div>
+    <div class="q-text">pH 7.4の緩衝液中でのアミノ酸の電荷について正しいのはどれか。</div>
+    <div class="q-bottom">
+      <span class="q-diff">🔨 やや難</span>
+      <div class="q-prog"><div class="q-prog-fill" style="width: 0%;"></div></div>
+      <span class="q-rate" style="color: var(--text-3);">未回答</span>
+    </div>
+  </div>
+
+  <div class="q-card">
+    <div class="q-top">
+      <span class="q-badge badge-orange">理論</span>
+      <span class="q-ref">第103回 問45</span>
+      <span class="q-subject">化学</span>
+      <span class="q-status q-status-ok">✓</span>
+    </div>
+    <div class="q-text">芳香族求電子置換反応において、配向性を決定する因子はどれか。</div>
+    <div class="q-bottom">
+      <span class="q-diff">🔨 標準</span>
+      <div class="q-prog"><div class="q-prog-fill" style="width: 65%; background: var(--warn);"></div></div>
+      <span class="q-rate" style="color: var(--warn);">65%</span>
+    </div>
+  </div>
+</div>
+
+<!-- Sticky bottom bar -->
+<div class="sticky-bottom">
+  <button class="start-btn">▶ 演習開始（10問）</button>
+  <button class="settings-btn">⚙</button>
+</div>
+
+<!-- Bottom Nav -->
+<div class="bottom-nav">
+  <div class="nav-item">
+    <div class="nav-icon">🏠</div>
+    <span>ホーム</span>
+  </div>
+  <div class="nav-item active">
+    <div class="nav-icon">📝</div>
+    <span>演習</span>
+  </div>
+  <div class="nav-item">
+    <div class="nav-icon">📌</div>
+    <span>ノート</span>
+  </div>
+  <div class="nav-item">
+    <div class="nav-icon">📊</div>
+    <span>分析</span>
+  </div>
+</div>
+
+</body>
+</html>

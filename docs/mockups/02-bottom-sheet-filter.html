@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=390, initial-scale=1.0">
+<title>詳細フィルター - ボトムシート</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --accent: #aa3bff;
+  --accent-light: rgba(170, 59, 255, 0.08);
+  --accent-border: rgba(170, 59, 255, 0.25);
+  --bg: #f8f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --border: #e8e5ee;
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --radius: 14px;
+  --radius-sm: 10px;
+}
+
+body {
+  font-family: 'DM Sans', 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  width: 390px;
+  min-height: 844px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 背景（暗く） */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+}
+
+/* 裏のコンテンツ（ぼかし） */
+.bg-content {
+  filter: blur(2px);
+  opacity: 0.6;
+  padding: 56px 16px 16px;
+}
+.bg-header {
+  background: var(--card-bg);
+  padding: 56px 20px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.bg-header-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* ボトムシート */
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px;
+  background: var(--card-bg);
+  border-radius: 24px 24px 0 0;
+  z-index: 300;
+  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.15);
+  padding: 0 20px 40px;
+  animation: slideUp 0.3s ease-out;
+}
+@keyframes slideUp {
+  from { transform: translateX(-50%) translateY(100%); }
+  to { transform: translateX(-50%) translateY(0); }
+}
+
+.sheet-handle {
+  width: 36px;
+  height: 4px;
+  background: #d1d5db;
+  border-radius: 2px;
+  margin: 12px auto 20px;
+}
+.sheet-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sheet-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+/* フィルター項目 */
+.filter-group {
+  margin-bottom: 24px;
+}
+.filter-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.filter-label-icon {
+  font-size: 16px;
+}
+
+/* 正誤ステータス */
+.status-buttons {
+  display: flex;
+  gap: 8px;
+}
+.status-btn {
+  flex: 1;
+  padding: 12px 8px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: var(--card-bg);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.status-btn .icon {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 4px;
+}
+.status-btn .label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.status-btn.active {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+.status-btn.active .label {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* 正答率スライダー */
+.rate-range {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.rate-chip {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: var(--card-bg);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+.rate-chip.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+.rate-chip.active-danger {
+  background: var(--danger);
+  color: white;
+  border-color: var(--danger);
+}
+.rate-chip.active-warning {
+  background: var(--warning);
+  color: white;
+  border-color: var(--warning);
+}
+.rate-chip.active-success {
+  background: var(--success);
+  color: white;
+  border-color: var(--success);
+}
+
+/* トグル行 */
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+.toggle-row:last-child {
+  border-bottom: none;
+}
+.toggle-label {
+  font-size: 14px;
+  color: var(--text);
+}
+.toggle-desc {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+.toggle-switch {
+  width: 48px;
+  height: 28px;
+  border-radius: 14px;
+  background: #d1d5db;
+  position: relative;
+  cursor: pointer;
+}
+.toggle-switch.on {
+  background: var(--accent);
+}
+.toggle-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: left 0.2s ease;
+}
+.toggle-switch.on::after {
+  left: 22px;
+}
+
+/* キーワード入力 */
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text);
+  background: #fafafa;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.search-input:focus {
+  border-color: var(--accent);
+  background: white;
+}
+.search-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* 適用ボタン */
+.apply-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 4px 16px rgba(170, 59, 255, 0.3);
+}
+.reset-link {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<!-- 背景ヘッダー -->
+<div class="bg-header">
+  <div class="bg-header-title">💊 演習モード</div>
+</div>
+<div class="bg-content">
+  <!-- ぼかし背景 -->
+</div>
+
+<!-- オーバーレイ -->
+<div class="overlay"></div>
+
+<!-- ボトムシート -->
+<div class="bottom-sheet">
+  <div class="sheet-handle"></div>
+  <div class="sheet-title">
+    <span>詳細フィルター</span>
+    <button class="sheet-close">✕</button>
+  </div>
+
+  <!-- 正誤ステータス -->
+  <div class="filter-group">
+    <div class="filter-label">
+      <span class="filter-label-icon">📊</span>
+      正誤ステータス
+    </div>
+    <div class="status-buttons">
+      <div class="status-btn active">
+        <span class="icon">全</span>
+        <span class="label">すべて</span>
+      </div>
+      <div class="status-btn">
+        <span class="icon" style="color: #059669;">○</span>
+        <span class="label">正解</span>
+      </div>
+      <div class="status-btn">
+        <span class="icon" style="color: #dc2626;">✕</span>
+        <span class="label">不正解</span>
+      </div>
+      <div class="status-btn">
+        <span class="icon" style="color: #9ca3af;">—</span>
+        <span class="label">未回答</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 正答率 -->
+  <div class="filter-group">
+    <div class="filter-label">
+      <span class="filter-label-icon">📈</span>
+      正答率
+    </div>
+    <div class="rate-range">
+      <div class="rate-chip active-danger">〜39%</div>
+      <div class="rate-chip active-warning">40-59%</div>
+      <div class="rate-chip active-success">60-79%</div>
+      <div class="rate-chip">80%〜</div>
+    </div>
+  </div>
+
+  <!-- トグル設定 -->
+  <div class="filter-group">
+    <div class="toggle-row">
+      <div>
+        <div class="toggle-label">🖼 画像問題のみ</div>
+        <div class="toggle-desc">図表を含む問題に絞り込み</div>
+      </div>
+      <div class="toggle-switch"></div>
+    </div>
+    <div class="toggle-row">
+      <div>
+        <div class="toggle-label">🔀 ランダム順</div>
+        <div class="toggle-desc">出題順をシャッフル</div>
+      </div>
+      <div class="toggle-switch on"></div>
+    </div>
+  </div>
+
+  <!-- キーワード -->
+  <div class="filter-group">
+    <div class="filter-label">
+      <span class="filter-label-icon">🔍</span>
+      キーワード検索
+    </div>
+    <input class="search-input" type="text" placeholder="問題文・タグ・単元で検索...">
+  </div>
+
+  <!-- 適用ボタン -->
+  <button class="apply-btn">フィルターを適用（248問）</button>
+  <div class="reset-link">フィルターをリセット</div>
+</div>
+
+</body>
+</html>

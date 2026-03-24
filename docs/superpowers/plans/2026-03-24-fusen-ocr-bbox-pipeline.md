@@ -1,3 +1,41 @@
+# 付箋OCR bbox パイプライン v2 Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** 既存 `ocr-fusens.ts` を bbox 対応に改修し、129ページ全ページを無料枠内で実行。付箋1枚ずつの切り抜き画像 + 構造化JSON を生成する。
+
+**Architecture:** A3見開き分割（左右2回API呼び出し）を廃止し、全体画像1回のAPI呼び出しで bbox 座標付きOCRを取得。座標から sharp で個別切り抜き。無料枠（10RPM / 250RPD）に収まるよう6秒間隔で実行。
+
+**Tech Stack:** TypeScript (tsx), Gemini 2.5 Flash API, sharp (画像処理), pdftoppm (PDF→PNG)
+
+---
+
+## File Structure
+
+| File | Role |
+|------|------|
+| `scripts/ocr-fusens.ts` | **Modify** — bbox対応に全面改修 |
+| `src/data/fusens/ocr-results.json` | **Output** — ページごとのOCR結果（bbox付き） |
+| `public/images/fusens/page-NNN/note-NN.png` | **Output** — 付箋個別切り抜き画像 |
+
+---
+
+### Task 1: `ocr-fusens.ts` を bbox 対応に改修
+
+**Files:**
+- Modify: `scripts/ocr-fusens.ts` (全体)
+
+**変更点:**
+1. プロンプトに bbox 指示を追加
+2. A3見開き左右分割を廃止 → 全体画像1回でOCR
+3. bbox 座標で sharp 切り抜き → `public/images/fusens/page-NNN/note-NN.png`
+4. レート制限を6秒間隔に変更（10RPM対応）
+5. `--all` フラグで全ページ実行対応
+6. ocr-results.json の notes に `bbox` と `imageFile` フィールド追加
+
+- [ ] **Step 1: ocr-fusens.ts を以下の内容で上書き**
+
+```typescript
 /**
  * 付箋OCRパイプライン v2: Gemini Vision + bbox で個別切り抜き
  *
@@ -42,14 +80,10 @@ const numPages = parseInt(
 
 // --- API Key ---
 const API_KEY = (() => {
-  try {
-    const envPath = path.join(__dirname, '..', '.env.local')
-    const content = fs.readFileSync(envPath, 'utf-8')
-    const match = content.match(/GOOGLE_AI_API_KEY=(.+)/)
-    return match ? match[1].trim().replace(/^["']|["']$/g, '') : ''
-  } catch {
-    return ''
-  }
+  const envPath = path.join(__dirname, '..', '.env.local')
+  const content = fs.readFileSync(envPath, 'utf-8')
+  const match = content.match(/GOOGLE_AI_API_KEY=(.+)/)
+  return match ? match[1].trim() : ''
 })()
 
 if (!API_KEY && !isStatus) {
@@ -57,7 +91,7 @@ if (!API_KEY && !isStatus) {
   process.exit(1)
 }
 
-// --- Prompt (bbox対応) ---
+// --- Prompt ---
 const PROMPT = `あなたは薬学の専門家です。この画像は薬剤師国家試験の学習ノートで、ルーズリーフに手書きの付箋が貼られています。
 
 各付箋を個別に読み取り、JSON配列で出力してください。
@@ -113,7 +147,7 @@ interface FusenPageResult {
 }
 
 // --- Status ---
-function showStatus(): void {
+function showStatus() {
   const outputPath = path.join(OUTPUT_DIR, 'ocr-results.json')
   if (!fs.existsSync(outputPath)) {
     console.log('まだ結果がありません')
@@ -125,14 +159,13 @@ function showStatus(): void {
   console.log(`処理済み: ${results.length}ページ / 付箋: ${totalNotes}枚`)
   console.log(`ページ: ${pages.join(', ')}`)
 
+  // 科目別集計
   const bySubject: Record<string, number> = {}
   const byType: Record<string, number> = {}
-  for (const r of results) {
-    for (const n of r.notes) {
-      bySubject[n.subject] = (bySubject[n.subject] || 0) + 1
-      byType[n.note_type] = (byType[n.note_type] || 0) + 1
-    }
-  }
+  results.forEach(r => r.notes.forEach(n => {
+    bySubject[n.subject] = (bySubject[n.subject] || 0) + 1
+    byType[n.note_type] = (byType[n.note_type] || 0) + 1
+  }))
   console.log('\n科目別:', JSON.stringify(bySubject, null, 2))
   console.log('分類別:', JSON.stringify(byType, null, 2))
 }
@@ -167,10 +200,7 @@ async function generatePageImage(pageNum: number): Promise<string | null> {
 // --- Resize for API ---
 async function resizeForApi(imgPath: string): Promise<string> {
   const smallPath = imgPath.replace('.png', '-api.png')
-  // キャッシュ利用（1KB以上のファイルのみ有効とみなす）
-  if (fs.existsSync(smallPath) && fs.statSync(smallPath).size > 1000) {
-    return smallPath
-  }
+  if (fs.existsSync(smallPath)) return smallPath
   await sharp(imgPath).resize(1200, null, { fit: 'inside' }).toFile(smallPath)
   return smallPath
 }
@@ -214,13 +244,6 @@ async function callGeminiOCR(imgPath: string): Promise<FusenNote[]> {
     }
 
     const data = await response.json() as any
-
-    // finishReason チェック（トークン切れ検出）
-    const finishReason = data.candidates?.[0]?.finishReason
-    if (finishReason && finishReason !== 'STOP') {
-      console.error(`  Gemini finishReason: ${finishReason} (応答切れの可能性)`)
-    }
-
     const text = data.candidates?.[0]?.content?.parts?.[0]?.text || ''
 
     if (!text) {
@@ -232,21 +255,11 @@ async function callGeminiOCR(imgPath: string): Promise<FusenNote[]> {
       const jsonMatch = text.match(/\[[\s\S]*\]/)
       if (jsonMatch) return JSON.parse(jsonMatch[0])
       console.error(`  JSON抽出失敗: ${text.substring(0, 100)}`)
-    } catch {
+    } catch (e) {
       console.error(`  JSONパース失敗: ${text.substring(0, 100)}`)
     }
     return []
   }
-}
-
-// --- bbox バリデーション ---
-function isValidBbox(bbox: unknown): bbox is [number, number, number, number] {
-  if (!Array.isArray(bbox) || bbox.length !== 4) return false
-  const [y1, x1, y2, x2] = bbox
-  // 全て数値で、0-1000の範囲内で、y1<y2, x1<x2
-  if ([y1, x1, y2, x2].some(v => typeof v !== 'number' || isNaN(v) || v < 0 || v > 1000)) return false
-  if (y1 >= y2 || x1 >= x2) return false
-  return true
 }
 
 // --- Crop Notes ---
@@ -260,21 +273,13 @@ async function cropNotes(
   fs.mkdirSync(pageDir, { recursive: true })
 
   const meta = await sharp(imgPath).metadata()
-  if (!meta.width || !meta.height) {
-    console.error(`  画像メタデータ取得失敗: ${imgPath}`)
-    return
-  }
-  const imgW = meta.width
-  const imgH = meta.height
-  const PADDING = 10
+  const imgW = meta.width!
+  const imgH = meta.height!
+  const PADDING = 10 // bbox外側の余白（ピクセル）
 
   for (let i = 0; i < notes.length; i++) {
     const n = notes[i]
-
-    if (!isValidBbox(n.bbox)) {
-      console.error(`  note-${i + 1}: invalid bbox ${JSON.stringify(n.bbox)}, skipping crop`)
-      continue
-    }
+    if (!n.bbox || n.bbox.length !== 4) continue
 
     const [y1, x1, y2, x2] = n.bbox
     const left = Math.max(0, Math.floor(x1 / 1000 * imgW) - PADDING)
@@ -295,55 +300,30 @@ async function cropNotes(
   }
 }
 
-// --- Atomic JSON save（書き込み中クラッシュ対策） ---
-function saveResultsAtomic(outputPath: string, data: FusenPageResult[]): void {
-  const tmpPath = outputPath + '.tmp'
-  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8')
-  fs.renameSync(tmpPath, outputPath) // rename はほとんどのFSでアトミック
-}
-
 // --- Main ---
-async function main(): Promise<void> {
+async function main() {
   if (isStatus) { showStatus(); return }
 
   fs.mkdirSync(IMG_DIR, { recursive: true })
   fs.mkdirSync(OUTPUT_DIR, { recursive: true })
   fs.mkdirSync(IMAGES_DIR, { recursive: true })
 
-  // PDF総ページ数（pdfinfo失敗時のエラーハンドリング）
-  let totalPages: number
-  try {
-    const info = execSync(`pdfinfo "${PDF_PATH}" 2>/dev/null`, { encoding: 'utf-8' })
-    totalPages = parseInt(info.match(/Pages:\s+(\d+)/)?.[1] || '0')
-  } catch {
-    console.error(`PDF not found or pdfinfo not installed: ${PDF_PATH}`)
-    process.exit(1)
-  }
+  // PDF総ページ数
+  const info = execSync(`pdfinfo "${PDF_PATH}" 2>/dev/null`, { encoding: 'utf-8' })
+  const totalPages = parseInt(info.match(/Pages:\s+(\d+)/)?.[1] || '0')
   console.log(`付箋PDF: ${totalPages}ページ`)
 
   const effStart = isAll ? 1 : startPage
   const effEnd = isAll ? totalPages : Math.min(startPage + numPages - 1, totalPages)
-  const totalToProcess = effEnd - effStart + 1
-  console.log(`処理: ページ${effStart}〜${effEnd} (${totalToProcess}ページ)`)
-  console.log(`レート制限: ${RATE_LIMIT_MS / 1000}秒間隔`)
-
-  // 日次リクエスト上限チェック
-  const DAILY_LIMIT = 250
-  if (totalToProcess > DAILY_LIMIT) {
-    console.warn(`⚠ ${totalToProcess}ページは日次上限${DAILY_LIMIT}RPDを超過する可能性があります`)
-  }
-  console.log('')
+  console.log(`処理: ページ${effStart}〜${effEnd} (${effEnd - effStart + 1}ページ)`)
+  console.log(`レート制限: ${RATE_LIMIT_MS / 1000}秒間隔\n`)
 
   // 既存結果読み込み
   const outputPath = path.join(OUTPUT_DIR, 'ocr-results.json')
   let allResults: FusenPageResult[] = []
   try {
-    const raw = fs.readFileSync(outputPath, 'utf-8')
-    allResults = JSON.parse(raw)
-    if (!Array.isArray(allResults)) allResults = []
-  } catch {
-    console.log('既存結果なし、新規開始')
-  }
+    allResults = JSON.parse(fs.readFileSync(outputPath, 'utf-8'))
+  } catch {}
   const existingPages = new Set(allResults.map(r => r.page))
 
   let processedCount = 0
@@ -373,23 +353,24 @@ async function main(): Promise<void> {
       await cropNotes(imgPath, notes, p)
     }
 
-    // 5. 結果保存（cropNotes完了後にアトミック書き込み）
+    // 5. 結果保存
     const result: FusenPageResult = { page: p, notes }
     allResults.push(result)
-    allResults.sort((a, b) => a.page - b.page)
-    saveResultsAtomic(outputPath, allResults)
-
     processedCount++
     totalNotes += notes.length
     console.log(` ${notes.length}枚`)
 
-    // 6. レート制限待機 + ETA表示
+    // ページごとに保存（クラッシュ復帰用）
+    allResults.sort((a, b) => a.page - b.page)
+    fs.writeFileSync(outputPath, JSON.stringify(allResults, null, 2), 'utf-8')
+
+    // 6. レート制限待機
     const remaining = effEnd - p
     if (remaining > 0) {
       const elapsed = (Date.now() - startTime) / 1000
       const avgSec = elapsed / processedCount
       const eta = Math.ceil(avgSec * remaining / 60)
-      console.log(`  [残${remaining}ページ, ETA ~${eta}分]`)
+      process.stdout.write(`  [残${remaining}ページ, ETA ~${eta}分]\n`)
       await new Promise(r => setTimeout(r, RATE_LIMIT_MS))
     }
   }
@@ -406,3 +387,79 @@ async function main(): Promise<void> {
 }
 
 main().catch(console.error)
+```
+
+- [ ] **Step 2: 既存テスト結果をリセット**
+
+`src/data/fusens/ocr-results.json` から page 2 (空) を削除、page 1 も削除して空配列 `[]` にする（v2で再取得するため）。
+
+```bash
+echo '[]' > src/data/fusens/ocr-results.json
+```
+
+- [ ] **Step 3: テストページ1で動作確認**
+
+```bash
+npx tsx scripts/ocr-fusens.ts --page 1 --pages 1
+```
+
+Expected:
+- `ページ1... N枚` と表示
+- `src/data/fusens/ocr-results.json` に bbox 付きの結果
+- `public/images/fusens/page-001/note-*.png` に個別切り抜き画像
+
+- [ ] **Step 4: 切り抜き画像を目視確認**
+
+ページ1の切り抜き画像を確認し、bbox精度が問題ないことを検証。
+
+- [ ] **Step 5: 全ページ実行**
+
+```bash
+npx tsx scripts/ocr-fusens.ts --all
+```
+
+Expected:
+- 129ページを6秒間隔で処理
+- 429エラー時は自動リトライ（指数バックオフ）
+- 各ページ処理後に残ページ数とETA表示
+- 所要時間: 約90-120分
+- クラッシュしても `--all` 再実行で未処理ページから再開
+
+- [ ] **Step 6: 進捗確認**
+
+```bash
+npx tsx scripts/ocr-fusens.ts --status
+```
+
+科目別・分類別の集計を確認。
+
+- [ ] **Step 7: コミット**
+
+```bash
+git add scripts/ocr-fusens.ts src/data/fusens/ocr-results.json public/images/fusens/
+git commit -m "feat: ocr-fusens v2 with bbox cropping for all 129 pages"
+```
+
+---
+
+### Task 2: Codex（GPT-5.4）設計レビュー
+
+- [ ] **Step 1: スクリプト改修をレビュー**
+
+```bash
+codex review --base HEAD~1
+```
+
+確認ポイント:
+- bbox座標のパース安全性（NaN対策）
+- sharp の extract() でのout-of-bounds防止
+- レート制限ロジックの妥当性
+- インクリメンタル実行の堅牢性
+- JSON保存のアトミック性（部分書き込み防止）
+
+- [ ] **Step 2: 指摘事項を修正してコミット**
+
+```bash
+git add scripts/ocr-fusens.ts
+git commit -m "fix: address codex review feedback on ocr-fusens v2"
+```

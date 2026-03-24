@@ -2,11 +2,14 @@ import { useState, useMemo, useRef, useCallback, useEffect } from 'react'
 import { useValidationReport } from './hooks/useValidationReport'
 import { useReviewState } from './hooks/useReviewState'
 import { usePdfNavigation } from './hooks/usePdfNavigation'
+import { useKeyboardNav } from './hooks/useKeyboardNav'
 import { ReviewHeader } from './components/ReviewHeader'
 import { ReviewCard } from './components/ReviewCard'
 import { PdfViewer } from './components/PdfViewer'
+import type { PdfViewerHandle } from './components/PdfViewer'
 import { CorrectionPanel } from './components/CorrectionPanel'
 import { PdfCropper } from './components/PdfCropper'
+import { KeyboardHelp } from './components/KeyboardHelp'
 import { ALL_QUESTIONS } from '../../data/all-questions'
 import type { ValidationIssue } from '../../utils/data-validator/types'
 import type { FilterConfig, Correction, CorrectionsFile, PdfCropRect } from './types'
@@ -49,9 +52,12 @@ export default function ReviewPage() {
   const [manualPage, setManualPage] = useState<number | null>(null)
   const [currentPdfFile, setCurrentPdfFile] = useState<string | null>(null)
   const [viewportSize, setViewportSize] = useState({ width: 800, height: 1130 })
+  const [showHelp, setShowHelp] = useState(false)
 
   // PdfViewer の Canvas 参照（PdfCropper に渡す）
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  // PdfViewer の命令的操作ハンドル（キーボードからのPDFページ操作用）
+  const pdfViewerRef = useRef<PdfViewerHandle>(null)
 
   // 問題をソート: 年度→区分→問番
   const sortedQuestions = useMemo(
@@ -101,18 +107,8 @@ export default function ReviewPage() {
   const activePage = manualPage ?? estimate.page
   const activePdfFile = currentPdfFile ?? estimate.pdfFile
 
-  // E キーでエクスポート
+  // E キーハンドラーを最新の handleExport に同期するための ref
   const handleExportRef = useRef<() => void>(() => {})
-
-  useEffect(() => {
-    function handler(e: KeyboardEvent) {
-      const tag = (e.target as HTMLElement).tagName
-      if (tag === 'INPUT' || tag === 'TEXTAREA') return
-      if (e.key === 'e' || e.key === 'E') handleExportRef.current()
-    }
-    window.addEventListener('keydown', handler)
-    return () => window.removeEventListener('keydown', handler)
-  }, [])
 
   // ===== 各ハンドラー =====
   function navigate(next: number) {

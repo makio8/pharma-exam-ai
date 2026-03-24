@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=390">
+<title>国試ノート — ホーム</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --accent: #aa3bff;
+  --accent-light: rgba(170, 59, 255, 0.08);
+  --accent-mid: rgba(170, 59, 255, 0.15);
+  --accent-border: rgba(170, 59, 255, 0.25);
+  --bg: #f8f7fa;
+  --card: #ffffff;
+  --text: #1a1a2e;
+  --text-2: #6b7280;
+  --text-3: #9ca3af;
+  --border: #e8e5ee;
+  --ok: #10b981;
+  --ok-bg: #d1fae5;
+  --ng: #ef4444;
+  --ng-bg: #fee2e2;
+  --warn: #f59e0b;
+  --warn-bg: #fef3c7;
+  --blue: #2563eb;
+  --blue-bg: #eff6ff;
+  --orange: #ea580c;
+  --orange-bg: #fff7ed;
+  --green: #16a34a;
+  --green-bg: #f0fdf4;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+  --r: 14px;
+  --r-sm: 10px;
+  --r-chip: 20px;
+}
+body {
+  font-family: 'DM Sans', 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  width: 390px;
+  min-height: 1200px;
+  margin: 0 auto;
+  padding-bottom: 90px;
+  -webkit-font-smoothing: antialiased;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px 4px;
+}
+.header-title { font-size: 18px; font-weight: 700; }
+.streak {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--orange);
+  background: var(--orange-bg);
+  padding: 4px 12px;
+  border-radius: var(--r-chip);
+}
+.greeting {
+  padding: 0 20px;
+  font-size: 14px;
+  color: var(--text-2);
+  margin-bottom: 20px;
+}
+.content { padding: 0 20px; }
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Menu items */
+.menu-item {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--r);
+  background: var(--card);
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+.menu-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+.menu-red::before { background: var(--ng); }
+.menu-yellow::before { background: var(--warn); }
+.menu-purple::before { background: var(--accent); }
+.menu-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+.menu-body { flex: 1; min-width: 0; }
+.menu-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.menu-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+  color: #fff;
+}
+.badge-red { background: var(--ng); }
+.badge-yellow { background: var(--warn); }
+.badge-purple { background: var(--accent); }
+.menu-title { font-size: 14px; font-weight: 600; }
+.menu-desc { font-size: 12px; color: var(--text-2); margin-top: 2px; line-height: 1.4; }
+
+/* Quick stats */
+.stats-row {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+.stat-card {
+  flex: 1;
+  text-align: center;
+  padding: 14px 8px;
+  border-radius: var(--r);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.stat-num {
+  font-size: 22px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.stat-label {
+  font-size: 11px;
+  color: var(--text-2);
+  margin-top: 4px;
+}
+.stat-blue .stat-num { color: var(--blue); }
+.stat-yellow .stat-num { color: var(--warn); }
+.stat-orange .stat-num { color: var(--orange); }
+
+/* Progress */
+.subject-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+.subject-row:last-child { border-bottom: none; }
+.subject-name { font-size: 14px; font-weight: 600; min-width: 44px; }
+.stacked-bar {
+  flex: 1;
+  height: 8px;
+  background: #f3f4f6;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+}
+.bar-green { background: var(--ok); }
+.bar-yellow { background: var(--warn); }
+.bar-gray { background: #e5e7eb; }
+.subject-pct { font-size: 13px; font-weight: 700; min-width: 34px; text-align: right; font-variant-numeric: tabular-nums; }
+.subject-expand { font-size: 12px; color: var(--text-3); }
+
+/* Sub-fields */
+.sub-fields {
+  padding: 4px 0 8px 54px;
+}
+.sub-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  font-size: 13px;
+}
+.sub-field-name { min-width: 90px; color: var(--text-2); }
+.sub-bar {
+  flex: 1;
+  height: 6px;
+  background: #f3f4f6;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.sub-fill { height: 100%; border-radius: 3px; }
+.sub-pct { font-size: 12px; font-weight: 600; min-width: 32px; text-align: right; font-variant-numeric: tabular-nums; }
+.sub-tag { font-size: 11px; }
+.sub-link {
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Quick actions */
+.quick-actions {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0;
+}
+.quick-btn {
+  flex: 1;
+  padding: 12px 8px;
+  border-radius: var(--r-sm);
+  border: 1.5px solid var(--border);
+  background: var(--card);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--text);
+}
+.quick-btn:hover { border-color: var(--accent-border); }
+
+/* Bottom nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px;
+  height: 72px;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 8px;
+  z-index: 101;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  color: var(--text-3);
+  cursor: pointer;
+}
+.nav-item.active { color: var(--accent); }
+.nav-icon { font-size: 22px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-title">💊 国試ノート</div>
+  <div class="streak">🔥 5日連続</div>
+</div>
+<div class="greeting">こんにちは！今日も頑張りましょう 💪</div>
+
+<div class="content">
+  <!-- Today's Menu -->
+  <div class="section-title">🎯 今日のメニュー</div>
+
+  <div class="menu-item menu-red">
+    <div class="menu-icon">⚠️</div>
+    <div class="menu-body">
+      <div class="menu-top">
+        <span class="menu-badge badge-red">優先</span>
+        <span class="menu-title">薬理「交感神経系」</span>
+      </div>
+      <div class="menu-desc">正答率 33% → まずはここから！</div>
+    </div>
+  </div>
+
+  <div class="menu-item menu-yellow">
+    <div class="menu-icon">🔄</div>
+    <div class="menu-body">
+      <div class="menu-top">
+        <span class="menu-badge badge-yellow">復習</span>
+        <span class="menu-title">復習カード 8枚</span>
+      </div>
+      <div class="menu-desc">忘れる前に復習すると定着率UP！</div>
+    </div>
+  </div>
+
+  <div class="menu-item menu-purple">
+    <div class="menu-icon">🏆</div>
+    <div class="menu-body">
+      <div class="menu-top">
+        <span class="menu-badge badge-purple">チャレンジ</span>
+        <span class="menu-title">化学「有機化合物」</span>
+      </div>
+      <div class="menu-desc">正答率 78% — あと少しでマスター！</div>
+    </div>
+  </div>
+
+  <!-- Quick Stats -->
+  <div class="stats-row">
+    <div class="stat-card stat-blue">
+      <div class="stat-num">142</div>
+      <div class="stat-label">解いた問題</div>
+    </div>
+    <div class="stat-card stat-yellow">
+      <div class="stat-num">8</div>
+      <div class="stat-label">復習カード</div>
+    </div>
+    <div class="stat-card stat-orange">
+      <div class="stat-num">5</div>
+      <div class="stat-label">連続学習</div>
+    </div>
+  </div>
+
+  <!-- Subject Progress -->
+  <div class="section-title">📊 科目別マスター進捗</div>
+  <div class="card" style="padding: 6px 16px;">
+    <!-- 薬理 (expanded) -->
+    <div class="subject-row">
+      <span class="subject-name">薬理</span>
+      <div class="stacked-bar">
+        <div class="bar-green" style="width: 25%;"></div>
+        <div class="bar-yellow" style="width: 20%;"></div>
+      </div>
+      <span class="subject-pct">45%</span>
+      <span class="subject-expand">▼</span>
+    </div>
+    <div class="sub-fields">
+      <div class="sub-field">
+        <span class="sub-field-name">交感神経系</span>
+        <div class="sub-bar"><div class="sub-fill bar-green" style="width: 80%;"></div></div>
+        <span class="sub-pct">80%</span>
+        <span class="sub-tag">✅</span>
+      </div>
+      <div class="sub-field">
+        <span class="sub-field-name">副交感神経系</span>
+        <div class="sub-bar"><div class="sub-fill bar-yellow" style="width: 60%;"></div></div>
+        <span class="sub-pct">60%</span>
+      </div>
+      <div class="sub-field">
+        <span class="sub-field-name">抗がん剤</span>
+        <div class="sub-bar"><div class="sub-fill" style="width: 20%; background: var(--ng);"></div></div>
+        <span class="sub-pct">20%</span>
+        <span class="sub-tag">⚠️</span>
+        <span class="sub-link">演習→</span>
+      </div>
+      <div class="sub-field">
+        <span class="sub-field-name">ホルモン薬</span>
+        <div class="sub-bar"><div class="sub-fill" style="width: 0%;"></div></div>
+        <span class="sub-pct">0%</span>
+        <span class="sub-link">演習→</span>
+      </div>
+    </div>
+
+    <!-- 化学 (collapsed) -->
+    <div class="subject-row">
+      <span class="subject-name">化学</span>
+      <div class="stacked-bar">
+        <div class="bar-green" style="width: 55%;"></div>
+        <div class="bar-yellow" style="width: 17%;"></div>
+      </div>
+      <span class="subject-pct">72%</span>
+      <span class="subject-expand">▶</span>
+    </div>
+
+    <!-- 生物 (collapsed) -->
+    <div class="subject-row">
+      <span class="subject-name">生物</span>
+      <div class="stacked-bar">
+        <div class="bar-green" style="width: 15%;"></div>
+        <div class="bar-yellow" style="width: 20%;"></div>
+      </div>
+      <span class="subject-pct">35%</span>
+      <span class="subject-expand">▶</span>
+    </div>
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="quick-actions">
+    <button class="quick-btn">📝 自分で選ぶ</button>
+    <button class="quick-btn">📌 付箋</button>
+    <button class="quick-btn">🎲 ランダム10</button>
+  </div>
+</div>
+
+<!-- Bottom Nav -->
+<div class="bottom-nav">
+  <div class="nav-item active">
+    <div class="nav-icon">🏠</div>
+    <span>ホーム</span>
+  </div>
+  <div class="nav-item">
+    <div class="nav-icon">📝</div>
+    <span>演習</span>
+  </div>
+  <div class="nav-item">
+    <div class="nav-icon">📌</div>
+    <span>ノート</span>
+  </div>
+  <div class="nav-item">
+    <div class="nav-icon">📊</div>
+    <span>分析</span>
+  </div>
+</div>
+
+</body>
+</html>

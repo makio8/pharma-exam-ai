@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react'
+import { useCallback } from 'react'
 import type { ValidationReport } from '../../../utils/data-validator/types'
 import type { FilterConfig, JudgmentStatus } from '../types'
 import styles from './ReviewHeader.module.css'
@@ -49,17 +49,6 @@ export function ReviewHeader({
   const togglePanel = useCallback(() => {
     onFiltersChange({ ...filters, _open: !isOpen } as FilterConfig)
   }, [filters, isOpen, onFiltersChange])
-
-  // F キーで開閉
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      const tag = (e.target as HTMLElement).tagName
-      if (tag === 'INPUT' || tag === 'TEXTAREA') return
-      if (e.key === 'f' || e.key === 'F') togglePanel()
-    }
-    window.addEventListener('keydown', handler)
-    return () => window.removeEventListener('keydown', handler)
-  }, [togglePanel])
 
   // ===== 深刻度トグル =====
   function toggleSeverity(sev: 'error' | 'warning' | 'info') {

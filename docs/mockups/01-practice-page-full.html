@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=390, initial-scale=1.0">
+<title>演習モード - リデザイン案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --accent: #aa3bff;
+  --accent-light: rgba(170, 59, 255, 0.08);
+  --accent-border: rgba(170, 59, 255, 0.25);
+  --accent-solid-bg: rgba(170, 59, 255, 0.12);
+  --bg: #f8f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --border: #e8e5ee;
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-chip: 20px;
+}
+
+body {
+  font-family: 'DM Sans', 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  width: 390px;
+  min-height: 844px;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ヘッダー */
+.header {
+  background: var(--card-bg);
+  padding: 56px 20px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text);
+}
+.header-subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* メインコンテンツ */
+.content {
+  padding: 16px 16px 180px;
+}
+
+/* セクションラベル */
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.section-label:first-child {
+  margin-top: 0;
+}
+
+/* スマートプリセット */
+.presets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.preset-card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.preset-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+.preset-card.active {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+.preset-card.active::before {
+  background: var(--accent);
+}
+.preset-icon {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.preset-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+.preset-desc {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+.preset-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--accent-solid-bg);
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+
+/* チップフィルター */
+.chips-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.chips-scroll::-webkit-scrollbar { display: none; }
+
+.chip {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border-radius: var(--radius-chip);
+  border: 1.5px solid var(--border);
+  background: var(--card-bg);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.chip.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(170, 59, 255, 0.25);
+}
+.chip-year {
+  min-width: 52px;
+  text-align: center;
+}
+
+/* 区分トグル */
+.section-toggles {
+  display: flex;
+  gap: 8px;
+}
+.section-toggle {
+  flex: 1;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: var(--card-bg);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.section-toggle.active-blue {
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #93c5fd;
+}
+.section-toggle.active-orange {
+  background: #fff7ed;
+  color: #ea580c;
+  border-color: #fdba74;
+}
+.section-toggle.active-green {
+  background: #f0fdf4;
+  color: #16a34a;
+  border-color: #86efac;
+}
+
+/* 詳細フィルターボタン */
+.advanced-filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 10px;
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 16px;
+}
+.advanced-filter-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* 結果サマリー */
+.result-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+.result-count {
+  font-size: 15px;
+  font-weight: 600;
+}
+.result-count span {
+  color: var(--accent);
+  font-size: 22px;
+  font-weight: 700;
+}
+.sort-btn {
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* 問題カード */
+.question-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  position: relative;
+  transition: all 0.15s ease;
+}
+.question-card:active {
+  transform: scale(0.98);
+}
+.q-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.q-section-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+.q-section-badge.blue { background: #eff6ff; color: #2563eb; }
+.q-section-badge.orange { background: #fff7ed; color: #ea580c; }
+.q-section-badge.green { background: #f0fdf4; color: #16a34a; }
+
+.q-year-num {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.q-subject {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.q-image-icon {
+  margin-left: auto;
+  width: 18px;
+  height: 18px;
+  color: var(--accent);
+}
+.q-status {
+  margin-left: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+.q-status.correct { background: #d1fae5; color: #059669; }
+.q-status.incorrect { background: #fee2e2; color: #dc2626; }
+.q-status.unanswered { background: #f3f4f6; color: #9ca3af; }
+
+.q-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.q-bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+.q-difficulty {
+  display: flex;
+  gap: 2px;
+}
+.q-difficulty .hammer {
+  font-size: 12px;
+  opacity: 0.3;
+}
+.q-difficulty .hammer.filled {
+  opacity: 1;
+}
+.q-progress-bar {
+  flex: 1;
+  height: 4px;
+  background: #f3f4f6;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.q-progress-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+.q-progress-fill.high { background: var(--success); }
+.q-progress-fill.mid { background: var(--warning); }
+.q-progress-fill.low { background: var(--danger); }
+
+.q-rate {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  min-width: 32px;
+  text-align: right;
+}
+
+.q-tags {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+}
+.q-tag {
+  font-size: 10px;
+  background: #f3f4f6;
+  color: var(--text-secondary);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* スティッキーアクションバー */
+.sticky-bar {
+  position: fixed;
+  bottom: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border);
+  z-index: 100;
+}
+.sticky-bar-inner {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.start-btn {
+  flex: 1;
+  padding: 14px 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 16px rgba(170, 59, 255, 0.3);
+  transition: all 0.15s ease;
+}
+.start-btn:active {
+  transform: scale(0.97);
+}
+.settings-btn {
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  background: var(--card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 20px;
+}
+
+/* ボトムナビ */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px;
+  height: 72px;
+  background: var(--card-bg);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 8px;
+  z-index: 101;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  color: var(--text-tertiary);
+  cursor: pointer;
+}
+.nav-item.active {
+  color: var(--accent);
+}
+.nav-icon {
+  font-size: 22px;
+}
+
+/* アノテーション（説明用） */
+.annotation {
+  position: absolute;
+  right: -8px;
+  background: #fef3c7;
+  border: 2px solid #f59e0b;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #92400e;
+  white-space: nowrap;
+  z-index: 200;
+  transform: translateX(100%);
+}
+.annotation::before {
+  content: '←';
+  margin-right: 4px;
+}
+</style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<div class="header">
+  <div class="header-title">💊 演習モード</div>
+  <div class="header-subtitle">3,470問から出題 ・ 11年分の過去問</div>
+</div>
+
+<!-- メインコンテンツ -->
+<div class="content">
+
+  <!-- スマートプリセット -->
+  <div class="section-label">クイックスタート</div>
+  <div class="presets">
+    <div class="preset-card active">
+      <div class="preset-badge">おすすめ</div>
+      <div class="preset-icon">🎯</div>
+      <div class="preset-name">苦手克服</div>
+      <div class="preset-desc">間違えた問題を重点復習</div>
+    </div>
+    <div class="preset-card">
+      <div class="preset-icon">📋</div>
+      <div class="preset-name">直前対策</div>
+      <div class="preset-desc">正答率60%以上・未回答</div>
+    </div>
+    <div class="preset-card">
+      <div class="preset-icon">⭐</div>
+      <div class="preset-name">未回答を潰す</div>
+      <div class="preset-desc">まだ解いていない問題</div>
+    </div>
+    <div class="preset-card">
+      <div class="preset-icon">🔄</div>
+      <div class="preset-name">ランダム演習</div>
+      <div class="preset-desc">全範囲からランダム出題</div>
+    </div>
+  </div>
+
+  <!-- 科目チップ -->
+  <div class="section-label">科目</div>
+  <div class="chips-scroll">
+    <div class="chip active">物理</div>
+    <div class="chip active">化学</div>
+    <div class="chip">生物</div>
+    <div class="chip">薬理</div>
+    <div class="chip">薬剤</div>
+    <div class="chip">病態</div>
+    <div class="chip">法規</div>
+    <div class="chip">実務</div>
+    <div class="chip">衛生</div>
+  </div>
+
+  <!-- 年度チップ -->
+  <div class="section-label">年度（回）</div>
+  <div class="chips-scroll">
+    <div class="chip chip-year">100</div>
+    <div class="chip chip-year">101</div>
+    <div class="chip chip-year">102</div>
+    <div class="chip chip-year active">103</div>
+    <div class="chip chip-year active">104</div>
+    <div class="chip chip-year active">105</div>
+    <div class="chip chip-year">106</div>
+    <div class="chip chip-year">107</div>
+    <div class="chip chip-year">108</div>
+    <div class="chip chip-year">109</div>
+    <div class="chip chip-year">110</div>
+  </div>
+
+  <!-- 区分トグル -->
+  <div class="section-label">区分</div>
+  <div class="section-toggles">
+    <div class="section-toggle active-blue">必須</div>
+    <div class="section-toggle">理論</div>
+    <div class="section-toggle active-green">実践</div>
+  </div>
+
+  <!-- 詳細フィルター -->
+  <button class="advanced-filter-btn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/>
+      <line x1="12" y1="18" x2="20" y2="18"/><circle cx="6" cy="12" r="2"/>
+      <circle cx="10" cy="18" r="2"/><circle cx="6" cy="6" r="2"/>
+    </svg>
+    詳細フィルター（正答率・キーワード・画像問題）
+  </button>
+
+  <!-- 結果サマリー -->
+  <div class="result-summary">
+    <div class="result-count">
+      <span>248</span> 問ヒット
+    </div>
+    <button class="sort-btn">▼ 年度順</button>
+  </div>
+
+  <!-- 問題カード一覧 -->
+  <div class="question-card">
+    <div class="q-top">
+      <span class="q-section-badge blue">必須</span>
+      <span class="q-year-num">第103回 問1</span>
+      <span class="q-subject">物理</span>
+      <span class="q-status correct">✓</span>
+    </div>
+    <div class="q-text">次に示す単位のうち、SI基本単位でないのはどれか。1つ選べ。</div>
+    <div class="q-bottom">
+      <div class="q-difficulty">
+        <span class="hammer filled">🔨</span>
+        <span class="hammer filled">🔨</span>
+        <span class="hammer">🔨</span>
+        <span class="hammer">🔨</span>
+        <span class="hammer">🔨</span>
+      </div>
+      <div class="q-progress-bar"><div class="q-progress-fill high" style="width:82%"></div></div>
+      <span class="q-rate">82%</span>
+    </div>
+    <div class="q-tags">
+      <span class="q-tag">SI単位</span>
+      <span class="q-tag">物理量</span>
+    </div>
+  </div>
+
+  <div class="question-card">
+    <div class="q-top">
+      <span class="q-section-badge blue">必須</span>
+      <span class="q-year-num">第103回 問2</span>
+      <span class="q-subject">物理</span>
+      <svg class="q-image-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+        <path d="M21 15l-5-5L5 21"/>
+      </svg>
+      <span class="q-status incorrect">✕</span>
+    </div>
+    <div class="q-text">正逆反応とも一次反応で進行する反応を考える。A ⇌ B (k1, k-1) の速度定数の温度依存性を...</div>
+    <div class="q-bottom">
+      <div class="q-difficulty">
+        <span class="hammer filled">🔨</span>
+        <span class="hammer filled">🔨</span>
+        <span class="hammer filled">🔨</span>
+        <span class="hammer">🔨</span>
+        <span class="hammer">🔨</span>
+      </div>
+      <div class="q-progress-bar"><div class="q-progress-fill mid" style="width:54%"></div></div>
+      <span class="q-rate">54%</span>
+    </div>
+    <div class="q-tags">
+      <span class="q-tag">反応速度</span>
+      <span class="q-tag">平衡定数</span>
+    </div>
+  </div>
+
+  <div class="question-card">
+    <div class="q-top">
+      <span class="q-section-badge green">実践</span>
+      <span class="q-year-num">第104回 問196</span>
+      <span class="q-subject">実務</span>
+      <span class="q-status unanswered">—</span>
+    </div>
+    <div class="q-text">68歳男性。慢性心不全で以下の処方薬を服用中。フロセミド錠20mg 1錠 朝食後...</div>
+    <div class="q-bottom">
+      <div class="q-difficulty">
+        <span class="hammer filled">🔨</span>
+        <span class="hammer filled">🔨</span>
+        <span class="hammer filled">🔨</span>
+        <span class="hammer filled">🔨</span>
+        <span class="hammer">🔨</span>
+      </div>
+      <div class="q-progress-bar"><div class="q-progress-fill low" style="width:38%"></div></div>
+      <span class="q-rate">38%</span>
+    </div>
+    <div class="q-tags">
+      <span class="q-tag">慢性心不全</span>
+      <span class="q-tag">服薬指導</span>
+    </div>
+  </div>
+
+  <div class="question-card">
+    <div class="q-top">
+      <span class="q-section-badge orange">理論</span>
+      <span class="q-year-num">第105回 問92</span>
+      <span class="q-subject">化学</span>
+      <span class="q-status correct">✓</span>
+    </div>
+    <div class="q-text">非共有電子対（孤立電子対）がsp²混成軌道に収容されている窒素原子を含む化合物は...</div>
+    <div class="q-bottom">
+      <div class="q-difficulty">
+        <span class="hammer filled">🔨</span>
+        <span class="hammer filled">🔨</span>
+        <span class="hammer">🔨</span>
+        <span class="hammer">🔨</span>
+        <span class="hammer">🔨</span>
+      </div>
+      <div class="q-progress-bar"><div class="q-progress-fill high" style="width:73%"></div></div>
+      <span class="q-rate">73%</span>
+    </div>
+    <div class="q-tags">
+      <span class="q-tag">有機化学</span>
+      <span class="q-tag">混成軌道</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- スティッキーアクションバー -->
+<div class="sticky-bar">
+  <div class="sticky-bar-inner">
+    <button class="start-btn">
+      ▶ 演習開始（10問）
+    </button>
+    <button class="settings-btn">⚙</button>
+  </div>
+</div>
+
+<!-- ボトムナビ -->
+<div class="bottom-nav">
+  <div class="nav-item">
+    <span class="nav-icon">🏠</span>
+    <span>ホーム</span>
+  </div>
+  <div class="nav-item active">
+    <span class="nav-icon">📝</span>
+    <span>演習</span>
+  </div>
+  <div class="nav-item">
+    <span class="nav-icon">🗂</span>
+    <span>カード</span>
+  </div>
+  <div class="nav-item">
+    <span class="nav-icon">📊</span>
+    <span>分析</span>
+  </div>
+</div>
+
+</body>
+</html>

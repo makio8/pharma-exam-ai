@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=390, initial-scale=1.0">
+<title>Pattern C: Bold Minimal</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 390px;
+    margin: 0 auto;
+    background: #ffffff;
+    color: #000000;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .pattern-label {
+    background: #f9fafb;
+    color: #6b7280;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .container {
+    padding: 32px 24px 100px;
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 48px;
+  }
+
+  .app-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: #000;
+    letter-spacing: -0.5px;
+  }
+
+  .streak {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #7c3aed;
+  }
+
+  /* Section heading */
+  .section-label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #9ca3af;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  /* Today's Menu */
+  .menu-list {
+    margin-bottom: 48px;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 14px 0;
+    border-left: 2px solid transparent;
+    padding-left: 16px;
+  }
+
+  .menu-item:not(:last-child) {
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .menu-item.weak { border-left-color: #ef4444; }
+  .menu-item.review { border-left-color: #6b7280; }
+  .menu-item.challenge { border-left-color: #7c3aed; }
+
+  .menu-type {
+    font-size: 12px;
+    font-weight: 500;
+    color: #9ca3af;
+    width: 50px;
+    flex-shrink: 0;
+  }
+
+  .menu-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+    flex: 1;
+  }
+
+  .menu-value {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #6b7280;
+    flex-shrink: 0;
+  }
+
+  /* Quick Stats */
+  .stats-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    padding: 0 8px;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    color: #000;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #9ca3af;
+    margin-top: 4px;
+  }
+
+  /* Subject Progress */
+  .subjects {
+    margin-bottom: 48px;
+  }
+
+  .subject-item {
+    margin-bottom: 20px;
+  }
+
+  .subject-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+  }
+
+  .subject-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .subject-percent {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .bar-track {
+    height: 2px;
+    background: #f3f4f6;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: #000;
+    transition: width 0.5s ease;
+  }
+
+  .bar-fill.accent {
+    background: #7c3aed;
+  }
+
+  /* Subtopics */
+  .subtopics {
+    margin-top: 12px;
+    margin-left: 0;
+  }
+
+  .subtopic-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+  }
+
+  .subtopic-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: #9ca3af;
+  }
+
+  .subtopic-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .subtopic-bar-track {
+    width: 80px;
+    height: 2px;
+    background: #f3f4f6;
+    overflow: hidden;
+  }
+
+  .subtopic-bar-fill {
+    height: 100%;
+    background: #d1d5db;
+  }
+
+  .subtopic-percent {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #9ca3af;
+    width: 28px;
+    text-align: right;
+  }
+
+  /* Quick Actions */
+  .actions {
+    display: flex;
+    gap: 0;
+    margin-bottom: 48px;
+  }
+
+  .action-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+    padding: 12px 0;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    transition: color 0.2s;
+  }
+
+  .action-btn:hover {
+    color: #7c3aed;
+  }
+
+  .action-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    right: 20%;
+    height: 1px;
+    background: transparent;
+    transition: background 0.2s;
+  }
+
+  .action-btn:hover::after {
+    background: #7c3aed;
+  }
+
+  /* Bottom Nav */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 390px;
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 14px 0 24px;
+    z-index: 10;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: #d1d5db;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .nav-item.active {
+    color: #000;
+  }
+
+  .nav-item.active::before {
+    content: '';
+    position: absolute;
+    top: -14px;
+    width: 4px;
+    height: 4px;
+    background: #7c3aed;
+    border-radius: 50%;
+  }
+</style>
+</head>
+<body>
+
+<div class="pattern-label">Pattern C: Bold Minimal</div>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="app-title">国試ノート</div>
+    <div class="streak">5日連続</div>
+  </div>
+
+  <!-- Today's Menu -->
+  <div class="section-label">Today's Menu</div>
+  <div class="menu-list">
+    <div class="menu-item weak">
+      <span class="menu-type">苦手</span>
+      <span class="menu-title">薬理 交感神経系</span>
+      <span class="menu-value">33%</span>
+    </div>
+    <div class="menu-item review">
+      <span class="menu-type">復習</span>
+      <span class="menu-title">復習カード</span>
+      <span class="menu-value">8枚</span>
+    </div>
+    <div class="menu-item challenge">
+      <span class="menu-type">挑戦</span>
+      <span class="menu-title">化学 有機化合物</span>
+      <span class="menu-value">78%</span>
+    </div>
+  </div>
+
+  <!-- Quick Stats -->
+  <div class="section-label">Progress</div>
+  <div class="stats-row">
+    <div class="stat-item">
+      <div class="stat-number">142</div>
+      <div class="stat-label">問</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">8</div>
+      <div class="stat-label">枚</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">5</div>
+      <div class="stat-label">日</div>
+    </div>
+  </div>
+
+  <!-- Subject Progress -->
+  <div class="section-label">Subjects</div>
+  <div class="subjects">
+    <div class="subject-item">
+      <div class="subject-row">
+        <span class="subject-name">薬理</span>
+        <span class="subject-percent">45%</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:45%"></div>
+      </div>
+      <div class="subtopics">
+        <div class="subtopic-row">
+          <span class="subtopic-name">交感神経系</span>
+          <div class="subtopic-right">
+            <div class="subtopic-bar-track"><div class="subtopic-bar-fill" style="width:80%"></div></div>
+            <span class="subtopic-percent">80%</span>
+          </div>
+        </div>
+        <div class="subtopic-row">
+          <span class="subtopic-name">副交感神経系</span>
+          <div class="subtopic-right">
+            <div class="subtopic-bar-track"><div class="subtopic-bar-fill" style="width:60%"></div></div>
+            <span class="subtopic-percent">60%</span>
+          </div>
+        </div>
+        <div class="subtopic-row">
+          <span class="subtopic-name">抗がん剤</span>
+          <div class="subtopic-right">
+            <div class="subtopic-bar-track"><div class="subtopic-bar-fill" style="width:20%"></div></div>
+            <span class="subtopic-percent">20%</span>
+          </div>
+        </div>
+        <div class="subtopic-row">
+          <span class="subtopic-name">ホルモン薬</span>
+          <div class="subtopic-right">
+            <div class="subtopic-bar-track"><div class="subtopic-bar-fill" style="width:0%"></div></div>
+            <span class="subtopic-percent">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject-item">
+      <div class="subject-row">
+        <span class="subject-name">化学</span>
+        <span class="subject-percent">72%</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:72%"></div>
+      </div>
+    </div>
+
+    <div class="subject-item">
+      <div class="subject-row">
+        <span class="subject-name">生物</span>
+        <span class="subject-percent">35%</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:35%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="section-label">Actions</div>
+  <div class="actions">
+    <button class="action-btn">自分で選ぶ</button>
+    <button class="action-btn">付箋</button>
+    <button class="action-btn">ランダム10</button>
+  </div>
+
+</div>
+
+<!-- Bottom Nav -->
+<div class="bottom-nav">
+  <div class="nav-item active">ホーム</div>
+  <div class="nav-item">演習</div>
+  <div class="nav-item">ノート</div>
+  <div class="nav-item">分析</div>
+</div>
+
+</body>
+</html>

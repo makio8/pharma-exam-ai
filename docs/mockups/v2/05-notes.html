@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=390">
+<title>国試ノート — ノート</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --accent: #aa3bff;
+  --accent-light: rgba(170, 59, 255, 0.08);
+  --accent-mid: rgba(170, 59, 255, 0.15);
+  --accent-border: rgba(170, 59, 255, 0.25);
+  --bg: #f8f7fa;
+  --card: #ffffff;
+  --text: #1a1a2e;
+  --text-2: #6b7280;
+  --text-3: #9ca3af;
+  --border: #e8e5ee;
+  --ok: #10b981;
+  --ok-bg: #d1fae5;
+  --ng: #ef4444;
+  --ng-bg: #fee2e2;
+  --warn: #f59e0b;
+  --warn-bg: #fef3c7;
+  --blue: #2563eb;
+  --blue-bg: #eff6ff;
+  --orange: #ea580c;
+  --orange-bg: #fff7ed;
+  --green: #16a34a;
+  --green-bg: #f0fdf4;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+  --r: 14px;
+  --r-sm: 10px;
+  --r-chip: 20px;
+}
+body {
+  font-family: 'DM Sans', 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  width: 390px;
+  min-height: 1300px;
+  margin: 0 auto;
+  padding-bottom: 90px;
+  -webkit-font-smoothing: antialiased;
+}
+.content { padding: 0 20px; }
+.header {
+  padding: 16px 20px 12px;
+}
+.header-title { font-size: 20px; font-weight: 700; }
+
+/* Segment control */
+.segment-control {
+  display: flex;
+  margin: 0 20px 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+}
+.segment {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-2);
+  cursor: pointer;
+  border-right: 1px solid var(--border);
+  transition: all 0.2s;
+}
+.segment:last-child { border-right: none; }
+.segment.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Stats bar */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--text-3);
+  margin: 0 20px 20px;
+  padding: 10px;
+  background: var(--card);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+}
+.stats-bar span {
+  font-weight: 600;
+}
+
+/* Group header */
+.group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.group-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+.group-count {
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+/* Note card */
+.note-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+}
+.note-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.note-image {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  border-radius: var(--r-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--text-3);
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+}
+.note-desc {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.note-stats {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.note-actions {
+  display: flex;
+  gap: 8px;
+}
+.note-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: var(--r-sm);
+  border: 1.5px solid var(--border);
+  background: var(--card);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--text-2);
+  text-align: center;
+}
+.note-btn:hover { border-color: var(--accent-border); }
+
+/* Locked card */
+.note-card-locked {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+.note-card-locked::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+.lock-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px 0;
+}
+.lock-icon { font-size: 28px; margin-bottom: 8px; }
+.lock-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.lock-desc { font-size: 12px; color: var(--text-2); margin-bottom: 14px; }
+.premium-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #aa3bff, #7c3aed);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-sm);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 0 4px 16px rgba(170,59,255,0.3);
+}
+.locked-image {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+  border-radius: var(--r-sm);
+  filter: blur(3px);
+  margin-bottom: 10px;
+}
+
+/* Bottom nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px;
+  height: 72px;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 8px;
+  z-index: 101;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  color: var(--text-3);
+  cursor: pointer;
+}
+.nav-item.active { color: var(--accent); }
+.nav-icon { font-size: 22px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-title">📌 ノート</div>
+</div>
+
+<!-- Segment control -->
+<div class="segment-control">
+  <div class="segment active">マイ付箋</div>
+  <div class="segment">全付箋</div>
+  <div class="segment">暗記カード</div>
+</div>
+
+<!-- Stats bar -->
+<div class="stats-bar">
+  <span>ブックマーク 12枚</span>
+  <span>全付箋 1,000枚</span>
+  <span>今日の復習 5枚</span>
+</div>
+
+<div class="content">
+  <!-- Group 1 -->
+  <div class="group-header">
+    <div class="group-label">薬理 &gt; 交感神経系</div>
+    <div class="group-count">2件</div>
+  </div>
+
+  <div class="note-card">
+    <div class="note-title">📌 交感神経 α1受容体の作用機序</div>
+    <div class="note-image">🖼 手書き風イラスト：α1受容体と血管収縮</div>
+    <div class="note-desc">血管収縮、瞳孔散大、括約筋収縮...</div>
+    <div class="note-stats">🔥 12問で使う知識</div>
+    <div class="note-actions">
+      <button class="note-btn">🃏 暗記カード</button>
+      <button class="note-btn">📝 関連問題（12問）</button>
+    </div>
+  </div>
+
+  <div class="note-card">
+    <div class="note-title">📌 β受容体サブタイプの分類と作用</div>
+    <div class="note-image">🖼 手書き風イラスト：β1, β2受容体の比較表</div>
+    <div class="note-desc">β1: 心拍↑、β2: 気管支拡張...</div>
+    <div class="note-stats">🔥 8問で使う知識</div>
+    <div class="note-actions">
+      <button class="note-btn">🃏 暗記カード</button>
+      <button class="note-btn">📝 関連問題（8問）</button>
+    </div>
+  </div>
+
+  <!-- Group 2 -->
+  <div class="group-header">
+    <div class="group-label">化学 &gt; 有機化合物</div>
+    <div class="group-count">1件</div>
+  </div>
+
+  <div class="note-card-locked">
+    <div class="locked-image"></div>
+    <div class="lock-overlay">
+      <div class="lock-icon">🔒</div>
+      <div class="lock-title">芳香族化合物の命名法</div>
+      <div class="lock-desc">プレミアムで全1,000枚の付箋が使えます</div>
+      <button class="premium-btn">💎 プレミアムで解放</button>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Nav -->
+<div class="bottom-nav">
+  <div class="nav-item">
+    <div class="nav-icon">🏠</div>
+    <span>ホーム</span>
+  </div>
+  <div class="nav-item">
+    <div class="nav-icon">📝</div>
+    <span>演習</span>
+  </div>
+  <div class="nav-item active">
+    <div class="nav-icon">📌</div>
+    <span>ノート</span>
+  </div>
+  <div class="nav-item">
+    <div class="nav-icon">📊</div>
+    <span>分析</span>
+  </div>
+</div>
+
+</body>
+</html>

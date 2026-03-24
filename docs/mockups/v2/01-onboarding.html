@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=390">
+<title>国試ノート — オンボーディング</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --accent: #aa3bff;
+  --accent-light: rgba(170, 59, 255, 0.08);
+  --accent-mid: rgba(170, 59, 255, 0.15);
+  --accent-border: rgba(170, 59, 255, 0.25);
+  --bg: #f8f7fa;
+  --card: #ffffff;
+  --text: #1a1a2e;
+  --text-2: #6b7280;
+  --text-3: #9ca3af;
+  --border: #e8e5ee;
+  --ok: #10b981;
+  --ok-bg: #d1fae5;
+  --ng: #ef4444;
+  --ng-bg: #fee2e2;
+  --warn: #f59e0b;
+  --warn-bg: #fef3c7;
+  --blue: #2563eb;
+  --blue-bg: #eff6ff;
+  --orange: #ea580c;
+  --orange-bg: #fff7ed;
+  --green: #16a34a;
+  --green-bg: #f0fdf4;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+  --r: 14px;
+  --r-sm: 10px;
+  --r-chip: 20px;
+}
+body {
+  font-family: 'DM Sans', 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  width: 390px;
+  min-height: 1400px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+}
+.screen {
+  padding: 24px 20px;
+  border-bottom: 3px dashed var(--border);
+  position: relative;
+}
+.screen:last-child { border-bottom: none; }
+.screen-label {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+}
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--r);
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(170,59,255,0.3);
+}
+.btn-primary:hover { opacity: 0.9; }
+.skip-link {
+  display: block;
+  text-align: center;
+  color: var(--text-3);
+  font-size: 14px;
+  margin-top: 16px;
+  text-decoration: underline;
+}
+
+/* Screen 1 */
+.hero-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin: 20px 0 8px;
+}
+.hero-sub {
+  font-size: 15px;
+  color: var(--text-2);
+  text-align: center;
+  margin-bottom: 28px;
+}
+.goal-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.goal-card:hover { border-color: var(--accent); }
+.goal-icon { font-size: 32px; flex-shrink: 0; }
+.goal-label { font-size: 16px; font-weight: 600; }
+.goal-desc { font-size: 13px; color: var(--text-2); margin-top: 2px; }
+
+/* Screen 2 */
+.progress-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.progress-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.prog-bar-lg {
+  height: 8px;
+  background: #f3f4f6;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.prog-fill-lg {
+  height: 100%;
+  border-radius: 4px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+.prog-label {
+  font-size: 13px;
+  color: var(--text-2);
+  font-weight: 600;
+}
+.q-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-right: 6px;
+}
+.q-badge-blue { background: var(--blue-bg); color: var(--blue); }
+.q-text {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+.q-meta {
+  font-size: 12px;
+  color: var(--text-3);
+  margin-bottom: 14px;
+}
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-sm);
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.option:hover { border-color: var(--accent-border); }
+.option-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  flex-shrink: 0;
+}
+.timer {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-2);
+  margin-top: 16px;
+  font-variant-numeric: tabular-nums;
+}
+.timer span { font-weight: 700; font-size: 18px; color: var(--text); }
+
+/* Screen 3 */
+.result-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 16px 0 4px;
+}
+.confetti-accent {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+.map-subtitle {
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-2);
+  margin-bottom: 20px;
+}
+.subject-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.subject-row:last-child { border-bottom: none; }
+.subject-name { font-weight: 600; min-width: 50px; }
+.dots { flex: 1; margin: 0 12px; letter-spacing: 2px; }
+.pct { font-weight: 700; font-variant-numeric: tabular-nums; min-width: 40px; text-align: right; }
+.pct-tag {
+  font-size: 11px;
+  margin-left: 6px;
+  font-weight: 500;
+}
+.plan-note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-2);
+  margin: 20px 0 16px;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+
+<!-- Screen 1: Goal Selection -->
+<div class="screen">
+  <div class="screen-label">Screen 1</div>
+  <div style="text-align: center; font-size: 48px; margin-top: 20px;">💊</div>
+  <div class="hero-title">国試ノートへようこそ！</div>
+  <div class="hero-sub">あなたの目標を教えてください</div>
+
+  <div class="card goal-card">
+    <div class="goal-icon">🎓</div>
+    <div>
+      <div class="goal-label">国家試験対策</div>
+      <div class="goal-desc">5-6年生向け・本番まで徹底対策</div>
+    </div>
+  </div>
+
+  <div class="card goal-card">
+    <div class="goal-icon">📚</div>
+    <div>
+      <div class="goal-label">CBT対策</div>
+      <div class="goal-desc">4年生向け・基礎力をしっかり固める</div>
+    </div>
+  </div>
+
+  <div class="card goal-card">
+    <div class="goal-icon">🔄</div>
+    <div>
+      <div class="goal-label">再チャレンジ</div>
+      <div class="goal-desc">既卒・もう一度基礎から見直す</div>
+    </div>
+  </div>
+
+  <div class="skip-link">スキップ</div>
+</div>
+
+<!-- Screen 2: Placement Test -->
+<div class="screen">
+  <div class="screen-label">Screen 2</div>
+  <div class="progress-header">
+    <h2>📝 実力測定中</h2>
+    <div class="prog-bar-lg" style="max-width: 280px; margin: 0 auto;">
+      <div class="prog-fill-lg" style="width: 33%;"></div>
+    </div>
+    <div class="prog-label" style="margin-top: 8px;">6 / 18 問</div>
+  </div>
+
+  <div class="card" style="margin-top: 16px;">
+    <div>
+      <span class="q-badge q-badge-blue">必須</span>
+      <span style="font-size: 12px; color: var(--text-3);">第105回 問12 | 薬理</span>
+    </div>
+    <div class="q-text">アドレナリンα1受容体を遮断する薬物はどれか。1つ選べ。</div>
+  </div>
+
+  <div class="option">
+    <div class="option-radio"></div>
+    <span>1. プラゾシン</span>
+  </div>
+  <div class="option">
+    <div class="option-radio"></div>
+    <span>2. アテノロール</span>
+  </div>
+  <div class="option">
+    <div class="option-radio"></div>
+    <span>3. プロプラノロール</span>
+  </div>
+  <div class="option">
+    <div class="option-radio"></div>
+    <span>4. チモロール</span>
+  </div>
+  <div class="option">
+    <div class="option-radio"></div>
+    <span>5. ピンドロール</span>
+  </div>
+
+  <div class="timer">
+    経過時間 <span>1:42</span> / 5:00
+  </div>
+</div>
+
+<!-- Screen 3: Results -->
+<div class="screen">
+  <div class="screen-label">Screen 3</div>
+  <div class="confetti-accent">🎉✨🎊</div>
+  <div class="result-title">実力測定 完了！</div>
+  <div class="map-subtitle">あなたの得意・苦手マップ</div>
+
+  <div class="card" style="padding: 0; overflow: hidden;">
+    <div class="subject-row">
+      <span class="subject-name">薬理</span>
+      <span class="dots" style="color: var(--warn);">●●○</span>
+      <span class="pct" style="color: var(--warn);">67%</span>
+    </div>
+    <div class="subject-row">
+      <span class="subject-name">化学</span>
+      <span class="dots" style="color: var(--ok);">●●●</span>
+      <span class="pct" style="color: var(--ok);">100%</span>
+      <span class="pct-tag" style="color: var(--ok);">✅</span>
+    </div>
+    <div class="subject-row" style="background: var(--warn-bg);">
+      <span class="subject-name">生物</span>
+      <span class="dots" style="color: var(--ng);">●○○</span>
+      <span class="pct" style="color: var(--ng);">33%</span>
+      <span class="pct-tag" style="color: var(--ng);">← ここから始めよう！</span>
+    </div>
+    <div class="subject-row">
+      <span class="subject-name">物理</span>
+      <span class="dots" style="color: var(--warn);">●●○</span>
+      <span class="pct" style="color: var(--warn);">67%</span>
+    </div>
+    <div class="subject-row" style="background: var(--ng-bg);">
+      <span class="subject-name">薬剤</span>
+      <span class="dots" style="color: var(--ng);">○○○</span>
+      <span class="pct" style="color: var(--ng);">0%</span>
+      <span class="pct-tag" style="color: var(--ng);">⚠️</span>
+    </div>
+    <div class="subject-row">
+      <span class="subject-name">実務</span>
+      <span class="dots" style="color: var(--ok);">●●●</span>
+      <span class="pct" style="color: var(--ok);">100%</span>
+      <span class="pct-tag" style="color: var(--ok);">✅</span>
+    </div>
+  </div>
+
+  <div class="plan-note">苦手分野から学習プランを作成しました 🎯<br>まずは生物・薬剤から始めましょう</div>
+
+  <button class="btn-primary">学習を始める</button>
+</div>
+
+</body>
+</html>

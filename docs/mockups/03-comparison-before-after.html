@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=840">
+<title>Before / After 比較</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'DM Sans', 'Noto Sans JP', sans-serif;
+  background: #1a1a2e;
+  color: white;
+  width: 840px;
+  margin: 0 auto;
+  padding: 40px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+.subtitle {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.comparison {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.panel {
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+.panel-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.panel-label.before {
+  background: rgba(239, 68, 68, 0.9);
+}
+.panel-label.after {
+  background: rgba(16, 185, 129, 0.9);
+}
+
+/* Before パネル（現在のデザイン模擬） */
+.before-mock {
+  background: #ffffff;
+  color: #333;
+  padding: 20px 16px;
+  min-height: 600px;
+  font-size: 13px;
+}
+.before-mock h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 12px;
+}
+.mock-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+.mock-card-title {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #666;
+}
+.mock-select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+  color: #9ca3af;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.mock-radio-group {
+  display: flex;
+  gap: 0;
+  margin-bottom: 4px;
+}
+.mock-radio {
+  padding: 4px 10px;
+  border: 1px solid #d1d5db;
+  font-size: 12px;
+  background: white;
+  color: #666;
+}
+.mock-radio:first-child { border-radius: 4px 0 0 4px; }
+.mock-radio:last-child { border-radius: 0 4px 4px 0; }
+.mock-radio.active { background: #1677ff; color: white; border-color: #1677ff; }
+.mock-switch-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 6px;
+}
+.mock-switch {
+  width: 32px;
+  height: 18px;
+  background: #1677ff;
+  border-radius: 9px;
+  position: relative;
+}
+.mock-switch::after {
+  content: '';
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+}
+.mock-input {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+.mock-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 8px 0;
+}
+.mock-question-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 0;
+  font-size: 12px;
+}
+.mock-tag {
+  padding: 1px 6px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 3px;
+  font-size: 10px;
+}
+.mock-btn {
+  background: #1677ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+.problem-label {
+  font-size: 10px;
+  color: #ef4444;
+  background: #fef2f2;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: auto;
+}
+
+/* After パネル */
+.after-mock {
+  background: #f8f7fa;
+  color: #1a1a2e;
+  padding: 20px 16px;
+  min-height: 600px;
+  font-size: 13px;
+}
+.after-mock h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.after-subtitle {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-bottom: 16px;
+}
+.after-section-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+  margin-top: 14px;
+}
+.after-presets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.after-preset {
+  background: white;
+  border: 1.5px solid #e8e5ee;
+  border-radius: 10px;
+  padding: 10px;
+}
+.after-preset.active {
+  border-color: #aa3bff;
+  background: rgba(170, 59, 255, 0.06);
+}
+.after-preset-icon { font-size: 18px; }
+.after-preset-name { font-size: 12px; font-weight: 600; margin-top: 2px; }
+.after-preset-desc { font-size: 9px; color: #9ca3af; }
+.after-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.after-chip {
+  padding: 6px 12px;
+  border-radius: 16px;
+  border: 1.5px solid #e8e5ee;
+  background: white;
+  font-size: 11px;
+  color: #6b7280;
+}
+.after-chip.active {
+  background: #aa3bff;
+  color: white;
+  border-color: #aa3bff;
+}
+.after-q-card {
+  background: white;
+  border: 1px solid #e8e5ee;
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+}
+.after-q-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.after-q-badge {
+  font-size: 9px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+.after-q-title { font-size: 11px; font-weight: 600; }
+.after-q-subject { font-size: 10px; color: #9ca3af; }
+.after-q-status {
+  margin-left: auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+}
+.after-q-status.ok { background: #d1fae5; color: #059669; }
+.after-q-status.ng { background: #fee2e2; color: #dc2626; }
+.after-q-text { font-size: 11px; color: #6b7280; line-height: 1.4; }
+.after-q-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+.after-q-hammers { font-size: 9px; }
+.after-q-bar {
+  flex: 1;
+  height: 3px;
+  background: #f3f4f6;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.after-q-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+}
+.after-q-rate { font-size: 10px; color: #9ca3af; }
+
+.after-start-btn {
+  background: #aa3bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  width: 100%;
+  margin-top: 16px;
+  box-shadow: 0 4px 12px rgba(170, 59, 255, 0.25);
+}
+
+/* 下部のポイント解説 */
+.points-section {
+  margin-top: 48px;
+}
+.points-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.points-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+.point-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+}
+.point-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.point-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.point-desc {
+  font-size: 12px;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+.highlight {
+  color: #c084fc;
+  font-weight: 600;
+}
+</style>
+</head>
+<body>
+
+<h1>💊 pharma-exam-ai リデザイン案</h1>
+<p class="subtitle">演習ページ（PracticePage）— Before / After 比較</p>
+
+<div class="comparison">
+  <!-- Before -->
+  <div class="panel">
+    <div class="panel-label before">BEFORE（現在）</div>
+    <div class="before-mock">
+      <h3>演習モード</h3>
+      <div class="mock-card">
+        <div class="mock-card-title">フィルター</div>
+        <div style="font-size:11px;color:#999;margin-bottom:3px;">科目</div>
+        <div class="mock-select">科目を選択 ▾</div>
+        <div style="font-size:11px;color:#999;margin-bottom:3px;">年度（回）</div>
+        <div class="mock-select">年度を選択 ▾</div>
+        <div style="font-size:11px;color:#999;margin-bottom:3px;">区分</div>
+        <div class="mock-select">区分を選択 ▾</div>
+        <div style="font-size:11px;color:#999;margin-bottom:3px;">正誤ステータス</div>
+        <div class="mock-radio-group">
+          <div class="mock-radio active">全て</div>
+          <div class="mock-radio">正解</div>
+          <div class="mock-radio">不正解</div>
+          <div class="mock-radio">未回答</div>
+        </div>
+        <br>
+        <div class="mock-switch-row">正答率60%以上のみ: <div class="mock-switch"></div> <span style="font-size:10px;">(難問を除外中)</span></div>
+        <div class="mock-switch-row">画像問題のみ: <div class="mock-switch" style="background:#ccc;"></div></div>
+        <br>
+        <div class="mock-input">キーワードで検索（問題文・タグ・...）🔍</div>
+      </div>
+      <div class="mock-card">
+        <div style="display:flex;align-items:center;gap:8px;font-size:12px;">
+          問題数:
+          <div class="mock-radio-group">
+            <div class="mock-radio active">10問</div>
+            <div class="mock-radio">20問</div>
+            <div class="mock-radio">全問</div>
+          </div>
+          ランダム順: <div class="mock-switch" style="background:#ccc;width:28px;height:16px;"></div>
+        </div>
+        <div class="mock-btn" style="margin-top:8px;">▶ 演習開始（10問）</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin:10px 0 6px;">
+        <span style="font-size:12px;font-weight:600;">3470問</span>
+        <span class="problem-label">スクロール必須</span>
+      </div>
+      <div class="mock-question-row">
+        <span class="mock-tag">必須</span>
+        <b>第100回</b> 問1 | 物理
+        <span style="margin-left:auto;">⊖ 解く</span>
+      </div>
+      <div class="mock-divider"></div>
+      <div class="mock-question-row">
+        <span class="mock-tag">必須</span>
+        <b>第100回</b> 問2 | 物理
+        <span style="margin-left:auto;">⊖ 解く</span>
+      </div>
+      <div class="mock-divider"></div>
+      <div class="mock-question-row" style="color:#ccc;">
+        ...以下スクロール
+      </div>
+    </div>
+  </div>
+
+  <!-- After -->
+  <div class="panel">
+    <div class="panel-label after">AFTER（リデザイン）</div>
+    <div class="after-mock">
+      <h3>💊 演習モード</h3>
+      <div class="after-subtitle">3,470問から出題 ・ 11年分の過去問</div>
+
+      <div class="after-section-label">クイックスタート</div>
+      <div class="after-presets">
+        <div class="after-preset active">
+          <div class="after-preset-icon">🎯</div>
+          <div class="after-preset-name">苦手克服</div>
+          <div class="after-preset-desc">間違えた問題を重点復習</div>
+        </div>
+        <div class="after-preset">
+          <div class="after-preset-icon">📋</div>
+          <div class="after-preset-name">直前対策</div>
+          <div class="after-preset-desc">正答率60%以上・未回答</div>
+        </div>
+      </div>
+
+      <div class="after-section-label">科目</div>
+      <div class="after-chips">
+        <div class="after-chip active">物理</div>
+        <div class="after-chip active">化学</div>
+        <div class="after-chip">生物</div>
+        <div class="after-chip">薬理</div>
+        <div class="after-chip">薬剤</div>
+      </div>
+
+      <div class="after-section-label">年度</div>
+      <div class="after-chips">
+        <div class="after-chip">100</div>
+        <div class="after-chip active">103</div>
+        <div class="after-chip active">104</div>
+        <div class="after-chip">105</div>
+      </div>
+
+      <div style="margin-top:10px;text-align:center;font-size:11px;color:#9ca3af;border:1px dashed #e8e5ee;padding:8px;border-radius:8px;">
+        🔍 詳細フィルター（正答率・キーワード・画像問題）
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;margin:14px 0 8px;">
+        <span style="font-size:13px;font-weight:600;"><span style="color:#aa3bff;font-size:18px;font-weight:700;">248</span> 問ヒット</span>
+        <span style="font-size:10px;color:#9ca3af;border:1px solid #e8e5ee;padding:3px 8px;border-radius:6px;">▼ 年度順</span>
+      </div>
+
+      <div class="after-q-card">
+        <div class="after-q-top">
+          <span class="after-q-badge">必須</span>
+          <span class="after-q-title">第103回 問1</span>
+          <span class="after-q-subject">物理</span>
+          <span class="after-q-status ok">✓</span>
+        </div>
+        <div class="after-q-text">次に示す単位のうち、SI基本単位でないの...</div>
+        <div class="after-q-bar-row">
+          <span class="after-q-hammers">🔨🔨</span>
+          <div class="after-q-bar"><div class="after-q-bar-fill" style="width:82%;background:#10b981;"></div></div>
+          <span class="after-q-rate">82%</span>
+        </div>
+      </div>
+
+      <div class="after-q-card">
+        <div class="after-q-top">
+          <span class="after-q-badge" style="background:#fff7ed;color:#ea580c;">理論</span>
+          <span class="after-q-title">第103回 問2</span>
+          <span class="after-q-subject">物理</span>
+          <span class="after-q-status ng">✕</span>
+        </div>
+        <div class="after-q-text">正逆反応とも一次反応で進行する反応を...</div>
+        <div class="after-q-bar-row">
+          <span class="after-q-hammers">🔨🔨🔨</span>
+          <div class="after-q-bar"><div class="after-q-bar-fill" style="width:54%;background:#f59e0b;"></div></div>
+          <span class="after-q-rate">54%</span>
+        </div>
+      </div>
+
+      <button class="after-start-btn">▶ 演習開始（10問）</button>
+    </div>
+  </div>
+</div>
+
+<!-- 改善ポイント解説 -->
+<div class="points-section">
+  <div class="points-title">✨ 改善ポイント</div>
+  <div class="points-grid">
+    <div class="point-card">
+      <div class="point-icon">🎯</div>
+      <div class="point-title">スマートプリセット</div>
+      <div class="point-desc">
+        条件をゼロから組む → <span class="highlight">ワンタップで開始</span>。
+        Duolingo式「選ぶだけ」体験
+      </div>
+    </div>
+    <div class="point-card">
+      <div class="point-icon">💊</div>
+      <div class="point-title">チップ型フィルター</div>
+      <div class="point-desc">
+        ドロップダウン4ステップ → <span class="highlight">タップ1回</span>。
+        Spotify/YouTube式の横スクロール
+      </div>
+    </div>
+    <div class="point-card">
+      <div class="point-icon">📱</div>
+      <div class="point-title">ボトムシート</div>
+      <div class="point-desc">
+        詳細フィルターは<span class="highlight">必要時のみ表示</span>。
+        Airbnb/UberEats式モバイルUX
+      </div>
+    </div>
+    <div class="point-card">
+      <div class="point-icon">🔨</div>
+      <div class="point-title">難易度ハンマー</div>
+      <div class="point-desc">
+        正答率%を<span class="highlight">AMBOSS式アイコン</span>で直感表示。
+        エメリーにない独自機能
+      </div>
+    </div>
+    <div class="point-card">
+      <div class="point-icon">📊</div>
+      <div class="point-title">プログレスバー</div>
+      <div class="point-desc">
+        テーブル行 → <span class="highlight">視覚的な進捗カード</span>。
+        正答率が色で一目瞭然
+      </div>
+    </div>
+    <div class="point-card">
+      <div class="point-icon">💜</div>
+      <div class="point-title">紫アクセント</div>
+      <div class="point-desc">
+        エメリーの青 vs <span class="highlight">#aa3bff 紫</span>。
+        医療×モダンの信頼感
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

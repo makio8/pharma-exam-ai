@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=390, initial-scale=1.0">
+<title>Pattern A: Refined Medical</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 390px;
+    margin: 0 auto;
+    background: #0f0f1a;
+    color: #e2e8f0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(rgba(139,92,246,0.07) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .pattern-label {
+    background: rgba(139,92,246,0.15);
+    color: #a78bfa;
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(139,92,246,0.2);
+    position: relative;
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    padding: 20px 20px 100px;
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+  }
+
+  .app-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f1f5f9;
+    letter-spacing: -0.5px;
+  }
+
+  .streak-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(139,92,246,0.12);
+    border: 1px solid rgba(139,92,246,0.25);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #c4b5fd;
+  }
+
+  .streak-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Section heading */
+  .section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  /* Today's Menu */
+  .menu-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .menu-card {
+    background: rgba(26,26,46,0.8);
+    border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: border-color 0.2s;
+  }
+
+  .menu-card:hover {
+    border-color: rgba(139,92,246,0.2);
+  }
+
+  .menu-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .menu-icon.weak {
+    background: rgba(239,68,68,0.12);
+    border: 1px solid rgba(239,68,68,0.2);
+  }
+
+  .menu-icon.review {
+    background: rgba(6,182,212,0.12);
+    border: 1px solid rgba(6,182,212,0.2);
+  }
+
+  .menu-icon.challenge {
+    background: rgba(139,92,246,0.12);
+    border: 1px solid rgba(139,92,246,0.2);
+  }
+
+  .menu-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .menu-content {
+    flex: 1;
+  }
+
+  .menu-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 2px;
+  }
+
+  .menu-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #e2e8f0;
+  }
+
+  .menu-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: #94a3b8;
+    flex-shrink: 0;
+  }
+
+  .menu-meta.danger { color: #f87171; }
+  .menu-meta.info { color: #22d3ee; }
+  .menu-meta.good { color: #a78bfa; }
+
+  /* Quick Stats */
+  .stats-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .stat-box {
+    background: #1a1a2e;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+    padding: 16px 12px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    color: #f1f5f9;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-unit {
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: #475569;
+    margin-top: 2px;
+  }
+
+  /* Subject Progress */
+  .subjects {
+    margin-bottom: 28px;
+  }
+
+  .subject-item {
+    margin-bottom: 6px;
+  }
+
+  .subject-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+
+  .subject-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #cbd5e1;
+  }
+
+  .subject-percent {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: #94a3b8;
+  }
+
+  .progress-bar-track {
+    height: 4px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #06b6d4, #8b5cf6);
+    box-shadow: 0 0 8px rgba(6,182,212,0.3);
+    transition: width 0.5s ease;
+  }
+
+  /* Expanded subtopics */
+  .subtopics {
+    padding: 8px 0 8px 16px;
+    border-left: 2px solid rgba(139,92,246,0.2);
+    margin: 4px 0 8px 8px;
+  }
+
+  .subtopic-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+  }
+
+  .subtopic-name {
+    font-size: 12px;
+    color: #64748b;
+  }
+
+  .subtopic-percent {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #64748b;
+  }
+
+  .subtopic-bar-track {
+    height: 2px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 1px;
+    margin-top: 4px;
+  }
+
+  .subtopic-bar-fill {
+    height: 100%;
+    border-radius: 1px;
+    background: linear-gradient(90deg, #06b6d4, #8b5cf6);
+    opacity: 0.6;
+  }
+
+  /* Quick Actions */
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .action-btn {
+    background: #1a1a2e;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+    padding: 14px 8px;
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .action-btn:hover {
+    border-color: rgba(139,92,246,0.3);
+    color: #c4b5fd;
+  }
+
+  .action-icon {
+    display: block;
+    margin: 0 auto 6px;
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Bottom Nav */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 390px;
+    background: rgba(15,15,26,0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px 0 20px;
+    z-index: 10;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    color: #475569;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .nav-item.active {
+    color: #8b5cf6;
+  }
+
+  .nav-item svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .nav-item.active svg {
+    filter: drop-shadow(0 0 6px rgba(139,92,246,0.4));
+  }
+</style>
+</head>
+<body>
+
+<div class="pattern-label">Pattern A: Refined Medical</div>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="app-title">国試ノート</div>
+    <div class="streak-badge">
+      <svg class="streak-icon" viewBox="0 0 16 16" fill="none">
+        <path d="M8 1L10 6H14L11 9L12.5 14L8 11L3.5 14L5 9L2 6H6L8 1Z" fill="#a78bfa"/>
+      </svg>
+      5日連続
+    </div>
+  </div>
+
+  <!-- Today's Menu -->
+  <div class="section-title">Today's Menu</div>
+  <div class="menu-cards">
+    <div class="menu-card">
+      <div class="menu-icon weak">
+        <svg viewBox="0 0 20 20" fill="none">
+          <rect x="3" y="3" width="14" height="14" rx="2" stroke="#f87171" stroke-width="1.5"/>
+          <path d="M7 10h6" stroke="#f87171" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="menu-content">
+        <div class="menu-label">苦手</div>
+        <div class="menu-title">薬理 交感神経系</div>
+      </div>
+      <div class="menu-meta danger">33%</div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-icon review">
+        <svg viewBox="0 0 20 20" fill="none">
+          <rect x="3" y="3" width="14" height="14" rx="2" stroke="#22d3ee" stroke-width="1.5"/>
+          <path d="M7 7h6M7 10h4" stroke="#22d3ee" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="menu-content">
+        <div class="menu-label">復習カード</div>
+        <div class="menu-title">復習カード</div>
+      </div>
+      <div class="menu-meta info">8枚</div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-icon challenge">
+        <svg viewBox="0 0 20 20" fill="none">
+          <polygon points="10,2 12.5,7.5 18,8 14,12 15,17.5 10,14.5 5,17.5 6,12 2,8 7.5,7.5" stroke="#a78bfa" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+      <div class="menu-content">
+        <div class="menu-label">チャレンジ</div>
+        <div class="menu-title">化学 有機化合物</div>
+      </div>
+      <div class="menu-meta good">78%</div>
+    </div>
+  </div>
+
+  <!-- Quick Stats -->
+  <div class="section-title">Progress</div>
+  <div class="stats-row">
+    <div class="stat-box">
+      <div class="stat-number">142</div>
+      <div class="stat-unit">問</div>
+      <div class="stat-label">解答済み</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">8</div>
+      <div class="stat-unit">枚</div>
+      <div class="stat-label">復習カード</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">5</div>
+      <div class="stat-unit">日</div>
+      <div class="stat-label">連続学習</div>
+    </div>
+  </div>
+
+  <!-- Subject Progress -->
+  <div class="section-title">Subjects</div>
+  <div class="subjects">
+    <div class="subject-item">
+      <div class="subject-header">
+        <span class="subject-name">薬理</span>
+        <span class="subject-percent">45%</span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" style="width:45%"></div>
+      </div>
+      <div class="subtopics">
+        <div class="subtopic-item">
+          <span class="subtopic-name">交感神経系</span>
+          <span class="subtopic-percent">80%</span>
+        </div>
+        <div class="subtopic-bar-track"><div class="subtopic-bar-fill" style="width:80%"></div></div>
+        <div class="subtopic-item">
+          <span class="subtopic-name">副交感神経系</span>
+          <span class="subtopic-percent">60%</span>
+        </div>
+        <div class="subtopic-bar-track"><div class="subtopic-bar-fill" style="width:60%"></div></div>
+        <div class="subtopic-item">
+          <span class="subtopic-name">抗がん剤</span>
+          <span class="subtopic-percent">20%</span>
+        </div>
+        <div class="subtopic-bar-track"><div class="subtopic-bar-fill" style="width:20%"></div></div>
+        <div class="subtopic-item">
+          <span class="subtopic-name">ホルモン薬</span>
+          <span class="subtopic-percent">0%</span>
+        </div>
+        <div class="subtopic-bar-track"><div class="subtopic-bar-fill" style="width:0%"></div></div>
+      </div>
+    </div>
+
+    <div class="subject-item">
+      <div class="subject-header">
+        <span class="subject-name">化学</span>
+        <span class="subject-percent">72%</span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" style="width:72%"></div>
+      </div>
+    </div>
+
+    <div class="subject-item">
+      <div class="subject-header">
+        <span class="subject-name">生物</span>
+        <span class="subject-percent">35%</span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" style="width:35%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="section-title">Quick Actions</div>
+  <div class="actions">
+    <div class="action-btn">
+      <svg class="action-icon" viewBox="0 0 20 20" fill="none">
+        <circle cx="10" cy="10" r="7" stroke="#94a3b8" stroke-width="1.5"/>
+        <path d="M10 6v4l3 2" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      自分で選ぶ
+    </div>
+    <div class="action-btn">
+      <svg class="action-icon" viewBox="0 0 20 20" fill="none">
+        <rect x="4" y="2" width="12" height="16" rx="1" stroke="#94a3b8" stroke-width="1.5"/>
+        <path d="M7 6h6M7 9h4" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      付箋
+    </div>
+    <div class="action-btn">
+      <svg class="action-icon" viewBox="0 0 20 20" fill="none">
+        <path d="M4 10a6 6 0 1 1 12 0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M10 4v2M16 10h-2M4 10h2" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      ランダム10
+    </div>
+  </div>
+
+</div>
+
+<!-- Bottom Nav -->
+<div class="bottom-nav">
+  <div class="nav-item active">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M3 12L12 4l9 8v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8z" fill="#8b5cf6" opacity="0.2"/>
+      <path d="M3 12L12 4l9 8v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8z" stroke="#8b5cf6" stroke-width="1.5"/>
+    </svg>
+    ホーム
+  </div>
+  <div class="nav-item">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" stroke="#475569" stroke-width="1.5"/>
+      <path d="M9 12l2 2 4-4" stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    演習
+  </div>
+  <div class="nav-item">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M4 6h16M4 12h10M4 18h14" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    ノート
+  </div>
+  <div class="nav-item">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M4 20V10M10 20V4M16 20v-8M22 20v-4" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    分析
+  </div>
+</div>
+
+</body>
+</html>

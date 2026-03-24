@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=390">
+<title>国試ノート — 問題解答</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --accent: #aa3bff;
+  --accent-light: rgba(170, 59, 255, 0.08);
+  --accent-mid: rgba(170, 59, 255, 0.15);
+  --accent-border: rgba(170, 59, 255, 0.25);
+  --bg: #f8f7fa;
+  --card: #ffffff;
+  --text: #1a1a2e;
+  --text-2: #6b7280;
+  --text-3: #9ca3af;
+  --border: #e8e5ee;
+  --ok: #10b981;
+  --ok-bg: #d1fae5;
+  --ng: #ef4444;
+  --ng-bg: #fee2e2;
+  --warn: #f59e0b;
+  --warn-bg: #fef3c7;
+  --blue: #2563eb;
+  --blue-bg: #eff6ff;
+  --orange: #ea580c;
+  --orange-bg: #fff7ed;
+  --green: #16a34a;
+  --green-bg: #f0fdf4;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+  --r: 14px;
+  --r-sm: 10px;
+  --r-chip: 20px;
+}
+body {
+  font-family: 'DM Sans', 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  width: 390px;
+  min-height: 1400px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  -webkit-font-smoothing: antialiased;
+}
+.content { padding: 0 20px; }
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+.back-btn {
+  font-size: 14px;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+.q-counter {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+.top-bar-right { width: 48px; }
+.prog-bar-top {
+  height: 4px;
+  background: #f3f4f6;
+}
+.prog-fill-top {
+  height: 100%;
+  background: var(--accent);
+  width: 30%;
+}
+
+/* Result banner */
+.result-banner {
+  margin: 16px 20px;
+  padding: 14px 18px;
+  border-radius: var(--r);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+.banner-wrong {
+  background: var(--ng-bg);
+  color: var(--ng);
+  border: 1px solid rgba(239,68,68,0.2);
+}
+
+/* Question card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+}
+.q-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+.badge-blue { background: var(--blue-bg); color: var(--blue); }
+.q-meta { font-size: 12px; color: var(--text-3); }
+.q-text {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 12px 0 16px;
+}
+
+/* Options */
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-sm);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.option-correct {
+  border-color: var(--ok);
+  background: var(--ok-bg);
+}
+.option-correct .option-mark { color: var(--ok); font-weight: 700; }
+.option-wrong {
+  border-color: var(--ng);
+  background: var(--ng-bg);
+}
+.option-wrong .option-mark { color: var(--ng); font-weight: 700; }
+.option-num {
+  font-weight: 600;
+  color: var(--text-2);
+  min-width: 18px;
+}
+.option-text { flex: 1; }
+.option-mark { margin-left: auto; font-size: 16px; }
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-3);
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Explanation */
+.explanation {
+  line-height: 1.7;
+  font-size: 14px;
+  color: var(--text);
+}
+.explanation p { margin-bottom: 10px; }
+.key-point {
+  background: var(--accent-light);
+  border-left: 3px solid var(--accent);
+  padding: 12px 14px;
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  margin: 12px 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* Note card */
+.note-card {
+  background: var(--card);
+  border: 1.5px solid var(--accent-border);
+  border-radius: var(--r);
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-md);
+}
+.note-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+.note-image {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  border-radius: var(--r-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--text-3);
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+}
+.note-desc {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.note-stats {
+  font-size: 12px;
+  color: var(--text-3);
+  margin-bottom: 14px;
+}
+.note-stats span { margin-right: 12px; }
+.note-actions {
+  display: flex;
+  gap: 8px;
+}
+.note-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: var(--r-sm);
+  border: 1.5px solid var(--border);
+  background: var(--card);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--text);
+  text-align: center;
+}
+.note-btn:hover { border-color: var(--accent-border); }
+.note-btn-accent {
+  background: var(--accent-light);
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+/* Next button */
+.next-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--r);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 0 4px 16px rgba(170,59,255,0.3);
+}
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="top-bar">
+  <div class="back-btn">← 戻る</div>
+  <div class="q-counter">3 / 10問</div>
+  <div class="top-bar-right"></div>
+</div>
+<div class="prog-bar-top">
+  <div class="prog-fill-top"></div>
+</div>
+
+<!-- Result banner -->
+<div class="result-banner banner-wrong">✕ 不正解！ 正解は 1</div>
+
+<div class="content">
+  <!-- Question -->
+  <div class="card">
+    <div class="q-badges">
+      <span class="badge badge-blue">必須</span>
+      <span class="q-meta">第103回 問15 | 薬理</span>
+    </div>
+    <div class="q-text">アドレナリンα1受容体を遮断する薬物はどれか。1つ選べ。</div>
+  </div>
+
+  <!-- Options -->
+  <div class="option option-correct">
+    <span class="option-num">1.</span>
+    <span class="option-text">プラゾシン</span>
+    <span class="option-mark">✓ 正解</span>
+  </div>
+  <div class="option">
+    <span class="option-num">2.</span>
+    <span class="option-text">アテノロール</span>
+  </div>
+  <div class="option option-wrong">
+    <span class="option-num">3.</span>
+    <span class="option-text">プロプラノロール</span>
+    <span class="option-mark">✕ あなたの回答</span>
+  </div>
+  <div class="option">
+    <span class="option-num">4.</span>
+    <span class="option-text">チモロール</span>
+  </div>
+  <div class="option">
+    <span class="option-num">5.</span>
+    <span class="option-text">ピンドロール</span>
+  </div>
+
+  <!-- AI Explanation -->
+  <div class="divider">AI解説</div>
+
+  <div class="card">
+    <div class="explanation">
+      <p><strong>プラゾシン</strong>はα1受容体選択的遮断薬です。</p>
+      <p>α1受容体は血管平滑筋に存在し、遮断により<strong>血管拡張</strong>・<strong>血圧降下</strong>が起こります。高血圧症や前立腺肥大症に使用されます。</p>
+
+      <div class="key-point">
+        💡 <strong>覚え方：</strong>「プラゾシン = α1ブロッカー」<br>
+        選択肢2〜5はすべてβ受容体に作用する薬物です。アテノロール（β1選択性）、プロプラノロール・チモロール・ピンドロール（非選択性β遮断薬）
+      </div>
+
+      <p>この問題は<strong>交感神経受容体の分類</strong>を理解しているかを問うています。α受容体とβ受容体の違い、各サブタイプ（α1, α2, β1, β2）の作用を整理しましょう。</p>
+    </div>
+  </div>
+
+  <!-- Official Note -->
+  <div class="divider">📌 この問題の公式付箋</div>
+
+  <div class="note-card">
+    <div class="note-title">📌 交感神経の受容体と作用機序</div>
+    <div class="note-image">🖼 交感神経の受容体と作用機序（図解）</div>
+    <div class="note-desc">血管収縮(α1)、心拍数↑(β1)、気管支拡張(β2)...<br>各受容体のサブタイプと代表的な薬物を図解で整理</div>
+    <div class="note-stats">
+      <span>🔥 12問で使う知識</span>
+      <span>☆ 56人が保存</span>
+    </div>
+    <div class="note-actions">
+      <button class="note-btn">☆ ブックマーク</button>
+      <button class="note-btn note-btn-accent">🃏 暗記カードで覚える</button>
+    </div>
+  </div>
+
+  <!-- Next button -->
+  <button class="next-btn">次の問題 →</button>
+</div>
+
+</body>
+</html>

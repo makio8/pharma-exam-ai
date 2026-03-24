@@ -1,7 +1,13 @@
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useEffect, useRef, useState, useCallback, useImperativeHandle, forwardRef } from 'react'
 import type { KeyboardEvent } from 'react'
 import type { PageEstimate } from '../hooks/usePdfNavigation'
 import styles from './PdfViewer.module.css'
+
+/** 外部からPDFページ操作するためのハンドル */
+export interface PdfViewerHandle {
+  goToPrev: () => void
+  goToNext: () => void
+}
 
 // pdfjs-dist の型
 type PDFDocumentProxy = import('pdfjs-dist').PDFDocumentProxy
@@ -39,7 +45,7 @@ function getPdfUrl(filename: string): string {
   return `/@fs${import.meta.env.VITE_PROJECT_ROOT ?? ''}/data/pdfs/${filename}`
 }
 
-export function PdfViewer({
+export const PdfViewer = forwardRef<PdfViewerHandle, PdfViewerProps>(function PdfViewer({
   pdfFile,
   page,
   confidence,
@@ -49,7 +55,7 @@ export function PdfViewer({
   onPdfFileChange,
   canvasRef: externalCanvasRef,
   onCanvasReady,
-}: PdfViewerProps) {
+}, ref) {
   const internalCanvasRef = useRef<HTMLCanvasElement>(null)
   // 外部から canvasRef が渡されればそちらを使い、なければ内部 ref を使う
   const canvasRef = externalCanvasRef ?? internalCanvasRef
@@ -160,31 +166,18 @@ export function PdfViewer({
     renderPage(currentPage)
   }, [loadState, currentPage, renderPage])
 
-  // キーボードナビ（P/N キー）
-  useEffect(() => {
-    function handleKeyDown(e: globalThis.KeyboardEvent) {
-      // 入力フィールドにフォーカスがある場合はスキップ
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return
-
-      if (e.key === 'p' || e.key === 'P') {
-        e.preventDefault()
-        goToPage(currentPage - 1)
-      } else if (e.key === 'n' || e.key === 'N') {
-        e.preventDefault()
-        goToPage(currentPage + 1)
-      }
-    }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentPage, totalPages])
-
   function goToPage(pageNum: number) {
     const clamped = Math.max(1, Math.min(totalPages || 1, pageNum))
     setCurrentPage(clamped)
     setPageInputValue(String(clamped))
     onPageChange(clamped)
   }
+
+  // 外部からページ操作できるハンドルを公開
+  useImperativeHandle(ref, () => ({
+    goToPrev: () => goToPage(currentPage - 1),
+    goToNext: () => goToPage(currentPage + 1),
+  }))
 
   function handlePageInputChange(value: string) {
     setPageInputValue(value)
@@ -361,4 +354,4 @@ export function PdfViewer({
       </div>
     </div>
   )
-}
+})

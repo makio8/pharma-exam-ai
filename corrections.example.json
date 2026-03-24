@@ -1,0 +1,13 @@
+{
+  "reportTimestamp": "2026-03-24T00:00:00.000Z",
+  "baseGitCommit": "241284df0fafdc8dcc80bd56301fbe35665d6842",
+  "corrections": [
+    {
+      "questionId": "r111-001",
+      "type": "set-category",
+      "value": "物理化学 - 溶液・溶解度",
+      "reason": "カテゴリが空欄だったため補完",
+      "dataHash": "-fu8m1"
+    }
+  ]
+}

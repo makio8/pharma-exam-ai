@@ -1,0 +1,112 @@
+/* KeyboardHelp — キーボードショートカット一覧モーダル */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal {
+  background: var(--card, #ffffff);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  width: min(580px, 92vw);
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary, #2d2a27);
+  margin: 0;
+}
+
+.closeBtn {
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--border, #e8e4df);
+  border-radius: 0.375rem;
+  background: transparent;
+  color: var(--text-secondary, #8c7e6e);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.closeBtn:hover {
+  border-color: var(--accent, #c9734a);
+  color: var(--accent, #c9734a);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 2rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.groupTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary, #8c7e6e);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.25rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--border, #e8e4df);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.8125rem;
+}
+
+.key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.75rem;
+  height: 1.5rem;
+  padding: 0 0.375rem;
+  background: var(--bg, #faf8f5);
+  border: 1px solid var(--border, #e8e4df);
+  border-radius: 0.25rem;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary, #2d2a27);
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.label {
+  color: var(--text-primary, #2d2a27);
+}
+
+.footer {
+  margin-top: 1.25rem;
+  padding-top: 0.875rem;
+  border-top: 1px solid var(--border, #e8e4df);
+  font-size: 0.75rem;
+  color: var(--text-secondary, #8c7e6e);
+  text-align: center;
+}

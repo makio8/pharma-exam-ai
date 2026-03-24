@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import type { Question } from '../../../types/question'
 import type { ValidationIssue } from '../../../utils/data-validator/types'
 import type { JudgmentStatus } from '../types'
@@ -43,27 +43,6 @@ export function ReviewCard({
   useEffect(() => {
     setExpanded(false)
   }, [question.id])
-
-  // キーボードショートカット
-  const handleKey = useCallback((e: KeyboardEvent) => {
-    const tag = (e.target as HTMLElement).tagName
-    if (tag === 'INPUT' || tag === 'TEXTAREA') return
-    switch (e.key) {
-      case '1': onJudge('ok'); break
-      case '2': onJudge('needs-fix'); break
-      case '3': onJudge('ng'); break
-      case '0': onResetJudgment(); break
-      case 'ArrowRight':
-      case 'j': onNext(); break
-      case 'ArrowLeft':
-      case 'k': onPrev(); break
-    }
-  }, [onJudge, onResetJudgment, onNext, onPrev])
-
-  useEffect(() => {
-    window.addEventListener('keydown', handleKey)
-    return () => window.removeEventListener('keydown', handleKey)
-  }, [handleKey])
 
   // 選択肢ハイライト対象（issue の field が 'choices' のもの）
   const choiceIssueKeys = new Set<number>()
