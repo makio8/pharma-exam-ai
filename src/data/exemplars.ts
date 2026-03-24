@@ -1,4 +1,4 @@
-// 薬剤師国家試験 出題基準 例示マスタデータ（987件）
+// 薬剤師国家試験 出題基準 例示マスタデータ（986件）
 // 出典: 厚労省「薬剤師国家試験出題基準」別表Ⅰ〜Ⅶ
 // 自動生成: /tmp/parse-exemplars.js + scripts/split-exemplars.ts
 
@@ -890,7 +890,6 @@ export const EXEMPLARS: Exemplar[] = [
   { id: 'ex-practice-043d', minorCategory: '悪性腫瘍の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '悪性腫瘍の患者に対する服薬指導ができる。' },
   { id: 'ex-practice-043e', minorCategory: '感染症の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '感染症の患者に対する服薬指導ができる。' },
   { id: 'ex-practice-043f', minorCategory: '腎機能関連の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '腎機能障害のある患者に対する服薬指導ができる。' },
-  { id: 'ex-practice-043g', minorCategory: '呼吸器・吸入の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '喘息、COPD等の呼吸器疾患の患者に対する服薬指導ができる。' },
   { id: 'ex-practice-043h', minorCategory: '小児・妊婦・授乳婦の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '小児、妊婦、授乳婦に対する服薬指導ができる。' },
   { id: 'ex-practice-043i', minorCategory: '疼痛・緩和の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '疼痛管理・緩和ケアの患者に対する服薬指導ができる。' },
   { id: 'ex-practice-043j', minorCategory: '一般的な服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '患者・来局者の病状や背景に配慮し、一般的な服薬指導ができる。' },
@@ -946,7 +945,7 @@ export const EXEMPLARS: Exemplar[] = [
   { id: 'ex-practice-086', minorCategory: '患者の状態（疾患、重症度、合併症、肝・腎機能や全身状態、妊婦・授乳婦、小児、高齢者等の生理的特性、遺伝子の特性、心理・希', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '薬物治療の効果について、患者の症状や検査所見等から評価できる。' },
   { id: 'ex-practice-087a', minorCategory: '副作用の原因薬剤特定', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '副作用の原因となる薬剤を特定できる。' },
   { id: 'ex-practice-087b', minorCategory: '副作用の検査所見評価', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '副作用を検査所見等から評価できる。' },
-  { id: 'ex-practice-087c', minorCategory: '副作用対処・代替薬', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '副作用への対処や代替薬を提案できる。' },
+  { id: 'ex-practice-087c', minorCategory: '副作用評価一般', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '副作用への対処や代替薬の提案など、副作用評価一般について説明できる。' },
   { id: 'ex-practice-088', minorCategory: '薬物治療の効果', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '薬物治療の効果、副作用の発現、薬物血中濃度等に基づき、医師に対し、薬剤の種類、投与量、投与方法、投与期間等の変更を提案できる。' },
   { id: 'ex-practice-089', minorCategory: '薬物治療の効果、副作用の発現、薬物血中濃度等に基づき、医師に対し、薬剤の種類、投与量、投与方法、投与期間等の変更を提', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '患者の薬物治療上の問題点を列挙し、適切な評価と薬学的管理の立案を行い、SOAP形式等で適切に記録できる。' },
   { id: 'ex-practice-090', minorCategory: '薬物治療の効果、副作用の発現、薬物血中濃度等に基づき、医師に対し、薬剤の種類、投与量、投与方法、投与期間等の変更を提', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '医薬品・医療機器等安全性情報報告用紙に必要事項を記載し、報告できる。' },

@@ -4,12 +4,15 @@
  * Usage: npx tsx scripts/split-exemplars.ts
  *
  * 対象:
- *   ex-practice-043 (137問) → 10 sub-categories (043a〜043j)
+ *   ex-practice-043 (137問) → 9 sub-categories (043a〜043j、043gは0マッピングで除外)
  *   ex-practice-045 (48問)  → 4 sub-categories (045a〜045d)
  *   ex-practice-087 (38問)  → 3 sub-categories (087a〜087c)
  *   ex-pharmacology-067 (36問) → 4 sub-categories (067a〜067d)
  *   ex-practice-074 (32問)  → 3 sub-categories (074a〜074c)
  *   ex-practice-082 (30問)  → 3 sub-categories (082a〜082c)
+ *
+ * 分類対象フィールド: question_text + linked_scenario のみ
+ * （explanation, question_concepts は除外 — 解説文キーワードによる誤分類防止）
  */
 import * as fs from 'fs'
 import * as path from 'path'
@@ -44,7 +47,7 @@ interface SplitTarget {
 const splitTargets: SplitTarget[] = [
   {
     oldId: 'ex-practice-043',
-    catchAllIndex: 9, // 043j
+    catchAllIndex: 8, // 043j（043gを削除したため8に変更）
     subCategories: [
       { id: 'ex-practice-043a', minorCategory: '糖尿病・代謝の服薬指導', text: '糖尿病、脂質異常症等の代謝疾患の患者に対する服薬指導ができる。', keywords: ['糖尿病', 'インスリン', 'HbA1c', '血糖', 'コレステロール', '脂質', '痛風'] },
       { id: 'ex-practice-043b', minorCategory: '循環器の服薬指導', text: '高血圧、心不全、狭心症等の循環器疾患の患者に対する服薬指導ができる。', keywords: ['高血圧', '心不全', '狭心症', '不整脈', 'ワルファリン', '抗凝固'] },
@@ -52,14 +55,7 @@ const splitTargets: SplitTarget[] = [
       { id: 'ex-practice-043d', minorCategory: '悪性腫瘍の服薬指導', text: '悪性腫瘍の患者に対する服薬指導ができる。', keywords: ['抗がん', '腫瘍', 'がん', '化学療法', 'レジメン'] },
       { id: 'ex-practice-043e', minorCategory: '感染症の服薬指導', text: '感染症の患者に対する服薬指導ができる。', keywords: ['感染', '抗菌', '抗生', 'HIV', '肝炎', 'ウイルス'] },
       { id: 'ex-practice-043f', minorCategory: '腎機能関連の服薬指導', text: '腎機能障害のある患者に対する服薬指導ができる。', keywords: ['腎', '透析', 'eGFR', 'クレアチニン'] },
-      {
-        id: 'ex-practice-043g', minorCategory: '呼吸器・吸入の服薬指導', text: '喘息、COPD等の呼吸器疾患の患者に対する服薬指導ができる。',
-        keywords: ['喘息', 'COPD'],
-        // 吸入 alone is NOT enough - needs 喘息/COPD context
-        matchFn: (text: string) => {
-          return text.includes('喘息') || text.includes('COPD')
-        }
-      },
+      // 043g（呼吸器・吸入）は0マッピングのため削除（GPT-5.4指摘対応）
       { id: 'ex-practice-043h', minorCategory: '小児・妊婦・授乳婦の服薬指導', text: '小児、妊婦、授乳婦に対する服薬指導ができる。', keywords: ['小児', '乳児', '幼児', '妊婦', '妊娠', '授乳'] },
       { id: 'ex-practice-043i', minorCategory: '疼痛・緩和の服薬指導', text: '疼痛管理・緩和ケアの患者に対する服薬指導ができる。', keywords: ['疼痛', '鎮痛', 'オピオイド', 'モルヒネ', '緩和'] },
       { id: 'ex-practice-043j', minorCategory: '一般的な服薬指導', text: '患者・来局者の病状や背景に配慮し、一般的な服薬指導ができる。', keywords: [] },
@@ -81,7 +77,7 @@ const splitTargets: SplitTarget[] = [
     subCategories: [
       { id: 'ex-practice-087a', minorCategory: '副作用の原因薬剤特定', text: '副作用の原因となる薬剤を特定できる。', keywords: ['原因', '疑', '可能性が高い', '該当する薬剤'] },
       { id: 'ex-practice-087b', minorCategory: '副作用の検査所見評価', text: '副作用を検査所見等から評価できる。', keywords: ['検査', '所見', 'データ', '値'] },
-      { id: 'ex-practice-087c', minorCategory: '副作用対処・代替薬', text: '副作用への対処や代替薬を提案できる。', keywords: ['対処', '代替', '変更', '中止', '提案'] },
+      { id: 'ex-practice-087c', minorCategory: '副作用評価一般', text: '副作用への対処や代替薬の提案など、副作用評価一般について説明できる。', keywords: ['対処', '代替', '変更', '中止', '提案'] },
     ]
   },
   {
@@ -147,11 +143,10 @@ function classifyQuestion(questionId: string, target: SplitTarget): string {
     return target.subCategories[target.catchAllIndex].id
   }
 
-  // 検索対象テキストを結合
+  // 検索対象テキストを結合（question_text と linked_scenario のみ）
+  // explanation と question_concepts は除外 — 解説文中のキーワードによる誤分類を防ぐ
   const searchText = [
     question.question_text,
-    question.explanation,
-    ...(question.question_concepts || []),
     question.linked_scenario || '',
   ].join(' ')
 
@@ -292,7 +287,7 @@ for (const target of splitTargets) {
     }
   }
 }
-if (allNewIdsExist) console.log(`  新ID 27件すべて存在 ✅`)
+if (allNewIdsExist) console.log(`  新ID 26件すべて存在 ✅`)
 
 // 例示総数
 console.log(`  例示総数: ${EXEMPLARS.length} → ${finalExemplars.length} (差: +${finalExemplars.length - EXEMPLARS.length})`)
@@ -358,7 +353,7 @@ console.log(`📝 question-exemplar-map.ts 更新 (${newMappings.length}件)`)
 
 console.log(`\n📊 分割サマリー:`)
 console.log(`  旧例示: 6件削除`)
-console.log(`  新例示: 27件追加`)
+console.log(`  新例示: 26件追加（043g除外）`)
 console.log(`  例示総数: ${EXEMPLARS.length} → ${finalExemplars.length}`)
 console.log(`  マッピング総数: ${beforeMappingCount} → ${afterMappingCount} (変化なし ✅)`)
 

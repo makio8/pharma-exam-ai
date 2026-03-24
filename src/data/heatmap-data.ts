@@ -792,10 +792,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067b",
+    "exemplarId": "ex-pharmacology-067d",
     "year": 100,
-    "count": 1,
-    "primaryCount": 0
+    "count": 4,
+    "primaryCount": 2
   },
   {
     "subject": "法規・制度・倫理",
@@ -1757,13 +1757,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 0
   },
   {
-    "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067a",
-    "year": 100,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
     "subject": "病態・薬物治療",
     "exemplarId": "ex-pathology-090",
     "year": 100,
@@ -2138,8 +2131,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-043j",
     "year": 100,
-    "count": 7,
-    "primaryCount": 6
+    "count": 8,
+    "primaryCount": 7
   },
   {
     "subject": "実務",
@@ -2196,13 +2189,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "year": 100,
     "count": 1,
     "primaryCount": 0
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043b",
-    "year": 100,
-    "count": 3,
-    "primaryCount": 3
   },
   {
     "subject": "病態・薬物治療",
@@ -2387,6 +2373,13 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 0
   },
   {
+    "subject": "実務",
+    "exemplarId": "ex-practice-043b",
+    "year": 100,
+    "count": 2,
+    "primaryCount": 2
+  },
+  {
     "subject": "病態・薬物治療",
     "exemplarId": "ex-pathology-031",
     "year": 100,
@@ -2518,13 +2511,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "year": 100,
     "count": 3,
     "primaryCount": 2
-  },
-  {
-    "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067d",
-    "year": 100,
-    "count": 2,
-    "primaryCount": 1
   },
   {
     "subject": "実務",
@@ -2710,7 +2696,7 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-087b",
+    "exemplarId": "ex-practice-087c",
     "year": 100,
     "count": 1,
     "primaryCount": 0
@@ -4068,10 +4054,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067a",
+    "exemplarId": "ex-pharmacology-067d",
     "year": 101,
-    "count": 2,
-    "primaryCount": 2
+    "count": 1,
+    "primaryCount": 1
   },
   {
     "subject": "薬剤",
@@ -4287,8 +4273,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-087a",
     "year": 101,
-    "count": 4,
-    "primaryCount": 4
+    "count": 3,
+    "primaryCount": 3
   },
   {
     "subject": "物理",
@@ -4334,10 +4320,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-043c",
+    "exemplarId": "ex-practice-043f",
     "year": 101,
-    "count": 4,
-    "primaryCount": 4
+    "count": 1,
+    "primaryCount": 1
   },
   {
     "subject": "化学",
@@ -4359,6 +4345,13 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "year": 101,
     "count": 3,
     "primaryCount": 3
+  },
+  {
+    "subject": "実務",
+    "exemplarId": "ex-practice-043j",
+    "year": 101,
+    "count": 9,
+    "primaryCount": 9
   },
   {
     "subject": "化学",
@@ -4427,8 +4420,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-045d",
     "year": 101,
-    "count": 1,
-    "primaryCount": 1
+    "count": 2,
+    "primaryCount": 2
   },
   {
     "subject": "生物",
@@ -4453,10 +4446,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-043b",
+    "exemplarId": "ex-practice-043c",
     "year": 101,
-    "count": 1,
-    "primaryCount": 1
+    "count": 2,
+    "primaryCount": 2
   },
   {
     "subject": "実務",
@@ -4546,8 +4539,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-043a",
     "year": 101,
-    "count": 5,
-    "primaryCount": 5
+    "count": 4,
+    "primaryCount": 4
   },
   {
     "subject": "衛生",
@@ -4599,11 +4592,11 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 1
   },
   {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043j",
+    "subject": "薬理",
+    "exemplarId": "ex-pharmacology-067a",
     "year": 101,
-    "count": 5,
-    "primaryCount": 5
+    "count": 1,
+    "primaryCount": 1
   },
   {
     "subject": "薬理",
@@ -4690,13 +4683,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 1
   },
   {
-    "subject": "実務",
-    "exemplarId": "ex-practice-045a",
-    "year": 101,
-    "count": 2,
-    "primaryCount": 2
-  },
-  {
     "subject": "薬剤",
     "exemplarId": "ex-pharmaceutics-049",
     "year": 101,
@@ -4720,6 +4706,13 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "病態・薬物治療",
     "exemplarId": "ex-pathology-049",
+    "year": 101,
+    "count": 1,
+    "primaryCount": 1
+  },
+  {
+    "subject": "実務",
+    "exemplarId": "ex-practice-087c",
     "year": 101,
     "count": 1,
     "primaryCount": 1
@@ -4753,6 +4746,13 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 1
   },
   {
+    "subject": "実務",
+    "exemplarId": "ex-practice-045a",
+    "year": 101,
+    "count": 1,
+    "primaryCount": 1
+  },
+  {
     "subject": "病態・薬物治療",
     "exemplarId": "ex-pathology-045",
     "year": 101,
@@ -4775,7 +4775,7 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-082a",
+    "exemplarId": "ex-practice-082b",
     "year": 101,
     "count": 1,
     "primaryCount": 1
@@ -4888,13 +4888,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "実務",
     "exemplarId": "ex-practice-109",
-    "year": 101,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043h",
     "year": 101,
     "count": 1,
     "primaryCount": 1
@@ -5176,8 +5169,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "薬理",
     "exemplarId": "ex-pharmacology-067a",
     "year": 102,
-    "count": 3,
-    "primaryCount": 3
+    "count": 2,
+    "primaryCount": 2
   },
   {
     "subject": "薬剤",
@@ -6224,10 +6217,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-043a",
+    "exemplarId": "ex-practice-043j",
     "year": 102,
-    "count": 2,
-    "primaryCount": 2
+    "count": 10,
+    "primaryCount": 10
   },
   {
     "subject": "化学",
@@ -6408,8 +6401,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "薬理",
     "exemplarId": "ex-pharmacology-067d",
     "year": 102,
-    "count": 3,
-    "primaryCount": 3
+    "count": 4,
+    "primaryCount": 4
   },
   {
     "subject": "実務",
@@ -6431,13 +6424,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "year": 102,
     "count": 3,
     "primaryCount": 3
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043j",
-    "year": 102,
-    "count": 9,
-    "primaryCount": 9
   },
   {
     "subject": "薬理",
@@ -6575,6 +6561,13 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "病態・薬物治療",
     "exemplarId": "ex-pathology-032",
+    "year": 102,
+    "count": 1,
+    "primaryCount": 1
+  },
+  {
+    "subject": "実務",
+    "exemplarId": "ex-practice-043a",
     "year": 102,
     "count": 1,
     "primaryCount": 1
@@ -7358,10 +7351,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-043c",
+    "exemplarId": "ex-practice-043j",
     "year": 103,
-    "count": 3,
-    "primaryCount": 3
+    "count": 7,
+    "primaryCount": 7
   },
   {
     "subject": "実務",
@@ -8065,10 +8058,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-087b",
+    "exemplarId": "ex-practice-087c",
     "year": 103,
-    "count": 3,
-    "primaryCount": 3
+    "count": 2,
+    "primaryCount": 2
   },
   {
     "subject": "化学",
@@ -8295,18 +8288,18 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 2
   },
   {
+    "subject": "実務",
+    "exemplarId": "ex-practice-087b",
+    "year": 103,
+    "count": 2,
+    "primaryCount": 2
+  },
+  {
     "subject": "薬理",
     "exemplarId": "ex-pharmacology-031",
     "year": 103,
     "count": 1,
     "primaryCount": 1
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043j",
-    "year": 103,
-    "count": 4,
-    "primaryCount": 4
   },
   {
     "subject": "薬剤",
@@ -8389,8 +8382,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-087a",
     "year": 103,
-    "count": 2,
-    "primaryCount": 2
+    "count": 1,
+    "primaryCount": 1
   },
   {
     "subject": "病態・薬物治療",
@@ -8416,13 +8409,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "病態・薬物治療",
     "exemplarId": "ex-pathology-059",
-    "year": 103,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043h",
     "year": 103,
     "count": 1,
     "primaryCount": 1
@@ -8577,6 +8563,13 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "実務",
     "exemplarId": "ex-practice-039",
+    "year": 103,
+    "count": 1,
+    "primaryCount": 1
+  },
+  {
+    "subject": "実務",
+    "exemplarId": "ex-practice-043c",
     "year": 103,
     "count": 1,
     "primaryCount": 1
@@ -10013,8 +10006,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-074b",
     "year": 104,
-    "count": 4,
-    "primaryCount": 4
+    "count": 3,
+    "primaryCount": 3
   },
   {
     "subject": "生物",
@@ -10104,8 +10097,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-074c",
     "year": 104,
-    "count": 1,
-    "primaryCount": 1
+    "count": 2,
+    "primaryCount": 2
   },
   {
     "subject": "薬理",
@@ -10130,7 +10123,7 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067a",
+    "exemplarId": "ex-pharmacology-067d",
     "year": 104,
     "count": 1,
     "primaryCount": 1
@@ -10144,7 +10137,7 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067b",
+    "exemplarId": "ex-pharmacology-067c",
     "year": 104,
     "count": 1,
     "primaryCount": 1
@@ -10711,10 +10704,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067a",
+    "exemplarId": "ex-pharmacology-067d",
     "year": 105,
-    "count": 1,
-    "primaryCount": 1
+    "count": 2,
+    "primaryCount": 2
   },
   {
     "subject": "薬剤",
@@ -11714,8 +11707,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-043j",
     "year": 105,
-    "count": 3,
-    "primaryCount": 3
+    "count": 5,
+    "primaryCount": 5
   },
   {
     "subject": "実務",
@@ -11762,13 +11755,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "化学",
     "exemplarId": "ex-chemistry-103",
-    "year": 105,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
-    "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067b",
     "year": 105,
     "count": 1,
     "primaryCount": 1
@@ -11831,7 +11817,7 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-045a",
+    "exemplarId": "ex-practice-045d",
     "year": 105,
     "count": 2,
     "primaryCount": 2
@@ -11884,13 +11870,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "year": 105,
     "count": 1,
     "primaryCount": 1
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043a",
-    "year": 105,
-    "count": 2,
-    "primaryCount": 2
   },
   {
     "subject": "薬理",
@@ -11957,10 +11936,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-087b",
+    "exemplarId": "ex-practice-087c",
     "year": 105,
-    "count": 1,
-    "primaryCount": 1
+    "count": 2,
+    "primaryCount": 2
   },
   {
     "subject": "病態・薬物治療",
@@ -12083,10 +12062,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-087a",
+    "exemplarId": "ex-practice-087b",
     "year": 105,
-    "count": 2,
-    "primaryCount": 2
+    "count": 1,
+    "primaryCount": 1
   },
   {
     "subject": "病態・薬物治療",
@@ -12126,13 +12105,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "実務",
     "exemplarId": "ex-practice-002",
-    "year": 105,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043c",
     "year": 105,
     "count": 1,
     "primaryCount": 1
@@ -12187,13 +12159,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 1
   },
   {
-    "subject": "実務",
-    "exemplarId": "ex-practice-087c",
-    "year": 105,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
     "subject": "法規・制度・倫理",
     "exemplarId": "ex-law-071",
     "year": 105,
@@ -12237,6 +12202,13 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
+    "exemplarId": "ex-practice-043h",
+    "year": 105,
+    "count": 1,
+    "primaryCount": 1
+  },
+  {
+    "subject": "実務",
     "exemplarId": "ex-practice-089",
     "year": 105,
     "count": 1,
@@ -12259,6 +12231,13 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "実務",
     "exemplarId": "ex-practice-085",
+    "year": 105,
+    "count": 1,
+    "primaryCount": 1
+  },
+  {
+    "subject": "実務",
+    "exemplarId": "ex-practice-087a",
     "year": 105,
     "count": 1,
     "primaryCount": 1
@@ -12552,7 +12531,7 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067b",
+    "exemplarId": "ex-pharmacology-067d",
     "year": 106,
     "count": 1,
     "primaryCount": 1
@@ -12862,8 +12841,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-082c",
     "year": 106,
-    "count": 4,
-    "primaryCount": 4
+    "count": 5,
+    "primaryCount": 5
   },
   {
     "subject": "実務",
@@ -13714,10 +13693,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-043h",
+    "exemplarId": "ex-practice-043j",
     "year": 106,
-    "count": 1,
-    "primaryCount": 1
+    "count": 5,
+    "primaryCount": 5
   },
   {
     "subject": "生物",
@@ -13725,13 +13704,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "year": 106,
     "count": 2,
     "primaryCount": 2
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043j",
-    "year": 106,
-    "count": 4,
-    "primaryCount": 4
   },
   {
     "subject": "実務",
@@ -13895,15 +13867,15 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 1
   },
   {
-    "subject": "実務",
-    "exemplarId": "ex-practice-082b",
-    "year": 106,
-    "count": 2,
-    "primaryCount": 2
-  },
-  {
     "subject": "病態・薬物治療",
     "exemplarId": "ex-pathology-089",
+    "year": 106,
+    "count": 1,
+    "primaryCount": 1
+  },
+  {
+    "subject": "実務",
+    "exemplarId": "ex-practice-082b",
     "year": 106,
     "count": 1,
     "primaryCount": 1
@@ -15254,10 +15226,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067a",
+    "exemplarId": "ex-pharmacology-067d",
     "year": 107,
-    "count": 1,
-    "primaryCount": 1
+    "count": 4,
+    "primaryCount": 4
   },
   {
     "subject": "薬理",
@@ -15473,8 +15445,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-045d",
     "year": 107,
-    "count": 2,
-    "primaryCount": 2
+    "count": 3,
+    "primaryCount": 3
   },
   {
     "subject": "衛生",
@@ -15494,8 +15466,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-043a",
     "year": 107,
-    "count": 2,
-    "primaryCount": 2
+    "count": 1,
+    "primaryCount": 1
   },
   {
     "subject": "薬理",
@@ -15506,21 +15478,14 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-043c",
+    "exemplarId": "ex-practice-043j",
     "year": 107,
-    "count": 2,
-    "primaryCount": 2
+    "count": 8,
+    "primaryCount": 8
   },
   {
     "subject": "化学",
     "exemplarId": "ex-chemistry-043",
-    "year": 107,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043j",
     "year": 107,
     "count": 1,
     "primaryCount": 1
@@ -15559,13 +15524,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "year": 107,
     "count": 1,
     "primaryCount": 1
-  },
-  {
-    "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067b",
-    "year": 107,
-    "count": 2,
-    "primaryCount": 2
   },
   {
     "subject": "病態・薬物治療",
@@ -15659,13 +15617,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 2
   },
   {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043e",
-    "year": 107,
-    "count": 2,
-    "primaryCount": 2
-  },
-  {
     "subject": "薬理",
     "exemplarId": "ex-pharmacology-032",
     "year": 107,
@@ -15703,13 +15654,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "薬理",
     "exemplarId": "ex-pharmacology-057",
-    "year": 107,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-045c",
     "year": 107,
     "count": 1,
     "primaryCount": 1
@@ -15820,8 +15764,15 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 1
   },
   {
+    "subject": "薬理",
+    "exemplarId": "ex-pharmacology-067b",
+    "year": 107,
+    "count": 1,
+    "primaryCount": 1
+  },
+  {
     "subject": "実務",
-    "exemplarId": "ex-practice-043f",
+    "exemplarId": "ex-practice-043i",
     "year": 107,
     "count": 1,
     "primaryCount": 1
@@ -15881,13 +15832,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "year": 107,
     "count": 1,
     "primaryCount": 1
-  },
-  {
-    "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067d",
-    "year": 107,
-    "count": 2,
-    "primaryCount": 2
   },
   {
     "subject": "病態・薬物治療",
@@ -16021,13 +15965,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "year": 107,
     "count": 1,
     "primaryCount": 1
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043b",
-    "year": 107,
-    "count": 2,
-    "primaryCount": 2
   },
   {
     "subject": "病態・薬物治療",
@@ -16339,10 +16276,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067c",
+    "exemplarId": "ex-pharmacology-067d",
     "year": 108,
-    "count": 1,
-    "primaryCount": 1
+    "count": 2,
+    "primaryCount": 2
   },
   {
     "subject": "薬理",
@@ -17164,13 +17101,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 1
   },
   {
-    "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067a",
-    "year": 108,
-    "count": 2,
-    "primaryCount": 2
-  },
-  {
     "subject": "薬剤",
     "exemplarId": "ex-pharmaceutics-003",
     "year": 108,
@@ -17389,7 +17319,7 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-087a",
+    "exemplarId": "ex-practice-087b",
     "year": 108,
     "count": 3,
     "primaryCount": 3
@@ -17403,7 +17333,7 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-082a",
+    "exemplarId": "ex-practice-082b",
     "year": 108,
     "count": 1,
     "primaryCount": 1
@@ -17419,8 +17349,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-043a",
     "year": 108,
-    "count": 4,
-    "primaryCount": 4
+    "count": 3,
+    "primaryCount": 3
   },
   {
     "subject": "化学",
@@ -17496,8 +17426,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-045d",
     "year": 108,
-    "count": 2,
-    "primaryCount": 2
+    "count": 3,
+    "primaryCount": 3
   },
   {
     "subject": "生物",
@@ -17636,15 +17566,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-043j",
     "year": 108,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043e",
-    "year": 108,
-    "count": 1,
-    "primaryCount": 1
+    "count": 5,
+    "primaryCount": 5
   },
   {
     "subject": "薬理",
@@ -17668,18 +17591,11 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 1
   },
   {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043b",
+    "subject": "薬理",
+    "exemplarId": "ex-pharmacology-067a",
     "year": 108,
     "count": 1,
     "primaryCount": 1
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-087b",
-    "year": 108,
-    "count": 2,
-    "primaryCount": 2
   },
   {
     "subject": "実務",
@@ -17696,6 +17612,13 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 1
   },
   {
+    "subject": "実務",
+    "exemplarId": "ex-practice-087a",
+    "year": 108,
+    "count": 2,
+    "primaryCount": 2
+  },
+  {
     "subject": "薬剤",
     "exemplarId": "ex-pharmaceutics-023",
     "year": 108,
@@ -17710,25 +17633,11 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "primaryCount": 4
   },
   {
-    "subject": "実務",
-    "exemplarId": "ex-practice-045c",
-    "year": 108,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
     "subject": "薬剤",
     "exemplarId": "ex-pharmaceutics-060",
     "year": 108,
     "count": 2,
     "primaryCount": 2
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043d",
-    "year": 108,
-    "count": 1,
-    "primaryCount": 1
   },
   {
     "subject": "実務",
@@ -18215,7 +18124,7 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067a",
+    "exemplarId": "ex-pharmacology-067d",
     "year": 109,
     "count": 2,
     "primaryCount": 2
@@ -19316,8 +19225,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-087a",
     "year": 109,
-    "count": 5,
-    "primaryCount": 5
+    "count": 4,
+    "primaryCount": 4
   },
   {
     "subject": "実務",
@@ -19325,6 +19234,13 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "year": 109,
     "count": 1,
     "primaryCount": 1
+  },
+  {
+    "subject": "実務",
+    "exemplarId": "ex-practice-087c",
+    "year": 109,
+    "count": 2,
+    "primaryCount": 2
   },
   {
     "subject": "病態・薬物治療",
@@ -19385,13 +19301,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "衛生",
     "exemplarId": "ex-hygiene-035",
-    "year": 109,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-087c",
     "year": 109,
     "count": 1,
     "primaryCount": 1
@@ -19496,17 +19405,17 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-043e",
+    "exemplarId": "ex-practice-043j",
     "year": 109,
-    "count": 1,
-    "primaryCount": 1
+    "count": 3,
+    "primaryCount": 3
   },
   {
     "subject": "実務",
     "exemplarId": "ex-practice-043a",
     "year": 109,
-    "count": 4,
-    "primaryCount": 4
+    "count": 3,
+    "primaryCount": 3
   },
   {
     "subject": "薬理",
@@ -19581,13 +19490,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "実務",
     "exemplarId": "ex-practice-078",
-    "year": 109,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-043h",
     "year": 109,
     "count": 1,
     "primaryCount": 1
@@ -20028,10 +19930,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067b",
+    "exemplarId": "ex-pharmacology-067d",
     "year": 110,
-    "count": 2,
-    "primaryCount": 2
+    "count": 3,
+    "primaryCount": 3
   },
   {
     "subject": "薬理",
@@ -20854,13 +20756,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067a",
-    "year": 110,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
-    "subject": "薬理",
     "exemplarId": "ex-pharmacology-055",
     "year": 110,
     "count": 1,
@@ -21115,8 +21010,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-082c",
     "year": 110,
-    "count": 1,
-    "primaryCount": 1
+    "count": 2,
+    "primaryCount": 2
   },
   {
     "subject": "化学",
@@ -21159,13 +21054,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "year": 110,
     "count": 1,
     "primaryCount": 1
-  },
-  {
-    "subject": "実務",
-    "exemplarId": "ex-practice-082a",
-    "year": 110,
-    "count": 2,
-    "primaryCount": 2
   },
   {
     "subject": "病態・薬物治療",
@@ -21351,7 +21239,7 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-045a",
+    "exemplarId": "ex-practice-045d",
     "year": 110,
     "count": 2,
     "primaryCount": 2
@@ -21561,13 +21449,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "実務",
-    "exemplarId": "ex-practice-045b",
-    "year": 110,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
-    "subject": "実務",
     "exemplarId": "ex-practice-041",
     "year": 110,
     "count": 1,
@@ -21576,6 +21457,13 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "実務",
     "exemplarId": "ex-practice-084",
+    "year": 110,
+    "count": 1,
+    "primaryCount": 1
+  },
+  {
+    "subject": "実務",
+    "exemplarId": "ex-practice-045a",
     "year": 110,
     "count": 1,
     "primaryCount": 1
@@ -21681,6 +21569,13 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "法規・制度・倫理",
     "exemplarId": "ex-law-065",
+    "year": 110,
+    "count": 1,
+    "primaryCount": 1
+  },
+  {
+    "subject": "実務",
+    "exemplarId": "ex-practice-082b",
     "year": 110,
     "count": 1,
     "primaryCount": 1
@@ -21960,10 +21855,10 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067c",
+    "exemplarId": "ex-pharmacology-067d",
     "year": 111,
-    "count": 1,
-    "primaryCount": 1
+    "count": 4,
+    "primaryCount": 4
   },
   {
     "subject": "薬剤",
@@ -22667,13 +22562,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   },
   {
     "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067d",
-    "year": 111,
-    "count": 2,
-    "primaryCount": 2
-  },
-  {
-    "subject": "薬理",
     "exemplarId": "ex-pharmacology-010",
     "year": 111,
     "count": 1,
@@ -22794,13 +22682,6 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
   {
     "subject": "病態・薬物治療",
     "exemplarId": "ex-pathology-035",
-    "year": 111,
-    "count": 1,
-    "primaryCount": 1
-  },
-  {
-    "subject": "薬理",
-    "exemplarId": "ex-pharmacology-067a",
     "year": 111,
     "count": 1,
     "primaryCount": 1
@@ -23047,8 +22928,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-045d",
     "year": 111,
-    "count": 3,
-    "primaryCount": 3
+    "count": 4,
+    "primaryCount": 4
   },
   {
     "subject": "実務",
@@ -23117,8 +22998,8 @@ export const HEATMAP_CELLS: HeatmapCell[] = [
     "subject": "実務",
     "exemplarId": "ex-practice-045c",
     "year": 111,
-    "count": 2,
-    "primaryCount": 2
+    "count": 1,
+    "primaryCount": 1
   },
   {
     "subject": "生物",
