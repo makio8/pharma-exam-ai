@@ -153,9 +153,11 @@ export function qualityRules(
     }
 
     // ─── ルール 32: choice-text-duplicate ───
+    // 空テキスト（画像選択肢等）は除外。空文字の重複は choice-text-empty ルールで検出
     const choiceTextSet = new Set<string>()
     let hasDuplicate = false
     for (const choice of q.choices) {
+      if (choice.text.trim() === '') continue
       if (choiceTextSet.has(choice.text)) {
         hasDuplicate = true
         break

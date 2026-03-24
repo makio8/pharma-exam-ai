@@ -59,7 +59,7 @@ export function consistencyRules(
 
     // ─── ルール 23: image-file-exists ───
     if (q.image_url !== undefined && q.image_url !== null && context.imageDir !== '') {
-      // パスを結合してファイル存在チェック
+      // imageDir は public/ ディレクトリのルート。image_url は "/images/questions/..." 形式なのでそのまま結合
       const filePath = context.imageDir + q.image_url
       if (!existsSync(filePath)) {
         issues.push({

@@ -11,7 +11,11 @@ export function runAllRules(questions: Question[], context: ValidationContext): 
     ...qualityRules(questions, context),
   ]
 
-  const questionIdsWithIssues = new Set(allIssues.map(i => i.questionId))
+  // 付箋IDなど問題ID以外の questionId はカウントから除外
+  const questionIdSet = new Set(questions.map(q => q.id))
+  const questionIdsWithIssues = new Set(
+    allIssues.map(i => i.questionId).filter(id => questionIdSet.has(id)),
+  )
 
   const byYear: Record<number, { total: number; issues: number }> = {}
   for (const q of questions) {

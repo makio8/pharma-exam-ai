@@ -50,7 +50,7 @@ const context: ValidationContext = {
     topicId: n.topicId,
   })),
   questionIds: new Set(ALL_QUESTIONS.map(q => q.id)),
-  imageDir: path.join(__dirname, '..', 'public', 'images', 'questions'),
+  imageDir: path.join(__dirname, '..', 'public'),
 }
 
 // ─────────────────────────────────────────────
