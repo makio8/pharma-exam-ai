@@ -1,6 +1,6 @@
-// 薬剤師国家試験 出題基準 例示マスタデータ（951件）
+// 薬剤師国家試験 出題基準 例示マスタデータ（987件）
 // 出典: 厚労省「薬剤師国家試験出題基準」別表Ⅰ〜Ⅶ
-// 自動生成: /tmp/parse-exemplars.js
+// 自動生成: /tmp/parse-exemplars.js + scripts/split-exemplars.ts
 
 import type { Exemplar } from '../types/blueprint'
 
@@ -514,7 +514,10 @@ export const EXEMPLARS: Exemplar[] = [
   { id: 'ex-pharmacology-064', minorCategory: '褥瘡・皮膚潰瘍治療薬、その他の皮膚疾患（アトピー性皮膚炎、尋常性乾癬、尋常性痤瘡等）の治療薬の薬理（薬理作用、機序、主', middleCategoryId: 'pharmacology-antimicrobial-antitumor', subject: '薬理', text: '抗真菌薬の薬理（薬理作用、機序、主な副作用）を説明できる。' },
   { id: 'ex-pharmacology-065', minorCategory: 'ウイルス感染症治療薬', middleCategoryId: 'pharmacology-antimicrobial-antitumor', subject: '薬理', text: 'ウイルス感染症（ヘルペスウイルス感染症、サイトメガロウイルス感染症、インフルエンザ、ウイルス性肝炎、HIV）治療薬の薬理（薬理作用、機序、主な副作用）を説明できる。' },
   { id: 'ex-pharmacology-066', minorCategory: 'ウイルス感染症（ヘルペスウイルス感染症、サイトメガロウイルス感染症、インフルエンザ、ウイルス性肝炎、HIV）治療薬の薬理（薬', middleCategoryId: 'pharmacology-antimicrobial-antitumor', subject: '薬理', text: '原虫感染症・寄生虫感染症治療薬の薬理（薬理作用、機序、主な副作用）を説明できる。' },
-  { id: 'ex-pharmacology-067', minorCategory: 'ウイルス感染症（ヘルペスウイルス感染症、サイトメガロウイルス感染症、インフルエンザ、ウイルス性肝炎、HIV）治療薬の薬理（薬', middleCategoryId: 'pharmacology-antimicrobial-antitumor', subject: '薬理', text: '抗悪性腫瘍薬の薬理（薬理作用、機序、主な副作用）を説明できる。' },
+  { id: 'ex-pharmacology-067a', minorCategory: '細胞傷害性抗悪性腫瘍薬', middleCategoryId: 'pharmacology-antimicrobial-antitumor', subject: '薬理', text: '細胞傷害性の抗悪性腫瘍薬の薬理を説明できる。' },
+  { id: 'ex-pharmacology-067b', minorCategory: '分子標的薬', middleCategoryId: 'pharmacology-antimicrobial-antitumor', subject: '薬理', text: '分子標的薬の薬理を説明できる。' },
+  { id: 'ex-pharmacology-067c', minorCategory: 'ホルモン・免疫チェックポイント', middleCategoryId: 'pharmacology-antimicrobial-antitumor', subject: '薬理', text: 'ホルモン療法・免疫チェックポイント阻害薬の薬理を説明できる。' },
+  { id: 'ex-pharmacology-067d', minorCategory: '抗悪性腫瘍支持療法', middleCategoryId: 'pharmacology-antimicrobial-antitumor', subject: '薬理', text: '抗悪性腫瘍薬の支持療法について説明できる。' },
   { id: 'ex-pharmacology-068', minorCategory: 'ウイルス感染症（ヘルペスウイルス感染症、サイトメガロウイルス感染症、インフルエンザ、ウイルス性肝炎、HIV）治療薬の薬理（薬', middleCategoryId: 'pharmacology-structure-activity', subject: '薬理', text: '代表的な薬物の基本構造と薬効の関連を説明できる。' },
   { id: 'ex-pharmaceutics-001', minorCategory: '生体膜透過', middleCategoryId: 'pharmaceutics-pharmacokinetics', subject: '薬剤', text: '薬物の生体膜透過における単純拡散、促進拡散及び能動輸送の特徴を説明できる。' },
   { id: 'ex-pharmaceutics-002', minorCategory: '生体膜透過', middleCategoryId: 'pharmaceutics-pharmacokinetics', subject: '薬剤', text: '薬物の生体膜透過に関わるトランスポーターの例を挙げ、その特徴と薬物動態における役割を説明できる。' },
@@ -881,9 +884,21 @@ export const EXEMPLARS: Exemplar[] = [
   { id: 'ex-practice-040', minorCategory: '処方箋に基づく医薬品の調製', middleCategoryId: 'practice-dispensing', subject: '実務', text: '抗悪性腫瘍薬等の取扱いにおけるケミカルハザード回避の手技を具体的に説明できる。' },
   { id: 'ex-practice-041', minorCategory: '処方箋に基づく医薬品の調製', middleCategoryId: 'practice-dispensing', subject: '実務', text: '特別な注意を要する医薬品（劇薬・毒薬・麻薬・向精神薬・抗悪性腫瘍薬等）の調剤と適切な取扱いができる。' },
   { id: 'ex-practice-042', minorCategory: '処方箋に基づく医薬品の調製', middleCategoryId: 'practice-dispensing', subject: '実務', text: '調製された薬剤の適切な鑑査について具体的に説明できる。' },
-  { id: 'ex-practice-043', minorCategory: '処方箋に基づく医薬品の調製', middleCategoryId: 'practice-dispensing', subject: '実務', text: '患者・来局者の病状や背景に配慮し、医薬品を安全かつ有効に使用するための服薬指導や患者教育ができる。' },
+  { id: 'ex-practice-043a', minorCategory: '糖尿病・代謝の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '糖尿病、脂質異常症等の代謝疾患の患者に対する服薬指導ができる。' },
+  { id: 'ex-practice-043b', minorCategory: '循環器の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '高血圧、心不全、狭心症等の循環器疾患の患者に対する服薬指導ができる。' },
+  { id: 'ex-practice-043c', minorCategory: '精神・神経の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '精神・神経疾患の患者に対する服薬指導ができる。' },
+  { id: 'ex-practice-043d', minorCategory: '悪性腫瘍の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '悪性腫瘍の患者に対する服薬指導ができる。' },
+  { id: 'ex-practice-043e', minorCategory: '感染症の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '感染症の患者に対する服薬指導ができる。' },
+  { id: 'ex-practice-043f', minorCategory: '腎機能関連の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '腎機能障害のある患者に対する服薬指導ができる。' },
+  { id: 'ex-practice-043g', minorCategory: '呼吸器・吸入の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '喘息、COPD等の呼吸器疾患の患者に対する服薬指導ができる。' },
+  { id: 'ex-practice-043h', minorCategory: '小児・妊婦・授乳婦の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '小児、妊婦、授乳婦に対する服薬指導ができる。' },
+  { id: 'ex-practice-043i', minorCategory: '疼痛・緩和の服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '疼痛管理・緩和ケアの患者に対する服薬指導ができる。' },
+  { id: 'ex-practice-043j', minorCategory: '一般的な服薬指導', middleCategoryId: 'practice-dispensing', subject: '実務', text: '患者・来局者の病状や背景に配慮し、一般的な服薬指導ができる。' },
   { id: 'ex-practice-044', minorCategory: '処方箋に基づく医薬品の調製', middleCategoryId: 'practice-dispensing', subject: '実務', text: '代表的な疾患において注意すべき生活指導項目を列挙できる。' },
-  { id: 'ex-practice-045', minorCategory: '処方箋に基づく医薬品の調製', middleCategoryId: 'practice-dispensing', subject: '実務', text: '患者・来局者に使用上の説明が必要な製剤（眼軟膏、坐剤、吸入剤、自己注射剤等）の取扱い方法を説明できる。' },
+  { id: 'ex-practice-045a', minorCategory: '吸入薬の使用説明', middleCategoryId: 'practice-dispensing', subject: '実務', text: '吸入剤の取扱い方法を患者に説明できる。' },
+  { id: 'ex-practice-045b', minorCategory: '自己注射の使用説明', middleCategoryId: 'practice-dispensing', subject: '実務', text: '自己注射剤の取扱い方法を患者に説明できる。' },
+  { id: 'ex-practice-045c', minorCategory: '点眼薬の使用説明', middleCategoryId: 'practice-dispensing', subject: '実務', text: '点眼剤の取扱い方法を患者に説明できる。' },
+  { id: 'ex-practice-045d', minorCategory: 'その他外用剤の使用説明', middleCategoryId: 'practice-dispensing', subject: '実務', text: '坐剤、貼付剤、軟膏等の外用剤の取扱い方法を患者に説明できる。' },
   { id: 'ex-practice-046', minorCategory: '処方箋に基づく医薬品の調製', middleCategoryId: 'practice-dispensing', subject: '実務', text: '医師の治療方針を理解した上で、患者への適切な服薬指導を実施できる。' },
   { id: 'ex-practice-047', minorCategory: '処方箋に基づく医薬品の調製', middleCategoryId: 'practice-dispensing', subject: '実務', text: '妊婦・授乳婦、小児、高齢者等特別な配慮が必要な患者への服薬指導において、適切な応対ができる。' },
   { id: 'ex-practice-048', minorCategory: '処方箋に基づく医薬品の調製', middleCategoryId: 'practice-dispensing', subject: '実務', text: 'お薬手帳、健康手帳、患者向け説明書等を使用した服薬指導ができる。' },
@@ -912,7 +927,9 @@ export const EXEMPLARS: Exemplar[] = [
   { id: 'ex-practice-071', minorCategory: '患者・来局者から、必要な情報（症状、心理状態、既往歴、生活習慣、アレルギー歴、薬歴、副作用歴等）を適切な手順で聞き取るこ', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '医療スタッフ及び患者のニーズに合った医薬品情報が提供できる。' },
   { id: 'ex-practice-072', minorCategory: '患者・来局者から、必要な情報（症状、心理状態、既往歴、生活習慣、アレルギー歴、薬歴、副作用歴等）を適切な手順で聞き取るこ', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '緊急安全性情報、安全性速報、不良品回収、製造中止等の緊急情報を適切に取り扱うことができる。' },
   { id: 'ex-practice-073', minorCategory: '患者・来局者から、必要な情報（症状、心理状態、既往歴、生活習慣、アレルギー歴、薬歴、副作用歴等）を適切な手順で聞き取るこ', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '患者の診断名、病態、科学的根拠等から薬物治療方針を確認できる。' },
-  { id: 'ex-practice-074', minorCategory: '患者の状態（疾患、重症度、合併症、肝・腎機能や全身状態、妊婦・授乳婦、小児、高齢者等の生理的特性、遺伝子の特性、心理・希', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '望等）や薬剤の特徴（作用機序や製剤的性質等）に基づき、適切な処方を提案できる。' },
+  { id: 'ex-practice-074a', minorCategory: '生活習慣病の処方提案', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '生活習慣病に対する適切な処方を提案できる。' },
+  { id: 'ex-practice-074b', minorCategory: '感染症の処方提案', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '感染症に対する適切な処方を提案できる。' },
+  { id: 'ex-practice-074c', minorCategory: 'その他の処方提案', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '患者の状態に基づき適切な処方を提案できる。' },
   { id: 'ex-practice-075', minorCategory: '患者の状態（疾患、重症度、合併症、肝・腎機能や全身状態、妊婦・授乳婦、小児、高齢者等の生理的特性、遺伝子の特性、心理・希', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '治療ガイドライン等を確認し、科学的根拠に基づいた処方を立案できる。' },
   { id: 'ex-practice-076', minorCategory: '患者の状態（疾患、重症度、合併症、肝・腎機能や全身状態、妊婦・授乳婦、小児、高齢者等の生理的特性、遺伝子の特性、心理・希', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '処方設計の提案に際し、薬物投与プロトコルやクリニカルパスを活用できる。' },
   { id: 'ex-practice-077', minorCategory: '患者の状態（疾患、重症度、合併症、肝・腎機能や全身状態、妊婦・授乳婦、小児、高齢者等の生理的特性、遺伝子の特性、心理・希', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '患者のアドヒアランスの評価方法、アドヒアランスが良くない原因とその対処法を説明できる。' },
@@ -920,12 +937,16 @@ export const EXEMPLARS: Exemplar[] = [
   { id: 'ex-practice-079', minorCategory: '患者の状態（疾患、重症度、合併症、肝・腎機能や全身状態、妊婦・授乳婦、小児、高齢者等の生理的特性、遺伝子の特性、心理・希', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '患者の栄養状態や体液量、電解質の過不足等が評価できる。' },
   { id: 'ex-practice-080', minorCategory: '患者の状態（疾患、重症度、合併症、肝・腎機能や全身状態、妊婦・授乳婦、小児、高齢者等の生理的特性、遺伝子の特性、心理・希', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '入院患者の持参薬について、継続・変更・中止の提案ができる。' },
   { id: 'ex-practice-081', minorCategory: '患者の状態（疾患、重症度、合併症、肝・腎機能や全身状態、妊婦・授乳婦、小児、高齢者等の生理的特性、遺伝子の特性、心理・希', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '処方提案に際して、医薬品の経済性等を考慮して、適切な後発医薬品を選択できる。' },
-  { id: 'ex-practice-082', minorCategory: '患者の状態（疾患、重症度、合併症、肝・腎機能や全身状態、妊婦・授乳婦、小児、高齢者等の生理的特性、遺伝子の特性、心理・希', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '医薬品の効果と副作用について、モニタリングすべき症状と検査所見等を説明できる。' },
+  { id: 'ex-practice-082a', minorCategory: '循環器薬モニタリング', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '循環器薬の効果と副作用をモニタリングできる。' },
+  { id: 'ex-practice-082b', minorCategory: '抗がん・免疫抑制モニタリング', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '抗がん薬・免疫抑制薬の効果と副作用をモニタリングできる。' },
+  { id: 'ex-practice-082c', minorCategory: 'その他モニタリング', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '医薬品の効果と副作用のモニタリングができる。' },
   { id: 'ex-practice-083', minorCategory: '患者の状態（疾患、重症度、合併症、肝・腎機能や全身状態、妊婦・授乳婦、小児、高齢者等の生理的特性、遺伝子の特性、心理・希', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '治療薬物モニ夕リングが必要な医薬品が処方されている患者について、血中濃度測定の提案ができる。' },
   { id: 'ex-practice-084', minorCategory: '患者の状態（疾患、重症度、合併症、肝・腎機能や全身状態、妊婦・授乳婦、小児、高齢者等の生理的特性、遺伝子の特性、心理・希', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '薬物血中濃度の推移から薬物療法の効果、副作用及び相互作用について予測できる。' },
   { id: 'ex-practice-085', minorCategory: '患者の状態（疾患、重症度、合併症、肝・腎機能や全身状態、妊婦・授乳婦、小児、高齢者等の生理的特性、遺伝子の特性、心理・希', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '臨床検査値の変化と使用医薬品の関連性を説明できる。' },
   { id: 'ex-practice-086', minorCategory: '患者の状態（疾患、重症度、合併症、肝・腎機能や全身状態、妊婦・授乳婦、小児、高齢者等の生理的特性、遺伝子の特性、心理・希', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '薬物治療の効果について、患者の症状や検査所見等から評価できる。' },
-  { id: 'ex-practice-087', minorCategory: '患者の状態（疾患、重症度、合併症、肝・腎機能や全身状態、妊婦・授乳婦、小児、高齢者等の生理的特性、遺伝子の特性、心理・希', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '副作用の発現について、患者の症状や検査所見等から評価できる。' },
+  { id: 'ex-practice-087a', minorCategory: '副作用の原因薬剤特定', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '副作用の原因となる薬剤を特定できる。' },
+  { id: 'ex-practice-087b', minorCategory: '副作用の検査所見評価', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '副作用を検査所見等から評価できる。' },
+  { id: 'ex-practice-087c', minorCategory: '副作用対処・代替薬', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '副作用への対処や代替薬を提案できる。' },
   { id: 'ex-practice-088', minorCategory: '薬物治療の効果', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '薬物治療の効果、副作用の発現、薬物血中濃度等に基づき、医師に対し、薬剤の種類、投与量、投与方法、投与期間等の変更を提案できる。' },
   { id: 'ex-practice-089', minorCategory: '薬物治療の効果、副作用の発現、薬物血中濃度等に基づき、医師に対し、薬剤の種類、投与量、投与方法、投与期間等の変更を提', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '患者の薬物治療上の問題点を列挙し、適切な評価と薬学的管理の立案を行い、SOAP形式等で適切に記録できる。' },
   { id: 'ex-practice-090', minorCategory: '薬物治療の効果、副作用の発現、薬物血中濃度等に基づき、医師に対し、薬剤の種類、投与量、投与方法、投与期間等の変更を提', middleCategoryId: 'practice-drug-therapy', subject: '実務', text: '医薬品・医療機器等安全性情報報告用紙に必要事項を記載し、報告できる。' },
@@ -956,7 +977,6 @@ export const EXEMPLARS: Exemplar[] = [
   { id: 'ex-practice-115', minorCategory: '選択した薬局製剤（漢方製剤含む）、要指導医薬品、一般用医薬品、健康食品、サプリメント、医療機器等の使用方法や注意点（副作', middleCategoryId: 'practice-community-health', subject: '実務', text: '災害時における地域の医薬品供給体制・医療救護体制について説明できる。' },
   { id: 'ex-practice-116', minorCategory: '選択した薬局製剤（漢方製剤含む）、要指導医薬品、一般用医薬品、健康食品、サプリメント、医療機器等の使用方法や注意点（副作', middleCategoryId: 'practice-community-health', subject: '実務', text: '災害発生時における病院・薬局の役割と薬剤師の活動について説明できる。' },
   { id: 'ex-practice-117', minorCategory: '選択した薬局製剤（漢方製剤含む）、要指導医薬品、一般用医薬品、健康食品、サプリメント、医療機器等の使用方法や注意点（副作', middleCategoryId: 'practice-community-health', subject: '実務', text: '災害時に派遣される医療チームと薬剤師の関わりを説明できる。' },
-  // --- H1追加: 近年の臨床・制度トピック対応（15件） ---
   { id: 'ex-practice-118', minorCategory: 'スポーツファーマシスト', middleCategoryId: 'practice-community-health', subject: '実務', text: 'ドーピング禁止物質を含む医薬品の確認と選手への適切な情報提供ができる。' },
   { id: 'ex-practice-119', minorCategory: 'ハイアラート薬管理', middleCategoryId: 'practice-risk-management', subject: '実務', text: 'ハイアラート薬（高濃度カリウム製剤等）の管理方法と安全対策について説明できる。' },
   { id: 'ex-practice-120', minorCategory: '抗菌薬適正使用', middleCategoryId: 'practice-team-medicine', subject: '実務', text: '抗菌薬適正使用支援（AST）の考え方とデ・エスカレーション等の最適化戦略について説明できる。' },
@@ -973,14 +993,3 @@ export const EXEMPLARS: Exemplar[] = [
   { id: 'ex-practice-131', minorCategory: 'アルコール依存症治療', middleCategoryId: 'practice-pharmacotherapy', subject: '実務', text: 'アルコール依存症の治療薬（抗酒薬、飲酒量低減薬等）の作用機序と服薬指導上の注意点を説明できる。' },
   { id: 'ex-hygiene-080', minorCategory: '室内環境', middleCategoryId: 'hygiene-environment', subject: '衛生', text: '室内空気環境の測定（CO、CO₂、NO₂等）と燃焼器具使用時の追加検査項目について説明できる。' },
 ]
-
-// ヘルパー: IDで高速検索するためのMap
-export const EXEMPLAR_MAP = new Map(EXEMPLARS.map(e => [e.id, e]))
-
-// ヘルパー: 中項目IDでグループ化
-export const EXEMPLARS_BY_TOPIC = new Map<string, Exemplar[]>()
-for (const e of EXEMPLARS) {
-  const list = EXEMPLARS_BY_TOPIC.get(e.middleCategoryId) || []
-  list.push(e)
-  EXEMPLARS_BY_TOPIC.set(e.middleCategoryId, list)
-}

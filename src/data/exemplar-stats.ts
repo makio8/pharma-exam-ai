@@ -1,342 +1,114 @@
 // 例示別出題統計（自動生成: compute-exemplar-stats.ts）
-// 生成日: 2026-03-23
+// 生成日: 2026-03-24
 
 import type { ExemplarStats } from '../types/blueprint'
 
 export const EXEMPLAR_STATS: ExemplarStats[] = [
   {
-    "exemplarId": "ex-practice-043",
+    "exemplarId": "ex-practice-043j",
     "subject": "実務",
-    "yearsAppeared": 11,
-    "totalQuestions": 137,
-    "yearDetails": [
-      {
-        "year": 100,
-        "count": 15
-      },
-      {
-        "year": 101,
-        "count": 17
-      },
-      {
-        "year": 102,
-        "count": 16
-      },
-      {
-        "year": 103,
-        "count": 18
-      },
-      {
-        "year": 104,
-        "count": 10
-      },
-      {
-        "year": 105,
-        "count": 9
-      },
-      {
-        "year": 106,
-        "count": 21
-      },
-      {
-        "year": 107,
-        "count": 11
-      },
-      {
-        "year": 108,
-        "count": 9
-      },
-      {
-        "year": 109,
-        "count": 8
-      },
-      {
-        "year": 110,
-        "count": 3
-      }
-    ],
-    "primaryQuestions": 136,
-    "secondaryQuestions": 1,
-    "primaryYearsAppeared": 11,
-    "linkedGroupCount": 134,
-    "avgQuestionsPerYear": 12.45
-  },
-  {
-    "exemplarId": "ex-practice-045",
-    "subject": "実務",
-    "yearsAppeared": 12,
-    "totalQuestions": 48,
-    "yearDetails": [
-      {
-        "year": 100,
-        "count": 3
-      },
-      {
-        "year": 101,
-        "count": 4
-      },
-      {
-        "year": 102,
-        "count": 1
-      },
-      {
-        "year": 103,
-        "count": 4
-      },
-      {
-        "year": 104,
-        "count": 3
-      },
-      {
-        "year": 105,
-        "count": 3
-      },
-      {
-        "year": 106,
-        "count": 4
-      },
-      {
-        "year": 107,
-        "count": 5
-      },
-      {
-        "year": 108,
-        "count": 3
-      },
-      {
-        "year": 109,
-        "count": 7
-      },
-      {
-        "year": 110,
-        "count": 3
-      },
-      {
-        "year": 111,
-        "count": 8
-      }
-    ],
-    "primaryQuestions": 48,
-    "secondaryQuestions": 0,
-    "primaryYearsAppeared": 12,
-    "linkedGroupCount": 48,
-    "avgQuestionsPerYear": 4
-  },
-  {
-    "exemplarId": "ex-practice-087",
-    "subject": "実務",
-    "yearsAppeared": 11,
+    "yearsAppeared": 10,
     "totalQuestions": 38,
     "yearDetails": [
       {
         "year": 100,
-        "count": 2
+        "count": 7
       },
       {
         "year": 101,
-        "count": 4
-      },
-      {
-        "year": 102,
-        "count": 1
-      },
-      {
-        "year": 103,
         "count": 5
       },
       {
+        "year": 102,
+        "count": 9
+      },
+      {
+        "year": 103,
+        "count": 4
+      },
+      {
         "year": 104,
-        "count": 3
+        "count": 1
       },
       {
         "year": 105,
+        "count": 3
+      },
+      {
+        "year": 106,
         "count": 4
       },
       {
         "year": 107,
-        "count": 4
+        "count": 1
       },
       {
         "year": 108,
-        "count": 5
-      },
-      {
-        "year": 109,
-        "count": 7
+        "count": 1
       },
       {
         "year": 110,
-        "count": 2
-      },
-      {
-        "year": 111,
-        "count": 1
+        "count": 3
       }
     ],
     "primaryQuestions": 37,
     "secondaryQuestions": 1,
-    "primaryYearsAppeared": 11,
+    "primaryYearsAppeared": 10,
     "linkedGroupCount": 38,
-    "avgQuestionsPerYear": 3.45
+    "avgQuestionsPerYear": 3.8
   },
   {
-    "exemplarId": "ex-pharmacology-067",
-    "subject": "薬理",
-    "yearsAppeared": 12,
+    "exemplarId": "ex-practice-043a",
+    "subject": "実務",
+    "yearsAppeared": 10,
     "totalQuestions": 36,
     "yearDetails": [
       {
         "year": 100,
-        "count": 4
+        "count": 2
       },
       {
         "year": 101,
-        "count": 2
+        "count": 5
       },
       {
         "year": 102,
-        "count": 6
+        "count": 2
       },
       {
         "year": 103,
-        "count": 1
+        "count": 4
       },
       {
         "year": 104,
-        "count": 2
-      },
-      {
-        "year": 105,
-        "count": 2
-      },
-      {
-        "year": 106,
-        "count": 1
-      },
-      {
-        "year": 107,
-        "count": 5
-      },
-      {
-        "year": 108,
         "count": 3
       },
       {
-        "year": 109,
-        "count": 2
-      },
-      {
-        "year": 110,
-        "count": 4
-      },
-      {
-        "year": 111,
-        "count": 4
-      }
-    ],
-    "primaryQuestions": 34,
-    "secondaryQuestions": 2,
-    "primaryYearsAppeared": 12,
-    "linkedGroupCount": 36,
-    "avgQuestionsPerYear": 3
-  },
-  {
-    "exemplarId": "ex-practice-074",
-    "subject": "実務",
-    "yearsAppeared": 7,
-    "totalQuestions": 32,
-    "yearDetails": [
-      {
-        "year": 103,
-        "count": 2
-      },
-      {
-        "year": 104,
-        "count": 7
-      },
-      {
         "year": 105,
-        "count": 4
+        "count": 2
       },
       {
         "year": 106,
-        "count": 7
+        "count": 8
+      },
+      {
+        "year": 107,
+        "count": 2
       },
       {
         "year": 108,
-        "count": 5
+        "count": 4
       },
       {
         "year": 109,
-        "count": 6
-      },
-      {
-        "year": 110,
-        "count": 1
+        "count": 4
       }
     ],
-    "primaryQuestions": 32,
+    "primaryQuestions": 36,
     "secondaryQuestions": 0,
-    "primaryYearsAppeared": 7,
-    "linkedGroupCount": 31,
-    "avgQuestionsPerYear": 4.57
-  },
-  {
-    "exemplarId": "ex-practice-082",
-    "subject": "実務",
-    "yearsAppeared": 11,
-    "totalQuestions": 30,
-    "yearDetails": [
-      {
-        "year": 100,
-        "count": 3
-      },
-      {
-        "year": 101,
-        "count": 1
-      },
-      {
-        "year": 102,
-        "count": 1
-      },
-      {
-        "year": 103,
-        "count": 1
-      },
-      {
-        "year": 104,
-        "count": 3
-      },
-      {
-        "year": 106,
-        "count": 9
-      },
-      {
-        "year": 107,
-        "count": 1
-      },
-      {
-        "year": 108,
-        "count": 1
-      },
-      {
-        "year": 109,
-        "count": 5
-      },
-      {
-        "year": 110,
-        "count": 3
-      },
-      {
-        "year": 111,
-        "count": 2
-      }
-    ],
-    "primaryQuestions": 29,
-    "secondaryQuestions": 1,
-    "primaryYearsAppeared": 11,
-    "linkedGroupCount": 30,
-    "avgQuestionsPerYear": 2.73
+    "primaryYearsAppeared": 10,
+    "linkedGroupCount": 34,
+    "avgQuestionsPerYear": 3.6
   },
   {
     "exemplarId": "ex-pharmaceutics-031",
@@ -1422,6 +1194,55 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1.73
   },
   {
+    "exemplarId": "ex-practice-043c",
+    "subject": "実務",
+    "yearsAppeared": 9,
+    "totalQuestions": 19,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 101,
+        "count": 4
+      },
+      {
+        "year": 102,
+        "count": 3
+      },
+      {
+        "year": 103,
+        "count": 3
+      },
+      {
+        "year": 104,
+        "count": 2
+      },
+      {
+        "year": 105,
+        "count": 1
+      },
+      {
+        "year": 106,
+        "count": 2
+      },
+      {
+        "year": 107,
+        "count": 2
+      },
+      {
+        "year": 108,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 19,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 9,
+    "linkedGroupCount": 19,
+    "avgQuestionsPerYear": 2.11
+  },
+  {
     "exemplarId": "ex-pharmacology-012",
     "subject": "薬理",
     "yearsAppeared": 11,
@@ -1575,6 +1396,47 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryYearsAppeared": 8,
     "linkedGroupCount": 17,
     "avgQuestionsPerYear": 2.25
+  },
+  {
+    "exemplarId": "ex-practice-087a",
+    "subject": "実務",
+    "yearsAppeared": 7,
+    "totalQuestions": 18,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 101,
+        "count": 4
+      },
+      {
+        "year": 103,
+        "count": 2
+      },
+      {
+        "year": 105,
+        "count": 2
+      },
+      {
+        "year": 107,
+        "count": 1
+      },
+      {
+        "year": 108,
+        "count": 3
+      },
+      {
+        "year": 109,
+        "count": 5
+      }
+    ],
+    "primaryQuestions": 18,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 7,
+    "linkedGroupCount": 18,
+    "avgQuestionsPerYear": 2.57
   },
   {
     "exemplarId": "ex-pharmacology-013",
@@ -2234,6 +2096,59 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1.36
   },
   {
+    "exemplarId": "ex-pharmacology-067a",
+    "subject": "薬理",
+    "yearsAppeared": 10,
+    "totalQuestions": 15,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 101,
+        "count": 2
+      },
+      {
+        "year": 102,
+        "count": 3
+      },
+      {
+        "year": 104,
+        "count": 1
+      },
+      {
+        "year": 105,
+        "count": 1
+      },
+      {
+        "year": 107,
+        "count": 1
+      },
+      {
+        "year": 108,
+        "count": 2
+      },
+      {
+        "year": 109,
+        "count": 2
+      },
+      {
+        "year": 110,
+        "count": 1
+      },
+      {
+        "year": 111,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 15,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 10,
+    "linkedGroupCount": 15,
+    "avgQuestionsPerYear": 1.5
+  },
+  {
     "exemplarId": "ex-pathology-097",
     "subject": "病態・薬物治療",
     "yearsAppeared": 9,
@@ -2320,6 +2235,100 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 2.5
   },
   {
+    "exemplarId": "ex-practice-043b",
+    "subject": "実務",
+    "yearsAppeared": 9,
+    "totalQuestions": 15,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 3
+      },
+      {
+        "year": 101,
+        "count": 1
+      },
+      {
+        "year": 102,
+        "count": 1
+      },
+      {
+        "year": 103,
+        "count": 2
+      },
+      {
+        "year": 104,
+        "count": 3
+      },
+      {
+        "year": 105,
+        "count": 1
+      },
+      {
+        "year": 106,
+        "count": 1
+      },
+      {
+        "year": 107,
+        "count": 2
+      },
+      {
+        "year": 108,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 15,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 9,
+    "linkedGroupCount": 15,
+    "avgQuestionsPerYear": 1.67
+  },
+  {
+    "exemplarId": "ex-practice-045d",
+    "subject": "実務",
+    "yearsAppeared": 8,
+    "totalQuestions": 15,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 101,
+        "count": 1
+      },
+      {
+        "year": 103,
+        "count": 3
+      },
+      {
+        "year": 106,
+        "count": 2
+      },
+      {
+        "year": 107,
+        "count": 2
+      },
+      {
+        "year": 108,
+        "count": 2
+      },
+      {
+        "year": 109,
+        "count": 1
+      },
+      {
+        "year": 111,
+        "count": 3
+      }
+    ],
+    "primaryQuestions": 15,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 8,
+    "linkedGroupCount": 15,
+    "avgQuestionsPerYear": 1.88
+  },
+  {
     "exemplarId": "ex-practice-046",
     "subject": "実務",
     "yearsAppeared": 5,
@@ -2350,6 +2359,39 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "secondaryQuestions": 0,
     "primaryYearsAppeared": 5,
     "linkedGroupCount": 15,
+    "avgQuestionsPerYear": 3
+  },
+  {
+    "exemplarId": "ex-practice-074a",
+    "subject": "実務",
+    "yearsAppeared": 5,
+    "totalQuestions": 15,
+    "yearDetails": [
+      {
+        "year": 104,
+        "count": 2
+      },
+      {
+        "year": 105,
+        "count": 2
+      },
+      {
+        "year": 106,
+        "count": 3
+      },
+      {
+        "year": 108,
+        "count": 4
+      },
+      {
+        "year": 109,
+        "count": 4
+      }
+    ],
+    "primaryQuestions": 15,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 5,
+    "linkedGroupCount": 14,
     "avgQuestionsPerYear": 3
   },
   {
@@ -3365,6 +3407,47 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1.44
   },
   {
+    "exemplarId": "ex-practice-045a",
+    "subject": "実務",
+    "yearsAppeared": 7,
+    "totalQuestions": 13,
+    "yearDetails": [
+      {
+        "year": 101,
+        "count": 2
+      },
+      {
+        "year": 103,
+        "count": 1
+      },
+      {
+        "year": 104,
+        "count": 3
+      },
+      {
+        "year": 105,
+        "count": 2
+      },
+      {
+        "year": 106,
+        "count": 1
+      },
+      {
+        "year": 110,
+        "count": 2
+      },
+      {
+        "year": 111,
+        "count": 2
+      }
+    ],
+    "primaryQuestions": 13,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 7,
+    "linkedGroupCount": 13,
+    "avgQuestionsPerYear": 1.86
+  },
+  {
     "exemplarId": "ex-practice-079",
     "subject": "実務",
     "yearsAppeared": 7,
@@ -4215,6 +4298,92 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1.33
   },
   {
+    "exemplarId": "ex-practice-043f",
+    "subject": "実務",
+    "yearsAppeared": 7,
+    "totalQuestions": 12,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 103,
+        "count": 2
+      },
+      {
+        "year": 104,
+        "count": 1
+      },
+      {
+        "year": 105,
+        "count": 2
+      },
+      {
+        "year": 106,
+        "count": 4
+      },
+      {
+        "year": 107,
+        "count": 1
+      },
+      {
+        "year": 109,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 12,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 7,
+    "linkedGroupCount": 11,
+    "avgQuestionsPerYear": 1.71
+  },
+  {
+    "exemplarId": "ex-practice-045b",
+    "subject": "実務",
+    "yearsAppeared": 8,
+    "totalQuestions": 12,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 101,
+        "count": 1
+      },
+      {
+        "year": 102,
+        "count": 1
+      },
+      {
+        "year": 105,
+        "count": 1
+      },
+      {
+        "year": 107,
+        "count": 2
+      },
+      {
+        "year": 109,
+        "count": 4
+      },
+      {
+        "year": 110,
+        "count": 1
+      },
+      {
+        "year": 111,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 12,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 8,
+    "linkedGroupCount": 12,
+    "avgQuestionsPerYear": 1.5
+  },
+  {
     "exemplarId": "ex-practice-055",
     "subject": "実務",
     "yearsAppeared": 8,
@@ -4255,6 +4424,51 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     ],
     "primaryQuestions": 11,
     "secondaryQuestions": 1,
+    "primaryYearsAppeared": 8,
+    "linkedGroupCount": 12,
+    "avgQuestionsPerYear": 1.5
+  },
+  {
+    "exemplarId": "ex-practice-082a",
+    "subject": "実務",
+    "yearsAppeared": 8,
+    "totalQuestions": 12,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 101,
+        "count": 1
+      },
+      {
+        "year": 104,
+        "count": 1
+      },
+      {
+        "year": 106,
+        "count": 3
+      },
+      {
+        "year": 107,
+        "count": 1
+      },
+      {
+        "year": 108,
+        "count": 1
+      },
+      {
+        "year": 109,
+        "count": 2
+      },
+      {
+        "year": 110,
+        "count": 2
+      }
+    ],
+    "primaryQuestions": 12,
+    "secondaryQuestions": 0,
     "primaryYearsAppeared": 8,
     "linkedGroupCount": 12,
     "avgQuestionsPerYear": 1.5
@@ -5339,6 +5553,47 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1.57
   },
   {
+    "exemplarId": "ex-practice-074c",
+    "subject": "実務",
+    "yearsAppeared": 7,
+    "totalQuestions": 11,
+    "yearDetails": [
+      {
+        "year": 103,
+        "count": 2
+      },
+      {
+        "year": 104,
+        "count": 1
+      },
+      {
+        "year": 105,
+        "count": 2
+      },
+      {
+        "year": 106,
+        "count": 3
+      },
+      {
+        "year": 108,
+        "count": 1
+      },
+      {
+        "year": 109,
+        "count": 1
+      },
+      {
+        "year": 110,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 11,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 7,
+    "linkedGroupCount": 11,
+    "avgQuestionsPerYear": 1.57
+  },
+  {
     "exemplarId": "ex-practice-084",
     "subject": "実務",
     "yearsAppeared": 6,
@@ -5710,6 +5965,39 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryYearsAppeared": 8,
     "linkedGroupCount": 10,
     "avgQuestionsPerYear": 1.11
+  },
+  {
+    "exemplarId": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "yearsAppeared": 5,
+    "totalQuestions": 10,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 2
+      },
+      {
+        "year": 102,
+        "count": 3
+      },
+      {
+        "year": 103,
+        "count": 1
+      },
+      {
+        "year": 107,
+        "count": 2
+      },
+      {
+        "year": 111,
+        "count": 2
+      }
+    ],
+    "primaryQuestions": 9,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 5,
+    "linkedGroupCount": 10,
+    "avgQuestionsPerYear": 2
   },
   {
     "exemplarId": "ex-pharmaceutics-001",
@@ -6434,6 +6722,117 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryYearsAppeared": 7,
     "linkedGroupCount": 10,
     "avgQuestionsPerYear": 1.43
+  },
+  {
+    "exemplarId": "ex-practice-082c",
+    "subject": "実務",
+    "yearsAppeared": 5,
+    "totalQuestions": 10,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 104,
+        "count": 2
+      },
+      {
+        "year": 106,
+        "count": 4
+      },
+      {
+        "year": 109,
+        "count": 2
+      },
+      {
+        "year": 110,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 9,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 4,
+    "linkedGroupCount": 10,
+    "avgQuestionsPerYear": 2
+  },
+  {
+    "exemplarId": "ex-practice-087b",
+    "subject": "実務",
+    "yearsAppeared": 7,
+    "totalQuestions": 10,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 102,
+        "count": 1
+      },
+      {
+        "year": 103,
+        "count": 3
+      },
+      {
+        "year": 105,
+        "count": 1
+      },
+      {
+        "year": 107,
+        "count": 1
+      },
+      {
+        "year": 108,
+        "count": 2
+      },
+      {
+        "year": 109,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 9,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 6,
+    "linkedGroupCount": 10,
+    "avgQuestionsPerYear": 1.43
+  },
+  {
+    "exemplarId": "ex-practice-087c",
+    "subject": "実務",
+    "yearsAppeared": 6,
+    "totalQuestions": 10,
+    "yearDetails": [
+      {
+        "year": 104,
+        "count": 3
+      },
+      {
+        "year": 105,
+        "count": 1
+      },
+      {
+        "year": 107,
+        "count": 2
+      },
+      {
+        "year": 109,
+        "count": 1
+      },
+      {
+        "year": 110,
+        "count": 2
+      },
+      {
+        "year": 111,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 10,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 6,
+    "linkedGroupCount": 10,
+    "avgQuestionsPerYear": 1.67
   },
   {
     "exemplarId": "ex-biology-009",
@@ -8006,6 +8405,43 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1.33
   },
   {
+    "exemplarId": "ex-pharmacology-067b",
+    "subject": "薬理",
+    "yearsAppeared": 6,
+    "totalQuestions": 8,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 104,
+        "count": 1
+      },
+      {
+        "year": 105,
+        "count": 1
+      },
+      {
+        "year": 106,
+        "count": 1
+      },
+      {
+        "year": 107,
+        "count": 2
+      },
+      {
+        "year": 110,
+        "count": 2
+      }
+    ],
+    "primaryQuestions": 7,
+    "secondaryQuestions": 1,
+    "primaryYearsAppeared": 5,
+    "linkedGroupCount": 8,
+    "avgQuestionsPerYear": 1.33
+  },
+  {
     "exemplarId": "ex-pharmaceutics-002",
     "subject": "薬剤",
     "yearsAppeared": 7,
@@ -8708,6 +9144,43 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1.14
   },
   {
+    "exemplarId": "ex-practice-045c",
+    "subject": "実務",
+    "yearsAppeared": 6,
+    "totalQuestions": 8,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 106,
+        "count": 1
+      },
+      {
+        "year": 107,
+        "count": 1
+      },
+      {
+        "year": 108,
+        "count": 1
+      },
+      {
+        "year": 109,
+        "count": 2
+      },
+      {
+        "year": 111,
+        "count": 2
+      }
+    ],
+    "primaryQuestions": 8,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 6,
+    "linkedGroupCount": 8,
+    "avgQuestionsPerYear": 1.33
+  },
+  {
     "exemplarId": "ex-practice-051",
     "subject": "実務",
     "yearsAppeared": 4,
@@ -8765,6 +9238,43 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
       {
         "year": 111,
         "count": 1
+      }
+    ],
+    "primaryQuestions": 8,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 6,
+    "linkedGroupCount": 8,
+    "avgQuestionsPerYear": 1.33
+  },
+  {
+    "exemplarId": "ex-practice-082b",
+    "subject": "実務",
+    "yearsAppeared": 6,
+    "totalQuestions": 8,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 102,
+        "count": 1
+      },
+      {
+        "year": 103,
+        "count": 1
+      },
+      {
+        "year": 106,
+        "count": 2
+      },
+      {
+        "year": 109,
+        "count": 1
+      },
+      {
+        "year": 111,
+        "count": 2
       }
     ],
     "primaryQuestions": 8,
@@ -10195,6 +10705,47 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryYearsAppeared": 5,
     "linkedGroupCount": 7,
     "avgQuestionsPerYear": 1.4
+  },
+  {
+    "exemplarId": "ex-practice-043d",
+    "subject": "実務",
+    "yearsAppeared": 7,
+    "totalQuestions": 7,
+    "yearDetails": [
+      {
+        "year": 100,
+        "count": 1
+      },
+      {
+        "year": 101,
+        "count": 1
+      },
+      {
+        "year": 102,
+        "count": 1
+      },
+      {
+        "year": 106,
+        "count": 1
+      },
+      {
+        "year": 107,
+        "count": 1
+      },
+      {
+        "year": 108,
+        "count": 1
+      },
+      {
+        "year": 109,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 7,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 7,
+    "linkedGroupCount": 7,
+    "avgQuestionsPerYear": 1
   },
   {
     "exemplarId": "ex-practice-050",
@@ -12038,6 +12589,35 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1.2
   },
   {
+    "exemplarId": "ex-practice-043e",
+    "subject": "実務",
+    "yearsAppeared": 4,
+    "totalQuestions": 6,
+    "yearDetails": [
+      {
+        "year": 103,
+        "count": 2
+      },
+      {
+        "year": 107,
+        "count": 2
+      },
+      {
+        "year": 108,
+        "count": 1
+      },
+      {
+        "year": 109,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 6,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 4,
+    "linkedGroupCount": 6,
+    "avgQuestionsPerYear": 1.5
+  },
+  {
     "exemplarId": "ex-practice-056",
     "subject": "実務",
     "yearsAppeared": 4,
@@ -12139,6 +12719,31 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "primaryYearsAppeared": 6,
     "linkedGroupCount": 6,
     "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-practice-074b",
+    "subject": "実務",
+    "yearsAppeared": 3,
+    "totalQuestions": 6,
+    "yearDetails": [
+      {
+        "year": 104,
+        "count": 4
+      },
+      {
+        "year": 106,
+        "count": 1
+      },
+      {
+        "year": 109,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 6,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 3,
+    "linkedGroupCount": 6,
+    "avgQuestionsPerYear": 2
   },
   {
     "exemplarId": "ex-practice-098",
@@ -15937,6 +16542,35 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
     "avgQuestionsPerYear": 1
   },
   {
+    "exemplarId": "ex-practice-043h",
+    "subject": "実務",
+    "yearsAppeared": 4,
+    "totalQuestions": 4,
+    "yearDetails": [
+      {
+        "year": 101,
+        "count": 1
+      },
+      {
+        "year": 103,
+        "count": 1
+      },
+      {
+        "year": 106,
+        "count": 1
+      },
+      {
+        "year": 109,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 4,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 4,
+    "linkedGroupCount": 4,
+    "avgQuestionsPerYear": 1
+  },
+  {
     "exemplarId": "ex-practice-090",
     "subject": "実務",
     "yearsAppeared": 3,
@@ -17482,6 +18116,31 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
       },
       {
         "year": 105,
+        "count": 1
+      }
+    ],
+    "primaryQuestions": 3,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 3,
+    "linkedGroupCount": 3,
+    "avgQuestionsPerYear": 1
+  },
+  {
+    "exemplarId": "ex-pharmacology-067c",
+    "subject": "薬理",
+    "yearsAppeared": 3,
+    "totalQuestions": 3,
+    "yearDetails": [
+      {
+        "year": 108,
+        "count": 1
+      },
+      {
+        "year": 110,
+        "count": 1
+      },
+      {
+        "year": 111,
         "count": 1
       }
     ],
@@ -25350,6 +26009,30 @@ export const EXEMPLAR_STATS: ExemplarStats[] = [
   },
   {
     "exemplarId": "ex-practice-033",
+    "subject": "実務",
+    "yearsAppeared": 0,
+    "totalQuestions": 0,
+    "yearDetails": [],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 0,
+    "avgQuestionsPerYear": 0
+  },
+  {
+    "exemplarId": "ex-practice-043g",
+    "subject": "実務",
+    "yearsAppeared": 0,
+    "totalQuestions": 0,
+    "yearDetails": [],
+    "primaryQuestions": 0,
+    "secondaryQuestions": 0,
+    "primaryYearsAppeared": 0,
+    "linkedGroupCount": 0,
+    "avgQuestionsPerYear": 0
+  },
+  {
+    "exemplarId": "ex-practice-043i",
     "subject": "実務",
     "yearsAppeared": 0,
     "totalQuestions": 0,
