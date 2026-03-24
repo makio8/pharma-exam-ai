@@ -89,11 +89,12 @@ export interface AnswerHistory {
   id: string
   user_id: string
   question_id: string
-  selected_answer: number | number[]
+  selected_answer: number | number[] | null  // null: スキップ時
   is_correct: boolean
   answered_at: string       // ISO8601
-  confidence_level: ConfidenceLevel
+  confidence_level?: ConfidenceLevel
   time_spent_seconds?: number
+  skipped?: boolean
 }
 
 /** フィルター条件 */

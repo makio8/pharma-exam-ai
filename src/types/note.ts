@@ -1,5 +1,7 @@
 // 薬剤師国試：付箋の型定義
 
+export type { OfficialNote, BookmarkedNote } from './official-note'
+
 /** 付箋の種別 */
 export type NoteType =
   | 'knowledge'    // 知識整理
