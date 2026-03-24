@@ -1,0 +1,361 @@
+/* CorrectionPanel — 修正入力パネル（開発専用） */
+
+.panel {
+  margin-top: 0.75rem;
+  border: 1px solid var(--border, #e8e0d4);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--card, #ffffff);
+}
+
+/* ========== ヘッダー (開閉ボタン) ========== */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #f9f6f2;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-family: inherit;
+  text-align: left;
+  color: var(--text-primary, #2d2a27);
+  transition: background 0.13s;
+}
+
+.header:hover {
+  background: #f3efe9;
+}
+
+.headerOpen {
+  background: #ede7de;
+}
+
+.headerIcon {
+  font-size: 0.625rem;
+  opacity: 0.7;
+}
+
+.headerTitle {
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
+
+.badge {
+  padding: 0.1rem 0.45rem;
+  border-radius: 9999px;
+  background: var(--warning, #f9a825);
+  color: #ffffff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+}
+
+.keyHint {
+  margin-left: auto;
+  font-size: 0.6875rem;
+  color: var(--text-secondary, #8c7e6e);
+  background: var(--bg, #faf8f5);
+  border: 1px solid var(--border, #e8e0d4);
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.375rem;
+}
+
+/* ========== ボディ ========== */
+.body {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ========== タブ ========== */
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--border, #e8e0d4);
+  border-radius: 0.375rem;
+  background: var(--bg, #faf8f5);
+  color: var(--text-secondary, #8c7e6e);
+  font-size: 0.75rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.13s;
+}
+
+.tab:hover {
+  border-color: var(--accent, #b8860b);
+  color: var(--accent, #b8860b);
+}
+
+.tabActive {
+  background: var(--accent, #b8860b);
+  border-color: var(--accent, #b8860b);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ========== タブコンテンツ ========== */
+.tabContent {
+  min-height: 6rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* ========== フォーム要素 ========== */
+.label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--text-secondary, #8c7e6e);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.select,
+.input {
+  padding: 0.375rem 0.625rem;
+  border: 1px solid var(--border, #e8e0d4);
+  border-radius: 0.375rem;
+  background: var(--bg, #faf8f5);
+  color: var(--text-primary, #2d2a27);
+  font-size: 0.8125rem;
+  font-family: inherit;
+  width: 100%;
+}
+
+.select:focus,
+.input:focus {
+  outline: none;
+  border-color: var(--accent, #b8860b);
+}
+
+.textarea {
+  padding: 0.5rem 0.625rem;
+  border: 1px solid var(--border, #e8e0d4);
+  border-radius: 0.375rem;
+  background: var(--bg, #faf8f5);
+  color: var(--text-primary, #2d2a27);
+  font-size: 0.8125rem;
+  font-family: inherit;
+  width: 100%;
+  resize: vertical;
+  min-height: 5rem;
+  line-height: 1.55;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--accent, #b8860b);
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: var(--text-secondary, #8c7e6e);
+  margin: 0;
+}
+
+.description {
+  font-size: 0.8125rem;
+  color: var(--text-primary, #2d2a27);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.code {
+  font-size: 0.75rem;
+  background: #f3f4f6;
+  border: 1px solid var(--border, #e8e0d4);
+  border-radius: 0.25rem;
+  padding: 0.05rem 0.375rem;
+  word-break: break-all;
+}
+
+/* ========== 選択肢リスト ========== */
+.choiceList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.choiceRow {
+  display: flex;
+  gap: 0.375rem;
+  align-items: center;
+}
+
+.choiceKeyLabel {
+  width: 1.25rem;
+  flex-shrink: 0;
+  font-weight: 700;
+  color: var(--accent, #b8860b);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.choiceInput {
+  flex: 2;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--border, #e8e0d4);
+  border-radius: 0.375rem;
+  background: var(--bg, #faf8f5);
+  color: var(--text-primary, #2d2a27);
+  font-size: 0.8125rem;
+  font-family: inherit;
+  min-width: 0;
+}
+
+.choiceInput:focus {
+  outline: none;
+  border-color: var(--accent, #b8860b);
+}
+
+.choiceTypeInput {
+  flex: 1;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--border, #e8e0d4);
+  border-radius: 0.375rem;
+  background: var(--bg, #faf8f5);
+  color: var(--text-secondary, #8c7e6e);
+  font-size: 0.75rem;
+  font-family: inherit;
+  min-width: 0;
+}
+
+.choiceTypeInput:focus {
+  outline: none;
+  border-color: var(--accent, #b8860b);
+}
+
+/* ========== ボタン ========== */
+.applyBtn {
+  padding: 0.4rem 1.25rem;
+  border: 1.5px solid var(--accent, #b8860b);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--accent, #b8860b);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.13s;
+  align-self: flex-start;
+}
+
+.applyBtn:hover:not(:disabled) {
+  background: var(--accent, #b8860b);
+  color: #ffffff;
+}
+
+.applyBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.cropBtn {
+  padding: 0.5rem 1.25rem;
+  border: 1.5px solid #1565c0;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: #1565c0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.13s;
+  align-self: flex-start;
+}
+
+.cropBtn:hover {
+  background: #1565c0;
+  color: #ffffff;
+}
+
+.deleteBtn {
+  padding: 0.4rem 1.25rem;
+  border: 1.5px solid var(--error, #d32f2f);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--error, #d32f2f);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.13s;
+  align-self: flex-start;
+}
+
+.deleteBtn:hover {
+  background: var(--error, #d32f2f);
+  color: #ffffff;
+}
+
+/* ========== 適用済み修正リスト ========== */
+.correctionList {
+  border-top: 1px solid var(--border, #e8e0d4);
+  padding-top: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.listTitle {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--text-secondary, #8c7e6e);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.375rem;
+}
+
+.correctionItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  background: #f9f7fb;
+  border: 1px solid var(--border, #e8e0d4);
+  border-radius: 0.375rem;
+  min-width: 0;
+}
+
+.correctionLabel {
+  flex: 1;
+  font-size: 0.78125rem;
+  color: var(--text-primary, #2d2a27);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.removeBtn {
+  flex-shrink: 0;
+  width: 1.375rem;
+  height: 1.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-secondary, #8c7e6e);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.13s;
+  padding: 0;
+}
+
+.removeBtn:hover {
+  background: var(--error, #d32f2f);
+  color: #ffffff;
+}

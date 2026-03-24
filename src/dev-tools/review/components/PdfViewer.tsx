@@ -14,6 +14,10 @@ interface PdfViewerProps {
   onConfirmPage: (pdfFile: string, page: number) => void
   pdfFiles: string[]
   onPdfFileChange: (file: string) => void
+  /** Canvas 参照を外部から受け取る（PdfCropper との共有用）*/
+  canvasRef?: React.RefObject<HTMLCanvasElement>
+  /** ページレンダリング完了時のコールバック（viewport サイズ取得用） */
+  onCanvasReady?: () => void
 }
 
 type LoadState = 'idle' | 'loading' | 'loaded' | 'error'
@@ -43,10 +47,17 @@ export function PdfViewer({
   onConfirmPage,
   pdfFiles,
   onPdfFileChange,
+  canvasRef: externalCanvasRef,
+  onCanvasReady,
 }: PdfViewerProps) {
-  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const internalCanvasRef = useRef<HTMLCanvasElement>(null)
+  // 外部から canvasRef が渡されればそちらを使い、なければ内部 ref を使う
+  const canvasRef = externalCanvasRef ?? internalCanvasRef
+
   const pdfDocRef = useRef<PDFDocumentProxy | null>(null)
   const renderTaskRef = useRef<{ cancel: () => void } | null>(null)
+  const onCanvasReadyRef = useRef(onCanvasReady)
+  onCanvasReadyRef.current = onCanvasReady
 
   const [loadState, setLoadState] = useState<LoadState>('idle')
   const [errorMsg, setErrorMsg] = useState('')
@@ -133,12 +144,15 @@ export function PdfViewer({
 
       await task.promise
       renderTaskRef.current = null
+
+      // レンダリング完了通知
+      onCanvasReadyRef.current?.()
     } catch (err) {
       // RenderingCancelledException は無視
       if (err instanceof Error && err.name === 'RenderingCancelledException') return
       console.error('[PdfViewer] render error:', err)
     }
-  }, [])
+  }, [canvasRef])
 
   // ドキュメントロード完了後 or ページ変更時にレンダリング
   useEffect(() => {

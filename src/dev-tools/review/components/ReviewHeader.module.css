@@ -233,6 +233,47 @@
   cursor: pointer;
 }
 
+/* ========== エクスポートボタン ========== */
+.exportBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.3rem 0.875rem;
+  border: 1.5px solid var(--success, #388e3c);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--success, #388e3c);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.13s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.exportBtn:hover {
+  background: var(--success, #388e3c);
+  color: #ffffff;
+}
+
+.exportBadge {
+  padding: 0.05rem 0.4rem;
+  border-radius: 9999px;
+  background: var(--warning, #f9a825);
+  color: #ffffff;
+  font-size: 0.625rem;
+  font-weight: 700;
+}
+
+.exportKeyHint {
+  font-size: 0.625rem;
+  background: rgba(0,0,0,0.1);
+  border-radius: 0.2rem;
+  padding: 0.05rem 0.3rem;
+  font-family: monospace;
+}
+
 /* ========== 全選択/全解除リンク ========== */
 .selectAll {
   font-size: 0.6875rem;

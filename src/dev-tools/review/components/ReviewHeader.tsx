@@ -14,6 +14,8 @@ interface ReviewHeaderProps {
   currentIndex: number
   filters: FilterConfig
   onFiltersChange: (filters: FilterConfig) => void
+  onExport?: () => void
+  correctionCount?: number
 }
 
 export function ReviewHeader({
@@ -23,6 +25,8 @@ export function ReviewHeader({
   currentIndex,
   filters,
   onFiltersChange,
+  onExport,
+  correctionCount = 0,
 }: ReviewHeaderProps) {
   // 判定カウント集計
   const judgmentValues = Object.values(judgments)
@@ -123,6 +127,21 @@ export function ReviewHeader({
             {totalFiltered > 0 ? currentIndex + 1 : 0} / {totalFiltered}
           </span>
         </div>
+
+        {onExport && (
+          <button
+            className={styles.exportBtn}
+            onClick={onExport}
+            type="button"
+            title="修正データをエクスポート (E)"
+          >
+            エクスポート
+            {correctionCount > 0 && (
+              <span className={styles.exportBadge}>{correctionCount}</span>
+            )}
+            <span className={styles.exportKeyHint}>E</span>
+          </button>
+        )}
       </div>
 
       {/* ===== プログレスバー ===== */}
