@@ -87,6 +87,9 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - 共通UIコンポーネント: `src/components/ui/`（Chip, FloatingNav, BottomSheet, QuestionCard 等）
 - データ層: `src/data/`（all-questions, exam-blueprint, question-topic-map, exemplar-stats）
 - カスタムフック: `src/hooks/`（useAnswerHistory, useTopicMastery, useAnalytics, useFlashCards）
+- カスタムフック（新規）: `src/hooks/`（useQuestionAnswerState, useTimeTracking, useSwipeNavigation, useOfficialNotes, useBookmarks）
+- 問題ドメインコンポーネント: `src/components/question/`（ProgressHeader, QuestionBody, ChoiceList, ChoiceCard, ActionArea, ResultBanner, ExplanationSection, OfficialNoteCard, NoteImageViewer, MetaAccordion）— LinkedQuestionViewer からも再利用前提
+- 公式付箋データ: `src/data/official-notes.ts`（モック10枚）、型: `src/types/official-note.ts`
 - ブループリント: 科目 → 大項目(MajorCategory) → 中項目(MiddleCategory) の3階層
 
 ## 重要なパターン
@@ -97,10 +100,23 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - QuestionCard: onClick時は tabIndex + onKeyDown も必要（アクセシビリティ）
 - BottomSheet: 閉じている間は aria-hidden + inert で操作不能に
 
+## 開発時の注意事項（gotchas）
+- `jsx: react-jsx` 設定のため `React.KeyboardEvent` 等の名前空間型は使えない → `import type { KeyboardEvent } from 'react'` を使う
+- `@testing-library/react` / jsdom 未導入。フックのテストはロジックをクラスに分離して純粋関数テスト（TimeTracker, AnswerStateManager, SwipeNavigator パターン）
+- `codex review --commit <SHA>` にプロンプトを渡すときは stdin（heredoc）を使う。引数としては渡せない
+- `codex exec "プロンプト"` で GPT-5.4 に設計レビュー等の自由質問が可能
+- モックデータの linkedQuestionIds は実問題IDと未検証。ダミー値注意コメント付き
+
 ## マルチモデルレビュー戦略
 ユーザーはCodex CLI（GPT-5.4）での各タスクレビューを重視。
 実装後に必ず `codex review` を実行し、指摘を修正してからコミット。
 過去に発見されたバグ例: 未使用import、ルート判定の過剰マッチ、フィルター状態の残存、連問補完漏れ。
+
+## 設計ドキュメント（Soft Companion リデザイン）
+- `docs/superpowers/specs/2026-03-24-phase1-week1-2-redesign-design.md` — HomePage + PracticePage 設計
+- `docs/superpowers/specs/2026-03-24-questionpage-redesign-design.md` — QuestionPage 設計（GPT-5.4 Approved）
+- `docs/superpowers/specs/2026-03-24-linked-question-redesign-design.md` — 連問横展開 設計（GPT-5.4 Approved、実装計画未作成）
+- `docs/superpowers/plans/2026-03-24-questionpage-redesign.md` — QuestionPage 実装計画（12タスク完了）
 
 ## データ構造メモ
 - `QUESTION_TOPIC_MAP`: Record<questionId, topicId> — 問題→中項目マッピング
