@@ -161,14 +161,32 @@ export interface UseQuestionAnswerStateResult {
   requiredCount: number
 }
 
+export interface UseQuestionAnswerStateOptions {
+  /** 外部から注入する answerHistory（連問で親から渡す場合） */
+  externalHistory?: {
+    history: AnswerHistory[]
+    saveAnswer: (answer: Omit<AnswerHistory, 'id'>) => void
+    getQuestionResult: (questionId: string) => AnswerHistory | undefined
+  }
+  /** true にすると既存回答があれば restoreFromExisting() で復元＆ロック（連問用） */
+  restoreExisting?: boolean
+}
+
 /**
  * 回答選択・送信・スキップのロジックを凝集するフック。
  *
  * - useAnswerHistory() から既存結果を取得して復元
  * - submitAnswer / skipQuestion で saveAnswer に time_spent_seconds を渡す
+ * - externalHistory を渡すと useAnswerHistory() の代わりに外部データを使う（連問で N 重ロード防止）
+ * - restoreExisting: true にすると既存回答を restoreFromExisting() で復元＆ロック
  */
-export function useQuestionAnswerState(question: Question): UseQuestionAnswerStateResult {
-  const { getQuestionResult, saveAnswer, history } = useAnswerHistory()
+export function useQuestionAnswerState(
+  question: Question,
+  options?: UseQuestionAnswerStateOptions,
+): UseQuestionAnswerStateResult {
+  // externalHistory があればそれを使う、なければ自前で呼ぶ
+  const internal = useAnswerHistory()
+  const { getQuestionResult, saveAnswer, history } = options?.externalHistory ?? internal
   const mgrRef = useRef<AnswerStateManager>(new AnswerStateManager(question))
 
   // question が変わったらマネージャーを再生成
@@ -182,17 +200,23 @@ export function useQuestionAnswerState(question: Question): UseQuestionAnswerSta
     triggerUpdate()
   }, [question.id, triggerUpdate])
 
-  // history ロード完了後に既存結果を参照情報として同期（再演習できるよう isAnswered はセットしない）
+  // history ロード完了後に既存結果を同期
   useEffect(() => {
     const mgr = mgrRef.current
     if (mgr.isAnswered) return // 既に今回回答済みなら何もしない
 
     const existing = getQuestionResult(question.id)
     if (existing) {
-      mgr.existingResult = existing
+      if (options?.restoreExisting) {
+        // 連問モード: 既存回答を完全復元してロック
+        mgr.restoreFromExisting(existing)
+      } else {
+        // 単問モード: 参照情報としてのみ保持（再演習可能）
+        mgr.existingResult = existing
+      }
       triggerUpdate()
     }
-  }, [question.id, history, getQuestionResult, triggerUpdate])
+  }, [question.id, history, getQuestionResult, options?.restoreExisting, triggerUpdate])
 
   const mgr = mgrRef.current
 
