@@ -1,4 +1,4 @@
-import type { Choice, QuestionSection, QuestionSubject, VisualContentType } from '../../../types/question'
+import type { Choice, QuestionSection, QuestionSubject, VisualContentType } from '../../types/question'
 
 export type JudgmentStatus = 'ok' | 'needs-fix' | 'ng'
 export type CorrectionStatus = 'draft' | 'ready' | 'applied' | 'verified'
