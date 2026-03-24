@@ -21,7 +21,7 @@ interface PdfViewerProps {
   pdfFiles: string[]
   onPdfFileChange: (file: string) => void
   /** Canvas 参照を外部から受け取る（PdfCropper との共有用）*/
-  canvasRef?: React.RefObject<HTMLCanvasElement>
+  canvasRef?: React.RefObject<HTMLCanvasElement | null>
   /** ページレンダリング完了時のコールバック（viewport サイズ取得用） */
   onCanvasReady?: () => void
 }
@@ -145,7 +145,7 @@ export const PdfViewer = forwardRef<PdfViewerHandle, PdfViewerProps>(function Pd
       const ctx = canvas.getContext('2d')
       if (!ctx) return
 
-      const task = pdfPage.render({ canvasContext: ctx, viewport })
+      const task = pdfPage.render({ canvasContext: ctx, viewport, canvas })
       renderTaskRef.current = task
 
       await task.promise

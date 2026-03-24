@@ -80,6 +80,8 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `npx tsc --noEmit` — 型チェックのみ
 - `codex review --base <SHA>` — GPT-5.4によるコードレビュー（マルチモデル戦略）
 - `codex review --commit <SHA>` — 特定コミットのレビュー
+- `npm run validate` — 全問データ品質チェック（38ルール、CLI + JSONレポート出力）
+- `/dev-tools/review` — データ品質レビューUI（dev serverのみ。`npm run dev` → ブラウザでアクセス）
 
 ## アーキテクチャ
 - デザイントークン: `src/styles/tokens.css`（CSS変数 `--accent`, `--bg`, `--card` 等）
@@ -90,6 +92,9 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - カスタムフック（新規）: `src/hooks/`（useQuestionAnswerState, useTimeTracking, useSwipeNavigation, useOfficialNotes, useBookmarks）
 - 問題ドメインコンポーネント: `src/components/question/`（ProgressHeader, QuestionBody, ChoiceList, ChoiceCard, ActionArea, ResultBanner, ExplanationSection, OfficialNoteCard, NoteImageViewer, MetaAccordion）— LinkedQuestionViewer からも再利用前提
 - 公式付箋データ: `src/data/official-notes.ts`（モック10枚）、型: `src/types/official-note.ts`
+- データバリデーター: `src/utils/data-validator/`（38ルール、3レベル: 構造/整合性/品質）
+- レビューUI: `src/dev-tools/review/`（Vite dev server統合、本番ビルドに含まれない）
+- 修正スクリプト: `scripts/apply-corrections.ts`（中間JSON方式） + `scripts/json-to-exam-ts.ts`
 - ブループリント: 科目 → 大項目(MajorCategory) → 中項目(MiddleCategory) の3階層
 
 ## 重要なパターン

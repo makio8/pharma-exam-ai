@@ -19,7 +19,7 @@ interface CropRect {
 }
 
 interface PdfCropperProps {
-  canvasRef: RefObject<HTMLCanvasElement>
+  canvasRef: RefObject<HTMLCanvasElement | null>
   pdfFile: string
   pdfPage: number
   viewportWidth: number
