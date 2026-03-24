@@ -7,7 +7,7 @@ import {
   UserOutlined,
   LogoutOutlined,
 } from '@ant-design/icons'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate, matchPath } from 'react-router-dom'
 import { useAuth } from '../../hooks/useAuth'
 
 const { Header, Content, Footer } = Layout
@@ -32,8 +32,10 @@ export function AppLayout({ children }: AppLayoutProps) {
   const navigate = useNavigate()
   const { user, signOut } = useAuth()
 
-  // 完全一致のみ（/practice/r101-1 等のサブルートは従来通りAnt Designレイアウト）
-  const isRedesigned = REDESIGNED_EXACT.includes(location.pathname)
+  // リデザイン済みページ判定: 完全一致 + QuestionPage（matchPathでパラメータ対応）
+  const isRedesigned =
+    REDESIGNED_EXACT.includes(location.pathname) ||
+    matchPath('/practice/:questionId', location.pathname) !== null
 
   const handleSignOut = async () => {
     await signOut()
