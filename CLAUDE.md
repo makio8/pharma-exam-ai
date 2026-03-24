@@ -61,22 +61,30 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - v1/: 演習ページモック3枚
 - v2/: 全7画面モック + デザイン方向性3パターン（A:Refined Medical, B:Soft Companion, C:Bold Minimal）→ **B採用**
 
-## 開発状況（2026-03-24時点）
+## 開発状況（2026-03-25時点）
 - Phase 1 Week 1-2 完了: PracticePage + HomePage を Soft Companion にリデザイン済み
-- **Phase 1 Week 3 実装完了**: QuestionPage を Soft Companion にフルリデザイン
+- Phase 1 Week 3 完了: QuestionPage を Soft Companion にフルリデザイン
   - 730行→285行（61%削減）、Ant Design依存ゼロ
   - 新規フック5つ + コンポーネント10個 + テスト42件追加
   - 公式付箋（OfficialNote）の自動表示・ブックマーク機能
   - スワイプナビゲーション、解答時間自動計測、「わからん」スキップ
-  - GPT-5.4レビュー: 設計書3R(17件) + 実装計画3R(8件) + 実装レビュー(3件) = 全28件修正済み
-  - **次: ブラウザ動作確認 → 連問（LinkedQuestionViewer）横展開**
+- **Phase 1 Week 3b 完了: LinkedQuestionViewer 横展開**
+  - 409行→44行（89%削減）、Ant Design依存ゼロ
+  - 新規コンポーネント: ScenarioCard + LinkedQuestionItem
+  - useQuestionAnswerState に externalHistory/restoreExisting オプション追加
+  - extractQuestionBody をユーティリティに切り出し
+  - ChoiceList 数値グリッドに正誤表示追加
+  - useAnswerHistory に skip オプション追加（N重ロード防止）
+  - GPT-5.4レビュー: P2指摘2件修正済み
+  - テスト: 14ファイル271件全パス
+  - **次: ブラウザ動作確認 → AnalysisPage リデザイン（ブレストから）**
 - Ant Design: 未移行ページ（AnalysisPage, NotesPage, FlashCardPage）がまだ依存中
 - AppLayout: `REDESIGNED_EXACT` + `matchPath('/practice/:questionId')` でリデザイン済みページを管理
 
 ## コマンド
 - `npm run dev` — 開発サーバー
 - `npm run build` — `tsc -b && vite build`（noUnusedLocals: true、未使用importでエラー）
-- `npx vitest run` — テスト（7ファイル62テスト）
+- `npx vitest run` — テスト（14ファイル271テスト）
 - `npx tsc --noEmit` — 型チェックのみ
 - `codex review --base <SHA>` — GPT-5.4によるコードレビュー（マルチモデル戦略）
 - `codex review --commit <SHA>` — 特定コミットのレビュー
