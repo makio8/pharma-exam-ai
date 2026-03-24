@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "validate": "tsx scripts/validate-data.ts"
+    "validate": "npx tsx scripts/validate-data.ts"
   },
   "dependencies": {
     "@ant-design/icons": "^6.1.0",
