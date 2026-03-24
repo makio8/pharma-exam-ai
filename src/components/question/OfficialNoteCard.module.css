@@ -1,0 +1,154 @@
+.wrapper {
+  font-family: var(--font);
+}
+
+.sectionTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-2);
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Image area */
+.imageArea {
+  display: block;
+  width: 100%;
+  background: #faf5ee;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  min-height: 160px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.imageBlurred {
+  filter: blur(8px);
+}
+
+.lockOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.lockIcon {
+  font-size: 32px;
+}
+
+/* Content */
+.content {
+  padding: 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.summary {
+  font-size: 14px;
+  color: var(--text-2);
+  margin: 0;
+  line-height: 1.65;
+  /* max 3 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Importance badge */
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--r-chip);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.badgeHigh {
+  color: var(--ng);
+}
+
+.badgeMid {
+  color: var(--warn);
+}
+
+.badgeLow {
+  color: var(--text-3);
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.btn {
+  flex: 1;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: opacity 0.15s;
+  line-height: 1.2;
+}
+
+.btn:active {
+  opacity: 0.7;
+}
+
+.btnOutline {
+  background: var(--card);
+  color: var(--accent);
+  border: 1.5px solid var(--accent-border);
+}
+
+.btnBookmarked {
+  background: var(--accent);
+  color: #ffffff;
+  border: 1.5px solid var(--accent);
+}
+
+/* Premium CTA */
+.premiumCta {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  text-align: center;
+  margin: 4px 0 0;
+  padding: 8px;
+  border: 1.5px dashed var(--accent-border);
+  border-radius: var(--r-sm);
+}
