@@ -185,7 +185,8 @@ export function useQuestionAnswerState(
   options?: UseQuestionAnswerStateOptions,
 ): UseQuestionAnswerStateResult {
   // externalHistory があればそれを使う、なければ自前で呼ぶ
-  const internal = useAnswerHistory()
+  // skip: true で内部の answerHistoryRepo.getAll() を抑止（N重ロード防止）
+  const internal = useAnswerHistory({ skip: !!options?.externalHistory })
   const { getQuestionResult, saveAnswer, history } = options?.externalHistory ?? internal
   const mgrRef = useRef<AnswerStateManager>(new AnswerStateManager(question))
 

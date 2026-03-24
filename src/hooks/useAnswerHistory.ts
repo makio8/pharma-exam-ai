@@ -3,17 +3,19 @@ import { useState, useCallback, useEffect } from 'react'
 import type { AnswerHistory } from '../types/question'
 import { answerHistoryRepo } from '../repositories'
 
-export function useAnswerHistory() {
+export function useAnswerHistory(options?: { skip?: boolean }) {
   const [history, setHistory] = useState<AnswerHistory[]>([])
   const [loading, setLoading] = useState(true)
 
-  // 初回ロード
+  // 初回ロード（skip: true の場合はロードしない — 連問で親から外部注入時の N重ロード防止）
+  const skip = options?.skip ?? false
   useEffect(() => {
+    if (skip) return
     answerHistoryRepo.getAll().then((data) => {
       setHistory(data)
       setLoading(false)
     })
-  }, [])
+  }, [skip])
 
   /** 回答を保存（idは自動生成） */
   const saveAnswer = useCallback((answer: Omit<AnswerHistory, 'id'>) => {
