@@ -77,6 +77,7 @@ function renderCard(d: Item, idx: number): string {
           <button class="btn btn-ng-critical" onclick="mark('${d.id}','ng-critical')">🔴 致命的</button>
           <button class="btn btn-ng-improve" onclick="mark('${d.id}','ng-improve')">🟡 改善</button>
           <button class="btn btn-reset" onclick="mark('${d.id}',null)">リセット</button>
+          <button class="btn crop-btn" onclick="startCrop('${d.id}')" id="crop-btn-${d.id}">✂ クロップ</button>
         </div>
       </div>
       <div class="card-body">
@@ -181,6 +182,24 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","N
 .reason-comment{width:100%;padding:4px 8px;border:1px solid #ddd;border-radius:4px;font-size:11px;outline:none}
 .reason-comment:focus{border-color:#1976d2}
 
+.crop-btn{background:#e3f2fd;color:#1565c0;border-color:#90caf9}
+.crop-btn:hover{background:#1976d2;color:#fff}
+.crop-btn.has-crop{background:#1565c0;color:#fff}
+.image-container.crop-mode{cursor:crosshair;position:relative;user-select:none}
+.crop-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.3);pointer-events:none}
+.crop-selection{position:absolute;border:2px dashed #1976d2;background:rgba(25,118,210,0.1);pointer-events:none;z-index:10}
+.crop-saved-indicator{position:absolute;border:2px solid #4caf50;background:rgba(76,175,80,0.1);pointer-events:none;z-index:5}
+.crop-preview{margin-top:8px;text-align:center}
+.crop-preview img{max-width:400px;border:2px solid #1976d2;border-radius:4px}
+.crop-actions{display:flex;gap:4px;margin-top:6px;justify-content:center}
+.crop-actions button{padding:3px 12px;border:1px solid #ccc;border-radius:4px;cursor:pointer;font-size:11px}
+.crop-save-btn{background:#4caf50;color:#fff;border-color:#4caf50}
+.crop-save-btn:hover{background:#388e3c}
+.crop-cancel-btn{background:#f5f5f5}
+.crop-cancel-btn:hover{background:#e0e0e0}
+.crop-clear-btn{background:#ff9800;color:#fff;border-color:#ff9800}
+.crop-clear-btn:hover{background:#f57c00}
+
 .modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:2000;justify-content:center;align-items:center}
 .modal-overlay.show{display:flex}
 .modal{background:#fff;border-radius:8px;padding:20px;max-width:600px;width:90%;max-height:80vh;overflow-y:auto}
@@ -246,11 +265,14 @@ const DATA = ${JSON.stringify(items)};
 const state = {};    // { id: 'ok'|'ng-critical'|'ng-improve' }
 const reasons = {};  // { id: string[] }  理由チップ
 const comments = {}; // { id: string }    コメント
+const crops = {};    // { id: { x, y, w, h } }  クロップ座標（%）
+let activeCrop = null; // { id, startX, startY, rect, dragging }
 try {
   const saved = JSON.parse(localStorage.getItem('tier1-review-v3') || '{}');
   Object.assign(state, saved.state || saved);  // v3前半互換
   Object.assign(reasons, saved.reasons || {});
   Object.assign(comments, saved.comments || {});
+  Object.assign(crops, saved.crops || {});
 } catch(e) {}
 for (const [id, s] of Object.entries(state)) applyCardStatus(id, s);
 // Restore reasons/comments UI
@@ -261,10 +283,16 @@ for (const [id, c] of Object.entries(comments)) {
   const el = document.getElementById('comment-' + id);
   if (el) el.value = c;
 }
+// Restore crop indicators
+for (const id of Object.keys(crops)) {
+  showSavedCropIndicator(id);
+  const btn = document.getElementById('crop-btn-' + id);
+  if (btn) btn.classList.add('has-crop');
+}
 updateCounters();
 
 function saveAll() {
-  try { localStorage.setItem('tier1-review-v3', JSON.stringify({ state, reasons, comments })); } catch(e) {}
+  try { localStorage.setItem('tier1-review-v3', JSON.stringify({ state, reasons, comments, crops })); } catch(e) {}
 }
 function findChip(id, label) {
   const area = document.getElementById('reason-' + id);
@@ -355,20 +383,242 @@ function exportResults() {
     if (comments[id]) entry.comment = comments[id];
     if (Object.keys(entry).length > 0) details[id] = entry;
   }
+  const cropData = Object.keys(crops).length > 0 ? crops : undefined;
   document.getElementById('export-content').textContent = JSON.stringify({
     version:'v3', date:new Date().toISOString(), total:TOTAL,
     summary:{ok:ok.length,ng_critical:ngC.length,ng_improve:ngI.length,pending:pending.length},
     ok_ids:ok, ng_critical_ids:ngC, ng_improve_ids:ngI, pending_ids:pending,
-    details: details
+    details: details,
+    crops: cropData
   }, null, 2);
   document.getElementById('export-modal').classList.add('show');
 }
 function resetAll() {
   if (!confirm('すべての判定をリセットしますか？')) return;
   for (const key of Object.keys(state)) delete state[key];
-  document.querySelectorAll('.card').forEach(card => { card.classList.remove('status-ok','status-ng-critical','status-ng-improve'); card.querySelectorAll('.btn').forEach(b => b.classList.remove('active')); });
+  for (const key of Object.keys(reasons)) delete reasons[key];
+  for (const key of Object.keys(comments)) delete comments[key];
+  for (const key of Object.keys(crops)) delete crops[key];
+  if (activeCrop) cancelCrop();
+  document.querySelectorAll('.card').forEach(card => {
+    card.classList.remove('status-ok','status-ng-critical','status-ng-improve');
+    card.querySelectorAll('.btn').forEach(b => b.classList.remove('active'));
+    const indicator = card.querySelector('.crop-saved-indicator');
+    if (indicator) indicator.remove();
+    const cropBtn = card.querySelector('.crop-btn');
+    if (cropBtn) cropBtn.classList.remove('has-crop');
+    const reasonArea = card.querySelector('.reason-area');
+    if (reasonArea) { reasonArea.style.display = 'none'; reasonArea.querySelectorAll('.reason-chip').forEach(c => c.classList.remove('selected','selected-critical')); }
+    const commentEl = card.querySelector('.reason-comment');
+    if (commentEl) commentEl.value = '';
+  });
   updateCounters();
   try { localStorage.setItem('tier1-review-v3','{}'); } catch(e) {}
+}
+
+// ---- クロップ機能 ----
+function startCrop(id) {
+  if (activeCrop) cancelCrop();
+  activeCrop = { id, startX: 0, startY: 0, rect: null, dragging: false };
+
+  const container = document.querySelector('#card-' + id + ' .image-container');
+  container.classList.add('crop-mode');
+  container.style.position = 'relative';
+
+  // オーバーレイ（半透明の暗いレイヤー）
+  const overlay = document.createElement('div');
+  overlay.className = 'crop-overlay';
+  overlay.id = 'crop-overlay-' + id;
+  container.appendChild(overlay);
+
+  // 選択矩形（ドラッグで描画する枠）
+  const sel = document.createElement('div');
+  sel.className = 'crop-selection';
+  sel.id = 'crop-sel-' + id;
+  container.appendChild(sel);
+
+  // マウス操作は画像要素で受け取る
+  const img = container.querySelector('img');
+  img.style.pointerEvents = 'auto';
+  img.style.position = 'relative';
+  img.style.zIndex = '20';
+  img.style.cursor = 'crosshair';
+
+  img.onmousedown = function(e) {
+    e.preventDefault();
+    const rect = img.getBoundingClientRect();
+    activeCrop.startX = (e.clientX - rect.left) / rect.width;
+    activeCrop.startY = (e.clientY - rect.top) / rect.height;
+    activeCrop.dragging = true;
+  };
+
+  img.onmousemove = function(e) {
+    if (!activeCrop || !activeCrop.dragging) return;
+    e.preventDefault();
+    const rect = img.getBoundingClientRect();
+    const endX = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    const endY = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
+
+    const x = Math.min(activeCrop.startX, endX);
+    const y = Math.min(activeCrop.startY, endY);
+    const w = Math.abs(endX - activeCrop.startX);
+    const h = Math.abs(endY - activeCrop.startY);
+
+    activeCrop.rect = { x: x, y: y, w: w, h: h };
+
+    const sel = document.getElementById('crop-sel-' + activeCrop.id);
+    sel.style.left = (x * 100) + '%';
+    sel.style.top = (y * 100) + '%';
+    sel.style.width = (w * 100) + '%';
+    sel.style.height = (h * 100) + '%';
+  };
+
+  img.onmouseup = function(e) {
+    if (!activeCrop || !activeCrop.dragging) return;
+    activeCrop.dragging = false;
+    // 最小サイズチェック（2%以上）
+    if (activeCrop.rect && activeCrop.rect.w > 0.02 && activeCrop.rect.h > 0.02) {
+      showCropPreview(activeCrop.id, activeCrop.rect);
+    }
+  };
+}
+
+function showCropPreview(id, rect) {
+  const container = document.querySelector('#card-' + id + ' .image-container');
+  const img = container.querySelector('img');
+
+  // 既存のプレビューを除去
+  const oldPreview = container.querySelector('.crop-preview');
+  if (oldPreview) oldPreview.remove();
+
+  // Canvas でクロップ領域をプレビュー描画
+  const preview = document.createElement('div');
+  preview.className = 'crop-preview';
+
+  const canvas = document.createElement('canvas');
+  const naturalW = img.naturalWidth;
+  const naturalH = img.naturalHeight;
+  const sx = Math.round(rect.x * naturalW);
+  const sy = Math.round(rect.y * naturalH);
+  const sw = Math.round(rect.w * naturalW);
+  const sh = Math.round(rect.h * naturalH);
+  canvas.width = sw;
+  canvas.height = sh;
+
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(img, sx, sy, sw, sh, 0, 0, sw, sh);
+
+  const previewImg = document.createElement('img');
+  previewImg.src = canvas.toDataURL();
+  preview.appendChild(previewImg);
+
+  // サイズ情報
+  const info = document.createElement('div');
+  info.style.fontSize = '10px';
+  info.style.color = '#666';
+  info.style.marginTop = '4px';
+  info.textContent = 'クロップ: ' + sw + 'x' + sh + 'px (' + Math.round(rect.x*100) + '%, ' + Math.round(rect.y*100) + '%, ' + Math.round(rect.w*100) + '%, ' + Math.round(rect.h*100) + '%)';
+  preview.appendChild(info);
+
+  // 操作ボタン
+  const actions = document.createElement('div');
+  actions.className = 'crop-actions';
+
+  const saveBtn = document.createElement('button');
+  saveBtn.className = 'crop-save-btn';
+  saveBtn.textContent = '✅ 保存';
+  saveBtn.onclick = function() { saveCrop(id, rect); };
+
+  const cancelBtn = document.createElement('button');
+  cancelBtn.className = 'crop-cancel-btn';
+  cancelBtn.textContent = 'キャンセル';
+  cancelBtn.onclick = function() { cancelCrop(); };
+
+  actions.appendChild(saveBtn);
+  actions.appendChild(cancelBtn);
+  preview.appendChild(actions);
+
+  container.appendChild(preview);
+}
+
+function saveCrop(id, rect) {
+  crops[id] = {
+    x: Math.round(rect.x * 1000) / 1000,
+    y: Math.round(rect.y * 1000) / 1000,
+    w: Math.round(rect.w * 1000) / 1000,
+    h: Math.round(rect.h * 1000) / 1000
+  };
+
+  cancelCrop();
+
+  // 保存済みインジケーター表示
+  showSavedCropIndicator(id);
+
+  // ボタンスタイル更新
+  const btn = document.getElementById('crop-btn-' + id);
+  if (btn) btn.classList.add('has-crop');
+
+  saveAll();
+}
+
+function showSavedCropIndicator(id) {
+  const container = document.querySelector('#card-' + id + ' .image-container');
+  if (!container) return;
+
+  // 古いインジケーターを除去
+  const old = container.querySelector('.crop-saved-indicator');
+  if (old) old.remove();
+
+  const crop = crops[id];
+  if (!crop) return;
+
+  container.style.position = 'relative';
+  const indicator = document.createElement('div');
+  indicator.className = 'crop-saved-indicator';
+  indicator.style.left = (crop.x * 100) + '%';
+  indicator.style.top = (crop.y * 100) + '%';
+  indicator.style.width = (crop.w * 100) + '%';
+  indicator.style.height = (crop.h * 100) + '%';
+  container.appendChild(indicator);
+}
+
+function cancelCrop() {
+  if (!activeCrop) return;
+  const id = activeCrop.id;
+  const container = document.querySelector('#card-' + id + ' .image-container');
+  if (container) {
+    container.classList.remove('crop-mode');
+    const overlay = document.getElementById('crop-overlay-' + id);
+    if (overlay) overlay.remove();
+    const sel = document.getElementById('crop-sel-' + id);
+    if (sel) sel.remove();
+    const preview = container.querySelector('.crop-preview');
+    if (preview) preview.remove();
+
+    const img = container.querySelector('img');
+    if (img) {
+      img.onmousedown = null;
+      img.onmousemove = null;
+      img.onmouseup = null;
+      img.style.pointerEvents = '';
+      img.style.position = '';
+      img.style.zIndex = '';
+      img.style.cursor = '';
+    }
+  }
+  activeCrop = null;
+}
+
+function clearCrop(id) {
+  delete crops[id];
+  const container = document.querySelector('#card-' + id + ' .image-container');
+  if (container) {
+    const indicator = container.querySelector('.crop-saved-indicator');
+    if (indicator) indicator.remove();
+  }
+  const btn = document.getElementById('crop-btn-' + id);
+  if (btn) btn.classList.remove('has-crop');
+  saveAll();
 }
 </script>
 </body></html>`
