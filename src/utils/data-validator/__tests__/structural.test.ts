@@ -252,6 +252,15 @@ describe('ルール6: choices-valid', () => {
     expect(found).toHaveLength(1)
   })
 
+  it('誤検知防止: key が6（組み合わせ問題等）はエラーにしない', () => {
+    const choices = [1, 2, 3, 4, 5, 6].map(k => ({ key: k, text: `選択肢${k}` }))
+    const issues = structuralRules(
+      [makeQuestion({ choices, correct_answer: 1 })],
+      makeContext(),
+    )
+    expect(issues.filter(i => i.rule === 'choices-valid')).toHaveLength(0)
+  })
+
   it('異常系: key が0（範囲外）はエラー', () => {
     const issues = structuralRules(
       [makeQuestion({ choices: [{ key: 0, text: 'A' }, { key: 1, text: 'B' }] })],
@@ -261,18 +270,18 @@ describe('ルール6: choices-valid', () => {
     expect(found).toHaveLength(1)
   })
 
-  it('異常系: key が6（範囲外）はエラー', () => {
+  it('異常系: key が11（範囲外）はエラー', () => {
     const issues = structuralRules(
-      [makeQuestion({ choices: [{ key: 6, text: 'A' }, { key: 1, text: 'B' }] })],
+      [makeQuestion({ choices: [{ key: 1, text: 'A' }, { key: 11, text: 'B' }], correct_answer: 1 })],
       makeContext(),
     )
     const found = issues.filter(i => i.rule === 'choices-valid')
     expect(found).toHaveLength(1)
   })
 
-  it('異常系: 6択（7個以上）はエラー', () => {
-    const choices = [1, 2, 3, 4, 5, 6].map(k => ({ key: k, text: `選択肢${k}` }))
-    const issues = structuralRules([makeQuestion({ choices })], makeContext())
+  it('異常系: 11択（上限超え）はエラー', () => {
+    const choices = Array.from({ length: 11 }, (_, i) => ({ key: i + 1, text: `選択肢${i + 1}` }))
+    const issues = structuralRules([makeQuestion({ choices, correct_answer: 1 })], makeContext())
     const found = issues.filter(i => i.rule === 'choices-valid')
     expect(found).toHaveLength(1)
   })
@@ -523,6 +532,69 @@ describe('ルール12: answer-format', () => {
     })
     const issues = structuralRules([q], makeContext())
     expect(issues.filter(i => i.rule === 'answer-format')).toHaveLength(1)
+  })
+
+  // P1-2: 配列長チェック
+  it('異常系: 「3つ選べ」なのにcorrect_answer=[1,2]（2個）はエラー', () => {
+    const q = makeQuestion({
+      question_text: '正しいものを3つ選べ。',
+      choices: [
+        { key: 1, text: 'A' }, { key: 2, text: 'B' }, { key: 3, text: 'C' },
+        { key: 4, text: 'D' }, { key: 5, text: 'E' },
+      ],
+      correct_answer: [1, 2],
+    })
+    const issues = structuralRules([q], makeContext())
+    const found = issues.filter(i => i.rule === 'answer-format')
+    expect(found).toHaveLength(1)
+    expect(found[0].severity).toBe('error')
+  })
+
+  it('正常系: 「3つ選べ」でcorrect_answer=[1,2,3]（3個）はOK', () => {
+    const q = makeQuestion({
+      question_text: '正しいものを3つ選べ。',
+      choices: [
+        { key: 1, text: 'A' }, { key: 2, text: 'B' }, { key: 3, text: 'C' },
+        { key: 4, text: 'D' }, { key: 5, text: 'E' },
+      ],
+      correct_answer: [1, 2, 3],
+    })
+    const issues = structuralRules([q], makeContext())
+    expect(issues.filter(i => i.rule === 'answer-format')).toHaveLength(0)
+  })
+
+  // P3: 漢数字対応
+  it('正常系: 「二つ選べ」でcorrect_answer=[1,3]（2個）はOK', () => {
+    const q = makeQuestion({
+      question_text: '正しいものを二つ選べ。',
+      correct_answer: [1, 3],
+    })
+    const issues = structuralRules([q], makeContext())
+    expect(issues.filter(i => i.rule === 'answer-format')).toHaveLength(0)
+  })
+
+  it('正常系: 「三つ選べ」でcorrect_answer=[1,2,3]（3個）はOK', () => {
+    const q = makeQuestion({
+      question_text: '正しいものを三つ選べ。',
+      choices: [
+        { key: 1, text: 'A' }, { key: 2, text: 'B' }, { key: 3, text: 'C' },
+        { key: 4, text: 'D' }, { key: 5, text: 'E' },
+      ],
+      correct_answer: [1, 2, 3],
+    })
+    const issues = structuralRules([q], makeContext())
+    expect(issues.filter(i => i.rule === 'answer-format')).toHaveLength(0)
+  })
+
+  it('異常系: 「二つ選べ」なのにcorrect_answer=[1]（1個）はエラー', () => {
+    const q = makeQuestion({
+      question_text: '正しいものを二つ選べ。',
+      correct_answer: [1],
+    })
+    const issues = structuralRules([q], makeContext())
+    const found = issues.filter(i => i.rule === 'answer-format')
+    expect(found).toHaveLength(1)
+    expect(found[0].severity).toBe('error')
   })
 })
 

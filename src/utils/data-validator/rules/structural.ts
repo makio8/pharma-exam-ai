@@ -19,6 +19,9 @@ function toHalfWidth(str: string): string {
   return str.replace(/[０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0))
 }
 
+// 漢数字 → 数値変換マップ
+const KANJI_NUM_MAP: Record<string, number> = { '一': 1, '二': 2, '三': 3, '四': 4, '五': 5 }
+
 // ─────────────────────────────────────────────
 // メイン関数
 // ─────────────────────────────────────────────
@@ -131,32 +134,32 @@ export function structuralRules(
           questionId: q.id,
           rule: 'choices-valid',
           severity: 'error',
-          message: '選択肢が空配列です（1〜5個必要）',
+          message: '選択肢が空配列です（1〜10個必要）',
           field: 'choices',
-          expected: '1〜5個',
+          expected: '1〜10個',
           actual: 0,
         })
-      } else if (q.choices.length > 5) {
+      } else if (q.choices.length > 10) {
         issues.push({
           questionId: q.id,
           rule: 'choices-valid',
           severity: 'error',
-          message: `選択肢が多すぎます: ${q.choices.length}個（最大5個）`,
+          message: `選択肢が多すぎます: ${q.choices.length}個（最大10個）`,
           field: 'choices',
-          expected: '1〜5個',
+          expected: '1〜10個',
           actual: q.choices.length,
         })
       } else {
-        // key の範囲チェック (1〜5)
-        const outOfRange = q.choices.filter(c => c.key < 1 || c.key > 5)
+        // key の範囲チェック (1〜10)
+        const outOfRange = q.choices.filter(c => c.key < 1 || c.key > 10)
         if (outOfRange.length > 0) {
           issues.push({
             questionId: q.id,
             rule: 'choices-valid',
             severity: 'error',
-            message: `選択肢のkeyが範囲外(1〜5)です: [${outOfRange.map(c => c.key).join(', ')}]`,
+            message: `選択肢のkeyが範囲外(1〜10)です: [${outOfRange.map(c => c.key).join(', ')}]`,
             field: 'choices',
-            expected: '1〜5',
+            expected: '1〜10',
             actual: outOfRange.map(c => c.key),
           })
         } else {
@@ -254,9 +257,20 @@ export function structuralRules(
     // ─── ルール 12: answer-format ───
     if (q.question_text !== undefined && q.question_text !== null && q.correct_answer !== undefined && q.correct_answer !== null) {
       const normalizedText = toHalfWidth(q.question_text)
-      const selectCountMatch = normalizedText.match(/([0-9])つ選べ/)
-      const isMultiSelect = selectCountMatch !== null
-      const selectCount = isMultiSelect ? parseInt(selectCountMatch[1], 10) : null
+
+      // Nつ選べ の N を解析: 漢数字 → アラビア数字の順に試みる
+      let selectCount: number | null = null
+      const kanjiMatch = q.question_text.match(/([一二三四五])つ選べ/)
+      if (kanjiMatch) {
+        selectCount = KANJI_NUM_MAP[kanjiMatch[1]] ?? null
+      } else {
+        const arabicMatch = normalizedText.match(/([0-9])つ選べ/)
+        if (arabicMatch) {
+          selectCount = parseInt(arabicMatch[1], 10)
+        }
+      }
+
+      const isMultiSelect = selectCount !== null
       const isArray = Array.isArray(q.correct_answer)
 
       if (!isMultiSelect || selectCount === 1) {
@@ -285,19 +299,33 @@ export function structuralRules(
             actual: q.correct_answer,
           })
         } else {
-          // 昇順チェック
           const arr = q.correct_answer as number[]
-          const isSorted = arr.every((v, i) => i === 0 || arr[i - 1] < v)
-          if (!isSorted) {
+
+          // 配列長チェック: Nつ選べ の N と配列長が一致しているか
+          if (arr.length !== selectCount) {
             issues.push({
               questionId: q.id,
               rule: 'answer-format',
               severity: 'error',
-              message: `複数選択問題のcorrect_answerが昇順になっていません: [${arr.join(', ')}]`,
+              message: `「${selectCount}つ選べ」なのにcorrect_answerの要素数が${arr.length}個です`,
               field: 'correct_answer',
-              expected: '昇順配列',
+              expected: `${selectCount}個の配列`,
               actual: arr,
             })
+          } else {
+            // 昇順チェック
+            const isSorted = arr.every((v, i) => i === 0 || arr[i - 1] < v)
+            if (!isSorted) {
+              issues.push({
+                questionId: q.id,
+                rule: 'answer-format',
+                severity: 'error',
+                message: `複数選択問題のcorrect_answerが昇順になっていません: [${arr.join(', ')}]`,
+                field: 'correct_answer',
+                expected: '昇順配列',
+                actual: arr,
+              })
+            }
           }
         }
       }
