@@ -1,3 +1,4 @@
+import type { KeyboardEvent } from 'react'
 import styles from './Choice.module.css'
 
 export type ChoiceState = 'default' | 'selected' | 'correct' | 'incorrect' | 'dimmed'
@@ -30,7 +31,7 @@ export function ChoiceCard({
   const role = isMulti ? 'checkbox' : 'radio'
   const isChecked = state === 'selected' || state === 'correct' || state === 'incorrect'
 
-  function handleKeyDown(e: React.KeyboardEvent) {
+  function handleKeyDown(e: KeyboardEvent<HTMLDivElement>) {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault()
       if (!disabled) onClick()

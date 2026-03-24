@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import type { KeyboardEvent } from 'react'
 import type { Question } from '../../types/question'
 import { Chip } from '../ui/Chip'
 import styles from './MetaAccordion.module.css'
@@ -25,7 +26,7 @@ function MetaRow({ label, value }: MetaRowProps) {
 export function MetaAccordion({ question, topicName }: Props) {
   const [isOpen, setIsOpen] = useState(false)
 
-  function handleKeyDown(e: React.KeyboardEvent) {
+  function handleKeyDown(e: KeyboardEvent<HTMLDivElement>) {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault()
       setIsOpen((prev) => !prev)

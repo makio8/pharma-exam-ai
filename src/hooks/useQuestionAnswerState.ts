@@ -182,14 +182,14 @@ export function useQuestionAnswerState(question: Question): UseQuestionAnswerSta
     triggerUpdate()
   }, [question.id, triggerUpdate])
 
-  // history ロード完了後に既存結果を同期
+  // history ロード完了後に既存結果を参照情報として同期（再演習できるよう isAnswered はセットしない）
   useEffect(() => {
     const mgr = mgrRef.current
-    if (mgr.isAnswered) return // 既に回答済みなら何もしない
+    if (mgr.isAnswered) return // 既に今回回答済みなら何もしない
 
     const existing = getQuestionResult(question.id)
     if (existing) {
-      mgr.restoreFromExisting(existing)
+      mgr.existingResult = existing
       triggerUpdate()
     }
   }, [question.id, history, getQuestionResult, triggerUpdate])

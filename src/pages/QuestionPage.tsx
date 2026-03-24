@@ -1,5 +1,6 @@
 // 問題演習画面 — Soft Companion リデザイン
 import { useMemo, useRef, useEffect } from 'react'
+import type { RefObject } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { ALL_QUESTIONS } from '../data/all-questions'
 import { QUESTION_TOPIC_MAP } from '../data/question-topic-map'
@@ -44,13 +45,13 @@ export function QuestionPage() {
       const raw = localStorage.getItem('practice_session')
       if (raw) {
         const ids = JSON.parse(raw) as string[]
-        if (ids.length > 0) return ids
+        if (ids.length > 0 && questionId && ids.includes(questionId)) return ids
       }
     } catch {
       // パースエラーは無視
     }
     return ALL_QUESTIONS.map((q) => q.id)
-  }, [])
+  }, [questionId])
 
   // --- 連問グループ判定 ---
   const linkedGroup = useLinkedQuestions(questionId)
@@ -145,7 +146,7 @@ interface ContentProps {
   notes: OfficialNote[]
   isBookmarked: (noteId: string) => boolean
   toggleBookmark: (noteId: string) => void
-  resultRef: React.RefObject<HTMLDivElement | null>
+  resultRef: RefObject<HTMLDivElement | null>
   navigate: ReturnType<typeof useNavigate>
 }
 
