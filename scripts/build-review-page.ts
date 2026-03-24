@@ -16,10 +16,16 @@ const outPath = path.join(__dirname, '..', 'public', 'review-tier1.html')
 const review = JSON.parse(fs.readFileSync(path.join(dataDir, 'tier1-review-results.json'), 'utf-8'))
 const allIds: string[] = [...review.ng_critical_ids, ...review.ng_improve_ids, ...review.ok_ids]
 
+interface Choice {
+  key: number
+  text: string
+}
+
 interface Item {
   id: string; year: number; qnum: number; text: string; image_url: string
   keyword: string; linked_scenario: string | null; linked_group: string | null
-  choices_empty: boolean; prev: string
+  choices_empty: boolean; choices: Choice[]; prev: string
+  display_mode: string
 }
 
 const items: Item[] = []
@@ -31,16 +37,28 @@ for (const id of allIds) {
   const questions = JSON.parse(content.substring(content.indexOf('[\n')).trimEnd())
   const q = questions.find((q: any) => q.id === id)
   if (!q) continue
+  // display_mode判定（text-normalizer.tsのロジックを再現）
+  const choicesEmpty = !q.choices || q.choices.length === 0
+    || q.choices.every((c: any) => (c.text || '').trim() === '')
+  let displayMode = 'text'
+  if (q.display_mode_override) displayMode = q.display_mode_override
+  else if (!q.image_url) displayMode = 'text'
+  else if (choicesEmpty) displayMode = (q.question_text?.trim().length ?? 0) > 30 ? 'both' : 'image'
+  else if (q.visual_content_type === 'text_only') displayMode = 'text'
+  else displayMode = 'both'
+
   items.push({
     id, year, qnum: q.question_number,
-    text: (q.question_text || '').substring(0, 200),
+    text: q.question_text || '',
     image_url: q.image_url || `/images/questions/${year}/q${numStr}.png`,
     keyword: (q.question_text || '').match(/下図|この図|次の図|構造式|模式図|グラフ|図に示/)?.[0] || '',
-    linked_scenario: q.linked_scenario?.substring(0, 400) || null,
+    linked_scenario: q.linked_scenario || null,
     linked_group: q.linked_group || null,
     choices_empty: !q.choices || q.choices.length === 0,
+    choices: (q.choices || []).map((c: any) => ({ key: c.key, text: c.text || '' })),
     prev: review.ng_critical_ids.includes(id) ? 'ng-critical'
       : review.ng_improve_ids.includes(id) ? 'ng-improve' : 'ok',
+    display_mode: displayMode,
   })
 }
 
@@ -53,7 +71,7 @@ function renderCard(d: Item, idx: number): string {
   const scenarioHtml = d.linked_scenario
     ? `<div class="scenario-box">
         <div class="scenario-label">📋 連問シナリオ（アプリで別途テキスト表示される内容）</div>
-        <div class="scenario-text">${esc(d.linked_scenario)}${d.linked_scenario.length >= 400 ? '...' : ''}</div>
+        <div class="scenario-text">${esc(d.linked_scenario)}</div>
        </div>` : ''
 
   const modeLabel = d.choices_empty
@@ -81,11 +99,17 @@ function renderCard(d: Item, idx: number): string {
         </div>
       </div>
       <div class="card-body">
-        ${scenarioHtml}
-        <div class="question-text">${esc(d.text)}${d.text.length >= 200 ? '...' : ''}</div>
-        <div class="image-container">
-          <img src="${d.image_url}" alt="問${d.qnum}の画像" loading="lazy"
-               onerror="this.parentElement.innerHTML='<div class=img-error>画像エラー: '+this.src+'</div>'" />
+        <div class="app-preview">
+          <div class="app-preview-label">📱 アプリ表示プレビュー（${d.display_mode} mode）</div>
+          ${scenarioHtml}
+          ${d.display_mode !== 'image' ? `<div class="question-text">${esc(d.text.substring(0, 300))}${d.text.length > 300 ? '...' : ''}</div>` : ''}
+          ${d.image_url && d.display_mode !== 'text' ? `<div class="image-container">
+            <img src="${d.image_url}" alt="問${d.qnum}の画像" loading="lazy"
+                 onerror="this.parentElement.innerHTML='<div class=img-error>画像エラー: '+this.src+'</div>'" />
+          </div>` : d.display_mode === 'text' ? '<div class="no-image-note">（画像なし — テキストのみ表示）</div>' : ''}
+          ${d.choices.length > 0 ? `<div class="choices-preview">
+            ${d.choices.map(c => `<div class="choice-item"><span class="choice-key">${c.key}</span><span class="choice-text">${esc(c.text)}</span></div>`).join('')}
+          </div>` : '<div class="choices-preview"><div class="choice-item" style="color:#999">（選択肢なし — 番号ボタンUI）</div></div>'}
         </div>
         <div class="reason-area" id="reason-${d.id}" style="display:none;margin-top:8px">
           <div class="reason-chips">
@@ -166,6 +190,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","N
 .btn-reset{background:#f5f5f5;color:#666}.btn-reset:hover{background:#e0e0e0}
 
 .card-body{padding:12px}
+.app-preview{border:1px solid #e0e0e0;border-radius:8px;padding:12px;background:#fafafa;margin-bottom:8px}
+.app-preview-label{font-size:10px;color:#999;margin-bottom:8px;padding-bottom:4px;border-bottom:1px dashed #e0e0e0}
+.no-image-note{padding:12px;text-align:center;color:#999;font-size:11px;background:#f5f5f5;border-radius:4px;margin:8px 0}
+.choices-preview{margin-top:10px;border-top:1px solid #e0e0e0;padding-top:8px}
+.choice-item{display:flex;gap:8px;padding:4px 8px;margin-bottom:3px;border-radius:4px;font-size:12px;border:1px solid #e0e0e0;background:#fff}
+.choice-item:hover{background:#f5f5f5}
+.choice-key{font-weight:700;color:#1976d2;min-width:16px}
+.choice-text{flex:1;line-height:1.4}
 .scenario-box{background:#fff8e1;border:1px solid #ffe082;border-radius:6px;padding:8px 10px;margin-bottom:8px}
 .scenario-label{font-size:10px;font-weight:700;color:#f57f17;margin-bottom:3px}
 .scenario-text{font-size:12px;line-height:1.5;color:#555;white-space:pre-wrap}
