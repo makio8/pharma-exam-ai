@@ -22,7 +22,8 @@ PRDの学習サイクル「発見→理解→暗記→確認」をUI上で途切
 | 暗記カード導線（遷移ボタン） | FlashCardPage のリデザイン |
 | スワイプナビゲーション | セッション結果サマリー画面 |
 | Ant Design 完全排除（icons含む） | AppLayout 自体のリデザイン |
-| 自信度UIの廃止 → 解答時間自動計測 | AnswerHistory のDBスキーマ変更 |
+| 自信度UIの廃止 → 解答時間自動計測 | — |
+| DBマイグレーションSQL作成（Supabase有効化時に適用） | Supabaseの本番適用自体 |
 
 ### 設計原則（PRDより）
 
@@ -369,8 +370,8 @@ useQuestionAnswerState(question: Question): {
   // 操作
   selectAnswer: (key: number) => void
   selectMultiAnswers: (keys: number[]) => void
-  submitAnswer: () => void
-  skipQuestion: () => void
+  submitAnswer: (elapsedSeconds: number) => void
+  skipQuestion: (elapsedSeconds: number) => void
 
   // 判定
   canSubmit: boolean
