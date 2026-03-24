@@ -246,11 +246,17 @@ src/dev-tools/
 
 ```typescript
 // vite.config.ts への追加
+import path from 'path'
+
 {
   server: {
     fs: {
       // 絶対パスで指定（環境依存を防ぐ）
-      allow: [path.resolve(__dirname, 'data/pdfs')]
+      // data/pdfs/ に加えて、public/images/ もPDFクロップ結果の参照で必要
+      allow: [
+        path.resolve(__dirname, 'data/pdfs'),
+        path.resolve(__dirname, 'public/images')
+      ]
     }
   }
 }
@@ -274,7 +280,34 @@ const DevToolsReview = import.meta.env.DEV
 この方式なら:
 - 本番ビルドでは `import()` 自体が発行されないため、dev-tools コードはバンドルに含まれない
 - `rollupOptions.external` の不完全な除外リスクがない
-- pdf.js の worker ファイルは dev-tools 内で `import('pdfjs-dist/build/pdf.worker.mjs')` するため、本番に混入しない
+
+pdf.js worker の初期化（GPT-5.4指摘L2対応: 具体的な設定手順）:
+```typescript
+// src/dev-tools/review/components/PdfViewer.tsx
+import { useEffect } from 'react'
+
+// pdf.js は dev-tools 内でのみ dynamic import する
+async function initPdfJs() {
+  const pdfjs = await import('pdfjs-dist')
+  // worker を同じバージョンの ESM worker から読み込む
+  // Vite が自動的に worker ファイルをバンドルしてくれる
+  const pdfjsWorker = await import('pdfjs-dist/build/pdf.worker.mjs?url')
+  pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker.default
+  return pdfjs
+}
+
+// コンポーネント内で
+useEffect(() => {
+  initPdfJs().then(pdfjs => {
+    // pdfjs.getDocument(url) でPDFを読み込み
+  })
+}, [])
+```
+
+注意事項:
+- `pdfjs-dist` は devDependencies に入れる（本番に含めない）
+- Vite の `?url` suffix で worker ファイルのURLを取得（バンドルに含まれない）
+- PWA の Service Worker キャッシュ対象からは除外する（`workbox.navigateFallbackDenylist` に `/dev-tools/` を追加）
 
 ### レイアウト
 
@@ -335,15 +368,19 @@ const DevToolsReview = import.meta.env.DEV
 
 | フィルタ | 説明 | デフォルト |
 |---------|------|---------|
-| 深刻度 | error / warning / info / 全問 | error |
+| 深刻度 | error / warning / info / 全問 | 全問（error+warning） |
 | 年度 | 100〜111、複数選択可 | 全年度 |
 | 区分 | 必須 / 理論 / 実践 | 全区分 |
-| 判定状態 | 未判定 / OK / 要修正 / NG | 未判定 |
+| 判定状態 | 未判定 / OK / 要修正 / NG / すべて | 未判定 |
 | ルール | 特定ルールで絞り込み | 全ルール |
 
-追加UX（GPT-5.4指摘L1対応）:
+デフォルトは「error + warning の未判定」を表示（GPT-5.4指摘L1対応）。
+infoだけ除外し、対応必要なものを最初から全て見える状態にする。
+
+追加UX:
 - 「次の未解決issueへジャンプ」ボタン（`G` キー）
 - フィルタプリセット保存機能（よく使う組み合わせをワンクリックで呼び出し）
+- 「レビュー済み問題を表示」トグル（完了分の確認にも使える）
 
 ### キーボードショートカット
 
@@ -512,19 +549,55 @@ function getPdfFiles(year: number, section: QuestionSection): string[] {
 // 問番の範囲で「おそらくこのPDF」を推定して初期表示
 ```
 
-ページ推定とキャッシュ（GPT-5.4指摘M5対応）:
+ページ推定アルゴリズム（GPT-5.4指摘M5対応: 3段階のフォールバック）:
 ```typescript
-// 初回は問番から按分推定（不正確だがスタート地点として有用）
-function estimatePage(questionNumber: number, section: QuestionSection, totalPages: number): number {
+// 推定優先順位:
+// 1. confirmedPdfPages に保存済み → そのまま使う（最高精度）
+// 2. 隣接問題の確定ページからの差分推定 → 近い確定ページを基準にオフセット
+// 3. 線形按分（フォールバック）→ 初回のみ使用
+
+function getPageForQuestion(
+  questionId: string,
+  questionNumber: number,
+  section: QuestionSection,
+  pdfFiles: string[],
+  confirmedPages: Record<string, number>,
+  totalPages: number
+): { page: number; confidence: 'confirmed' | 'interpolated' | 'estimated'; pdfFileIndex: number } {
+
+  // 1. 確定済みページがあればそのまま返す
+  if (confirmedPages[questionId]) {
+    return { page: confirmedPages[questionId], confidence: 'confirmed', pdfFileIndex: 0 }
+  }
+
+  // 2. 同一区分内の確定済みページから補間
+  // 前後で最も近い確定済みページを探し、問番の差分でオフセット推定
+  // 例: r110-005がPage 3確定、r110-010を表示 → Page 3 + (10-5)/密度 ≈ Page 5-6
+  const nearest = findNearestConfirmed(questionNumber, section, confirmedPages)
+  if (nearest) {
+    const pageDiff = Math.round((questionNumber - nearest.questionNumber) * nearest.density)
+    return { page: nearest.page + pageDiff, confidence: 'interpolated', pdfFileIndex: 0 }
+  }
+
+  // 3. 線形按分（フォールバック。初めて開く区分で使用）
   const sectionRanges = { '必須': [1, 90], '理論': [91, 195], '実践': [196, 345] }
   const [start, end] = sectionRanges[section]
   const position = (questionNumber - start) / (end - start)
-  return Math.max(1, Math.round(position * totalPages))
+
+  // 分割PDFの場合: 問番の位置でどのPDFファイルかも推定
+  const pdfFileIndex = pdfFiles.length > 1
+    ? Math.min(Math.floor(position * pdfFiles.length), pdfFiles.length - 1)
+    : 0
+
+  return {
+    page: Math.max(1, Math.round(position * totalPages)),
+    confidence: 'estimated',
+    pdfFileIndex
+  }
 }
 
-// ユーザーが手動でページを確定したら confirmedPdfPages に保存
-// 次回同じ問題を表示する時は保存済みページを使用
-// 隣接問題のページも推定精度が上がる（確定ページからの差分計算）
+// UIにconfidence表示: 確定=緑、補間=黄、推定=灰
+// ユーザーが正しいページに辿り着いたら「✓ このページで確定」ボタンで保存
 ```
 
 ## GPT-5.4 レビュー対応記録
@@ -545,8 +618,16 @@ function estimatePage(questionNumber: number, section: QuestionSection, totalPag
 | M5 | medium | PDFページ推定が不正確 | confirmedPdfPages + 隣接推定ロジック追加 |
 | M6 | medium | 判定と修正のライフサイクルが曖昧 | draft/ready/applied/verifiedステート追加 |
 | M7 | medium | Vitestテストが薄い | 3種テスト(正常/異常/誤検知防止) + 回帰テスト追加 |
-| L1 | low | フィルタのデフォルトが制限的 | ジャンプ機能 + プリセット保存追加 |
-| L2 | low | fs.allowパスとworker設定未記載 | 絶対パス + dynamic import記載 |
+| L1 | low | フィルタのデフォルトが制限的 | デフォルトをerror+warningに変更 + ジャンプ + プリセット保存 |
+| L2 | low | fs.allowパスとworker設定未記載 | 絶対パス + GlobalWorkerOptions初期化手順 + PWA除外設定を明記 |
+
+### 再レビュー（Round 2）で残った3件の追加修正
+
+| # | 指摘 | 対応 |
+|---|------|------|
+| M5 | ページ推定アルゴリズムが未定義 | 3段階フォールバック（確定→補間→按分）+ confidence表示を仕様化 |
+| L1 | デフォルト値自体が変わっていない | error+warningに変更 + レビュー済み表示トグル追加 |
+| L2 | worker初期化手順が不足 | GlobalWorkerOptions.workerSrc + ?url suffix + PWA除外を明記 |
 
 ## 将来拡張（今回のスコープ外）
 
