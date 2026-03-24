@@ -1,9 +1,22 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // https://vite.dev/config/
 export default defineConfig({
+  server: {
+    fs: {
+      allow: [
+        path.resolve(__dirname, 'data/pdfs'),
+        path.resolve(__dirname, 'public/images'),
+        path.resolve(__dirname, 'reports'),
+      ],
+    },
+  },
   plugins: [
     react(),
     VitePWA({
@@ -11,6 +24,7 @@ export default defineConfig({
       includeAssets: ['favicon.ico'],
       workbox: {
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB（問題データが大きいため）
+        navigateFallbackDenylist: [/^\/dev-tools/],
       },
       manifest: {
         name: '国試ノート - 薬剤師国家試験演習',

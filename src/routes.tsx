@@ -11,6 +11,10 @@ const FlashCardListPage = React.lazy(() => import('./pages/FlashCardListPage').t
 const FlashCardPage = React.lazy(() => import('./pages/FlashCardPage').then(m => ({ default: m.FlashCardPage })))
 const LoginPage = React.lazy(() => import('./pages/LoginPage').then(m => ({ default: m.LoginPage })))
 
+const DevToolsReview = import.meta.env.DEV
+  ? React.lazy(() => import('./dev-tools/review/ReviewPage'))
+  : null
+
 const Loading = () => <div style={{ padding: '2rem', textAlign: 'center' }}>読み込み中...</div>
 
 export const router = createBrowserRouter([
@@ -46,4 +50,8 @@ export const router = createBrowserRouter([
     path: '/analysis',
     element: <AppLayout><Suspense fallback={<Loading />}><AnalysisPage /></Suspense></AppLayout>,
   },
+  ...(import.meta.env.DEV && DevToolsReview ? [{
+    path: '/dev-tools/review',
+    element: <Suspense fallback={<Loading />}><DevToolsReview /></Suspense>,
+  }] : []),
 ])
