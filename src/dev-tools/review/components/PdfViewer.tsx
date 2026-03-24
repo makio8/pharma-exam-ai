@@ -1,0 +1,331 @@
+import { useEffect, useRef, useState, useCallback } from 'react'
+import type { KeyboardEvent } from 'react'
+import type { PageEstimate } from '../hooks/usePdfNavigation'
+import styles from './PdfViewer.module.css'
+
+// pdfjs-dist の型
+type PDFDocumentProxy = import('pdfjs-dist').PDFDocumentProxy
+
+interface PdfViewerProps {
+  pdfFile: string
+  page: number
+  confidence: PageEstimate['confidence']
+  onPageChange: (page: number) => void
+  onConfirmPage: (pdfFile: string, page: number) => void
+  pdfFiles: string[]
+  onPdfFileChange: (file: string) => void
+}
+
+type LoadState = 'idle' | 'loading' | 'loaded' | 'error'
+
+const SCALE = 1.5
+
+async function initPdfJs() {
+  const pdfjs = await import('pdfjs-dist')
+  pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    'pdfjs-dist/build/pdf.worker.mjs',
+    import.meta.url
+  ).href
+  return pdfjs
+}
+
+function getPdfUrl(filename: string): string {
+  // Vite dev server: server.fs.allow に data/pdfs が登録済み
+  // /@fs/ 経由でプロジェクトルートの data/pdfs にアクセス
+  return `/@fs${import.meta.env.VITE_PROJECT_ROOT ?? ''}/data/pdfs/${filename}`
+}
+
+export function PdfViewer({
+  pdfFile,
+  page,
+  confidence,
+  onPageChange,
+  onConfirmPage,
+  pdfFiles,
+  onPdfFileChange,
+}: PdfViewerProps) {
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const pdfDocRef = useRef<PDFDocumentProxy | null>(null)
+  const renderTaskRef = useRef<{ cancel: () => void } | null>(null)
+
+  const [loadState, setLoadState] = useState<LoadState>('idle')
+  const [errorMsg, setErrorMsg] = useState('')
+  const [totalPages, setTotalPages] = useState(0)
+  const [currentPage, setCurrentPage] = useState(page)
+  const [pageInputValue, setPageInputValue] = useState(String(page))
+
+  // PDFファイルが変わったらドキュメントを読み込む
+  useEffect(() => {
+    if (!pdfFile) return
+
+    let cancelled = false
+
+    async function loadDocument() {
+      setLoadState('loading')
+      setErrorMsg('')
+      pdfDocRef.current = null
+
+      try {
+        const pdfjs = await initPdfJs()
+        const url = getPdfUrl(pdfFile)
+        const loadingTask = pdfjs.getDocument(url)
+        const doc = await loadingTask.promise
+
+        if (cancelled) return
+
+        pdfDocRef.current = doc
+        setTotalPages(doc.numPages)
+        setLoadState('loaded')
+      } catch (err) {
+        if (cancelled) return
+        const msg = err instanceof Error ? err.message : String(err)
+        setErrorMsg(msg)
+        setLoadState('error')
+      }
+    }
+
+    loadDocument()
+    return () => { cancelled = true }
+  }, [pdfFile])
+
+  // pageプロップが変わったら内部ページも追随（外部から変更された場合）
+  useEffect(() => {
+    setCurrentPage(page)
+    setPageInputValue(String(page))
+  }, [page])
+
+  // ページをレンダリング
+  const renderPage = useCallback(async (pageNum: number) => {
+    const doc = pdfDocRef.current
+    const canvas = canvasRef.current
+    if (!doc || !canvas) return
+
+    // 進行中のレンダリングをキャンセル
+    if (renderTaskRef.current) {
+      renderTaskRef.current.cancel()
+      renderTaskRef.current = null
+    }
+
+    const clamped = Math.max(1, Math.min(doc.numPages, pageNum))
+
+    try {
+      const pdfPage = await doc.getPage(clamped)
+      const viewport = pdfPage.getViewport({ scale: SCALE })
+
+      canvas.width = viewport.width
+      canvas.height = viewport.height
+
+      const ctx = canvas.getContext('2d')
+      if (!ctx) return
+
+      const task = pdfPage.render({ canvasContext: ctx, viewport })
+      renderTaskRef.current = task
+
+      await task.promise
+      renderTaskRef.current = null
+    } catch (err) {
+      // RenderingCancelledException は無視
+      if (err instanceof Error && err.name === 'RenderingCancelledException') return
+      console.error('[PdfViewer] render error:', err)
+    }
+  }, [])
+
+  // ドキュメントロード完了後 or ページ変更時にレンダリング
+  useEffect(() => {
+    if (loadState !== 'loaded') return
+    renderPage(currentPage)
+  }, [loadState, currentPage, renderPage])
+
+  // キーボードナビ（P/N キー）
+  useEffect(() => {
+    function handleKeyDown(e: globalThis.KeyboardEvent) {
+      // 入力フィールドにフォーカスがある場合はスキップ
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return
+
+      if (e.key === 'p' || e.key === 'P') {
+        e.preventDefault()
+        goToPage(currentPage - 1)
+      } else if (e.key === 'n' || e.key === 'N') {
+        e.preventDefault()
+        goToPage(currentPage + 1)
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPage, totalPages])
+
+  function goToPage(pageNum: number) {
+    const clamped = Math.max(1, Math.min(totalPages || 1, pageNum))
+    setCurrentPage(clamped)
+    setPageInputValue(String(clamped))
+    onPageChange(clamped)
+  }
+
+  function handlePageInputChange(value: string) {
+    setPageInputValue(value)
+  }
+
+  function handlePageInputCommit(e: KeyboardEvent<HTMLInputElement> | React.FocusEvent<HTMLInputElement>) {
+    const num = parseInt(pageInputValue, 10)
+    if (!isNaN(num)) {
+      goToPage(num)
+    } else {
+      setPageInputValue(String(currentPage))
+    }
+    // Enter キーの場合はフォーカスを外す
+    if ('key' in e && e.key === 'Enter') {
+      (e.target as HTMLInputElement).blur()
+    }
+  }
+
+  function handleConfirm() {
+    onConfirmPage(pdfFile, currentPage)
+  }
+
+  function handleRetry() {
+    setLoadState('idle')
+    // useEffect が pdfFile 依存で再実行されないので、一時的に状態変更後 idle→loading
+    setTimeout(() => setLoadState('loading'), 0)
+    pdfDocRef.current = null
+    const loadDoc = async () => {
+      try {
+        const pdfjs = await initPdfJs()
+        const url = getPdfUrl(pdfFile)
+        const doc = await pdfjs.getDocument(url).promise
+        pdfDocRef.current = doc
+        setTotalPages(doc.numPages)
+        setLoadState('loaded')
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err)
+        setErrorMsg(msg)
+        setLoadState('error')
+      }
+    }
+    loadDoc()
+  }
+
+  // confidence バッジのクラス
+  const badgeClass =
+    confidence === 'confirmed'
+      ? styles.badgeConfirmed
+      : confidence === 'interpolated'
+        ? styles.badgeInterpolated
+        : styles.badgeEstimated
+
+  const badgeLabel =
+    confidence === 'confirmed' ? '確定' : confidence === 'interpolated' ? '補間' : '推定'
+
+  return (
+    <div className={styles.root}>
+      {/* PDFファイルタブ（分割PDF対応） */}
+      {pdfFiles.length > 1 && (
+        <div className={styles.fileTabs}>
+          {pdfFiles.map((file) => (
+            <button
+              key={file}
+              className={`${styles.fileTab} ${file === pdfFile ? styles.fileTabActive : ''}`}
+              onClick={() => onPdfFileChange(file)}
+              type="button"
+            >
+              {file}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* ツールバー */}
+      <div className={styles.toolbar}>
+        <div className={styles.navGroup}>
+          <button
+            className={styles.navBtn}
+            onClick={() => goToPage(currentPage - 1)}
+            disabled={currentPage <= 1 || loadState !== 'loaded'}
+            type="button"
+            title="前のページ (P)"
+            aria-label="前のページ"
+          >
+            ◀
+          </button>
+
+          <input
+            className={styles.pageInput}
+            type="number"
+            min={1}
+            max={totalPages || 1}
+            value={pageInputValue}
+            onChange={(e) => handlePageInputChange(e.target.value)}
+            onBlur={handlePageInputCommit}
+            onKeyDown={(e) => e.key === 'Enter' && handlePageInputCommit(e)}
+            aria-label="ページ番号"
+          />
+
+          <span className={styles.pageTotal}>
+            / {totalPages > 0 ? totalPages : '?'}
+          </span>
+
+          <button
+            className={styles.navBtn}
+            onClick={() => goToPage(currentPage + 1)}
+            disabled={currentPage >= totalPages || loadState !== 'loaded'}
+            type="button"
+            title="次のページ (N)"
+            aria-label="次のページ"
+          >
+            ▶
+          </button>
+        </div>
+
+        <span className={`${styles.badge} ${badgeClass}`}>{badgeLabel}</span>
+
+        <span className={styles.keyHint}>P / N キー</span>
+
+        <button
+          className={styles.confirmBtn}
+          onClick={handleConfirm}
+          disabled={loadState !== 'loaded'}
+          type="button"
+        >
+          ✓ このページで確定
+        </button>
+      </div>
+
+      {/* キャンバス領域 */}
+      <div className={styles.canvasArea}>
+        {loadState === 'loading' && (
+          <div className={styles.statusMsg}>
+            <span className={styles.statusIcon}>⏳</span>
+            <span>PDF 読み込み中...</span>
+            <span style={{ fontSize: '0.75rem', color: '#6b7280' }}>{pdfFile}</span>
+          </div>
+        )}
+
+        {loadState === 'error' && (
+          <div className={`${styles.statusMsg} ${styles.errorMsg}`}>
+            <span className={styles.statusIcon}>⚠️</span>
+            <span>PDF を読み込めませんでした</span>
+            <span style={{ fontSize: '0.75rem' }}>{pdfFile}</span>
+            <span style={{ fontSize: '0.75rem' }}>{errorMsg}</span>
+            <button className={styles.retryBtn} onClick={handleRetry} type="button">
+              再試行
+            </button>
+          </div>
+        )}
+
+        {(loadState === 'idle') && !pdfFile && (
+          <div className={styles.statusMsg}>
+            <span className={styles.statusIcon}>📄</span>
+            <span>PDFファイルが指定されていません</span>
+          </div>
+        )}
+
+        <canvas
+          ref={canvasRef}
+          className={styles.canvas}
+          style={{ display: loadState === 'loaded' ? 'block' : 'none' }}
+          aria-label={`PDF ${pdfFile} ページ ${currentPage}`}
+        />
+      </div>
+    </div>
+  )
+}

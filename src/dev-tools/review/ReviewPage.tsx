@@ -1,8 +1,10 @@
 import { useState, useMemo } from 'react'
 import { useValidationReport } from './hooks/useValidationReport'
 import { useReviewState } from './hooks/useReviewState'
+import { usePdfNavigation } from './hooks/usePdfNavigation'
 import { ReviewHeader } from './components/ReviewHeader'
 import { ReviewCard } from './components/ReviewCard'
+import { PdfViewer } from './components/PdfViewer'
 import { ALL_QUESTIONS } from '../../data/all-questions'
 import type { ValidationIssue } from '../../utils/data-validator/types'
 import type { FilterConfig } from './types'
@@ -69,10 +71,29 @@ export default function ReviewPage() {
   const safeIndex = Math.min(currentIndex, Math.max(0, filteredQuestions.length - 1))
   const currentQuestion = filteredQuestions[safeIndex]
 
+  // PDF ナビゲーション状態
+  const [manualPage, setManualPage] = useState<number | null>(null)
+  const [currentPdfFile, setCurrentPdfFile] = useState<string | null>(null)
+
+  const { estimate, pdfFiles } = usePdfNavigation(
+    currentQuestion?.id ?? '',
+    currentQuestion?.question_number ?? 1,
+    currentQuestion?.year ?? 110,
+    (currentQuestion?.section ?? '必須') as QuestionSection,
+    reviewState.state.confirmedPdfPages
+  )
+
+  // 手動ページ変更 or 推定ページをマージ
+  const activePage = manualPage ?? estimate.page
+  const activePdfFile = currentPdfFile ?? estimate.pdfFile
+
   function navigate(next: number) {
     const clamped = Math.max(0, Math.min(filteredQuestions.length - 1, next))
     setCurrentIndex(clamped)
     reviewState.setLastPosition(filteredQuestions[clamped]?.id ?? '')
+    // 問題が変わったら手動ページ・ファイル選択をリセット
+    setManualPage(null)
+    setCurrentPdfFile(null)
   }
 
   function handleFiltersChange(next: FilterConfig) {
@@ -95,11 +116,23 @@ export default function ReviewPage() {
       />
 
       <div className={styles.main}>
-        {/* PDFパネル（Task 11 で実装） */}
+        {/* PDFパネル */}
         <div className={styles.pdfPanel}>
-          <div className={styles.placeholder}>
-            PDFビューア（Task 11 で実装）
-          </div>
+          <PdfViewer
+            pdfFile={activePdfFile}
+            page={activePage}
+            confidence={estimate.confidence}
+            onPageChange={(p) => setManualPage(p)}
+            onConfirmPage={(file, page) => {
+              reviewState.confirmPdfPage(currentQuestion?.id ?? '', file, page)
+              setManualPage(null)
+            }}
+            pdfFiles={pdfFiles}
+            onPdfFileChange={(file) => {
+              setCurrentPdfFile(file)
+              setManualPage(1)
+            }}
+          />
         </div>
 
         {/* レビューカードパネル */}
