@@ -35,10 +35,11 @@ export class SupabaseAnswerHistoryRepo implements IAnswerHistoryRepo {
       .insert({
         user_id: user.id,
         question_id: answer.question_id as unknown as string, // ローカルIDをそのまま
-        selected_answer: answer.selected_answer,
+        selected_answer: answer.selected_answer,        // null を許容
         is_correct: answer.is_correct,
-        confidence_level: answer.confidence_level,
+        confidence_level: answer.confidence_level ?? null, // optional → null
         time_spent_seconds: answer.time_spent_seconds || null,
+        skipped: answer.skipped ?? false,                // 新規
       })
       .select()
       .single()
@@ -72,11 +73,12 @@ export class SupabaseAnswerHistoryRepo implements IAnswerHistoryRepo {
       id: row.id as string,
       user_id: row.user_id as string,
       question_id: row.question_id as string,
-      selected_answer: row.selected_answer as number | number[],
+      selected_answer: row.selected_answer as number | number[] | null,
       is_correct: row.is_correct as boolean,
       answered_at: row.answered_at as string,
-      confidence_level: row.confidence_level as AnswerHistory['confidence_level'],
+      confidence_level: (row.confidence_level as AnswerHistory['confidence_level']) ?? undefined,
       time_spent_seconds: row.time_spent_seconds as number | undefined,
+      skipped: (row.skipped as boolean) ?? false,
     }
   }
 }
