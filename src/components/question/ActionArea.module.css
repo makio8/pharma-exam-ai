@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0 16px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: var(--r);
+  background: linear-gradient(135deg, #aa3bff, #8b5cf6);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--font);
+  cursor: pointer;
+  box-shadow: var(--shadow-cta);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.submitBtn:not(:disabled):active {
+  transform: scale(0.98);
+}
+
+.submitBtn:disabled,
+.submitBtn[aria-disabled='true'] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.skipBtn {
+  background: none;
+  border: none;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: var(--text-3);
+  cursor: pointer;
+  font-family: var(--font);
+  transition: color 0.15s ease;
+}
+
+.skipBtn:hover {
+  color: var(--text-2);
+}
