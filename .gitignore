@@ -30,3 +30,5 @@ scripts/output/
 # PDF & page images (large binary files)
 data/pdfs/
 data/exam-pages/
+
+reports/
