@@ -1,0 +1,72 @@
+/* QuestionPage — Soft Companion */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Swipe container: touch-action to avoid scroll interference */
+.swipeContainer {
+  touch-action: pan-y;
+}
+
+/* 404 state */
+.notFound {
+  text-align: center;
+  padding: 60px 16px;
+}
+
+.notFoundTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.notFoundSub {
+  font-size: 13px;
+  color: var(--text-2);
+  margin-bottom: 24px;
+}
+
+.notFoundBtn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-sm);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.notFoundBtn:hover {
+  opacity: 0.85;
+}
+
+/* Previous result banner (before answering) */
+.previousResult {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: var(--r-sm);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.previousResultCorrect {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.previousResultIncorrect {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
