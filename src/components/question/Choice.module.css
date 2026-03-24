@@ -142,3 +142,26 @@
   flex-direction: column;
   gap: 8px;
 }
+
+.preparingText {
+  text-align: center;
+  color: var(--text-3);
+  font-size: 14px;
+  padding: 24px 0;
+}
+
+.numericBtnCorrect {
+  border-color: var(--ok) !important;
+  background: rgba(16, 185, 129, 0.1) !important;
+  color: var(--ok) !important;
+}
+
+.numericBtnIncorrect {
+  border-color: var(--ng) !important;
+  background: rgba(239, 68, 68, 0.1) !important;
+  color: var(--ng) !important;
+}
+
+.numericBtnDimmed {
+  opacity: 0.5;
+}

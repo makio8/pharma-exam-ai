@@ -75,6 +75,14 @@ export function ChoiceList({
 
   // Numeric input (1–9 grid)
   if (isNumeric) {
+    // データ準備中ガード: correct_answer === 0 の場合はプレースホルダー
+    const ca = question.correct_answer
+    if (!Array.isArray(ca) && ca === 0) {
+      return (
+        <p className={styles.preparingText}>この問題はデータ準備中です</p>
+      )
+    }
+
     const selectedNum = answerState.selectedAnswer
     return (
       <div
@@ -82,19 +90,36 @@ export function ChoiceList({
         role="radiogroup"
         aria-label="数値を選択"
       >
-        {Array.from({ length: 9 }, (_, i) => i + 1).map((num) => (
-          <button
-            key={num}
-            type="button"
-            className={`${styles.numericBtn} ${selectedNum === num ? styles.numericBtnSelected : ''}`}
-            disabled={isAnswered}
-            onClick={() => onSelect(num)}
-            aria-label={`${num}`}
-            aria-pressed={selectedNum === num}
-          >
-            {num}
-          </button>
-        ))}
+        {Array.from({ length: 9 }, (_, i) => i + 1).map((num) => {
+          let btnClass = styles.numericBtn
+          if (isAnswered) {
+            if (isCorrectKey(question.correct_answer, num)) {
+              btnClass = `${styles.numericBtn} ${styles.numericBtnCorrect}`
+            } else if (selectedNum === num) {
+              btnClass = `${styles.numericBtn} ${styles.numericBtnIncorrect}`
+            } else {
+              btnClass = `${styles.numericBtn} ${styles.numericBtnDimmed}`
+            }
+          } else if (selectedNum === num) {
+            btnClass = `${styles.numericBtn} ${styles.numericBtnSelected}`
+          }
+
+          return (
+            <button
+              key={num}
+              type="button"
+              className={btnClass}
+              disabled={isAnswered}
+              onClick={() => onSelect(num)}
+              aria-label={`${num}`}
+              aria-pressed={selectedNum === num}
+            >
+              {num}
+              {isAnswered && isCorrectKey(question.correct_answer, num) && ' ✓'}
+              {isAnswered && selectedNum === num && !isCorrectKey(question.correct_answer, num) && ' ✗'}
+            </button>
+          )
+        })}
       </div>
     )
   }
