@@ -70,11 +70,10 @@ LinkedQuestionViewer（~60行のコンテナ）
 ```tsx
 interface ScenarioCardProps {
   scenario: string
-  imageUrl?: string
+  // ※ LinkedGroup に imageUrl はない（GPT-5.4 P1指摘）
 }
 ```
 - シナリオ文を QuestionBody（displayMode='text'）で再利用
-- 画像があれば displayMode='both'
 - カード背景: `var(--card)` + `1px solid var(--accent-border)` で単問と区別
 - ラベル: 「📋 共通シナリオ」
 
@@ -93,6 +92,34 @@ interface LinkedQuestionItemProps {
 - `useTimeTracking(question.id)` — 時間計測
 - `useOfficialNotes(question.id)` — 公式付箋
 - `useBookmarks()` — ブックマーク
+
+**回答済み状態の復元（※ GPT-5.4 P1指摘）**:
+- 現行LinkedQuestionViewerは `getQuestionResult()` で初期状態に回答済みを復元し、選択肢をロックする
+- `useQuestionAnswerState` は現在 `existingResult` を参照情報としてのみ保持（isAnsweredを復元しない ← QuestionPageの「再演習可能」仕様のため）
+- **連問では再演習不要**（連問は1回解いたら次に進む）。そのため LinkedQuestionItem 側で `existingResult` があれば `restoreFromExisting()` を呼んでロック状態にする
+- 実装方法: `useQuestionAnswerState` に `options: { restoreExisting?: boolean }` を追加するか、item側で `useEffect` で `answerState.restoreFromExisting(existingResult)` を明示的に呼ぶ
+
+**useAnswerHistory の重複ロード回避（※ GPT-5.4 P2指摘）**:
+- 現行 `useAnswerHistory` はマウントごとに `getAll()` を実行する
+- LinkedQuestionItem × N で N回ロードされる問題
+- **対策**: LinkedQuestionViewer 親で `useAnswerHistory()` を1回呼び、`history` と `saveAnswer` を props で子に渡す
+- LinkedQuestionItem の props に `answerHistory: { history, saveAnswer, getQuestionResult }` を追加
+- `useQuestionAnswerState` に外部から history を注入できるオプションを追加: `options: { externalHistory?: ... }`
+
+**OfficialNoteCard の配線（※ GPT-5.4 P3指摘）**:
+- QuestionPage と同様に、LinkedQuestionItem 内で以下を配線する:
+  ```tsx
+  {notes.map(note => (
+    <OfficialNoteCard
+      key={note.id}
+      note={note}
+      isBookmarked={isBookmarked(note.id)}
+      onToggleBookmark={() => toggleBookmark(note.id)}
+      onFlashCard={() => navigate('/cards/review', { state: { filterCardIds: note.linkedCardIds } })}
+      onImageTap={() => { /* NoteImageViewer state管理 */ }}
+    />
+  ))}
+  ```
 
 レンダリング:
 ```
@@ -118,7 +145,8 @@ interface Props {
 レンダリング:
 ```tsx
 <div className={styles.container}>
-  <ScenarioCard scenario={group.scenario} imageUrl={group.scenarioImageUrl} />
+  {/* ※ GPT-5.4 P1指摘: LinkedGroup に scenarioImageUrl はない。scenario テキストのみ */}
+  <ScenarioCard scenario={group.scenario} />
   {group.questions.map((q, i) => (
     <LinkedQuestionItem
       key={q.id}
@@ -180,5 +208,6 @@ QuestionPage の部品を再利用するため、以下が**自動的に**連問
 ## 7. 注意事項
 
 - `extractQuestionBody()` 関数は既存 LinkedQuestionViewer 内にある。LinkedQuestionItem に移動するか、utils に切り出す
-- `LinkedGroup` 型は `useLinkedQuestions` フックが返す既存の型。変更不要
+- **数値問題のフォールバック（※ GPT-5.4 P2指摘）**: 現行 LinkedQuestionViewer は `choices.length === 0 && correct_answer === 0` で「データ準備中」を表示する。ChoiceList は 1-9 固定グリッドなのでこの分岐を吸収できない。対策: ChoiceList に `correct_answer === 0` のガード追加（「この問題はデータ準備中です」プレースホルダー表示）か、LinkedQuestionItem 側で分岐
+- `LinkedGroup` 型は `useLinkedQuestions` フックが返す既存の型（groupId, scenario, questions）。変更不要。scenarioImageUrl は存在しないので ScenarioCard には scenario テキストのみ渡す
 - QuestionPage 側の `linkedGroup ? <LinkedQuestionViewer> : <単問>` 分岐はそのまま維持
