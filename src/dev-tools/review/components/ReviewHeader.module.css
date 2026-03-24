@@ -1,0 +1,249 @@
+/* ReviewHeader — フィルタ + 進捗バー（開発専用） */
+
+/* ========== ルートコンテナ ========== */
+.header {
+  background: var(--card, #ffffff);
+  border-bottom: 1px solid var(--border, #e8e5ee);
+  flex-shrink: 0;
+}
+
+/* ========== 上段: タイトル + 統計 + 進捗ナビ ========== */
+.topRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 1.25rem;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text, #3d2c1e);
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ========== バリデーション統計バッジ ========== */
+.stats {
+  display: flex;
+  gap: 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.statOk      { color: #16a34a; }
+.statError   { color: #ef4444; }
+.statWarning { color: #f59e0b; }
+.statInfo    { color: #6b7280; }
+
+/* ========== 進捗エリア ========== */
+.progressArea {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.progressText {
+  font-size: 0.75rem;
+  color: var(--text-2, #8b7355);
+  white-space: nowrap;
+}
+
+.navIndicator {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text, #3d2c1e);
+  white-space: nowrap;
+}
+
+/* ========== プログレスバー ========== */
+.progressBar {
+  display: flex;
+  height: 4px;
+  border-radius: 2px;
+  overflow: hidden;
+  background: #e5e7eb;
+  margin: 0 1.25rem 0;
+}
+
+.progressSegment {
+  transition: width 0.3s ease;
+  min-width: 0;
+}
+
+.segOk      { background: #16a34a; }
+.segFix     { background: #f59e0b; }
+.segNg      { background: #ef4444; }
+.segPending { background: #d1d5db; }
+
+/* ========== フィルタ折りたたみトグル ========== */
+.filterToggleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 1.25rem;
+  border-top: 1px solid var(--border, #e8e5ee);
+}
+
+.filterToggleBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-2, #8b7355);
+  background: transparent;
+  border: 1px solid var(--border, #e8e5ee);
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filterToggleBtn:hover {
+  border-color: var(--accent, #aa3bff);
+  color: var(--accent, #aa3bff);
+}
+
+.filterToggleBtnOpen {
+  border-color: var(--accent, #aa3bff);
+  color: var(--accent, #aa3bff);
+  background: rgba(170, 59, 255, 0.06);
+}
+
+.filterHint {
+  font-size: 0.6875rem;
+  color: var(--text-3, #9ca3af);
+}
+
+/* ========== フィルタパネル ========== */
+.filterPanel {
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid var(--border, #e8e5ee);
+  background: #f9f7fb;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.filterRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filterLabel {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--text-2, #8b7355);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  min-width: 4rem;
+  padding-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.filterGroup {
+  display: flex;
+  gap: 0.375rem;
+  flex-wrap: wrap;
+}
+
+/* ========== トグルチップ（深刻度 / 判定） ========== */
+.chip {
+  padding: 0.2rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: all 0.12s;
+  background: var(--card, #ffffff);
+  color: var(--text-2, #8b7355);
+  border-color: var(--border, #e8e5ee);
+}
+
+.chip:hover {
+  border-color: var(--accent, #aa3bff);
+  color: var(--accent, #aa3bff);
+}
+
+.chipActive {
+  background: var(--accent, #aa3bff);
+  border-color: var(--accent, #aa3bff);
+  color: #ffffff;
+}
+
+/* 深刻度ごとのアクティブカラー */
+.chipErrorActive {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+.chipWarningActive {
+  background: #f59e0b;
+  border-color: #f59e0b;
+  color: #ffffff;
+}
+
+.chipInfoActive {
+  background: #6b7280;
+  border-color: #6b7280;
+  color: #ffffff;
+}
+
+/* 判定ステータスのアクティブカラー */
+.chipOkActive {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: #ffffff;
+}
+
+.chipNgActive {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+.chipFixActive {
+  background: #f59e0b;
+  border-color: #f59e0b;
+  color: #ffffff;
+}
+
+/* ========== チェックボックス群（年度・区分） ========== */
+.checkLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  color: var(--text, #3d2c1e);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkLabel input[type='checkbox'] {
+  accent-color: var(--accent, #aa3bff);
+  width: 0.875rem;
+  height: 0.875rem;
+  cursor: pointer;
+}
+
+/* ========== 全選択/全解除リンク ========== */
+.selectAll {
+  font-size: 0.6875rem;
+  color: var(--accent, #aa3bff);
+  cursor: pointer;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.selectAll:hover {
+  opacity: 0.75;
+}

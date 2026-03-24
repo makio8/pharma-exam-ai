@@ -1,152 +1,131 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useValidationReport } from './hooks/useValidationReport'
 import { useReviewState } from './hooks/useReviewState'
+import { ReviewHeader } from './components/ReviewHeader'
+import { ReviewCard } from './components/ReviewCard'
 import { ALL_QUESTIONS } from '../../data/all-questions'
 import type { ValidationIssue } from '../../utils/data-validator/types'
+import type { FilterConfig } from './types'
+import type { QuestionSection } from '../../types/question'
 import styles from './ReviewPage.module.css'
+
+// デフォルトフィルタ: error+warning ON / 全年度 / 全区分 / 未判定
+const DEFAULT_FILTERS: FilterConfig = {
+  severities: ['error', 'warning'],
+  years: Array.from({ length: 12 }, (_, i) => 100 + i),
+  sections: ['必須', '理論', '実践'],
+  judgmentStatus: 'pending',
+  rules: [],
+}
+
+const SEC_ORDER: Record<string, number> = { '必須': 0, '理論': 1, '実践': 2 }
 
 export default function ReviewPage() {
   const { report, loading, error } = useValidationReport()
   const reviewState = useReviewState()
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [filters, setFilters] = useState<FilterConfig>(DEFAULT_FILTERS)
 
   if (loading) return <div className={styles.loading}>レポート読み込み中...</div>
   if (error) return <div className={styles.error}>{error}</div>
   if (!report) return null
 
   // 問題をソート: 年度→区分→問番
-  const secOrder: Record<string, number> = { '必須': 0, '理論': 1, '実践': 2 }
-  const sortedQuestions = [...ALL_QUESTIONS].sort((a, b) => {
-    if (a.year !== b.year) return a.year - b.year
-    if (a.section !== b.section) return (secOrder[a.section] ?? 0) - (secOrder[b.section] ?? 0)
-    return a.question_number - b.question_number
-  })
-
-  // error / warning のある問題だけ表示（デフォルト）
-  const issueQuestionIds = new Set(
-    report.issues
-      .filter((i: ValidationIssue) => i.severity === 'error' || i.severity === 'warning')
-      .map((i: ValidationIssue) => i.questionId)
+  const sortedQuestions = useMemo(
+    () =>
+      [...ALL_QUESTIONS].sort((a, b) => {
+        if (a.year !== b.year) return a.year - b.year
+        if (a.section !== b.section)
+          return (SEC_ORDER[a.section] ?? 0) - (SEC_ORDER[b.section] ?? 0)
+        return a.question_number - b.question_number
+      }),
+    []
   )
-  const filteredQuestions = sortedQuestions.filter(q => issueQuestionIds.has(q.id))
-  const currentQuestion = filteredQuestions[currentIndex]
 
-  const judgmentCounts = {
-    ok: Object.values(reviewState.state.judgments).filter(v => v === 'ok').length,
-    needsFix: Object.values(reviewState.state.judgments).filter(v => v === 'needs-fix').length,
-    ng: Object.values(reviewState.state.judgments).filter(v => v === 'ng').length,
+  // フィルタ適用
+  const filteredQuestions = useMemo(() => {
+    // 1. 深刻度フィルタに合うissueを持つ問題IDセット
+    const issueQuestionIds = new Set(
+      report.issues
+        .filter((i: ValidationIssue) => filters.severities.includes(i.severity))
+        .map((i: ValidationIssue) => i.questionId)
+    )
+
+    return sortedQuestions.filter(q => {
+      // issue 有無
+      if (!issueQuestionIds.has(q.id)) return false
+      // 年度
+      if (!filters.years.includes(q.year)) return false
+      // 区分
+      if (!filters.sections.includes(q.section as QuestionSection)) return false
+      // 判定状態
+      const j = reviewState.state.judgments[q.id]
+      if (filters.judgmentStatus === 'pending') return j == null
+      if (filters.judgmentStatus === 'all') return true
+      return j === filters.judgmentStatus
+    })
+  }, [sortedQuestions, report.issues, filters, reviewState.state.judgments])
+
+  const safeIndex = Math.min(currentIndex, Math.max(0, filteredQuestions.length - 1))
+  const currentQuestion = filteredQuestions[safeIndex]
+
+  function navigate(next: number) {
+    const clamped = Math.max(0, Math.min(filteredQuestions.length - 1, next))
+    setCurrentIndex(clamped)
+    reviewState.setLastPosition(filteredQuestions[clamped]?.id ?? '')
   }
+
+  function handleFiltersChange(next: FilterConfig) {
+    setFilters(next)
+    setCurrentIndex(0)
+  }
+
+  // _open はフィルタパネル開閉フラグ（FilterConfig に型拡張して持たせている）
+  const filtersWithOpen = filters as FilterConfig & { _open?: boolean }
 
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <h1 className={styles.title}>データ品質レビュー</h1>
-        <div className={styles.stats}>
-          <span className={styles.statOk}>OK {report.passCount}</span>
-          <span className={styles.statError}>エラー {report.summary.error}</span>
-          <span className={styles.statWarning}>警告 {report.summary.warning}</span>
-          <span className={styles.statInfo}>情報 {report.summary.info ?? 0}</span>
-        </div>
-        <div className={styles.reviewProgress}>
-          <span>レビュー済: {judgmentCounts.ok + judgmentCounts.needsFix + judgmentCounts.ng} / {filteredQuestions.length}</span>
-        </div>
-        <div className={styles.navIndicator}>
-          問 {filteredQuestions.length > 0 ? currentIndex + 1 : 0} / {filteredQuestions.length}
-        </div>
-      </header>
+      <ReviewHeader
+        report={report}
+        judgments={reviewState.state.judgments}
+        totalFiltered={filteredQuestions.length}
+        currentIndex={safeIndex}
+        filters={filtersWithOpen}
+        onFiltersChange={handleFiltersChange}
+      />
 
       <div className={styles.main}>
+        {/* PDFパネル（Task 11 で実装） */}
         <div className={styles.pdfPanel}>
           <div className={styles.placeholder}>
             PDFビューア（Task 11 で実装）
           </div>
         </div>
 
+        {/* レビューカードパネル */}
         <div className={styles.reviewPanel}>
           {currentQuestion ? (
-            <div className={styles.card}>
-              <div className={styles.cardHeader}>
-                <h2 className={styles.questionId}>{currentQuestion.id}</h2>
-                <span className={styles.meta}>
-                  {currentQuestion.subject} / {currentQuestion.section} / 第{currentQuestion.year}回 問{currentQuestion.question_number}
-                </span>
-                <div className={styles.judgment}>
-                  <button
-                    className={`${styles.judgmentBtn} ${reviewState.state.judgments[currentQuestion.id] === 'ok' ? styles.judgmentBtnActive : ''}`}
-                    onClick={() => reviewState.setJudgment(currentQuestion.id, 'ok')}
-                  >
-                    OK
-                  </button>
-                  <button
-                    className={`${styles.judgmentBtn} ${reviewState.state.judgments[currentQuestion.id] === 'needs-fix' ? styles.judgmentBtnActive : ''}`}
-                    onClick={() => reviewState.setJudgment(currentQuestion.id, 'needs-fix')}
-                  >
-                    要修正
-                  </button>
-                  <button
-                    className={`${styles.judgmentBtn} ${reviewState.state.judgments[currentQuestion.id] === 'ng' ? styles.judgmentBtnActive : ''}`}
-                    onClick={() => reviewState.setJudgment(currentQuestion.id, 'ng')}
-                  >
-                    NG
-                  </button>
-                </div>
-              </div>
-
-              <div className={styles.issues}>
-                <h3>検出された問題</h3>
-                {report.issues
-                  .filter((i: ValidationIssue) => i.questionId === currentQuestion.id)
-                  .map((issue: ValidationIssue, idx: number) => (
-                    <div key={idx} className={styles[issue.severity]}>
-                      [{issue.rule}] {issue.message}
-                      {issue.field && <span className={styles.issueField}> — {issue.field}</span>}
-                    </div>
-                  ))}
-              </div>
-
-              <div className={styles.questionText}>
-                <h3>問題文</h3>
-                <p>{currentQuestion.question_text?.slice(0, 300)}{(currentQuestion.question_text?.length ?? 0) > 300 ? '...' : ''}</p>
-              </div>
-
-              <div className={styles.choices}>
-                <h3>選択肢</h3>
-                {currentQuestion.choices?.map(c => (
-                  <div key={c.key} className={styles.choice}>
-                    <span className={styles.choiceKey}>{c.key}</span>
-                    <span>{c.text || '(空)'}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className={styles.actions}>
-                <button
-                  className={styles.navBtn}
-                  onClick={() => {
-                    const next = Math.max(0, currentIndex - 1)
-                    setCurrentIndex(next)
-                    reviewState.setLastPosition(filteredQuestions[next]?.id ?? '')
-                  }}
-                  disabled={currentIndex === 0}
-                >
-                  前へ
-                </button>
-                <span className={styles.navCount}>{currentIndex + 1} / {filteredQuestions.length}</span>
-                <button
-                  className={styles.navBtn}
-                  onClick={() => {
-                    const next = Math.min(filteredQuestions.length - 1, currentIndex + 1)
-                    setCurrentIndex(next)
-                    reviewState.setLastPosition(filteredQuestions[next]?.id ?? '')
-                  }}
-                  disabled={currentIndex === filteredQuestions.length - 1}
-                >
-                  次へ
-                </button>
-              </div>
-            </div>
+            <ReviewCard
+              question={currentQuestion}
+              issues={report.issues.filter(
+                (i: ValidationIssue) => i.questionId === currentQuestion.id
+              )}
+              judgment={reviewState.state.judgments[currentQuestion.id]}
+              onJudge={(status) => reviewState.setJudgment(currentQuestion.id, status)}
+              onResetJudgment={() => {
+                const next = { ...reviewState.state.judgments }
+                delete next[currentQuestion.id]
+                reviewState.save({ ...reviewState.state, judgments: next })
+              }}
+              currentIndex={safeIndex}
+              total={filteredQuestions.length}
+              onPrev={() => navigate(safeIndex - 1)}
+              onNext={() => navigate(safeIndex + 1)}
+            />
           ) : (
-            <div className={styles.empty}>問題が見つかりません</div>
+            <div className={styles.empty}>
+              フィルタ条件に一致する問題がありません
+            </div>
           )}
         </div>
       </div>
