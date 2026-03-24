@@ -99,6 +99,8 @@ export default function ReviewPage() {
   function handleFiltersChange(next: FilterConfig) {
     setFilters(next)
     setCurrentIndex(0)
+    setManualPage(null)
+    setCurrentPdfFile(null)
   }
 
   // _open はフィルタパネル開閉フラグ（FilterConfig に型拡張して持たせている）

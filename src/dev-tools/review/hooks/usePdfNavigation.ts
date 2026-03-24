@@ -50,22 +50,44 @@ export function usePdfNavigation(
     }
 
     // 2. 隣接問題の確定ページから補間
-    // 同一年度・区分内で確定済み問題IDの問番を収集
+    // IDパターン: "r{year}-{qnum}"（例: r110-045）
     const [sectionStart, sectionEnd] = SECTION_RANGES[section] ?? [1, 345]
     const confirmedEntries: Array<{ qNum: number; pdfFile: string; page: number }> = []
 
     for (const [qId, data] of Object.entries(confirmedPages)) {
-      // IDフォーマット: "q{year}n{number}" or similar — 問番を抽出
-      const match = qId.match(/[_-]?(\d{3})[_-]?[a-z]?(\d+)/i)
+      const match = qId.match(/^r(\d+)-(\d+)$/)
       if (!match) continue
       const qYear = parseInt(match[1], 10)
+      const qNum = parseInt(match[2], 10)
       if (qYear !== year) continue
-      // 問番をIDから抽出するのは難しいので全確定済みを集める（同年度区分のものだけ）
-      // IDパターン: "q{year}_{section_abbr}_{number}" — 実際のIDパターンに合わせる
-      confirmedEntries.push({ qNum: 0, pdfFile: data.pdfFile, page: data.page })
+      // 同一年度・同一区分の問題のみ（問番が区分範囲内か確認）
+      if (qNum < sectionStart || qNum > sectionEnd) continue
+      confirmedEntries.push({ qNum, pdfFile: data.pdfFile, page: data.page })
     }
 
-    // 補間ロジックは省略し、線形按分にフォールバック
+    // 最も近い確定エントリを探して補間
+    if (confirmedEntries.length > 0) {
+      let nearest = confirmedEntries[0]
+      let minDiff = Math.abs(questionNumber - nearest.qNum)
+      for (const entry of confirmedEntries) {
+        const diff = Math.abs(questionNumber - entry.qNum)
+        if (diff < minDiff) {
+          minDiff = diff
+          nearest = entry
+        }
+      }
+      const density = 0.7 // 1問あたりの推定ページ数
+      const pageDiff = Math.round((questionNumber - nearest.qNum) * density)
+      const interpolatedPage = Math.max(1, nearest.page + pageDiff)
+      const idx = pdfFiles.indexOf(nearest.pdfFile)
+      return {
+        page: interpolatedPage,
+        confidence: 'interpolated',
+        pdfFile: nearest.pdfFile,
+        pdfFileIndex: Math.max(0, idx),
+        totalFiles: pdfFiles.length,
+      }
+    }
 
     // 3. 線形按分
     const position = Math.max(

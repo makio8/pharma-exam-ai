@@ -74,7 +74,17 @@ export function PdfViewer({
         if (cancelled) return
 
         pdfDocRef.current = doc
-        setTotalPages(doc.numPages)
+        const numPages = doc.numPages
+        setTotalPages(numPages)
+        // 推定ページが実ページ数を超えている場合はクランプ
+        setCurrentPage(prev => {
+          if (prev > numPages) {
+            setPageInputValue(String(numPages))
+            onPageChange(numPages)
+            return numPages
+          }
+          return prev
+        })
         setLoadState('loaded')
       } catch (err) {
         if (cancelled) return
@@ -194,7 +204,16 @@ export function PdfViewer({
         const url = getPdfUrl(pdfFile)
         const doc = await pdfjs.getDocument(url).promise
         pdfDocRef.current = doc
-        setTotalPages(doc.numPages)
+        const numPages = doc.numPages
+        setTotalPages(numPages)
+        setCurrentPage(prev => {
+          if (prev > numPages) {
+            setPageInputValue(String(numPages))
+            onPageChange(numPages)
+            return numPages
+          }
+          return prev
+        })
         setLoadState('loaded')
       } catch (err) {
         const msg = err instanceof Error ? err.message : String(err)
