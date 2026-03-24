@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef, useCallback, useEffect } from 'react'
+import { useState, useMemo, useRef, useCallback } from 'react'
 import { useValidationReport } from './hooks/useValidationReport'
 import { useReviewState } from './hooks/useReviewState'
 import { usePdfNavigation } from './hooks/usePdfNavigation'
@@ -188,6 +188,66 @@ export default function ReviewPage() {
   // E キーハンドラーを最新の handleExport に更新
   handleExportRef.current = handleExport
 
+  // ===== フィルタトグル =====
+  const handleToggleFilter = useCallback(() => {
+    const isOpen = (filters as FilterConfig & { _open?: boolean })._open ?? false
+    setFilters(prev => ({ ...prev, _open: !isOpen } as FilterConfig))
+  }, [filters])
+
+  // ===== スキップ（判定せず次へ） =====
+  const handleSkip = useCallback(() => {
+    navigate(safeIndex + 1)
+  }, [safeIndex]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ===== 次の未解決 issue へジャンプ =====
+  const handleJumpToNextUnresolved = useCallback(() => {
+    if (!report) return
+    const start = safeIndex + 1
+    for (let i = 0; i < filteredQuestions.length; i++) {
+      const idx = (start + i) % filteredQuestions.length
+      const q = filteredQuestions[idx]
+      if (!reviewState.state.judgments[q.id]) {
+        navigate(idx)
+        return
+      }
+    }
+  }, [safeIndex, filteredQuestions, reviewState.state.judgments, report]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ===== 検索（/ キー） — 将来の実装用 =====
+  const handleSearch = useCallback(() => {
+    // TODO: 問題ID検索ダイアログを実装予定
+    const id = window.prompt('問題IDを入力してください (例: r110-1-1)')
+    if (!id) return
+    const idx = filteredQuestions.findIndex(q => q.id === id)
+    if (idx >= 0) {
+      navigate(idx)
+    } else {
+      window.alert(`問題 "${id}" は現在のフィルタ結果に存在しません`)
+    }
+  }, [filteredQuestions]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ===== キーボードナビゲーション（全ショートカット統合） =====
+  useKeyboardNav({
+    onNext: () => navigate(safeIndex + 1),
+    onPrev: () => navigate(safeIndex - 1),
+    onJudge: (status) => { if (currentQuestion) reviewState.setJudgment(currentQuestion.id, status) },
+    onResetJudgment: () => {
+      if (!currentQuestion) return
+      const next = { ...reviewState.state.judgments }
+      delete next[currentQuestion.id]
+      reviewState.save({ ...reviewState.state, judgments: next })
+    },
+    onToggleFilter: handleToggleFilter,
+    onToggleCorrection: () => setCorrectionPanelOpen(prev => !prev),
+    onSkip: handleSkip,
+    onJumpToNextUnresolved: handleJumpToNextUnresolved,
+    onExport: () => handleExportRef.current(),
+    onPdfPrev: () => pdfViewerRef.current?.goToPrev(),
+    onPdfNext: () => pdfViewerRef.current?.goToNext(),
+    onSearch: handleSearch,
+    onToggleHelp: () => setShowHelp(prev => !prev),
+  })
+
   function syncViewportSize() {
     const canvas = canvasRef.current
     if (canvas && canvas.width > 0) {
@@ -211,6 +271,8 @@ export default function ReviewPage() {
 
   return (
     <div className={styles.container}>
+      {showHelp && <KeyboardHelp onClose={() => setShowHelp(false)} />}
+
       <ReviewHeader
         report={report}
         judgments={reviewState.state.judgments}
@@ -226,6 +288,7 @@ export default function ReviewPage() {
         {/* PDFパネル */}
         <div className={styles.pdfPanel}>
           <PdfViewer
+            ref={pdfViewerRef}
             canvasRef={canvasRef}
             pdfFile={activePdfFile}
             page={activePage}

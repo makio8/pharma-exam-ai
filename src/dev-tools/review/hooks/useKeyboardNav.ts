@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import type { JudgmentStatus } from '../types'
 
 export interface KeyboardNavActions {
@@ -17,11 +17,22 @@ export interface KeyboardNavActions {
   onToggleHelp: () => void
 }
 
+/**
+ * レビューUIの全キーボードショートカットを統合管理するフック。
+ * actions オブジェクトは毎レンダーで変わっても、ref 経由で常に最新値を呼び出すため
+ * addEventListener の付け直しは発生しない。
+ */
 export function useKeyboardNav(actions: KeyboardNavActions) {
+  // ref に最新の actions を同期（イベントリスナーは初回のみ登録）
+  const actionsRef = useRef(actions)
+  actionsRef.current = actions
+
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement).tagName
       if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return
+
+      const a = actionsRef.current
 
       switch (e.key) {
         // ナビゲーション
@@ -29,79 +40,79 @@ export function useKeyboardNav(actions: KeyboardNavActions) {
         case 'J':
         case 'ArrowRight':
           e.preventDefault()
-          actions.onNext()
+          a.onNext()
           break
         case 'k':
         case 'K':
         case 'ArrowLeft':
           e.preventDefault()
-          actions.onPrev()
+          a.onPrev()
           break
 
         // 判定
         case '1':
-          actions.onJudge('ok')
+          a.onJudge('ok')
           break
         case '2':
-          actions.onJudge('needs-fix')
+          a.onJudge('needs-fix')
           break
         case '3':
-          actions.onJudge('ng')
+          a.onJudge('ng')
           break
         case '0':
-          actions.onResetJudgment()
+          a.onResetJudgment()
           break
 
         // パネル開閉
         case 'f':
         case 'F':
-          actions.onToggleFilter()
+          a.onToggleFilter()
           break
         case 'c':
         case 'C':
-          actions.onToggleCorrection()
+          a.onToggleCorrection()
           break
 
         // スキップ / ジャンプ
         case 's':
         case 'S':
-          actions.onSkip()
+          a.onSkip()
           break
         case 'g':
         case 'G':
-          actions.onJumpToNextUnresolved()
+          a.onJumpToNextUnresolved()
           break
 
         // エクスポート
         case 'e':
         case 'E':
-          actions.onExport()
+          a.onExport()
           break
 
         // PDF ページ
         case 'p':
         case 'P':
           e.preventDefault()
-          actions.onPdfPrev()
+          a.onPdfPrev()
           break
         case 'n':
         case 'N':
           e.preventDefault()
-          actions.onPdfNext()
+          a.onPdfNext()
           break
 
         // 検索 / ヘルプ
         case '/':
           e.preventDefault()
-          actions.onSearch()
+          a.onSearch()
           break
         case '?':
-          actions.onToggleHelp()
+          a.onToggleHelp()
           break
       }
     }
 
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
-  }, [actions])
+  }, []) // マウント時のみ登録。最新 actions は actionsRef 経由で参照
 }
