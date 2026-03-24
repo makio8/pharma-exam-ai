@@ -1,19 +1,82 @@
 # pharma-exam-ai プロジェクト CLAUDE.md
 
 ## プロジェクト概要
-薬剤師国家試験対策PWA。React 19 / TypeScript 5.9 / Vite 8 / CSS Modules。
+薬剤師国家試験対策PWA → Capacitor化予定。React 19 / TypeScript 5.9 / Vite 8 / CSS Modules。
 デザインシステム「Soft Companion」でAnt Design段階的脱却中。
+
+## プロダクト戦略（全セッション共通の指針）
+
+### ビジョン
+> 「次に何を勉強すべきか、もう迷わない」
+> 「検索ツール型」→「学習コンパニオン型」への転換。競合Emeryの空白「上級者×コンパニオン型」を狙う。
+
+### ファウンダーの学習モデル（プロダクトの核心）
+ファウンダー自身が国試浪人→合格した実体験から抽出した学習サイクル：
+1. **発見**: 必須問題（正答率60-70%以上の基本問題）で知識の穴を見つける
+2. **理解**: 穴の原因を特定（例: 交感神経の作用機序が頭にない）→ 公式付箋で可視化
+3. **暗記**: 付箋の知識をフラッシュカードで隙間時間に反復（歩き・電車・歯磨き）
+4. **確認**: 覚えた知識で別の問題が解けるか検証 → 解ければマスター
+**重要**: 「科目」単位ではなく「分野」単位（薬理>抗がん剤>アルキル化薬）で学習する。
+**重要**: 「過去問だけ解いてやった気になる」のが一番危険。違う切り口で問われても解ける「武器」にする。
+
+### 付箋の設計判断
+- 付箋 = **公式コンテンツ**。ユーザー作成ではない。手書き画像（1,000枚）+ AIテキスト要約
+- 理由: 作用機序フロー図・ゴロ合わせ・思考プロセスは手書きが最適。アプリ内テキスト作成ではハードル高すぎる
+- 権利: ファウンダー自作 + 購入済みコンテンツ。権利問題なし
+
+### プラットフォーム戦略
+- Phase 1: Web PWA（現状）でUXを磨く
+- Phase 2: Capacitorでネイティブ化 → App Store + Google Play
+- 理由: 既存React+Viteコード95%再利用可、ネイティブプッシュ通知対応、書き直し不要
+
+### 課金モデル
+- 🆓 Free: 過去問3,470問+AI解説+公式付箋200枚
+- 💎 付箋パック（買い切り2,980-4,980円）: 全1,000枚
+- 🤖 AIパック（月額480-780円）: AI類題+先輩コーチAI
+
+### 長期ビジョン: 「先輩の知恵が循環するプラットフォーム」
+6年生の知識・体験 → コンテンツ化 → 下の学年（5年生CBT、就活、実習）に価値を届ける
+- 国試対策（演習+付箋+暗記カード）← 今ここ
+- 就活情報（先輩アンケート1,000-1,500件）
+- 実習情報（病院・薬局アンケート）
+- 先輩コーチAI（受験アンケート500件をRAGに、LINEコミュニティQ&A 5-6年分）
+
+### 既存アセット
+| アセット | 量 | 活用Phase |
+|---------|---|----------|
+| 手書き付箋ノート | ~1,000枚 | Phase 1-2 |
+| Quizlet暗記カード | 既存データ | Phase 1 |
+| LINEコミュニティ | 1,200人、5-6年分Q&A | Phase 2（βテスター）、Phase 3（RAG） |
+| 受験アンケート | 500件（模試推移+勉強法） | Phase 3（先輩コーチAI） |
+| 就活アンケート | 1,000-1,500件 | Phase 3以降 |
+
+### PRD・設計ドキュメント
+すべて `docs/specs/` に格納:
+- PRD_v1.md（v1.2: 全画面IA、学習サイクル、課金設計、オンボーディング、アセット計画）
+- COMPETITIVE_ANALYSIS.md（Emery含む9社分析）
+- USER_RESEARCH_REPORT.md（ペルソナ3人、ジャーニーマップ）
+
+### デザインモック
+Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
+- v1/: 演習ページモック3枚
+- v2/: 全7画面モック + デザイン方向性3パターン（A:Refined Medical, B:Soft Companion, C:Bold Minimal）→ **B採用**
 
 ## 開発状況（2026-03-24時点）
 - Phase 1 Week 1-2 完了: PracticePage + HomePage を Soft Companion にリデザイン済み
-- 次: Week 3 QuestionPage リデザイン（ブレストから開始）
-- Ant Design: 未移行ページ（QuestionPage, AnalysisPage, NotesPage, FlashCardPage）がまだ依存中
-- AppLayout: `REDESIGNED_EXACT` 配列でリデザイン済みページを管理（完全一致のみ！startsWith禁止）
+- **Phase 1 Week 3 実装完了**: QuestionPage を Soft Companion にフルリデザイン
+  - 730行→285行（61%削減）、Ant Design依存ゼロ
+  - 新規フック5つ + コンポーネント10個 + テスト42件追加
+  - 公式付箋（OfficialNote）の自動表示・ブックマーク機能
+  - スワイプナビゲーション、解答時間自動計測、「わからん」スキップ
+  - GPT-5.4レビュー: 設計書3R(17件) + 実装計画3R(8件) + 実装レビュー(3件) = 全28件修正済み
+  - **次: ブラウザ動作確認 → 連問（LinkedQuestionViewer）横展開**
+- Ant Design: 未移行ページ（AnalysisPage, NotesPage, FlashCardPage）がまだ依存中
+- AppLayout: `REDESIGNED_EXACT` + `matchPath('/practice/:questionId')` でリデザイン済みページを管理
 
 ## コマンド
 - `npm run dev` — 開発サーバー
 - `npm run build` — `tsc -b && vite build`（noUnusedLocals: true、未使用importでエラー）
-- `npx vitest run` — テスト（4ファイル20テスト）
+- `npx vitest run` — テスト（7ファイル62テスト）
 - `npx tsc --noEmit` — 型チェックのみ
 - `codex review --base <SHA>` — GPT-5.4によるコードレビュー（マルチモデル戦略）
 - `codex review --commit <SHA>` — 特定コミットのレビュー
