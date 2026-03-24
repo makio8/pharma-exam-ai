@@ -1,5 +1,7 @@
-// 公式付箋モックデータ
+// 公式付箋モックデータ（開発用）
 // topicId は exam-blueprint.ts の ALL_TOPICS.id に準拠
+// ⚠️ linkedQuestionIds/linkedCardIds はダミー値。実データ投入時に差し替え必須
+//    （問題IDの科目とノートの科目が一致していない場合がある）
 
 import type { OfficialNote } from '../types/official-note'
 
