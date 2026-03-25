@@ -86,6 +86,18 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - GPT-5.4レビュー: AnalysisPage本体は指摘ゼロ
   - テスト: 15ファイル278件全パス
   - **次: ブラウザ動作確認 → NotesPage or FlashCardPage リデザイン or オンボーディング**
+- **データ品質レビューUI改善（2026-03-25）**
+  - PdfViewer PDF描画修正（Safari ポリフィル + CMap + StrictMode対策）
+  - 3カラムレイアウト（PDF / カード+メモ / 修正パネル常時表示）
+  - 全問表示モード、メモ(note)フィールド、自動クロップ保存、連問シナリオ表示
+  - 100回全345問レビュー済み（修正65問 = 19%）
+- **選択肢サフィックス漏れ自動修正（2026-03-25）**
+  - fix-choice-suffix-leak.ts: 全4,094問スキャン → 391件検出
+  - AUTO_HIGH 12問を自動修正適用済み（8年度分のexam-*.ts更新）
+  - 残り379件は reports/suffix-leak-review.json に手動レビュー候補
+  - GPT-5.4レビュー3回、P1指摘4件修正済み
+  - テスト: 19ファイル358件全パス
+  - 次: 101回以降の手動レビュー、バリデーター新ルール(Task 5未実装)
 - **付箋パイプライン（Phase 2a アノテーションUI完成）**
   - 新パイプライン: 人間がbbox描画 → 切り抜き → OCR → テキスト確認 → トピック紐付け
   - Gemini bbox検出精度が不十分→人間描画に方針転換
@@ -102,7 +114,7 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 ## コマンド
 - `npm run dev` — 開発サーバー
 - `npm run build` — `tsc -b && vite build`（noUnusedLocals: true、未使用importでエラー）
-- `npx vitest run` — テスト（18ファイル308テスト）
+- `npx vitest run` — テスト（19ファイル358テスト）
 - `npx tsc --noEmit` — 型チェックのみ
 - `codex review --base <SHA>` — GPT-5.4によるコードレビュー（マルチモデル戦略）
 - `codex review --commit <SHA>` — 特定コミットのレビュー
@@ -115,6 +127,9 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `/dev-tools/fusen-review` — 付箋レビューUI（dev serverのみ）
 - `npx tsx scripts/split-pages.ts --source makio --input /tmp/claude/fusens/pages/` — 見開き→左右分割
 - `/dev-tools/fusen-annotate` — 付箋bboxアノテーションUI（dev serverのみ）
+- `npx tsx scripts/fix-choice-suffix-leak.ts` — 選択肢サフィックス漏れ検出（全年度スキャン）
+- `npx tsx scripts/fix-choice-suffix-leak.ts --dry-run --year 101` — 年度指定ドライラン
+- `npx tsx scripts/fix-choice-suffix-leak.ts --apply` — corrections JSON出力（AUTO_HIGHのみ）
 
 ## アーキテクチャ
 - デザイントークン: `src/styles/tokens.css`（CSS変数 `--accent`, `--bg`, `--card` 等）
@@ -128,6 +143,8 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - データバリデーター: `src/utils/data-validator/`（38ルール、3レベル: 構造/整合性/品質）
 - レビューUI: `src/dev-tools/review/`（Vite dev server統合、本番ビルドに含まれない）
 - 修正スクリプト: `scripts/apply-corrections.ts`（中間JSON方式） + `scripts/json-to-exam-ts.ts`
+- 選択肢サフィックス漏れ検出: `scripts/fix-choice-suffix-leak.ts`（CLI） + `scripts/lib/suffix-leak-detector.ts`（コアロジック、50テスト）
+- レビューUI 3カラム: PDF / ReviewCard+メモ / CorrectionPanel常時表示
 - 付箋データパイプライン: `ocr-results.json`(生データ) → `fusens-master.json`(ID付きマスター) → `official-notes.ts`(プロダクト用)
 - 付箋OCR: `scripts/ocr-fusens.ts`（Gemini 2.5 Flash、bbox座標付き、429失敗時null返却で保存スキップ）
 - 付箋マスター型: `scripts/lib/fusens-master-types.ts`（Fusen, FusenMaster）
@@ -163,7 +180,9 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `src/` 配下の `__tests__/` は `tsconfig.app.json` の `exclude` で除外済み（vitest globals型がtsc -bで認識されないため）
 - ESMスクリプト（tsx）では `__dirname` 未定義 → `fileURLToPath(import.meta.url)` + `path.dirname()` が必要
 - `import * as fs from 'fs'`（`import fs from 'fs'` はプロジェクト規約外）
-- `npm run build` は既存 `PdfViewer.tsx` の `getOrInsertComputed` エラーで失敗する（既知、付箋関連の変更とは無関係）
+- `Object.defineProperty` でMap prototypeポリフィルする場合、`@ts-ignore` が必要（`getOrInsertComputed` は TypeScript 未定義）
+- corrections JSON形式: `apply-corrections.ts` はフラット配列を期待。レビューUIの `CorrectionsFile`（`Record<qId, {items}>` 形式）とは異なるので注意
+- suffix-leak検出: 複数ターミネータ（連問テキスト）は即null返却が安全。AUTO_MEDIUMの自動適用は危険（GPT-5.4 P1指摘）
 - 付箋座標系: 既存パイプライン全体が0-1000正規化。新規コードも必ず0-1000に統一すること
 
 ## pdfjs-dist v5 + Vite + Safari 実装ノート（PdfViewer で解決済み、再利用時参照）
@@ -185,6 +204,8 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 ユーザーはCodex CLI（GPT-5.4）での各タスクレビューを重視。
 実装後に必ず `codex review` を実行し、指摘を修正してからコミット。
 過去に発見されたバグ例: 未使用import、ルート判定の過剰マッチ、フィルター状態の残存、連問補完漏れ。
+2026-03-25: P1指摘4件（連問テキスト誤検出、非suffix行AUTO_HIGH昇格、corrections JSON形式非互換、AUTO_MEDIUM自動適用の危険性）
+設計レビューも `codex exec` で可能（スクリプト設計方針の妥当性確認等）
 
 ## 設計ドキュメント（Soft Companion リデザイン）
 - `docs/superpowers/specs/2026-03-24-phase1-week1-2-redesign-design.md` — HomePage + PracticePage 設計
@@ -194,6 +215,7 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `docs/superpowers/specs/2026-03-25-fusen-annotate-ui-design.md` — 付箋アノテーションUI設計（GPT-5.4 Approved）
 - `docs/superpowers/plans/2026-03-25-fusen-annotate-ui.md` — アノテーションUI実装計画（12タスク完了）
 - `docs/superpowers/specs/2026-03-24-fusens-master-layer-design.md` — 付箋マスター層設計
+- `docs/superpowers/plans/2026-03-25-fix-choice-suffix-leak.md` — 選択肢サフィックス漏れ修正計画（Task 1-4完了、Task 5残）
 
 ## データ構造メモ
 - `QUESTION_TOPIC_MAP`: Record<questionId, topicId> — 問題→中項目マッピング
