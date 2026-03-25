@@ -27,7 +27,7 @@ Gemini bbox検出 → 人間が修正 → OCR
 |--------|------|
 | `scripts/split-pages.ts` | 見開き画像→左右分割の一括生成 |
 | `/dev-tools/fusen-annotate` | ページ画像上でbbox矩形を描画するアノテーションUI |
-| エクスポートJSON | 全ページのbbox座標をJSON出力 |
+| エクスポートJSON | 全ページのbbox座標をJSON出力（安定ID付き） |
 
 ### やらないこと
 
@@ -36,6 +36,7 @@ Gemini bbox検出 → 人間が修正 → OCR
 - OCR再実行スクリプト（Phase 2a完了後に開発）
 - 既存OCRデータとのマージ
 - エクスポート→適用スクリプト（cropスクリプトは次Phase）
+- 複数ソース切替UI（将来対応。MVP は makio 単一ソース）
 
 ## ページ画像の前提
 
@@ -52,25 +53,27 @@ Gemini bbox検出 → 人間が修正 → OCR
 - 1見開き → 2枚（left/right）→ 129ページ × 2 = 最大258画面
 - 空白ページ（付箋なし）は1〜3ページ程度
 
-### ディレクトリ構造（複数PDF対応）
+### ディレクトリ構造
 
-将来、別の先輩からのPDFが追加されることを想定し、ソース単位で管理する。
+MVP は makio 単一ソース。将来の複数PDF対応は `sources/` 配下にディレクトリ追加で拡張可能。
 
 ```
 public/images/fusens/
 ├── sources/
-│   ├── makio/                      ← 今回のPDF
-│   │   ├── page-001-left.png
-│   │   ├── page-001-right.png
-│   │   ├── page-002-left.png
-│   │   ...
-│   │   └── meta.json               ← { name, totalPages, createdAt }
-│   └── senpai-tanaka/              ← 将来追加されるPDF
+│   └── makio/                      ← 今回のPDF
 │       ├── page-001-left.png
+│       ├── page-001-right.png
+│       ├── page-002-left.png
 │       ...
-│       └── meta.json
-└── cropped/                         ← bbox確定後の切り抜き画像（fusen-ID単位）
+│       └── meta.json               ← { name, totalPages, createdAt }
+└── cropped/                         ← bbox確定後の切り抜き画像（次Phase、中間名で保存）
+    └── makio/
+        ├── page-001-left-0.png      ← {source}/{pageId}-{noteIndex}.png
+        ├── page-001-left-1.png
+        ...
 ```
+
+**切り抜き画像の命名**: `fusen-NNN` の安定IDは `build-fusens-master.ts` の責務。Phase 2a のエクスポート・切り抜き段階では `{source}/{pageId}-{noteIndex}.png` の中間名を使い、master 生成時に `fusen-NNN` に変換する。
 
 ## スクリプト: `scripts/split-pages.ts`
 
@@ -81,19 +84,23 @@ public/images/fusens/
 ### CLI
 
 ```bash
-# 基本
+# 既存の見開きPNGから分割
 npx tsx scripts/split-pages.ts --source makio --input /tmp/claude/fusens/pages/
 
-# PDFから不足ページを抽出してから分割
+# PDFから全ページをPNG化してから分割（pdftoppm使用、300 DPI）
 npx tsx scripts/split-pages.ts --source makio --pdf /tmp/claude/fusens/all-subjects.pdf
+
+# 既存ファイルを強制上書き
+npx tsx scripts/split-pages.ts --source makio --input /tmp/claude/fusens/pages/ --force
 ```
 
 ### 処理
 
 1. `--input` から `page-NNN.png` を検索（`-left`/`-right`/`-api`/`-small` を除外）
-2. 各画像を sharp で中央分割 → `page-NNN-left.png`, `page-NNN-right.png`
-3. 出力先: `public/images/fusens/sources/{source}/`
-4. `meta.json` 生成:
+2. `--pdf` 指定時: `pdftoppm -png -r 300` でPDF→PNG変換（不足ページのみ。既存PNGはスキップ）
+3. 各画像を sharp で中央分割 → `page-NNN-left.png`, `page-NNN-right.png`
+4. 出力先: `public/images/fusens/sources/{source}/`
+5. `meta.json` 生成:
    ```json
    {
      "name": "makio",
@@ -103,11 +110,12 @@ npx tsx scripts/split-pages.ts --source makio --pdf /tmp/claude/fusens/all-subje
      "createdAt": "2026-03-25T..."
    }
    ```
-5. 冪等: 既に存在するファイルはスキップ（`--force` で上書き）
+6. 冪等: 既に存在するファイルはスキップ（`--force` で上書き）
 
 ### 依存
 
 - `sharp`（既にプロジェクトで使用中、OCR切り抜きで導入済み）
+- `pdftoppm`（`--pdf` モード時のみ。Homebrew: `brew install poppler`）
 
 ## アノテーションUI
 
@@ -119,7 +127,7 @@ npx tsx scripts/split-pages.ts --source makio --pdf /tmp/claude/fusens/all-subje
 
 ```
 ┌─────────────────────────────────────────────┐
-│  📒 makio ▾   ◀ page-003-left (5/258) ▶    │  ヘッダー
+│  📒 makio   ◀ page-003-left (5/258) ▶      │  ヘッダー
 │  ✅ 12完了  ⏭ 3スキップ  ⏳ 243残り          │  進捗
 ├─────────────────────────────────────────────┤
 │                                             │
@@ -136,8 +144,8 @@ npx tsx scripts/split-pages.ts --source makio --pdf /tmp/claude/fusens/all-subje
 │   └──────────────────────┘                  │
 │                                             │
 ├─────────────────────────────────────────────┤
-│  bbox: 3枚   [↩ 取消] [🗑 選択削除]          │  アクションバー
-│  [⏭ 付箋なし]  [✅ 確定 → 次へ]              │
+│  bbox: 3枚  [↩ 取消] [🗑 削除] [📥 Export]  │  アクションバー
+│  [⏭ 付箋なし]       [✅ 確定 → 次へ]         │
 └─────────────────────────────────────────────┘
 ```
 
@@ -146,10 +154,10 @@ npx tsx scripts/split-pages.ts --source makio --pdf /tmp/claude/fusens/all-subje
 1. ページ画像が表示される
 2. 付箋がある場所をマウスドラッグして矩形を描画
 3. 繰り返し描画（1ページに複数枚）
-4. 間違えたら Undo or 選択して削除
+4. 間違えたら Undo or 選択して削除。選択中のbboxはドラッグで移動可能
 5. 「✅ 確定」で保存 → 自動で次ページへ遷移
 6. 付箋がないページは「⏭ 付箋なし」でスキップ
-7. 全ページ完了後「e」キーでエクスポート
+7. 全ページ完了後「📥 Export」ボタン or `e` キーでエクスポート
 
 ### 操作詳細
 
@@ -157,23 +165,49 @@ npx tsx scripts/split-pages.ts --source makio --pdf /tmp/claude/fusens/all-subje
 |------|--------|-----------|
 | bbox描画 | 画像上でドラッグ | — |
 | bbox選択 | bbox上をクリック | — |
+| bbox移動 | 選択中のbboxをドラッグ | — |
 | bbox削除 | — | `Delete` / `Backspace`（選択中のbbox） |
-| Undo | 取消ボタン | `Ctrl+Z`（直前のbbox描画を取消） |
+| Undo | 取消ボタン | `Ctrl+Z`（シングルレベル: 直前の操作1つのみ取消） |
 | 付箋なし | スキップボタン | `s` |
 | 確定→次へ | 確定ボタン | `Enter` |
-| ページ送り | ヘッダーの◀▶ | `←` `→` |
-| 未完了ジャンプ | — | `g` |
-| エクスポート | — | `e` |
+| ページ送り | ヘッダーの◀▶ | `←` `→`（※ドラッグ中は無効） |
+| 未完了ジャンプ | — | `g`（※ドラッグ中は無効） |
+| エクスポート | Exportボタン | `e` |
 | ヘルプ | — | `?` |
+
+**キーボード制御**: `useAnnotateKeyboard` は `useCanvasDraw` の `isDrawing` フラグを参照し、ドラッグ操作中は全ショートカットを無効化する。
 
 ### bbox描画のインタラクション
 
-- **ドラッグ開始**: mousedown で開始点を記録
+- **ドラッグ開始**: mousedown で開始点を記録（既存bbox上でない場所のみ）
 - **ドラッグ中**: mousemove で矩形をリアルタイムプレビュー（半透明の青枠）
 - **ドラッグ終了**: mouseup で確定。最小サイズ（20×20px相当）未満は無視（誤クリック防止）
-- **描画済みbbox**: 半透明の青い枠線 + 左上に番号バッジ
-- **選択状態**: 枠線がオレンジに変化、Deleteで削除可能
-- **座標**: Canvas座標をそのまま 0〜1 比率に変換して保存
+- **描画済みbbox**: 半透明の青い枠線 + 左上に番号バッジ（描画順 = noteIndex）
+- **選択状態**: 枠線がオレンジに変化、Deleteで削除可能、ドラッグで移動可能
+- **bbox移動**: 選択中のbboxをドラッグで位置変更。移動中もリアルタイムプレビュー
+- **座標保存**: Canvas表示座標を 0〜1000 正規化座標に変換して保存（既存パイプラインと統一）
+
+### Canvas座標変換チェーン
+
+ブラウザのマウスイベント → 正規化座標の変換は以下の3段階:
+
+```
+1. クライアント座標の取得
+   clientX/Y - canvas.getBoundingClientRect().left/top
+   → Canvas上のピクセル位置（CSS表示サイズ基準）
+
+2. 画像表示領域内の座標
+   Canvas全体 = 画像表示領域（letterbox なし、画像をCanvas全体にfit）
+   → canvasX, canvasY はそのまま画像内座標
+
+3. 正規化（0〜1000）
+   normalizedX = Math.round(canvasX / canvas.clientWidth * 1000)
+   normalizedY = Math.round(canvasY / canvas.clientHeight * 1000)
+```
+
+**Canvas設定**: `canvas.width`/`height`（backing store）はCSS表示サイズに合わせる。`devicePixelRatio` によるスケーリングは行わない（dev-toolsのためRetina最適化は不要。シンプルさ優先）。
+
+**逆変換（表示時）**: `displayX = normalized / 1000 * canvas.clientWidth`
 
 ## コンポーネント構成
 
@@ -184,35 +218,36 @@ src/dev-tools/fusen-annotate/
 ├── components/
 │   ├── AnnotateCanvas.tsx         画像表示 + bbox描画（HTML Canvas API）
 │   ├── AnnotateCanvas.module.css
-│   ├── BboxOverlay.tsx            描画済みbbox表示（番号・選択状態）
-│   ├── AnnotateToolbar.tsx        下部アクションバー
-│   └── AnnotateHeader.tsx         ソース選択・ページ送り・進捗表示
+│   ├── AnnotateToolbar.tsx        下部アクションバー（Export含む）
+│   └── AnnotateHeader.tsx         ページ送り・進捗表示
 ├── hooks/
-│   ├── useAnnotationState.ts      localStorage永続化（ソース単位）
-│   ├── useCanvasDraw.ts           マウスドラッグ→矩形描画ロジック
-│   └── useAnnotateKeyboard.ts     キーボードショートカット
+│   ├── useAnnotationState.ts      localStorage永続化
+│   ├── useCanvasDraw.ts           マウスドラッグ→矩形描画・移動ロジック
+│   └── useAnnotateKeyboard.ts     キーボードショートカット（isDrawingガード付き）
+├── utils/
+│   └── drawBboxes.ts              Canvas bbox描画ユーティリティ（番号バッジ・選択ハイライト）
 └── types.ts                       型定義
 ```
 
 ### 各コンポーネントの責務
 
-**FusenAnnotatePage**: ページ全体のオーケストレーション。ソース選択、現在ページ管理、エクスポート処理。
+**FusenAnnotatePage**: ページ全体のオーケストレーション。現在ページ管理、エクスポート処理。MVP は makio ハードコード（将来の複数ソース対応時にソース選択UIを追加）。
 
-**AnnotateCanvas**: HTML Canvas上に画像を描画し、マウスイベントでbbox矩形を描画。drawImage → 既存bbox描画 → ドラッグ中のプレビュー描画の順でレンダリング。
+**AnnotateCanvas**: HTML Canvas上に画像を描画し、マウスイベントでbbox矩形を描画・移動。drawImage → `drawBboxes()` → ドラッグ中のプレビュー描画の順でレンダリング。
 
-**BboxOverlay**: AnnotateCanvasの描画レイヤーの一部として、既存bboxの番号バッジ・選択ハイライトを描画。Canvas描画関数として実装（ReactコンポーネントではなくCanvas描画ユーティリティ）。
+**drawBboxes.ts**: Canvas 2D Context を受け取り、既存bboxの枠線・番号バッジ・選択ハイライトを描画する純粋関数。Reactコンポーネントではない。
 
-**AnnotateToolbar**: bbox数表示、取消・削除・スキップ・確定ボタン。状態に応じてボタンの有効/無効を制御。
+**AnnotateToolbar**: bbox数表示、取消・削除・スキップ・確定・エクスポートボタン。状態に応じてボタンの有効/無効を制御。
 
-**AnnotateHeader**: ソースドロップダウン（将来複数PDF対応）、ページ送りボタン、進捗カウント表示。
+**AnnotateHeader**: ページ送りボタン、進捗カウント表示（完了/スキップ/残り）。
 
 ### 各フックの責務
 
-**useAnnotationState**: localStorage `fusen-annotate-{source}` キーで永続化。ページ単位のbboxリストと状態（done/skipped）を管理。最終位置の記憶と復元。
+**useAnnotationState**: localStorage `fusen-annotate-v1` キーで永続化。ページ単位のbboxリストと状態を管理。最終位置の記憶と復元。**自動保存**: bbox描画・移動・削除のたびに `in-progress` 状態で保存（500msデバウンス）。ページ遷移時にデータ消失しない。`QuotaExceededError` 時はコンソール警告 + UIにエラー表示。
 
-**useCanvasDraw**: mousedown/mousemove/mouseup ハンドラ。ドラッグ中の矩形プレビュー座標、確定時の比率変換、最小サイズフィルタ。選択・削除のクリック判定。
+**useCanvasDraw**: mousedown/mousemove/mouseup ハンドラ。ドラッグ中の矩形プレビュー座標、確定時の0〜1000正規化変換、最小サイズフィルタ。選択・削除・移動のクリック/ドラッグ判定。**`isDrawing` フラグをexpose** → キーボードハンドラが参照。
 
-**useAnnotateKeyboard**: ショートカットキーのイベントリスナー登録と解除。修飾キー（Ctrl+Z）対応。
+**useAnnotateKeyboard**: ショートカットキーのイベントリスナー登録と解除。修飾キー（Ctrl+Z）対応。`isDrawing === true` の間はすべてのショートカットを無効化。
 
 ## 技術選択
 
@@ -220,15 +255,21 @@ src/dev-tools/fusen-annotate/
 |------|------|------|
 | 描画 | HTML Canvas API | bbox描画パフォーマンス。DOM矩形より滑らか |
 | 画像表示 | Canvas上にdrawImage | 画像とbboxを同一座標系で管理 |
-| 状態管理 | localStorage | Phase 1レビューUIと同パターン。シンプル |
+| 状態管理 | localStorage（500msデバウンス） | Phase 1レビューUIと同パターン。自動保存でデータ消失防止 |
 | 画像加工 | sharp（Node.js） | split-pages.ts用。ブラウザ側は不要 |
-| 座標系 | 0〜1 比率 | 画像サイズ非依存。将来の異なるPDFにも対応 |
+| 座標系 | 0〜1000 正規化 | **既存OCR/master/review パイプラインと統一**。`x / 1000 * imgWidth` で実ピクセルに変換 |
 
 ## データ構造
 
 ### 型定義
 
 ```typescript
+// --- 座標 ---
+
+// [y1, x1, y2, x2] — 0〜1000正規化、top-left原点
+// 既存 FusenSource.bbox / ocr-fusens.ts と同じスケール
+type NormalizedBbox = [number, number, number, number]
+
 // --- アノテーション状態（localStorage永続化） ---
 
 interface AnnotationState {
@@ -240,12 +281,12 @@ interface AnnotationState {
 }
 
 interface PageAnnotation {
-  status: 'done' | 'skipped'
+  status: 'in-progress' | 'done' | 'skipped'
   bboxes: NormalizedBbox[]
+  // bboxes の配列インデックス = noteIndex（描画順）
+  // 削除時: splice で詰める → 後続の noteIndex がシフト
+  // 確定（done）後は順序固定
 }
-
-// [y1, x1, y2, x2] — 0〜1比率、top-left原点
-type NormalizedBbox = [number, number, number, number]
 
 // --- ソースメタデータ ---
 
@@ -258,12 +299,27 @@ interface SourceMeta {
 }
 ```
 
+### 状態遷移
+
+```
+(ページ未アクセス) → bbox描画 → "in-progress"
+"in-progress" → 「✅ 確定」→ "done"
+"in-progress" → 「⏭ 付箋なし」→ "skipped"（bboxes クリア）
+"done" → ページ再訪問 → bbox追加/削除 → "in-progress"
+"skipped" → ページ再訪問 → bbox描画 → "in-progress"
+```
+
 ### localStorage キー
 
-- `fusen-annotate-makio` — makioソースのアノテーション状態
-- `fusen-annotate-senpai-tanaka` — 将来の別ソース
+- `fusen-annotate-v1` — 全ソースのアノテーション状態
+  - MVP は単一ソースだが、将来 `source` フィールドで区別可能
 
-ソース単位でキーを分離し、複数PDF間でデータが混ざらない設計。
+### 画像読み込み
+
+- 現在ページの画像を `<img>` で読み込み → Canvas に drawImage
+- **プリロード**: 次ページ（N+1）の画像を `new Image()` で先読み → スムーズなページ遷移
+- **読み込み中**: Canvas にスピナー表示
+- **画像なし**: 「画像が見つかりません」メッセージ表示、スキップ可能
 
 ### エクスポートJSON
 
@@ -281,14 +337,18 @@ interface SourceMeta {
   "pages": [
     {
       "pageId": "page-001-left",
+      "spreadPage": 1,
+      "side": "left",
       "status": "done",
       "bboxes": [
-        [0.09, 0.06, 0.195, 0.30],
-        [0.20, 0.05, 0.35, 0.29]
+        [90, 60, 195, 300],
+        [200, 50, 350, 290]
       ]
     },
     {
       "pageId": "page-001-right",
+      "spreadPage": 1,
+      "side": "right",
       "status": "skipped",
       "bboxes": []
     }
@@ -296,11 +356,18 @@ interface SourceMeta {
 }
 ```
 
+**安定ID**: エクスポートの各 bbox は `source + spreadPage + side + noteIndex（配列インデックス）` で一意に識別できる。これは既存 `FusenSource` の fingerprint（`pdf + page + noteIndex`）と互換性がある:
+- `source` → `FusenSource.pdf`
+- `spreadPage` + `side` → `FusenSource.page`（変換: `page = spreadPage * 2 + (side === 'right' ? 1 : 0)` 等の規則を crop スクリプトで定義）
+- bbox配列インデックス → `FusenSource.noteIndex`
+
+**重要**: `done` 状態のページの bbox 配列順序は確定済み。crop スクリプトはこの順序を `noteIndex` として使用する。
+
 ### 座標の扱い
 
-- **保存時**: `x / canvasDisplayWidth` → 0〜1 比率
-- **表示時**: `ratio × canvasDisplayWidth` → ピクセル座標
-- **切り抜き時**（将来のcropスクリプト）: `ratio × 元画像の実ピクセル` → sharp crop座標
+- **保存時**: `Math.round(canvasX / canvas.clientWidth * 1000)` → 0〜1000 正規化
+- **表示時**: `normalized / 1000 * canvas.clientWidth` → ピクセル座標
+- **切り抜き時**（将来のcropスクリプト）: `normalized / 1000 * 元画像の実ピクセル` → sharp crop座標
 - **座標順序**: `[y1, x1, y2, x2]`（既存OCRデータと同じ row-major 形式）
 
 ## 既存コードとの関係
@@ -310,23 +377,27 @@ interface SourceMeta {
 | `/dev-tools/fusen-review` | そのまま残す。Phase 2b以降のテキストレビューで使う |
 | `fusens-master.json` | 今回は読み書きしない。cropスクリプト→build-master で更新（次Phase） |
 | `ocr-results.json` | 今回は使わない。bbox描画後にOCR再実行で上書き予定 |
+| `FusenSource.bbox` | 同じ 0〜1000 スケール、同じ `[y1, x1, y2, x2]` 順序 |
 | `routes.tsx` | dev-onlyルート `/dev-tools/fusen-annotate` を追加 |
 | Soft Companion デザイントークン | `tokens.css` のCSS変数を使用 |
 
 ## 将来の接続（次Phase以降）
 
 ```
-[今回] エクスポートJSON
+[今回] エクスポートJSON（source + spreadPage + side + noteIndex で安定ID）
   ↓
 [次Phase] scripts/crop-from-annotations.ts
   - エクスポートJSON + 左右分割画像 → 付箋画像を切り抜き
-  - 出力: public/images/fusens/cropped/fusen-NNN.png
+  - 命名: {source}/{pageId}-{noteIndex}.png（中間名）
+  - 出力: public/images/fusens/cropped/makio/
   ↓
 [次Phase] scripts/ocr-fusens-v2.ts
   - 切り抜き画像 → Gemini OCR（テキスト抽出のみ、bbox不要）
   ↓
 [次Phase] build-fusens-master.ts の拡張
   - アノテーションJSON + OCR結果 → fusens-master.json
+  - ここで fusen-NNN の安定ID採番
+  - spreadPage + side → FusenSource.page への変換ルールを定義
   ↓
 [次Phase] /dev-tools/fusen-review でテキスト確認・修正
   ↓
@@ -336,6 +407,27 @@ interface SourceMeta {
 ## テスト方針
 
 - `useCanvasDraw`: ドラッグロジックをクラスに分離（`CanvasDrawManager`）して純粋関数テスト（既存パターン: `TimeTracker`, `AnswerStateManager`, `SwipeNavigator`）
-- `useAnnotationState`: localStorage読み書きロジックをクラスに分離してテスト
+  - テスト項目: ドラッグ→bbox生成、最小サイズフィルタ、座標正規化（0〜1000）、選択判定、移動計算
+- `useAnnotationState`: localStorage読み書きロジックをクラスに分離（`AnnotationStateManager`）してテスト
+  - テスト項目: 状態遷移（in-progress/done/skipped）、デバウンス保存、エクスポートJSON生成
 - `split-pages.ts`: 画像分割ロジックのユニットテスト（sharpモック）
+- `drawBboxes.ts`: 入出力が座標配列→Canvas描画コマンドなので、Canvas context モックでテスト可能
 - E2Eテスト: スコープ外（dev-toolsのため）
+
+## ヘルプオーバーレイ
+
+`?` キーで表示。既存 `KeyboardHelp.tsx` パターンを踏襲。
+
+| キー | 操作 |
+|------|------|
+| ドラッグ | bbox描画 |
+| クリック | bbox選択 |
+| 選択+ドラッグ | bbox移動 |
+| Delete / Backspace | 選択bbox削除 |
+| Ctrl+Z | 取消（直前1操作） |
+| ← → | ページ送り |
+| Enter | 確定→次へ |
+| s | 付箋なし（スキップ） |
+| g | 未完了ページへジャンプ |
+| e | エクスポート |
+| ? | このヘルプ |
