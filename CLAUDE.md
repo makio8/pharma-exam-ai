@@ -150,6 +150,21 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `fusens-master.json` は `src/data/` と `public/data/` の両方に存在。`build-fusens-master.ts` が両方に書き出す
 - OCRの空ページ（notes:[]）は429失敗の可能性あり。付箋0枚ページは保存しない設計（API失敗=null、本当に空=[]で区別）
 
+## pdfjs-dist v5 + Vite + Safari 実装ノート（PdfViewer で解決済み、再利用時参照）
+- **pdfjs-dist v5.5+** は `Map.prototype.getOrInsertComputed`（TC39 Stage 3）を使用。Safari 18.x以前は未サポート
+  - メインスレッド: コンポーネントファイル先頭にポリフィル追加（`src/dev-tools/review/components/PdfViewer.tsx`）
+  - Workerスレッド: ポリフィル入りラッパー経由で読み込み（`src/dev-tools/review/pdf-worker-polyfill.js`）
+  - Worker は独立スレッドなのでメインスレッドのポリフィルが適用されない。必ず別途対応が必要
+- **日本語PDF表示には CMap 設定が必須**: `getDocument({ url, cMapUrl, cMapPacked: true })` を指定しないと文字化け
+  - CMapファイルは `node_modules/pdfjs-dist/cmaps/`（169ファイル）に同梱済み
+  - Vite dev server: `/@fs${__CMAPS_ROOT__}/` 経由でアクセス（`vite.config.ts` の define で絶対パス注入）
+- **render() の useEffect にはクリーンアップ関数が必須**: React StrictMode で2回発火するため
+  - `let cancelled = false` + cleanup で `cancelled = true` + `renderTask.cancel()`
+  - pdfjs-dist v5 は `#canvasInUse` WeakSet で Canvas 重複使用を検出し、2回目の render でエラーになる
+- **render() API**: v5では `pdfPage.render({ canvas, viewport })` が推奨。`canvasContext` は後方互換用で `canvas` 同時指定すると無視される
+- **Vite での PDF アクセス**: `/@fs${絶対パス}` パターン。`server.fs.allow` にディレクトリ追加が必要
+- **付箋レビューUIでPDF表示を追加する場合**: 上記パターンをそのまま再利用可能。ポリフィルは1箇所に共通化を検討
+
 ## マルチモデルレビュー戦略
 ユーザーはCodex CLI（GPT-5.4）での各タスクレビューを重視。
 実装後に必ず `codex review` を実行し、指摘を修正してからコミット。
