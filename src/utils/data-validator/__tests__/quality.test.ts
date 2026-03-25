@@ -848,6 +848,120 @@ describe('ルール38: display-mode-consistency', () => {
 })
 
 // ─────────────────────────────────────────────
+// ルール 39: choice-suffix-in-question-text
+// ─────────────────────────────────────────────
+
+describe('ルール39: choice-suffix-in-question-text', () => {
+  it('正常系: ターミネータ後に行がない問題はOK', () => {
+    const issues = qualityRules(
+      [makeQuestion({ question_text: 'テトラカインの機序はどれか。１つ選べ。' })],
+      makeContext(),
+    )
+    expect(issues.filter(i => i.rule === 'choice-suffix-in-question-text')).toHaveLength(0)
+  })
+
+  it('正常系: ターミネータがない問題はOK', () => {
+    const issues = qualityRules(
+      [makeQuestion({ question_text: '以下の薬物について述べた文章である。' })],
+      makeContext(),
+    )
+    expect(issues.filter(i => i.rule === 'choice-suffix-in-question-text')).toHaveLength(0)
+  })
+
+  it('異常系: ターミネータ後にサフィックス行が漏れていればwarning', () => {
+    const text = 'テトラカインの機序はどれか。１つ選べ。\nチャネル活性化\nチャネル遮断'
+    const issues = qualityRules([makeQuestion({ question_text: text })], makeContext())
+    const found = issues.filter(i => i.rule === 'choice-suffix-in-question-text')
+    expect(found).toHaveLength(1)
+    expect(found[0].severity).toBe('warning')
+    expect(found[0].message).toContain('2行')
+  })
+
+  it('異常系: 「を選べ」ターミネータでもサフィックス検出', () => {
+    const text = '正しいのを選べ。\n受容体\n受容体\n受容体'
+    const issues = qualityRules([makeQuestion({ question_text: text })], makeContext())
+    expect(issues.filter(i => i.rule === 'choice-suffix-in-question-text')).toHaveLength(1)
+  })
+
+  it('異常系: 「選びなさい」ターミネータでもサフィックス検出', () => {
+    const text = '正しいものを選びなさい。\n阻害\n活性化'
+    const issues = qualityRules([makeQuestion({ question_text: text })], makeContext())
+    expect(issues.filter(i => i.rule === 'choice-suffix-in-question-text')).toHaveLength(1)
+  })
+
+  it('誤検知防止: 「ただし」で始まる行は条件文なのでOK', () => {
+    const text = '正しいのはどれか。１つ選べ。\nただし、温度は25℃とする。'
+    const issues = qualityRules([makeQuestion({ question_text: text })], makeContext())
+    expect(issues.filter(i => i.rule === 'choice-suffix-in-question-text')).toHaveLength(0)
+  })
+
+  it('誤検知防止: 「なお、」で始まる行は注記なのでOK', () => {
+    const text = '正しいのはどれか。１つ選べ。\nなお、pH=7.4とする。'
+    const issues = qualityRules([makeQuestion({ question_text: text })], makeContext())
+    expect(issues.filter(i => i.rule === 'choice-suffix-in-question-text')).toHaveLength(0)
+  })
+
+  it('誤検知防止: 「問196」で始まる行は連問ヘッダなのでOK', () => {
+    const text = '適切なのはどれか。１つ選べ。\n問196−197'
+    const issues = qualityRules([makeQuestion({ question_text: text })], makeContext())
+    expect(issues.filter(i => i.rule === 'choice-suffix-in-question-text')).toHaveLength(0)
+  })
+
+  it('誤検知防止: 「問232（薬理）」のような小問ヘッダはOK', () => {
+    const text = '適切なのはどれか。１つ選べ。\n問232（薬理）'
+    const issues = qualityRules([makeQuestion({ question_text: text })], makeContext())
+    expect(issues.filter(i => i.rule === 'choice-suffix-in-question-text')).toHaveLength(0)
+  })
+
+  it('誤検知防止: 「図」「表」「次の」「以下」で始まる行は参照なのでOK', () => {
+    const texts = [
+      '正しいのはどれか。１つ選べ。\n図1を参照せよ。',
+      '正しいのはどれか。１つ選べ。\n表1に示す。',
+      '正しいのはどれか。１つ選べ。\n次の文を読め。',
+      '正しいのはどれか。１つ選べ。\n以下の条件下で。',
+    ]
+    for (const text of texts) {
+      const issues = qualityRules([makeQuestion({ question_text: text })], makeContext())
+      expect(issues.filter(i => i.rule === 'choice-suffix-in-question-text')).toHaveLength(0)
+    }
+  })
+
+  it('誤検知防止: ターミネータ後が空行のみならOK', () => {
+    const text = '正しいのはどれか。２つ選べ。\n\n'
+    const issues = qualityRules(
+      [makeQuestion({ question_text: text, correct_answer: [1, 2] })],
+      makeContext(),
+    )
+    expect(issues.filter(i => i.rule === 'choice-suffix-in-question-text')).toHaveLength(0)
+  })
+
+  it('誤検知防止: ターミネータが複数ある（連問テキスト）はスキップ', () => {
+    const text = '問1の答えはどれか。１つ選べ。\n以下の文を読んで\n問2の答えはどれか。１つ選べ。\nサフィックス行'
+    const issues = qualityRules([makeQuestion({ question_text: text })], makeContext())
+    expect(issues.filter(i => i.rule === 'choice-suffix-in-question-text')).toHaveLength(0)
+  })
+
+  it('誤検知防止: 「ここで」「注）」で始まる行はOK', () => {
+    const texts = [
+      '正しいのはどれか。１つ選べ。\nここで条件を示す。',
+      '正しいのはどれか。１つ選べ。\n注）条件は以下の通り。',
+    ]
+    for (const text of texts) {
+      const issues = qualityRules([makeQuestion({ question_text: text })], makeContext())
+      expect(issues.filter(i => i.rule === 'choice-suffix-in-question-text')).toHaveLength(0)
+    }
+  })
+
+  it('漏れ行の内容がメッセージに含まれる', () => {
+    const text = '正しいのはどれか。１つ選べ。\n受容体活性化\n受容体遮断'
+    const issues = qualityRules([makeQuestion({ question_text: text })], makeContext())
+    const found = issues.filter(i => i.rule === 'choice-suffix-in-question-text')
+    expect(found).toHaveLength(1)
+    expect(found[0].actual).toEqual(['受容体活性化', '受容体遮断'])
+  })
+})
+
+// ─────────────────────────────────────────────
 // 複合テスト
 // ─────────────────────────────────────────────
 

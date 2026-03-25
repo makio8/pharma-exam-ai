@@ -5,6 +5,16 @@ import type { ValidationContext, ValidationIssue } from '../types'
 // 定数・ユーティリティ
 // ─────────────────────────────────────────────
 
+// ルール 39 用: question_text のターミネータパターン（「〜はどれか。」「〜選べ。」等）
+const SUFFIX_TERMINATOR_RE =
+  /(?:はどれか|を選べ|つ選べ|選びなさい|正しい組合せ|誤っている(?:の|もの)はどれか)[。．.]*\s*$/
+
+// ルール 39 用: ターミネータ後でもリーク行ではない行頭パターン（条件文・注記・連問ヘッダ等）
+const SUFFIX_SAFE_LINE_RE = /^(?:ただし|なお、|ここで|図|下図|表|次の|以下|問\d+|注[）)：:])/
+
+// ルール 39 用: 連問の小問ヘッダーパターン（例: 問232（薬理）、問233 次の〜）
+const SUFFIX_SUB_QUESTION_RE = /^問\d+[\s（(]/
+
 // テキスト系 choice_type（これ以外はテキスト欠如を許容）
 const TEXT_CHOICE_TYPES = new Set([
   'text',
@@ -320,6 +330,52 @@ export function qualityRules(
         expected: 'image_url の設定',
         actual: undefined,
       })
+    }
+
+    // ─── ルール 39: choice-suffix-in-question-text ───
+    // question_text のターミネータ（「〜はどれか。」等）の後に
+    // サフィックス行が漏れ出していないかチェック
+    {
+      const allLines = q.question_text.split('\n')
+
+      // ターミネータを含む行を後方から検索
+      let terminatorIndex = -1
+      let terminatorCount = 0
+      for (let i = allLines.length - 1; i >= 0; i--) {
+        if (SUFFIX_TERMINATOR_RE.test(allLines[i].trim())) {
+          if (terminatorIndex === -1) terminatorIndex = i
+          terminatorCount++
+        }
+      }
+
+      // ターミネータが複数あれば連問テキスト → スキップ
+      if (terminatorIndex !== -1 && terminatorCount === 1) {
+        // ターミネータ以降の非空白行を収集
+        const leaked: string[] = []
+        let isSafe = false
+        for (let i = terminatorIndex + 1; i < allLines.length; i++) {
+          const trimmed = allLines[i].replace(/\t/g, '').trim()
+          if (!trimmed) continue
+          // 安全な行（条件文・注記）ならリークではない
+          if (SUFFIX_SAFE_LINE_RE.test(trimmed) || SUFFIX_SUB_QUESTION_RE.test(trimmed)) {
+            isSafe = true
+            break
+          }
+          leaked.push(trimmed)
+        }
+
+        if (!isSafe && leaked.length > 0) {
+          issues.push({
+            questionId: q.id,
+            rule: 'choice-suffix-in-question-text',
+            severity: 'warning',
+            message: `問題文のターミネータ後に${leaked.length}行のサフィックス漏れの可能性があります`,
+            field: 'question_text',
+            expected: 'ターミネータ後に余分な行なし',
+            actual: leaked,
+          })
+        }
+      }
     }
   }
 
