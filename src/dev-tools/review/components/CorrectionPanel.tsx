@@ -9,6 +9,7 @@ const TEXT_FIELDS = [
   { value: 'question_text', label: '問題文' },
   { value: 'explanation', label: '解説' },
   { value: 'category', label: 'カテゴリ' },
+  { value: 'linked_scenario', label: 'シナリオ' },
 ] as const
 
 interface CorrectionPanelProps {
@@ -29,7 +30,7 @@ export function CorrectionPanel({
   const [activeTab, setActiveTab] = useState<CorrectionTab>('text')
 
   // テキスト修正
-  const [textField, setTextField] = useState<'question_text' | 'explanation' | 'category'>('question_text')
+  const [textField, setTextField] = useState<'question_text' | 'explanation' | 'category' | 'linked_scenario'>('question_text')
   const [textValue, setTextValue] = useState('')
 
   // 選択肢修正
@@ -48,6 +49,7 @@ export function CorrectionPanel({
   function getFieldValue(field: typeof textField): string {
     if (field === 'question_text') return question.question_text ?? ''
     if (field === 'explanation') return question.explanation ?? ''
+    if (field === 'linked_scenario') return question.linked_scenario ?? ''
     return question.category ?? ''
   }
 

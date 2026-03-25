@@ -83,6 +83,19 @@ export function ReviewCard({
         <span className={styles.correctAnswer}>正答: {correctAnswerDisplay}</span>
       </div>
 
+      {/* ===== 連問シナリオ ===== */}
+      {question.linked_scenario && (
+        <div className={styles.scenarioArea}>
+          <h3 className={styles.sectionTitle}>
+            📋 連問シナリオ
+            {question.linked_group && (
+              <span className={styles.linkedGroupTag}>{question.linked_group}</span>
+            )}
+          </h3>
+          <p className={styles.scenarioText}>{question.linked_scenario}</p>
+        </div>
+      )}
+
       {/* ===== 問題画像 ===== */}
       {question.image_url && (
         <div className={styles.imageArea}>

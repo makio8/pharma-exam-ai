@@ -4,7 +4,7 @@ export type JudgmentStatus = 'ok' | 'needs-fix' | 'ng'
 export type CorrectionStatus = 'draft' | 'ready' | 'applied' | 'verified'
 
 export type Correction =
-  | { type: 'text'; field: 'question_text' | 'explanation' | 'category'; value: string }
+  | { type: 'text'; field: 'question_text' | 'explanation' | 'category' | 'linked_scenario'; value: string }
   | { type: 'choices'; value: Choice[] }
   | { type: 'answer'; value: number | number[] }
   | { type: 'image-crop'; crop: PdfCropRect; pdfFile: string; pdfPage: number }

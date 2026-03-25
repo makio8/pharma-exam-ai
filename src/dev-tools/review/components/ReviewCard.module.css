@@ -39,6 +39,32 @@
 }
 
 /* ========== 問題画像 ========== */
+/* ========== 連問シナリオ ========== */
+.scenarioArea {
+  background: #f0f7ff;
+  border: 1px solid #bdd8f0;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.scenarioText {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--text-1, #2d2a27);
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.linkedGroupTag {
+  font-size: 0.625rem;
+  font-weight: 400;
+  color: #4a90d9;
+  margin-left: 0.5rem;
+  padding: 0.0625rem 0.375rem;
+  background: #e0edf9;
+  border-radius: 9999px;
+}
+
 .imageArea {
   border: 1px solid var(--border, #e8e5ee);
   border-radius: 0.5rem;
