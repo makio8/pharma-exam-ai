@@ -47,7 +47,6 @@ export default function ReviewPage() {
   const reviewState = useReviewState()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [filters, setFilters] = useState<FilterConfig>(DEFAULT_FILTERS)
-  const [correctionPanelOpen, setCorrectionPanelOpen] = useState(true)
   const [cropMode, setCropMode] = useState(false)
   const [manualPage, setManualPage] = useState<number | null>(null)
   const [currentPdfFile, setCurrentPdfFile] = useState<string | null>(null)
@@ -118,7 +117,6 @@ export default function ReviewPage() {
     reviewState.setLastPosition(filteredQuestions[clamped]?.id ?? '')
     setManualPage(null)
     setCurrentPdfFile(null)
-    setCorrectionPanelOpen(false)
     setCropMode(false)
   }
 
@@ -239,7 +237,7 @@ export default function ReviewPage() {
       reviewState.save({ ...reviewState.state, judgments: next })
     },
     onToggleFilter: handleToggleFilter,
-    onToggleCorrection: () => setCorrectionPanelOpen(prev => !prev),
+    onToggleCorrection: () => {},  // 修正パネルは常時表示（トグル廃止）
     onSkip: handleSkip,
     onJumpToNextUnresolved: handleJumpToNextUnresolved,
     onExport: () => handleExportRef.current(),

@@ -33,18 +33,19 @@ const SCALE = 1.5
 // ===== Polyfill: Map.prototype.getOrInsertComputed =====
 // pdfjs-dist v5.5+ が TC39 Stage 3 の Map Upsert API を使用するが、
 // Safari (18.x以前) では未サポート。メインスレッド用ポリフィル。
+// @ts-ignore — ポリフィル: TC39 Stage 3 API、TypeScript未定義
 if (typeof Map.prototype.getOrInsertComputed !== 'function') {
   // eslint-disable-next-line no-extend-native
-  (Map.prototype as Record<string, unknown>).getOrInsertComputed = function <K, V>(
-    this: Map<K, V>,
-    key: K,
-    callbackFn: (key: K) => V,
-  ): V {
-    if (this.has(key)) return this.get(key) as V
-    const value = callbackFn(key)
-    this.set(key, value)
-    return value
-  }
+  Object.defineProperty(Map.prototype, 'getOrInsertComputed', {
+    value(key: unknown, callbackFn: (key: unknown) => unknown): unknown {
+      if (this.has(key)) return this.get(key)
+      const value = callbackFn(key)
+      this.set(key, value)
+      return value
+    },
+    writable: true,
+    configurable: true,
+  })
 }
 
 let pdfjsPromise: Promise<typeof import('pdfjs-dist')> | null = null
