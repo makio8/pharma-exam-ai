@@ -16,8 +16,6 @@ interface CorrectionPanelProps {
   corrections: Correction[]
   onAddCorrection: (correction: Correction) => void
   onRemoveCorrection: (index: number) => void
-  isOpen: boolean
-  onToggle: () => void
   onStartCrop: () => void
 }
 
@@ -26,8 +24,6 @@ export function CorrectionPanel({
   corrections,
   onAddCorrection,
   onRemoveCorrection,
-  isOpen,
-  onToggle,
   onStartCrop,
 }: CorrectionPanelProps) {
   const [activeTab, setActiveTab] = useState<CorrectionTab>('text')
@@ -48,10 +44,17 @@ export function CorrectionPanel({
       : String(question.correct_answer)
   )
 
-  // 問題が切り替わったら編集値をリセット
+  // フィールド値を取得するヘルパー
+  function getFieldValue(field: typeof textField): string {
+    if (field === 'question_text') return question.question_text ?? ''
+    if (field === 'explanation') return question.explanation ?? ''
+    return question.category ?? ''
+  }
+
+  // 問題が切り替わったら編集値をリセット（テキストはフィールド値で初期化）
   useEffect(() => {
-    setTextValue('')
     setTextField('question_text')
+    setTextValue(question.question_text ?? '')
     setEditChoices((question.choices ?? []).map(c => ({ key: c.key, text: c.text, choice_type: c.choice_type })))
     setAnswerValue(
       Array.isArray(question.correct_answer)
@@ -59,13 +62,20 @@ export function CorrectionPanel({
         : String(question.correct_answer)
     )
     setActiveTab('text')
-  }, [question.id, question.choices, question.correct_answer])
+  }, [question.id, question.choices, question.correct_answer, question.question_text])
+
+  // フィールド切替時もフィールド値で初期化
+  function handleFieldChange(field: typeof textField) {
+    setTextField(field)
+    setTextValue(getFieldValue(field))
+  }
 
   // ===== テキスト修正の適用 =====
   function applyText() {
     if (!textValue.trim()) return
+    // 元の値と同じなら修正不要
+    if (textValue.trim() === getFieldValue(textField).trim()) return
     onAddCorrection({ type: 'text', field: textField, value: textValue.trim() })
-    setTextValue('')
   }
 
   // ===== 選択肢修正の適用 =====
@@ -98,7 +108,7 @@ export function CorrectionPanel({
       case 'text': return `テキスト修正 [${c.field}]: ${c.value.slice(0, 40)}${c.value.length > 40 ? '…' : ''}`
       case 'choices': return `選択肢修正 (${c.value.length}件)`
       case 'answer': return `正答修正: ${Array.isArray(c.value) ? c.value.join(', ') : c.value}`
-      case 'image-crop': return `画像クロップ (x:${c.crop.x.toFixed(3)}, y:${c.crop.y.toFixed(3)}, w:${c.crop.w.toFixed(3)}, h:${c.crop.h.toFixed(3)})`
+      case 'image-crop': return `画像クロップ (${c.pdfFile} p.${c.pdfPage})`
       case 'image-remove': return '画像削除'
       case 'set-section': return `区分設定: ${c.value}`
       case 'set-subject': return `科目設定: ${c.value}`
@@ -119,213 +129,197 @@ export function CorrectionPanel({
 
   return (
     <div className={styles.panel}>
-      {/* ===== ヘッダー（開閉） ===== */}
-      <button
-        className={`${styles.header} ${isOpen ? styles.headerOpen : ''}`}
-        onClick={onToggle}
-        aria-expanded={isOpen}
-        type="button"
-      >
-        <span className={styles.headerIcon}>{isOpen ? '▲' : '▼'}</span>
+      {/* ===== ヘッダー（常時表示） ===== */}
+      <div className={styles.header}>
         <span className={styles.headerTitle}>修正入力</span>
         {corrections.length > 0 && (
           <span className={styles.badge}>{corrections.length}件</span>
         )}
-        <span className={styles.keyHint}>C キー</span>
-      </button>
+      </div>
 
-      {isOpen && (
-        <div className={styles.body}>
-          {/* ===== タブ ===== */}
-          <div className={styles.tabs} role="tablist">
-            {tabs.map(tab => (
+      <div className={styles.body}>
+        {/* ===== タブ ===== */}
+        <div className={styles.tabs} role="tablist">
+          {tabs.map(tab => (
+            <button
+              key={tab.id}
+              role="tab"
+              aria-selected={activeTab === tab.id}
+              className={`${styles.tab} ${activeTab === tab.id ? styles.tabActive : ''}`}
+              onClick={() => setActiveTab(tab.id)}
+              type="button"
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* ===== タブコンテンツ ===== */}
+        <div className={styles.tabContent}>
+
+          {/* テキスト修正 */}
+          {activeTab === 'text' && (
+            <div className={styles.section}>
+              <label className={styles.label}>フィールド</label>
+              <select
+                className={styles.select}
+                value={textField}
+                onChange={e => handleFieldChange(e.target.value as typeof textField)}
+              >
+                {TEXT_FIELDS.map(f => (
+                  <option key={f.value} value={f.value}>{f.label}</option>
+                ))}
+              </select>
+
+              <label className={styles.label}>修正後テキスト（不要部分を削除して適用）</label>
+              <textarea
+                className={styles.textarea}
+                value={textValue}
+                onChange={e => setTextValue(e.target.value)}
+                rows={6}
+              />
+
               <button
-                key={tab.id}
-                role="tab"
-                aria-selected={activeTab === tab.id}
-                className={`${styles.tab} ${activeTab === tab.id ? styles.tabActive : ''}`}
-                onClick={() => setActiveTab(tab.id)}
+                className={styles.applyBtn}
+                onClick={applyText}
+                disabled={!textValue.trim() || textValue.trim() === getFieldValue(textField).trim()}
                 type="button"
               >
-                {tab.label}
+                適用
               </button>
-            ))}
-          </div>
+            </div>
+          )}
 
-          {/* ===== タブコンテンツ ===== */}
-          <div className={styles.tabContent}>
-
-            {/* テキスト修正 */}
-            {activeTab === 'text' && (
-              <div className={styles.section}>
-                <label className={styles.label}>フィールド</label>
-                <select
-                  className={styles.select}
-                  value={textField}
-                  onChange={e => setTextField(e.target.value as typeof textField)}
-                >
-                  {TEXT_FIELDS.map(f => (
-                    <option key={f.value} value={f.value}>{f.label}</option>
-                  ))}
-                </select>
-
-                <label className={styles.label}>修正後テキスト</label>
-                <textarea
-                  className={styles.textarea}
-                  value={textValue}
-                  onChange={e => setTextValue(e.target.value)}
-                  rows={4}
-                  placeholder={
-                    textField === 'question_text'
-                      ? question.question_text?.slice(0, 80) + '…'
-                      : textField === 'explanation'
-                        ? question.explanation?.slice(0, 80) + '…'
-                        : question.category
-                  }
-                />
-
-                <button
-                  className={styles.applyBtn}
-                  onClick={applyText}
-                  disabled={!textValue.trim()}
-                  type="button"
-                >
-                  適用
-                </button>
+          {/* 選択肢修正 */}
+          {activeTab === 'choices' && (
+            <div className={styles.section}>
+              <div className={styles.choiceList}>
+                {editChoices.map((c, idx) => (
+                  <div key={c.key} className={styles.choiceRow}>
+                    <span className={styles.choiceKeyLabel}>{c.key}</span>
+                    <input
+                      className={styles.choiceInput}
+                      type="text"
+                      value={c.text}
+                      onChange={e => {
+                        const next = [...editChoices]
+                        next[idx] = { ...next[idx], text: e.target.value }
+                        setEditChoices(next)
+                      }}
+                      placeholder={`選択肢 ${c.key}`}
+                    />
+                    <input
+                      className={styles.choiceTypeInput}
+                      type="text"
+                      value={c.choice_type ?? ''}
+                      onChange={e => {
+                        const next = [...editChoices]
+                        next[idx] = { ...next[idx], choice_type: e.target.value as typeof c.choice_type }
+                        setEditChoices(next)
+                      }}
+                      placeholder="type (省略可)"
+                    />
+                  </div>
+                ))}
               </div>
-            )}
 
-            {/* 選択肢修正 */}
-            {activeTab === 'choices' && (
-              <div className={styles.section}>
-                <div className={styles.choiceList}>
-                  {editChoices.map((c, idx) => (
-                    <div key={c.key} className={styles.choiceRow}>
-                      <span className={styles.choiceKeyLabel}>{c.key}</span>
-                      <input
-                        className={styles.choiceInput}
-                        type="text"
-                        value={c.text}
-                        onChange={e => {
-                          const next = [...editChoices]
-                          next[idx] = { ...next[idx], text: e.target.value }
-                          setEditChoices(next)
-                        }}
-                        placeholder={`選択肢 ${c.key}`}
-                      />
-                      <input
-                        className={styles.choiceTypeInput}
-                        type="text"
-                        value={c.choice_type ?? ''}
-                        onChange={e => {
-                          const next = [...editChoices]
-                          next[idx] = { ...next[idx], choice_type: e.target.value as typeof c.choice_type }
-                          setEditChoices(next)
-                        }}
-                        placeholder="type (省略可)"
-                      />
-                    </div>
-                  ))}
-                </div>
+              <button
+                className={styles.applyBtn}
+                onClick={applyChoices}
+                type="button"
+              >
+                選択肢を適用
+              </button>
+            </div>
+          )}
 
-                <button
-                  className={styles.applyBtn}
-                  onClick={applyChoices}
-                  type="button"
-                >
-                  選択肢を適用
-                </button>
-              </div>
-            )}
+          {/* 正答修正 */}
+          {activeTab === 'answer' && (
+            <div className={styles.section}>
+              <label className={styles.label}>
+                正答（複数の場合はカンマ区切り: 1, 3）
+              </label>
+              <input
+                className={styles.input}
+                type="text"
+                value={answerValue}
+                onChange={e => setAnswerValue(e.target.value)}
+                placeholder="例: 2  または  1, 3"
+              />
+              <p className={styles.hint}>
+                現在: {Array.isArray(question.correct_answer) ? question.correct_answer.join(', ') : question.correct_answer}
+              </p>
 
-            {/* 正答修正 */}
-            {activeTab === 'answer' && (
-              <div className={styles.section}>
-                <label className={styles.label}>
-                  正答（複数の場合はカンマ区切り: 1, 3）
-                </label>
-                <input
-                  className={styles.input}
-                  type="text"
-                  value={answerValue}
-                  onChange={e => setAnswerValue(e.target.value)}
-                  placeholder="例: 2  または  1, 3"
-                />
-                <p className={styles.hint}>
-                  現在: {Array.isArray(question.correct_answer) ? question.correct_answer.join(', ') : question.correct_answer}
-                </p>
+              <button
+                className={styles.applyBtn}
+                onClick={applyAnswer}
+                type="button"
+              >
+                適用
+              </button>
+            </div>
+          )}
 
-                <button
-                  className={styles.applyBtn}
-                  onClick={applyAnswer}
-                  type="button"
-                >
-                  適用
-                </button>
-              </div>
-            )}
+          {/* 画像クロップ */}
+          {activeTab === 'image-crop' && (
+            <div className={styles.section}>
+              <p className={styles.description}>
+                PDFビューアでクロップ範囲をドラッグ → 自動保存されます。
+              </p>
+              <button
+                className={styles.cropBtn}
+                onClick={onStartCrop}
+                type="button"
+              >
+                PDFからクロップ開始
+              </button>
+            </div>
+          )}
 
-            {/* 画像クロップ */}
-            {activeTab === 'image-crop' && (
-              <div className={styles.section}>
-                <p className={styles.description}>
-                  PDFビューアでクロップ範囲をドラッグして選択します。
-                </p>
-                <button
-                  className={styles.cropBtn}
-                  onClick={onStartCrop}
-                  type="button"
-                >
-                  PDFからクロップ開始
-                </button>
-              </div>
-            )}
-
-            {/* 画像削除 */}
-            {activeTab === 'image-remove' && (
-              <div className={styles.section}>
-                {question.image_url ? (
-                  <>
-                    <p className={styles.description}>
-                      現在の画像URL: <code className={styles.code}>{question.image_url}</code>
-                    </p>
-                    <button
-                      className={styles.deleteBtn}
-                      onClick={handleImageRemove}
-                      type="button"
-                    >
-                      画像を削除
-                    </button>
-                  </>
-                ) : (
-                  <p className={styles.hint}>この問題には画像がありません。</p>
-                )}
-              </div>
-            )}
-          </div>
-
-          {/* ===== 適用済み修正リスト ===== */}
-          {corrections.length > 0 && (
-            <div className={styles.correctionList}>
-              <h4 className={styles.listTitle}>適用済み修正 ({corrections.length}件)</h4>
-              {corrections.map((c, idx) => (
-                <div key={idx} className={styles.correctionItem}>
-                  <span className={styles.correctionLabel}>{correctionLabel(c)}</span>
+          {/* 画像削除 */}
+          {activeTab === 'image-remove' && (
+            <div className={styles.section}>
+              {question.image_url ? (
+                <>
+                  <p className={styles.description}>
+                    現在の画像URL: <code className={styles.code}>{question.image_url}</code>
+                  </p>
                   <button
-                    className={styles.removeBtn}
-                    onClick={() => onRemoveCorrection(idx)}
+                    className={styles.deleteBtn}
+                    onClick={handleImageRemove}
                     type="button"
-                    title="この修正を削除"
-                    aria-label="修正を削除"
                   >
-                    ✕
+                    画像を削除
                   </button>
-                </div>
-              ))}
+                </>
+              ) : (
+                <p className={styles.hint}>この問題には画像がありません。</p>
+              )}
             </div>
           )}
         </div>
-      )}
+
+        {/* ===== 適用済み修正リスト ===== */}
+        {corrections.length > 0 && (
+          <div className={styles.correctionList}>
+            <h4 className={styles.listTitle}>適用済み修正 ({corrections.length}件)</h4>
+            {corrections.map((c, idx) => (
+              <div key={idx} className={styles.correctionItem}>
+                <span className={styles.correctionLabel}>{correctionLabel(c)}</span>
+                <button
+                  className={styles.removeBtn}
+                  onClick={() => onRemoveCorrection(idx)}
+                  type="button"
+                  title="この修正を削除"
+                  aria-label="修正を削除"
+                >
+                  ✕
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   )
 }

@@ -29,6 +29,8 @@ export interface ReviewState {
   judgments: Record<string, JudgmentStatus>
   correctionStatuses: Record<string, CorrectionStatus>
   corrections: Record<string, Correction[]>
+  /** 問題ごとのレビューメモ（修正理由・画像切れ等） */
+  notes: Record<string, string>
   lastPosition: string
   confirmedPdfPages: Record<string, { pdfFile: string; page: number }>
   savedFilters?: FilterPreset[]
@@ -45,6 +47,8 @@ export interface FilterConfig {
   sections: QuestionSection[]
   judgmentStatus: JudgmentStatus | 'pending' | 'all'
   rules: string[]
+  /** true のとき全問表示（バリデーションissueの有無を問わない） */
+  showAll?: boolean
 }
 
 export interface CorrectionsFile {

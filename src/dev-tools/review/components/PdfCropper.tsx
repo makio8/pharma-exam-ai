@@ -108,12 +108,24 @@ export function PdfCropper({
     if (!coords) return
     const updated = { ...drag, currentX: coords.x, currentY: coords.y, isDragging: false }
     const rect = normalizeRect(updated)
-    if (rect.w > 4 && rect.h > 4) {
+    if (rect.w > 4 && rect.h > 4 && canvasRect) {
       setFinalRect(rect)
+      // ドラッグ完了時に自動保存（プレビュー/保存ボタン不要に）
+      const crop: PdfCropRect = {
+        x: rect.x / canvasRect.width,
+        y: rect.y / canvasRect.height,
+        w: rect.w / canvasRect.width,
+        h: rect.h / canvasRect.height,
+        viewportWidth,
+        viewportHeight,
+        scale,
+        rotation: 0,
+      }
+      onSave(crop)
     }
     setDrag(null)
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [drag, canvasRect])
+  }, [drag, canvasRect, viewportWidth, viewportHeight, scale, onSave])
 
   // プレビュー: 選択範囲をCanvas内でクロップ
   function handlePreview() {

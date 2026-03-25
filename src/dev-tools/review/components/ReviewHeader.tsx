@@ -156,6 +156,25 @@ export function ReviewHeader({
       {/* ===== フィルタパネル ===== */}
       {isOpen && (
         <div className={styles.filterPanel}>
+          {/* 表示モード */}
+          <div className={styles.filterRow}>
+            <span className={styles.filterLabel}>モード</span>
+            <div className={styles.filterGroup}>
+              <button
+                className={`${styles.chip} ${!filters.showAll ? styles.chipActive : ''}`}
+                onClick={() => onFiltersChange({ ...filters, showAll: false })}
+              >
+                issue のみ
+              </button>
+              <button
+                className={`${styles.chip} ${filters.showAll ? styles.chipActive : ''}`}
+                onClick={() => onFiltersChange({ ...filters, showAll: true })}
+              >
+                📋 全問表示
+              </button>
+            </div>
+          </div>
+
           {/* 深刻度 */}
           <div className={styles.filterRow}>
             <span className={styles.filterLabel}>深刻度</span>

@@ -10,6 +10,7 @@ const initialState: ReviewState = {
   judgments: {},
   correctionStatuses: {},
   corrections: {},
+  notes: {},
   lastPosition: '',
   confirmedPdfPages: {},
 }
@@ -20,6 +21,8 @@ function loadState(): ReviewState {
     if (!stored) return initialState
     const parsed = JSON.parse(stored) as ReviewState
     if (parsed.version !== 1) return initialState // マイグレーション未実装版はリセット
+    // v1 内のフィールド追加マイグレーション
+    if (!parsed.notes) parsed.notes = {}
     return parsed
   } catch {
     return initialState
@@ -64,5 +67,15 @@ export function useReviewState() {
     })
   }, [state, save])
 
-  return { state, setJudgment, setLastPosition, confirmPdfPage, addCorrection, save }
+  const setNote = useCallback((questionId: string, note: string) => {
+    const next = { ...state.notes }
+    if (note.trim()) {
+      next[questionId] = note.trim()
+    } else {
+      delete next[questionId]
+    }
+    save({ ...state, notes: next })
+  }, [state, save])
+
+  return { state, setJudgment, setNote, setLastPosition, confirmPdfPage, addCorrection, save }
 }

@@ -47,7 +47,7 @@ export default function ReviewPage() {
   const reviewState = useReviewState()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [filters, setFilters] = useState<FilterConfig>(DEFAULT_FILTERS)
-  const [correctionPanelOpen, setCorrectionPanelOpen] = useState(false)
+  const [correctionPanelOpen, setCorrectionPanelOpen] = useState(true)
   const [cropMode, setCropMode] = useState(false)
   const [manualPage, setManualPage] = useState<number | null>(null)
   const [currentPdfFile, setCurrentPdfFile] = useState<string | null>(null)
@@ -75,14 +75,15 @@ export default function ReviewPage() {
   const filteredQuestions = useMemo(() => {
     if (!report) return []
 
-    const issueQuestionIds = new Set(
+    // showAll = true なら issue 有無を問わず全問表示
+    const issueQuestionIds = filters.showAll ? null : new Set(
       report.issues
         .filter((i: ValidationIssue) => filters.severities.includes(i.severity))
         .map((i: ValidationIssue) => i.questionId)
     )
 
     return sortedQuestions.filter(q => {
-      if (!issueQuestionIds.has(q.id)) return false
+      if (issueQuestionIds && !issueQuestionIds.has(q.id)) return false
       if (!filters.years.includes(q.year)) return false
       if (!filters.sections.includes(q.section as QuestionSection)) return false
       const j = reviewState.state.judgments[q.id]
@@ -321,7 +322,7 @@ export default function ReviewPage() {
           )}
         </div>
 
-        {/* レビューカードパネル */}
+        {/* レビューカードパネル（中央） */}
         <div className={styles.reviewPanel}>
           {currentQuestion ? (
             <>
@@ -343,18 +344,16 @@ export default function ReviewPage() {
                 onNext={() => navigate(safeIndex + 1)}
               />
 
-              <CorrectionPanel
-                question={currentQuestion}
-                corrections={currentCorrections}
-                onAddCorrection={handleAddCorrection}
-                onRemoveCorrection={handleRemoveCorrection}
-                isOpen={correctionPanelOpen}
-                onToggle={() => setCorrectionPanelOpen(prev => !prev)}
-                onStartCrop={() => {
-                  setCropMode(true)
-                  syncViewportSize()
-                }}
-              />
+              {/* メモ欄（修正理由・画像切れ等を記録） */}
+              <div className={styles.noteArea}>
+                <textarea
+                  className={styles.noteInput}
+                  value={reviewState.state.notes?.[currentQuestion.id] ?? ''}
+                  onChange={(e) => reviewState.setNote(currentQuestion.id, e.target.value)}
+                  placeholder="メモ（修正理由・画像切れ等）"
+                  rows={2}
+                />
+              </div>
             </>
           ) : (
             <div className={styles.empty}>
@@ -362,6 +361,22 @@ export default function ReviewPage() {
             </div>
           )}
         </div>
+
+        {/* 修正入力パネル（右） */}
+        {currentQuestion && (
+          <div className={styles.correctionPanel}>
+            <CorrectionPanel
+              question={currentQuestion}
+              corrections={currentCorrections}
+              onAddCorrection={handleAddCorrection}
+              onRemoveCorrection={handleRemoveCorrection}
+              onStartCrop={() => {
+                setCropMode(true)
+                syncViewportSize()
+              }}
+            />
+          </div>
+        )}
       </div>
     </div>
   )
