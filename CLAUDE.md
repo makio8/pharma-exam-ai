@@ -167,6 +167,11 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - QuestionCard: onClick時は tabIndex + onKeyDown も必要（アクセシビリティ）
 - BottomSheet: 閉じている間は aria-hidden + inert で操作不能に
 
+## Vite dev server の注意事項
+- `server.fs.allow` を明示指定すると**プロジェクトルートのデフォルト許可が消える** → 必ず `__dirname` を先頭に含める
+- `public/` 外のファイル配信: `/@fs` + 絶対パス（例: `/@fs/Users/ai/.../file`）。相対パス（`/data/pdfs/file`）では不可
+- `define` で絶対パス注入時、パスは `/` で始まるので `/@fs${path}` と結合（`/@fs/${path}` だとスラッシュ重複 → 403）
+
 ## 開発時の注意事項（gotchas）
 - `jsx: react-jsx` 設定のため `React.KeyboardEvent` 等の名前空間型は使えない → `import type { KeyboardEvent } from 'react'` を使う
 - `@testing-library/react` / jsdom 未導入。フックのテストはロジックをクラスに分離して純粋関数テスト（TimeTracker, AnswerStateManager, SwipeNavigator パターン）
@@ -206,6 +211,10 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 過去に発見されたバグ例: 未使用import、ルート判定の過剰マッチ、フィルター状態の残存、連問補完漏れ。
 2026-03-25: P1指摘4件（連問テキスト誤検出、非suffix行AUTO_HIGH昇格、corrections JSON形式非互換、AUTO_MEDIUM自動適用の危険性）
 設計レビューも `codex exec` で可能（スクリプト設計方針の妥当性確認等）
+- 設計レビュー: `codex exec "プロンプト" 2>&1` — 非対話モードでGPT-5.4に設計レビュー依頼
+- コミットレビュー: `codex review --commit <SHA>` — 差分ベースのコードレビュー
+- 複数コミット: `codex review --base <SHA>` — ベースからHEADまでまとめてレビュー
+- 設計書には必ず「GPT-5.4レビュー対応記録」セクションを設けて修正履歴を残す
 
 ## 設計ドキュメント（Soft Companion リデザイン）
 - `docs/superpowers/specs/2026-03-24-phase1-week1-2-redesign-design.md` — HomePage + PracticePage 設計
