@@ -8,6 +8,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // https://vite.dev/config/
 export default defineConfig({
+  define: {
+    // dev-tools のPdfViewerで /@fs/ 経由のPDFアクセスに使用
+    __PDF_ROOT__: JSON.stringify(path.resolve(__dirname, 'data/pdfs')),
+    __REPORTS_ROOT__: JSON.stringify(path.resolve(__dirname, 'reports')),
+  },
   server: {
     fs: {
       allow: [

@@ -39,10 +39,12 @@ async function initPdfJs() {
   return pdfjs
 }
 
+// vite.config.ts の define で注入される絶対パス
+declare const __PDF_ROOT__: string
+
 function getPdfUrl(filename: string): string {
-  // Vite dev server: server.fs.allow にプロジェクトルートが登録済み
-  // プロジェクトルートからの相対パスでアクセス可能
-  return `/data/pdfs/${filename}`
+  // Vite dev server: /@fs/ + 絶対パスでserver.fs.allow内のファイルにアクセス
+  return `/@fs/${__PDF_ROOT__}/${filename}`
 }
 
 export const PdfViewer = forwardRef<PdfViewerHandle, PdfViewerProps>(function PdfViewer({
