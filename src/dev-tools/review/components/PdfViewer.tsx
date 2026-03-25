@@ -30,6 +30,23 @@ type LoadState = 'idle' | 'loading' | 'loaded' | 'error'
 
 const SCALE = 1.5
 
+// ===== Polyfill: Map.prototype.getOrInsertComputed =====
+// pdfjs-dist v5.5+ が TC39 Stage 3 の Map Upsert API を使用するが、
+// Safari (18.x以前) では未サポート。メインスレッド用ポリフィル。
+if (typeof Map.prototype.getOrInsertComputed !== 'function') {
+  // eslint-disable-next-line no-extend-native
+  (Map.prototype as Record<string, unknown>).getOrInsertComputed = function <K, V>(
+    this: Map<K, V>,
+    key: K,
+    callbackFn: (key: K) => V,
+  ): V {
+    if (this.has(key)) return this.get(key) as V
+    const value = callbackFn(key)
+    this.set(key, value)
+    return value
+  }
+}
+
 let pdfjsPromise: Promise<typeof import('pdfjs-dist')> | null = null
 
 async function initPdfJs() {
@@ -39,8 +56,9 @@ async function initPdfJs() {
     // pdfjs-dist v5: workerSrc にモジュールURLを指定
     // Vite が node_modules 内のファイルを /@fs/ 経由で配信してくれる
     if (!pdfjs.GlobalWorkerOptions.workerSrc) {
+      // ポリフィル入りラッパー経由で Worker を読み込む（Safari 互換）
       pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-        'pdfjs-dist/build/pdf.worker.mjs',
+        '../pdf-worker-polyfill.js',
         import.meta.url
       ).href
     }
@@ -51,12 +69,11 @@ async function initPdfJs() {
 
 // vite.config.ts の define で注入される絶対パス
 declare const __PDF_ROOT__: string
+declare const __CMAPS_ROOT__: string
 
 function getPdfUrl(filename: string): string {
   // Vite dev server: /@fs + 絶対パスでアクセス（__PDF_ROOT__は/で始まるので/@fs/は不要）
-  const url = `/@fs${__PDF_ROOT__}/${filename}`
-  console.log('[PdfViewer] PDF URL:', url)
-  return url
+  return `/@fs${__PDF_ROOT__}/${filename}`
 }
 
 export const PdfViewer = forwardRef<PdfViewerHandle, PdfViewerProps>(function PdfViewer({
@@ -104,14 +121,15 @@ export const PdfViewer = forwardRef<PdfViewerHandle, PdfViewerProps>(function Pd
       setPdfDoc(null)
 
       try {
-        console.log('[PdfViewer] initPdfJs...')
         const pdfjs = await initPdfJs()
-        console.log('[PdfViewer] pdfjs loaded, workerSrc:', pdfjs.GlobalWorkerOptions.workerSrc?.slice(0, 80))
         const url = getPdfUrl(pdfFile)
-        console.log('[PdfViewer] Loading document:', url)
-        const loadingTask = pdfjs.getDocument(url)
+        const loadingTask = pdfjs.getDocument({
+          url,
+          // 日本語フォント表示に必要な CMap（文字マップ）ファイルの場所
+          cMapUrl: `/@fs${__CMAPS_ROOT__}/`,
+          cMapPacked: true,
+        })
         const doc = await loadingTask.promise
-        console.log('[PdfViewer] Document loaded, pages:', doc.numPages)
 
         if (cancelled) {
           doc.destroy()
@@ -133,7 +151,7 @@ export const PdfViewer = forwardRef<PdfViewerHandle, PdfViewerProps>(function Pd
         setLoadState('loaded')
       } catch (err) {
         if (cancelled) return
-        console.error('[PdfViewer] Load error:', err)
+        console.warn('[PdfViewer] Load error:', err)
         const msg = err instanceof Error ? err.message : String(err)
         setErrorMsg(msg)
         setLoadState('error')
@@ -154,13 +172,14 @@ export const PdfViewer = forwardRef<PdfViewerHandle, PdfViewerProps>(function Pd
 
   // ドキュメントロード完了後 or ページ変更時にレンダリング
   // pdfDoc を依存配列に入れることで、非同期ロード完了後に確実にレンダリングされる
+  // 重要: クリーンアップ関数で cancelled フラグを立て、React StrictMode の
+  // 二重呼び出しによるレースコンディションを防止する
   useEffect(() => {
     if (!pdfDoc) return
     const canvas = canvasRef.current
-    if (!canvas) {
-      console.log('[PdfViewer] skip render: canvas=', !!canvas)
-      return
-    }
+    if (!canvas) return
+
+    let cancelled = false
 
     // 進行中のレンダリングをキャンセル
     if (renderTaskRef.current) {
@@ -172,8 +191,11 @@ export const PdfViewer = forwardRef<PdfViewerHandle, PdfViewerProps>(function Pd
 
     const doRender = async () => {
       try {
-        console.log('[PdfViewer] rendering page:', clamped)
         const pdfPage = await pdfDoc.getPage(clamped)
+
+        // await 後にキャンセルチェック（StrictMode 二重呼び出し対策）
+        if (cancelled) return
+
         const viewport = pdfPage.getViewport({ scale: SCALE })
 
         canvas.width = viewport.width
@@ -182,12 +204,15 @@ export const PdfViewer = forwardRef<PdfViewerHandle, PdfViewerProps>(function Pd
         const ctx = canvas.getContext('2d')
         if (!ctx) return
 
-        const task = pdfPage.render({ canvasContext: ctx, viewport, canvas })
+        // pdfjs-dist v5: canvas パラメータのみ渡す（推奨API）
+        // canvasContext は後方互換用で、canvas と同時指定すると無視される
+        const task = pdfPage.render({ canvas, viewport })
         renderTaskRef.current = task
 
         await task.promise
+
+        if (cancelled) return
         renderTaskRef.current = null
-        console.log('[PdfViewer] render done:', viewport.width, 'x', viewport.height)
 
         onCanvasReadyRef.current?.()
       } catch (err) {
@@ -197,6 +222,15 @@ export const PdfViewer = forwardRef<PdfViewerHandle, PdfViewerProps>(function Pd
     }
 
     doRender()
+
+    // クリーンアップ: StrictMode 再実行時やページ変更時に前のレンダリングを停止
+    return () => {
+      cancelled = true
+      if (renderTaskRef.current) {
+        renderTaskRef.current.cancel()
+        renderTaskRef.current = null
+      }
+    }
   }, [pdfDoc, currentPage])
 
   function goToPage(pageNum: number) {
@@ -240,7 +274,11 @@ export const PdfViewer = forwardRef<PdfViewerHandle, PdfViewerProps>(function Pd
       try {
         const pdfjs = await initPdfJs()
         const url = getPdfUrl(pdfFile)
-        const doc = await pdfjs.getDocument(url).promise
+        const doc = await pdfjs.getDocument({
+          url,
+          cMapUrl: `/@fs${__CMAPS_ROOT__}/`,
+          cMapPacked: true,
+        }).promise
         const numPages = doc.numPages
         setTotalPages(numPages)
         setCurrentPage(prev => {
@@ -347,13 +385,6 @@ export const PdfViewer = forwardRef<PdfViewerHandle, PdfViewerProps>(function Pd
         </button>
       </div>
 
-      {/* デバッグ情報 */}
-      <div style={{ padding: '4px 8px', fontSize: '11px', fontFamily: 'monospace', background: '#f0f0f0', borderBottom: '1px solid #ddd', wordBreak: 'break-all' }}>
-        <div>状態: <b>{loadState}</b> | ファイル: {pdfFile || '(なし)'} | ページ: {currentPage}/{totalPages}</div>
-        <div>URL: {pdfFile ? getPdfUrl(pdfFile) : '(なし)'}</div>
-        {errorMsg && <div style={{ color: 'red' }}>エラー: {errorMsg}</div>}
-      </div>
-
       {/* キャンバス領域 */}
       <div className={styles.canvasArea}>
         {loadState === 'loading' && (
@@ -386,12 +417,7 @@ export const PdfViewer = forwardRef<PdfViewerHandle, PdfViewerProps>(function Pd
         <canvas
           ref={canvasRef}
           className={styles.canvas}
-          style={{
-            visibility: loadState === 'loaded' ? 'visible' : 'hidden',
-            border: '2px solid red', /* デバッグ用 */
-            minHeight: '200px', /* デバッグ用 */
-            background: '#fff', /* デバッグ用 */
-          }}
+          style={{ visibility: loadState === 'loaded' ? 'visible' : 'hidden' }}
           aria-label={`PDF ${pdfFile} ページ ${currentPage}`}
         />
       </div>

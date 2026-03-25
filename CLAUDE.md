@@ -86,18 +86,30 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - GPT-5.4レビュー: AnalysisPage本体は指摘ゼロ
   - テスト: 15ファイル278件全パス
   - **次: ブラウザ動作確認 → NotesPage or FlashCardPage リデザイン or オンボーディング**
+- **付箋OCRパイプライン（進行中）**
+  - OCR: 13/129ページ完了（154枚検出）、Gemini日次クォータ待ち → `npx tsx scripts/ocr-fusens.ts --all`
+  - マスター変換: `scripts/build-fusens-master.ts` 完成（19テスト）
+  - レビューUI Phase 1 完成: `/dev-tools/fusen-review`（判定+キーボードナビ）
+  - レビューUI Phase 2 未実装: bbox調整 + 編集パネル + エクスポート
+  - 設計: `docs/superpowers/specs/2026-03-24-fusens-master-layer-design.md`
+  - 設計: `docs/superpowers/specs/2026-03-25-fusen-review-ui-design.md`
 - Ant Design: 未移行ページ（NotesPage, FlashCardPage）がまだ依存中
 - AppLayout: `REDESIGNED_EXACT` + `matchPath('/practice/:questionId')` でリデザイン済みページを管理
 
 ## コマンド
 - `npm run dev` — 開発サーバー
 - `npm run build` — `tsc -b && vite build`（noUnusedLocals: true、未使用importでエラー）
-- `npx vitest run` — テスト（15ファイル278テスト）
+- `npx vitest run` — テスト（16ファイル297テスト）
 - `npx tsc --noEmit` — 型チェックのみ
 - `codex review --base <SHA>` — GPT-5.4によるコードレビュー（マルチモデル戦略）
 - `codex review --commit <SHA>` — 特定コミットのレビュー
 - `npm run validate` — 全問データ品質チェック（38ルール、CLI + JSONレポート出力）
 - `/dev-tools/review` — データ品質レビューUI（dev serverのみ。`npm run dev` → ブラウザでアクセス）
+- `npx tsx scripts/ocr-fusens.ts --all` — 全ページOCR（Gemini 2.5 Flash、6秒間隔）
+- `npx tsx scripts/ocr-fusens.ts --status` — OCR進捗確認
+- `npx tsx scripts/build-fusens-master.ts` — OCR結果→マスターJSON変換（冪等）
+- `npx tsx scripts/build-fusens-master.ts --stats` — 付箋統計
+- `/dev-tools/fusen-review` — 付箋レビューUI（dev serverのみ）
 
 ## アーキテクチャ
 - デザイントークン: `src/styles/tokens.css`（CSS変数 `--accent`, `--bg`, `--card` 等）
@@ -111,6 +123,13 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - データバリデーター: `src/utils/data-validator/`（38ルール、3レベル: 構造/整合性/品質）
 - レビューUI: `src/dev-tools/review/`（Vite dev server統合、本番ビルドに含まれない）
 - 修正スクリプト: `scripts/apply-corrections.ts`（中間JSON方式） + `scripts/json-to-exam-ts.ts`
+- 付箋データパイプライン: `ocr-results.json`(生データ) → `fusens-master.json`(ID付きマスター) → `official-notes.ts`(プロダクト用)
+- 付箋OCR: `scripts/ocr-fusens.ts`（Gemini 2.5 Flash、bbox座標付き、429失敗時null返却で保存スキップ）
+- 付箋マスター型: `scripts/lib/fusens-master-types.ts`（Fusen, FusenMaster）
+- 付箋マスター変換: `scripts/lib/fusens-master-core.ts`（ocrToMaster, source fingerprint重複排除）
+- 付箋レビューUI: `src/dev-tools/fusen-review/`（既存review/と同パターン、localStorage永続化）
+- 付箋画像: `public/images/fusens/page-NNN/note-NN.png`（bbox切り抜き済み）
+- 付箋PDF: Google Drive > pharma-exam-ai > fusen-image > fusen-note-makio.pdf → `/tmp/claude/fusens/all-subjects.pdf`
 - ブループリント: 科目 → 大項目(MajorCategory) → 中項目(MiddleCategory) の3階層
 
 ## 重要なパターン
@@ -127,6 +146,9 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `codex review --commit <SHA>` にプロンプトを渡すときは stdin（heredoc）を使う。引数としては渡せない
 - `codex exec "プロンプト"` で GPT-5.4 に設計レビュー等の自由質問が可能
 - モックデータの linkedQuestionIds は実問題IDと未検証。ダミー値注意コメント付き
+- Gemini 2.5 Flash 無料枠: 250RPD/日、10RPM。429エラー時はnullを返し保存しない（0枚保存バグ修正済み）
+- `fusens-master.json` は `src/data/` と `public/data/` の両方に存在。`build-fusens-master.ts` が両方に書き出す
+- OCRの空ページ（notes:[]）は429失敗の可能性あり。付箋0枚ページは保存しない設計（API失敗=null、本当に空=[]で区別）
 
 ## マルチモデルレビュー戦略
 ユーザーはCodex CLI（GPT-5.4）での各タスクレビューを重視。

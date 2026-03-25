@@ -12,6 +12,8 @@ export default defineConfig({
     // dev-tools のPdfViewerで /@fs/ 経由のPDFアクセスに使用
     __PDF_ROOT__: JSON.stringify(path.resolve(__dirname, 'data/pdfs')),
     __REPORTS_ROOT__: JSON.stringify(path.resolve(__dirname, 'reports')),
+    // pdfjs-dist の CMap（日本語フォント文字マップ）パス
+    __CMAPS_ROOT__: JSON.stringify(path.resolve(__dirname, 'node_modules/pdfjs-dist/cmaps')),
   },
   server: {
     fs: {
