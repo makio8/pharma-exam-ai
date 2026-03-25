@@ -1,0 +1,10 @@
+.header { padding: 12px 16px; border-bottom: 1px solid var(--text-secondary, #333); }
+.nav { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+.source { font-weight: bold; color: var(--accent, #7c5cbf); }
+.navBtn { background: var(--card, #1e1e2e); border: 1px solid var(--text-secondary, #555); color: var(--text-primary, #e0e0e0); border-radius: 4px; padding: 4px 10px; cursor: pointer; }
+.navBtn:disabled { opacity: 0.3; cursor: not-allowed; }
+.pageInfo { font-size: 0.9rem; color: var(--text-primary, #e0e0e0); }
+.stats { display: flex; gap: 16px; font-size: 0.85rem; }
+.statDone { color: #22c55e; }
+.statSkip { color: #f59e0b; }
+.statRemain { color: var(--text-secondary, #999); }
