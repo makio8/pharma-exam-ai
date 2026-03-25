@@ -1,0 +1,46 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--bg, #0a0a1a);
+  color: var(--text-primary, #e0e0e0);
+}
+
+.helpOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.helpBox {
+  background: var(--card, #1e1e2e);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 400px;
+}
+
+.helpBox h3 {
+  margin: 0 0 16px 0;
+  color: var(--accent, #7c5cbf);
+}
+
+.helpBox table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.helpBox td {
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--text-secondary, #333);
+  font-size: 0.9rem;
+}
+
+.helpBox td:first-child {
+  font-weight: bold;
+  color: var(--accent, #7c5cbf);
+  white-space: nowrap;
+}
