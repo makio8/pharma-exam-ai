@@ -1,17 +1,16 @@
 // リポジトリファクトリ: 環境変数でlocalStorage / Supabaseを自動切替
-// 認証済み → Supabase、未認証 → localStorage にフォールバック
+// Phase 1: 常に localStorage を使用（Supabase統合は Phase 2 で対応）
 import type { IAnswerHistoryRepo, IStickyNoteRepo, IFlashCardRepo } from './interfaces'
 import { LocalAnswerHistoryRepo } from './localStorage/answerHistoryRepo'
 import { LocalStickyNoteRepo } from './localStorage/stickyNoteRepo'
 import { LocalFlashCardRepo } from './localStorage/flashCardRepo'
-import { SupabaseAnswerHistoryRepo } from './supabase/answerHistoryRepo'
 import { SupabaseStickyNoteRepo } from './supabase/stickyNoteRepo'
 import { isSupabaseConfigured } from '../lib/supabase'
 
 function createAnswerHistoryRepo(): IAnswerHistoryRepo {
-  if (isSupabaseConfigured) {
-    return new SupabaseAnswerHistoryRepo()
-  }
+  // Phase 1: 常に localStorage を使用
+  // Supabase 設定済みでも未認証時のフォールバックが複雑なため、
+  // Phase 2（ログイン機能本格化）まで localStorage を強制使用
   return new LocalAnswerHistoryRepo()
 }
 

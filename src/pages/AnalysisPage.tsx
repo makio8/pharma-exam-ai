@@ -29,16 +29,6 @@ export function AnalysisPage() {
     return map
   }, [])
 
-  // DEBUG: データソース診断（本番前に削除）
-  const debugLsCount = (() => {
-    try {
-      const raw = localStorage.getItem('answer_history')
-      if (!raw) return 'localStorage: キーなし'
-      const arr = JSON.parse(raw)
-      return `localStorage: ${Array.isArray(arr) ? arr.length : '不正'}件`
-    } catch { return 'localStorage: パースエラー' }
-  })()
-
   if (isEmpty) {
     return (
       <div className="sc-page">
@@ -52,10 +42,6 @@ export function AnalysisPage() {
           <button type="button" className={styles.ctaBtn} onClick={() => navigate('/practice')}>
             ▶ 演習を始める
           </button>
-          {/* DEBUG: 本番前に削除 */}
-          <p style={{ marginTop: 32, fontSize: 11, color: '#999' }}>
-            🔧 {debugLsCount} | allHistory: {allHistory.length}件 | recentHistory: {recentHistory.length}件
-          </p>
         </div>
         <FloatingNav />
       </div>
