@@ -419,7 +419,7 @@ interface SourceMeta {
 [次Phase] build-fusens-master.ts の拡張
   - アノテーションJSON + OCR結果 → fusens-master.json
   - ここで fusen-NNN の安定ID採番
-  - spreadPage + side → FusenSource.page への変換ルールを定義
+  - spreadPage + side → FusenSource.page は本設計書の確定済みルールを使用
   ↓
 [次Phase] /dev-tools/fusen-review でテキスト確認・修正
   ↓
