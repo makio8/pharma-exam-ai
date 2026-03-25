@@ -110,8 +110,10 @@ export interface UseAnalyticsReturn {
   weakQuestions: (Question & { incorrectCount: number })[]
   /** 今日の統計 */
   todayStats: TodayStats
-  /** 直近20件の回答履歴 */
+  /** 直近30件の回答履歴 */
   recentHistory: AnswerHistory[]
+  /** 全回答履歴（必須取りこぼし計算用） */
+  allHistory: AnswerHistory[]
   /** 総回答数 */
   totalAnswered: number
   /** 総問題数 */
@@ -190,7 +192,7 @@ export function useAnalytics(): UseAnalyticsReturn {
     const weakQuestions = Array.from(incorrectCountMap.entries())
       .filter(([, count]) => count >= 2)
       .sort((a, b) => b[1] - a[1])
-      .slice(0, 10)
+      .slice(0, 20)
       .map(([qId, count]) => {
         const q = questionMap.get(qId)
         return q ? { ...q, incorrectCount: count } : null
@@ -203,7 +205,7 @@ export function useAnalytics(): UseAnalyticsReturn {
         (a, b) =>
           new Date(b.answered_at).getTime() - new Date(a.answered_at).getTime()
       )
-      .slice(0, 20)
+      .slice(0, 30)
 
     // --- 今週の回答数 ---
     const weekHistory = allHistory.filter((h) =>
@@ -324,6 +326,7 @@ export function useAnalytics(): UseAnalyticsReturn {
       weakQuestions,
       todayStats,
       recentHistory,
+      allHistory,
       totalAnswered: allHistory.length,
       totalQuestions: ALL_QUESTIONS.length,
       noteStats,
