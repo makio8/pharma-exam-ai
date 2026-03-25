@@ -283,9 +283,16 @@ interface AnnotationState {
 interface PageAnnotation {
   status: 'in-progress' | 'done' | 'skipped'
   bboxes: NormalizedBbox[]
-  // bboxes の配列インデックス = noteIndex（描画順）
-  // 削除時: splice で詰める → 後続の noteIndex がシフト
-  // 確定（done）後は順序固定
+  // localStorage内部では配列で保持（描画順）
+  // エクスポート時に noteIndex を明示付与
+  // 削除時: splice で詰める（in-progress中のみ）
+  // 確定（done）後は順序固定 → noteIndex 確定
+}
+
+// エクスポート用（noteIndex 明示）
+interface ExportBbox {
+  noteIndex: number
+  bbox: NormalizedBbox
 }
 
 // --- ソースメタデータ ---
@@ -341,8 +348,8 @@ interface SourceMeta {
       "side": "left",
       "status": "done",
       "bboxes": [
-        [90, 60, 195, 300],
-        [200, 50, 350, 290]
+        { "noteIndex": 0, "bbox": [90, 60, 195, 300] },
+        { "noteIndex": 1, "bbox": [200, 50, 350, 290] }
       ]
     },
     {
@@ -356,12 +363,27 @@ interface SourceMeta {
 }
 ```
 
-**安定ID**: エクスポートの各 bbox は `source + spreadPage + side + noteIndex（配列インデックス）` で一意に識別できる。これは既存 `FusenSource` の fingerprint（`pdf + page + noteIndex`）と互換性がある:
-- `source` → `FusenSource.pdf`
-- `spreadPage` + `side` → `FusenSource.page`（変換: `page = spreadPage * 2 + (side === 'right' ? 1 : 0)` 等の規則を crop スクリプトで定義）
-- bbox配列インデックス → `FusenSource.noteIndex`
+### 安定ID体系
 
-**重要**: `done` 状態のページの bbox 配列順序は確定済み。crop スクリプトはこの順序を `noteIndex` として使用する。
+各 bbox は `source + spreadPage + side + noteIndex` の4要素で一意に識別される。`noteIndex` はエクスポートJSON に明示出力される（配列順からの暗黙導出に依存しない）。
+
+**既存 `FusenSource` との互換変換（この設計書で確定）:**
+
+| エクスポート | FusenSource | 変換式 |
+|-------------|-------------|--------|
+| `source` | `pdf` | `source` → `"fusen-note-{source}.pdf"` |
+| `spreadPage` + `side` | `page` | `page = (spreadPage - 1) * 2 + (side === 'left' ? 1 : 2)` |
+| `noteIndex` | `noteIndex` | そのまま |
+
+**変換例:**
+- `page-001-left` → `FusenSource.page = 1` （(1-1)*2+1 = 1）
+- `page-001-right` → `FusenSource.page = 2` （(1-1)*2+2 = 2）
+- `page-002-left` → `FusenSource.page = 3` （(2-1)*2+1 = 3）
+- `page-065-right` → `FusenSource.page = 130` （(65-1)*2+2 = 130）
+
+この変換式は `crop-from-annotations.ts` および `build-fusens-master.ts` の拡張で使用する。
+
+**重要**: `done` 状態のページの bbox 順序は確定済みであり、noteIndex が割り振られた状態でエクスポートされる。
 
 ### 座標の扱い
 
