@@ -1,0 +1,60 @@
+/* src/pages/AnalysisPage.module.css */
+/* 注意: .sc-page が padding: 20px 16px 160px を提供するため、追加パディング不要 */
+
+.header {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  font-family: var(--font);
+  margin-bottom: 20px;
+}
+
+.chipRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.emptyIcon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.emptyTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.emptySub {
+  font-size: 13px;
+  color: var(--text-2);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.ctaBtn {
+  background: linear-gradient(135deg, var(--accent), #8b5cf6);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: var(--r);
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--font);
+  box-shadow: var(--shadow-cta);
+  cursor: pointer;
+}
+
+.sectionEmpty {
+  text-align: center;
+  padding: 24px 0;
+  color: var(--text-3);
+  font-size: 13px;
+}

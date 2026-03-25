@@ -25,7 +25,7 @@ interface AppLayoutProps {
 }
 
 /** リデザイン済みページ（Soft Companion）はAnt Designのヘッダー/フッターを非表示 */
-const REDESIGNED_EXACT = ['/', '/practice']
+const REDESIGNED_EXACT = ['/', '/practice', '/analysis']
 
 export function AppLayout({ children }: AppLayoutProps) {
   const location = useLocation()
