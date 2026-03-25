@@ -11,8 +11,8 @@ export default defineConfig({
   server: {
     fs: {
       allow: [
+        __dirname,  // プロジェクトルート（index.html, src/ 等のアクセスに必須）
         path.resolve(__dirname, 'data/pdfs'),
-        path.resolve(__dirname, 'public/images'),
         path.resolve(__dirname, 'reports'),
       ],
     },
