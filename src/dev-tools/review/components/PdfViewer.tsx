@@ -40,9 +40,9 @@ async function initPdfJs() {
 }
 
 function getPdfUrl(filename: string): string {
-  // Vite dev server: server.fs.allow に data/pdfs が登録済み
-  // /@fs/ 経由でプロジェクトルートの data/pdfs にアクセス
-  return `/@fs${import.meta.env.VITE_PROJECT_ROOT ?? ''}/data/pdfs/${filename}`
+  // Vite dev server: server.fs.allow にプロジェクトルートが登録済み
+  // プロジェクトルートからの相対パスでアクセス可能
+  return `/data/pdfs/${filename}`
 }
 
 export const PdfViewer = forwardRef<PdfViewerHandle, PdfViewerProps>(function PdfViewer({
