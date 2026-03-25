@@ -26,7 +26,7 @@ export default function FusenAnnotatePage() {
   const {
     state, stats, addBbox, removeBbox, updateBbox,
     confirmPage, skipPage, setLastPosition, getPageBboxes, exportJson,
-  } = useAnnotationState(SOURCE)
+  } = useAnnotationState(SOURCE, totalPages)
 
   const [currentIndex, setCurrentIndex] = useState(() => {
     if (state.lastPosition) {

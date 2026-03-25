@@ -21,10 +21,16 @@ const initialState = (source: string): AnnotationState => ({
 export class AnnotationStateManager {
   private state: AnnotationState
   private storage: StorageLike
+  private _lastFlushError: string | null = null
 
   constructor(source: string, storage?: StorageLike) {
     this.storage = storage ?? localStorage
     this.state = this.load(source)
+  }
+
+  /** 直近のflush()エラーメッセージ。成功時はnull */
+  get lastFlushError(): string | null {
+    return this._lastFlushError
   }
 
   private load(source: string): AnnotationState {
@@ -43,12 +49,17 @@ export class AnnotationStateManager {
     return this.state
   }
 
-  flush(): void {
+  flush(): boolean {
     this.state.updatedAt = new Date().toISOString()
     try {
       this.storage.setItem(STORAGE_KEY, JSON.stringify(this.state))
+      this._lastFlushError = null
+      return true
     } catch (e) {
+      const msg = e instanceof Error ? e.message : 'localStorage保存失敗'
+      this._lastFlushError = msg
       console.error('localStorage保存失敗:', e)
+      return false
     }
   }
 
@@ -66,7 +77,7 @@ export class AnnotationStateManager {
 
   removeBbox(pageId: string, index: number): void {
     const page = this.state.pages[pageId]
-    if (!page) return
+    if (!page || index < 0 || index >= page.bboxes.length) return
     page.bboxes.splice(index, 1)
     page.status = 'in-progress'
   }

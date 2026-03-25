@@ -2,7 +2,7 @@ import { useState, useCallback, useRef, useEffect } from 'react'
 import { AnnotationStateManager } from '../utils/AnnotationStateManager'
 import type { NormalizedBbox, ExportJson } from '../types'
 
-export function useAnnotationState(source: string) {
+export function useAnnotationState(source: string, totalPages = 258) {
   const mgrRef = useRef<AnnotationStateManager>(new AnnotationStateManager(source))
   const [, forceUpdate] = useState(0)
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -64,7 +64,8 @@ export function useAnnotationState(source: string) {
 
   return {
     state: mgrRef.current.getState(),
-    stats: mgrRef.current.getStats(258),
+    stats: mgrRef.current.getStats(totalPages),
+    flushError: mgrRef.current.lastFlushError,
     addBbox, removeBbox, updateBbox,
     confirmPage, skipPage, setLastPosition,
     getPageBboxes, getPageStatus, exportJson,
