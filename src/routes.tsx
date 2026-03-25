@@ -15,6 +15,10 @@ const DevToolsReview = import.meta.env.DEV
   ? React.lazy(() => import('./dev-tools/review/ReviewPage'))
   : null
 
+const FusenReview = import.meta.env.DEV
+  ? React.lazy(() => import('./dev-tools/fusen-review/FusenReviewPage'))
+  : null
+
 const Loading = () => <div style={{ padding: '2rem', textAlign: 'center' }}>読み込み中...</div>
 
 export const router = createBrowserRouter([
@@ -53,5 +57,9 @@ export const router = createBrowserRouter([
   ...(import.meta.env.DEV && DevToolsReview ? [{
     path: '/dev-tools/review',
     element: <Suspense fallback={<Loading />}><DevToolsReview /></Suspense>,
+  }] : []),
+  ...(import.meta.env.DEV && FusenReview ? [{
+    path: '/dev-tools/fusen-review',
+    element: <Suspense fallback={<Loading />}><FusenReview /></Suspense>,
   }] : []),
 ])
