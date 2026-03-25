@@ -1,0 +1,5027 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-24T19:54:38.504Z",
+  "fusens": {
+    "fusen-001": {
+      "id": "fusen-001",
+      "title": "SI基本単位",
+      "body": "Cd n A K s mol kg\nカのマスク スモールキング\nM A s kg で Cd K mol\nマスク で CD くもる",
+      "imageFile": "page-001/note-01.png",
+      "subject": "物理",
+      "noteType": "mnemonic",
+      "tags": [
+        "SI単位",
+        "基本単位",
+        "語呂合わせ"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 0,
+        "bbox": [
+          88,
+          56,
+          200,
+          305
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-002": {
+      "id": "fusen-002",
+      "title": "単位",
+      "body": "エネルギー(仕事・熱) J = N・m = kg・m²・s⁻²\n圧力 Pa = N・m⁻² = kg・m⁻¹・s⁻²\n力 N = J・m⁻¹ = kg・m・s⁻²",
+      "imageFile": "page-001/note-02.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "単位",
+        "エネルギー",
+        "圧力",
+        "力"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 1,
+        "bbox": [
+          210,
+          56,
+          320,
+          305
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-003": {
+      "id": "fusen-003",
+      "title": "圧力 Pa(パスカル)",
+      "body": "1Pa = N/m²\n1m²に単位面積あたりに働く1Nの力",
+      "imageFile": "page-001/note-03.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "圧力",
+        "パスカル",
+        "定義"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 2,
+        "bbox": [
+          330,
+          56,
+          420,
+          305
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-004": {
+      "id": "fusen-004",
+      "title": "仕事・エネルギー J",
+      "body": "1J = N x m\n1Jは、物体を1Nの力で1m移動させる仕事\n⇒ N = J/m",
+      "imageFile": "page-001/note-04.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "仕事",
+        "エネルギー",
+        "ジュール",
+        "定義"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 3,
+        "bbox": [
+          430,
+          56,
+          540,
+          305
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-005": {
+      "id": "fusen-005",
+      "title": "力(ニュートン)を見る",
+      "body": "速度: 位相の変化を時間で割った\n加速度: 速度の変化を時間で割った\nN = kg x m x s⁻²\nニュートンは、1kgの物体に1m/s²の加速度で作用する力\n力 N = kg・m・s⁻² より\n圧力 Pa = N・m⁻² = kg・m⁻¹・s⁻²\nエネルギー J = N・m = kg・m²・s⁻²",
+      "imageFile": "page-001/note-05.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "力",
+        "ニュートン",
+        "速度",
+        "加速度",
+        "単位",
+        "定義"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 4,
+        "bbox": [
+          550,
+          56,
+          830,
+          305
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-006": {
+      "id": "fusen-006",
+      "title": "ppmと単位換算",
+      "body": "ppm = mg/L\n1m³ = 1000 L\n0.1% = 1000ppm\nNa₂CO₃の1日摂取量\n1~2mEq/kg\n50kgで60~100mEq",
+      "imageFile": "page-001/note-06.png",
+      "subject": "物理",
+      "noteType": "mnemonic",
+      "tags": [
+        "ppm",
+        "単位換算",
+        "Na₂CO₃",
+        "摂取量"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 5,
+        "bbox": [
+          88,
+          320,
+          200,
+          580
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-007": {
+      "id": "fusen-007",
+      "title": "ppm換算",
+      "body": "ppm = mg/L\n0.1% = 1000ppm\n1ppm = 0.0001%",
+      "imageFile": "page-001/note-07.png",
+      "subject": "物理",
+      "noteType": "mnemonic",
+      "tags": [
+        "ppm",
+        "単位換算"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 6,
+        "bbox": [
+          210,
+          320,
+          320,
+          580
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-008": {
+      "id": "fusen-008",
+      "title": "温度換算",
+      "body": "0℃ = 273 K\n0℃ = 273 K",
+      "imageFile": "page-001/note-08.png",
+      "subject": "物理",
+      "noteType": "mnemonic",
+      "tags": [
+        "温度",
+        "単位換算",
+        "ケルビン",
+        "摂氏"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 7,
+        "bbox": [
+          330,
+          320,
+          420,
+          580
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-009": {
+      "id": "fusen-009",
+      "title": "w/v%の定義",
+      "body": "w/v % ⇒ g/100mLのこと",
+      "imageFile": "page-001/note-09.png",
+      "subject": "薬剤",
+      "noteType": "knowledge",
+      "tags": [
+        "濃度",
+        "w/v%",
+        "定義"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 8,
+        "bbox": [
+          430,
+          320,
+          540,
+          580
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-010": {
+      "id": "fusen-010",
+      "title": "対数と数値",
+      "body": "10⁰.³ = 2\nlog₁₀2 = 0.3\n10⁰.³ = 2",
+      "imageFile": "page-001/note-10.png",
+      "subject": "物理",
+      "noteType": "mnemonic",
+      "tags": [
+        "対数",
+        "log",
+        "暗記"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 9,
+        "bbox": [
+          550,
+          320,
+          660,
+          580
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-011": {
+      "id": "fusen-011",
+      "title": "双極子の種類",
+      "body": "分子内に電荷の偏りをもつ分子\n①永久双極子\n常に偏りをもつ。極性分子\n②瞬間双極子\n電荷が常に揺らいでいるため、瞬間的に偏りが生じる\n瞬間-誘起双極子相互作用",
+      "imageFile": "page-001/note-11.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "双極子",
+        "分子間力",
+        "永久双極子",
+        "瞬間双極子",
+        "極性分子"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 10,
+        "bbox": [
+          88,
+          600,
+          200,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-012": {
+      "id": "fusen-012",
+      "title": "アルカンの排他",
+      "body": "分子間力は\nC-C-C-C-C\nC-C-C-C-C\n疎水結合\n疎水結合\n↑疎水性の増大",
+      "imageFile": "page-001/note-12.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "アルカン",
+        "分子間力",
+        "疎水結合"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 11,
+        "bbox": [
+          210,
+          600,
+          370,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-013": {
+      "id": "fusen-013",
+      "title": "H₂O CHFIについて",
+      "body": "H-F H-F H-F\n水素結合 (4本)\n水素結合 (2本)",
+      "imageFile": "page-001/note-13.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "水素結合",
+        "H₂O",
+        "CHFI"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 12,
+        "bbox": [
+          380,
+          600,
+          540,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-014": {
+      "id": "fusen-014",
+      "title": "水素結合を形成する",
+      "body": "沸点が高い\nCH₃-C(=O)-OH\n酢酸の二量体\nO=C-O-H\np=2.07~1.16の分子内水素結合\np=1.16~1.0の分子間水素結合",
+      "imageFile": "page-001/note-14.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "水素結合",
+        "沸点",
+        "酢酸",
+        "二量体",
+        "分子内水素結合",
+        "分子間水素結合"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 13,
+        "bbox": [
+          210,
+          700,
+          540,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-015": {
+      "id": "fusen-015",
+      "title": "沸点まとめ",
+      "body": "①脂肪族炭化水素(2原子以下) ⇒ b.p.\nex) CH₃OH > CH₃NH₂ > CH₃SH\n②二量体形成 ⇒ b.p.\nex) CH₃COOH > CH₃CH₂CH₂OH\n③分子間水素結合 ≒分子内水素結合\nex) p-ニトロフェノール > o-ニトロフェノール",
+      "imageFile": "page-001/note-15.png",
+      "subject": "化学",
+      "noteType": "related",
+      "tags": [
+        "沸点",
+        "脂肪族炭化水素",
+        "二量体",
+        "水素結合",
+        "p-ニトロフェノール",
+        "o-ニトロフェノール"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 14,
+        "bbox": [
+          550,
+          600,
+          750,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-016": {
+      "id": "fusen-016",
+      "title": "ヨウ素と電荷移動相互作用",
+      "body": "ヨウ素 ⇒ 電荷移動相互作用 (色あう)",
+      "imageFile": "page-001/note-16.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "ヨウ素",
+        "電荷移動相互作用"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 15,
+        "bbox": [
+          760,
+          600,
+          800,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-017": {
+      "id": "fusen-017",
+      "title": "ベンゼンとヨウ素の溶解性",
+      "body": "ベンゼンにヨウ素を加えてもよい",
+      "imageFile": "page-001/note-17.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "ベンゼン",
+        "ヨウ素",
+        "溶解性"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 1,
+        "noteIndex": 16,
+        "bbox": [
+          810,
+          600,
+          850,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-018": {
+      "id": "fusen-018",
+      "title": "SPECTとPETの比較",
+      "body": "SPECT:\nγ線放出核種\n体内からγ線放出\n検出\n\nPET:\nβ+放出核種\n体内からγ線放出\n検出",
+      "imageFile": "page-003/note-01.png",
+      "subject": "薬剤",
+      "noteType": "related",
+      "tags": [
+        "SPECT",
+        "PET",
+        "γ線",
+        "β+"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 3,
+        "noteIndex": 0,
+        "bbox": [
+          40,
+          56,
+          150,
+          460
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-019": {
+      "id": "fusen-019",
+      "title": "「局所吸収放射能」",
+      "body": "① 塩化インジウム(¹¹¹In)\n→ 脳腫瘍の組織検査\n② 塩化タリウム(²⁰¹Tl)\n→ 心筋虚血\n心筋にいく\n③ 臭化ガリウム(⁶⁷Ga)\n→ 腫瘍検出\n④ クエン酸ガリウム(⁶⁷Ga)\n→ がん\n→ 骨髄腫瘍\n⑤ クロム酸ナトリウム(⁵¹Cr)\n→ 循環血漿量\n→ 脾機能\n⑥ ヨウ化ナトリウム(¹³¹I)\n→ 甲状腺の検査\n⑦ ヨウ化人血清アルブミン(¹³¹I)\n→ 循環血漿量\n→ 脳腫瘍",
+      "imageFile": "page-003/note-02.png",
+      "subject": "薬剤",
+      "noteType": "knowledge",
+      "tags": [
+        "放射性医薬品",
+        "局所吸収放射能",
+        "インジウム",
+        "タリウム",
+        "ガリウム",
+        "クロム",
+        "ヨウ素",
+        "脳腫瘍",
+        "心筋虚血",
+        "腫瘍",
+        "骨髄腫瘍",
+        "循環血漿量",
+        "脾機能",
+        "甲状腺"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 3,
+        "noteIndex": 1,
+        "bbox": [
+          170,
+          40,
+          600,
+          470
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-020": {
+      "id": "fusen-020",
+      "title": "「局所外」",
+      "body": "① キセノン(¹³³Xe)吸入用\n→ 肺血流\n② メチルヨードベンジルグアニジン(¹³¹I)\n→ 褐色細胞腫\n③ ジエチレントリアミン五酢酸(⁹⁹mTc)\n→ 腎機能\n④ マクロアグリゲートアルブミン(⁹⁹mTc)\n→ 肺血流\n⑤ フルデオキシグルコース(¹⁸F)\n→ 脳腫瘍\n→ 脳グルコース代謝\n→ 炎症部位に集積\n⑥ 3-ヨードベンジルグアニジン(¹²³I)\n→ 褐色細胞腫",
+      "imageFile": "page-003/note-03.png",
+      "subject": "薬剤",
+      "noteType": "knowledge",
+      "tags": [
+        "放射性医薬品",
+        "局所外",
+        "キセノン",
+        "メチルヨードベンジルグアニジン",
+        "ジエチレントリアミン五酢酸",
+        "マクロアグリゲートアルブミン",
+        "フルデオキシグルコース",
+        "肺血流",
+        "褐色細胞腫",
+        "腎機能",
+        "脳腫瘍",
+        "脳グルコース代謝",
+        "炎症"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 3,
+        "noteIndex": 2,
+        "bbox": [
+          170,
+          480,
+          600,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-021": {
+      "id": "fusen-021",
+      "title": "薬物動態",
+      "body": "薬物動態:\n吸収、分布、代謝、排泄\n薬理作用:\n薬効、副作用",
+      "imageFile": "page-003/note-04.png",
+      "subject": "薬理",
+      "noteType": "knowledge",
+      "tags": [
+        "薬物動態",
+        "薬理作用",
+        "吸収",
+        "分布",
+        "代謝",
+        "排泄",
+        "薬効",
+        "副作用"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 3,
+        "noteIndex": 3,
+        "bbox": [
+          690,
+          100,
+          790,
+          280
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-022": {
+      "id": "fusen-022",
+      "title": "粘度・拡散係数",
+      "body": "S = n × D\nV = n/τ\nニュートンは死んだ\n単位 m²/s\nポアズ",
+      "imageFile": "page-006/note-01.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "粘度",
+        "拡散係数",
+        "単位"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 6,
+        "noteIndex": 0,
+        "bbox": [
+          39,
+          39,
+          130,
+          440
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-023": {
+      "id": "fusen-023",
+      "title": "Ag₂CrO₄の溶解度積",
+      "body": "Ag₂CrO₄ の Ksp\nAg₂CrO₄ ⇄ 2Ag⁺ + CrO₄²⁻\nS mol/L\nKsp = [Ag⁺]²[CrO₄²⁻]\n= [2S]²[S]\n= 4S³",
+      "imageFile": "page-006/note-02.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "溶解度積",
+        "Ksp",
+        "Ag₂CrO₄"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 6,
+        "noteIndex": 1,
+        "bbox": [
+          39,
+          450,
+          130,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-024": {
+      "id": "fusen-024",
+      "title": "分配係数(P)",
+      "body": "分配係数(P)\nP = Co / Cw\n水中と油中の濃度比",
+      "imageFile": "page-006/note-03.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "分配係数",
+        "Co",
+        "Cw"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 6,
+        "noteIndex": 2,
+        "bbox": [
+          450,
+          39,
+          520,
+          440
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-025": {
+      "id": "fusen-025",
+      "title": "酸塩基平衡の計算式",
+      "body": "[H⁺] = √Ka・C\n[OH⁻] = √Kb・C\npH = -log[H⁺]\nkb = Kw/Ka\npH = pKa + log([A⁻]/[HA])\npKa = -logKa\n+ log([塩基]/[酸])\nKw = 1.0 × 10⁻¹⁴ = Ka・Kb\n[H⁺] = 10⁻pH\n[OH⁻] = 10⁻pOH",
+      "imageFile": "page-006/note-04.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "pH",
+        "pKa",
+        "Ka",
+        "Kb",
+        "Kw",
+        "酸塩基平衡"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 6,
+        "noteIndex": 3,
+        "bbox": [
+          770,
+          39,
+          890,
+          440
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-026": {
+      "id": "fusen-026",
+      "title": "指示薬",
+      "body": "「指示薬」\n・メチルオレンジ 3.1~4.4 (赤→橙)\n・メチルレッド 4.2~6.3 (赤→黄)\n・フェノールフタレイン 8.2~10.0 (無色→赤)\n(図)",
+      "imageFile": "page-006/note-05.png",
+      "subject": "化学",
+      "noteType": "related",
+      "tags": [
+        "指示薬",
+        "pH範囲",
+        "変色"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 6,
+        "noteIndex": 4,
+        "bbox": [
+          770,
+          450,
+          890,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-027": {
+      "id": "fusen-027",
+      "title": "定性",
+      "body": "定性\nF Cl Br I\n劇物 白 浅黄 濃黄\n(沈殿物)\n9~13の反応\nFe²⁺ + Fe³⁺ + CN⁻ ⇒ 青色の沈殿",
+      "imageFile": "page-006/note-06.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "定性分析",
+        "ハロゲン",
+        "沈殿",
+        "鉄イオン"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 6,
+        "noteIndex": 5,
+        "bbox": [
+          39,
+          550,
+          190,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-028": {
+      "id": "fusen-028",
+      "title": "ヘキサシアノ鉄(Ⅲ)カリウム",
+      "body": "「ヘキサシアノ鉄(Ⅲ)カリウム」\n10) Fe³⁺ …… 青 (沈殿)\n14) Cu²⁺ …… 赤 (〃)\n17) Zn²⁺ …… 白 (〃)",
+      "imageFile": "page-006/note-07.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "定性分析",
+        "ヘキサシアノ鉄(Ⅲ)カリウム",
+        "沈殿",
+        "金属イオン"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 6,
+        "noteIndex": 6,
+        "bbox": [
+          200,
+          550,
+          300,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-029": {
+      "id": "fusen-029",
+      "title": "炎色反応のゴロ",
+      "body": "「炎色反応のゴロ」\nリッチー 生きて K村 動力\nLi(赤) Na(黄) K(紫) Cu(緑)\nCa(橙) Sr(紅) Ba(緑)\n借りとってもくれる、馬力。",
+      "imageFile": "page-006/note-08.png",
+      "subject": "化学",
+      "noteType": "mnemonic",
+      "tags": [
+        "炎色反応",
+        "ゴロ",
+        "金属イオン"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 6,
+        "noteIndex": 7,
+        "bbox": [
+          310,
+          550,
+          450,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-030": {
+      "id": "fusen-030",
+      "title": "ガラス器具の洗浄ゴロ",
+      "body": "中学で きしる子 非行少年\n(ゴロ)\nガラス割り 発生 3日 パッキング\n(図)",
+      "imageFile": "page-006/note-09.png",
+      "subject": "実務",
+      "noteType": "mnemonic",
+      "tags": [
+        "ガラス器具",
+        "洗浄",
+        "ゴロ"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 6,
+        "noteIndex": 8,
+        "bbox": [
+          350,
+          750,
+          550,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-031": {
+      "id": "fusen-031",
+      "title": "硫黄化合物の定性",
+      "body": "HCl 白濁 におい\n滴加 S₂O₃ SO₄\n硫 X X\n亜硫 X O\nチオ硫 O O",
+      "imageFile": "page-006/note-10.png",
+      "subject": "化学",
+      "noteType": "related",
+      "tags": [
+        "定性分析",
+        "硫黄化合物",
+        "HCl",
+        "S₂O₃",
+        "SO₄"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 6,
+        "noteIndex": 9,
+        "bbox": [
+          460,
+          550,
+          600,
+          740
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-032": {
+      "id": "fusen-032",
+      "title": "呈色反応",
+      "body": "白金を用いた呈色反応\n⇒ 金属イオンの確認 (P357)\n銅線を用いた呈色反応\n⇒ ハロゲンの確認 (P354の)",
+      "imageFile": "page-006/note-11.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "呈色反応",
+        "金属イオン",
+        "ハロゲン"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 6,
+        "noteIndex": 10,
+        "bbox": [
+          610,
+          550,
+          700,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-033": {
+      "id": "fusen-033",
+      "title": "呈色反応 (確認)",
+      "body": "呈色反応 (確認)\n・4-ジメチルアミノベンズアルデヒド ⇒ インドール性物質\n・ニンヒドリン試液 ⇒ アミノ酸 (-COOH)\n・銅線を用いた呈色反応 ⇒ ハロゲン\n呈色 ⇒ Cl",
+      "imageFile": "page-006/note-12.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "呈色反応",
+        "定性分析",
+        "インドール",
+        "アミノ酸",
+        "ハロゲン"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 6,
+        "noteIndex": 11,
+        "bbox": [
+          560,
+          750,
+          740,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-034": {
+      "id": "fusen-034",
+      "title": "塩化鉄(Ⅲ)",
+      "body": "塩化鉄(Ⅲ)\n⇒ フェノール\n⇒ ヒドロキシ酸",
+      "imageFile": "page-006/note-13.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "塩化鉄(Ⅲ)",
+        "フェノール",
+        "ヒドロキシ酸",
+        "呈色反応"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 6,
+        "noteIndex": 12,
+        "bbox": [
+          710,
+          550,
+          780,
+          740
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-035": {
+      "id": "fusen-035",
+      "title": "滴定曲線",
+      "body": "強酸・強塩基\nー弱酸、弱塩基\npH\n滴定点\n・滴定点ではpHジャンプが起こる\n・pHジャンプの間に指示薬をつかう\n塩基の量",
+      "imageFile": "page-007/note-01.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "滴定曲線",
+        "pHジャンプ",
+        "指示薬",
+        "強酸",
+        "強塩基",
+        "弱酸",
+        "弱塩基"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 0,
+        "bbox": [
+          78,
+          288,
+          230,
+          480
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-036": {
+      "id": "fusen-036",
+      "title": "滴定",
+      "body": "「滴定で判断されるデータ」\n① 標準液が2つ(2種類)\n② 定量の〇〇を…\n③ 〇〇を正確に加え\n正確度を\nすぐにわかる???\n→ 1つの試料を\nくり返し\n2つの試料を",
+      "imageFile": "page-007/note-02.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "滴定",
+        "標準液",
+        "定量",
+        "正確度"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 1,
+        "bbox": [
+          78,
+          10,
+          290,
+          280
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-037": {
+      "id": "fusen-037",
+      "title": "医薬品の滴定",
+      "body": "「滴定」→ 医薬品では、何に気をつけているか\n医薬品\n標準液\n指示薬の組合せ\n(ターガード)\n(例)\n中和滴定\nNaOH\nフェノールフタレイン\n(アルカリ側)\n酸塩基\nHCl\nメチルオレンジ\n(酸性側)\nH2SO4\nBTB\n(両方)\nタンパク\n-COOH\n-NH2-\n呈色 (ロンペラ)",
+      "imageFile": "page-007/note-03.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "滴定",
+        "医薬品",
+        "標準液",
+        "指示薬",
+        "中和滴定",
+        "フェノールフタレイン",
+        "メチルオレンジ",
+        "BTB",
+        "タンパク"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 2,
+        "bbox": [
+          300,
+          10,
+          480,
+          480
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-038": {
+      "id": "fusen-038",
+      "title": "試料量計算",
+      "body": "試料量(mg) = (A) / (B) × 分子量 × 濃度",
+      "imageFile": "page-007/note-04.png",
+      "subject": "化学",
+      "noteType": "solution",
+      "tags": [
+        "試料量",
+        "計算",
+        "分子量",
+        "濃度"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 3,
+        "bbox": [
+          490,
+          10,
+          540,
+          480
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-039": {
+      "id": "fusen-039",
+      "title": "原子吸光光度法",
+      "body": "「原子吸光光度法」(目的) 定量\n呈色の利用\n(全元素)\n(A) 紫外可視 (200-800nm)\nランプは〇〇の識別\n(B) 中空陰極ランプ\n(C) 炎光光度法\n(D) 水素化物発生 → セレン、ヒ素、スズ",
+      "imageFile": "page-007/note-05.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "原子吸光光度法",
+        "定量",
+        "紫外可視",
+        "中空陰極ランプ",
+        "炎光光度法",
+        "水素化物発生"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 4,
+        "bbox": [
+          700,
+          10,
+          800,
+          480
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-040": {
+      "id": "fusen-040",
+      "title": "クロマト分離の理論",
+      "body": "「クロマト分離の理論」\n天高く 低い\nテーリング S>1\nリーディング S<1\n質量分配比(k)\nk = 固定相の物質量 / 移動相の物質量\nクロマト\n→ 固定相にくっつきやすい\n→ 保持時間が長くなる\n→ 分離能",
+      "imageFile": "page-007/note-06.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "クロマトグラフィー",
+        "分離理論",
+        "テーリング",
+        "リーディング",
+        "質量分配比",
+        "固定相",
+        "移動相",
+        "保持時間",
+        "分離能"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 5,
+        "bbox": [
+          40,
+          590,
+          190,
+          990
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-041": {
+      "id": "fusen-041",
+      "title": "クロマト分離",
+      "body": "固定相\n吸着 固固\n分配 液液\nイオン交換 イオン交換体\nサイズ排除 ゲル\n分離能「ピークの幅」\n「分離度」R\nR = 2(t2-t1) / (w1+w2)\n1.5以上で分離\n保持時間\n保持容量\n保持容量比",
+      "imageFile": "page-007/note-07.png",
+      "subject": "物理",
+      "noteType": "related",
+      "tags": [
+        "クロマトグラフィー",
+        "固定相",
+        "吸着",
+        "分配",
+        "イオン交換",
+        "サイズ排除",
+        "分離能",
+        "分離度",
+        "保持時間"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 6,
+        "bbox": [
+          40,
+          500,
+          190,
+          750
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-042": {
+      "id": "fusen-042",
+      "title": "カラムネック",
+      "body": "バンド\n細い\n太い\n狭いピーク\nゆがみないカラム\n(きれいにわかれる)\n分離能良い",
+      "imageFile": "page-007/note-08.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "カラム",
+        "ピーク",
+        "分離能"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 7,
+        "bbox": [
+          200,
+          500,
+          350,
+          750
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-043": {
+      "id": "fusen-043",
+      "title": "理論段数",
+      "body": "・理論段数(N)…ぶれの数 → カラムの性能に比例\n・理論段高さ(H)…1段の間の距離 → カラムの長さ\nN = 3\nN = 5\n良いカラム\nカラム効率",
+      "imageFile": "page-007/note-09.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "理論段数",
+        "理論段高さ",
+        "カラム性能",
+        "カラム効率"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 8,
+        "bbox": [
+          200,
+          760,
+          390,
+          990
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-044": {
+      "id": "fusen-044",
+      "title": "クロマトの考え方",
+      "body": "・理論段数…カラムの性能\n→ ピークの鋭さでみる\n・分離係数…分けられてるか？\n当せり分離するか？の目安\n→ まっすぐな方が分離係数\n・質量分配比 → 固定相へのくっつきやすさ\n→ 保持時間が長くなる\n保持時間 → 固定にくっつきやすい\n→ 質量分配比",
+      "imageFile": "page-007/note-10.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "理論段数",
+        "分離係数",
+        "質量分配比",
+        "保持時間",
+        "カラム性能"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 9,
+        "bbox": [
+          360,
+          500,
+          560,
+          750
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-045": {
+      "id": "fusen-045",
+      "title": "見直決定",
+      "body": "→ 一番良い時\n→ 理論段数\n高さ",
+      "imageFile": "page-007/note-11.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "最適化",
+        "理論段数"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 10,
+        "bbox": [
+          400,
+          760,
+          480,
+          990
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-046": {
+      "id": "fusen-046",
+      "title": "ガスクロの検出器",
+      "body": "「ガスクロの検出器」熱伝導度&炎イオン化&電子捕獲\nガスクロ！エンジンストップで空気と水ののみ検出ピーク\nS.P\n炎\n電子\nP.N\n熱\n炎\n電子\n熱",
+      "imageFile": "page-007/note-12.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "ガスクロ",
+        "検出器",
+        "熱伝導度",
+        "炎イオン化",
+        "電子捕獲"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 11,
+        "bbox": [
+          570,
+          500,
+          670,
+          750
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-047": {
+      "id": "fusen-047",
+      "title": "クロマトの誘導体化",
+      "body": "・エンピドリン → 可視吸光出\n・オルトフタルアルデヒド → 蛍光検出\n「アミノ酸のラベル化」(ポストラベル化)\n・ニンヒドリン → 可視吸光出\n・オルトフタルアルデヒド → 蛍光検出\n認可 OK",
+      "imageFile": "page-007/note-13.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "クロマトグラフィー",
+        "誘導体化",
+        "エンピドリン",
+        "オルトフタルアルデヒド",
+        "ニンヒドリン",
+        "可視吸光",
+        "蛍光検出",
+        "アミノ酸"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 12,
+        "bbox": [
+          490,
+          760,
+          670,
+          990
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-048": {
+      "id": "fusen-048",
+      "title": "ガスクロの固定相",
+      "body": "固定相 シリコン、ゲル\n(非極性相)\n→ 種類がかわっても、溶出順序かわらない\n(熱い方をつけとけ)\n→ 固定相でわかる",
+      "imageFile": "page-007/note-14.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "ガスクロ",
+        "固定相",
+        "シリコン",
+        "ゲル",
+        "非極性相",
+        "溶出順序"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 13,
+        "bbox": [
+          680,
+          500,
+          780,
+          750
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-049": {
+      "id": "fusen-049",
+      "title": "C18/C8",
+      "body": "C18\nオクタデシルシリルシリカゲル\nオクタデシル\nC8\n長鎖アルキル基\nシリカゲル",
+      "imageFile": "page-007/note-15.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "C18",
+        "C8",
+        "オクタデシルシリルシリカゲル",
+        "長鎖アルキル基",
+        "シリカゲル",
+        "固定相"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 14,
+        "bbox": [
+          790,
+          500,
+          860,
+          750
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-050": {
+      "id": "fusen-050",
+      "title": "クロマトの定量法",
+      "body": "試料の注入量\n・内標準法\nピーク比 → 一定にしておく\n・絶対検量線\n・標準添加法\nピーク面積 → 全量をみる\n(誤差)に作る",
+      "imageFile": "page-007/note-16.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "クロマトグラフィー",
+        "定量法",
+        "内標準法",
+        "絶対検量線",
+        "標準添加法",
+        "ピーク比",
+        "ピーク面積"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 7,
+        "noteIndex": 15,
+        "bbox": [
+          680,
+          760,
+          860,
+          990
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-051": {
+      "id": "fusen-051",
+      "title": "Lambert-Beerの法則",
+      "body": "吸光度 A = εcl は透過率の逆数の対数。A = log(I0/I)。I0は入射光強度、Iは透過光強度。εはモル吸光係数 (L/mol・cm)、cは濃度 (mol/L)、lは光路長 (cm)。",
+      "imageFile": "page-009/note-01.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "Lambert-Beerの法則",
+        "吸光度",
+        "モル吸光係数"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 0,
+        "bbox": [
+          65,
+          540,
+          290,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-052": {
+      "id": "fusen-052",
+      "title": "蛍光とリン光",
+      "body": "レイリー散乱は弾性散乱、ラマン散乱は非弾性散乱。励起(吸収)により蛍光が生じる。蛍光は溶液中で減少するが、エタノールやメタノールでは減衰しない。クエンチャーは励起状態のエネルギーを吸収して消光剤となる物質で、O2などが例。励起状態の電子配置に-NH2, -OHがあると蛍光が増大する。",
+      "imageFile": "page-009/note-02.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "蛍光",
+        "リン光",
+        "レイリー散乱",
+        "ラマン散乱",
+        "クエンチャー"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 1,
+        "bbox": [
+          65,
+          360,
+          300,
+          530
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-053": {
+      "id": "fusen-053",
+      "title": "定量法",
+      "body": "Xmgとよく、錠剤0.25gをはかり、〜〜の量(mg) = 〇〇 × □。",
+      "imageFile": "page-009/note-03.png",
+      "subject": "薬剤",
+      "noteType": "solution",
+      "tags": [
+        "定量法",
+        "計算"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 2,
+        "bbox": [
+          305,
+          360,
+          370,
+          530
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-054": {
+      "id": "fusen-054",
+      "title": "紫外・可視",
+      "body": "紫外(UV)は200〜400nm、可視(VIS)は400〜800nmの範囲。光はサンプルの吸収をみる。0.002%以下。",
+      "imageFile": "page-009/note-04.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "紫外",
+        "可視",
+        "波長"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 3,
+        "bbox": [
+          375,
+          360,
+          455,
+          530
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-055": {
+      "id": "fusen-055",
+      "title": "紫外可視・吸光の光源",
+      "body": "紫外可視吸光分析の光源。200〜400nmは重水素放電管 (H2, D2のみ)、400〜800nmは可視型タングステンランプ (ハロゲン、ガス)。",
+      "imageFile": "page-009/note-05.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "紫外可視吸光光度計",
+        "光源",
+        "重水素放電管",
+        "タングステンランプ"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 4,
+        "bbox": [
+          460,
+          360,
+          535,
+          530
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-056": {
+      "id": "fusen-056",
+      "title": "モル吸光係数εの計算",
+      "body": "分子量Mと比吸光度E1%が与えられている場合、モル吸光係数εは E1% × M / 10 で求められる。",
+      "imageFile": "page-009/note-06.png",
+      "subject": "物理",
+      "noteType": "solution",
+      "tags": [
+        "モル吸光係数",
+        "比吸光度",
+        "計算"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 5,
+        "bbox": [
+          300,
+          540,
+          370,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-057": {
+      "id": "fusen-057",
+      "title": "紫外可視のスペクトル",
+      "body": "紫外可視のスペクトルについて。「赤い17族はグロい」という語呂合わせがある。定義として励起と蛍光がある。",
+      "imageFile": "page-009/note-07.png",
+      "subject": "物理",
+      "noteType": "mnemonic",
+      "tags": [
+        "紫外可視スペクトル",
+        "語呂合わせ",
+        "励起",
+        "蛍光"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 6,
+        "bbox": [
+          375,
+          540,
+          460,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-058": {
+      "id": "fusen-058",
+      "title": "腎臓の構造",
+      "body": "「元祖ろ過中枢、腎臓きまってるでぇ、口かた」という語呂合わせで、腎臓の構造を覚える。",
+      "imageFile": "page-009/note-08.png",
+      "subject": "生物",
+      "noteType": "mnemonic",
+      "tags": [
+        "腎臓",
+        "語呂合わせ",
+        "尿細管",
+        "集合管"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 7,
+        "bbox": [
+          465,
+          540,
+          535,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-059": {
+      "id": "fusen-059",
+      "title": "蛍光免疫法の原理、蛍光とリン光",
+      "body": "蛍光免疫法の原理について。励起光、蛍光、エネルギー、波長の関係が示されている。励起光は短波長で高エネルギー、蛍光は長波長で低エネルギー。",
+      "imageFile": "page-009/note-09.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "蛍光免疫法",
+        "蛍光",
+        "リン光",
+        "励起光",
+        "エネルギー",
+        "波長"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 8,
+        "bbox": [
+          540,
+          360,
+          670,
+          530
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-060": {
+      "id": "fusen-060",
+      "title": "赤外スペクトル",
+      "body": "赤外スペクトルについて。振動・回転運動を測定する。波長はμmで、波数(cm-1)で表す。測定範囲は4000〜400cm-1。光源はニクロム線、グローバー、炭化ケイ素。検出器は熱電対、ボロメータ、サーミスタ。",
+      "imageFile": "page-009/note-10.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "赤外スペクトル",
+        "振動・回転運動",
+        "波長",
+        "波数",
+        "光源",
+        "検出器"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 9,
+        "bbox": [
+          540,
+          540,
+          670,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-061": {
+      "id": "fusen-061",
+      "title": "蛍光免疫法の光源",
+      "body": "蛍光免疫法の光源について。励起光と蛍光の関係が示されている。励起光は短波長で高エネルギー、蛍光は長波長で低エネルギー。励起光は青、蛍光は緑。",
+      "imageFile": "page-009/note-11.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "蛍光免疫法",
+        "光源",
+        "励起光",
+        "蛍光"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 10,
+        "bbox": [
+          675,
+          360,
+          790,
+          530
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-062": {
+      "id": "fusen-062",
+      "title": "赤外吸収スペクトル",
+      "body": "赤外吸収スペクトルの目的は、官能基の情報を得ること。測定範囲は4000〜400cm-1。試料はKBr錠剤法、液膜法、ヌジョール法、ATR法など。OH基は3600、NH2基は1900、C=Oは1700、C=Cは1600、C≡Cは2200、C≡Nは2200。",
+      "imageFile": "page-009/note-12.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "赤外吸収スペクトル",
+        "官能基",
+        "波数",
+        "試料調製",
+        "OH基",
+        "NH2基",
+        "C=O",
+        "C=C",
+        "C≡C",
+        "C≡N"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 11,
+        "bbox": [
+          675,
+          540,
+          870,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-063": {
+      "id": "fusen-063",
+      "title": "アガロースゲル電気泳動",
+      "body": "アガロースゲルは核酸の分離に用いられる。核酸は電気泳動により分離され、臭化エチジウムで染色される。",
+      "imageFile": "page-009/note-13.png",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "アガロースゲル",
+        "核酸",
+        "電気泳動",
+        "臭化エチジウム"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 12,
+        "bbox": [
+          670,
+          45,
+          750,
+          300
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-064": {
+      "id": "fusen-064",
+      "title": "ポリアクリルアミドゲル電気泳動",
+      "body": "ポリアクリルアミドゲル (SDS-PAGE) はタンパク質の分離に用いられる。2-メルカプトエタノールによりS-S結合が切断される。",
+      "imageFile": "page-009/note-14.png",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "ポリアクリルアミドゲル",
+        "SDS-PAGE",
+        "タンパク質",
+        "2-メルカプトエタノール",
+        "S-S結合"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 13,
+        "bbox": [
+          755,
+          45,
+          870,
+          300
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-065": {
+      "id": "fusen-065",
+      "title": "IRについて",
+      "body": "IR (赤外分光法) について。カルボニル基 (C=O) は1700cm-1、アミド基 (R-CONH2) は1650cm-1、ニトリル基 (R-C≡N) は2200cm-1、アルコール (R-OH) は3300cm-1に吸収を示す。",
+      "imageFile": "page-009/note-15.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "IR",
+        "赤外分光法",
+        "官能基",
+        "波数"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 9,
+        "noteIndex": 14,
+        "bbox": [
+          875,
+          540,
+          950,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-066": {
+      "id": "fusen-066",
+      "title": "比旋光度計算",
+      "body": "[α]²⁰ = (λ/l・c) × 100\n20.25℃\nナトリウムD線\nl: 100g/mL\nc: 2g/mL",
+      "imageFile": "page-010/note-01.png",
+      "subject": "物理",
+      "noteType": "solution",
+      "tags": [
+        "比旋光度",
+        "旋光度",
+        "計算式"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 0,
+        "bbox": [
+          208,
+          38,
+          300,
+          230
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-067": {
+      "id": "fusen-067",
+      "title": "比旋光度式",
+      "body": "[α]²⁰ = (α/l・c) × 100\n〜の量と光",
+      "imageFile": "page-010/note-02.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "比旋光度",
+        "旋光度",
+        "定義"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 1,
+        "bbox": [
+          305,
+          38,
+          370,
+          230
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-068": {
+      "id": "fusen-068",
+      "title": "不斉炭素と光学活性",
+      "body": "不斉炭素あり\n  一般的に\n  光学活性あり\n  アレン化合物\n不斉炭素なし\n  メソ化合物\n  一般的に\n  ターゲット\nXY\nラセミ",
+      "imageFile": "page-010/note-03.png",
+      "subject": "物理",
+      "noteType": "related",
+      "tags": [
+        "不斉炭素",
+        "光学活性",
+        "メソ化合物",
+        "アレン化合物",
+        "ラセミ"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 2,
+        "bbox": [
+          375,
+          38,
+          500,
+          230
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-069": {
+      "id": "fusen-069",
+      "title": "旋光度測定法",
+      "body": "目的: 光学活性物質の定性・定量\n光: ナトリウムのD線 (589nm)\n  (溶液中で波長決めてる)\n原理: 円(偏)光\n→ 溶液の濃度、光路長に比例",
+      "imageFile": "page-010/note-04.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "旋光度測定法",
+        "光学活性",
+        "ナトリウムD線",
+        "円偏光"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 3,
+        "bbox": [
+          505,
+          38,
+          620,
+          230
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-070": {
+      "id": "fusen-070",
+      "title": "波長とエネルギー",
+      "body": "波長\nエネルギー\nラマン散乱スペクトル ← 紫外スペクトル\nレーザーを光源\n相補的な関係",
+      "imageFile": "page-010/note-05.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "波長",
+        "エネルギー",
+        "ラマン散乱スペクトル",
+        "紫外スペクトル"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 4,
+        "bbox": [
+          625,
+          38,
+          730,
+          230
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-071": {
+      "id": "fusen-071",
+      "title": "旋光分散",
+      "body": "光の吸収によりプラス\n動的？ 正のコットン効果\n負のコットン効果\n→ ORD\n<旋光分散と円二色性の起こる理由> p572, 574\n先、のクビが\n旋光分散\n円二色性\n吸収\n屈折\n偏光\n直線偏光\n円偏光",
+      "imageFile": "page-010/note-06.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "旋光分散",
+        "円二色性",
+        "コットン効果",
+        "ORD",
+        "偏光"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 5,
+        "bbox": [
+          208,
+          240,
+          400,
+          440
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-072": {
+      "id": "fusen-072",
+      "title": "遅延効果と混色効果",
+      "body": "矢視るか逆か → 長波長側へ → 遅延効果\n  (レッドシフト)\n→ 混色効果\n  (ブルークシフト)",
+      "imageFile": "page-010/note-07.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "レッドシフト",
+        "ブルークシフト",
+        "遅延効果",
+        "混色効果"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 6,
+        "bbox": [
+          405,
+          240,
+          500,
+          440
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-073": {
+      "id": "fusen-073",
+      "title": "旋光分散の円二色性",
+      "body": "目的: 光学活性物質の立体構造を考える\n光: キセノンランプ\n  (200〜800nm)\n原理: 円(偏)光\n→ 溶液の濃度と光路長に比例",
+      "imageFile": "page-010/note-08.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "旋光分散",
+        "円二色性",
+        "立体構造",
+        "キセノンランプ",
+        "円偏光"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 7,
+        "bbox": [
+          505,
+          240,
+          620,
+          440
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-074": {
+      "id": "fusen-074",
+      "title": "分光分析の原理",
+      "body": "紫外可視 → 励起\n原子吸光 → 吸収\n銅の定量\n紫外吸光 → 励起\n蛍光 → 吸収",
+      "imageFile": "page-010/note-09.png",
+      "subject": "物理",
+      "noteType": "related",
+      "tags": [
+        "紫外可視",
+        "原子吸光",
+        "蛍光",
+        "励起",
+        "吸収"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 8,
+        "bbox": [
+          625,
+          240,
+          730,
+          440
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-075": {
+      "id": "fusen-075",
+      "title": "ドラッゲンドルフ試液",
+      "body": "ドラッゲンドルフ試液 → 3級アミン",
+      "imageFile": "page-010/note-10.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "ドラッゲンドルフ試液",
+        "3級アミン"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 9,
+        "bbox": [
+          735,
+          240,
+          770,
+          440
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-076": {
+      "id": "fusen-076",
+      "title": "¹H NMRで用いる理由",
+      "body": "・化合物に99%\n・I = 1/2 (核スピン)\n・¹³C, ¹⁶Oは核スピン0\n→ NMR×\n(¹H, ¹⁹F, ³¹P)\n(¹⁴N)",
+      "imageFile": "page-010/note-11.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "NMR",
+        "¹H NMR",
+        "核スピン"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 10,
+        "bbox": [
+          40,
+          530,
+          140,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-077": {
+      "id": "fusen-077",
+      "title": "化学シフト例",
+      "body": "ex\nCH₃-CH₂-Br\n電子密度(高い)\n外部磁場\n化学シフト",
+      "imageFile": "page-010/note-12.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "NMR",
+        "化学シフト",
+        "電子密度"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 11,
+        "bbox": [
+          40,
+          740,
+          140,
+          940
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-078": {
+      "id": "fusen-078",
+      "title": "NMRの原理とTMS",
+      "body": "・与える光の周波数と¹H₀が合っている状態で起こる\n電子密度が→外部磁場が\n遮へい度が\n・電子密度がテトラメチルシラン(TMS)を基準として\n与える光の周波数 or 外部磁場の変化を測定\n→ 化学シフト 1を大きい\n・TMS\nH₃C-Si-(CH₃)₃\n(CH₃)\n基準のずれに遮へいされている\n等価なHが12コある",
+      "imageFile": "page-010/note-13.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "NMR",
+        "TMS",
+        "化学シフト",
+        "電子密度",
+        "外部磁場"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 12,
+        "bbox": [
+          145,
+          530,
+          345,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-079": {
+      "id": "fusen-079",
+      "title": "スペクトル解析",
+      "body": "ex) -O-CH₂-CH₃\n→ シグナル面積強度\n→ 等価な¹Hの数に比例\n※カップリング(分裂数)\n→ 隣接するHの数+1\n→ ex) 三重線が隣のHに\nHは2コ",
+      "imageFile": "page-010/note-14.png",
+      "subject": "物理",
+      "noteType": "solution",
+      "tags": [
+        "NMR",
+        "スペクトル解析",
+        "シグナル面積強度",
+        "カップリング",
+        "分裂数"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 13,
+        "bbox": [
+          350,
+          530,
+          520,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-080": {
+      "id": "fusen-080",
+      "title": "積分曲線",
+      "body": "3H\n2H\n1H",
+      "imageFile": "page-010/note-15.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "NMR",
+        "積分曲線"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 14,
+        "bbox": [
+          350,
+          740,
+          520,
+          940
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-081": {
+      "id": "fusen-081",
+      "title": "NMRと置換ベンゼン・重水素交換",
+      "body": "・P-二置換ベンゼン\n等価\n2H\n2H\n・重水素交換法(D₂O)\nO-H\nN-H\nS-H\n(R₂O)\nD-D\nN-D\nS-D\n(D=¹H)",
+      "imageFile": "page-010/note-16.png",
+      "subject": "物理",
+      "noteType": "related",
+      "tags": [
+        "NMR",
+        "置換ベンゼン",
+        "重水素交換法",
+        "D₂O"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 15,
+        "bbox": [
+          525,
+          530,
+          700,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-082": {
+      "id": "fusen-082",
+      "title": "NMRでわかること",
+      "body": "1) リード文の構造決定や、赤外(IR)の情報補う\n2) 化学シフト(δ)\n  i) 7〜8ppm (芳香環、P-2置換ベンゼン)\n  ii) 4ppm (-O-CH)\n  iii) 1〜2ppm (-C-OH, CH₂S-C-CH₃)\n  iv) 約2.5ppm (-C-OH)\n3) 分裂数(カップリング) 隣接するO,m,pに結合した\n  隣接するHの数+1に分裂\n4) シグナル面積強度\n  (図形と比べると引く)",
+      "imageFile": "page-010/note-17.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "NMR",
+        "構造決定",
+        "化学シフト",
+        "分裂数",
+        "カップリング",
+        "シグナル面積強度"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 16,
+        "bbox": [
+          525,
+          740,
+          700,
+          940
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-083": {
+      "id": "fusen-083",
+      "title": "遠隔カップリング",
+      "body": "※注目している3Hの\nN\nO位とHあり\nm位\np位\n約8Hz\n3Hz\n1Hz(短距離)\n→ 分裂しないと\nみえる\n④位 n.pにHあり\n⑤位 o.pにHあり\n⑥位 o.mにHあり",
+      "imageFile": "page-010/note-18.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "NMR",
+        "遠隔カップリング",
+        "カップリング定数"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 10,
+        "noteIndex": 17,
+        "bbox": [
+          705,
+          530,
+          870,
+          940
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-084": {
+      "id": "fusen-084",
+      "title": "イオン化法",
+      "body": "ガスフロ → 電子イオン化法\n治フロ → 化学イオン化法\n治フロ → エレクトロスプレー → 軟イオン化\n治フロ → 大気圧化学イオン化",
+      "imageFile": "page-011/note-01.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "イオン化法",
+        "質量分析"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 11,
+        "noteIndex": 0,
+        "bbox": [
+          49,
+          99,
+          166,
+          236
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-085": {
+      "id": "fusen-085",
+      "title": "結晶構造解析",
+      "body": "目的：結晶構造の同定や判定 (粉末X線)\n原理：X線を試料に当てて回折したものを\nブラッグの法則 2d sinθ = nλ\n回折角から結晶構造を解析",
+      "imageFile": "page-011/note-02.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "X線回折",
+        "結晶構造",
+        "ブラッグの法則"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 11,
+        "noteIndex": 1,
+        "bbox": [
+          175,
+          99,
+          257,
+          246
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-086": {
+      "id": "fusen-086",
+      "title": "干渉と回折",
+      "body": "「干渉」：波と波が重なり強め合ったり\n弱め合ったりすること\n「回折」：…散乱した光がまがり進むこと",
+      "imageFile": "page-011/note-03.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "干渉",
+        "回折"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 11,
+        "noteIndex": 2,
+        "bbox": [
+          265,
+          99,
+          341,
+          246
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-087": {
+      "id": "fusen-087",
+      "title": "ブラッグの式",
+      "body": "2d sinθ = nλ\n二度反射の法則？",
+      "imageFile": "page-011/note-04.png",
+      "subject": "物理",
+      "noteType": "mnemonic",
+      "tags": [
+        "ブラッグの式",
+        "X線回折"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 11,
+        "noteIndex": 3,
+        "bbox": [
+          350,
+          99,
+          411,
+          246
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-088": {
+      "id": "fusen-088",
+      "title": "X線回折解析",
+      "body": "X線結晶構造解析 → 回折現象\n2d sinθ = nλ\nブラッグの法則\n粉末X線回折法 → 同心円状の回折像\n結晶構造の同定\n回折ピークの(位置) → 格子定数\n(強度) → 電子密度",
+      "imageFile": "page-011/note-05.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "X線回折",
+        "結晶構造",
+        "格子定数",
+        "電子密度"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 11,
+        "noteIndex": 4,
+        "bbox": [
+          420,
+          99,
+          631,
+          246
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-089": {
+      "id": "fusen-089",
+      "title": "励起光とアミノ酸",
+      "body": "励起する光、アミノ酸はX線\n結合状態 励起 IR X線",
+      "imageFile": "page-011/note-06.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "励起光",
+        "アミノ酸",
+        "X線",
+        "IR"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 11,
+        "noteIndex": 5,
+        "bbox": [
+          640,
+          99,
+          701,
+          246
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-090": {
+      "id": "fusen-090",
+      "title": "結晶形と溶解度",
+      "body": "非晶質 ＞準安定形 ＞安定形\n(溶解度)",
+      "imageFile": "page-011/note-07.png",
+      "subject": "物理",
+      "noteType": "related",
+      "tags": [
+        "非晶質",
+        "準安定形",
+        "安定形",
+        "溶解度"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 11,
+        "noteIndex": 6,
+        "bbox": [
+          710,
+          99,
+          771,
+          246
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-091": {
+      "id": "fusen-091",
+      "title": "マススペクトル",
+      "body": "グラフ (m/z vs 相対強度)\n① 分子イオンピーク (M+・)\n② 基準ピーク (相対強度最も大きい)\n③ 同位体ピーク\n④ フラグメントイオンピーク (分子が分解してできたもの)\n「同位体ピーク」\nX-Br X-Br2 X-Cl X-Cl2\n1:1 1:2:1 3:1 9:6:1 (グラフあり)",
+      "imageFile": "page-011/note-08.png",
+      "subject": "物理",
+      "noteType": "knowledge",
+      "tags": [
+        "マススペクトル",
+        "分子イオンピーク",
+        "基準ピーク",
+        "同位体ピーク",
+        "フラグメントイオンピーク"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 11,
+        "noteIndex": 7,
+        "bbox": [
+          420,
+          255,
+          701,
+          421
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-092": {
+      "id": "fusen-092",
+      "title": "窒素ルール",
+      "body": "分子イオンピークが(奇数) → Nの数 (奇数)\n(偶数) → 0 or 偶数",
+      "imageFile": "page-011/note-09.png",
+      "subject": "物理",
+      "noteType": "mnemonic",
+      "tags": [
+        "窒素ルール",
+        "マススペクトル",
+        "分子イオンピーク"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 11,
+        "noteIndex": 8,
+        "bbox": [
+          710,
+          255,
+          771,
+          421
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-093": {
+      "id": "fusen-093",
+      "title": "ニトリルの加水分解",
+      "body": "「アクリロニトリル + エタノール」\nC₆H₅-C≡N → C₆H₅-C≡NH (H₂O⁺) → C₆H₅-C=O (H₂O⁺)\nCH₃CH₂OH → CH₃CH₂O⁻\nH₃O⁺\nC₆H₅-C≡N + H₂O⁺ → C₆H₅-C=NH₂⁺\nH₂O⁺ → C₆H₅-C=O + NH₄⁺\n加水分解\nカルボン酸\nO=C=O → O=C-O-H\n(+)\nH₃C-C-OH + CH₃MgBr → H₃C-C-O⁻ + CH₄\nS⁺ (S⁺はカルボカチオン)",
+      "imageFile": "page-012/note-01.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "ニトリル",
+        "加水分解",
+        "Grignard反応",
+        "カルボン酸",
+        "カルボカチオン"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 12,
+        "noteIndex": 0,
+        "bbox": [
+          38,
+          97,
+          370,
+          420
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-094": {
+      "id": "fusen-094",
+      "title": "酸化",
+      "body": "酸化：Hを出す。Oとつける\n(A) H₂C=O → HCOOH → H₂CO₃\n(B) H₂C-OH → H₂C=O",
+      "imageFile": "page-012/note-02.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "酸化",
+        "有機化学"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 12,
+        "noteIndex": 1,
+        "bbox": [
+          379,
+          97,
+          480,
+          420
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-095": {
+      "id": "fusen-095",
+      "title": "SN1/SN2反応の比較",
+      "body": "SN1が配位 プロトン溶媒\n→ C-X (Xは脱離基)\nSN2は反転 非プロトン\nNu⁻",
+      "imageFile": "page-012/note-03.png",
+      "subject": "化学",
+      "noteType": "related",
+      "tags": [
+        "SN1反応",
+        "SN2反応",
+        "求核置換反応",
+        "溶媒",
+        "立体化学"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 12,
+        "noteIndex": 2,
+        "bbox": [
+          489,
+          97,
+          590,
+          420
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-096": {
+      "id": "fusen-096",
+      "title": "芳香族か？違うもの",
+      "body": "4n+2, sp² (環)\n(複数の環状構造とπ電子数、sp²混成の有無を示す図)\n4π 非芳香\n6π 芳香\n6π 芳香\n4π 非芳香\n6π 芳香\n6π 芳香\n4π 非芳香\nsp²?\n7つめはC\nsp³は非芳香\n6π 電子\n芳香族",
+      "imageFile": "page-012/note-04.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "芳香族",
+        "Hückelの法則",
+        "sp2混成",
+        "非芳香族"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 12,
+        "noteIndex": 3,
+        "bbox": [
+          600,
+          97,
+          850,
+          420
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-097": {
+      "id": "fusen-097",
+      "title": "精コウ剤",
+      "body": "(ステロイド骨格にOH基が結合した構造式)\nHO\nH\nHO\nH\ncis\ntrans",
+      "imageFile": "page-012/note-05.png",
+      "subject": "薬理",
+      "noteType": "knowledge",
+      "tags": [
+        "ステロイド",
+        "立体化学",
+        "cis",
+        "trans",
+        "精コウ剤"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 12,
+        "noteIndex": 4,
+        "bbox": [
+          620,
+          430,
+          850,
+          650
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-098": {
+      "id": "fusen-098",
+      "title": "複素環",
+      "body": "環内にヘテロ原子(O,N)\nをもつ",
+      "imageFile": "page-012/note-06.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "複素環",
+        "ヘテロ原子"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 12,
+        "noteIndex": 5,
+        "bbox": [
+          38,
+          527,
+          100,
+          740
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-099": {
+      "id": "fusen-099",
+      "title": "アセチル基とアセトキシ基",
+      "body": "-C-CH₃\nO\nアセチル基\n-O-C-CH₃\nO\nアセトキシ基",
+      "imageFile": "page-012/note-07.png",
+      "subject": "化学",
+      "noteType": "related",
+      "tags": [
+        "アセチル基",
+        "アセトキシ基",
+        "官能基"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 12,
+        "noteIndex": 6,
+        "bbox": [
+          38,
+          747,
+          160,
+          960
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-100": {
+      "id": "fusen-100",
+      "title": "第一イオン化エネルギー",
+      "body": "⇒ 原子が電子1コを取り去るのに必要なエネルギー\n⇒ 小さいほど陽イオンになりやすい\nLi, Na, K, Ca (例)\n陽イオンになりやすい",
+      "imageFile": "page-012/note-08.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "イオン化エネルギー",
+        "陽イオン",
+        "周期表"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 12,
+        "noteIndex": 7,
+        "bbox": [
+          109,
+          527,
+          240,
+          740
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-101": {
+      "id": "fusen-101",
+      "title": "L体D体と旋光度",
+      "body": "L体 ⇒ 左旋性 (-)\nD体 ⇒ 右旋性 (+)\n左は「L」が書く\n右は「D」が書く\n1日\n1日\n旋光度",
+      "imageFile": "page-012/note-09.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "L体",
+        "D体",
+        "旋光度",
+        "光学異性体"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 12,
+        "noteIndex": 8,
+        "bbox": [
+          169,
+          747,
+          290,
+          960
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-102": {
+      "id": "fusen-102",
+      "title": "アキシャル位とエクアトリアル位",
+      "body": "(いす型配座の図)\nエクアトリアル\n安定\nエクアトリアル → エクアトリアル\n(先見の方が)\n(いる場合) → 安定",
+      "imageFile": "page-012/note-10.png",
+      "subject": "化学",
+      "noteType": "knowledge",
+      "tags": [
+        "アキシャル位",
+        "エクアトリアル位",
+        "いす型配座",
+        "立体化学",
+        "安定性"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 12,
+        "noteIndex": 9,
+        "bbox": [
+          249,
+          527,
+          370,
+          740
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-103": {
+      "id": "fusen-103",
+      "title": "不斉炭素と立体異性体",
+      "body": "(いす型配座の図にOH基とCH₃基が結合した構造式)\n不斉1つ\n不斉2つ\nエナンチオマー\nジアステレオマー\n注意\nR/S\nC1\nC2",
+      "imageFile": "page-012/note-11.png",
+      "subject": "化学",
+      "noteType": "caution",
+      "tags": [
+        "不斉炭素",
+        "立体異性体",
+        "エナンチオマー",
+        "ジアステレオマー",
+        "いす型配座",
+        "R/S表記"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 12,
+        "noteIndex": 10,
+        "bbox": [
+          379,
+          527,
+          520,
+          740
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-104": {
+      "id": "fusen-104",
+      "title": "誤って",
+      "body": "ステロイド骨格の3位のOH基の配置が誤っていることを示唆。",
+      "imageFile": "page-013/note-01.png",
+      "subject": "物理",
+      "noteType": "caution",
+      "tags": [
+        "ステロイド",
+        "構造",
+        "OH基",
+        "配置"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 13,
+        "noteIndex": 0,
+        "bbox": [
+          98,
+          218,
+          140,
+          280
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-105": {
+      "id": "fusen-105",
+      "title": "cis",
+      "body": "ステロイド骨格のA/B環の結合はtransではなくcisである。",
+      "imageFile": "page-013/note-02.png",
+      "subject": "物理",
+      "noteType": "caution",
+      "tags": [
+        "ステロイド",
+        "A/B環",
+        "配置",
+        "cis",
+        "trans"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 13,
+        "noteIndex": 1,
+        "bbox": [
+          320,
+          218,
+          340,
+          250
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-106": {
+      "id": "fusen-106",
+      "title": "pentanoic",
+      "body": "メバロン酸の化学名はbutanoic acidではなくpentanoic acidである。",
+      "imageFile": "page-013/note-03.png",
+      "subject": "物理",
+      "noteType": "caution",
+      "tags": [
+        "メバロン酸",
+        "化学名",
+        "命名",
+        "butanoic acid",
+        "pentanoic acid"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 13,
+        "noteIndex": 2,
+        "bbox": [
+          560,
+          300,
+          580,
+          370
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-107": {
+      "id": "fusen-107",
+      "title": "活性代謝物",
+      "body": "シンバスタチンは代謝酵素により加水分解され、活性代謝物（3,5-ジヒドロキシカルボン酸構造）となる。",
+      "imageFile": "page-013/note-04.png",
+      "subject": "薬理",
+      "noteType": "knowledge",
+      "tags": [
+        "シンバスタチン",
+        "活性代謝物",
+        "HMG-CoA還元酵素阻害薬",
+        "代謝",
+        "構造",
+        "3,5-ジヒドロキシカルボン酸"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 13,
+        "noteIndex": 3,
+        "bbox": [
+          80,
+          750,
+          180,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-108": {
+      "id": "fusen-108",
+      "title": "HMG-CoA還元酵素阻害薬のファーマコフォア",
+      "body": "HMG-CoA還元酵素阻害薬としてのファーマコフォアは、3,5-ジヒドロキシカルボン酸構造と推定される。",
+      "imageFile": "page-013/note-05.png",
+      "subject": "薬理",
+      "noteType": "knowledge",
+      "tags": [
+        "HMG-CoA還元酵素阻害薬",
+        "ファーマコフォア",
+        "3,5-ジヒドロキシカルボン酸構造"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 13,
+        "noteIndex": 4,
+        "bbox": [
+          400,
+          570,
+          440,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-109": {
+      "id": "fusen-109",
+      "title": "XILファラン (アルキル化薬)",
+      "body": "抗悪性腫瘍薬Aはシクロホスファミドであり、アルキル化薬に分類される。",
+      "imageFile": "page-013/note-06.png",
+      "subject": "薬理",
+      "noteType": "knowledge",
+      "tags": [
+        "抗悪性腫瘍薬",
+        "シクロホスファミド",
+        "アルキル化薬",
+        "構造"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 13,
+        "noteIndex": 5,
+        "bbox": [
+          580,
+          600,
+          640,
+          800
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-110": {
+      "id": "fusen-110",
+      "title": "Aの作用発現",
+      "body": "抗悪性腫瘍薬A（シクロホスファミド）の作用発現は、アミノエチレンクロリド構造における分子内求核置換反応に起因する。",
+      "imageFile": "page-013/note-07.png",
+      "subject": "薬理",
+      "noteType": "knowledge",
+      "tags": [
+        "抗悪性腫瘍薬",
+        "シクロホスファミド",
+        "作用機序",
+        "アミノエチレンクロリド構造",
+        "分子内求核置換反応"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 13,
+        "noteIndex": 6,
+        "bbox": [
+          670,
+          570,
+          700,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-111": {
+      "id": "fusen-111",
+      "title": "大脳皮質の分類",
+      "body": "深時吸が変\n新旧皮質\n辺縁皮質",
+      "imageFile": "page-015/note-01.png",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "大脳皮質",
+        "分類"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 15,
+        "noteIndex": 0,
+        "bbox": [
+          44,
+          46,
+          172,
+          137
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-112": {
+      "id": "fusen-112",
+      "title": "大脳基底核の分類",
+      "body": "美人は比較的新しいレンズ\n尾状核 被殻 淡蒼球 視床下核\n<延髄の機能>\n[不明] → 心臓\n[不明] → 呼吸中枢\n[不明] → 嚥下中枢\nピストルの打たれた\n延髄",
+      "imageFile": "page-015/note-02.png",
+      "subject": "生物",
+      "noteType": "mnemonic",
+      "tags": [
+        "大脳基底核",
+        "分類",
+        "延髄",
+        "機能"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 15,
+        "noteIndex": 1,
+        "bbox": [
+          44,
+          150,
+          300,
+          320
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-113": {
+      "id": "fusen-113",
+      "title": "脳の青斑核、縫線核",
+      "body": "脳幹の細胞集団\n青の先鋒\nNA↓ GAB↑ セロトニン神経\n脳幹",
+      "imageFile": "page-015/note-03.png",
+      "subject": "生物",
+      "noteType": "mnemonic",
+      "tags": [
+        "脳幹",
+        "青斑核",
+        "縫線核",
+        "神経伝達物質"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 15,
+        "noteIndex": 2,
+        "bbox": [
+          44,
+          330,
+          200,
+          440
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-114": {
+      "id": "fusen-114",
+      "title": "脳神経核を含む脳神経",
+      "body": "動眼神経 (Ⅲ) 滑車神経 (Ⅳ) 外転神経 (Ⅵ) 顔面神経 (Ⅶ) 舌咽神経 (Ⅸ) 迷走神経 (Ⅹ)\n3.7.10.9 副交感神経含む\n脳神経",
+      "imageFile": "page-015/note-04.png",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "脳神経",
+        "副交感神経"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 15,
+        "noteIndex": 3,
+        "bbox": [
+          44,
+          450,
+          200,
+          650
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-115": {
+      "id": "fusen-115",
+      "title": "刺激伝導系",
+      "body": "<知識>\n刺激伝導系\n洞房結節 Ⅱ\n房室結節 Ⅲ\nヒス束 Ⅳ\nプルキンエ線維 Ⅴ\n興奮伝導速度\n洞房結節 > 房室結節 > ヒス束 > プルキンエ線維\n心筋cell\n心室筋\n活動電位\nプラトー相",
+      "imageFile": "page-015/note-05.png",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "心臓",
+        "刺激伝導系",
+        "活動電位"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 15,
+        "noteIndex": 4,
+        "bbox": [
+          44,
+          660,
+          320,
+          890
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-116": {
+      "id": "fusen-116",
+      "title": "体温調節中枢",
+      "body": "体温調節中枢 → 視床下部",
+      "imageFile": "page-015/note-06.png",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "体温調節",
+        "視床下部"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 15,
+        "noteIndex": 5,
+        "bbox": [
+          340,
+          46,
+          380,
+          230
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-117": {
+      "id": "fusen-117",
+      "title": "<ヌクレオチドとは>",
+      "body": "①リン酸 ②糖 ③塩基\nDNA: A, G, C, T\nRNA: A, G, C, U\n糖: DNA: 2-デオキシ-D-リボース\nRNA: D-リボース\n結合: N-グリコシド結合",
+      "imageFile": "page-024/note-01.png",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "ヌクレオチド",
+        "DNA",
+        "RNA",
+        "構造",
+        "定義"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 24,
+        "noteIndex": 0,
+        "bbox": [
+          60,
+          100,
+          225,
+          390
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-118": {
+      "id": "fusen-118",
+      "title": "ヌクレオチドの構造",
+      "body": "1'位のリン酸 5'位の糖 3'位の塩基\n[糖の構造図。1'位に塩基、5'位にリン酸が結合する位置が示されている。]",
+      "imageFile": "page-024/note-02.png",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "ヌクレオチド",
+        "構造",
+        "リン酸",
+        "糖",
+        "塩基"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 24,
+        "noteIndex": 1,
+        "bbox": [
+          60,
+          400,
+          150,
+          600
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-119": {
+      "id": "fusen-119",
+      "title": "塩基の種類",
+      "body": "NH₂ チミン\nNH₂ グアニン\nNH₂ アデニン\nNH₂ シトシン\n[プリン塩基（アデニン、グアニン）とピリミジン塩基（シトシン、チミン）の構造図]",
+      "imageFile": "page-024/note-03.png",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "塩基",
+        "プリン",
+        "ピリミジン",
+        "構造"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 24,
+        "noteIndex": 2,
+        "bbox": [
+          155,
+          400,
+          245,
+          600
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-120": {
+      "id": "fusen-120",
+      "title": "プリンのde novo経路 プリンの材料",
+      "body": "グー グル アーさん PRPPにくっつける\nグアニン グルタミン アスパラギン酸\nシ\nグリシン",
+      "imageFile": "page-024/note-04.png",
+      "subject": "生物",
+      "noteType": "mnemonic",
+      "tags": [
+        "プリン",
+        "de novo経路",
+        "材料",
+        "語呂合わせ",
+        "PRPP"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 24,
+        "noteIndex": 3,
+        "bbox": [
+          370,
+          390,
+          440,
+          600
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-121": {
+      "id": "fusen-121",
+      "title": "プリンヌクレオチドの分解",
+      "body": "あぐ と 7 さん\nアデニン グアニン\nヒポキサンチン キサンチン\n尿酸",
+      "imageFile": "page-024/note-05.png",
+      "subject": "生物",
+      "noteType": "mnemonic",
+      "tags": [
+        "プリン",
+        "ヌクレオチド",
+        "分解",
+        "語呂合わせ",
+        "尿酸"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 24,
+        "noteIndex": 4,
+        "bbox": [
+          675,
+          290,
+          760,
+          480
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-122": {
+      "id": "fusen-122",
+      "title": "塩基対",
+      "body": "5' 3'\nA = T\nG ≡ C\n[DNAの二重らせん構造における塩基対の模式図]",
+      "imageFile": "page-024/note-06.png",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "DNA",
+        "塩基対",
+        "ワトソン・クリック",
+        "構造"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 24,
+        "noteIndex": 5,
+        "bbox": [
+          770,
+          60,
+          880,
+          200
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-123": {
+      "id": "fusen-123",
+      "title": "<ポリヌクレオチド鎖>",
+      "body": "[ポリヌクレオチド鎖の構造図。5'末端と3'末端、塩基、糖、リン酸が示され、ホスホジエステル結合で連結されている。]\nホスホジエステル結合\n(リン酸ジエステル結合)\n5'→3'方向に合成!!",
+      "imageFile": "page-024/note-07.png",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "ポリヌクレオチド",
+        "DNA",
+        "RNA",
+        "構造",
+        "合成",
+        "ホスホジエステル結合"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 24,
+        "noteIndex": 6,
+        "bbox": [
+          675,
+          500,
+          840,
+          700
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-124": {
+      "id": "fusen-124",
+      "title": "ウラシル、シトシンをつくる",
+      "body": "●ピリミジンヌクレオチドのde novo経路\n(まず遊離塩基が合成され、PRPPに結合 or PRPPに順次さまざまな物質が結合)",
+      "imageFile": "page-024/note-08.png",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "ピリミジン",
+        "de novo経路",
+        "ウラシル",
+        "シトシン",
+        "PRPP",
+        "合成"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 24,
+        "noteIndex": 7,
+        "bbox": [
+          50,
+          650,
+          120,
+          950
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-125": {
+      "id": "fusen-125",
+      "title": "MHCクラスⅠ分子",
+      "body": "●MHCクラスⅠ分子 青本 p.592\n・有する細胞: ほとんどの有核細胞 (赤血球以外)\n→赤血球は (有する・有さない)\n・主に細胞(内・外)由来のペプチドを提示\n・β2ミクログロブリンを (有する・有さない)",
+      "imageFile": "",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "MHCクラスI",
+        "獲得免疫",
+        "免疫"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 0,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-126": {
+      "id": "fusen-126",
+      "title": "MHCクラスⅠ分子の障害",
+      "body": "MHCクラスⅠ分子を消失させて細胞を障害するのは\n(キラーT細胞・NK細胞)\nCD8\nMHCクラスⅠ分子消失\n傷害\nNK\n認識\nキラーT\nTCR\n傷害\nMHCクラスⅠ分子\n<細胞性免疫>",
+      "imageFile": "",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "MHCクラスI",
+        "キラーT細胞",
+        "NK細胞",
+        "細胞性免疫",
+        "TCR",
+        "CD8"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-127": {
+      "id": "fusen-127",
+      "title": "Th1産生サイトカイン",
+      "body": "産生するサイトカイン\nIFN-γ\nIL-2\n細胞性免疫",
+      "imageFile": "",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "Th1",
+        "サイトカイン",
+        "IFN-γ",
+        "IL-2",
+        "細胞性免疫"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 2,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-128": {
+      "id": "fusen-128",
+      "title": "Th2産生サイトカイン",
+      "body": "産生するサイトカイン\nB細胞活性化\n体液性免疫\nIL-13\nIL-10 4.5.6",
+      "imageFile": "",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "Th2",
+        "サイトカイン",
+        "B細胞活性化",
+        "体液性免疫",
+        "IL-13",
+        "IL-10"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 3,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-129": {
+      "id": "fusen-129",
+      "title": "クラススイッチ",
+      "body": "●クラススイッチ 青本 p.594\n抗体の(可変部・定常部)の構造は変わらず、\n(可変部・定常部)の構造が変化すること。\nIgAのクラススイッチを誘導:\nIgEのクラススイッチを誘導:",
+      "imageFile": "",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "クラススイッチ",
+        "抗体",
+        "IgA",
+        "IgE"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 4,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-130": {
+      "id": "fusen-130",
+      "title": "クローン選択説",
+      "body": "●クローン選択説 青本 p.571\n・異なる特異性のB細胞受容体をもつB細胞クローンが存在する\n→抗原に依存 (する・しない) 分化\n・外来抗原を認識するB細胞が選択される\n→自己抗原を認識するものなど、選択されなかったB細胞は ( ) により死滅する\n→選択されたB細胞は、(同じ・異なる) 抗原特異性をもつ抗体を分泌する",
+      "imageFile": "",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "クローン選択説",
+        "B細胞",
+        "抗原",
+        "抗体"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 5,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-131": {
+      "id": "fusen-131",
+      "title": "抗体の作用",
+      "body": "青本 p.568\n・中和抗体\n・補体活性化作用\n・オプソニン化\n・ADCC反応",
+      "imageFile": "",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "抗体",
+        "中和抗体",
+        "補体活性化",
+        "オプソニン化",
+        "ADCC反応"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 6,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-132": {
+      "id": "fusen-132",
+      "title": "免疫全体像",
+      "body": "<免疫全体像>\nMHCⅡ\nヘルパーT\nCD4\nCD80/86\nCD28\nCTLA-4\nIFN-γ\nIL-2\nIL-10\nIL-13\nIL-4,5,6\n活性化\n不活性\n細胞性免疫\n体液性免疫\nB細胞\nキラーT\nMHCⅠ\n活性化\n抑制\n抑制性サイトカイン\n活性化サイトカイン\n免疫抑制\n免疫活性化\n免疫応答\n免疫寛容\n免疫細胞\nサイトカイン",
+      "imageFile": "",
+      "subject": "生物",
+      "noteType": "related",
+      "tags": [
+        "免疫",
+        "MHC",
+        "T細胞",
+        "B細胞",
+        "サイトカイン",
+        "細胞性免疫",
+        "体液性免疫"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 7,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-133": {
+      "id": "fusen-133",
+      "title": "B細胞",
+      "body": "<B細胞>\nMHCⅡ\nヘルパーT\nB細胞受容体 CD4\n(主活性指標)\n抗原提示\n①抗原提示細胞はB細胞、樹状細胞だけ\n②T細胞は同じ抗原\n増殖分化\nサイトカイン\n抗体産生",
+      "imageFile": "",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "B細胞",
+        "MHCII",
+        "ヘルパーT細胞",
+        "抗原提示",
+        "抗体産生"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 8,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-134": {
+      "id": "fusen-134",
+      "title": "T細胞",
+      "body": "<T細胞>\n●ヘルパーT細胞\n●キラーT細胞\n→免疫のボス!!\nCD4\nヘルパーT\nT細胞受容体\nキラーT細胞\n殺し屋\nCD8",
+      "imageFile": "",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "T細胞",
+        "ヘルパーT細胞",
+        "キラーT細胞",
+        "CD4",
+        "CD8",
+        "T細胞受容体"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 9,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-135": {
+      "id": "fusen-135",
+      "title": "NK細胞",
+      "body": "<NK細胞>\n●ADCC反応\n抗体\n細胞傷害\nNK\nウイルス\n感染細胞\nFcレセプター\n(クロファージ)\nMHCⅠ\nMHCⅡ\nCD4\n抗原提示",
+      "imageFile": "",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "NK細胞",
+        "ADCC反応",
+        "抗体",
+        "細胞傷害",
+        "ウイルス感染細胞",
+        "Fcレセプター"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 10,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-136": {
+      "id": "fusen-136",
+      "title": "樹状細胞",
+      "body": "<樹状細胞>\nMHCⅡ\nヘルパーT\nCD4\n抗原提示\n貪食",
+      "imageFile": "",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "樹状細胞",
+        "MHCII",
+        "ヘルパーT細胞",
+        "抗原提示",
+        "貪食"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 11,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-137": {
+      "id": "fusen-137",
+      "title": "免疫担当細胞まとめ",
+      "body": "免疫担当細胞まとめ\n<貪食細胞>\n・マクロファージ\n・樹状細胞\n・好中球\n<抗原提示細胞>\n・マクロファージ\n・樹状細胞\n・B細胞\n⇒Toll様受容体をもつ! ⇒MHCⅡをもつ!",
+      "imageFile": "",
+      "subject": "生物",
+      "noteType": "related",
+      "tags": [
+        "免疫細胞",
+        "貪食細胞",
+        "抗原提示細胞",
+        "マクロファージ",
+        "樹状細胞",
+        "好中球",
+        "B細胞",
+        "Toll様受容体",
+        "MHCII"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 12,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-138": {
+      "id": "fusen-138",
+      "title": "マクロファージ",
+      "body": "<マクロファージ>\nMHCⅡ\nヘルパーT\nCD4\n抗原提示\n貪食",
+      "imageFile": "",
+      "subject": "生物",
+      "noteType": "knowledge",
+      "tags": [
+        "マクロファージ",
+        "MHCII",
+        "ヘルパーT細胞",
+        "抗原提示",
+        "貪食"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 13,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-139": {
+      "id": "fusen-139",
+      "title": "がん細胞と免疫",
+      "body": "がん細胞\nPD-L1\nキラーT\nPD-1\n抑制\n免疫逃避",
+      "imageFile": "",
+      "subject": "病態・薬物治療",
+      "noteType": "knowledge",
+      "tags": [
+        "がん細胞",
+        "PD-L1",
+        "キラーT細胞",
+        "PD-1",
+        "免疫逃避"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 32,
+        "noteIndex": 14,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-140": {
+      "id": "fusen-140",
+      "title": "低温増殖可能菌",
+      "body": "「低温でも増殖可能」\n・リステリア属\n・エルシニアエンテロコリティカ",
+      "imageFile": "page-038/note-01.png",
+      "subject": "衛生",
+      "noteType": "knowledge",
+      "tags": [
+        "低温増殖",
+        "リステリア",
+        "エルシニア"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 0,
+        "bbox": [
+          40,
+          225,
+          160,
+          430
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-141": {
+      "id": "fusen-141",
+      "title": "人口増減率",
+      "body": "人口増減率 = 自然増減率 + 社会増減率\n自然増減率 = (出生数 - 死亡数) / 人口 × 100 (増加)\n出生率 - 死亡率",
+      "imageFile": "page-038/note-02.png",
+      "subject": "衛生",
+      "noteType": "knowledge",
+      "tags": [
+        "人口増減率",
+        "自然増減率",
+        "出生数",
+        "死亡数",
+        "人口"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 1,
+        "bbox": [
+          200,
+          30,
+          290,
+          430
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-142": {
+      "id": "fusen-142",
+      "title": "有病率・罹患率",
+      "body": "有病率 → ある時点において疾病を有している人の割合\n罹患率 → 一定期間内に新たに発生した疾病の頻度",
+      "imageFile": "page-038/note-03.png",
+      "subject": "衛生",
+      "noteType": "knowledge",
+      "tags": [
+        "有病率",
+        "罹患率",
+        "疾病"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 2,
+        "bbox": [
+          300,
+          30,
+          400,
+          430
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-143": {
+      "id": "fusen-143",
+      "title": "調査",
+      "body": "S.P.I.\n国勢調査 10月1日 5年に1回 全国民の人口\n患者調査 3年に1回 推計患者数、受療率 医療施設\n国民生活基礎調査 3年に1回 有訴者率、世帯の状況",
+      "imageFile": "page-038/note-04.png",
+      "subject": "衛生",
+      "noteType": "related",
+      "tags": [
+        "国勢調査",
+        "患者調査",
+        "国民生活基礎調査",
+        "医療施設",
+        "調査頻度"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 3,
+        "bbox": [
+          410,
+          30,
+          520,
+          430
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-144": {
+      "id": "fusen-144",
+      "title": "がん",
+      "body": "「がん」\n罹患率 男 胃 女 乳房\n死亡 男 肺 女 大腸",
+      "imageFile": "page-038/note-05.png",
+      "subject": "衛生",
+      "noteType": "related",
+      "tags": [
+        "がん",
+        "罹患率",
+        "死亡率",
+        "性差",
+        "胃がん",
+        "乳がん",
+        "肺がん",
+        "大腸がん"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 4,
+        "bbox": [
+          440,
+          260,
+          520,
+          430
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-145": {
+      "id": "fusen-145",
+      "title": "がん死とね",
+      "body": "「がん死とね」\n男\n1位 肺がん\n2位 胃がん\n3位 大腸がん\n女\n1位 大腸がん\n2位 肺がん\n3位 胃がん\n[グラフの記述] 肺がんは慢性",
+      "imageFile": "page-038/note-06.png",
+      "subject": "衛生",
+      "noteType": "related",
+      "tags": [
+        "がん死亡",
+        "性差",
+        "肺がん",
+        "胃がん",
+        "大腸がん",
+        "死亡率推移"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 5,
+        "bbox": [
+          530,
+          30,
+          700,
+          430
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-146": {
+      "id": "fusen-146",
+      "title": "死因順位",
+      "body": "「死因順位」\n1 がん\n2 心疾患\n3 肺炎\n4 脳血管疾患\n「心疾患」\n1位 虚血性心疾患\n2位 心不全\n3位 不明\n「脳血管疾患」\n1位 脳梗塞\n2位 脳内出血\n3 くも膜下\n4 その他",
+      "imageFile": "page-038/note-07.png",
+      "subject": "衛生",
+      "noteType": "related",
+      "tags": [
+        "死因順位",
+        "がん",
+        "心疾患",
+        "肺炎",
+        "脳血管疾患",
+        "虚血性心疾患",
+        "心不全",
+        "脳梗塞",
+        "脳内出血",
+        "くも膜下出血"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 6,
+        "bbox": [
+          540,
+          260,
+          660,
+          430
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-147": {
+      "id": "fusen-147",
+      "title": "出生率・死亡率",
+      "body": "出生率 (人口1000対) 8\n死亡率 (〃) 10\n年齢調整死亡率 (低下!)",
+      "imageFile": "page-038/note-08.png",
+      "subject": "衛生",
+      "noteType": "knowledge",
+      "tags": [
+        "出生率",
+        "死亡率",
+        "年齢調整死亡率"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 7,
+        "bbox": [
+          710,
+          30,
+          790,
+          430
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-148": {
+      "id": "fusen-148",
+      "title": "保健",
+      "body": "「保健」 +25で終戦\n1945年 (S20): 終戦\n1964年 (S39): 東京オリンピック\n1966年 (S41): ひのえうま\n高度経済成長期へ",
+      "imageFile": "page-038/note-09.png",
+      "subject": "衛生",
+      "noteType": "related",
+      "tags": [
+        "保健",
+        "終戦",
+        "東京オリンピック",
+        "ひのえうま",
+        "高度経済成長"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 8,
+        "bbox": [
+          670,
+          260,
+          790,
+          430
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-149": {
+      "id": "fusen-149",
+      "title": "ダニが媒介",
+      "body": "「ダニが媒介」\n① はペスト\n・SFTS (重症熱性血小板減少症候群)\n(マダニ)\n・つつが虫病 → ツツガムシダニの一種\n(幼虫期) リケッチア (細菌)",
+      "imageFile": "page-038/note-10.png",
+      "subject": "衛生",
+      "noteType": "knowledge",
+      "tags": [
+        "ダニ媒介",
+        "SFTS",
+        "マダニ",
+        "つつが虫病",
+        "ツツガムシダニ",
+        "リケッチア",
+        "細菌"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 9,
+        "bbox": [
+          190,
+          540,
+          320,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-150": {
+      "id": "fusen-150",
+      "title": "E型肝炎",
+      "body": "「E型肝炎」\n・4種類感染症\n・生肉、水\n・時差5倍",
+      "imageFile": "page-038/note-11.png",
+      "subject": "衛生",
+      "noteType": "knowledge",
+      "tags": [
+        "E型肝炎",
+        "感染経路",
+        "潜伏期間"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 10,
+        "bbox": [
+          330,
+          540,
+          410,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-151": {
+      "id": "fusen-151",
+      "title": "蚊が媒介",
+      "body": "「蚊が媒介」\n・日本脳炎 → ウイルス\n・マラリア → 原虫\n・ジカ熱 → ウイルス\n・デング熱 → ウイルス\n・ウエストナイル熱\n・チクングニア熱",
+      "imageFile": "page-038/note-12.png",
+      "subject": "衛生",
+      "noteType": "knowledge",
+      "tags": [
+        "蚊媒介",
+        "日本脳炎",
+        "マラリア",
+        "ジカ熱",
+        "デング熱",
+        "ウエストナイル熱",
+        "チクングニア熱",
+        "ウイルス",
+        "原虫"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 11,
+        "bbox": [
+          420,
+          540,
+          540,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-152": {
+      "id": "fusen-152",
+      "title": "梅毒",
+      "body": "「梅毒」\n・細菌\n・星状瘢痕\n・珪肺盤状疹\n・ワッセルマン",
+      "imageFile": "page-038/note-13.png",
+      "subject": "衛生",
+      "noteType": "knowledge",
+      "tags": [
+        "梅毒",
+        "細菌",
+        "星状瘢痕",
+        "珪肺盤状疹",
+        "ワッセルマン"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 12,
+        "bbox": [
+          550,
+          540,
+          630,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-153": {
+      "id": "fusen-153",
+      "title": "ワクチン",
+      "body": "・トキソイド → 免疫原性を残したまま無毒化\n・不活化ワクチン → 病原性を不活化",
+      "imageFile": "page-038/note-14.png",
+      "subject": "薬理",
+      "noteType": "knowledge",
+      "tags": [
+        "トキソイド",
+        "不活化ワクチン",
+        "免疫原性",
+        "無毒化",
+        "病原性"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 13,
+        "bbox": [
+          640,
+          540,
+          710,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    },
+    "fusen-154": {
+      "id": "fusen-154",
+      "title": "免疫",
+      "body": "・細胞性免疫 → 生ワクチンのみ\n・体液性免疫 → トキソイド\n不活化ワクチン",
+      "imageFile": "page-038/note-15.png",
+      "subject": "薬理",
+      "noteType": "related",
+      "tags": [
+        "細胞性免疫",
+        "体液性免疫",
+        "生ワクチン",
+        "トキソイド",
+        "不活化ワクチン"
+      ],
+      "source": {
+        "pdf": "fusen-note-makio.pdf",
+        "page": 38,
+        "noteIndex": 14,
+        "bbox": [
+          720,
+          540,
+          790,
+          730
+        ]
+      },
+      "topicId": null,
+      "linkedQuestionIds": [],
+      "importance": 0,
+      "tier": "free",
+      "status": "draft",
+      "reviewedAt": null,
+      "notes": ""
+    }
+  }
+}

@@ -11,7 +11,7 @@ export function useValidationReport() {
 
   useEffect(() => {
     // /@fs/ + 絶対パスでアクセス（server.fs.allow に登録済み）
-    const url = `/@fs/${__REPORTS_ROOT__}/validation-report.json`
+    const url = `/@fs${__REPORTS_ROOT__}/validation-report.json`
 
     fetch(url)
       .then(res => {

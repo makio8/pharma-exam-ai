@@ -176,7 +176,8 @@ async function resizeForApi(imgPath: string): Promise<string> {
 }
 
 // --- Gemini API Call ---
-async function callGeminiOCR(imgPath: string): Promise<FusenNote[]> {
+// 成功時: FusenNote[]  API失敗時: null（0枚との区別のため）
+async function callGeminiOCR(imgPath: string): Promise<FusenNote[] | null> {
   const imgB64 = fs.readFileSync(imgPath).toString('base64')
 
   let retries = 0
@@ -210,7 +211,7 @@ async function callGeminiOCR(imgPath: string): Promise<FusenNote[]> {
 
     if (!response.ok) {
       console.error(`  API error: ${response.status} ${response.statusText}`)
-      return []
+      return null // API失敗 → 保存しない（0枚と区別）
     }
 
     const data = await response.json() as any
@@ -225,7 +226,7 @@ async function callGeminiOCR(imgPath: string): Promise<FusenNote[]> {
 
     if (!text) {
       console.error(`  API応答なし`)
-      return []
+      return null // API失敗 → 保存しない
     }
 
     try {
@@ -367,6 +368,14 @@ async function main(): Promise<void> {
     // 3. Gemini OCR + bbox
     process.stdout.write(`ページ${p}...`)
     const notes = await callGeminiOCR(apiImg)
+
+    // API失敗（null）の場合は保存せずスキップ → 次回再処理される
+    if (notes === null) {
+      console.log(` ⚠ API失敗 → スキップ（次回再処理）`)
+      // レート制限待ちは実行してから次へ（連続リクエスト防止）
+      await new Promise(r => setTimeout(r, RATE_LIMIT_MS))
+      continue
+    }
 
     // 4. 個別切り抜き（元画像の高解像度版から）
     if (notes.length > 0) {
