@@ -15,7 +15,11 @@ interface DisplayRect {
 }
 
 export class CanvasDrawManager {
-  constructor(private canvasSize: CanvasSize) {}
+  private canvasSize: CanvasSize
+
+  constructor(canvasSize: CanvasSize) {
+    this.canvasSize = canvasSize
+  }
 
   updateSize(size: CanvasSize): void {
     this.canvasSize = size
