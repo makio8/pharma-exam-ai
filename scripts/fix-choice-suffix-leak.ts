@@ -146,25 +146,22 @@ function printDiff(result: LeakDetectionResult, question: Question) {
 
 // ─────────────────────────────────────────────
 // corrections JSON 生成（--apply 用）
+// apply-corrections.ts が期待するフラット配列形式に合わせる
 // ─────────────────────────────────────────────
 
-interface CorrectionItem {
+interface Correction {
+  questionId: string
   type: string
   field?: string
   value: unknown
-}
-
-interface CorrectionEntry {
+  reason?: string
   dataHash: string
-  items: CorrectionItem[]
 }
 
 interface CorrectionsFile {
-  version: string
-  timestamp: string
-  baseGitCommit: string
   reportTimestamp: string
-  corrections: Record<string, CorrectionEntry>
+  baseGitCommit: string
+  corrections: Correction[]
 }
 
 interface ReviewEntry {
@@ -235,7 +232,7 @@ async function main() {
   log(`  スキャン問題数: ${totalQuestions}`)
   log(`  検出合計:       ${allResults.length}`)
   log(`    ${GREEN}AUTO_HIGH${RESET}:   ${byConfidence['AUTO_HIGH'].length} （行数=選択肢数、自動修正可）`)
-  log(`    ${YELLOW}AUTO_MEDIUM${RESET}: ${byConfidence['AUTO_MEDIUM'].length} （行数=選択肢数-1、自動修正可）`)
+  log(`    ${YELLOW}AUTO_MEDIUM${RESET}: ${byConfidence['AUTO_MEDIUM'].length} （行数=選択肢数-1、要手動確認）`)
   log(`    ${RED}REVIEW${RESET}:      ${byConfidence['REVIEW'].length} （要手動確認）`)
   log('')
 
@@ -263,52 +260,70 @@ async function main() {
     const reportsDir = path.join(PROJECT_ROOT, 'reports')
     mkdirSync(reportsDir, { recursive: true })
 
-    // AUTO_HIGH + AUTO_MEDIUM → corrections JSON
-    const autoItems = [...byConfidence['AUTO_HIGH'], ...byConfidence['AUTO_MEDIUM']]
-    const corrections: Record<string, CorrectionEntry> = {}
+    // AUTO_HIGH のみ → corrections JSON（apply-corrections.ts フラット配列形式）
+    const autoItems = byConfidence['AUTO_HIGH']
+    const corrections: Correction[] = []
 
     for (const { result, question } of autoItems) {
       const dataHash = computeDataHash(question)
-      corrections[result.questionId] = {
+      corrections.push({
+        questionId: result.questionId,
+        type: 'text',
+        field: 'question_text',
+        value: result.cleanedText,
+        reason: `suffix-leak AUTO_HIGH: leaked ${result.leakedLines.length} lines`,
         dataHash,
-        items: [
-          { type: 'text', field: 'question_text', value: result.cleanedText },
-          {
-            type: 'choices',
-            value: result.mergedChoices.map(c => ({ key: c.key, text: c.text })),
-          },
-        ],
-      }
+      })
+      corrections.push({
+        questionId: result.questionId,
+        type: 'choices',
+        value: result.mergedChoices.map(c => ({ key: c.key, text: c.text })),
+        reason: `suffix-leak AUTO_HIGH: merge leaked prefix into choices`,
+        dataHash,
+      })
     }
 
+    // baseGitCommit を取得
+    let baseGitCommit = ''
+    try {
+      const { execSync } = await import('child_process')
+      baseGitCommit = execSync('git rev-parse HEAD', { cwd: PROJECT_ROOT, encoding: 'utf-8' }).trim()
+    } catch { /* 取得失敗時は空文字のまま */ }
+
     const correctionsFile: CorrectionsFile = {
-      version: '1.0.0',
-      timestamp: new Date().toISOString(),
-      baseGitCommit: '',
       reportTimestamp: new Date().toISOString(),
+      baseGitCommit,
       corrections,
     }
 
     const correctionsPath = path.join(reportsDir, 'suffix-leak-auto-corrections.json')
     writeFileSync(correctionsPath, JSON.stringify(correctionsFile, null, 2), 'utf-8')
-    ok(`auto corrections: ${correctionsPath} (${autoItems.length}件)`)
+    ok(`auto corrections: ${correctionsPath} (${autoItems.length}問, ${corrections.length}件)`)
 
-    // REVIEW → review JSON
-    const reviewItems: ReviewEntry[] = byConfidence['REVIEW'].map(({ result }) => ({
-      questionId: result.questionId,
-      confidence: result.confidence,
-      leakedLines: result.leakedLines,
-      reason: `leaked ${result.leakedLines.length} lines, needs manual review`,
-    }))
+    // AUTO_MEDIUM + REVIEW → review JSON（人手確認用）
+    const reviewItems: ReviewEntry[] = [
+      ...byConfidence['AUTO_MEDIUM'].map(({ result }) => ({
+        questionId: result.questionId,
+        confidence: result.confidence,
+        leakedLines: result.leakedLines,
+        reason: `leaked ${result.leakedLines.length} lines (AUTO_MEDIUM: last-choice heuristic, needs verification)`,
+      })),
+      ...byConfidence['REVIEW'].map(({ result }) => ({
+        questionId: result.questionId,
+        confidence: result.confidence,
+        leakedLines: result.leakedLines,
+        reason: `leaked ${result.leakedLines.length} lines, needs manual review`,
+      })),
+    ]
 
     const reviewPath = path.join(reportsDir, 'suffix-leak-review.json')
     writeFileSync(reviewPath, JSON.stringify(reviewItems, null, 2), 'utf-8')
-    ok(`review candidates: ${reviewPath} (${reviewItems.length}件)`)
+    ok(`review candidates: ${reviewPath} (${reviewItems.length}件: AUTO_MEDIUM ${byConfidence['AUTO_MEDIUM'].length} + REVIEW ${byConfidence['REVIEW'].length})`)
 
     log('')
     log(`${BOLD}次のステップ:${RESET}`)
     log(`  1. reports/suffix-leak-auto-corrections.json を確認`)
-    log(`  2. reports/suffix-leak-review.json の手動確認`)
+    log(`  2. reports/suffix-leak-review.json の手動確認（AUTO_MEDIUM + REVIEW）`)
     log(`  3. npx tsx scripts/apply-corrections.ts reports/suffix-leak-auto-corrections.json`)
     log('')
     return
