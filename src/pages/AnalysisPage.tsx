@@ -42,6 +42,28 @@ export function AnalysisPage() {
           <button type="button" className={styles.ctaBtn} onClick={() => navigate('/practice')}>
             ▶ 演習を始める
           </button>
+          {/* DEBUG: localStorage直接書き込みテスト */}
+          <button
+            type="button"
+            style={{ marginTop: 16, padding: '8px 16px', fontSize: 12, background: '#eee', border: '1px solid #ccc', borderRadius: 8 }}
+            onClick={() => {
+              const testEntry = {
+                id: crypto.randomUUID(),
+                user_id: 'local_user',
+                question_id: 'r111-001',
+                selected_answer: 3,
+                is_correct: true,
+                answered_at: new Date().toISOString(),
+                time_spent_seconds: 15,
+              }
+              const existing = JSON.parse(localStorage.getItem('answer_history') || '[]')
+              existing.push(testEntry)
+              localStorage.setItem('answer_history', JSON.stringify(existing))
+              alert(`書き込み完了！ LS件数: ${existing.length}件\nページをリロードして確認`)
+            }}
+          >
+            🧪 テストデータ書込
+          </button>
         </div>
         <FloatingNav />
       </div>
