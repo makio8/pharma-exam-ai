@@ -42,7 +42,7 @@ export function useFusenData(): UseFusenDataResult {
   useEffect(() => {
     fetch('/data/fusens/fusens-master.json')
       .then(res => {
-        if (!res.ok) throw new Error('fusens-master.json not found.\nRun: npx tsx scripts/build-fusens-master.ts')
+        if (!res.ok) throw new Error('fusens-master.json not found.\nRun:\n  npx tsx scripts/build-fusens-master.ts\n  cp src/data/fusens/fusens-master.json public/data/fusens/')
         return res.json()
       })
       .then((data: FusenMasterData) => {

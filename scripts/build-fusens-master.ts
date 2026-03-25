@@ -17,6 +17,7 @@ const __dirname = path.dirname(__filename)
 
 const OCR_PATH = path.join(__dirname, '..', 'src', 'data', 'fusens', 'ocr-results.json')
 const MASTER_PATH = path.join(__dirname, '..', 'src', 'data', 'fusens', 'fusens-master.json')
+const PUBLIC_MASTER_PATH = path.join(__dirname, '..', 'public', 'data', 'fusens', 'fusens-master.json')
 const PDF_NAME = 'fusen-note-makio.pdf'
 
 const args = process.argv.slice(2)
@@ -32,9 +33,14 @@ function loadMaster(): FusenMaster | null {
 }
 
 function saveMaster(master: FusenMaster): void {
+  const json = JSON.stringify(master, null, 2)
+  // src/data/ に保存（マスターデータ）
   const tmpPath = MASTER_PATH + '.tmp'
-  fs.writeFileSync(tmpPath, JSON.stringify(master, null, 2), 'utf-8')
+  fs.writeFileSync(tmpPath, json, 'utf-8')
   fs.renameSync(tmpPath, MASTER_PATH)
+  // public/data/ にもコピー（レビューUI用）
+  fs.mkdirSync(path.dirname(PUBLIC_MASTER_PATH), { recursive: true })
+  fs.writeFileSync(PUBLIC_MASTER_PATH, json, 'utf-8')
 }
 
 function showStats(): void {
