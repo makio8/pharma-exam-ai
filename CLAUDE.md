@@ -86,20 +86,23 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - GPT-5.4レビュー: AnalysisPage本体は指摘ゼロ
   - テスト: 15ファイル278件全パス
   - **次: ブラウザ動作確認 → NotesPage or FlashCardPage リデザイン or オンボーディング**
-- **付箋OCRパイプライン（進行中）**
-  - OCR: 13/129ページ完了（154枚検出）、Gemini日次クォータ待ち → `npx tsx scripts/ocr-fusens.ts --all`
-  - マスター変換: `scripts/build-fusens-master.ts` 完成（19テスト）
-  - レビューUI Phase 1 完成: `/dev-tools/fusen-review`（判定+キーボードナビ）
-  - レビューUI Phase 2 未実装: bbox調整 + 編集パネル + エクスポート
-  - 設計: `docs/superpowers/specs/2026-03-24-fusens-master-layer-design.md`
-  - 設計: `docs/superpowers/specs/2026-03-25-fusen-review-ui-design.md`
+- **付箋パイプライン（Phase 2a アノテーションUI完成）**
+  - 新パイプライン: 人間がbbox描画 → 切り抜き → OCR → テキスト確認 → トピック紐付け
+  - Gemini bbox検出精度が不十分→人間描画に方針転換
+  - アノテーションUI: `/dev-tools/fusen-annotate`（19ファイル、308テスト）
+  - split-pages.ts: 見開きA3→左右分割完了（91見開き→182枚）
+  - 残り38ページ（page-091〜109, 111〜129）のPNG未生成（PDFから抽出が必要）
+  - 次: ブラウザ動作確認 → 全ページbboxアノテーション → crop → OCR再実行
+  - 設計: `docs/superpowers/specs/2026-03-25-fusen-annotate-ui-design.md`（GPT-5.4 Approved）
+  - 計画: `docs/superpowers/plans/2026-03-25-fusen-annotate-ui.md`
+  - レビューUI Phase 1: `/dev-tools/fusen-review`（判定+キーボードナビ、Phase 2b以降で使用）
 - Ant Design: 未移行ページ（NotesPage, FlashCardPage）がまだ依存中
 - AppLayout: `REDESIGNED_EXACT` + `matchPath('/practice/:questionId')` でリデザイン済みページを管理
 
 ## コマンド
 - `npm run dev` — 開発サーバー
 - `npm run build` — `tsc -b && vite build`（noUnusedLocals: true、未使用importでエラー）
-- `npx vitest run` — テスト（16ファイル297テスト）
+- `npx vitest run` — テスト（18ファイル308テスト）
 - `npx tsc --noEmit` — 型チェックのみ
 - `codex review --base <SHA>` — GPT-5.4によるコードレビュー（マルチモデル戦略）
 - `codex review --commit <SHA>` — 特定コミットのレビュー
@@ -110,6 +113,8 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `npx tsx scripts/build-fusens-master.ts` — OCR結果→マスターJSON変換（冪等）
 - `npx tsx scripts/build-fusens-master.ts --stats` — 付箋統計
 - `/dev-tools/fusen-review` — 付箋レビューUI（dev serverのみ）
+- `npx tsx scripts/split-pages.ts --source makio --input /tmp/claude/fusens/pages/` — 見開き→左右分割
+- `/dev-tools/fusen-annotate` — 付箋bboxアノテーションUI（dev serverのみ）
 
 ## アーキテクチャ
 - デザイントークン: `src/styles/tokens.css`（CSS変数 `--accent`, `--bg`, `--card` 等）
@@ -128,6 +133,11 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - 付箋マスター型: `scripts/lib/fusens-master-types.ts`（Fusen, FusenMaster）
 - 付箋マスター変換: `scripts/lib/fusens-master-core.ts`（ocrToMaster, source fingerprint重複排除）
 - 付箋レビューUI: `src/dev-tools/fusen-review/`（既存review/と同パターン、localStorage永続化）
+- 付箋アノテーションUI: `src/dev-tools/fusen-annotate/`（Canvas bbox描画、localStorage永続化）
+- 付箋アノテーション型: `src/dev-tools/fusen-annotate/types.ts`（NormalizedBbox [y1,x1,y2,x2] 0-1000）
+- 付箋ロジック: `utils/CanvasDrawManager.ts`（座標変換・hitTest）、`utils/AnnotationStateManager.ts`（永続化・エクスポート）
+- 付箋左右分割画像: `public/images/fusens/sources/makio/page-NNN-left.png`
+- split-pagesコア: `scripts/lib/split-pages-core.ts`（parsePageFiles, generatePageIds）
 - 付箋画像: `public/images/fusens/page-NNN/note-NN.png`（bbox切り抜き済み）
 - 付箋PDF: Google Drive > pharma-exam-ai > fusen-image > fusen-note-makio.pdf → `/tmp/claude/fusens/all-subjects.pdf`
 - ブループリント: 科目 → 大項目(MajorCategory) → 中項目(MiddleCategory) の3階層
@@ -149,6 +159,12 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - Gemini 2.5 Flash 無料枠: 250RPD/日、10RPM。429エラー時はnullを返し保存しない（0枚保存バグ修正済み）
 - `fusens-master.json` は `src/data/` と `public/data/` の両方に存在。`build-fusens-master.ts` が両方に書き出す
 - OCRの空ページ（notes:[]）は429失敗の可能性あり。付箋0枚ページは保存しない設計（API失敗=null、本当に空=[]で区別）
+- `erasableSyntaxOnly: true` → `constructor(private x: T)` パラメータプロパティ構文は使えない。フィールド宣言+constructor内代入
+- `src/` 配下の `__tests__/` は `tsconfig.app.json` の `exclude` で除外済み（vitest globals型がtsc -bで認識されないため）
+- ESMスクリプト（tsx）では `__dirname` 未定義 → `fileURLToPath(import.meta.url)` + `path.dirname()` が必要
+- `import * as fs from 'fs'`（`import fs from 'fs'` はプロジェクト規約外）
+- `npm run build` は既存 `PdfViewer.tsx` の `getOrInsertComputed` エラーで失敗する（既知、付箋関連の変更とは無関係）
+- 付箋座標系: 既存パイプライン全体が0-1000正規化。新規コードも必ず0-1000に統一すること
 
 ## pdfjs-dist v5 + Vite + Safari 実装ノート（PdfViewer で解決済み、再利用時参照）
 - **pdfjs-dist v5.5+** は `Map.prototype.getOrInsertComputed`（TC39 Stage 3）を使用。Safari 18.x以前は未サポート
@@ -175,6 +191,9 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `docs/superpowers/specs/2026-03-24-questionpage-redesign-design.md` — QuestionPage 設計（GPT-5.4 Approved）
 - `docs/superpowers/specs/2026-03-24-linked-question-redesign-design.md` — 連問横展開 設計（GPT-5.4 Approved、実装計画未作成）
 - `docs/superpowers/plans/2026-03-24-questionpage-redesign.md` — QuestionPage 実装計画（12タスク完了）
+- `docs/superpowers/specs/2026-03-25-fusen-annotate-ui-design.md` — 付箋アノテーションUI設計（GPT-5.4 Approved）
+- `docs/superpowers/plans/2026-03-25-fusen-annotate-ui.md` — アノテーションUI実装計画（12タスク完了）
+- `docs/superpowers/specs/2026-03-24-fusens-master-layer-design.md` — 付箋マスター層設計
 
 ## データ構造メモ
 - `QUESTION_TOPIC_MAP`: Record<questionId, topicId> — 問題→中項目マッピング
