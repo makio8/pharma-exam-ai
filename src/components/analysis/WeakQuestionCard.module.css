@@ -1,0 +1,86 @@
+/* src/components/analysis/WeakQuestionCard.module.css */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--card);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  font-family: var(--font);
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.subject {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 2px 8px;
+  border-radius: var(--r-chip);
+}
+
+.essentialTag {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--warn);
+  background: rgba(245, 158, 11, 0.1);
+  padding: 2px 8px;
+  border-radius: var(--r-chip);
+}
+
+.questionLabel {
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.incorrectBadge {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ng);
+}
+
+.reviewBtn {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: none;
+  padding: 6px 12px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  font-family: var(--font);
+  white-space: nowrap;
+}
+
+.reviewBtn:active {
+  opacity: 0.8;
+}
