@@ -77,14 +77,22 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - useAnswerHistory に skip オプション追加（N重ロード防止）
   - GPT-5.4レビュー: P2指摘2件修正済み
   - テスト: 14ファイル271件全パス
-  - **次: ブラウザ動作確認 → AnalysisPage リデザイン（ブレストから）**
-- Ant Design: 未移行ページ（AnalysisPage, NotesPage, FlashCardPage）がまだ依存中
+- **Phase 1 Week 4 完了: AnalysisPage リデザイン**
+  - 371行→120行（68%削減）、Ant Design依存ゼロ
+  - 深掘り特化: ホームとの重複排除、苦手問題（2モード）+ 回答履歴のみ
+  - 新規: computeMissedEssentials（必須取りこぼし計算）、WeakQuestionCard、HistoryItem
+  - useAnalytics に allHistory 追加、weakQuestions 20件化、recentHistory 30件化
+  - Chipでモード切替: 🔥自分の苦手 | ⚠️必須の取りこぼし
+  - GPT-5.4レビュー: AnalysisPage本体は指摘ゼロ
+  - テスト: 15ファイル278件全パス
+  - **次: ブラウザ動作確認 → NotesPage or FlashCardPage リデザイン or オンボーディング**
+- Ant Design: 未移行ページ（NotesPage, FlashCardPage）がまだ依存中
 - AppLayout: `REDESIGNED_EXACT` + `matchPath('/practice/:questionId')` でリデザイン済みページを管理
 
 ## コマンド
 - `npm run dev` — 開発サーバー
 - `npm run build` — `tsc -b && vite build`（noUnusedLocals: true、未使用importでエラー）
-- `npx vitest run` — テスト（14ファイル271テスト）
+- `npx vitest run` — テスト（15ファイル278テスト）
 - `npx tsc --noEmit` — 型チェックのみ
 - `codex review --base <SHA>` — GPT-5.4によるコードレビュー（マルチモデル戦略）
 - `codex review --commit <SHA>` — 特定コミットのレビュー
