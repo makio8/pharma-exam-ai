@@ -49,6 +49,9 @@ const TERMINATOR_PATTERN =
 /** リーク行ではない（問題文の続き）と判定する行頭パターン */
 const SAFE_LINE_STARTS = /^(?:ただし|なお、|ここで|図|下図|表|次の|以下|問\d+|注)/
 
+/** 連問の小問ヘッダーパターン（例: 問232（薬理） or 問233 次の〜） */
+const SUB_QUESTION_HEADER = /^問\d+[\s（(]/
+
 /** 結合後に二重になると REVIEW にダウングレードする語句 */
 const DOUBLE_SUFFIX_WORDS = [
   '受容体',
@@ -64,6 +67,15 @@ const DOUBLE_SUFFIX_WORDS = [
 
 /** リーク行として許容する最大文字数 */
 const MAX_LEAKED_LINE_LENGTH = 40
+
+/** 全角数字で始まる行（表の行やフル選択肢テキスト） */
+const FULLWIDTH_CHOICE_NUMBER = /^[１２３４５６]/
+
+/** 連続するスペース（全角/半角）が含まれる行（表のフォーマット） */
+const TABLE_SPACING = /[\s　]{2,}/
+
+/** 句点「。」で終わる行（完全な文 = suffix断片ではない） */
+const SENTENCE_ENDING = /。$/
 
 // ────────────────────────────────────────────────────────────
 // extractLeakedLines
@@ -88,6 +100,16 @@ export function extractLeakedLines(questionText: string): ExtractResult | null {
 
   if (terminatorIndex === -1) return null
 
+  // 連問チェック: ターミネータが複数存在する場合は、テキスト途中の
+  // サブ問題のターミネータを拾っている可能性があるので null を返す
+  let terminatorCount = 0
+  for (let i = 0; i < lines.length; i++) {
+    if (TERMINATOR_PATTERN.test(lines[i].trim())) {
+      terminatorCount++
+    }
+  }
+  if (terminatorCount > 1) return null
+
   // ターミネータ以降の行を取得
   const afterTerminator = lines.slice(terminatorIndex + 1)
 
@@ -100,6 +122,10 @@ export function extractLeakedLines(questionText: string): ExtractResult | null {
 
   // safe line チェック: 最初の候補がsafe lineならリークではない
   if (SAFE_LINE_STARTS.test(candidates[0])) return null
+
+  // 連問チェック: 候補行に小問ヘッダー（問232（薬理）等）が含まれていたら
+  // リークではなく連問テキストの一部 → null を返す
+  if (candidates.some(line => SUB_QUESTION_HEADER.test(line))) return null
 
   const cleanedText = lines.slice(0, terminatorIndex + 1).join('\n')
 
@@ -148,6 +174,20 @@ export function tryMerge(leakedLines: string[], choices: Choice[]): MergeResult 
 
   // 行長チェック
   if (leakedLines.some(line => line.length > MAX_LEAKED_LINE_LENGTH)) {
+    return {
+      confidence: 'REVIEW',
+      mergedChoices: choices.map(c => ({ ...c })),
+    }
+  }
+
+  // 非suffix行チェック: 表の行・完全文など suffix 断片でない行が含まれていたら REVIEW
+  const hasNonSuffixLine = leakedLines.some(
+    line =>
+      FULLWIDTH_CHOICE_NUMBER.test(line) ||
+      TABLE_SPACING.test(line) ||
+      SENTENCE_ENDING.test(line)
+  )
+  if (hasNonSuffixLine) {
     return {
       confidence: 'REVIEW',
       mergedChoices: choices.map(c => ({ ...c })),

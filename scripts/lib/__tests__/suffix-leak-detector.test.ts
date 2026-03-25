@@ -145,6 +145,42 @@ describe('extractLeakedLines', () => {
     expect(result).not.toBeNull()
     expect(result!.leakedLines).toEqual(['阻害', '活性化'])
   })
+
+  // ── Issue 1: 連問テキスト (grouped questions) ──
+
+  it('連問テキストで複数ターミネータがある場合はnullを返す', () => {
+    // 問232と問233の両方にターミネータがある連問
+    const text = [
+      '問232-233',
+      '以下の症例について問に答えよ。',
+      '問232（薬理）',
+      '薬物の作用機序として正しいのはどれか。１つ選べ。',
+      '問233（病態）',
+      '考えられる病態として正しいのはどれか。１つ選べ。',
+    ].join('\n')
+    const result = extractLeakedLines(text)
+    expect(result).toBeNull()
+  })
+
+  it('候補行に小問ヘッダー（問NNN（科目）パターン）があればnullを返す', () => {
+    // ターミネータは1つだが、後続に小問ヘッダーがある
+    const text = [
+      '薬物の作用機序として正しいのはどれか。１つ選べ。',
+      '問233（病態）',
+      '考えられる病態はどれか。',
+    ].join('\n')
+    const result = extractLeakedLines(text)
+    expect(result).toBeNull()
+  })
+
+  it('候補行に小問ヘッダー（問NNN スペース区切り）があればnullを返す', () => {
+    const text = [
+      '薬物の作用機序として正しいのはどれか。１つ選べ。',
+      '問234 次の薬物について答えよ。',
+    ].join('\n')
+    const result = extractLeakedLines(text)
+    expect(result).toBeNull()
+  })
 })
 
 // ============================================================
@@ -314,6 +350,67 @@ describe('tryMerge', () => {
     expect(result.confidence).toBe('AUTO_HIGH')
     expect(result.mergedChoices[0].text).toBe('アドレナリンα₁受容体遮断')
     expect(result.mergedChoices[1].text).toBe('ムスカリンM₃受容体刺激')
+  })
+
+  // ── Issue 2: 非suffix行のAUTO_HIGH昇格防止 ──
+
+  it('全角数字で始まるリーク行（表の行）→ REVIEW にダウングレード', () => {
+    const leakedLines = ['１　心拍数増加', '２　血圧低下']
+    const choices: Choice[] = [
+      { key: 1, text: 'a' },
+      { key: 2, text: 'b' },
+    ]
+    const result = tryMerge(leakedLines, choices)
+    expect(result.confidence).toBe('REVIEW')
+  })
+
+  it('全角数字２〜６で始まるリーク行も REVIEW', () => {
+    for (const num of ['２', '３', '４', '５', '６']) {
+      const leakedLines = [`${num}　テスト項目`]
+      const choices: Choice[] = [{ key: 1, text: 'X' }]
+      const result = tryMerge(leakedLines, choices)
+      expect(result.confidence).toBe('REVIEW')
+    }
+  })
+
+  it('連続スペース（表フォーマット）を含むリーク行 → REVIEW', () => {
+    const leakedLines = ['心拍数  120bpm', '血圧  80/50']
+    const choices: Choice[] = [
+      { key: 1, text: 'パラメータA' },
+      { key: 2, text: 'パラメータB' },
+    ]
+    const result = tryMerge(leakedLines, choices)
+    expect(result.confidence).toBe('REVIEW')
+  })
+
+  it('全角スペースの連続を含むリーク行 → REVIEW', () => {
+    const leakedLines = ['心拍数　　120回/分', '血圧　　80/50']
+    const choices: Choice[] = [
+      { key: 1, text: 'A' },
+      { key: 2, text: 'B' },
+    ]
+    const result = tryMerge(leakedLines, choices)
+    expect(result.confidence).toBe('REVIEW')
+  })
+
+  it('句点「。」で終わるリーク行（完全文）→ REVIEW', () => {
+    const leakedLines = ['心拍数が増加する。', '血圧が低下する。']
+    const choices: Choice[] = [
+      { key: 1, text: 'パラメータA' },
+      { key: 2, text: 'パラメータB' },
+    ]
+    const result = tryMerge(leakedLines, choices)
+    expect(result.confidence).toBe('REVIEW')
+  })
+
+  it('正常なsuffix断片（句点なし・表形式でない）はAUTO_HIGHのまま', () => {
+    const leakedLines = ['チャネル活性化', 'チャネル遮断']
+    const choices: Choice[] = [
+      { key: 1, text: 'K＋' },
+      { key: 2, text: 'Na＋' },
+    ]
+    const result = tryMerge(leakedLines, choices)
+    expect(result.confidence).toBe('AUTO_HIGH')
   })
 })
 
