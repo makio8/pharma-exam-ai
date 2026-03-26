@@ -15,11 +15,30 @@ export type Correction =
   | { type: 'set-display-mode'; value: 'text' | 'image' | 'both' }
   | { type: 'set-linked-group'; value: string }
   | { type: 'set-linked-scenario'; value: string }
+  | { type: 'multi-image-crop'; target: CropTarget; images: CropImage[] }
 
 export interface PdfCropRect {
   x: number; y: number; w: number; h: number
   viewportWidth: number; viewportHeight: number
   scale: number; rotation: 0 | 90 | 180 | 270
+}
+
+export type CropTarget = 'question' | 'scenario'
+
+export interface CropImage {
+  id: number
+  crop: PdfCropRect
+  pdfFile: string
+  pdfPage: number
+  label?: string
+}
+
+export interface PendingCropResult {
+  target: CropTarget
+  crop: PdfCropRect
+  pdfFile: string
+  pdfPage: number
+  preview: string
 }
 
 export interface ReviewState {
