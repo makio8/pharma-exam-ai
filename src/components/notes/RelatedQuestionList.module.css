@@ -1,0 +1,41 @@
+.heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 8px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--card);
+  border-radius: var(--r);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border: none;
+  background: var(--card);
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text);
+  text-align: left;
+  width: 100%;
+}
+.item:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+.item:active {
+  background: var(--accent-light);
+}
+.label {
+  font-weight: 500;
+}
+.status {
+  font-size: 13px;
+  color: var(--text-2);
+}
