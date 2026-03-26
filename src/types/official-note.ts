@@ -2,6 +2,9 @@
 
 import type { QuestionSubject } from './question'
 
+/** 公式付箋の種別 */
+export type NoteType = 'mnemonic' | 'knowledge' | 'related' | 'caution' | 'solution'
+
 /** 公式付箋（運営提供コンテンツ） */
 export interface OfficialNote {
   id: string
@@ -12,7 +15,8 @@ export interface OfficialNote {
   topicId: string              // ALL_TOPICS.id で join
   tags: string[]
   linkedQuestionIds: string[]  // この知識が必要な問題ID群
-  linkedCardIds: string[]      // 紐づく暗記カードID群
+  exemplarIds?: string[]       // AIマッチング結果（類題ID群）
+  noteType?: NoteType          // 付箋種別（デフォルト: 'knowledge'）
   importance: number           // 紐づく問題数から自動算出
   tier: 'free' | 'premium'
 }
