@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useFusenDetail } from '../hooks/useFusenDetail'
 import { FusenLibraryCore } from '../utils/fusen-library-core'
@@ -7,6 +7,7 @@ import { FusenBreadcrumb } from '../components/notes/FusenBreadcrumb'
 import { RelatedQuestionList } from '../components/notes/RelatedQuestionList'
 import { FlashCardSection } from '../components/notes/FlashCardSection'
 import { FloatingNav } from '../components/ui/FloatingNav'
+import { useLearningLinks } from '../hooks/useLearningLinks'
 import styles from './FusenDetailPage.module.css'
 
 export function FusenDetailPage() {
@@ -15,6 +16,11 @@ export function FusenDetailPage() {
   const { fusen, relatedQuestions, breadcrumb, isBookmarked, toggleBookmark } =
     useFusenDetail(fusenId ?? '')
   const [imageOpen, setImageOpen] = useState(false)
+  const linkService = useLearningLinks()
+  const relatedCards = useMemo(
+    () => fusen ? linkService.getSourceCards(fusen.id) : [],
+    [fusen, linkService],
+  )
 
   if (!fusen) {
     return (
@@ -73,7 +79,7 @@ export function FusenDetailPage() {
         <RelatedQuestionList questions={relatedQuestions} />
 
         {/* 暗記カード */}
-        <FlashCardSection />
+        <FlashCardSection cards={relatedCards} />
 
         {/* CTA */}
         {unanswered.length > 0 && (
