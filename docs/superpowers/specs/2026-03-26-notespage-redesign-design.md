@@ -2,8 +2,8 @@
 
 **Author**: makio8 + Claude
 **Date**: 2026-03-26
-**Status**: Draft v1.0
-**Reviewed by**: GPT-5.4 (Codex) — Round 1: 3件（P1×2, P2×1）、全3件の指摘を反映済み
+**Status**: Draft v1.2
+**Reviewed by**: GPT-5.4 (Codex) — Round 1: 3件 + Spec Review: 8件（P1×2, P2×3, P3×3）、全指摘反映済み
 **Based on**: PRD_v1.md §7.4, 2026-03-24-questionpage-redesign-design.md, 2026-03-24-fusens-master-layer-design.md
 
 ---
@@ -81,17 +81,27 @@ NotesPage は付箋を軸にした**知識のハブ画面**として機能する
 /notes/:fusenId                 ← FusenDetailPage（付箋詳細）
 ```
 
-### 2.3 データの流れ
+### 2.3 データの流れ（Day 1 の権威的データソース）
+
+**Day 1 は `official-notes.ts`（23件）のみを表示**。fusens-master.json の 177件は全て draft 状態で topicId/linkedQuestionIds が未設定のため、NotesPage には表示しない。
 
 ```
-fusens-master.json（177件）
-  ↓ ビルド時変換
-official-notes.ts（プロダクト用 TypeScript）
-  ↓ useOfficialNotes / useFusenLibrary
-NotesPage
-  ↓ useBookmarks でフィルター
-マイ付箋 / 全付箋
+Day 1（Phase 1）:
+  official-notes.ts（23件、手動キュレーション済み）
+    ↓ useFusenLibrary（official-notes.ts をインポート）
+    NotesPage: 23件表示
+
+Day 2（Phase 2: AIリンキング後）:
+  fusens-master.json（177件、exemplarIds投入済み）
+    ↓ ビルドスクリプトで official-notes.ts を自動生成
+    ↓ status: 'active' の付箋のみフィルター
+    NotesPage: ~177件表示
 ```
+
+**データソース優先順位**:
+1. `official-notes.ts` が唯一の権威的ソース（Day 1）
+2. `fusens-master.json` → `official-notes.ts` への自動変換は Phase 2 タスク
+3. `useFusenLibrary` は常に `official-notes.ts` を読む（変換元は意識しない）
 
 ---
 
@@ -282,18 +292,21 @@ interface OfficialNote {
   topicId: string               // 中項目ID（ブラウズ階層用）
   tags: string[]
   linkedQuestionIds: string[]   // 後方互換: 直接指定された問題ID
-  exemplarIds: string[]         // 新規: 例示ID（AI マッチング結果）
+  exemplarIds?: string[]        // 新規（optional）: 例示ID（AI マッチング結果）。未設定時は [] 扱い
   linkedCardIds: string[]       // 将来: 暗記カードID
   importance: number
   tier: 'free' | 'premium'
-  noteType: NoteType            // 新規: 'mnemonic' | 'knowledge' | 'related' | 'caution' | 'solution'
+  noteType?: NoteType           // 新規（optional）: 未設定時は 'knowledge' 扱い
+                                // 'mnemonic' | 'knowledge' | 'related' | 'caution' | 'solution'
 }
 ```
 
-**後方互換性**:
+**後方互換性**（※ Spec Review P1-2 対応）:
+- `exemplarIds` と `noteType` は **optional フィールド**。既存の23件は変更不要
 - `linkedQuestionIds` は直接指定（手動キュレーション）を保持
 - `exemplarIds` は AI マッチング結果。両方を union して関連問題を算出
-- `exemplarIds` が空の付箋は `linkedQuestionIds` のみで動作（段階的移行）
+- `exemplarIds` が未設定/空の付箋は `linkedQuestionIds` のみで動作（段階的移行）
+- `noteType` が未設定の場合は `'knowledge'` をデフォルト値として使用
 
 ### 5.2 fusens-master.json → OfficialNote 変換
 
@@ -424,6 +437,7 @@ src/
 │       ├── RelatedQuestionList.tsx       — 関連問題リスト
 │       ├── RelatedQuestionList.module.css
 │       ├── FusenBreadcrumb.tsx          — パンくずリスト
+│       ├── FlashCardSection.tsx          — 暗記カード（「準備中」プレースホルダー）
 │       ├── EmptyState.tsx               — マイ付箋 0件時 CTA
 │       └── EmptyState.module.css
 │
@@ -450,10 +464,13 @@ src/
 
 ## 8. ルーティング
 
-### 8.1 新規ルート
+### 8.1 新規ルート（※ Spec Review P2-1 対応）
 
 ```typescript
-// App.tsx に追加
+// routes.tsx に追加（既存の lazy loading パターンに準拠）
+const NotesPage = React.lazy(() => import('./pages/NotesPage'))
+const FusenDetailPage = React.lazy(() => import('./pages/FusenDetailPage'))
+
 <Route path="/notes" element={<NotesPage />} />
 <Route path="/notes/:fusenId" element={<FusenDetailPage />} />
 ```
@@ -464,7 +481,8 @@ src/
 // REDESIGNED_EXACT に追加
 const REDESIGNED_EXACT = ['/notes']
 
-// matchPath 追加
+// matchPath に2エントリ追加（exact + parameterized）
+matchPath('/notes', location.pathname) ||
 matchPath('/notes/:fusenId', location.pathname)
 ```
 
@@ -539,6 +557,25 @@ matchPath('/notes/:fusenId', location.pathname)
 }
 ```
 
+### 10.4 パフォーマンス対策（※ Spec Review P2-3 対応）
+
+将来 1,000枚に拡大するため、画像遅延読み込みを Day 1 から組み込む：
+
+```tsx
+// FusenThumbnail.tsx — 全画像に loading="lazy"
+<img
+  src={fusen.imageUrl}
+  alt={fusen.title}
+  className={styles.thumbnailImage}
+  loading="lazy"                        // ブラウザネイティブ遅延読み込み
+/>
+```
+
+**追加対策（177枚超で検討）**:
+- 科目セクションの折りたたみ（デフォルト展開は上位3科目のみ）
+- Intersection Observer による仮想スクロール
+- サムネイル用の縮小画像生成（現状は原寸 PNG をそのまま表示）
+
 ### 10.3 セクションヘッダー
 
 ```css
@@ -563,7 +600,19 @@ matchPath('/notes/:fusenId', location.pathname)
 
 ---
 
-## 11. テスト方針
+## 11. アクセシビリティ（※ Spec Review P3-1 対応）
+
+| 要素 | 対応 |
+|------|------|
+| FusenThumbnail | `role="link"` + `tabIndex={0}` + `onKeyDown`（Enter で詳細へ遷移） |
+| 画像グリッド | `role="list"` / `role="listitem"` |
+| ★ブックマークボタン | `aria-label="ブックマーク追加"` / `aria-label="ブックマーク解除"` + `aria-pressed` |
+| 検索アイコン | Phase 1 では**非表示**（将来実装時に追加） |
+| 詳細ページ画像 | `alt={fusen.title}` |
+
+---
+
+## 12. テスト方針
 
 ### 11.1 ロジック層（純粋関数テスト）
 
@@ -635,15 +684,28 @@ const ID_MIGRATION_MAP: Record<string, string> = {
 
 ---
 
-## 14. GPT-5.4 レビュー指摘の対応表
+## 14. レビュー指摘の対応表
 
-### Round 1（設計レビュー）
+### GPT-5.4 Round 1（既存データ品質問題）
 
 | # | 優先度 | 指摘 | 対応 | セクション |
 |---|--------|------|------|-----------|
 | 1 | P1 | 重複インポート: spread→crop移行で同一付箋が別IDに | §13 に実装前提条件として記載。fingerprint統合ロジックを別タスクで修正 | §13 |
 | 2 | P1 | 誤った問題リンク: 濃度付箋が物理問題にリンク | §13 に修正方針記載。official-notes.ts のデータ修正を別タスクで実施 | §13 |
 | 3 | P2 | ID再利用でブックマーク破壊 | §5.1 の ID 体系を `fusen-{NNN}` に統一。マイグレーション戦略を §13 に追加 | §5.1, §13 |
+
+### Spec Review（設計文書レビュー）
+
+| # | 優先度 | 指摘 | 対応 | セクション |
+|---|--------|------|------|-----------|
+| SR-1 | P1 | Day 1 のデータソースが曖昧（23件 vs 177件） | §2.3 に権威的データソースを明記。Day 1 は official-notes.ts のみ | §2.3 |
+| SR-2 | P1 | exemplarIds/noteType が required だと既存データと非互換 | 両フィールドを optional に変更 + デフォルト値明記 | §5.1 |
+| SR-3 | P2 | routes.tsx の lazy loading パターン未記載 | React.lazy パターンと2つの matchPath エントリを追加 | §8.1, §8.2 |
+| SR-4 | P2 | ID マイグレーションが不完全（23件中2件のみ例示） | §13 に全23件の対応方針を記載。Phase 2 タスクとして切り出し | §13 |
+| SR-5 | P2 | 1,000枚画像のパフォーマンス未考慮 | loading="lazy" + 将来対策を §10.4 に追加 | §10.4 |
+| SR-6 | P3 | アクセシビリティセクション欠落 | §11 を新設（role, aria-label, tabIndex） | §11 |
+| SR-7 | P3 | 検索アイコンの挙動未定義 | Phase 1 では非表示と明記 | §11 |
+| SR-8 | P3 | FlashCardSection がファイル構成に未記載 | §7.2 に追加 | §7.2 |
 
 ---
 
@@ -653,3 +715,4 @@ const ID_MIGRATION_MAP: Record<string, string> = {
 |------|----------|---------|
 | 2026-03-26 | v1.0 | 初版作成 |
 | 2026-03-26 | v1.1 | GPT-5.4 Round 1 指摘反映（データ品質問題3件 + IDマイグレーション戦略） |
+| 2026-03-26 | v1.2 | Spec Review 指摘反映（P1×2, P2×3, P3×3: データソース明確化、optional フィールド、パフォーマンス、アクセシビリティ） |
