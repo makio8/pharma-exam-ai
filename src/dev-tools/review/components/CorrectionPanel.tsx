@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import type { Question } from '../../../types/question'
 import type { Correction, CropTarget, CropImage, PendingCropResult } from '../types'
-import { replaceCorrections, removeCorrection, getEffectiveText } from '../utils/correction-utils'
+import { removeCorrection, getEffectiveText } from '../utils/correction-utils'
 import { insertPlaceholder, removePlaceholder, validateImagePlaceholders, nextImageId } from '../utils/placeholder-utils'
 import { TextWithImageTab } from './TextWithImageTab'
 import styles from './CorrectionPanel.module.css'
@@ -132,7 +132,7 @@ export function CorrectionPanel({
       const { text: newText } = insertPlaceholder(questionDraftText, questionCursorPos.current, newId)
       setQuestionDraftText(newText)
       if (preview) {
-        onUpdatePreviews(`question-${newId}`, preview)
+        onUpdatePreviews(`${question.id}-question-${newId}`, preview)
       }
     } else if (target === 'scenario') {
       const newId = nextImageId(scenarioDraftImages)
@@ -141,7 +141,7 @@ export function CorrectionPanel({
       const { text: newText } = insertPlaceholder(scenarioDraftText, scenarioCursorPos.current, newId)
       setScenarioDraftText(newText)
       if (preview) {
-        onUpdatePreviews(`scenario-${newId}`, preview)
+        onUpdatePreviews(`${question.id}-scenario-${newId}`, preview)
       }
     }
 
@@ -195,68 +195,43 @@ export function CorrectionPanel({
 
   // ===== Apply question text =====
   function applyQuestionText() {
-    const newCorrs: Correction[] = []
+    // Start from existing corrections, remove old question text/image entries
+    let updated = removeCorrection(corrections, 'multi-image-crop', 'question')
+    updated = updated.filter(c => !(c.type === 'text' && c.field === 'question_text'))
 
-    // Text correction (only if different from original)
+    // Add text correction if changed
     if (questionDraftText.trim() !== questionOriginal.trim()) {
-      newCorrs.push({ type: 'text', field: 'question_text', value: questionDraftText.trim() })
+      updated.push({ type: 'text', field: 'question_text', value: questionDraftText.trim() })
     }
 
-    // Image correction
+    // Add image correction if images exist
     if (questionDraftImages.length > 0) {
-      newCorrs.push({ type: 'multi-image-crop', target: 'question' as CropTarget, images: questionDraftImages })
+      updated.push({ type: 'multi-image-crop', target: 'question' as CropTarget, images: questionDraftImages })
     }
 
-    if (newCorrs.length > 0) {
-      onReplaceCorrections(newCorrs)
-    }
-
-    // If images were cleared, remove the multi-image-crop correction
-    if (questionDraftImages.length === 0) {
-      const existingImgs = getExistingImages('question')
-      if (existingImgs.length > 0) {
-        // Need to remove the existing multi-image-crop correction
-        const cleaned = removeCorrection(corrections, 'multi-image-crop', 'question')
-        // Also apply text if changed
-        if (questionDraftText.trim() !== questionOriginal.trim()) {
-          const textCorr: Correction = { type: 'text', field: 'question_text', value: questionDraftText.trim() }
-          onReplaceCorrections([...replaceCorrections(cleaned.filter(item => item.type !== 'text' || item.field !== 'question_text'), [textCorr])])
-        }
-      }
-    }
+    // Save the full corrected list
+    onReplaceCorrections(updated)
   }
 
   // ===== Apply scenario =====
   function applyScenario() {
     const newCorrs: Correction[] = []
 
-    // Text correction
+    // Text correction if changed
     if (scenarioDraftText.trim() !== scenarioOriginal.trim()) {
       newCorrs.push({ type: 'text', field: 'linked_scenario', value: scenarioDraftText.trim() })
     }
 
-    // Image correction
+    // Image correction if images exist
     if (scenarioDraftImages.length > 0) {
       newCorrs.push({ type: 'multi-image-crop', target: 'scenario' as CropTarget, images: scenarioDraftImages })
     }
 
-    if (newCorrs.length > 0) {
+    // Always propagate to handle both additions and removals
+    const hasExistingImages = getExistingImages('scenario').length > 0
+    if (newCorrs.length > 0 || hasExistingImages) {
       const count = onAddScenarioCorrection(newCorrs)
-      setFeedbackMessage(`連問グループの ${count}問に適用しました`)
-      setTimeout(() => setFeedbackMessage(null), 3000)
-    }
-
-    // If images were cleared, handle removal
-    if (scenarioDraftImages.length === 0) {
-      const existingImgs = getExistingImages('scenario')
-      if (existingImgs.length > 0) {
-        // Remove via scenario propagation
-        const cleanCorr: Correction[] = []
-        if (scenarioDraftText.trim() !== scenarioOriginal.trim()) {
-          cleanCorr.push({ type: 'text', field: 'linked_scenario', value: scenarioDraftText.trim() })
-        }
-        // Still call to propagate the removal
-        const count = onAddScenarioCorrection(cleanCorr)
+      if (count > 0) {
         setFeedbackMessage(`連問グループの ${count}問に適用しました`)
         setTimeout(() => setFeedbackMessage(null), 3000)
       }
@@ -380,7 +355,7 @@ export function CorrectionPanel({
               onApply={applyQuestionText}
               onStartCrop={() => onStartCrop('question')}
               previews={previews}
-              previewKeyPrefix="question"
+              previewKeyPrefix={`${question.id}-question`}
               hasChanges={questionHasChanges}
               warnings={questionWarnings()}
             />
@@ -501,7 +476,7 @@ export function CorrectionPanel({
                 onApply={applyScenario}
                 onStartCrop={() => onStartCrop('scenario')}
                 previews={previews}
-                previewKeyPrefix="scenario"
+                previewKeyPrefix={`${question.id}-scenario`}
                 hasChanges={scenarioHasChanges}
                 disabled={!question.linked_scenario}
                 disabledMessage={!question.linked_scenario ? 'この問題にはシナリオがありません' : undefined}

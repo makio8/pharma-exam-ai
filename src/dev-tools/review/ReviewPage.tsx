@@ -235,7 +235,7 @@ export default function ReviewPage() {
     }
 
     const file: CorrectionsFile = {
-      version: '1.1.0',
+      version: hasMultiImageCrop ? '1.1.0' : '1.0.0',
       timestamp: new Date().toISOString(),
       baseGitCommit: report.gitCommit,
       reportTimestamp: report.timestamp,

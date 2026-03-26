@@ -119,7 +119,7 @@ export function ReviewCard({
               if (block.type === 'text') {
                 return <p key={i} className={styles.scenarioText}>{block.content}</p>
               }
-              const previewUrl = previews.get(`scenario-${block.imageId}`)
+              const previewUrl = previews.get(`${question.id}-scenario-${block.imageId}`)
               if (previewUrl) {
                 return (
                   <img
