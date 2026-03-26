@@ -1,7 +1,7 @@
 // 問題演習画面 — Soft Companion リデザイン
 import { useMemo, useRef, useEffect } from 'react'
 import type { RefObject } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { ALL_QUESTIONS } from '../data/all-questions'
 import { QUESTION_TOPIC_MAP } from '../data/question-topic-map'
 import { ALL_TOPICS } from '../data/exam-blueprint'
@@ -24,6 +24,8 @@ import {
 import { FloatingNav } from '../components/ui/FloatingNav'
 import { LinkedQuestionViewer } from '../components/LinkedQuestionViewer'
 import { normalizeForDisplay, getDisplayMode } from '../utils/text-normalizer'
+import { useLearningLinks } from '../hooks/useLearningLinks'
+import type { FlashCardPracticeContext } from '../types/card-progress'
 import type { OfficialNote } from '../types/official-note'
 import type { Question } from '../types/question'
 import type { UseSwipeNavigationResult } from '../hooks/useSwipeNavigation'
@@ -161,6 +163,8 @@ function QuestionPageContent({
   resultRef,
   navigate,
 }: ContentProps) {
+  const location = useLocation()
+  const linkService = useLearningLinks()
   const answerState = useQuestionAnswerState(question)
 
   // トピック名の取得
@@ -270,7 +274,21 @@ function QuestionPageContent({
                 note={note}
                 isBookmarked={isBookmarked(note.id)}
                 onToggleBookmark={() => toggleBookmark(note.id)}
-                onFlashCard={() => navigate('/cards')}
+                onFlashCard={() => {
+                  const cards = linkService.getSourceCards(note.id)
+                  if (cards.length > 0) {
+                    const ctx: FlashCardPracticeContext = {
+                      mode: 'note',
+                      noteId: note.id,
+                      cardIds: cards.map(c => c.id),
+                      returnTo: location.pathname,
+                    }
+                    navigate('/cards/review', { state: ctx })
+                  } else {
+                    navigate('/cards')
+                  }
+                }}
+                flashCardCount={linkService.getSourceCards(note.id).length}
                 onImageTap={() => {}}
               />
             ))}

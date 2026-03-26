@@ -8,6 +8,7 @@ interface Props {
   isBookmarked: boolean
   onToggleBookmark: () => void
   onFlashCard: () => void
+  flashCardCount?: number
   onImageTap: () => void
 }
 
@@ -38,6 +39,7 @@ export function OfficialNoteCard({
   isBookmarked,
   onToggleBookmark,
   onFlashCard,
+  flashCardCount,
   onImageTap,
 }: Props) {
   const [viewerOpen, setViewerOpen] = useState(false)
@@ -94,9 +96,9 @@ export function OfficialNoteCard({
                 type="button"
                 className={`${styles.btn} ${styles.btnOutline}`}
                 onClick={onFlashCard}
+                disabled={flashCardCount === 0}
               >
-                {/* TODO: linkedCardIds によるフィルタリングは FlashCardPage リデザイン時に対応 */}
-                🃏 暗記カード
+                🃏 暗記カード{flashCardCount !== undefined && flashCardCount > 0 ? ` (${flashCardCount}枚)` : ''}
               </button>
             </div>
           )}

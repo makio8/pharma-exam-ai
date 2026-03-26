@@ -146,6 +146,7 @@ export function LinkedQuestionItem({
                 isBookmarked={isBookmarked(note.id)}
                 onToggleBookmark={() => toggleBookmark(note.id)}
                 onFlashCard={() => navigate('/cards')}
+                flashCardCount={0}
                 onImageTap={() => {}}
               />
             ))}
