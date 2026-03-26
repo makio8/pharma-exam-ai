@@ -24,6 +24,10 @@ const FusenAnnotate = import.meta.env.DEV
   ? React.lazy(() => import('./dev-tools/fusen-annotate/FusenAnnotatePage'))
   : null
 
+const ExemplarMapping = import.meta.env.DEV
+  ? React.lazy(() => import('./dev-tools/exemplar-mapping/ExemplarMappingPage'))
+  : null
+
 const Loading = () => <div style={{ padding: '2rem', textAlign: 'center' }}>読み込み中...</div>
 
 export const router = createBrowserRouter([
@@ -74,5 +78,9 @@ export const router = createBrowserRouter([
   ...(import.meta.env.DEV && FusenAnnotate ? [{
     path: '/dev-tools/fusen-annotate',
     element: <Suspense fallback={<Loading />}><FusenAnnotate /></Suspense>,
+  }] : []),
+  ...(import.meta.env.DEV && ExemplarMapping ? [{
+    path: '/dev-tools/exemplar-mapping',
+    element: <Suspense fallback={<Loading />}><ExemplarMapping /></Suspense>,
   }] : []),
 ])
