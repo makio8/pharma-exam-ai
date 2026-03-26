@@ -1,0 +1,43 @@
+.thumbnail {
+  background: var(--card);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.thumbnail:active {
+  transform: scale(0.97);
+}
+.image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--bg);
+  display: block;
+}
+.info {
+  padding: 8px 10px;
+}
+.title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.bookmarked {
+  color: var(--accent);
+}
+.badge {
+  color: var(--text-2);
+}

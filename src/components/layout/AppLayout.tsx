@@ -25,7 +25,7 @@ interface AppLayoutProps {
 }
 
 /** リデザイン済みページ（Soft Companion）はAnt Designのヘッダー/フッターを非表示 */
-const REDESIGNED_EXACT = ['/', '/practice', '/analysis']
+const REDESIGNED_EXACT = ['/', '/practice', '/analysis', '/notes']
 
 export function AppLayout({ children }: AppLayoutProps) {
   const location = useLocation()
@@ -35,7 +35,8 @@ export function AppLayout({ children }: AppLayoutProps) {
   // リデザイン済みページ判定: 完全一致 + QuestionPage（matchPathでパラメータ対応）
   const isRedesigned =
     REDESIGNED_EXACT.includes(location.pathname) ||
-    matchPath('/practice/:questionId', location.pathname) !== null
+    matchPath('/practice/:questionId', location.pathname) !== null ||
+    matchPath('/notes/:fusenId', location.pathname) !== null
 
   const handleSignOut = async () => {
     await signOut()

@@ -1,0 +1,15 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.pageTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+.tabs {
+  display: flex;
+  gap: 8px;
+}
