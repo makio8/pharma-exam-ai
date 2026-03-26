@@ -33,27 +33,41 @@ function persist(state: MappingReviewState): void {
 export function useMappingReviewState() {
   const [state, setState] = useState<MappingReviewState>(loadState)
 
+  /** 候補個別レビュー時に entryStatuses も 'modified' に自動更新 */
   const setMatchStatus = useCallback((noteId: string, exemplarId: string, status: MatchStatus) => {
     setState(prev => {
       const key = `${noteId}:${exemplarId}`
       const next = {
         ...prev,
         matchStatuses: { ...prev.matchStatuses, [key]: status },
+        entryStatuses: { ...prev.entryStatuses, [noteId]: 'modified' as EntryReviewStatus },
       }
       persist(next)
       return next
     })
   }, [])
 
-  const togglePrimary = useCallback((noteId: string, exemplarId: string, currentIsPrimary: boolean) => {
+  /** primary⇔secondary 切替。Primaryに昇格する場合、同じnote内の他候補をSecondaryに降格 */
+  const togglePrimary = useCallback((noteId: string, exemplarId: string, currentIsPrimary: boolean, allExemplarIds: string[]) => {
     setState(prev => {
+      const newOverrides = { ...prev.primaryOverrides }
       const key = `${noteId}:${exemplarId}`
+      const newValue = !currentIsPrimary
+
+      if (newValue) {
+        // Primaryに昇格 → 他の候補をSecondaryに降格
+        for (const eid of allExemplarIds) {
+          if (eid !== exemplarId) {
+            newOverrides[`${noteId}:${eid}`] = false
+          }
+        }
+      }
+      newOverrides[key] = newValue
+
       const next = {
         ...prev,
-        primaryOverrides: {
-          ...prev.primaryOverrides,
-          [key]: !currentIsPrimary,
-        },
+        primaryOverrides: newOverrides,
+        entryStatuses: { ...prev.entryStatuses, [noteId]: 'modified' as EntryReviewStatus },
       }
       persist(next)
       return next

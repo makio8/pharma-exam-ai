@@ -11,7 +11,7 @@ interface Props {
   currentIndex: number
   totalCount: number
   onSetMatchStatus: (noteId: string, exemplarId: string, status: 'approved' | 'rejected') => void
-  onTogglePrimary: (noteId: string, exemplarId: string, currentIsPrimary: boolean) => void
+  onTogglePrimary: (noteId: string, exemplarId: string, currentIsPrimary: boolean, allExemplarIds: string[]) => void
   onApproveAll: () => void
   onModified: () => void
   onRejectAll: () => void
@@ -81,7 +81,7 @@ export function MappingCard({
                 primaryOverride={reviewState.primaryOverrides[key]}
                 onApprove={() => onSetMatchStatus(entry.noteId, match.exemplarId, 'approved')}
                 onReject={() => onSetMatchStatus(entry.noteId, match.exemplarId, 'rejected')}
-                onTogglePrimary={(currentIsPrimary) => onTogglePrimary(entry.noteId, match.exemplarId, currentIsPrimary)}
+                onTogglePrimary={(currentIsPrimary) => onTogglePrimary(entry.noteId, match.exemplarId, currentIsPrimary, entry.matches.map(m => m.exemplarId))}
               />
             )
           })}
