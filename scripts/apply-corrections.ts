@@ -36,6 +36,7 @@ type CorrectionType =
   | 'answer'
   | 'image-remove'
   | 'image-crop'
+  | 'multi-image-crop'
   | 'set-section'
   | 'set-subject'
   | 'set-category'
@@ -55,6 +56,7 @@ interface Correction {
 }
 
 interface CorrectionsFile {
+  version?: string
   reportTimestamp: string
   baseGitCommit: string
   corrections: Correction[]
@@ -135,6 +137,11 @@ function applyCorrection(question: Question, correction: Correction): Question {
       // この分岐には到達しない（事前チェックでスキップ）
       break
 
+    case 'multi-image-crop':
+      // 未実装（レビューUIで記録するが適用は将来対応）
+      warn(`  multi-image-crop はまだ適用未対応です（スキップ）`)
+      break
+
     case 'set-section':
       q.section = correction.value as Question['section']
       break
@@ -197,6 +204,14 @@ async function main() {
   }
 
   const { reportTimestamp, baseGitCommit, corrections } = correctionsFile
+
+  // バージョンチェック（v1.1.0以降は未対応）
+  if (correctionsFile.version && correctionsFile.version !== '1.0.0') {
+    err(`未対応の corrections バージョン: ${correctionsFile.version}`)
+    err('このスクリプトは v1.0.0 のみ対応しています。')
+    process.exit(1)
+  }
+
   ok(`corrections.json 読み込み: ${corrections.length}件`)
   gray(`  reportTimestamp: ${reportTimestamp}`)
   gray(`  baseGitCommit: ${baseGitCommit}`)
