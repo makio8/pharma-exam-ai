@@ -11,8 +11,9 @@ import { CorrectionPanel } from './components/CorrectionPanel'
 import { PdfCropper } from './components/PdfCropper'
 import { KeyboardHelp } from './components/KeyboardHelp'
 import { ALL_QUESTIONS } from '../../data/all-questions'
+import { replaceCorrections } from './utils/correction-utils'
 import type { ValidationIssue } from '../../utils/data-validator/types'
-import type { FilterConfig, Correction, CorrectionsFile, PdfCropRect } from './types'
+import type { FilterConfig, Correction, CorrectionsFile, CropTarget, PendingCropResult, PdfCropRect } from './types'
 import type { Question } from '../../types/question'
 import type { QuestionSection } from '../../types/question'
 import styles from './ReviewPage.module.css'
@@ -52,6 +53,11 @@ export default function ReviewPage() {
   const [currentPdfFile, setCurrentPdfFile] = useState<string | null>(null)
   const [viewportSize, setViewportSize] = useState({ width: 800, height: 1130 })
   const [showHelp, setShowHelp] = useState(false)
+
+  // Multi-image crop state
+  const [cropTarget, setCropTarget] = useState<CropTarget | null>(null)
+  const [pendingCropResult, setPendingCropResult] = useState<PendingCropResult | null>(null)
+  const [previews, setPreviews] = useState<Map<string, string>>(() => new Map())
 
   // PdfViewer の Canvas 参照（PdfCropper に渡す）
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -118,6 +124,8 @@ export default function ReviewPage() {
     setManualPage(null)
     setCurrentPdfFile(null)
     setCropMode(false)
+    setCropTarget(null)
+    setPendingCropResult(null)
   }
 
   function handleFiltersChange(next: FilterConfig) {
@@ -127,9 +135,17 @@ export default function ReviewPage() {
     setCurrentPdfFile(null)
   }
 
-  const handleAddCorrection = useCallback((correction: Correction) => {
+  const handleReplaceCorrections = useCallback((newCorrections: Correction[]) => {
     if (!currentQuestion) return
-    reviewState.addCorrection(currentQuestion.id, correction)
+    const existing = reviewState.state.corrections[currentQuestion.id] ?? []
+    const merged = replaceCorrections(existing, newCorrections)
+    reviewState.save({
+      ...reviewState.state,
+      corrections: {
+        ...reviewState.state.corrections,
+        [currentQuestion.id]: merged,
+      },
+    })
   }, [currentQuestion, reviewState])
 
   const handleRemoveCorrection = useCallback((index: number) => {
@@ -145,21 +161,81 @@ export default function ReviewPage() {
     })
   }, [currentQuestion, reviewState])
 
-  const handleCropSave = useCallback((crop: PdfCropRect) => {
+  const handleAddScenarioCorrection = useCallback((newCorrections: Correction[]): number => {
+    if (!currentQuestion) return 0
+    const linkedGroup = currentQuestion.linked_group
+    if (!linkedGroup) {
+      // No linked group — apply to current question only
+      handleReplaceCorrections(newCorrections)
+      return 1
+    }
+
+    // Find all questions in the same linked_group
+    const groupQuestions = ALL_QUESTIONS.filter(q => q.linked_group === linkedGroup)
+    let count = 0
+
+    const nextCorrections = { ...reviewState.state.corrections }
+    for (const q of groupQuestions) {
+      const existing = nextCorrections[q.id] ?? []
+      nextCorrections[q.id] = replaceCorrections(existing, newCorrections)
+      count++
+    }
+
+    reviewState.save({
+      ...reviewState.state,
+      corrections: nextCorrections,
+    })
+
+    return count
+  }, [currentQuestion, reviewState, handleReplaceCorrections])
+
+  const handleStartCrop = useCallback((target: CropTarget) => {
+    setCropTarget(target)
+    setCropMode(true)
+    syncViewportSize()
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const handleCropSave = useCallback((crop: PdfCropRect, previewDataUrl: string) => {
     if (!currentQuestion) return
-    reviewState.addCorrection(currentQuestion.id, {
-      type: 'image-crop',
+    setPendingCropResult({
+      target: cropTarget ?? 'question',
       crop,
       pdfFile: activePdfFile,
       pdfPage: activePage,
+      preview: previewDataUrl,
     })
     setCropMode(false)
-  }, [currentQuestion, reviewState, activePdfFile, activePage])
+  }, [currentQuestion, cropTarget, activePdfFile, activePage])
+
+  const handleConsumeCropResult = useCallback(() => {
+    setPendingCropResult(null)
+  }, [])
+
+  const handleUpdatePreviews = useCallback((key: string, dataUrl: string) => {
+    setPreviews(prev => {
+      const next = new Map(prev)
+      next.set(key, dataUrl)
+      return next
+    })
+  }, [])
 
   const handleExport = useCallback(() => {
     if (!report) return
+
+    // Multi-image-crop warning
+    const hasMultiImageCrop = Object.values(reviewState.state.corrections).some(
+      corrs => corrs.some(c => c.type === 'multi-image-crop')
+    )
+    if (hasMultiImageCrop) {
+      const proceed = window.confirm(
+        'multi-image-crop 修正が含まれています。エクスポートに含めますか？\n' +
+        '（apply-corrections.ts はまだ multi-image-crop 未対応のため、手動処理が必要です）'
+      )
+      if (!proceed) return
+    }
+
     const file: CorrectionsFile = {
-      version: '1.0.0',
+      version: '1.1.0',
       timestamp: new Date().toISOString(),
       baseGitCommit: report.gitCommit,
       reportTimestamp: report.timestamp,
@@ -212,9 +288,8 @@ export default function ReviewPage() {
     }
   }, [safeIndex, filteredQuestions, reviewState.state.judgments, report]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  // ===== 検索（/ キー） — 将来の実装用 =====
+  // ===== 検索（/ キー） =====
   const handleSearch = useCallback(() => {
-    // TODO: 問題ID検索ダイアログを実装予定
     const id = window.prompt('問題IDを入力してください (例: r110-1-1)')
     if (!id) return
     const idx = filteredQuestions.findIndex(q => q.id === id)
@@ -366,12 +441,14 @@ export default function ReviewPage() {
             <CorrectionPanel
               question={currentQuestion}
               corrections={currentCorrections}
-              onAddCorrection={handleAddCorrection}
+              onReplaceCorrections={handleReplaceCorrections}
               onRemoveCorrection={handleRemoveCorrection}
-              onStartCrop={() => {
-                setCropMode(true)
-                syncViewportSize()
-              }}
+              onAddScenarioCorrection={handleAddScenarioCorrection}
+              onStartCrop={handleStartCrop}
+              pendingCropResult={pendingCropResult}
+              onConsumeCropResult={handleConsumeCropResult}
+              previews={previews}
+              onUpdatePreviews={handleUpdatePreviews}
             />
           </div>
         )}
