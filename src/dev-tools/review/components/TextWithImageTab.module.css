@@ -1,0 +1,170 @@
+/* TextWithImageTab — テキスト+画像編集タブ（開発専用） */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* ========== テキストエリア ========== */
+.textarea {
+  padding: 0.5rem 0.625rem;
+  border: 1px solid var(--border, #e8e0d4);
+  border-radius: 0.375rem;
+  background: var(--bg, #faf8f5);
+  color: var(--text-primary, #2d2a27);
+  font-size: 0.8125rem;
+  font-family: inherit;
+  width: 100%;
+  resize: vertical;
+  min-height: 5rem;
+  line-height: 1.55;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--accent, #b8860b);
+}
+
+.textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========== クロップボタン ========== */
+.cropBtn {
+  padding: 0.4rem 1rem;
+  border: 1.5px solid #1565c0;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: #1565c0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.13s;
+  align-self: flex-start;
+}
+
+.cropBtn:hover:not(:disabled) {
+  background: #1565c0;
+  color: #ffffff;
+}
+
+.cropBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ========== 画像サムネイルグリッド ========== */
+.imageGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.imageItem {
+  position: relative;
+  border: 1px solid var(--border, #e8e0d4);
+  border-radius: 0.375rem;
+  overflow: hidden;
+  background: var(--bg, #faf8f5);
+}
+
+.imageThumb {
+  display: block;
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.imageLabel {
+  display: block;
+  text-align: center;
+  font-size: 0.625rem;
+  color: var(--text-secondary, #8c7e6e);
+  padding: 0.125rem 0.25rem;
+  background: var(--bg, #faf8f5);
+}
+
+.imageRemoveBtn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 1.125rem;
+  height: 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 0.625rem;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.13s;
+}
+
+.imageRemoveBtn:hover {
+  background: var(--error, #d32f2f);
+}
+
+.imagePlaceholder {
+  width: 80px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary, #8c7e6e);
+  font-size: 0.6875rem;
+}
+
+/* ========== 警告 ========== */
+.warningList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.warningItem {
+  padding: 0.25rem 0.5rem;
+  background: #fffbeb;
+  border-left: 3px solid #f59e0b;
+  border-radius: 0 0.25rem 0.25rem 0;
+  font-size: 0.75rem;
+  color: #92400e;
+}
+
+/* ========== 適用ボタン ========== */
+.applyBtn {
+  padding: 0.4rem 1.25rem;
+  border: 1.5px solid var(--accent, #b8860b);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--accent, #b8860b);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.13s;
+  align-self: flex-start;
+}
+
+.applyBtn:hover:not(:disabled) {
+  background: var(--accent, #b8860b);
+  color: #ffffff;
+}
+
+.applyBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ========== 無効メッセージ ========== */
+.disabledMessage {
+  font-size: 0.75rem;
+  color: var(--text-secondary, #8c7e6e);
+  font-style: italic;
+  margin: 0;
+}
