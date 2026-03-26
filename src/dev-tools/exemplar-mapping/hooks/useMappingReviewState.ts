@@ -172,6 +172,8 @@ export function useMappingReviewState() {
   const addMatch = useCallback((noteId: string, exemplarId: string, isPrimary: boolean, allExemplarIds: string[]) => {
     setState(prev => {
       const key = `${noteId}:${exemplarId}`
+      // 重複防止: 既に addedMatches または matchStatuses に存在すればスキップ
+      if (prev.addedMatches[key] || prev.matchStatuses[key]) return prev
       const newAddedMatches = {
         ...prev.addedMatches,
         [key]: { isPrimary, source: 'manual' as const, reasoning: '手動追加' as const },

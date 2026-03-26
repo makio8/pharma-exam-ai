@@ -66,24 +66,24 @@ export default function ExemplarMappingPage() {
     })
   }, [entries, initializedIndex, setLastPosition])
 
-  // effective list 基準の一括操作
+  // effective list 基準の一括操作（候補0件なら no-op — needs-manual 誤完了防止）
   const handleApproveAll = useCallback(() => {
-    if (!currentEntry) return
+    if (!currentEntry || allExemplarIds.length === 0) return
     approveAll(currentEntry.noteId, allExemplarIds)
   }, [currentEntry, allExemplarIds, approveAll])
 
   const handleModified = useCallback(() => {
-    if (!currentEntry) return
+    if (!currentEntry || allExemplarIds.length === 0) return
     setEntryStatus(currentEntry.noteId, 'modified')
-  }, [currentEntry, setEntryStatus])
+  }, [currentEntry, allExemplarIds, setEntryStatus])
 
   const handleRejectAll = useCallback(() => {
-    if (!currentEntry) return
+    if (!currentEntry || allExemplarIds.length === 0) return
     rejectAll(currentEntry.noteId, allExemplarIds)
   }, [currentEntry, allExemplarIds, rejectAll])
 
   const handleReset = useCallback(() => {
-    if (!currentEntry) return
+    if (!currentEntry || allExemplarIds.length === 0) return
     resetEntry(currentEntry.noteId, allExemplarIds)
   }, [currentEntry, allExemplarIds, resetEntry])
 

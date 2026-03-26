@@ -21,9 +21,14 @@ export function getEffectiveMatches(
   noteId: string,
   validExemplarIds: Set<string>,
 ): NoteExemplarMatch[] {
-  // Step 1: copy originals
-  const merged: NoteExemplarMatch[] = originalMatches.map(m => ({ ...m }))
-  const seenIds = new Set(merged.map(m => m.exemplarId))
+  // Step 1: copy originals (dedupe within original — first wins)
+  const merged: NoteExemplarMatch[] = []
+  const seenIds = new Set<string>()
+  for (const m of originalMatches) {
+    if (seenIds.has(m.exemplarId)) continue
+    seenIds.add(m.exemplarId)
+    merged.push({ ...m })
+  }
 
   // Step 2: convert addedMatches with noteId: prefix
   const prefix = `${noteId}:`
