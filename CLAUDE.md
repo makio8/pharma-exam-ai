@@ -104,6 +104,17 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - GPT-5.4レビュー: AnalysisPage本体は指摘ゼロ
   - テスト: 15ファイル278件全パス
   - **次: スマホ実機テスト（SWキャッシュ問題解決要）→ NotesPage or FlashCardPage リデザイン or オンボーディング**
+- **学習サイクル循環設計（2026-03-26）**
+  - 3機能（演習・付箋・暗記カード）をExemplar（986件）ハブで紐付ける全体設計
+  - データモデル: OfficialNoteにexemplarIds追加、FlashCard→FlashCardTemplate+CardProgress分離、linkedCardIds廃止予定
+  - 循環ナビ: LearningLinkService（6種Map）、FlashCardPracticeContext、付箋>カード優先ルール
+  - カード生成: 付箋ベース+問題解説ベースの2系統バッチ生成、テンプレート公式/進捗ユーザーの分離
+  - データ蓄積: user_profiles/purchases/device_tokens/card_review_history/notification_preferences追加
+  - プラットフォーム: PWA継続+データ層先取り、行動ログはMixpanel外出し
+  - GPT-5.4レビュー3回（セクション1-2-4）+ 5人チームレビュー（PdM/グロース/アナリティクス/アーキテクト/モバイル）
+  - 設計: `docs/superpowers/specs/2026-03-26-learning-cycle-architecture-design.md`（v1.2）
+  - NotesPage spec v1.3と整合確認済み
+  - **次: DB設計spec策定 → 実装計画策定 → FlashCardPage UIリデザイン**
 - **データ品質レビューUI改善（2026-03-25）**
   - PdfViewer PDF描画修正（Safari ポリフィル + CMap + StrictMode対策）
   - 3カラムレイアウト（PDF / カード+メモ / 修正パネル常時表示）
@@ -262,6 +273,8 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `docs/superpowers/plans/2026-03-25-fusen-annotate-ui.md` — アノテーションUI実装計画（12タスク完了）
 - `docs/superpowers/specs/2026-03-24-fusens-master-layer-design.md` — 付箋マスター層設計
 - `docs/superpowers/plans/2026-03-25-fix-choice-suffix-leak.md` — 選択肢サフィックス漏れ修正計画（全5タスク完了）
+- `docs/superpowers/specs/2026-03-26-learning-cycle-architecture-design.md` — **学習サイクル循環設計 v1.2**（3機能紐付け+ナビ+カード生成+DB蓄積、GPT-5.4×3回+5人チームレビュー済み）
+- `docs/superpowers/specs/2026-03-26-notespage-redesign-design.md` — NotesPage リデザイン v1.3（循環設計と整合済み）
 
 ## データ構造メモ
 - `QUESTION_TOPIC_MAP`: Record<questionId, topicId> — 問題→中項目マッピング
