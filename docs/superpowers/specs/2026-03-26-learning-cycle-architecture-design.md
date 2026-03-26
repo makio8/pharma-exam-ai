@@ -2,8 +2,8 @@
 
 **Author**: makio8 + Claude
 **Date**: 2026-03-26
-**Status**: Draft v1.1
-**Reviewed by**: GPT-5.4 (Codex) — セクション1: P1×3, P2×5, P3×1 全反映済み / セクション2: P1×3, P2×5, P3×3 全反映済み
+**Status**: Draft v1.2
+**Reviewed by**: GPT-5.4 (Codex) — セクション1-4全レビュー済み / 5人チーム（PdM/グロース/アナリティクス/アーキテクト/モバイル）レビュー済み
 **Based on**: PRD_v1.md, 2026-03-26-notespage-redesign-design.md, 2026-03-22-session-handoff-exemplar-mapping.md
 
 ---
@@ -375,7 +375,11 @@ navigate('/cards/review', { state: context })
 
 ## 6. データ蓄積スキーマ
 
+**注意**: 本セクションは概要設計。詳細なDDL・RLS・インデックス・移行スクリプトは **別spec（DB設計spec）** で策定する。
+
 ### 6.1 テーブル一覧
+
+GPT-5.4 + 5人チーム（PdM/グロースハッカー/データアナリティクス/データアーキテクト/モバイルエンジニア）のレビューを経て確定。
 
 ```
 ── 公式コンテンツ（全ユーザー共通、読み取り専用）──
@@ -387,29 +391,40 @@ navigate('/cards/review', { state: context })
   question_exemplars     問題↔例示の中間テーブル
 
 ── ユーザーデータ（個人、読み書き）──
-  users                  ユーザー
-  answer_history         回答履歴
-  card_progress          カード復習進捗
+  users                  ユーザー（auth.usersと分離、PII最小化）
+  user_profiles          受験年度・目標・学習フェーズ（レコメンド基盤）★新規
+  answer_history         回答履歴（メインの資産）
+  card_progress          カード復習進捗（状態テーブル）
+  card_review_history    カード復習イベント履歴（SM-2再計算用）★新規
   bookmarks              付箋ブックマーク
   study_sessions         学習セッション
+  purchases              課金管理 ★新規
+  device_tokens          プッシュ通知トークン ★新規
+  notification_preferences 通知設定 ★新規
 ```
 
 ### 6.2 answer_history（メインの資産）
 
 ```sql
 CREATE TABLE answer_history (
-  id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id       uuid REFERENCES users(id) NOT NULL,
-  question_id   text NOT NULL,
+  id              uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id         uuid REFERENCES users(id) NOT NULL,
+  question_id     text NOT NULL,
+  session_id      uuid REFERENCES study_sessions(id),  -- ★ どのセッションで解いたか
   selected_answer int[],           -- NULL: スキップ時。単一回答は [N] で格納
-  is_correct    boolean NOT NULL,
-  time_spent_ms integer,           -- ミリ秒（既存TSはseconds、移行時に×1000変換）
-  skipped       boolean DEFAULT false,
-  answered_at   timestamptz DEFAULT now()
+  is_correct      boolean NOT NULL,
+  time_spent_ms   integer,         -- ミリ秒（既存TSはseconds、移行時に×1000変換）
+  skipped         boolean DEFAULT false,
+  answered_at     timestamptz DEFAULT now(),
+  created_at      timestamptz DEFAULT now(),
+  -- 整合性制約
+  CHECK (skipped = false OR selected_answer IS NULL)
 );
 
-CREATE INDEX idx_ah_user ON answer_history(user_id);
-CREATE INDEX idx_ah_question ON answer_history(question_id);
+-- 必須インデックス（GPT-5.4 P1 + アナリティクスエンジニア推奨）
+CREATE INDEX idx_ah_user_answered ON answer_history(user_id, answered_at DESC);
+CREATE INDEX idx_ah_user_question ON answer_history(user_id, question_id, answered_at DESC);
+CREATE INDEX idx_ah_question_correct ON answer_history(question_id, is_correct);
 CREATE INDEX idx_ah_answered_at ON answer_history(answered_at);
 ```
 
@@ -421,34 +436,95 @@ CREATE INDEX idx_ah_answered_at ON answer_history(answered_at);
 | `selected_answer: null` | `NULL` | `skipped=true` と併用 |
 | `time_spent_seconds?: number` | `time_spent_ms` | `× 1000` 変換 |
 
-**導出できる集計**:
-
-| 集計 | SQLイメージ | 用途 |
-|------|-----------|------|
-| 問題別の平均正答率 | `AVG(is_correct::int) GROUP BY question_id` | 難易度ランキング |
-| 問題別の平均回答時間 | `AVG(time_spent_ms) GROUP BY question_id` | 時間のかかる問題 |
-| ユーザー別の正答率推移 | `AVG(is_correct::int) GROUP BY user_id, date_trunc('week', answered_at)` | 成長曲線 |
-| Exemplar別の定着度 | `JOIN question_exemplars` | 知識分野の弱点 |
-| 相対評価 | `RANK() OVER(ORDER BY accuracy)` | 「あなたは上位30%」 |
-
-### 6.3 card_progress
+### 6.3 user_profiles（レコメンド基盤）★新規
 
 ```sql
+CREATE TABLE user_profiles (
+  user_id              uuid PRIMARY KEY REFERENCES users(id),
+  exam_year            integer,          -- 受験年度（例: 2027）
+  study_start_date     date,
+  target_score         integer,          -- 目標点
+  onboarding_completed_at timestamptz,
+  last_active_at       timestamptz,
+  created_at           timestamptz DEFAULT now(),
+  updated_at           timestamptz DEFAULT now()
+);
+```
+
+PdM指摘: これなしに「次に何を勉強すべきか」は実現不可。Phase 1からlocalStorageに構造を持たせる。
+
+### 6.4 card_progress + card_review_history
+
+```sql
+-- 状態テーブル（現在のSM-2状態）
 CREATE TABLE card_progress (
   id              uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id         uuid REFERENCES users(id) NOT NULL,
   template_id     text NOT NULL,
-  ease_factor     real DEFAULT 2.5,
+  ease_factor     double precision DEFAULT 2.5,  -- realではなくdouble precision（GPT-5.4 P3）
   interval_days   integer DEFAULT 0,
   next_review_at  date DEFAULT CURRENT_DATE,
   review_count    integer DEFAULT 0,
   correct_streak  integer DEFAULT 0,
   last_reviewed_at timestamptz,
+  created_at      timestamptz DEFAULT now(),
+  updated_at      timestamptz DEFAULT now(),
   UNIQUE(user_id, template_id)
+);
+
+CREATE INDEX idx_cp_user_next ON card_progress(user_id, next_review_at);
+
+-- イベント履歴（SM-2再計算・アルゴリズム変更対応）★新規
+CREATE TABLE card_review_history (
+  id              uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id         uuid REFERENCES users(id) NOT NULL,
+  template_id     text NOT NULL,
+  result          text NOT NULL,  -- 'again' | 'hard' | 'good' | 'easy'
+  ease_factor_before double precision,
+  ease_factor_after  double precision,
+  reviewed_at     timestamptz DEFAULT now()
 );
 ```
 
-### 6.4 bookmarks
+### 6.5 purchases（課金管理）★新規
+
+```sql
+CREATE TABLE purchases (
+  id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id       uuid REFERENCES users(id) NOT NULL,
+  product_id    text NOT NULL,     -- 'fusen_pack' | 'ai_monthly'
+  platform      text NOT NULL,     -- 'web' | 'ios' | 'android'
+  price_jpy     integer NOT NULL,
+  purchased_at  timestamptz DEFAULT now(),
+  expires_at    timestamptz,       -- 月額のみ
+  status        text DEFAULT 'active'  -- 'active' | 'cancelled' | 'refunded'
+);
+```
+
+### 6.6 device_tokens + notification_preferences ★新規
+
+```sql
+CREATE TABLE device_tokens (
+  id          uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id     uuid REFERENCES users(id) NOT NULL,
+  platform    text NOT NULL,       -- 'ios' | 'android' | 'web'
+  token       varchar(512) NOT NULL,
+  is_active   boolean DEFAULT true,
+  created_at  timestamptz DEFAULT now(),
+  updated_at  timestamptz DEFAULT now()
+);
+
+CREATE TABLE notification_preferences (
+  user_id           uuid PRIMARY KEY REFERENCES users(id),
+  daily_reminder    boolean DEFAULT true,
+  reminder_time     time DEFAULT '20:00',
+  review_due_alert  boolean DEFAULT true,
+  streak_alert      boolean DEFAULT true,
+  marketing         boolean DEFAULT false
+);
+```
+
+### 6.7 bookmarks / study_sessions（改訂）
 
 ```sql
 CREATE TABLE bookmarks (
@@ -458,24 +534,34 @@ CREATE TABLE bookmarks (
   created_at  timestamptz DEFAULT now(),
   UNIQUE(user_id, note_id)
 );
-```
 
-### 6.5 study_sessions（将来の振り返り機能用）
+CREATE INDEX idx_bm_user ON bookmarks(user_id, created_at DESC);
 
-```sql
 CREATE TABLE study_sessions (
   id              uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id         uuid REFERENCES users(id) NOT NULL,
-  session_type    text NOT NULL,  -- 'practice' | 'flashcard' | 'external'
+  session_type    text NOT NULL CHECK (session_type IN ('practice', 'flashcard', 'external')),
+  platform        text,            -- 'web' | 'ios' | 'android' ★追加
   started_at      timestamptz NOT NULL,
-  ended_at        timestamptz,
-  questions_count integer DEFAULT 0,
-  cards_count     integer DEFAULT 0,
-  notes           text  -- 自由記述（紙の勉強メモ等）
+  ended_at        timestamptz CHECK (ended_at IS NULL OR ended_at >= started_at),
+  questions_count integer DEFAULT 0 CHECK (questions_count >= 0),
+  cards_count     integer DEFAULT 0 CHECK (cards_count >= 0),
+  notes           text
 );
 ```
 
-### 6.6 コンテンツ改善への活用
+### 6.8 RLSポリシー方針
+
+```
+原則: auth.uid() = user_id（自分のデータのみ参照可能）
+公式コンテンツ: 全員 SELECT 可、更新は admin ロールのみ
+運営分析: 生テーブル直参照禁止。匿名化ビュー/集計テーブル経由
+サービスロール: 集計バッチ、通知キュー投入、データ移行用
+```
+
+詳細なRLSポリシーDDLはDB設計specで策定。
+
+### 6.9 コンテンツ改善への活用
 
 ユーザーデータからコンテンツ拡充の優先度を自動判定:
 
@@ -493,14 +579,51 @@ CREATE TABLE study_sessions (
   = 「練習したいのに問題が足りない」→ AI類題生成の優先度UP
 ```
 
-### 6.7 移行戦略
+### 6.10 行動イベントログ
+
+行動イベント（画面遷移、タップ、課金ファネル等）は **Supabaseに入れず SaaS に外出し**（グロースハッカー + アナリティクスエンジニア合意）。
+
+推奨: Mixpanel無料枠（月1,000 MTU）or PostHog OSS
+理由: 500ユーザー×50イベント/日×365日 = 900万行/年。Supabase無料枠（500MB）を圧迫する。
+
+Supabaseは「結果データ」（answer_history, card_progress）に集中させる。
+
+### 6.11 移行戦略
 
 ```
-Phase 1（現在）: localStorage のまま。データ構造だけ新設計に揃える
-Phase 2: Supabase テーブル作成 + ユーザー認証追加
-Phase 3: localStorage → Supabase へのデータ移行
-         初回ログイン時にlocalStorageの履歴をアップロード
+Phase 1（現在）:
+  localStorage のまま。データ構造だけ新設計に揃える。
+  user_profiles はlocalStorageにJSON保存（Phase 2で移行）。
+
+Phase 2（Supabase + 認証）:
+  テーブル作成、RLS設定、インデックス作成。
+  user_profiles, purchases, device_tokens, notification_preferences 追加。
+  card_review_history 追加。
+  プライバシーポリシー作成（App Store審査前提）。
+
+Phase 3（データ移行 + Capacitor）:
+  localStorage → Supabase 移行（初回ログイン時アップロード、べき等設計）。
+  オフライン同期: sync_queue（ローカルのみ）+ Last Write Wins。
+  answer_historyは追記のみで競合リスク低。
+  card_progressは last_reviewed_at が新しい方を採用。
 ```
+
+### 6.12 プラットフォーム戦略（全チーム合意）
+
+> **PWAのまま Phase 1 を進め、データ層だけ先取り設計する。**
+
+- Capacitor化はUXが固まってから（Phase 2以降）
+- Repository パターンは既に実装済み（`src/repositories/`）→ このまま活用
+- device_tokens スキーマだけ先に用意（PWA Web Push → Capacitor APNs/FCM 統一管理）
+- 行動ログはSaaS外出し → Supabaseストレージ温存
+
+### 6.13 スケーリング見通し
+
+| 規模 | 対策 |
+|------|------|
+| ~500人 | 単一テーブルで十分。マテビュー不要 |
+| ~1,000人 | マテリアライズドビュー（user_daily_summary等）検討 |
+| ~1万人 | answer_history年度別パーティション、集計テーブル自動更新 |
 
 ---
 
@@ -604,6 +727,29 @@ Phase 3: localStorage → Supabase へのデータ移行
 | 10 | P3 | N枚/N問の数え方仕様化 | 実装計画で対応 |
 | 11 | P3 | 0件時に行動テキストを添える | §4.3 に反映 |
 
+### セクション4（データ蓄積スキーマ）— GPT-5.4 + 5人チームレビュー
+
+**GPT-5.4 指摘（P1×10, P2×8, P3×5）+ 5人チーム合意事項を統合反映:**
+
+| # | 優先度 | 指摘元 | 指摘 | 対応 |
+|---|--------|--------|------|------|
+| 1 | P1 | GPT-5.4 | answer_historyにstudy_session_idがない | §6.2 で session_id 追加 |
+| 2 | P1 | GPT-5.4 | skip整合性制約が曖昧 | CHECK制約追加 |
+| 3 | P1 | GPT-5.4 | session_typeがfree text | CHECK制約に変更 |
+| 4 | P1 | GPT-5.4 | インデックス不足（answer_history, card_progress, bookmarks） | 全テーブルで追加 |
+| 5 | P1 | GPT-5.4 | RLSポリシー未定義 | §6.8 で方針明記 |
+| 6 | P1 | GPT-5.4 | usersテーブル方針不明 | auth.usersと分離、PII最小化を明記 |
+| 7 | P1 | 5人チーム(PdM) | user_profilesがない（レコメンド不可） | §6.3 で追加 |
+| 8 | P1 | 5人チーム(PdM) | purchasesがない（課金管理不可） | §6.5 で追加 |
+| 9 | P1 | 5人チーム(モバイル) | device_tokensがない（通知不可） | §6.6 で追加 |
+| 10 | P2 | GPT-5.4 | card_review_historyがない（SM-2再計算不可） | §6.4 で追加 |
+| 11 | P2 | 5人チーム(グロース) | 行動イベントログの方針未定 | §6.10 でSaaS外出し方針 |
+| 12 | P2 | GPT-5.4 | ease_factorはreal→double precision | §6.4 で変更 |
+| 13 | P2 | 5人チーム(モバイル) | オフライン同期設計が必要 | §6.11 Phase 3 で方針記載 |
+| 14 | P2 | 5人チーム(アーキテクト) | GDPR/App Store審査対応 | §6.11 Phase 2 で対応 |
+| 15 | P3 | GPT-5.4 | created_at/updated_at統一 | 全テーブルに追加 |
+| 16 | P3 | 5人チーム(全員) | PWAのまま進める（データ層だけ先取り） | §6.12 で方針記載 |
+
 ---
 
 ## 変更履歴
@@ -612,3 +758,4 @@ Phase 3: localStorage → Supabase へのデータ移行
 |------|----------|---------|
 | 2026-03-26 | v1.0 | 初版作成（セクション1-4 + GPT-5.4レビュー2回分反映済み） |
 | 2026-03-26 | v1.1 | Spec Review反映: answer_history SQL/TS型マッピング追加、linkedCardIds段階廃止に変更、影響ファイルリスト追加 |
+| 2026-03-26 | v1.2 | セクション4大幅改訂: GPT-5.4(P1×10)+5人チームレビュー反映。user_profiles/purchases/device_tokens/card_review_history追加、RLS方針、行動ログSaaS外出し、プラットフォーム戦略（PWA継続）確定 |
