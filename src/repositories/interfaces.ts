@@ -4,6 +4,8 @@
 import type { AnswerHistory } from '../types/question'
 import type { StickyNote } from '../types/note'
 import type { FlashCard } from '../types/flashcard'
+import type { FlashCardTemplate } from '../types/flashcard-template'
+import type { CardProgress } from '../types/card-progress'
 
 /** 新規付箋作成時に省略可能なフィールド */
 export type NewNoteInput = Omit<StickyNote, 'id' | 'saves_count' | 'likes_count' | 'created_at' | 'updated_at'>
@@ -34,4 +36,19 @@ export interface IFlashCardRepo {
   update(id: string, updates: Partial<FlashCard>): Promise<void>
   delete(id: string): Promise<void>
   getByQuestionId(questionId: string): Promise<FlashCard[]>
+}
+
+/** カードテンプレートリポジトリ（読み取り専用、TSファイルから） */
+export interface IFlashCardTemplateRepo {
+  getAll(): FlashCardTemplate[]
+  getByExemplarId(exemplarId: string): FlashCardTemplate[]
+  getBySourceId(sourceId: string): FlashCardTemplate[]
+}
+
+/** カード復習進捗リポジトリ（ユーザーデータ、localStorage/Supabase） */
+export interface ICardProgressRepo {
+  getAll(): Promise<CardProgress[]>
+  getByTemplateId(templateId: string): Promise<CardProgress | undefined>
+  save(progress: CardProgress): Promise<void>
+  getDueCards(): Promise<CardProgress[]>
 }
