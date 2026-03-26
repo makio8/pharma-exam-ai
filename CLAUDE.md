@@ -127,7 +127,19 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - GPT-5.4レビュー3回（セクション1-2-4）+ 5人チームレビュー（PdM/グロース/アナリティクス/アーキテクト/モバイル）
   - 設計: `docs/superpowers/specs/2026-03-26-learning-cycle-architecture-design.md`（v1.2）
   - NotesPage spec v1.3と整合確認済み
-  - **次: DB設計spec策定 → 実装計画策定 → FlashCardPage UIリデザイン**
+  - **次: DB設計spec策定 → FlashCardPage UIリデザイン**
+- **付箋→例示マッチング パイプライン（2026-03-26）**
+  - 付箋23枚を例示986件にClaude推論でセマンティックマッチング（topicId第一制約）
+  - 中間JSON（confidence + reasoning付き）→ レビューUI → official-notes.ts反映の3段階フロー
+  - レビューUI: `/dev-tools/exemplar-mapping`（1カラム、fusen-reviewパターン踏襲）
+  - 候補単位の承認/却下/primary⇔secondary切替、キーボードナビ、エクスポート機能
+  - バリデーションルール5件追加（exists, duplicates, subject, topic, has-exemplars）+ テスト10件
+  - official-notes.ts 全23枚に exemplarIds 投入済み
+  - GPT-5.4レビュー: 設計spec P1×3修正、実装計画P1×5修正、最終コードP2×2修正
+  - テスト: 25ファイル456件全パス
+  - 設計: `docs/superpowers/specs/2026-03-26-note-exemplar-mapping-design.md`（v1.1）
+  - 計画: `docs/superpowers/plans/2026-03-26-note-exemplar-mapping.md`
+  - **次: ブラウザで `/dev-tools/exemplar-mapping` を確認 → マッチング結果レビュー → 177枚横展開**
 - **FlashCard データ層リファクタリング（2026-03-26）**
   - FlashCard → FlashCardTemplate（公式コンテンツ）+ CardProgress（ユーザー進捗）に分離
   - SM2Scheduler 純粋クラス抽出（12テスト）
@@ -178,11 +190,11 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 ## コマンド
 - `npm run dev` — 開発サーバー
 - `npm run build` — `tsc -b && vite build`（noUnusedLocals: true、未使用importでエラー）
-- `npx vitest run` — テスト（24ファイル446テスト）
+- `npx vitest run` — テスト（25ファイル456テスト）
 - `npx tsc --noEmit` — 型チェックのみ
 - `codex review --base <SHA>` — GPT-5.4によるコードレビュー（マルチモデル戦略）
 - `codex review --commit <SHA>` — 特定コミットのレビュー
-- `npm run validate` — 全問データ品質チェック（39ルール、CLI + JSONレポート出力）
+- `npm run validate` — 全問データ品質チェック（44ルール、CLI + JSONレポート出力）
 - `/dev-tools/review` — データ品質レビューUI（dev serverのみ。`npm run dev` → ブラウザでアクセス）
 - `npx tsx scripts/ocr-fusens.ts --all` — 旧パイプライン: 全ページOCR（Gemini 2.5 Flash、見開き画像）
 - `npx tsx scripts/ocr-fusens.ts --status` — 旧OCR進捗確認
@@ -194,6 +206,7 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `/dev-tools/fusen-review` — 付箋レビューUI（dev serverのみ）
 - `npx tsx scripts/split-pages.ts --source makio --input /tmp/claude/fusens/pages/` — 見開き→左右分割
 - `/dev-tools/fusen-annotate` — 付箋bboxアノテーションUI（dev serverのみ）
+- `/dev-tools/exemplar-mapping` — 付箋→例示マッチングレビューUI（dev serverのみ）
 - `npx tsx scripts/fix-choice-suffix-leak.ts` — 選択肢サフィックス漏れ検出（全年度スキャン）
 - `npx tsx scripts/fix-choice-suffix-leak.ts --dry-run --year 101` — 年度指定ドライラン
 - `npx tsx scripts/fix-choice-suffix-leak.ts --apply` — corrections JSON出力（AUTO_HIGHのみ）
@@ -227,7 +240,10 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - 付箋マスター型: `scripts/lib/fusens-master-types.ts`（Fusen, FusenMaster, FusenSource に pageId/side 追加）
 - 付箋マスター変換: `scripts/lib/fusens-master-core.ts`（ocrToMaster + cropOcrToMaster, 新旧fingerprint両対応）
 - 付箋中間データ: `src/data/fusens/crop-manifest.json`（crop結果、次段OCR用）、`src/data/fusens/crop-ocr-results.json`（OCR結果）
+- 付箋→例示マッチング: `src/data/fusens/note-exemplar-mappings.json`（Claude推論結果、confidence+reasoning付き）
+- 付箋→例示マッチング型: `src/types/note-exemplar-mapping.ts`（NoteExemplarMatch, MappingEntry, MappingsFile）
 - 付箋レビューUI: `src/dev-tools/fusen-review/`（既存review/と同パターン、localStorage永続化）
+- 付箋→例示マッチングUI: `src/dev-tools/exemplar-mapping/`（1カラム、候補単位の承認/却下/primary切替）
 - 付箋アノテーションUI: `src/dev-tools/fusen-annotate/`（Canvas bbox描画、localStorage永続化）
 - 付箋アノテーション型: `src/dev-tools/fusen-annotate/types.ts`（NormalizedBbox [y1,x1,y2,x2] 0-1000）
 - 付箋ロジック: `utils/CanvasDrawManager.ts`（座標変換・hitTest）、`utils/AnnotationStateManager.ts`（永続化・エクスポート）
