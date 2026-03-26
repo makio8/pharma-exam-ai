@@ -1,0 +1,75 @@
+/* src/dev-tools/exemplar-mapping/components/ExemplarCandidate.module.css */
+.candidate {
+  background: #16162a;
+  border-radius: 8px;
+  padding: 12px;
+  border-left: 3px solid #444;
+}
+.candidatePrimary { border-left-color: #22c55e; }
+.candidateSecondary { border-left-color: #3b82f6; }
+.candidateRejected { opacity: 0.4; }
+
+.topRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.statusIcon { font-size: 14px; }
+.roleBadge {
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+}
+.rolePrimary { background: #22c55e; }
+.roleSecondary { background: #3b82f6; }
+.confidence {
+  font-size: 11px;
+  color: #888;
+  margin-left: auto;
+}
+
+.exemplarId {
+  font-size: 11px;
+  color: #666;
+  font-family: monospace;
+}
+.exemplarText {
+  font-size: 13px;
+  color: #ccc;
+  margin: 4px 0;
+  line-height: 1.5;
+}
+.category {
+  font-size: 11px;
+  color: #555;
+}
+.reasoning {
+  font-size: 11px;
+  color: #777;
+  margin-top: 4px;
+  padding: 6px 8px;
+  background: #0d0d1a;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+.actionBtn {
+  padding: 4px 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: transparent;
+  color: #aaa;
+  font-size: 11px;
+  cursor: pointer;
+}
+.actionBtn:hover { background: #222; }
+.actionBtnApproved { border-color: #22c55e; color: #22c55e; }
+.actionBtnRejected { border-color: #ef4444; color: #ef4444; }
