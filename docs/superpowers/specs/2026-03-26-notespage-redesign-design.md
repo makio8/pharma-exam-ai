@@ -3,7 +3,7 @@
 **Author**: makio8 + Claude
 **Date**: 2026-03-26
 **Status**: Draft v1.0
-**Reviewed by**: (GPT-5.4 レビュー待ち)
+**Reviewed by**: GPT-5.4 (Codex) — Round 1: 3件（P1×2, P2×1）、全3件の指摘を反映済み
 **Based on**: PRD_v1.md §7.4, 2026-03-24-questionpage-redesign-design.md, 2026-03-24-fusens-master-layer-design.md
 
 ---
@@ -612,9 +612,38 @@ OCR + アノテーション → 1,000件
 
 ---
 
-## 13. GPT-5.4 レビュー指摘の対応表
+## 13. 実装前提条件（GPT-5.4 Round 1 で検出されたデータ品質問題）
 
-（レビュー後に記載）
+GPT-5.4 が既存データの問題を3件検出。NotesPage 実装前に修正が必要：
+
+| # | 優先度 | 指摘 | 対応方針 | 影響範囲 |
+|---|--------|------|---------|---------|
+| 1 | P1 | spread OCR → crop OCR 移行時に重複付箋が発生（`fusens-master-core.ts` の fingerprint 不一致） | `cropOcrToMaster()` で legacy fingerprint もチェックする重複排除ロジック追加 | fusens-master.json の重複 ID |
+| 2 | P1 | `on-006`（濃度単位換算）, `on-007`（W/V%の定義）の `topicId` / `linkedQuestionIds` が無関係な物理問題を指している | 正しい topicId と linkedQuestionIds に修正。薬剤の濃度計算問題にリンク | official-notes.ts |
+| 3 | P2 | 旧モック `on-001`〜`on-010` の ID を実データで再利用するとブックマーク破壊 | **ID体系を統一**: 全付箋を `fusen-{NNN}` 形式に統一。旧 `on-*` ID は localStorage マイグレーションで対応 | useBookmarks の localStorage キー |
+
+### P3 対応: ID マイグレーション戦略
+
+```typescript
+// useBookmarks 初回ロード時に旧ID→新IDへマイグレーション
+const ID_MIGRATION_MAP: Record<string, string> = {
+  'on-001': 'fusen-155',  // SI基本単位（実データ）
+  'on-002': 'fusen-002',  // 単位（実データ）
+  // ... 旧モック→実データの対応表
+}
+```
+
+---
+
+## 14. GPT-5.4 レビュー指摘の対応表
+
+### Round 1（設計レビュー）
+
+| # | 優先度 | 指摘 | 対応 | セクション |
+|---|--------|------|------|-----------|
+| 1 | P1 | 重複インポート: spread→crop移行で同一付箋が別IDに | §13 に実装前提条件として記載。fingerprint統合ロジックを別タスクで修正 | §13 |
+| 2 | P1 | 誤った問題リンク: 濃度付箋が物理問題にリンク | §13 に修正方針記載。official-notes.ts のデータ修正を別タスクで実施 | §13 |
+| 3 | P2 | ID再利用でブックマーク破壊 | §5.1 の ID 体系を `fusen-{NNN}` に統一。マイグレーション戦略を §13 に追加 | §5.1, §13 |
 
 ---
 
@@ -623,3 +652,4 @@ OCR + アノテーション → 1,000件
 | 日付 | バージョン | 変更内容 |
 |------|----------|---------|
 | 2026-03-26 | v1.0 | 初版作成 |
+| 2026-03-26 | v1.1 | GPT-5.4 Round 1 指摘反映（データ品質問題3件 + IDマイグレーション戦略） |
