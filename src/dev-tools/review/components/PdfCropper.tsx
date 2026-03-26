@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
-import type { RefObject } from 'react'
+import type { RefObject, MouseEvent as ReactMouseEvent } from 'react'
 import type { PdfCropRect } from '../types'
 import styles from './PdfCropper.module.css'
 
@@ -25,7 +25,7 @@ interface PdfCropperProps {
   viewportWidth: number
   viewportHeight: number
   scale: number
-  onSave: (crop: PdfCropRect) => void
+  onSave: (crop: PdfCropRect, previewDataUrl: string) => void
   onCancel: () => void
 }
 
@@ -70,7 +70,7 @@ export function PdfCropper({
   }, [canvasRef])
 
   // マウス座標 → Canvas相対座標（CSS px）
-  function toCanvasCoords(e: React.MouseEvent): { x: number; y: number } | null {
+  function toCanvasCoords(e: ReactMouseEvent): { x: number; y: number } | null {
     if (!canvasRect) return null
     return {
       x: Math.max(0, Math.min(canvasRect.width, e.clientX - canvasRect.left)),
@@ -78,7 +78,7 @@ export function PdfCropper({
     }
   }
 
-  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+  const handleMouseDown = useCallback((e: ReactMouseEvent) => {
     const coords = toCanvasCoords(e)
     if (!coords) return
     e.preventDefault()
@@ -94,7 +94,7 @@ export function PdfCropper({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canvasRect])
 
-  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+  const handleMouseMove = useCallback((e: ReactMouseEvent) => {
     if (!drag?.isDragging) return
     const coords = toCanvasCoords(e)
     if (!coords) return
@@ -102,7 +102,7 @@ export function PdfCropper({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [drag, canvasRect])
 
-  const handleMouseUp = useCallback((e: React.MouseEvent) => {
+  const handleMouseUp = useCallback((e: ReactMouseEvent) => {
     if (!drag?.isDragging) return
     const coords = toCanvasCoords(e)
     if (!coords) return
@@ -121,7 +121,27 @@ export function PdfCropper({
         scale,
         rotation: 0,
       }
-      onSave(crop)
+      let previewDataUrl = ''
+      const canvas = canvasRef.current
+      if (canvas) {
+        const scaleX = canvas.width / canvasRect.width
+        const scaleY = canvas.height / canvasRect.height
+        const previewCanvas = document.createElement('canvas')
+        previewCanvas.width = rect.w * scaleX
+        previewCanvas.height = rect.h * scaleY
+        const ctx = previewCanvas.getContext('2d')
+        if (ctx) {
+          ctx.drawImage(
+            canvas,
+            rect.x * scaleX, rect.y * scaleY,
+            rect.w * scaleX, rect.h * scaleY,
+            0, 0,
+            previewCanvas.width, previewCanvas.height,
+          )
+          previewDataUrl = previewCanvas.toDataURL('image/png')
+        }
+      }
+      onSave(crop, previewDataUrl)
     }
     setDrag(null)
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -172,7 +192,7 @@ export function PdfCropper({
       scale,
       rotation: 0,
     }
-    onSave(crop)
+    onSave(crop, previewUrl ?? '')
   }
 
   // 現在のドラッグ or 確定済み矩形
