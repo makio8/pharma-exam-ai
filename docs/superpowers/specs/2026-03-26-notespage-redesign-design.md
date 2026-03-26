@@ -2,7 +2,7 @@
 
 **Author**: makio8 + Claude
 **Date**: 2026-03-26
-**Status**: Draft v1.2
+**Status**: Draft v1.3
 **Reviewed by**: GPT-5.4 (Codex) — Round 1: 3件 + Spec Review: 8件（P1×2, P2×3, P3×3）、全指摘反映済み
 **Based on**: PRD_v1.md §7.4, 2026-03-24-questionpage-redesign-design.md, 2026-03-24-fusens-master-layer-design.md
 
@@ -282,7 +282,7 @@ interface RelatedQuestionItem {
 ### 5.1 既存型の拡張：OfficialNote
 
 ```typescript
-// src/types/official-note.ts — 既存フィールドに exemplarIds を追加
+// src/types/official-note.ts — 循環設計セッションの決定を反映
 interface OfficialNote {
   id: string                    // 'fusen-001'（fusens-master の ID をそのまま使用）
   title: string
@@ -291,9 +291,9 @@ interface OfficialNote {
   subject: QuestionSubject
   topicId: string               // 中項目ID（ブラウズ階層用）
   tags: string[]
-  linkedQuestionIds: string[]   // 後方互換: 直接指定された問題ID
+  linkedQuestionIds: string[]   // フォールバック: 直接指定された問題ID
   exemplarIds?: string[]        // 新規（optional）: 例示ID（AI マッチング結果）。未設定時は [] 扱い
-  linkedCardIds: string[]       // 将来: 暗記カードID
+  // linkedCardIds 廃止: 共通マスタにユーザーデータを持たせない。暗記カードは exemplar 経由で検索
   importance: number
   tier: 'free' | 'premium'
   noteType?: NoteType           // 新規（optional）: 未設定時は 'knowledge' 扱い
@@ -301,11 +301,28 @@ interface OfficialNote {
 }
 ```
 
+### 5.1.1 関連問題の導出（共通関数）
+
+```typescript
+// exemplarIds 優先、なければ linkedQuestionIds にフォールバック
+function getRelatedQuestionIds(note: OfficialNote): string[] {
+  if (note.exemplarIds && note.exemplarIds.length > 0) {
+    // exemplar → question-exemplar-map 経由で問題IDを解決
+    return resolveQuestionsFromExemplars(note.exemplarIds)
+  }
+  return note.linkedQuestionIds  // フォールバック
+}
+```
+
+**設計判断の根拠**（循環設計セッションより）:
+- `linkedCardIds` 廃止: 共通マスタ（OfficialNote）にユーザーデータ的な紐付けを持たせない
+- 暗記カードの検索は `exemplar` 経由で行う（FlashCard に `primary_exemplar_id` が追加される）
+- NotesPage の「暗記カード」セクションは「準備中」プレースホルダーのため、この変更の影響なし
+
 **後方互換性**（※ Spec Review P1-2 対応）:
 - `exemplarIds` と `noteType` は **optional フィールド**。既存の23件は変更不要
-- `linkedQuestionIds` は直接指定（手動キュレーション）を保持
-- `exemplarIds` は AI マッチング結果。両方を union して関連問題を算出
-- `exemplarIds` が未設定/空の付箋は `linkedQuestionIds` のみで動作（段階的移行）
+- `linkedQuestionIds` はフォールバックとして保持（手動キュレーション済みデータ）
+- `exemplarIds` がある場合は exemplar 経由を**優先**。なければ `linkedQuestionIds` で動作（段階的移行）
 - `noteType` が未設定の場合は `'knowledge'` をデフォルト値として使用
 
 ### 5.2 fusens-master.json → OfficialNote 変換
@@ -323,7 +340,7 @@ function fusenToOfficialNote(fusen: Fusen): OfficialNote {
     tags: fusen.tags,
     linkedQuestionIds: fusen.linkedQuestionIds,
     exemplarIds: [],                         // AIマッチング後に投入
-    linkedCardIds: [],                       // 将来
+    // linkedCardIds 廃止
     importance: fusen.importance,
     tier: fusen.tier,
     noteType: fusen.noteType,
@@ -716,3 +733,4 @@ const ID_MIGRATION_MAP: Record<string, string> = {
 | 2026-03-26 | v1.0 | 初版作成 |
 | 2026-03-26 | v1.1 | GPT-5.4 Round 1 指摘反映（データ品質問題3件 + IDマイグレーション戦略） |
 | 2026-03-26 | v1.2 | Spec Review 指摘反映（P1×2, P2×3, P3×3: データソース明確化、optional フィールド、パフォーマンス、アクセシビリティ） |
+| 2026-03-26 | v1.3 | 循環設計セッション反映: linkedCardIds 廃止、getRelatedQuestionIds 共通関数追加、exemplarIds 優先ロジック明記 |
