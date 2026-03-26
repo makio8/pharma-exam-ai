@@ -227,7 +227,7 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - 付箋コアロジック: `src/utils/fusen-library-core.ts`（FusenLibraryCore — グルーピング・フィルター・ソート・バッジ計算。純粋関数テスト13件）
 - 問題ドメインコンポーネント: `src/components/question/`（ProgressHeader, QuestionBody, ChoiceList, ChoiceCard, ActionArea, ResultBanner, ExplanationSection, OfficialNoteCard, NoteImageViewer, MetaAccordion）— LinkedQuestionViewer からも再利用前提
 - 公式付箋データ: `src/data/official-notes.ts`（実データ23枚、実画像パス使用）、型: `src/types/official-note.ts`（linkedCardIds廃止済み、exemplarIds?/noteType?追加）
-- データバリデーター: `src/utils/data-validator/`（39ルール、3レベル: 構造/整合性/品質）
+- データバリデーター: `src/utils/data-validator/`（44ルール、4カテゴリ: 構造/整合性/品質/付箋）
 - レビューUI: `src/dev-tools/review/`（Vite dev server統合、本番ビルドに含まれない）
 - 修正スクリプト: `scripts/apply-corrections.ts`（中間JSON方式） + `scripts/json-to-exam-ts.ts`
 - 選択肢サフィックス漏れ検出: `scripts/fix-choice-suffix-leak.ts`（CLI） + `scripts/lib/suffix-leak-detector.ts`（コアロジック、50テスト）
@@ -274,6 +274,7 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `jsx: react-jsx` 設定のため `React.KeyboardEvent` 等の名前空間型は使えない → `import type { KeyboardEvent } from 'react'` を使う
 - `@testing-library/react` / jsdom 未導入。フックのテストはロジックをクラスに分離して純粋関数テスト（TimeTracker, AnswerStateManager, SwipeNavigator パターン）
 - `codex review --commit <SHA>` にプロンプトを渡すときは stdin（heredoc）を使う。引数としては渡せない
+- `codex review --base <SHA>` と `codex review --commit <SHA>` は排他。同時指定不可（エラーになる）
 - `codex exec "プロンプト"` で GPT-5.4 に設計レビュー等の自由質問が可能
 - official-notes.ts の linkedQuestionIds は暫定マッピング（question-topic-mapから逆引き）。本格運用時にトピック紐付けで自動化予定
 - Gemini 2.5 Flash 無料枠: 250RPD/日、10RPM。429エラー時はnullを返し保存しない（0枚保存バグ修正済み）
