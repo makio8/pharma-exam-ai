@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react'
-import type { MappingReviewState, MatchStatus, EntryReviewStatus, AddedMatch } from '../types'
+import type { MappingReviewState, MatchStatus, EntryReviewStatus } from '../types'
 
 const STORAGE_KEY = 'exemplar-mapping-review-v1'
 
@@ -15,7 +15,7 @@ const initialState: MappingReviewState = {
 
 /** v1 → v2 migration: addedMatches を補完 */
 export function migrateState(raw: Record<string, unknown>): MappingReviewState {
-  const state = raw as MappingReviewState
+  const state = raw as unknown as MappingReviewState
   if (!state.addedMatches) {
     return { ...state, version: 2, addedMatches: {} }
   }

@@ -4,14 +4,18 @@ import { useMappingData } from './hooks/useMappingData'
 import { useMappingReviewState } from './hooks/useMappingReviewState'
 import { useMappingKeyboardNav } from './hooks/useMappingKeyboardNav'
 import { MappingCard } from './components/MappingCard'
-import type { NoteExemplarMappingsFile, NoteExemplarMatch } from '../../types/note-exemplar-mapping'
+import { getEffectiveMatches } from './utils/effective-matches'
+import { EXEMPLARS } from '../../data/exemplars'
+import type { NoteExemplarMappingsFile } from '../../types/note-exemplar-mapping'
 import type { EntryReviewStatus } from './types'
 import styles from './ExemplarMappingPage.module.css'
+
+const validExemplarIds = new Set(EXEMPLARS.map(e => e.id))
 
 export default function ExemplarMappingPage() {
   const { entries, loading, error } = useMappingData()
   const reviewState = useMappingReviewState()
-  const { state, setMatchStatus, togglePrimary, setEntryStatus, setLastPosition, approveAll, rejectAll, resetEntry } = reviewState
+  const { state, setMatchStatus, togglePrimary, setEntryStatus, setLastPosition, approveAll, rejectAll, resetEntry, addMatch } = reviewState
   const [currentIndex, setCurrentIndex] = useState<number | null>(null)
   const [showHelp, setShowHelp] = useState(false)
 
@@ -26,6 +30,21 @@ export default function ExemplarMappingPage() {
 
   const safeIndex = currentIndex ?? initializedIndex
   const currentEntry = entries[safeIndex]
+
+  // effective list: 全操作の基準
+  const effectiveMatches = useMemo(() => {
+    if (!currentEntry) return []
+    return getEffectiveMatches(
+      currentEntry.matches,
+      state.addedMatches,
+      state.matchStatuses,
+      state.primaryOverrides,
+      currentEntry.noteId,
+      validExemplarIds,
+    )
+  }, [currentEntry, state.addedMatches, state.matchStatuses, state.primaryOverrides])
+
+  const allExemplarIds = useMemo(() => effectiveMatches.map(m => m.exemplarId), [effectiveMatches])
 
   const stats = useMemo(() => {
     let approved = 0, modified = 0, rejected = 0
@@ -47,10 +66,11 @@ export default function ExemplarMappingPage() {
     })
   }, [entries, initializedIndex, setLastPosition])
 
+  // effective list 基準の一括操作
   const handleApproveAll = useCallback(() => {
     if (!currentEntry) return
-    approveAll(currentEntry.noteId, currentEntry.matches.map(m => m.exemplarId))
-  }, [currentEntry, approveAll])
+    approveAll(currentEntry.noteId, allExemplarIds)
+  }, [currentEntry, allExemplarIds, approveAll])
 
   const handleModified = useCallback(() => {
     if (!currentEntry) return
@@ -59,13 +79,18 @@ export default function ExemplarMappingPage() {
 
   const handleRejectAll = useCallback(() => {
     if (!currentEntry) return
-    rejectAll(currentEntry.noteId, currentEntry.matches.map(m => m.exemplarId))
-  }, [currentEntry, rejectAll])
+    rejectAll(currentEntry.noteId, allExemplarIds)
+  }, [currentEntry, allExemplarIds, rejectAll])
 
   const handleReset = useCallback(() => {
     if (!currentEntry) return
-    resetEntry(currentEntry.noteId, currentEntry.matches.map(m => m.exemplarId))
-  }, [currentEntry, resetEntry])
+    resetEntry(currentEntry.noteId, allExemplarIds)
+  }, [currentEntry, allExemplarIds, resetEntry])
+
+  const handleAddMatch = useCallback((exemplarId: string, isPrimary: boolean) => {
+    if (!currentEntry) return
+    addMatch(currentEntry.noteId, exemplarId, isPrimary, allExemplarIds)
+  }, [currentEntry, allExemplarIds, addMatch])
 
   const handleJumpToNextUnresolved = useCallback(() => {
     const start = (currentIndex ?? initializedIndex) + 1
@@ -85,6 +110,7 @@ export default function ExemplarMappingPage() {
     }
   }, [currentIndex, initializedIndex, entries, state.entryStatuses, setLastPosition])
 
+  // export も effective list 基準
   const handleExport = useCallback(() => {
     if (entries.length === 0) return
     const exported: NoteExemplarMappingsFile = {
@@ -94,14 +120,14 @@ export default function ExemplarMappingPage() {
       noteCount: entries.length,
       mappings: entries.map(entry => {
         const entryStatus = state.entryStatuses[entry.noteId] ?? entry.reviewStatus
-        const mergedMatches: NoteExemplarMatch[] = entry.matches.map(m => {
-          const key = `${entry.noteId}:${m.exemplarId}`
-          return {
-            ...m,
-            status: state.matchStatuses[key] ?? m.status,
-            isPrimary: state.primaryOverrides[key] ?? m.isPrimary,
-          }
-        })
+        const mergedMatches = getEffectiveMatches(
+          entry.matches,
+          state.addedMatches,
+          state.matchStatuses,
+          state.primaryOverrides,
+          entry.noteId,
+          validExemplarIds,
+        )
         return {
           noteId: entry.noteId,
           noteTitle: entry.noteTitle,
@@ -153,6 +179,7 @@ export default function ExemplarMappingPage() {
         {currentEntry && (
           <MappingCard
             entry={currentEntry}
+            effectiveMatches={effectiveMatches}
             reviewState={state}
             currentIndex={safeIndex}
             totalCount={entries.length}
@@ -164,6 +191,7 @@ export default function ExemplarMappingPage() {
             onReset={handleReset}
             onNext={() => navigate(1)}
             onPrev={() => navigate(-1)}
+            onAddMatch={handleAddMatch}
           />
         )}
       </div>

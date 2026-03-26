@@ -50,3 +50,51 @@
 .navBtn:hover { background: #222; }
 .navBtn:disabled { opacity: 0.3; cursor: default; }
 .position { font-size: 12px; color: #666; }
+
+/* 同トピック全 Exemplar 折りたたみ */
+.topicExemplars {
+  border-top: 1px solid #222;
+  padding-top: 8px;
+}
+.topicExemplarsSummary {
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
+  padding: 4px 0;
+  list-style: none;
+}
+.topicExemplarsSummary::marker { content: ''; }
+.topicExemplarsSummary::before { content: '▶ '; font-size: 10px; }
+.topicExemplars[open] > .topicExemplarsSummary::before { content: '▼ '; }
+.topicExemplarsList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+.topicExemplarRow {
+  background: #16162a;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+.topicExemplarRowAdded { opacity: 0.5; }
+.topicExemplarHeader { display: flex; align-items: center; gap: 6px; }
+.topicExemplarBadge { font-size: 12px; }
+.topicExemplarId { font-size: 11px; color: #666; font-family: monospace; }
+.topicExemplarText { font-size: 12px; color: #bbb; margin: 4px 0; line-height: 1.4; }
+.topicExemplarCategory { font-size: 10px; color: #555; }
+.topicExemplarActions { display: flex; gap: 6px; margin-top: 6px; }
+.addBtn {
+  padding: 4px 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 11px;
+  cursor: pointer;
+}
+.addBtn:hover { background: #222; }
+.addBtnPrimary { color: #22c55e; border-color: #22c55e40; }
+.addBtnPrimary:hover { background: #22c55e15; }
+.addBtnSecondary { color: #3b82f6; border-color: #3b82f640; }
+.addBtnSecondary:hover { background: #3b82f615; }
