@@ -415,6 +415,8 @@ export default function ReviewPage() {
                 total={filteredQuestions.length}
                 onPrev={() => navigate(safeIndex - 1)}
                 onNext={() => navigate(safeIndex + 1)}
+                corrections={currentCorrections}
+                previews={previews}
               />
 
               {/* メモ欄（修正理由・画像切れ等を記録） */}

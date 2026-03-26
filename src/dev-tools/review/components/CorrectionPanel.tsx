@@ -220,10 +220,7 @@ export function CorrectionPanel({
         // Also apply text if changed
         if (questionDraftText.trim() !== questionOriginal.trim()) {
           const textCorr: Correction = { type: 'text', field: 'question_text', value: questionDraftText.trim() }
-          onReplaceCorrections([...replaceCorrections(cleaned.filter(c => c.type !== 'text' || c.field !== 'question_text'), [textCorr]).filter(c => {
-            // Keep only the newly added ones vs existing
-            return true
-          })])
+          onReplaceCorrections([...replaceCorrections(cleaned.filter(item => item.type !== 'text' || item.field !== 'question_text'), [textCorr])])
         }
       }
     }
