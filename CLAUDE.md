@@ -128,6 +128,21 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - 設計: `docs/superpowers/specs/2026-03-26-learning-cycle-architecture-design.md`（v1.2）
   - NotesPage spec v1.3と整合確認済み
   - **次: DB設計spec策定 → 実装計画策定 → FlashCardPage UIリデザイン**
+- **FlashCard データ層リファクタリング（2026-03-26）**
+  - FlashCard → FlashCardTemplate（公式コンテンツ）+ CardProgress（ユーザー進捗）に分離
+  - SM2Scheduler 純粋クラス抽出（12テスト）
+  - LearningLinkService: 6種Map逆引きサービス（17テスト）
+  - サンプルテンプレート10枚（on-001〜on-003 + 問題解説3枚）
+  - IFlashCardTemplateRepo（読み取り専用）+ ICardProgressRepo（localStorage CRUD）
+  - useFlashCardTemplates / useCardProgress / useLearningLinks フック
+  - FlashCardSection: プレースホルダー → カードプレビューリスト（タップ展開）
+  - TemplatePractice: テンプレートベース練習コンポーネント（フリップ+SM-2復習ボタン）
+  - FlashCardPage: PracticeContext 対応（テンプレート練習 + 旧レガシー復習共存）
+  - QuestionPage: onFlashCard → PracticeContext 付き遷移（カード枚数表示）
+  - 旧 FlashCard 型に @deprecated マーカー
+  - テスト: 24ファイル446件全パス
+  - 計画: `docs/superpowers/plans/2026-03-26-flashcard-data-layer.md`
+  - **次: FlashCardPage/FlashCardListPage Soft Companion ビジュアルリデザイン**
 - **データ品質レビューUI改善（2026-03-25）**
   - PdfViewer PDF描画修正（Safari ポリフィル + CMap + StrictMode対策）
   - 3カラムレイアウト（PDF / カード+メモ / 修正パネル常時表示）
@@ -157,13 +172,13 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - 設計: `docs/superpowers/specs/2026-03-25-fusen-annotate-ui-design.md`（GPT-5.4 Approved）
   - 計画: `docs/superpowers/plans/2026-03-25-fusen-annotate-ui.md`
   - レビューUI Phase 1: `/dev-tools/fusen-review`（判定+キーボードナビ、Phase 2b以降で使用）
-- Ant Design: 未移行ページ（FlashCardPage）がまだ依存中。NotesPageはリデザイン済み
+- Ant Design: 未移行ページ（FlashCardPage, FlashCardListPage）がまだ依存中。NotesPageはリデザイン済み
 - AppLayout: `REDESIGNED_EXACT` + `matchPath('/practice/:questionId')` でリデザイン済みページを管理
 
 ## コマンド
 - `npm run dev` — 開発サーバー
 - `npm run build` — `tsc -b && vite build`（noUnusedLocals: true、未使用importでエラー）
-- `npx vitest run` — テスト（22ファイル417テスト）
+- `npx vitest run` — テスト（24ファイル446テスト）
 - `npx tsc --noEmit` — 型チェックのみ
 - `codex review --base <SHA>` — GPT-5.4によるコードレビュー（マルチモデル戦略）
 - `codex review --commit <SHA>` — 特定コミットのレビュー
@@ -187,9 +202,14 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - デザイントークン: `src/styles/tokens.css`（CSS変数 `--accent`, `--bg`, `--card` 等）
 - ベーススタイル: `src/styles/base.css`（`.sc-page`, `.section-title` クラス）
 - 共通UIコンポーネント: `src/components/ui/`（Chip, FloatingNav, BottomSheet, QuestionCard 等）
-- データ層: `src/data/`（all-questions, exam-blueprint, question-topic-map, exemplar-stats）
+- データ層: `src/data/`（all-questions, exam-blueprint, question-topic-map, exemplar-stats, flashcard-templates）
 - カスタムフック: `src/hooks/`（useAnswerHistory, useTopicMastery, useAnalytics, useFlashCards）
-- カスタムフック（新規）: `src/hooks/`（useQuestionAnswerState, useTimeTracking, useSwipeNavigation, useOfficialNotes, useBookmarks, useFusenLibrary, useFusenDetail）
+- カスタムフック（新規）: `src/hooks/`（useQuestionAnswerState, useTimeTracking, useSwipeNavigation, useOfficialNotes, useBookmarks, useFusenLibrary, useFusenDetail, useFlashCardTemplates, useCardProgress, useLearningLinks）
+- カードテンプレート: `src/data/flashcard-templates.ts`（サンプル10枚）、型: `src/types/flashcard-template.ts`
+- カード進捗: localStorage `card_progress` キー、型: `src/types/card-progress.ts`
+- SM-2 スケジューラ: `src/utils/sm2-scheduler.ts`（純粋クラス、テスト12件）
+- 学習循環サービス: `src/utils/learning-link-service.ts`（6種Map逆引き、テスト17件）
+- カード練習UI: `src/components/flashcard/TemplatePractice.tsx`（PracticeContext対応、Ant Design）
 - ノートドメインコンポーネント: `src/components/notes/`（FusenGrid, SubjectSection, FusenThumbnail, EmptyState, RelatedQuestionList, FusenBreadcrumb, FlashCardSection）
 - 付箋コアロジック: `src/utils/fusen-library-core.ts`（FusenLibraryCore — グルーピング・フィルター・ソート・バッジ計算。純粋関数テスト13件）
 - 問題ドメインコンポーネント: `src/components/question/`（ProgressHeader, QuestionBody, ChoiceList, ChoiceCard, ActionArea, ResultBanner, ExplanationSection, OfficialNoteCard, NoteImageViewer, MetaAccordion）— LinkedQuestionViewer からも再利用前提
@@ -292,8 +312,9 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `docs/superpowers/specs/2026-03-24-fusens-master-layer-design.md` — 付箋マスター層設計
 - `docs/superpowers/plans/2026-03-25-fix-choice-suffix-leak.md` — 選択肢サフィックス漏れ修正計画（全5タスク完了）
 - `docs/superpowers/specs/2026-03-26-learning-cycle-architecture-design.md` — **学習サイクル循環設計 v1.2**（3機能紐付け+ナビ+カード生成+DB蓄積、GPT-5.4×3回+5人チームレビュー済み）
-- `docs/superpowers/specs/2026-03-26-notespage-redesign-design.md` — NotesPage リデザイン v1.3（循環設計と整合済み）
+- `docs/superpowers/specs/2026-03-26-notespage-redesign-design.md` — NotesPage リデザイン v1.3（循環設計と整合済み、§4.1暗記カード実装済み）
 - `docs/superpowers/plans/2026-03-26-notespage-redesign.md` — NotesPage 実装計画 v1.1（7タスク全完了、GPT-5.4+Spec Review済み）
+- `docs/superpowers/plans/2026-03-26-flashcard-data-layer.md` — **FlashCard データ層実装計画**（14タスク全完了）
 
 ## データ構造メモ
 - `QUESTION_TOPIC_MAP`: Record<questionId, topicId> — 問題→中項目マッピング
@@ -302,3 +323,8 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `EXEMPLAR_STATS`: 出題頻度統計（yearsAppeared, totalQuestions等）
 - `useAnswerHistory()`: { history, getQuestionResult, saveAnswer }
 - `useTopicMastery()`: { topicsBySubject, allTopics, getSubjectSummary }
+- `FLASHCARD_TEMPLATES`: FlashCardTemplate[]（サンプル10枚、source_type='fusen'|'explanation'）
+- `useFlashCardTemplates()`: { templates, getByExemplarId, getBySourceId }
+- `useCardProgress()`: { allProgress, dueProgress, reviewCard, getProgressForTemplate }
+- `useLearningLinks()`: LearningLinkService（6種Map逆引き）
+- `FlashCardPracticeContext`: { mode, exemplarId?, noteId?, cardIds, returnTo } — カード練習の文脈
