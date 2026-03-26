@@ -18,8 +18,10 @@ export function useMappingKeyboardNav(actions: MappingKeyboardNavActions) {
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      const tag = (e.target as HTMLElement).tagName
-      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return
+      const interactive = (e.target as HTMLElement).closest(
+        'button, summary, [contenteditable], input, textarea, select'
+      )
+      if (interactive) return
 
       const a = actionsRef.current
 
