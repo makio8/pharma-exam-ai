@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import type { Question } from '../../../types/question'
 import type { ValidationIssue } from '../../../utils/data-validator/types'
-import type { JudgmentStatus } from '../types'
+import type { Correction, CropImage, JudgmentStatus } from '../types'
+import { parseTextWithImages } from '../utils/placeholder-utils'
 import styles from './ReviewCard.module.css'
 
 const IMAGE_CHOICE_TYPES = new Set([
@@ -24,6 +25,8 @@ interface ReviewCardProps {
   total: number
   onPrev: () => void
   onNext: () => void
+  corrections: Correction[]
+  previews: Map<string, string>
 }
 
 export function ReviewCard({
@@ -36,6 +39,8 @@ export function ReviewCard({
   total,
   onPrev,
   onNext,
+  corrections,
+  previews,
 }: ReviewCardProps) {
   const [expanded, setExpanded] = useState(false)
 
@@ -84,17 +89,56 @@ export function ReviewCard({
       </div>
 
       {/* ===== 連問シナリオ ===== */}
-      {question.linked_scenario && (
-        <div className={styles.scenarioArea}>
-          <h3 className={styles.sectionTitle}>
-            📋 連問シナリオ
-            {question.linked_group && (
-              <span className={styles.linkedGroupTag}>{question.linked_group}</span>
-            )}
-          </h3>
-          <p className={styles.scenarioText}>{question.linked_scenario}</p>
-        </div>
-      )}
+      {question.linked_scenario && (() => {
+        // Use corrected scenario text if available
+        const scenarioTextCorrection = corrections.find(
+          c => c.type === 'text' && c.field === 'linked_scenario'
+        )
+        const scenarioText = scenarioTextCorrection?.type === 'text'
+          ? scenarioTextCorrection.value
+          : question.linked_scenario
+
+        const scenarioCropCorrection = corrections.find(
+          c => c.type === 'multi-image-crop' && c.target === 'scenario'
+        )
+        const scenarioImages: CropImage[] = scenarioCropCorrection?.type === 'multi-image-crop'
+          ? scenarioCropCorrection.images
+          : []
+
+        const blocks = parseTextWithImages(scenarioText, scenarioImages)
+
+        return (
+          <div className={styles.scenarioArea}>
+            <h3 className={styles.sectionTitle}>
+              📋 連問シナリオ
+              {question.linked_group && (
+                <span className={styles.linkedGroupTag}>{question.linked_group}</span>
+              )}
+            </h3>
+            {blocks.map((block, i) => {
+              if (block.type === 'text') {
+                return <p key={i} className={styles.scenarioText}>{block.content}</p>
+              }
+              const previewUrl = previews.get(`scenario-${block.imageId}`)
+              if (previewUrl) {
+                return (
+                  <img
+                    key={i}
+                    src={previewUrl}
+                    alt={`シナリオ画像 ${block.imageId}`}
+                    className={styles.scenarioImage}
+                  />
+                )
+              }
+              return (
+                <span key={i} className={styles.imageBadge}>
+                  📷 image:{block.imageId}
+                </span>
+              )
+            })}
+          </div>
+        )
+      })()}
 
       {/* ===== 問題画像 ===== */}
       {question.image_url && (
