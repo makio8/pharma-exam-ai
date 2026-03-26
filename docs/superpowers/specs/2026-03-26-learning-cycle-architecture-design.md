@@ -2,7 +2,7 @@
 
 **Author**: makio8 + Claude
 **Date**: 2026-03-26
-**Status**: Draft v1.0
+**Status**: Draft v1.1
 **Reviewed by**: GPT-5.4 (Codex) — セクション1: P1×3, P2×5, P3×1 全反映済み / セクション2: P1×3, P2×5, P3×3 全反映済み
 **Based on**: PRD_v1.md, 2026-03-26-notespage-redesign-design.md, 2026-03-22-session-handoff-exemplar-mapping.md
 
@@ -106,8 +106,11 @@ interface OfficialNote {
   // 正の紐付け（AIマッチング後に投入、optional）
   exemplarIds?: string[]
 
-  // ❌ linkedCardIds 廃止
+  // ❌ linkedCardIds 廃止予定
+  //    Phase 1: optional化 + deprecation コメント（既存23件の [] を壊さない）
+  //    Phase 2: 全消費コード更新後に型から削除
   //    理由: 共通マスタにユーザーデータを持たせない
+  linkedCardIds?: string[]  // @deprecated — exemplar経由で検索。Phase 2で削除予定
 }
 ```
 
@@ -398,9 +401,9 @@ CREATE TABLE answer_history (
   id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id       uuid REFERENCES users(id) NOT NULL,
   question_id   text NOT NULL,
-  selected_answer int[] NOT NULL,
+  selected_answer int[],           -- NULL: スキップ時。単一回答は [N] で格納
   is_correct    boolean NOT NULL,
-  time_spent_ms integer,
+  time_spent_ms integer,           -- ミリ秒（既存TSはseconds、移行時に×1000変換）
   skipped       boolean DEFAULT false,
   answered_at   timestamptz DEFAULT now()
 );
@@ -409,6 +412,14 @@ CREATE INDEX idx_ah_user ON answer_history(user_id);
 CREATE INDEX idx_ah_question ON answer_history(question_id);
 CREATE INDEX idx_ah_answered_at ON answer_history(answered_at);
 ```
+
+**既存TS型との差分マッピング**:
+| 既存 AnswerHistory (TS) | DB (answer_history) | 変換ルール |
+|------------------------|---------------------|-----------|
+| `selected_answer: number` | `int[]` | `[N]` に包む |
+| `selected_answer: number[]` | `int[]` | そのまま |
+| `selected_answer: null` | `NULL` | `skipped=true` と併用 |
+| `time_spent_seconds?: number` | `time_spent_ms` | `× 1000` 変換 |
 
 **導出できる集計**:
 
@@ -517,6 +528,19 @@ Phase 3: localStorage → Supabase へのデータ移行
 | question_id | ❌ 廃止 → source_type='explanation'時はsource_idが問題ID | — |
 | topic_id | ❌ 廃止 → exemplar経由で導出 | — |
 
+### 7.3 FlashCard型変更で影響を受けるファイル
+
+| ファイル | 影響内容 |
+|---------|---------|
+| `src/types/flashcard.ts` | FlashCard → FlashCardTemplate + CardProgress に分割 |
+| `src/repositories/interfaces.ts` | IFlashCardRepo → IFlashCardTemplateRepo + ICardProgressRepo |
+| `src/repositories/localStorage/flashCardRepo.ts` | 新リポジトリに書き換え |
+| `src/hooks/useFlashCards.ts` | テンプレート用 + 進捗用の2フックに分離 |
+| `src/pages/FlashCardPage.tsx` | 新フック利用 + PracticeContext対応 |
+| `src/pages/FlashCardListPage.tsx` | 新フック利用 |
+| `src/components/FlashCard.tsx` | Props型の変更 |
+| `src/pages/QuestionPage.tsx` | onFlashCard の遷移先をPracticeContext付きに |
+
 ---
 
 ## 8. 将来展望（本specスコープ外）
@@ -587,3 +611,4 @@ Phase 3: localStorage → Supabase へのデータ移行
 | 日付 | バージョン | 変更内容 |
 |------|----------|---------|
 | 2026-03-26 | v1.0 | 初版作成（セクション1-4 + GPT-5.4レビュー2回分反映済み） |
+| 2026-03-26 | v1.1 | Spec Review反映: answer_history SQL/TS型マッピング追加、linkedCardIds段階廃止に変更、影響ファイルリスト追加 |
