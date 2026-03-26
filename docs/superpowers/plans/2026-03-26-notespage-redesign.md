@@ -29,7 +29,6 @@
 | 作成 | `src/pages/FusenDetailPage.tsx` | 付箋詳細ページ |
 | 作成 | `src/pages/FusenDetailPage.module.css` | 詳細ページスタイル |
 | 作成 | `src/components/notes/FusenGrid.tsx` | 2列グリッドコンテナ |
-| 作成 | `src/components/notes/FusenGrid.module.css` | グリッドスタイル |
 | 作成 | `src/components/notes/SubjectSection.tsx` | 科目セクション（ヘッダー+グリッド） |
 | 作成 | `src/components/notes/SubjectSection.module.css` | セクションスタイル |
 | 作成 | `src/components/notes/FusenThumbnail.tsx` | サムネイルカード |
@@ -217,6 +216,24 @@ describe('FusenLibraryCore', () => {
       expect(sorted.map(n => n.id)).toEqual(['high', 'mid', 'low'])
     })
   })
+
+  describe('getFusenById', () => {
+    it('存在するIDで付箋を返す', () => {
+      const notes = [
+        makeNote({ id: 'n1', title: '付箋1' }),
+        makeNote({ id: 'n2', title: '付箋2' }),
+      ]
+      const core = new FusenLibraryCore(notes)
+      const result = core.getFusenById('n2')
+      expect(result).toBeDefined()
+      expect(result!.title).toBe('付箋2')
+    })
+
+    it('存在しないIDで undefined を返す', () => {
+      const core = new FusenLibraryCore([makeNote({ id: 'n1' })])
+      expect(core.getFusenById('nonexistent')).toBeUndefined()
+    })
+  })
 })
 ```
 
@@ -231,6 +248,10 @@ Expected: FAIL（`fusen-library-core.ts` が存在しない）
 // src/utils/fusen-library-core.ts
 import type { OfficialNote } from '../types/official-note'
 
+/**
+ * Day 1 では科目単位のフラットグルーピングで十分（付箋23件）。
+ * TODO Phase 2: 科目 > 大項目 > 中項目 の階層グルーピングに拡張
+ */
 export interface FusenGroup {
   subject: string
   fusens: OfficialNote[]
@@ -338,6 +359,7 @@ import { useBookmarks } from './useBookmarks'
 export function useFusenLibrary(): {
   allFusens: OfficialNote[]
   bookmarkedFusens: OfficialNote[]
+  bookmarkedIds: Set<string>
   allGrouped: FusenGroup[]
   bookmarkedGrouped: FusenGroup[]
   getFusenById: (id: string) => OfficialNote | undefined
@@ -374,6 +396,7 @@ export function useFusenLibrary(): {
   return {
     allFusens: OFFICIAL_NOTES,
     bookmarkedFusens,
+    bookmarkedIds,
     allGrouped,
     bookmarkedGrouped,
     getFusenById,
@@ -397,6 +420,7 @@ export interface RelatedQuestionItem {
   questionId: string
   displayLabel: string
   userStatus: 'correct' | 'incorrect' | 'unanswered'
+  correctRate?: number  // 全体正答率（%）。exemplar-stats または linkedQuestionIds.length から算出
 }
 
 export interface FusenBreadcrumb {
@@ -405,6 +429,9 @@ export interface FusenBreadcrumb {
   middle: string
 }
 
+// NOTE: パフォーマンス制約 — 各呼び出しが独立して localStorage から履歴を読み込む。
+// Day 1 では付箋23件のため許容範囲。付箋数が大幅に増えた場合は
+// useFusenLibrary 側で一括ロードして渡す方式への変更を検討する。
 export function useFusenDetail(fusenId: string): {
   fusen: OfficialNote | undefined
   relatedQuestions: RelatedQuestionItem[]
@@ -495,35 +522,16 @@ git commit -m "feat(notes): useFusenLibrary + useFusenDetail フック追加"
 `src/components/layout/AppLayout.tsx` の `REDESIGNED_EXACT` 配列に `'/notes'` を追加。
 また `matchPath('/notes/:fusenId', location.pathname)` を追加。
 
-- [ ] **Step 2: routes.tsx に FusenDetailPage ルート追加**
-
-既存の `/notes` ルートはそのまま。新たに `/notes/:fusenId` を追加:
-
-```typescript
-{
-  path: '/notes/:fusenId',
-  element: <AppLayout><Suspense fallback={<Loading />}><FusenDetailPage /></Suspense></AppLayout>,
-},
-```
-
-上部に `import` 追加:
-```typescript
-import FusenDetailPage from './pages/FusenDetailPage'
-```
-
-※ `FusenDetailPage` が存在しないとビルドエラーになるため、Task 6 で作成後に追加してもよい。
-その場合はこの Step をスキップし Task 6 完了後に実施する。
-
-- [ ] **Step 3: 型チェック**
+- [ ] **Step 2: 型チェック**
 
 Run: `npx tsc --noEmit`
-Expected: PASS（FusenDetailPage 未作成の場合はスキップ）
+Expected: PASS
 
-- [ ] **Step 4: コミット**
+- [ ] **Step 3: コミット**
 
 ```bash
-git add src/components/layout/AppLayout.tsx src/routes.tsx
-git commit -m "feat(notes): ルーティング — /notes AppLayout対応、/notes/:fusenId 追加"
+git add src/components/layout/AppLayout.tsx
+git commit -m "feat(notes): AppLayout に /notes + /notes/:fusenId 追加"
 ```
 
 ---
@@ -534,7 +542,6 @@ git commit -m "feat(notes): ルーティング — /notes AppLayout対応、/not
 - Rewrite: `src/pages/NotesPage.tsx`
 - Create: `src/pages/NotesPage.module.css`
 - Create: `src/components/notes/FusenGrid.tsx`
-- Create: `src/components/notes/FusenGrid.module.css`
 - Create: `src/components/notes/SubjectSection.tsx`
 - Create: `src/components/notes/SubjectSection.module.css`
 - Create: `src/components/notes/FusenThumbnail.tsx`
@@ -637,13 +644,13 @@ export function FusenThumbnail({ note, isBookmarked }: Props) {
   gap: 6px;
   margin-top: 4px;
   font-size: 12px;
-  color: var(--text-sub);
+  color: var(--text-2);
 }
 .bookmarked {
   color: var(--accent);
 }
 .badge {
-  color: var(--text-sub);
+  color: var(--text-2);
 }
 ```
 
@@ -701,7 +708,7 @@ export function SubjectSection({ subject, fusens, bookmarkedIds }: Props) {
 }
 .count {
   font-size: 13px;
-  color: var(--text-sub);
+  color: var(--text-2);
 }
 .grid {
   display: grid;
@@ -786,7 +793,7 @@ export function EmptyState() {
 }
 .hint {
   font-size: 14px;
-  color: var(--text-sub);
+  color: var(--text-2);
   margin: 0 0 24px;
   line-height: 1.6;
 }
@@ -806,9 +813,8 @@ export function EmptyState() {
 
 ```typescript
 // src/pages/NotesPage.tsx — Soft Companion フル書き換え
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
 import { useFusenLibrary } from '../hooks/useFusenLibrary'
-import { useBookmarks } from '../hooks/useBookmarks'
 import { Chip } from '../components/ui/Chip'
 import { FloatingNav } from '../components/ui/FloatingNav'
 import { FusenGrid } from '../components/notes/FusenGrid'
@@ -817,15 +823,9 @@ import styles from './NotesPage.module.css'
 
 type Tab = 'my' | 'all'
 
-export default function NotesPage() {
+export function NotesPage() {
   const [tab, setTab] = useState<Tab>('my')
-  const { allGrouped, bookmarkedGrouped, bookmarkedFusens } = useFusenLibrary()
-  const { bookmarks } = useBookmarks()
-
-  const bookmarkedIds = useMemo(
-    () => new Set(bookmarks.map(b => b.note_id)),
-    [bookmarks],
-  )
+  const { allGrouped, bookmarkedGrouped, bookmarkedFusens, bookmarkedIds } = useFusenLibrary()
 
   const groups = tab === 'my' ? bookmarkedGrouped : allGrouped
   const showEmpty = tab === 'my' && bookmarkedFusens.length === 0
@@ -897,7 +897,7 @@ git commit -m "feat(notes): NotesPage Soft Companion リデザイン — 2列グ
 - Create: `src/components/notes/RelatedQuestionList.module.css`
 - Create: `src/components/notes/FusenBreadcrumb.tsx`
 - Create: `src/components/notes/FlashCardSection.tsx`
-- Modify: `src/routes.tsx`（Task 4 で未実施の場合）
+- Modify: `src/routes.tsx`（`/notes/:fusenId` ルート追加）
 
 **参照:** spec §4.1-4.3, §7.1
 
@@ -914,7 +914,7 @@ interface Props {
 export function FusenBreadcrumb({ breadcrumb }: Props) {
   const parts = [breadcrumb.subject, breadcrumb.major, breadcrumb.middle].filter(Boolean)
   return (
-    <span style={{ fontSize: 13, color: 'var(--text-sub)' }}>
+    <span style={{ fontSize: 13, color: 'var(--text-2)' }}>
       {parts.join(' > ')}
     </span>
   )
@@ -1003,7 +1003,7 @@ export function RelatedQuestionList({ questions }: Props) {
 }
 .status {
   font-size: 13px;
-  color: var(--text-sub);
+  color: var(--text-2);
 }
 ```
 
@@ -1022,7 +1022,7 @@ export function FlashCardSection() {
         background: 'var(--card)',
         borderRadius: 'var(--r)',
         textAlign: 'center',
-        color: 'var(--text-sub)',
+        color: 'var(--text-2)',
         fontSize: 14,
       }}>
         🔒 準備中
@@ -1047,7 +1047,7 @@ import { FlashCardSection } from '../components/notes/FlashCardSection'
 import { FloatingNav } from '../components/ui/FloatingNav'
 import styles from './FusenDetailPage.module.css'
 
-export default function FusenDetailPage() {
+export function FusenDetailPage() {
   const { fusenId } = useParams<{ fusenId: string }>()
   const navigate = useNavigate()
   const { fusen, relatedQuestions, breadcrumb, isBookmarked, toggleBookmark } =
@@ -1190,7 +1190,7 @@ export default function FusenDetailPage() {
 }
 .badge {
   font-size: 13px;
-  color: var(--text-sub);
+  color: var(--text-2);
 }
 .sectionTitle {
   font-size: 14px;
@@ -1219,9 +1219,19 @@ export default function FusenDetailPage() {
 }
 ```
 
-- [ ] **Step 7: routes.tsx にルート追加（Task 4 で未実施の場合）**
+- [ ] **Step 7: routes.tsx に `/notes/:fusenId` ルート追加**
 
-`src/routes.tsx` に FusenDetailPage のルートを追加。
+`src/routes.tsx` に FusenDetailPage のルートを追加:
+
+```typescript
+import { FusenDetailPage } from './pages/FusenDetailPage'
+
+// 既存の /notes ルートの下に追加
+{
+  path: '/notes/:fusenId',
+  element: <AppLayout><Suspense fallback={<Loading />}><FusenDetailPage /></Suspense></AppLayout>,
+},
+```
 
 - [ ] **Step 8: 型チェック + テスト**
 
