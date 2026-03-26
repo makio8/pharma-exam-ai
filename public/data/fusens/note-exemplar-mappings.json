@@ -1,0 +1,621 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-26T14:00:00.000Z",
+  "generatedBy": "claude-session",
+  "noteCount": 23,
+  "mappings": [
+    {
+      "noteId": "on-001",
+      "noteTitle": "SI基本単位",
+      "subject": "物理",
+      "topicId": "physics-material-structure",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-001",
+          "isPrimary": true,
+          "confidence": 0.80,
+          "reasoning": "SI基本単位は化学結合の様式（物質の構造の基礎）と同じ大分類に属する。単位系は物質の構造を定量的に記述するための基盤であり、直接的な対応。ただしexemplarのテキストは「化学結合」に焦点があるため0.80。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-011",
+          "isPrimary": false,
+          "confidence": 0.65,
+          "reasoning": "電磁波の性質と物質との相互作用を説明する際、SI単位（波長m、振動数Hz、エネルギーJ等）の理解が前提となる。間接的な関連。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-002",
+      "noteTitle": "物理量の単位まとめ",
+      "subject": "物理",
+      "topicId": "physics-material-structure",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-001",
+          "isPrimary": true,
+          "confidence": 0.82,
+          "reasoning": "エネルギー(J)・圧力(Pa)・力(N)のSI基本単位への分解は、化学結合の様式を定量的に説明する基礎知識。物質の構造カテゴリ内で最も近い。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-011",
+          "isPrimary": false,
+          "confidence": 0.65,
+          "reasoning": "電磁波のエネルギー（J）や圧力（Pa）等の物理量は、電磁波と物質の相互作用を理解する基盤。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-003",
+      "noteTitle": "圧力とエネルギーの定義",
+      "subject": "物理",
+      "topicId": "physics-material-structure",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-001",
+          "isPrimary": true,
+          "confidence": 0.80,
+          "reasoning": "圧力(Pa)とエネルギー(J)の定義は物質の構造を理解するための基本物理量。化学結合の様式を説明する際にエネルギーの概念は不可欠。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-026",
+          "isPrimary": false,
+          "confidence": 0.70,
+          "reasoning": "エネルギーの定義は熱力学第一法則（エネルギー保存）と密接に関連。ただしtopicIdが異なる（physics-energy-equilibrium）。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-004",
+      "noteTitle": "力（ニュートン）を覚える",
+      "subject": "物理",
+      "topicId": "physics-material-structure",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-001",
+          "isPrimary": true,
+          "confidence": 0.80,
+          "reasoning": "ニュートン(N=kg・m・s⁻²)は力の単位であり、化学結合の強さや分子間力を定量化する基礎。物質の構造カテゴリの基盤知識。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-004",
+          "isPrimary": false,
+          "confidence": 0.65,
+          "reasoning": "ファンデルワールス力を説明する際、力の単位(N)と加速度の定義が前提知識となる。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-005",
+      "noteTitle": "SI単位換算",
+      "subject": "物理",
+      "topicId": "physics-material-structure",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-001",
+          "isPrimary": true,
+          "confidence": 0.82,
+          "reasoning": "N→Pa→Jへの単位換算プロセスは、化学結合のエネルギーや分子間相互作用の強さを正しく理解するための必須スキル。同一topicId内で最も関連が深い。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-011",
+          "isPrimary": false,
+          "confidence": 0.62,
+          "reasoning": "電磁波のエネルギー計算等で単位換算スキルが必要。間接的な関連。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-006",
+      "noteTitle": "濃度単位換算",
+      "subject": "薬剤",
+      "topicId": "physics-energy-equilibrium",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-044",
+          "isPrimary": true,
+          "confidence": 0.80,
+          "reasoning": "濃度単位(ppm, mg/L, W/V%)の換算は、希薄溶液の束一的性質を説明する際に必要な基礎知識。溶液の性質カテゴリ内で濃度表現を直接扱う。topicId一致（physics-energy-equilibrium）。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-045",
+          "isPrimary": false,
+          "confidence": 0.65,
+          "reasoning": "活量と活量係数の理解には濃度の正確な把握が前提。濃度単位換算は活量計算の基礎。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-047",
+          "isPrimary": false,
+          "confidence": 0.62,
+          "reasoning": "イオン強度の計算では濃度(mol/L)が基本。ppm等との換算知識が必要な場面がある。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-007",
+      "noteTitle": "W/V%の定義",
+      "subject": "薬剤",
+      "topicId": "physics-energy-equilibrium",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-044",
+          "isPrimary": true,
+          "confidence": 0.82,
+          "reasoning": "W/V%（重量対容量百分率）は溶液の濃度表現の一つであり、希薄溶液の束一的性質の理解に必須。topicId一致（physics-energy-equilibrium）。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-045",
+          "isPrimary": false,
+          "confidence": 0.63,
+          "reasoning": "活量係数の計算では溶液濃度の正確な定義が必要。W/V%から活量への変換が実務上生じる。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-008",
+      "noteTitle": "10^0.3 = 2",
+      "subject": "物理",
+      "topicId": "physics-material-structure",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-061",
+          "isPrimary": true,
+          "confidence": 0.85,
+          "reasoning": "log2≈0.3はpH計算・解離定数の計算で頻出の暗記値。「pH及び解離定数について説明できる」を解くために必須の計算スキル。topicIdは異なるが（physics-analysis-basics）、内容の直接対応度が非常に高い。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-001",
+          "isPrimary": false,
+          "confidence": 0.60,
+          "reasoning": "同一topicId（physics-material-structure）内では化学結合が最も近いが、対数計算との直接的関連は薄い。topicId一致のため参考として記載。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-009",
+      "noteTitle": "双極子の種類",
+      "subject": "化学",
+      "topicId": "chemistry-basic-properties",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-006",
+          "isPrimary": true,
+          "confidence": 0.92,
+          "reasoning": "永久双極子と誘起双極子の違いは「双極子間相互作用について例を挙げて説明できる」に直接対応。内容が完全に一致。topicIdは異なるが（physics-material-structure）、同じ物理量・化学の基礎領域。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-007",
+          "isPrimary": true,
+          "confidence": 0.85,
+          "reasoning": "無極性分子の分散力（ロンドン力）による誘起双極子は「分散力について例を挙げて説明できる」に直接対応。付箋の内容に明記されている。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-004",
+          "isPrimary": false,
+          "confidence": 0.75,
+          "reasoning": "ファンデルワールス力は双極子相互作用・分散力を含む上位概念。双極子の種類を理解する背景知識。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-010",
+      "noteTitle": "アルカンの沸点",
+      "subject": "化学",
+      "topicId": "chemistry-basic-properties",
+      "matches": [
+        {
+          "exemplarId": "ex-chemistry-018",
+          "isPrimary": true,
+          "confidence": 0.90,
+          "reasoning": "「アルカンの基本的な性質について説明できる」に直接対応。炭素数と沸点の関係、分岐による沸点変化はアルカンの基本性質そのもの。topicId一致（chemistry-basic-properties）。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-007",
+          "isPrimary": true,
+          "confidence": 0.85,
+          "reasoning": "アルカンの沸点を決定する分散力（ロンドン力）の理解は「分散力について例を挙げて説明できる」に直接対応。分岐→球形→分散力低下のメカニズム。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-004",
+          "isPrimary": false,
+          "confidence": 0.72,
+          "reasoning": "ファンデルワールス力（分散力を含む上位概念）がアルカンの沸点を決める主因。背景知識として関連。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-011",
+      "noteTitle": "H₂OとHFの水素結合",
+      "subject": "化学",
+      "topicId": "chemistry-basic-properties",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-008",
+          "isPrimary": true,
+          "confidence": 0.95,
+          "reasoning": "H₂OとHFの水素結合の比較は「水素結合について例を挙げて説明できる」の典型例そのもの。内容が完全に一致。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-006",
+          "isPrimary": false,
+          "confidence": 0.65,
+          "reasoning": "水素結合は双極子間相互作用の一種でもあり、双極子の概念理解が基盤。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-012",
+      "noteTitle": "沸点まとめ",
+      "subject": "化学",
+      "topicId": "chemistry-basic-properties",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-004",
+          "isPrimary": true,
+          "confidence": 0.88,
+          "reasoning": "「ファンデルワールス力の概要を説明できる」に直接対応。沸点の比較表は水素結合>双極子相互作用>分散力の序列であり、ファンデルワールス力全体の概要理解。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-008",
+          "isPrimary": true,
+          "confidence": 0.85,
+          "reasoning": "沸点序列の最上位にある水素結合の理解は「水素結合について例を挙げて説明できる」に直接対応。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-006",
+          "isPrimary": false,
+          "confidence": 0.75,
+          "reasoning": "比較表の中間に位置する双極子相互作用は「双極子間相互作用について例を挙げて説明できる」に関連。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-007",
+          "isPrimary": false,
+          "confidence": 0.75,
+          "reasoning": "比較表の最下位にある分散力は「分散力について例を挙げて説明できる」に関連。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-013",
+      "noteTitle": "ヨウ素の電荷移動相互作用",
+      "subject": "物理",
+      "topicId": "physics-material-structure",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-009",
+          "isPrimary": true,
+          "confidence": 0.95,
+          "reasoning": "ベンゼン+ヨウ素の電荷移動相互作用は「電荷移動相互作用について例を挙げて説明できる」の代表例そのもの。完全一致。topicId一致（physics-material-structure）。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-014",
+      "noteTitle": "水素結合と物性",
+      "subject": "化学",
+      "topicId": "chemistry-basic-properties",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-008",
+          "isPrimary": true,
+          "confidence": 0.93,
+          "reasoning": "水素結合が沸点・水溶性・粘度・DNA安定化に与える影響は「水素結合について例を挙げて説明できる」に直接対応。物性への影響まで含めた包括的説明。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-chemistry-061",
+          "isPrimary": false,
+          "confidence": 0.65,
+          "reasoning": "DNA二重鎖の水素結合による安定化は「生体高分子の立体構造とそれを規定する化学結合、相互作用」に関連。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-015",
+      "noteTitle": "原子の構成",
+      "subject": "化学",
+      "topicId": "chemistry-basic-properties",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-017",
+          "isPrimary": true,
+          "confidence": 0.92,
+          "reasoning": "原子核（陽子+中性子）と電子殻、質量数=陽子数+中性子数は「原子の構造と放射壊変について説明できる」の前半部分に直接対応。topicIdは異なるが（physics-material-structure）、内容の一致度が非常に高い。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-001",
+          "isPrimary": false,
+          "confidence": 0.70,
+          "reasoning": "原子の構成は化学結合の様式を理解する前提知識。電子配置が結合様式を決定する。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-016",
+      "noteTitle": "素粒子",
+      "subject": "物理",
+      "topicId": "physics-material-structure",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-017",
+          "isPrimary": true,
+          "confidence": 0.85,
+          "reasoning": "素粒子（クォーク、レプトン等）は原子核を構成する根本的粒子であり、「原子の構造と放射壊変について説明できる」の基盤知識。topicId一致（physics-material-structure）。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-018",
+          "isPrimary": false,
+          "confidence": 0.70,
+          "reasoning": "電離放射線の種類（α線=He原子核、β線=電子等）は素粒子の知識と関連。放射線の粒子としての性質理解に必要。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-017",
+      "noteTitle": "壊変様式と質量数・原子番号の変化",
+      "subject": "物理",
+      "topicId": "physics-material-structure",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-017",
+          "isPrimary": true,
+          "confidence": 0.95,
+          "reasoning": "α壊変・β⁻壊変・β⁺壊変・EC・核異性体転移の比較表は「原子の構造と放射壊変について説明できる」に完全に直接対応。topicId一致。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-018",
+          "isPrimary": true,
+          "confidence": 0.88,
+          "reasoning": "各壊変様式で放出される放射線（α線、β線、γ線等）の性質は「電離放射線の種類を列挙し、それらの性質及び物質との相互作用について説明できる」に直接対応。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-019",
+          "isPrimary": false,
+          "confidence": 0.75,
+          "reasoning": "壊変様式の知識は「代表的な放射性核種の物理的性質」を理解する基盤。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-018",
+      "noteTitle": "β⁻線のみ放出する核種",
+      "subject": "物理",
+      "topicId": "physics-material-structure",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-019",
+          "isPrimary": true,
+          "confidence": 0.95,
+          "reasoning": "³H, ¹⁴C, ³²P, ³⁵S, ⁹⁰Sr等のβ⁻線放出核種は「代表的な放射性核種の物理的性質について説明できる」に完全に直接対応。topicId一致。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-018",
+          "isPrimary": true,
+          "confidence": 0.85,
+          "reasoning": "β⁻線の性質（中性子→陽子+電子）は「電離放射線の種類を列挙し、それらの性質」に直接対応。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-017",
+          "isPrimary": false,
+          "confidence": 0.75,
+          "reasoning": "β⁻壊変（Z+1）の機序は原子の構造と放射壊変の知識に基づく。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-019",
+      "noteTitle": "β⁺線を放出する核種",
+      "subject": "物理",
+      "topicId": "physics-material-structure",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-019",
+          "isPrimary": true,
+          "confidence": 0.95,
+          "reasoning": "¹¹C, ¹³N, ¹⁵O, ¹⁸F等のβ⁺線（陽電子）放出核種は「代表的な放射性核種の物理的性質について説明できる」に完全に直接対応。PET検査核種。topicId一致。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-018",
+          "isPrimary": true,
+          "confidence": 0.85,
+          "reasoning": "β⁺線（陽電子）の性質は「電離放射線の種類を列挙し、それらの性質」に直接対応。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-101",
+          "isPrimary": false,
+          "confidence": 0.70,
+          "reasoning": "PET検査で使用されるβ⁺核種は「代表的な画像診断技術（核医学検査等）」と関連。topicId異なる（physics-clinical-analysis）。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-020",
+      "noteTitle": "電子捕獲とX線・オージェ",
+      "subject": "物理",
+      "topicId": "physics-material-structure",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-017",
+          "isPrimary": true,
+          "confidence": 0.90,
+          "reasoning": "電子捕獲（EC）は放射壊変の一種であり、「原子の構造と放射壊変について説明できる」に直接対応。topicId一致。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-019",
+          "isPrimary": true,
+          "confidence": 0.88,
+          "reasoning": "¹²⁵I, ⁵¹Cr等のEC核種は「代表的な放射性核種の物理的性質」の具体例。topicId一致。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-018",
+          "isPrimary": false,
+          "confidence": 0.75,
+          "reasoning": "特性X線・オージェ電子は電離放射線の一種であり、その性質理解に関連。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-021",
+      "noteTitle": "核異性体転移",
+      "subject": "物理",
+      "topicId": "physics-material-structure",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-017",
+          "isPrimary": true,
+          "confidence": 0.93,
+          "reasoning": "核異性体転移（IT）は放射壊変の一種であり、⁹⁹ᵐTc→⁹⁹Tcのγ線放出は「原子の構造と放射壊変について説明できる」に直接対応。topicId一致。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-018",
+          "isPrimary": true,
+          "confidence": 0.85,
+          "reasoning": "γ線は電離放射線の一種であり、「電離放射線の種類を列挙し、それらの性質」に直接対応。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-019",
+          "isPrimary": false,
+          "confidence": 0.78,
+          "reasoning": "⁹⁹ᵐTcは「代表的な放射性核種の物理的性質」の典型例。核異性体転移の代表核種。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-022",
+      "noteTitle": "被曝の上限線量",
+      "subject": "衛生",
+      "topicId": "hygiene-chemical-radiation",
+      "matches": [
+        {
+          "exemplarId": "ex-hygiene-056",
+          "isPrimary": true,
+          "confidence": 0.90,
+          "reasoning": "一般公衆の年間被曝限度1mSvは「電離放射線を防御する方法について説明できる」の基本数値。放射線防護の根幹。topicId一致（hygiene-chemical-radiation）。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-hygiene-054",
+          "isPrimary": true,
+          "confidence": 0.82,
+          "reasoning": "被曝線量の概念は「電離放射線を列挙し、生体への影響を説明できる」の定量的側面に直接対応。topicId一致。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-hygiene-055",
+          "isPrimary": false,
+          "confidence": 0.68,
+          "reasoning": "放射性核種と生体との相互作用の結果として被曝が生じる。線量限度は核種による被曝管理の基準。topicId一致。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "noteId": "on-023",
+      "noteTitle": "⁹⁹ᵐTcについて",
+      "subject": "物理",
+      "topicId": "physics-material-structure",
+      "matches": [
+        {
+          "exemplarId": "ex-physics-019",
+          "isPrimary": true,
+          "confidence": 0.95,
+          "reasoning": "⁹⁹ᵐTc（半減期6時間、γ線140keV）は「代表的な放射性核種の物理的性質について説明できる」の最も代表的な核種。完全一致。topicId一致。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-020",
+          "isPrimary": true,
+          "confidence": 0.88,
+          "reasoning": "⁹⁹Mo→⁹⁹ᵐTcジェネレータは「核反応及び放射平衡について説明できる」の代表例。過渡平衡の典型。topicId一致。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-101",
+          "isPrimary": false,
+          "confidence": 0.75,
+          "reasoning": "⁹⁹ᵐTcは核医学検査で最も使用される核種であり、「代表的な画像診断技術（核医学検査等）」と関連。topicId異なる（physics-clinical-analysis）。",
+          "status": "pending"
+        },
+        {
+          "exemplarId": "ex-physics-017",
+          "isPrimary": false,
+          "confidence": 0.72,
+          "reasoning": "⁹⁹ᵐTc→⁹⁹Tcの核異性体転移は放射壊変の一種。原子の構造と壊変の知識に基づく。",
+          "status": "pending"
+        }
+      ],
+      "reviewStatus": "pending"
+    }
+  ]
+}
