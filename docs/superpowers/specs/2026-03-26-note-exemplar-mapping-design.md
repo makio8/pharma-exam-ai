@@ -348,6 +348,7 @@ official-notes.ts 更新完了
 
 ## 7. スコープ外（将来タスク）
 
+- **同topicId全exemplar一覧表示**: レビュー時に「なぜこの候補が選ばれたか」を判断するため、同じtopicId（middleCategoryId）内の全exemplarを折りたたみセクションで表示。ユーザーフィードバック（2026-03-26スマホ実機確認時）
 - fusens-master.json 177枚への横展開
 - ExemplarSearchModal（検索追加モーダル）
 - Supabase `official_note_exemplars` テーブル
