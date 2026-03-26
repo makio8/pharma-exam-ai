@@ -3,12 +3,14 @@ import type { ValidationContext, ValidationIssue, ValidationReport, Severity } f
 import { structuralRules } from './rules/structural'
 import { consistencyRules } from './rules/consistency'
 import { qualityRules } from './rules/quality'
+import { noteValidationRules } from './rules/note-validation'
 
 export function runAllRules(questions: Question[], context: ValidationContext): ValidationReport {
   const allIssues: ValidationIssue[] = [
     ...structuralRules(questions, context),
     ...consistencyRules(questions, context),
     ...qualityRules(questions, context),
+    ...noteValidationRules(questions, context),
   ]
 
   // 付箋IDなど問題ID以外の questionId はカウントから除外

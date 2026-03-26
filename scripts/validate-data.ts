@@ -20,6 +20,7 @@ import { QUESTION_TOPIC_MAP } from '../src/data/question-topic-map'
 import { QUESTION_EXEMPLAR_MAP } from '../src/data/question-exemplar-map'
 import { EXAM_BLUEPRINT } from '../src/data/exam-blueprint'
 import { OFFICIAL_NOTES } from '../src/data/official-notes'
+import { EXEMPLARS } from '../src/data/exemplars'
 import { runAllRules } from '../src/utils/data-validator/index'
 import type { ValidationContext } from '../src/utils/data-validator/types'
 
@@ -51,6 +52,13 @@ const context: ValidationContext = {
   })),
   questionIds: new Set(ALL_QUESTIONS.map(q => q.id)),
   imageDir: path.join(__dirname, '..', 'public'),
+  exemplars: EXEMPLARS,
+  officialNotesWithExemplars: OFFICIAL_NOTES.map(n => ({
+    id: n.id,
+    exemplarIds: n.exemplarIds,
+    subject: n.subject,
+    topicId: n.topicId,
+  })),
 }
 
 // ─────────────────────────────────────────────

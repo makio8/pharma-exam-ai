@@ -1,4 +1,5 @@
 import type { Question } from '../../types/question'
+import type { Exemplar } from '../../types/blueprint'
 
 export type Severity = 'error' | 'warning' | 'info'
 
@@ -21,6 +22,10 @@ export interface ValidationContext {
   officialNotes: Array<{ id: string; linkedQuestionIds: string[]; topicId: string }>
   questionIds: Set<string>
   imageDir: string
+  /** 例示マスタ（付箋バリデーション用） */
+  exemplars: Exemplar[]
+  /** exemplarIds 付き付箋（付箋バリデーション用） */
+  officialNotesWithExemplars: Array<{ id: string; exemplarIds?: string[]; subject: string; topicId: string }>
 }
 
 export interface ValidationReport {

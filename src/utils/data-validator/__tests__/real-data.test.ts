@@ -4,6 +4,7 @@ import { QUESTION_TOPIC_MAP } from '../../../data/question-topic-map'
 import { QUESTION_EXEMPLAR_MAP } from '../../../data/question-exemplar-map'
 import { EXAM_BLUEPRINT } from '../../../data/exam-blueprint'
 import { OFFICIAL_NOTES } from '../../../data/official-notes'
+import { EXEMPLARS } from '../../../data/exemplars'
 import { runAllRules } from '../index'
 import type { ValidationContext } from '../types'
 
@@ -28,6 +29,13 @@ const context: ValidationContext = {
   })),
   questionIds: new Set(ALL_QUESTIONS.map(q => q.id)),
   imageDir: '',  // テスト時はファイル存在チェックスキップ
+  exemplars: EXEMPLARS,
+  officialNotesWithExemplars: OFFICIAL_NOTES.map(n => ({
+    id: n.id,
+    exemplarIds: n.exemplarIds,
+    subject: n.subject,
+    topicId: n.topicId,
+  })),
 }
 
 describe('実データバリデーション', () => {
