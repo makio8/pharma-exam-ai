@@ -103,7 +103,20 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - Chipでモード切替: 🔥自分の苦手 | ⚠️必須の取りこぼし
   - GPT-5.4レビュー: AnalysisPage本体は指摘ゼロ
   - テスト: 15ファイル278件全パス
-  - **次: スマホ実機テスト（SWキャッシュ問題解決要）→ NotesPage or FlashCardPage リデザイン or オンボーディング**
+  - **次: スマホ実機テスト（SWキャッシュ問題解決要）→ FlashCardPage リデザイン or オンボーディング**
+- **Phase 1 Week 5 完了: NotesPage リデザイン**
+  - 276行→39行（86%削減）、Ant Design依存ゼロ
+  - 2タブ構成: マイ付箋（ブックマーク済み）/ 全付箋（科目別グリッド）
+  - 2列画像グリッド: FusenThumbnail（サムネイル+タイトル+重要度バッジ）
+  - 付箋詳細ページ: `/notes/:fusenId`（画像+AI要約+関連問題+暗記カード準備中+CTA）
+  - 新規: FusenLibraryCore（純粋関数テスト13件）、useFusenLibrary、useFusenDetail
+  - 新規コンポーネント: FusenGrid, SubjectSection, FusenThumbnail, EmptyState, RelatedQuestionList, FusenBreadcrumb, FlashCardSection
+  - OfficialNote型変更: linkedCardIds廃止、exemplarIds?/noteType?追加
+  - GPT-5.4レビュー: 各タスク後に実行、既知のデータ品質問題（spec §13）のみ検出
+  - テスト: 22ファイル417件全パス
+  - 設計: `docs/superpowers/specs/2026-03-26-notespage-redesign-design.md`（v1.3、GPT-5.4+Spec Review済み）
+  - 計画: `docs/superpowers/plans/2026-03-26-notespage-redesign.md`（v1.1、7タスク全完了）
+  - **次: ブラウザ動作確認 → FlashCardPage リデザイン or オンボーディング**
 - **学習サイクル循環設計（2026-03-26）**
   - 3機能（演習・付箋・暗記カード）をExemplar（986件）ハブで紐付ける全体設計
   - データモデル: OfficialNoteにexemplarIds追加、FlashCard→FlashCardTemplate+CardProgress分離、linkedCardIds廃止予定
@@ -144,13 +157,13 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - 設計: `docs/superpowers/specs/2026-03-25-fusen-annotate-ui-design.md`（GPT-5.4 Approved）
   - 計画: `docs/superpowers/plans/2026-03-25-fusen-annotate-ui.md`
   - レビューUI Phase 1: `/dev-tools/fusen-review`（判定+キーボードナビ、Phase 2b以降で使用）
-- Ant Design: 未移行ページ（NotesPage, FlashCardPage）がまだ依存中
+- Ant Design: 未移行ページ（FlashCardPage）がまだ依存中。NotesPageはリデザイン済み
 - AppLayout: `REDESIGNED_EXACT` + `matchPath('/practice/:questionId')` でリデザイン済みページを管理
 
 ## コマンド
 - `npm run dev` — 開発サーバー
 - `npm run build` — `tsc -b && vite build`（noUnusedLocals: true、未使用importでエラー）
-- `npx vitest run` — テスト（21ファイル404テスト）
+- `npx vitest run` — テスト（22ファイル417テスト）
 - `npx tsc --noEmit` — 型チェックのみ
 - `codex review --base <SHA>` — GPT-5.4によるコードレビュー（マルチモデル戦略）
 - `codex review --commit <SHA>` — 特定コミットのレビュー
@@ -176,9 +189,11 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - 共通UIコンポーネント: `src/components/ui/`（Chip, FloatingNav, BottomSheet, QuestionCard 等）
 - データ層: `src/data/`（all-questions, exam-blueprint, question-topic-map, exemplar-stats）
 - カスタムフック: `src/hooks/`（useAnswerHistory, useTopicMastery, useAnalytics, useFlashCards）
-- カスタムフック（新規）: `src/hooks/`（useQuestionAnswerState, useTimeTracking, useSwipeNavigation, useOfficialNotes, useBookmarks）
+- カスタムフック（新規）: `src/hooks/`（useQuestionAnswerState, useTimeTracking, useSwipeNavigation, useOfficialNotes, useBookmarks, useFusenLibrary, useFusenDetail）
+- ノートドメインコンポーネント: `src/components/notes/`（FusenGrid, SubjectSection, FusenThumbnail, EmptyState, RelatedQuestionList, FusenBreadcrumb, FlashCardSection）
+- 付箋コアロジック: `src/utils/fusen-library-core.ts`（FusenLibraryCore — グルーピング・フィルター・ソート・バッジ計算。純粋関数テスト13件）
 - 問題ドメインコンポーネント: `src/components/question/`（ProgressHeader, QuestionBody, ChoiceList, ChoiceCard, ActionArea, ResultBanner, ExplanationSection, OfficialNoteCard, NoteImageViewer, MetaAccordion）— LinkedQuestionViewer からも再利用前提
-- 公式付箋データ: `src/data/official-notes.ts`（実データ23枚、実画像パス使用）、型: `src/types/official-note.ts`
+- 公式付箋データ: `src/data/official-notes.ts`（実データ23枚、実画像パス使用）、型: `src/types/official-note.ts`（linkedCardIds廃止済み、exemplarIds?/noteType?追加）
 - データバリデーター: `src/utils/data-validator/`（39ルール、3レベル: 構造/整合性/品質）
 - レビューUI: `src/dev-tools/review/`（Vite dev server統合、本番ビルドに含まれない）
 - 修正スクリプト: `scripts/apply-corrections.ts`（中間JSON方式） + `scripts/json-to-exam-ts.ts`
@@ -210,6 +225,9 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - BottomSheet: padding-bottom 100px以上必要（FloatingNavとの被り防止）
 - QuestionCard: onClick時は tabIndex + onKeyDown も必要（アクセシビリティ）
 - BottomSheet: 閉じている間は aria-hidden + inert で操作不能に
+- ページコンポーネントのexportパターン: `export function PageName()`（named export）。`export default` は不可。routes.tsx が `.then(m => ({ default: m.PageName }))` でラップ
+- CSS変数: セカンダリテキストは `var(--text-2)`。`var(--text-sub)` は存在しない
+- ロジック分離パターン: FusenLibraryCore のように純粋クラスに抽出 → フック(useFusenLibrary)がラップ → コンポーネントはフック経由で使用。テストはクラスに対して行う
 
 ## Vite dev server の注意事項
 - `server.fs.allow` を明示指定すると**プロジェクトルートのデフォルト許可が消える** → 必ず `__dirname` を先頭に含める
@@ -275,6 +293,7 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `docs/superpowers/plans/2026-03-25-fix-choice-suffix-leak.md` — 選択肢サフィックス漏れ修正計画（全5タスク完了）
 - `docs/superpowers/specs/2026-03-26-learning-cycle-architecture-design.md` — **学習サイクル循環設計 v1.2**（3機能紐付け+ナビ+カード生成+DB蓄積、GPT-5.4×3回+5人チームレビュー済み）
 - `docs/superpowers/specs/2026-03-26-notespage-redesign-design.md` — NotesPage リデザイン v1.3（循環設計と整合済み）
+- `docs/superpowers/plans/2026-03-26-notespage-redesign.md` — NotesPage 実装計画 v1.1（7タスク全完了、GPT-5.4+Spec Review済み）
 
 ## データ構造メモ
 - `QUESTION_TOPIC_MAP`: Record<questionId, topicId> — 問題→中項目マッピング
