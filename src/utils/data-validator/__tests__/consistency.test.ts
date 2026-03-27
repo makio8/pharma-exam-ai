@@ -36,7 +36,7 @@ function makeContext(overrides: Partial<ValidationContext> = {}): ValidationCont
     blueprintTopicIds: new Set(['physics-material-structure']),
     exemplarQuestionIds: new Set(['r110-001']),
     officialNotes: [
-      { id: 'on-001', linkedQuestionIds: ['r110-001'], topicId: 'physics-material-structure' },
+      { id: 'fusen-0001', linkedQuestionIds: ['r110-001'], topicId: 'physics-material-structure' },
     ],
     questionIds: new Set(['r110-001']),
     imageDir: '', // テスト時はファイルチェックスキップ
@@ -368,7 +368,7 @@ describe('ルール21: note-question-exists', () => {
     const q = makeQuestion({ id: 'r110-001' })
     const ctx = makeContext({
       officialNotes: [
-        { id: 'on-001', linkedQuestionIds: ['r110-001'], topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', linkedQuestionIds: ['r110-001'], topicId: 'physics-material-structure' },
       ],
       questionIds: new Set(['r110-001']),
     })
@@ -380,7 +380,7 @@ describe('ルール21: note-question-exists', () => {
     const q = makeQuestion({ id: 'r110-001' })
     const ctx = makeContext({
       officialNotes: [
-        { id: 'on-001', linkedQuestionIds: ['r110-999'], topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', linkedQuestionIds: ['r110-999'], topicId: 'physics-material-structure' },
       ],
       questionIds: new Set(['r110-001']),
     })
@@ -394,7 +394,7 @@ describe('ルール21: note-question-exists', () => {
     const q = makeQuestion({ id: 'r110-001' })
     const ctx = makeContext({
       officialNotes: [
-        { id: 'on-001', linkedQuestionIds: [], topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', linkedQuestionIds: [], topicId: 'physics-material-structure' },
       ],
       questionIds: new Set(['r110-001']),
     })
@@ -426,7 +426,7 @@ describe('ルール22: note-topic-valid', () => {
     const q = makeQuestion({ id: 'r110-001' })
     const ctx = makeContext({
       officialNotes: [
-        { id: 'on-001', linkedQuestionIds: ['r110-001'], topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', linkedQuestionIds: ['r110-001'], topicId: 'physics-material-structure' },
       ],
       blueprintTopicIds: new Set(['physics-material-structure']),
       questionIds: new Set(['r110-001']),
@@ -439,7 +439,7 @@ describe('ルール22: note-topic-valid', () => {
     const q = makeQuestion({ id: 'r110-001' })
     const ctx = makeContext({
       officialNotes: [
-        { id: 'on-001', linkedQuestionIds: ['r110-001'], topicId: 'non-existent-topic' },
+        { id: 'fusen-0001', linkedQuestionIds: ['r110-001'], topicId: 'non-existent-topic' },
       ],
       blueprintTopicIds: new Set(['physics-material-structure']),
       questionIds: new Set(['r110-001']),

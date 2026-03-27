@@ -10,7 +10,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
   // 物理 — 物質の構造（SI単位・物理量）
   // ========================================
   {
-    id: 'on-001',
+    id: 'fusen-0001',
     title: 'SI基本単位',
     imageUrl: '/images/fusens/page-001-left/note-01.png',
     textSummary:
@@ -24,7 +24,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-002',
+    id: 'fusen-0002',
     title: '物理量の単位まとめ',
     imageUrl: '/images/fusens/page-001-left/note-02.png',
     textSummary:
@@ -38,7 +38,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-003',
+    id: 'fusen-0003',
     title: '圧力とエネルギーの定義',
     imageUrl: '/images/fusens/page-001-left/note-03.png',
     textSummary:
@@ -52,7 +52,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-004',
+    id: 'fusen-0004',
     title: '力（ニュートン）を覚える',
     imageUrl: '/images/fusens/page-001-left/note-04.png',
     textSummary:
@@ -66,7 +66,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-005',
+    id: 'fusen-0005',
     title: 'SI単位換算',
     imageUrl: '/images/fusens/page-001-left/note-05.png',
     textSummary:
@@ -83,7 +83,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
   // 薬剤 — 濃度・計算
   // ========================================
   {
-    id: 'on-006',
+    id: 'fusen-0006',
     title: '濃度単位換算',
     imageUrl: '/images/fusens/page-001-left/note-06.png',
     textSummary:
@@ -97,7 +97,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-007',
+    id: 'fusen-0007',
     title: 'W/V%の定義',
     imageUrl: '/images/fusens/page-001-left/note-07.png',
     textSummary:
@@ -111,7 +111,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-008',
+    id: 'fusen-0008',
     title: '10^0.3 = 2',
     imageUrl: '/images/fusens/page-001-left/note-08.png',
     textSummary:
@@ -128,7 +128,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
   // 化学 — 分子間相互作用・物性
   // ========================================
   {
-    id: 'on-009',
+    id: 'fusen-0009',
     title: '双極子の種類',
     imageUrl: '/images/fusens/page-001-right/note-01.png',
     textSummary:
@@ -142,7 +142,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-010',
+    id: 'fusen-0010',
     title: 'アルカンの沸点',
     imageUrl: '/images/fusens/page-001-right/note-02.png',
     textSummary:
@@ -156,7 +156,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-011',
+    id: 'fusen-0011',
     title: 'H₂OとHFの水素結合',
     imageUrl: '/images/fusens/page-001-right/note-03.png',
     textSummary:
@@ -170,7 +170,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-012',
+    id: 'fusen-0012',
     title: '沸点まとめ',
     imageUrl: '/images/fusens/page-001-right/note-04.png',
     textSummary:
@@ -184,7 +184,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-013',
+    id: 'fusen-0013',
     title: 'ヨウ素の電荷移動相互作用',
     imageUrl: '/images/fusens/page-001-right/note-05.png',
     textSummary:
@@ -198,7 +198,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-014',
+    id: 'fusen-0014',
     title: '水素結合と物性',
     imageUrl: '/images/fusens/page-001-right/note-06.png',
     textSummary:
@@ -215,7 +215,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
   // 物理・化学 — 原子・放射線
   // ========================================
   {
-    id: 'on-015',
+    id: 'fusen-0015',
     title: '原子の構成',
     imageUrl: '/images/fusens/page-002-left/note-01.png',
     textSummary:
@@ -229,7 +229,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-016',
+    id: 'fusen-0016',
     title: '素粒子',
     imageUrl: '/images/fusens/page-002-left/note-02.png',
     textSummary:
@@ -243,7 +243,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-017',
+    id: 'fusen-0017',
     title: '壊変様式と質量数・原子番号の変化',
     imageUrl: '/images/fusens/page-002-left/note-03.png',
     textSummary:
@@ -257,7 +257,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-018',
+    id: 'fusen-0018',
     title: 'β⁻線のみ放出する核種',
     imageUrl: '/images/fusens/page-002-left/note-04.png',
     textSummary:
@@ -271,7 +271,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-019',
+    id: 'fusen-0019',
     title: 'β⁺線を放出する核種',
     imageUrl: '/images/fusens/page-002-left/note-05.png',
     textSummary:
@@ -285,7 +285,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-020',
+    id: 'fusen-0020',
     title: '電子捕獲とX線・オージェ',
     imageUrl: '/images/fusens/page-002-left/note-06.png',
     textSummary:
@@ -299,7 +299,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-021',
+    id: 'fusen-0021',
     title: '核異性体転移',
     imageUrl: '/images/fusens/page-002-left/note-07.png',
     textSummary:
@@ -313,7 +313,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-022',
+    id: 'fusen-0022',
     title: '被曝の上限線量',
     imageUrl: '/images/fusens/page-002-left/note-08.png',
     textSummary:
@@ -327,7 +327,7 @@ export const OFFICIAL_NOTES: OfficialNote[] = [
     tier: 'free',
   },
   {
-    id: 'on-023',
+    id: 'fusen-0023',
     title: '⁹⁹ᵐTcについて',
     imageUrl: '/images/fusens/page-002-left/note-09.png',
     textSummary:

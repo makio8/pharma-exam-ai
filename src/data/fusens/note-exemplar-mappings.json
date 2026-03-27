@@ -5,7 +5,7 @@
   "noteCount": 23,
   "mappings": [
     {
-      "noteId": "on-001",
+      "noteId": "fusen-0001",
       "noteTitle": "SI基本単位",
       "subject": "物理",
       "topicId": "physics-material-structure",
@@ -28,7 +28,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-002",
+      "noteId": "fusen-0002",
       "noteTitle": "物理量の単位まとめ",
       "subject": "物理",
       "topicId": "physics-material-structure",
@@ -51,7 +51,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-003",
+      "noteId": "fusen-0003",
       "noteTitle": "圧力とエネルギーの定義",
       "subject": "物理",
       "topicId": "physics-material-structure",
@@ -74,7 +74,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-004",
+      "noteId": "fusen-0004",
       "noteTitle": "力（ニュートン）を覚える",
       "subject": "物理",
       "topicId": "physics-material-structure",
@@ -97,7 +97,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-005",
+      "noteId": "fusen-0005",
       "noteTitle": "SI単位換算",
       "subject": "物理",
       "topicId": "physics-material-structure",
@@ -120,7 +120,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-006",
+      "noteId": "fusen-0006",
       "noteTitle": "濃度単位換算",
       "subject": "薬剤",
       "topicId": "physics-energy-equilibrium",
@@ -150,7 +150,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-007",
+      "noteId": "fusen-0007",
       "noteTitle": "W/V%の定義",
       "subject": "薬剤",
       "topicId": "physics-energy-equilibrium",
@@ -173,7 +173,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-008",
+      "noteId": "fusen-0008",
       "noteTitle": "10^0.3 = 2",
       "subject": "物理",
       "topicId": "physics-material-structure",
@@ -196,7 +196,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-009",
+      "noteId": "fusen-0009",
       "noteTitle": "双極子の種類",
       "subject": "化学",
       "topicId": "chemistry-basic-properties",
@@ -226,7 +226,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-010",
+      "noteId": "fusen-0010",
       "noteTitle": "アルカンの沸点",
       "subject": "化学",
       "topicId": "chemistry-basic-properties",
@@ -256,7 +256,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-011",
+      "noteId": "fusen-0011",
       "noteTitle": "H₂OとHFの水素結合",
       "subject": "化学",
       "topicId": "chemistry-basic-properties",
@@ -279,7 +279,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-012",
+      "noteId": "fusen-0012",
       "noteTitle": "沸点まとめ",
       "subject": "化学",
       "topicId": "chemistry-basic-properties",
@@ -316,7 +316,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-013",
+      "noteId": "fusen-0013",
       "noteTitle": "ヨウ素の電荷移動相互作用",
       "subject": "物理",
       "topicId": "physics-material-structure",
@@ -332,7 +332,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-014",
+      "noteId": "fusen-0014",
       "noteTitle": "水素結合と物性",
       "subject": "化学",
       "topicId": "chemistry-basic-properties",
@@ -355,7 +355,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-015",
+      "noteId": "fusen-0015",
       "noteTitle": "原子の構成",
       "subject": "化学",
       "topicId": "chemistry-basic-properties",
@@ -378,7 +378,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-016",
+      "noteId": "fusen-0016",
       "noteTitle": "素粒子",
       "subject": "物理",
       "topicId": "physics-material-structure",
@@ -401,7 +401,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-017",
+      "noteId": "fusen-0017",
       "noteTitle": "壊変様式と質量数・原子番号の変化",
       "subject": "物理",
       "topicId": "physics-material-structure",
@@ -431,7 +431,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-018",
+      "noteId": "fusen-0018",
       "noteTitle": "β⁻線のみ放出する核種",
       "subject": "物理",
       "topicId": "physics-material-structure",
@@ -461,7 +461,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-019",
+      "noteId": "fusen-0019",
       "noteTitle": "β⁺線を放出する核種",
       "subject": "物理",
       "topicId": "physics-material-structure",
@@ -491,7 +491,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-020",
+      "noteId": "fusen-0020",
       "noteTitle": "電子捕獲とX線・オージェ",
       "subject": "物理",
       "topicId": "physics-material-structure",
@@ -521,7 +521,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-021",
+      "noteId": "fusen-0021",
       "noteTitle": "核異性体転移",
       "subject": "物理",
       "topicId": "physics-material-structure",
@@ -551,7 +551,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-022",
+      "noteId": "fusen-0022",
       "noteTitle": "被曝の上限線量",
       "subject": "衛生",
       "topicId": "hygiene-chemical-radiation",
@@ -581,7 +581,7 @@
       "reviewStatus": "pending"
     },
     {
-      "noteId": "on-023",
+      "noteId": "fusen-0023",
       "noteTitle": "⁹⁹ᵐTcについて",
       "subject": "物理",
       "topicId": "physics-material-structure",

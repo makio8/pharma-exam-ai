@@ -9,13 +9,13 @@ import type { FlashCardTemplate } from '../types/flashcard-template'
 
 export const FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
   // ========================================
-  // 付箋ベース: on-001（SI基本単位）
+  // 付箋ベース: fusen-0001（SI基本単位）
   // r100-001→ex-physics-058, r109-001→ex-physics-006
   // ========================================
   {
     id: 'fct-001',
     source_type: 'fusen',
-    source_id: 'on-001',
+    source_id: 'fusen-0001',
     primary_exemplar_id: 'ex-physics-006',
     subject: '物理',
     front: 'SI基本単位7つは？',
@@ -26,7 +26,7 @@ export const FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
   {
     id: 'fct-002',
     source_type: 'fusen',
-    source_id: 'on-001',
+    source_id: 'fusen-0001',
     primary_exemplar_id: 'ex-physics-006',
     subject: '物理',
     front: 'SI基本単位の語呂合わせ「カドのマスク」の中身は？',
@@ -37,7 +37,7 @@ export const FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
   {
     id: 'fct-003',
     source_type: 'fusen',
-    source_id: 'on-001',
+    source_id: 'fusen-0001',
     primary_exemplar_id: 'ex-physics-006',
     subject: '物理',
     front: '光度のSI単位は？',
@@ -46,13 +46,13 @@ export const FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     tags: ['SI基本単位', '光度'],
   },
   // ========================================
-  // 付箋ベース: on-002（物理量の単位まとめ）
+  // 付箋ベース: fusen-0002（物理量の単位まとめ）
   // r100-002→ex-physics-054
   // ========================================
   {
     id: 'fct-004',
     source_type: 'fusen',
-    source_id: 'on-002',
+    source_id: 'fusen-0002',
     primary_exemplar_id: 'ex-physics-054',
     subject: '物理',
     front: 'エネルギーのSI単位をkg, m, sで表すと？',
@@ -63,7 +63,7 @@ export const FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
   {
     id: 'fct-005',
     source_type: 'fusen',
-    source_id: 'on-002',
+    source_id: 'fusen-0002',
     primary_exemplar_id: 'ex-physics-054',
     subject: '物理',
     front: '圧力のSI単位をkg, m, sで表すと？',
@@ -72,13 +72,13 @@ export const FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     tags: ['単位換算', '圧力'],
   },
   // ========================================
-  // 付箋ベース: on-003（圧力とエネルギーの定義）
+  // 付箋ベース: fusen-0003（圧力とエネルギーの定義）
   // r104-001→ex-physics-017
   // ========================================
   {
     id: 'fct-006',
     source_type: 'fusen',
-    source_id: 'on-003',
+    source_id: 'fusen-0003',
     primary_exemplar_id: 'ex-physics-017',
     subject: '物理',
     front: '1 Pa（パスカル）の定義は？',
@@ -89,7 +89,7 @@ export const FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
   {
     id: 'fct-007',
     source_type: 'fusen',
-    source_id: 'on-003',
+    source_id: 'fusen-0003',
     primary_exemplar_id: 'ex-physics-017',
     subject: '物理',
     front: '1 J（ジュール）の定義は？',
