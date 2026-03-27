@@ -1,7 +1,8 @@
 import { describe, it, expect } from 'vitest'
 import { normalizeSubject } from '../normalize-subject'
-import { ocrToMaster, generateFingerprint, getNextId } from '../fusens-master-core'
+import { ocrToMaster, cropOcrToMaster, generateFingerprint, generateCropFingerprint, getNextId } from '../fusens-master-core'
 import type { OcrPageResult } from '../fusens-master-types'
+import type { CropOcrNote } from '../ocr-cropped-core'
 
 // --- normalizeSubject ---
 describe('normalizeSubject', () => {
@@ -162,5 +163,83 @@ describe('ocrToMaster merge', () => {
     const count = Object.keys(initial.fusens).length
     const again = ocrToMaster(page2, 'test.pdf', initial)
     expect(Object.keys(again.fusens)).toHaveLength(count)
+  })
+})
+
+// --- generateCropFingerprint ---
+describe('generateCropFingerprint', () => {
+  it('creates fingerprint with pageId string', () => {
+    expect(generateCropFingerprint('test.pdf', 'page-001-left', 0)).toBe('test.pdf:page-001-left:0')
+  })
+})
+
+// --- cropOcrToMaster ---
+describe('cropOcrToMaster', () => {
+  const sampleNotes: CropOcrNote[] = [
+    {
+      pageId: 'page-001-left', spreadPage: 1, side: 'left', noteIndex: 0,
+      bbox: [77, 154, 188, 509], imageFile: 'page-001-left/note-01.png',
+      title: 'SI基本単位', body: 'Cd n A K s mol kg', subject: '物理', noteType: 'mnemonic', tags: ['SI単位'],
+    },
+    {
+      pageId: 'page-001-left', spreadPage: 1, side: 'left', noteIndex: 1,
+      bbox: [194, 154, 295, 511], imageFile: 'page-001-left/note-02.png',
+      title: '単位', body: 'J = N・m', subject: '物理', noteType: 'related', tags: ['単位'],
+    },
+    {
+      pageId: 'page-001-right', spreadPage: 1, side: 'right', noteIndex: 0,
+      bbox: [87, 82, 221, 448], imageFile: 'page-001-right/note-01.png',
+      title: '双極子', body: '永久双極子と誘起双極子', subject: '物理', noteType: 'knowledge', tags: [],
+    },
+  ]
+
+  it('converts crop OCR notes to master with stable IDs', () => {
+    const master = cropOcrToMaster(sampleNotes, 'test.pdf')
+    const fusens = Object.values(master.fusens)
+    expect(fusens).toHaveLength(3)
+    expect(fusens[0].id).toBe('fusen-001')
+    expect(fusens[2].id).toBe('fusen-003')
+  })
+
+  it('sets source with pageId and side', () => {
+    const master = cropOcrToMaster(sampleNotes, 'test.pdf')
+    const f = master.fusens['fusen-001']
+    expect(f.source.pdf).toBe('test.pdf')
+    expect(f.source.page).toBe(1)
+    expect(f.source.pageId).toBe('page-001-left')
+    expect(f.source.side).toBe('left')
+    expect(f.source.noteIndex).toBe(0)
+    expect(f.source.bbox).toEqual([77, 154, 188, 509])
+  })
+
+  it('maps noteType directly (no underscore conversion)', () => {
+    const master = cropOcrToMaster(sampleNotes, 'test.pdf')
+    expect(master.fusens['fusen-001'].noteType).toBe('mnemonic')
+    expect(master.fusens['fusen-002'].noteType).toBe('related')
+  })
+
+  it('deduplicates on merge via crop fingerprint', () => {
+    const initial = cropOcrToMaster(sampleNotes.slice(0, 1), 'test.pdf')
+    expect(Object.keys(initial.fusens)).toHaveLength(1)
+
+    const merged = cropOcrToMaster(sampleNotes, 'test.pdf', initial)
+    expect(Object.keys(merged.fusens)).toHaveLength(3)
+    // 既存のfusen-001は上書きされない
+    expect(merged.fusens['fusen-001'].title).toBe('SI基本単位')
+  })
+
+  it('is idempotent', () => {
+    const initial = cropOcrToMaster(sampleNotes, 'test.pdf')
+    const count = Object.keys(initial.fusens).length
+    const again = cropOcrToMaster(sampleNotes, 'test.pdf', initial)
+    expect(Object.keys(again.fusens)).toHaveLength(count)
+  })
+
+  it('defaults to draft status with null topicId', () => {
+    const master = cropOcrToMaster(sampleNotes, 'test.pdf')
+    const f = master.fusens['fusen-001']
+    expect(f.status).toBe('draft')
+    expect(f.topicId).toBeNull()
+    expect(f.tier).toBe('free')
   })
 })

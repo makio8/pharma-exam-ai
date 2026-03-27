@@ -2,6 +2,7 @@
 import type {
   Fusen, FusenMaster, NoteType, OcrPageResult,
 } from './fusens-master-types'
+import type { CropOcrNote } from './ocr-cropped-core'
 import { normalizeSubject } from './normalize-subject'
 
 const VALID_NOTE_TYPES: NoteType[] = [
@@ -16,6 +17,11 @@ export function normalizeNoteType(raw: string): NoteType {
 /** source fingerprint: PDF名+ページ+noteIndex で同一ノートを識別 */
 export function generateFingerprint(pdf: string, page: number, noteIndex: number): string {
   return `${pdf}:${page}:${noteIndex}`
+}
+
+/** 半ページ用 fingerprint: PDF名+pageId+noteIndex */
+export function generateCropFingerprint(pdf: string, pageId: string, noteIndex: number): string {
+  return `${pdf}:${pageId}:${noteIndex}`
 }
 
 /** 既存IDの最大値+1 を返す（malformed ID防御付き） */
@@ -91,6 +97,71 @@ export function ocrToMaster(
       }
       fusens[id] = fusen
     }
+  }
+
+  return {
+    version: 1,
+    generatedAt: new Date().toISOString(),
+    fusens,
+  }
+}
+
+/**
+ * crop-ocr-results → FusenMaster に変換（半ページ体系対応）。
+ * existingMaster が渡された場合はマージ（fingerprint重複はスキップ）。
+ */
+export function cropOcrToMaster(
+  notes: CropOcrNote[],
+  pdfName: string,
+  existingMaster?: FusenMaster,
+): FusenMaster {
+  const fusens: Record<string, Fusen> = existingMaster
+    ? { ...existingMaster.fusens }
+    : {}
+
+  // 既存 fingerprint 集合（両方式に対応）
+  const existingFingerprints = new Set(
+    Object.values(fusens).map(f =>
+      f.source.pageId
+        ? generateCropFingerprint(f.source.pdf, f.source.pageId, f.source.noteIndex)
+        : generateFingerprint(f.source.pdf, f.source.page, f.source.noteIndex)
+    )
+  )
+
+  let nextNum = Object.keys(fusens).length === 0
+    ? 1
+    : Math.max(...Object.keys(fusens).map(id => parseInt(id.replace('fusen-', ''), 10))) + 1
+
+  for (const note of notes) {
+    const fp = generateCropFingerprint(pdfName, note.pageId, note.noteIndex)
+    if (existingFingerprints.has(fp)) continue
+
+    const id = formatId(nextNum++)
+    const fusen: Fusen = {
+      id,
+      title: note.title || '(無題)',
+      body: note.body || '',
+      imageFile: note.imageFile || '',
+      subject: normalizeSubject(note.subject),
+      noteType: normalizeNoteType(note.noteType),
+      tags: note.tags || [],
+      source: {
+        pdf: pdfName,
+        page: note.spreadPage,
+        pageId: note.pageId,
+        side: note.side,
+        noteIndex: note.noteIndex,
+        bbox: note.bbox,
+      },
+      topicId: null,
+      linkedQuestionIds: [],
+      importance: 0,
+      tier: 'free',
+      status: 'draft',
+      reviewedAt: null,
+      notes: '',
+    }
+    fusens[id] = fusen
   }
 
   return {

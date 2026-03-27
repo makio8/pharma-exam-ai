@@ -7,7 +7,9 @@ export type FusenStatus = 'active' | 'draft' | 'archived' | 'duplicate'
 
 export interface FusenSource {
   pdf: string
-  page: number
+  page: number                          // spreadPage（見開きページ番号）
+  pageId?: string                       // 半ページID（例: "page-001-left"）
+  side?: 'left' | 'right'              // 左右どちら
   noteIndex: number
   bbox: [number, number, number, number]
 }

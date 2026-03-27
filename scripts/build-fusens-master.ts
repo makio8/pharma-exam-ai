@@ -2,20 +2,23 @@
  * 付箋マスター生成: OCR結果 → fusens-master.json
  *
  * Usage:
- *   npx tsx scripts/build-fusens-master.ts              # 初回生成 or マージ
- *   npx tsx scripts/build-fusens-master.ts --stats       # 統計表示
- *   npx tsx scripts/build-fusens-master.ts --unreviewed  # 未レビュー一覧
+ *   npx tsx scripts/build-fusens-master.ts                # 旧パイプライン（見開きOCR）
+ *   npx tsx scripts/build-fusens-master.ts --from-crop    # 新パイプライン（半ページアノテーション+OCR）
+ *   npx tsx scripts/build-fusens-master.ts --stats        # 統計表示
+ *   npx tsx scripts/build-fusens-master.ts --unreviewed   # 未レビュー一覧
  */
 import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
-import { ocrToMaster } from './lib/fusens-master-core'
+import { ocrToMaster, cropOcrToMaster } from './lib/fusens-master-core'
 import type { FusenMaster, OcrPageResult } from './lib/fusens-master-types'
+import type { CropOcrOutput } from './lib/ocr-cropped-core'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const OCR_PATH = path.join(__dirname, '..', 'src', 'data', 'fusens', 'ocr-results.json')
+const CROP_OCR_PATH = path.join(__dirname, '..', 'src', 'data', 'fusens', 'crop-ocr-results.json')
 const MASTER_PATH = path.join(__dirname, '..', 'src', 'data', 'fusens', 'fusens-master.json')
 const PUBLIC_MASTER_PATH = path.join(__dirname, '..', 'public', 'data', 'fusens', 'fusens-master.json')
 const PDF_NAME = 'fusen-note-makio.pdf'
@@ -23,6 +26,7 @@ const PDF_NAME = 'fusen-note-makio.pdf'
 const args = process.argv.slice(2)
 const isStats = args.includes('--stats')
 const isUnreviewed = args.includes('--unreviewed')
+const isFromCrop = args.includes('--from-crop')
 
 function loadMaster(): FusenMaster | null {
   try {
@@ -61,6 +65,7 @@ function showStats(): void {
   const byType: Record<string, number> = {}
   const withTopic = fusens.filter(f => f.topicId).length
   const reviewed = fusens.filter(f => f.reviewedAt).length
+  const withPageId = fusens.filter(f => f.source.pageId).length
 
   for (const f of fusens) {
     bySubject[f.subject] = (bySubject[f.subject] || 0) + 1
@@ -77,6 +82,7 @@ function showStats(): void {
   }
   console.log(`\ntopicId設定済み: ${withTopic} / ${fusens.length}`)
   console.log(`レビュー済み: ${reviewed} / ${fusens.length}`)
+  console.log(`半ページ体系: ${withPageId} / ${fusens.length}`)
 }
 
 function showUnreviewed(): void {
@@ -97,20 +103,15 @@ function showUnreviewed(): void {
   }
 }
 
-function main(): void {
-  if (isStats) { showStats(); return }
-  if (isUnreviewed) { showUnreviewed(); return }
-
-  // OCR読み込み
-  if (!fs.existsSync(OCR_PATH)) {
-    console.error(`OCRデータなし: ${OCR_PATH}`)
+function buildFromCrop(): void {
+  if (!fs.existsSync(CROP_OCR_PATH)) {
+    console.error(`crop-ocr-results.json なし: ${CROP_OCR_PATH}`)
+    console.error('先に ocr-cropped-notes.ts を実行してください')
     process.exit(1)
   }
-  const ocrData: OcrPageResult[] = JSON.parse(fs.readFileSync(OCR_PATH, 'utf-8'))
-  const totalNotes = ocrData.reduce((s, p) => s + p.notes.length, 0)
-  console.log(`OCRデータ: ${ocrData.length}ページ / ${totalNotes}件のnote`)
+  const cropData: CropOcrOutput = JSON.parse(fs.readFileSync(CROP_OCR_PATH, 'utf-8'))
+  console.log(`crop-OCRデータ: ${cropData.totalNotes}件 (${cropData.ocrModel})`)
 
-  // 既存マスター読み込み（あればマージ）
   const existing = loadMaster()
   if (existing) {
     const existingCount = Object.keys(existing.fusens).length
@@ -119,16 +120,48 @@ function main(): void {
     console.log('既存マスターなし → 新規生成')
   }
 
-  // 変換
-  const master = ocrToMaster(ocrData, PDF_NAME, existing ?? undefined)
+  const master = cropOcrToMaster(cropData.results, PDF_NAME, existing ?? undefined)
   const newCount = Object.keys(master.fusens).length - (existing ? Object.keys(existing.fusens).length : 0)
 
-  // 保存
   saveMaster(master)
   console.log(`\n=== 完了 ===`)
   console.log(`新規追加: ${newCount}件`)
   console.log(`累計: ${Object.keys(master.fusens).length}件`)
   console.log(`保存: ${MASTER_PATH}`)
+}
+
+function buildFromOcr(): void {
+  if (!fs.existsSync(OCR_PATH)) {
+    console.error(`OCRデータなし: ${OCR_PATH}`)
+    process.exit(1)
+  }
+  const ocrData: OcrPageResult[] = JSON.parse(fs.readFileSync(OCR_PATH, 'utf-8'))
+  const totalNotes = ocrData.reduce((s, p) => s + p.notes.length, 0)
+  console.log(`OCRデータ: ${ocrData.length}ページ / ${totalNotes}件のnote`)
+
+  const existing = loadMaster()
+  if (existing) {
+    const existingCount = Object.keys(existing.fusens).length
+    console.log(`既存マスター: ${existingCount}件 → マージモード`)
+  } else {
+    console.log('既存マスターなし → 新規生成')
+  }
+
+  const master = ocrToMaster(ocrData, PDF_NAME, existing ?? undefined)
+  const newCount = Object.keys(master.fusens).length - (existing ? Object.keys(existing.fusens).length : 0)
+
+  saveMaster(master)
+  console.log(`\n=== 完了 ===`)
+  console.log(`新規追加: ${newCount}件`)
+  console.log(`累計: ${Object.keys(master.fusens).length}件`)
+  console.log(`保存: ${MASTER_PATH}`)
+}
+
+function main(): void {
+  if (isStats) { showStats(); return }
+  if (isUnreviewed) { showUnreviewed(); return }
+  if (isFromCrop) { buildFromCrop(); return }
+  buildFromOcr()
 }
 
 main()
