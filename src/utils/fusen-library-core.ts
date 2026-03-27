@@ -11,7 +11,7 @@ export interface FusenGroup {
 
 export interface ImportanceBadge {
   emoji: string
-  count: number
+  label: string
 }
 
 export class FusenLibraryCore {
@@ -45,20 +45,11 @@ export class FusenLibraryCore {
     return [...this.notes].sort((a, b) => b.importance - a.importance)
   }
 
-  /** 関連問題IDを取得（exemplarIds 優先 → linkedQuestionIds フォールバック） */
-  static getRelatedQuestionIds(note: OfficialNote): string[] {
-    if (note.exemplarIds && note.exemplarIds.length > 0) {
-      // Phase 2: exemplar → question-exemplar-map 経由で解決
-      return note.linkedQuestionIds // TODO: resolveQuestionsFromExemplars 実装後に切替
-    }
-    return note.linkedQuestionIds
-  }
-
-  /** 重要度バッジを計算 */
-  static getImportanceBadge(questionCount: number): ImportanceBadge | null {
-    if (questionCount >= 10) return { emoji: '🔥', count: questionCount }
-    if (questionCount >= 5) return { emoji: '📊', count: questionCount }
-    if (questionCount >= 1) return { emoji: '📝', count: questionCount }
+  /** 重要度バッジを計算（importance フィールドベース） */
+  static getImportanceBadge(importance: number): ImportanceBadge | null {
+    if (importance >= 4) return { emoji: '🔥', label: '重要' }
+    if (importance >= 3) return { emoji: '📊', label: '頻出' }
+    if (importance >= 2) return { emoji: '📝', label: '基本' }
     return null
   }
 

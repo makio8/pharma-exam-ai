@@ -14,8 +14,7 @@ function makeNote(overrides: Partial<OfficialNote>): OfficialNote {
     subject: '物理',
     topicId: 'physics-test',
     tags: [],
-    linkedQuestionIds: [],
-    importance: 0,
+    importance: 2,
     tier: 'free',
     ...overrides,
   }

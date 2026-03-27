@@ -24,7 +24,7 @@ const context: ValidationContext = {
   exemplarQuestionIds: new Set(QUESTION_EXEMPLAR_MAP.map(m => m.questionId)),
   officialNotes: OFFICIAL_NOTES.map(n => ({
     id: n.id,
-    linkedQuestionIds: n.linkedQuestionIds,
+    linkedQuestionIds: n.linkedQuestionIds ?? [],
     topicId: n.topicId,
   })),
   questionIds: new Set(ALL_QUESTIONS.map(q => q.id)),

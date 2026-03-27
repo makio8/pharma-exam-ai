@@ -11,7 +11,7 @@ interface Props {
 
 export function FusenThumbnail({ note, isBookmarked }: Props) {
   const navigate = useNavigate()
-  const badge = FusenLibraryCore.getImportanceBadge(note.linkedQuestionIds.length)
+  const badge = FusenLibraryCore.getImportanceBadge(note.importance)
 
   const handleClick = () => navigate(`/notes/${note.id}`)
   const handleKeyDown = (e: KeyboardEvent) => {
@@ -36,7 +36,7 @@ export function FusenThumbnail({ note, isBookmarked }: Props) {
         <div className={styles.title}>{note.title}</div>
         <div className={styles.meta}>
           {isBookmarked && <span className={styles.bookmarked}>★</span>}
-          {badge && <span className={styles.badge}>{badge.emoji} {badge.count}問</span>}
+          {badge && <span className={styles.badge}>{badge.emoji} {badge.label}</span>}
         </div>
       </div>
     </div>

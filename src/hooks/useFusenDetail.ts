@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { OFFICIAL_NOTES } from '../data/official-notes'
-import { FusenLibraryCore } from '../utils/fusen-library-core'
 import { EXAM_BLUEPRINT } from '../data/exam-blueprint'
+import { QUESTION_TOPIC_MAP } from '../data/question-topic-map'
 import { useBookmarks } from './useBookmarks'
 import { useAnswerHistory } from './useAnswerHistory'
 import type { OfficialNote } from '../types/official-note'
@@ -37,9 +37,12 @@ export function useFusenDetail(fusenId: string): {
     [fusenId],
   )
 
+  // topicId → questionId[] の逆引き（linkedQuestionIds は JSON から除外済み）
   const relatedQuestions = useMemo((): RelatedQuestionItem[] => {
     if (!fusen) return []
-    const questionIds = FusenLibraryCore.getRelatedQuestionIds(fusen)
+    const questionIds = Object.entries(QUESTION_TOPIC_MAP)
+      .filter(([, topicId]) => topicId === fusen.topicId)
+      .map(([qId]) => qId)
 
     return questionIds
       .map(qId => {

@@ -31,7 +31,7 @@ export function FusenDetailPage() {
     )
   }
 
-  const badge = FusenLibraryCore.getImportanceBadge(fusen.linkedQuestionIds.length)
+  const badge = FusenLibraryCore.getImportanceBadge(fusen.importance)
   const unanswered = relatedQuestions.filter(q => q.userStatus === 'unanswered')
 
   return (
@@ -65,7 +65,7 @@ export function FusenDetailPage() {
         <div className={styles.meta}>
           <FusenBreadcrumb breadcrumb={breadcrumb} />
           {badge && (
-            <span className={styles.badge}>{badge.emoji} {badge.count}問で使う知識</span>
+            <span className={styles.badge}>{badge.emoji} {badge.label}</span>
           )}
         </div>
 

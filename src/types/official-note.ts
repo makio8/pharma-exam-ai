@@ -14,7 +14,8 @@ export interface OfficialNote {
   subject: QuestionSubject     // 例: 「薬理」
   topicId: string              // ALL_TOPICS.id で join
   tags: string[]
-  linkedQuestionIds: string[]  // この知識が必要な問題ID群
+  /** @deprecated JSON から除外済み。ランタイムで topicId → QUESTION_TOPIC_MAP 逆引きを使う */
+  linkedQuestionIds?: string[]
   exemplarIds?: string[]       // AIマッチング結果（類題ID群）
   noteType?: NoteType          // 付箋種別（デフォルト: 'knowledge'）
   importance: number           // 紐づく問題数から自動算出

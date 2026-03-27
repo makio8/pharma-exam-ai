@@ -106,42 +106,6 @@ function resolveSubject(topicId: string): string {
   return subject
 }
 
-// ---------- question-topic-map.ts をパースして topicId → questionId[] を構築 ----------
-
-// 最低限の問題数閾値。question-topic-map.ts のパースが壊れた場合に早期検知する
-const MIN_EXPECTED_QUESTIONS = 3000
-
-function buildTopicToQuestionsMap(): Record<string, string[]> {
-  const filePath = path.join(ROOT, 'src/data/question-topic-map.ts')
-  const content = fs.readFileSync(filePath, 'utf-8')
-
-  const map: Record<string, string[]> = {}
-  let totalQuestions = 0
-  // パターン: "r100-001": "physics-material-structure",
-  const re = /"(r\d+-\d+)":\s*"([^"]+)"/g
-  let match: RegExpExecArray | null
-  while ((match = re.exec(content)) !== null) {
-    const [, questionId, topicId] = match
-    if (!map[topicId]) {
-      map[topicId] = []
-    }
-    map[topicId].push(questionId)
-    totalQuestions++
-  }
-
-  // P1修正: 正規表現パースが壊れた場合の安全弁（GPT-5.4指摘）
-  if (totalQuestions < MIN_EXPECTED_QUESTIONS) {
-    throw new Error(
-      `question-topic-map.ts から ${totalQuestions} 件しか抽出できませんでした（期待: ${MIN_EXPECTED_QUESTIONS}+件）。` +
-        'ファイル形式が変更された可能性があります。正規表現パターンを確認してください。',
-    )
-  }
-  console.log(
-    `  question-topic-map: ${totalQuestions} 問 → ${Object.keys(map).length} トピック`,
-  )
-  return map
-}
-
 // ---------- textSummary 生成（OCR body から簡潔な要約を作る） ----------
 
 function generateTextSummary(entry: FusenMasterEntry): string {
@@ -161,12 +125,12 @@ function generateTextSummary(entry: FusenMasterEntry): string {
 }
 
 // ---------- importance 計算 ----------
-// linkedQuestionIds の件数ベース: 0件→1, 1-3件→2, 4-7件→3, 8+件→4
+// exemplarIds の件数ベース: 0件→1, 1件→2, 2件→3, 3+件→4
 
-function computeImportance(linkedCount: number): number {
-  if (linkedCount >= 8) return 4
-  if (linkedCount >= 4) return 3
-  if (linkedCount >= 1) return 2
+function computeImportance(exemplarCount: number): number {
+  if (exemplarCount >= 3) return 4
+  if (exemplarCount >= 2) return 3
+  if (exemplarCount >= 1) return 2
   return 1
 }
 
@@ -198,8 +162,10 @@ function main() {
     mappingByNoteId.set(m.noteId, m)
   }
 
-  // 3. topicId → questionId[] マップ
-  const topicToQuestions = buildTopicToQuestionsMap()
+  // 3. linkedQuestionIds は JSON に含めない（4チームレビューで P1 指摘）
+  //    - topicId 単位だと 1 トピック = 数十〜1,005問で膨大すぎて UX 崩壊
+  //    - JSON の 61%（1.18MB）が linkedQuestionIds の重複データだった
+  //    - ランタイムで topicId → QUESTION_TOPIC_MAP 逆引きに切替
 
   // 4. 全 fusen を OfficialNote に変換
   const sortedIds = Object.keys(fusens).sort() // fusen-0001 ~ fusen-1642
@@ -211,7 +177,6 @@ function main() {
     subject: string
     topicId: string
     tags: string[]
-    linkedQuestionIds: string[]
     exemplarIds: string[]
     noteType: string
     importance: number
@@ -259,11 +224,10 @@ function main() {
       exemplarIds.push(...primary, ...secondary)
     }
 
-    // linkedQuestionIds: topicId ベースで逆引き
-    const linkedQuestionIds = topicToQuestions[entry.topicId] ?? []
-
-    // importance: linkedQuestionIds の件数ベース
-    const importance = computeImportance(linkedQuestionIds.length)
+    // importance: exemplarIds の件数ベース（4チームレビュー P2 修正）
+    // 旧: linkedQuestionIds.length ベース → 95.7% が importance=4 で無意味
+    // 新: exemplarIds.length ベース → 1-4件で意味のある分布に
+    const importance = computeImportance(exemplarIds.length)
 
     // P2修正: noteType / tier のバリデーション（GPT-5.4指摘）
     const noteType = entry.noteType || 'knowledge'
@@ -287,7 +251,6 @@ function main() {
       subject,
       topicId: entry.topicId,
       tags: entry.tags,
-      linkedQuestionIds,
       exemplarIds,
       noteType,
       importance,
@@ -302,13 +265,10 @@ function main() {
     `  exemplarIds 付き: ${notes.filter((n) => n.exemplarIds.length > 0).length}`,
   )
   console.log(
-    `  linkedQuestionIds 付き: ${notes.filter((n) => n.linkedQuestionIds.length > 0).length}`,
-  )
-  console.log(
     `  exemplarIds 合計: ${notes.reduce((s, n) => s + n.exemplarIds.length, 0)}`,
   )
   console.log(
-    `  linkedQuestionIds 合計: ${notes.reduce((s, n) => s + n.linkedQuestionIds.length, 0)}`,
+    `  linkedQuestionIds: JSON から除外（ランタイムで topicId 逆引き）`,
   )
 
   if (isStats || isDryRun) {

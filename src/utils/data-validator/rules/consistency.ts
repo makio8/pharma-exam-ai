@@ -165,7 +165,7 @@ export function consistencyRules(
   // ─── ルール 21〜22: 公式付箋チェック ───
   for (const note of context.officialNotes) {
     // ─── ルール 21: note-question-exists ───
-    for (const questionId of note.linkedQuestionIds) {
+    for (const questionId of note.linkedQuestionIds ?? []) {
       if (!context.questionIds.has(questionId)) {
         issues.push({
           questionId: note.id, // 付箋IDを使う

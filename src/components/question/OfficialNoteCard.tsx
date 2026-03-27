@@ -12,26 +12,29 @@ interface Props {
   onImageTap: () => void
 }
 
-function ImportanceBadge({ count }: { count: number }) {
-  if (count >= 10) {
+function ImportanceBadge({ importance }: { importance: number }) {
+  if (importance >= 4) {
     return (
       <span className={`${styles.badge} ${styles.badgeHigh}`}>
-        🔥 {count}問で使う知識
+        🔥 重要
       </span>
     )
   }
-  if (count >= 5) {
+  if (importance >= 3) {
     return (
       <span className={`${styles.badge} ${styles.badgeMid}`}>
-        📊 {count}問で使う知識
+        📊 頻出
       </span>
     )
   }
-  return (
-    <span className={`${styles.badge} ${styles.badgeLow}`}>
-      📝 {count}問で使う知識
-    </span>
-  )
+  if (importance >= 2) {
+    return (
+      <span className={`${styles.badge} ${styles.badgeLow}`}>
+        📝 基本
+      </span>
+    )
+  }
+  return null
 }
 
 export function OfficialNoteCard({
@@ -79,7 +82,7 @@ export function OfficialNoteCard({
         <div className={styles.content}>
           <p className={styles.title}>{note.title}</p>
           <p className={styles.summary}>{note.textSummary}</p>
-          <ImportanceBadge count={note.linkedQuestionIds.length} />
+          <ImportanceBadge importance={note.importance} />
 
           {isPremium ? (
             <p className={styles.premiumCta}>付箋パックで全付箋を解放</p>

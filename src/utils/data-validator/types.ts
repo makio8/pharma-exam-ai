@@ -19,7 +19,7 @@ export interface ValidationContext {
   topicMap: Record<string, string>
   blueprintTopicIds: Set<string>
   exemplarQuestionIds: Set<string>
-  officialNotes: Array<{ id: string; linkedQuestionIds: string[]; topicId: string }>
+  officialNotes: Array<{ id: string; linkedQuestionIds?: string[]; topicId: string }>
   questionIds: Set<string>
   imageDir: string
   /** 例示マスタ（付箋バリデーション用） */

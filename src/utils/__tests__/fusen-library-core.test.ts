@@ -11,8 +11,7 @@ function makeNote(overrides: Partial<OfficialNote>): OfficialNote {
     subject: '物理',
     topicId: 'physics-material-structure',
     tags: [],
-    linkedQuestionIds: [],
-    importance: 0,
+    importance: 2,
     tier: 'free',
     ...overrides,
   }
@@ -60,31 +59,20 @@ describe('FusenLibraryCore', () => {
     })
   })
 
-  describe('getRelatedQuestionIds', () => {
-    it('linkedQuestionIds をフォールバックとして返す（exemplarIds なし）', () => {
-      const note = makeNote({ linkedQuestionIds: ['r100-001', 'r101-002'] })
-      const result = FusenLibraryCore.getRelatedQuestionIds(note)
-      expect(result).toEqual(['r100-001', 'r101-002'])
-    })
-
-    it('exemplarIds が空配列の場合も linkedQuestionIds にフォールバック', () => {
-      const note = makeNote({ exemplarIds: [], linkedQuestionIds: ['r100-001'] })
-      const result = FusenLibraryCore.getRelatedQuestionIds(note)
-      expect(result).toEqual(['r100-001'])
-    })
-  })
-
   describe('getImportanceBadge', () => {
-    it('10問以上は 🔥', () => {
-      expect(FusenLibraryCore.getImportanceBadge(12)).toEqual({ emoji: '🔥', count: 12 })
+    it('importance 4 は 🔥 重要', () => {
+      expect(FusenLibraryCore.getImportanceBadge(4)).toEqual({ emoji: '🔥', label: '重要' })
     })
-    it('5問以上は 📊', () => {
-      expect(FusenLibraryCore.getImportanceBadge(7)).toEqual({ emoji: '📊', count: 7 })
+    it('importance 3 は 📊 頻出', () => {
+      expect(FusenLibraryCore.getImportanceBadge(3)).toEqual({ emoji: '📊', label: '頻出' })
     })
-    it('1-4問は 📝', () => {
-      expect(FusenLibraryCore.getImportanceBadge(3)).toEqual({ emoji: '📝', count: 3 })
+    it('importance 2 は 📝 基本', () => {
+      expect(FusenLibraryCore.getImportanceBadge(2)).toEqual({ emoji: '📝', label: '基本' })
     })
-    it('0問は null', () => {
+    it('importance 1 は null', () => {
+      expect(FusenLibraryCore.getImportanceBadge(1)).toBeNull()
+    })
+    it('importance 0 は null', () => {
       expect(FusenLibraryCore.getImportanceBadge(0)).toBeNull()
     })
   })
@@ -93,8 +81,8 @@ describe('FusenLibraryCore', () => {
     it('importance 降順でソート', () => {
       const notes = [
         makeNote({ id: 'low', importance: 1 }),
-        makeNote({ id: 'high', importance: 10 }),
-        makeNote({ id: 'mid', importance: 5 }),
+        makeNote({ id: 'high', importance: 4 }),
+        makeNote({ id: 'mid', importance: 3 }),
       ]
       const core = new FusenLibraryCore(notes)
       const sorted = core.sortByImportance()
