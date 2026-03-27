@@ -87,7 +87,7 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - Vite のポート番号は起動のたびに変わる可能性あり（5173, 5174, 5175...）
 - 未解決: スマホ Safari で演習データが保存されない問題（SW キャッシュが原因の可能性大、要調査）
 
-## 開発状況（2026-03-27時点）
+## 開発状況（2026-03-28時点）
 - Phase 1 Week 1-2 完了: PracticePage + HomePage を Soft Companion にリデザイン済み
 - Phase 1 Week 3 完了: QuestionPage を Soft Companion にフルリデザイン
   - 730行→285行（61%削減）、Ant Design依存ゼロ
@@ -165,12 +165,22 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - **パイプライン判断変更**: マッチング精度が十分（スマホ実機確認済み）なため人間レビューをスキップ。Claude推論（1枚ずつ） → official-notes.ts 直接反映 → validateで異常値チェック。レビューUIは異常値修正用に残す
   - 設計: `docs/superpowers/specs/2026-03-26-exemplar-list-in-mapping-ui-design.md`（v1.1、GPT-5.4×3回）
   - 計画: `docs/superpowers/plans/2026-03-26-exemplar-list-in-mapping-ui.md`（GPT-5.4×1回）
-  - **次: 別セッションOCR（1599枚）完了待ち → 1枚ずつClaude推論マッチング → official-notes.ts反映**
+- **付箋→例示マッチング横展開パイプライン（2026-03-28）**
+  - ID統一: on-NNN → fusen-NNNN（8ファイル置換 + localStorage migration、520テスト全PASS）
+  - Phase 1: 1,642枚全件にtopicId設定（A+案: 全86中項目から選択、subjectヒント付き）
+  - 3way比較検証（10択/86択/986択）でA+案の優位性を実証。B案は生物への誤吸着傾向
+  - Phase 1 gate: 13枚レビュー、5枚手動修正（ビタミン→衛生、がん遺伝子→病態、発がん→衛生等）
+  - Phase 2: 1,619枚のexemplarマッチング（2段階shortlist方式、25バッチ×Opus 4.6並列）
+  - note-exemplar-mappings.json: 23件→1,642件（Primary 1,748 + Secondary 819マッチ、no-match 0）
+  - GPT-5.4レビュー×5回 + エージェントチーム議論×2回（ID体系、A+案 vs B案）
+  - 設計: `docs/superpowers/specs/2026-03-27-fusen-exemplar-mapping-pipeline-design.md`（v1.0）
+  - 計画: `docs/superpowers/plans/2026-03-27-fusen-exemplar-mapping-pipeline.md`
+  - **次: official-notes.ts 1,642件生成スクリプト → FlashCardテンプレート自動生成**
 - **FlashCard データ層リファクタリング（2026-03-26）**
   - FlashCard → FlashCardTemplate（公式コンテンツ）+ CardProgress（ユーザー進捗）に分離
   - SM2Scheduler 純粋クラス抽出（12テスト）
   - LearningLinkService: 6種Map逆引きサービス（17テスト）
-  - サンプルテンプレート10枚（on-001〜on-003 + 問題解説3枚）
+  - サンプルテンプレート10枚（fusen-0001〜fusen-0003 + 問題解説3枚）
   - IFlashCardTemplateRepo（読み取り専用）+ ICardProgressRepo（localStorage CRUD）
   - useFlashCardTemplates / useCardProgress / useLearningLinks フック
   - FlashCardSection: プレースホルダー → カードプレビューリスト（タップ展開）
@@ -261,7 +271,8 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - 付箋マスター型: `scripts/lib/fusens-master-types.ts`（Fusen, FusenMaster, FusenSource に pageId/side 追加）
 - 付箋マスター変換: `scripts/lib/fusens-master-core.ts`（ocrToMaster + cropOcrToMaster, 新旧fingerprint両対応）
 - 付箋中間データ: `src/data/fusens/crop-manifest.json`（crop結果、次段OCR用）、`src/data/fusens/crop-ocr-results.json`（OCR結果）
-- 付箋→例示マッチング: `src/data/fusens/note-exemplar-mappings.json`（Claude推論結果、confidence+reasoning付き）
+- 付箋→例示マッチング: `src/data/fusens/note-exemplar-mappings.json`（1,642件、Claude推論結果、confidence+reasoning付き）
+- ID移行ユーティリティ: `scripts/lib/id-migration.ts`（ON_TO_FUSEN_MAP 23件 + onIdToFusenId/fusenIdToOnId変換関数、テスト15件）
 - 付箋→例示マッチング型: `src/types/note-exemplar-mapping.ts`（NoteExemplarMatch, MappingEntry, MappingsFile）
 - 付箋レビューUI: `src/dev-tools/fusen-review/`（既存review/と同パターン、localStorage永続化）
 - 付箋→例示マッチングUI: `src/dev-tools/exemplar-mapping/`（1カラム、候補承認/却下/primary切替 + 同topicId全exemplar折りたたみ一覧 + 手動追加機能）
@@ -288,6 +299,8 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - ロジック分離パターン: FusenLibraryCore のように純粋クラスに抽出 → フック(useFusenLibrary)がラップ → コンポーネントはフック経由で使用。テストはクラスに対して行う
 - exemplar-mapping effective list パターン: `entry.matches` を直接参照せず `getEffectiveMatches()` を単一真実源にする。手動追加分の Exemplar lookup は `exemplarById` Map でフォールバック
 - キーボードショートカット除外: `tagName` ベースではなく `closest('button, summary, [contenteditable], input, textarea, select')` が堅牢
+- topicId推定: A+案（全86中項目から選択、subjectヒント付き）を使用。subjectはOCR由来で不正確、topicIdから逆算が正
+- 付箋IDは `fusen-NNNN` に統一済み（旧 `on-NNN` は廃止、localStorage migration対応済み）
 
 ## Vite dev server の注意事項
 - `server.fs.allow` を明示指定すると**プロジェクトルートのデフォルト許可が消える** → 必ず `__dirname` を先頭に含める
@@ -316,6 +329,9 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - 付箋座標系は半ページ画像基準の0-1000正規化（旧パイプライン廃止済み）
 - `scripts/lib/` のコードは `src/` から import 不可（ビルドスコープ外）。同じロジックが必要な場合はインラインか `src/utils/` に配置
 - textSummaryは実画像の内容と正確に一致させること（GPT-5.4 P1指摘: 画像と矛盾するサマリーはユーザーに誤情報を与える）
+- 並列バックグラウンドエージェント25+同時起動でレートリミットに到達する可能性あり。失敗バッチはリトライで対応
+- エージェント出力JSONの構造がバッチ間で異なる（results/assignments/mappings/数値キー）。マージ時に全パターン対応の正規化が必要
+- fusens-master.json の subject フィールドはOCR由来の推定値。topicIdから逆算した resolvedSubject が正式科目
 
 ## pdfjs-dist v5 + Vite + Safari 実装ノート（PdfViewer で解決済み、再利用時参照）
 - **pdfjs-dist v5.5+** は `Map.prototype.getOrInsertComputed`（TC39 Stage 3）を使用。Safari 18.x以前は未サポート
