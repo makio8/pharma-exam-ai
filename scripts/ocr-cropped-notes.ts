@@ -13,6 +13,7 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
+import { GoogleAuth } from 'google-auth-library'
 import type { CropManifest, CropNote } from './lib/crop-annotation-core'
 import type { CropOcrNote, CropOcrOutput, GeminiNoteResult } from './lib/ocr-cropped-core'
 import {
@@ -40,17 +41,38 @@ const isStatus = args.includes('--status')
 const limitIdx = args.indexOf('--limit')
 const limit = limitIdx >= 0 ? parseInt(args[limitIdx + 1]) : Infinity
 
-// --- API Key ---
-const API_KEY = (() => {
+// --- Vertex AI 認証（GCP無料クレジット対応） ---
+// .env.local から GCP_PROJECT_ID / GCP_REGION を読み取り
+function readEnvVar(name: string): string {
   try {
     const envPath = path.join(PROJECT_ROOT, '.env.local')
     const content = fs.readFileSync(envPath, 'utf-8')
-    const match = content.match(/GOOGLE_AI_API_KEY=(.+)/)
+    const match = content.match(new RegExp(`${name}=(.+)`))
     return match ? match[1].trim().replace(/^["']|["']$/g, '') : ''
   } catch {
     return ''
   }
-})()
+}
+
+const GCP_PROJECT_ID = readEnvVar('GCP_PROJECT_ID')
+const GCP_REGION = readEnvVar('GCP_REGION') || 'us-central1'
+
+// google-auth-library でアクセストークンを自動取得（ADC = Application Default Credentials）
+const auth = new GoogleAuth({
+  scopes: ['https://www.googleapis.com/auth/cloud-platform'],
+})
+let cachedToken = ''
+let tokenExpiry = 0
+
+async function getAccessToken(): Promise<string> {
+  const now = Date.now()
+  if (cachedToken && now < tokenExpiry) return cachedToken
+  const client = await auth.getClient()
+  const tokenRes = await client.getAccessToken()
+  cachedToken = tokenRes.token || ''
+  tokenExpiry = now + 50 * 60 * 1000 // 50分（トークン有効期限60分の少し手前）
+  return cachedToken
+}
 
 // --- Load existing results ---
 function loadExisting(): CropOcrNote[] {
@@ -119,7 +141,7 @@ function loadManifest(): CropManifest {
   return JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf-8'))
 }
 
-// --- Gemini API Call (single note) ---
+// --- Vertex AI API Call (single note) ---
 async function callGeminiOCR(imgPath: string): Promise<GeminiNoteResult | null> {
   const imgB64 = fs.readFileSync(imgPath).toString('base64')
 
@@ -127,17 +149,21 @@ async function callGeminiOCR(imgPath: string): Promise<GeminiNoteResult | null> 
   const maxRetries = 5
 
   while (true) {
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${OCR_MODEL}:generateContent?key=${API_KEY}`,
-      {
+    const token = await getAccessToken()
+    const url = `https://${GCP_REGION}-aiplatform.googleapis.com/v1/projects/${GCP_PROJECT_ID}/locations/${GCP_REGION}/publishers/google/models/${OCR_MODEL}:generateContent`
+    const response = await fetch(url, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
         body: JSON.stringify({
           generationConfig: { temperature: 0.1 },
           contents: [{
+            role: 'user',
             parts: [
               { text: SINGLE_NOTE_PROMPT },
-              { inline_data: { mime_type: 'image/png', data: imgB64 } },
+              { inlineData: { mimeType: 'image/png', data: imgB64 } },
             ],
           }],
         }),
@@ -153,7 +179,9 @@ async function callGeminiOCR(imgPath: string): Promise<GeminiNoteResult | null> 
     }
 
     if (!response.ok) {
+      const errBody = await response.text()
       console.error(`  API error: ${response.status} ${response.statusText}`)
+      console.error(`  詳細: ${errBody.substring(0, 500)}`)
       return null
     }
 
@@ -186,8 +214,9 @@ async function callGeminiOCR(imgPath: string): Promise<GeminiNoteResult | null> 
 async function main(): Promise<void> {
   if (isStatus) { showStatus(); return }
 
-  if (!API_KEY) {
-    console.error('GOOGLE_AI_API_KEY not found in .env.local')
+  if (!GCP_PROJECT_ID) {
+    console.error('GCP_PROJECT_ID not found in .env.local')
+    console.error('追加してください: GCP_PROJECT_ID=gen-lang-client-0058140647')
     process.exit(1)
   }
 
@@ -202,8 +231,10 @@ async function main(): Promise<void> {
   const effectiveLimit = Math.min(toProcess.length, limit)
   const queue = toProcess.slice(0, effectiveLimit)
 
-  console.log(`付箋OCR（個別画像）`)
+  console.log(`付箋OCR（個別画像 via Vertex AI）`)
   console.log(`  モデル: ${OCR_MODEL}`)
+  console.log(`  プロジェクト: ${GCP_PROJECT_ID}`)
+  console.log(`  リージョン: ${GCP_REGION}`)
   console.log(`  マニフェスト: ${manifest.totalNotes}枚`)
   console.log(`  処理済み: ${existing.length}枚`)
   console.log(`  今回処理: ${queue.length}枚${limit < Infinity ? ` (--limit ${limit})` : ''}`)
