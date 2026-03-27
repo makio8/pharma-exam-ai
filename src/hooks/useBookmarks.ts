@@ -5,11 +5,56 @@ import type { BookmarkedNote } from '../types/official-note'
 const STORAGE_KEY = 'bookmarked_notes'
 const USER_ID = 'local'
 
+/** 旧 on-NNN → 新 fusen-NNNN のIDマッピング（23件） */
+const BOOKMARK_ID_MIGRATION: Record<string, string> = {
+  'on-001': 'fusen-0001',
+  'on-002': 'fusen-0002',
+  'on-003': 'fusen-0003',
+  'on-004': 'fusen-0004',
+  'on-005': 'fusen-0005',
+  'on-006': 'fusen-0006',
+  'on-007': 'fusen-0007',
+  'on-008': 'fusen-0008',
+  'on-009': 'fusen-0009',
+  'on-010': 'fusen-0010',
+  'on-011': 'fusen-0011',
+  'on-012': 'fusen-0012',
+  'on-013': 'fusen-0013',
+  'on-014': 'fusen-0014',
+  'on-015': 'fusen-0015',
+  'on-016': 'fusen-0016',
+  'on-017': 'fusen-0017',
+  'on-018': 'fusen-0018',
+  'on-019': 'fusen-0019',
+  'on-020': 'fusen-0020',
+  'on-021': 'fusen-0021',
+  'on-022': 'fusen-0022',
+  'on-023': 'fusen-0023',
+}
+
+/** localStorage内の旧 on-NNN IDを fusen-NNNN に変換 */
+function migrateBookmarkIds(bookmarks: BookmarkedNote[]): BookmarkedNote[] {
+  let migrated = false
+  const result = bookmarks.map((b) => {
+    const newId = BOOKMARK_ID_MIGRATION[b.note_id]
+    if (newId) {
+      migrated = true
+      return { ...b, note_id: newId }
+    }
+    return b
+  })
+  if (migrated) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(result))
+  }
+  return result
+}
+
 function loadBookmarks(): BookmarkedNote[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (!raw) return []
-    return JSON.parse(raw) as BookmarkedNote[]
+    const bookmarks = JSON.parse(raw) as BookmarkedNote[]
+    return migrateBookmarkIds(bookmarks)
   } catch {
     return []
   }

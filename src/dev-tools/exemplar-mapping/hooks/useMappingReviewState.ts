@@ -13,13 +13,89 @@ const initialState: MappingReviewState = {
   updatedAt: new Date().toISOString(),
 }
 
+/** 旧 on-NNN → 新 fusen-NNNN のIDマッピング（23件） */
+const NOTE_ID_MIGRATION: Record<string, string> = {
+  'on-001': 'fusen-0001',
+  'on-002': 'fusen-0002',
+  'on-003': 'fusen-0003',
+  'on-004': 'fusen-0004',
+  'on-005': 'fusen-0005',
+  'on-006': 'fusen-0006',
+  'on-007': 'fusen-0007',
+  'on-008': 'fusen-0008',
+  'on-009': 'fusen-0009',
+  'on-010': 'fusen-0010',
+  'on-011': 'fusen-0011',
+  'on-012': 'fusen-0012',
+  'on-013': 'fusen-0013',
+  'on-014': 'fusen-0014',
+  'on-015': 'fusen-0015',
+  'on-016': 'fusen-0016',
+  'on-017': 'fusen-0017',
+  'on-018': 'fusen-0018',
+  'on-019': 'fusen-0019',
+  'on-020': 'fusen-0020',
+  'on-021': 'fusen-0021',
+  'on-022': 'fusen-0022',
+  'on-023': 'fusen-0023',
+}
+
+/** composite key（noteId:exemplarId）のnoteId部分を on-NNN→fusen-NNNN に変換 */
+function migrateCompositeKeys<T>(obj: Record<string, T>): Record<string, T> {
+  const result: Record<string, T> = {}
+  let changed = false
+  for (const [key, value] of Object.entries(obj)) {
+    const colonIdx = key.indexOf(':')
+    if (colonIdx === -1) {
+      result[key] = value
+      continue
+    }
+    const noteId = key.slice(0, colonIdx)
+    const rest = key.slice(colonIdx)
+    const newNoteId = NOTE_ID_MIGRATION[noteId]
+    if (newNoteId) {
+      result[newNoteId + rest] = value
+      changed = true
+    } else {
+      result[key] = value
+    }
+  }
+  return changed ? result : obj
+}
+
+/** 単純キー（noteId のみ）を on-NNN→fusen-NNNN に変換 */
+function migrateSimpleKeys<T>(obj: Record<string, T>): Record<string, T> {
+  const result: Record<string, T> = {}
+  let changed = false
+  for (const [key, value] of Object.entries(obj)) {
+    const newKey = NOTE_ID_MIGRATION[key]
+    if (newKey) {
+      result[newKey] = value
+      changed = true
+    } else {
+      result[key] = value
+    }
+  }
+  return changed ? result : obj
+}
+
 /** v1 → v2 migration: addedMatches を補完 */
 export function migrateState(raw: Record<string, unknown>): MappingReviewState {
-  const state = raw as unknown as MappingReviewState
+  let state = raw as unknown as MappingReviewState
+  // v1 → v2: addedMatches フィールド追加
   if (!state.addedMatches) {
-    return { ...state, version: 2, addedMatches: {} }
+    state = { ...state, version: 2, addedMatches: {} }
   }
-  return state
+  // on-NNN → fusen-NNNN キーマイグレーション
+  const lastPosition = NOTE_ID_MIGRATION[state.lastPosition] || state.lastPosition
+  return {
+    ...state,
+    matchStatuses: migrateCompositeKeys(state.matchStatuses),
+    primaryOverrides: migrateCompositeKeys(state.primaryOverrides),
+    addedMatches: migrateCompositeKeys(state.addedMatches),
+    entryStatuses: migrateSimpleKeys(state.entryStatuses),
+    lastPosition,
+  }
 }
 
 function loadState(): MappingReviewState {
