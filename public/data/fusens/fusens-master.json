@@ -14414,7 +14414,7 @@
           803
         ]
       },
-      "topicId": "chemistry-functional-groups",
+      "topicId": "hygiene-nutrition",
       "linkedQuestionIds": [],
       "importance": 0,
       "tier": "free",
@@ -16943,7 +16943,7 @@
           880
         ]
       },
-      "topicId": "pharmaceutics-pharmacokinetics",
+      "topicId": "hygiene-chemical-radiation",
       "linkedQuestionIds": [],
       "importance": 0,
       "tier": "free",
@@ -17735,7 +17735,7 @@
           816
         ]
       },
-      "topicId": "biology-cell-division",
+      "topicId": "pathology-infection-cancer",
       "linkedQuestionIds": [],
       "importance": 0,
       "tier": "free",
@@ -18592,7 +18592,7 @@
           766
         ]
       },
-      "topicId": "pharmacology-drug-safety",
+      "topicId": "pharmacology-autonomic-nervous",
       "linkedQuestionIds": [],
       "importance": 0,
       "tier": "free",
@@ -20906,7 +20906,7 @@
           705
         ]
       },
-      "topicId": "chemistry-basic-properties",
+      "topicId": "pharmaceutics-pharmacokinetics",
       "linkedQuestionIds": [],
       "importance": 0,
       "tier": "free",
