@@ -29,10 +29,18 @@
 - Phase 2: Capacitorでネイティブ化 → App Store + Google Play
 - 理由: 既存React+Viteコード95%再利用可、ネイティブプッシュ通知対応、書き直し不要
 
-### 課金モデル
-- 🆓 Free: 過去問3,470問+AI解説+公式付箋200枚
-- 💎 付箋パック（買い切り2,980-4,980円）: 全1,000枚
-- 🤖 AIパック（月額480-780円）: AI類題+先輩コーチAI
+### 課金モデル（2026-03-27改訂。DB設計spec v1.1で確定）
+- 🆓 Free: 過去問全3,470問+AI解説。チュートリアル固定問題で付箋+暗記カードを体験可能
+- 💎 Pro月額: 980円/月。付箋全1,000枚+暗記カード+分析+クラウド同期
+- 💎 Pro年度パス: 7,800円/年（受験年度4月〜翌3月）
+- 🏆 Premium（将来）: 1,980円/月。AI類題+先輩コーチAI+個別相談
+- 🎯 単発パック（将来）: オリジナル模試、科目別拡張パック等
+
+### 認証・課金の設計判断（2026-03-27確定）
+- **認証**: ログイン必須（D案）。LINE Login（主）+ Apple Login（App Store審査用）。ゲストなし
+- **決済**: Web=Stripe / アプリ=IAP。DBが唯一の真実源（二重課金防止）
+- **DB**: Supabase (PostgreSQL) + RLS。20テーブル。課金は6テーブル分割
+- **詳細**: `docs/superpowers/specs/2026-03-27-db-design-spec.md`（v1.1、GPT-5.4×4+エージェント4チームレビュー済み）
 
 ### 長期ビジョン: 「先輩の知恵が循環するプラットフォーム」
 6年生の知識・体験 → コンテンツ化 → 下の学年（5年生CBT、就活、実習）に価値を届ける
@@ -139,7 +147,18 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - テスト: 25ファイル456件全パス
   - 設計: `docs/superpowers/specs/2026-03-26-note-exemplar-mapping-design.md`（v1.1）
   - 計画: `docs/superpowers/plans/2026-03-26-note-exemplar-mapping.md`
-  - **次: ブラウザで `/dev-tools/exemplar-mapping` を確認 → マッチング結果レビュー → 177枚横展開**
+  - **次: OCR完了後に1599枚への横展開（1枚ずつClaude推論 × N回、topicId単位でグループ化）→ exemplarIds直接反映 → validateで異常値チェック**
+- **付箋→例示マッチングUI改善（2026-03-27）**
+  - 同topicId全exemplar折りたたみ一覧 + 手動追加機能（Primary/Secondary選択 → 即approved）
+  - `getEffectiveMatches()` 純粋関数を単一真実源に。全操作（表示・一括承認・リセット・エクスポート）を統一
+  - MappingReviewState v2（addedMatches追加、v1→v2 migration）
+  - キーボードショートカット closest() ベース除外、候補0件ガード
+  - GPT-5.4レビュー: 設計spec 3回（P1×7修正）、実装計画 1回（P1×2修正）、最終コード 1回（P1×1修正）
+  - テスト: 29ファイル499件全パス
+  - **パイプライン判断変更**: マッチング精度が十分（スマホ実機確認済み）なため人間レビューをスキップ。Claude推論（1枚ずつ） → official-notes.ts 直接反映 → validateで異常値チェック。レビューUIは異常値修正用に残す
+  - 設計: `docs/superpowers/specs/2026-03-26-exemplar-list-in-mapping-ui-design.md`（v1.1、GPT-5.4×3回）
+  - 計画: `docs/superpowers/plans/2026-03-26-exemplar-list-in-mapping-ui.md`（GPT-5.4×1回）
+  - **次: 別セッションOCR（1599枚）完了待ち → 1枚ずつClaude推論マッチング → official-notes.ts反映**
 - **FlashCard データ層リファクタリング（2026-03-26）**
   - FlashCard → FlashCardTemplate（公式コンテンツ）+ CardProgress（ユーザー進捗）に分離
   - SM2Scheduler 純粋クラス抽出（12テスト）
@@ -168,40 +187,34 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - テスト: 21ファイル404件全パス
   - バリデーター新ルール choice-suffix-in-question-text 追加済み（Task 5完了）
   - 次: 101回以降の手動レビュー（レビューUIで年度フィルタ101→全問表示）
-- **付箋パイプライン（Phase 2a→2b: 新パイプライン確立、サンプル投入完了）**
-  - 旧パイプライン（Gemini bbox自動検出）→ 新パイプライン（人間アノテーション）に全面移行
-  - 新パイプラインフロー: 人間bbox描画 → crop-from-annotation.ts → ocr-cropped-notes.ts → build-fusens-master.ts --from-crop → official-notes.ts
-  - アノテーションUI: `/dev-tools/fusen-annotate`（19ファイル）
-  - split-pages.ts: 見開きA3→左右分割 **全129ページ完了（258枚）**
-  - アノテーション実施中: 5ページ40枚完了（page-001〜003）、残り253ページ
-  - crop完了: 40枚の個別付箋画像を切り出し済み
-  - OCR完了: 23/40枚（Gemini日次制限250RPDで残り17枚は翌日）
-  - master builder改修: `cropOcrToMaster()` 追加、`--from-crop` フラグ対応（新旧パイプライン両立）
-  - **official-notes.ts: モック10枚→実データ23枚に差し替え（実画像パス・OCRテキスト・topicId設定）**
-  - GPT-5.4レビュー: P1×3（textSummaryと実画像の不一致3件修正）+ P2×1（topicId修正）
-  - テスト: 21ファイル404件全パス
-  - 次: 残り17枚OCR再実行 → アノテーション継続 → 全ページパイプライン完走
+- **付箋パイプライン（Phase 2c: 全量パイプライン完走、旧パイプライン完全廃止）**
+  - 新パイプライン完走: アノテーション→crop→OCR→マスターJSON（1,642件）
+  - フロー: 人間bbox描画 → crop-from-annotation.ts → ocr-cropped-notes.ts → build-fusens-master.ts --from-crop → official-notes.ts
+  - アノテーション: **全258ページ完了**（227ページ annotated / 30 skipped / 1 empty）、1,642 bbox
+  - crop: **1,642枚の個別画像生成済み** → `public/images/fusens/page-NNN-{left|right}/note-NN.png`
+  - OCR: **1,642/1,642枚 完了**（Gemini 2.5 Flash、GCP課金有効、RATE_LIMIT_MS=200ms）
+  - マスター: **1,642件**（fusen-0001〜fusen-1642、全draft、topicId未設定）
+  - 旧パイプライン完全廃止: 旧154件をマスターから削除、旧画像（page-NNN/）も削除済み
+  - アノテーションJSON: `/tmp/claude/fusens/annotation-export-2026-03-26.json`
   - 設計: `docs/superpowers/specs/2026-03-25-fusen-annotate-ui-design.md`（GPT-5.4 Approved）
-  - 計画: `docs/superpowers/plans/2026-03-25-fusen-annotate-ui.md`
-  - レビューUI Phase 1: `/dev-tools/fusen-review`（判定+キーボードナビ、Phase 2b以降で使用）
+  - レビューUI: `/dev-tools/fusen-review`（判定+キーボードナビ）
+  - パイプライン手順スキル: `pharma-exam-fusen-pipeline`（新PDF追加時に参照）
+  - **次: topicId一括設定 → official-notes.ts を23枚→1,642枚に拡大 → exemplarマッチング横展開**
 - Ant Design: 未移行ページ（FlashCardPage, FlashCardListPage）がまだ依存中。NotesPageはリデザイン済み
 - AppLayout: `REDESIGNED_EXACT` + `matchPath('/practice/:questionId')` でリデザイン済みページを管理
 
 ## コマンド
 - `npm run dev` — 開発サーバー
 - `npm run build` — `tsc -b && vite build`（noUnusedLocals: true、未使用importでエラー）
-- `npx vitest run` — テスト（25ファイル456テスト）
+- `npx vitest run` — テスト（29ファイル499テスト）
 - `npx tsc --noEmit` — 型チェックのみ
 - `codex review --base <SHA>` — GPT-5.4によるコードレビュー（マルチモデル戦略）
 - `codex review --commit <SHA>` — 特定コミットのレビュー
 - `npm run validate` — 全問データ品質チェック（44ルール、CLI + JSONレポート出力）
 - `/dev-tools/review` — データ品質レビューUI（dev serverのみ。`npm run dev` → ブラウザでアクセス）
-- `npx tsx scripts/ocr-fusens.ts --all` — 旧パイプライン: 全ページOCR（Gemini 2.5 Flash、見開き画像）
-- `npx tsx scripts/ocr-fusens.ts --status` — 旧OCR進捗確認
-- `npx tsx scripts/crop-from-annotation.ts <annotation-json>` — **新パイプライン**: アノテーションJSON→個別画像切り抜き（`--dry-run`対応）
-- `npx tsx scripts/ocr-cropped-notes.ts` — **新パイプライン**: 個別画像→Gemini OCR（resume対応、`--status`/`--limit N`/`--all`）
-- `npx tsx scripts/build-fusens-master.ts` — 旧パイプライン: OCR結果→マスターJSON変換
-- `npx tsx scripts/build-fusens-master.ts --from-crop` — **新パイプライン**: crop-OCR結果→マスターJSON変換
+- `npx tsx scripts/crop-from-annotation.ts <annotation-json>` — アノテーションJSON→個別画像切り抜き（`--dry-run`対応）
+- `npx tsx scripts/ocr-cropped-notes.ts` — 個別画像→Gemini OCR（resume対応、`--status`/`--limit N`/`--all`）**※1プロセスのみ実行**
+- `npx tsx scripts/build-fusens-master.ts --from-crop` — crop-OCR結果→マスターJSON変換
 - `npx tsx scripts/build-fusens-master.ts --stats` — 付箋統計（半ページ体系の件数も表示）
 - `/dev-tools/fusen-review` — 付箋レビューUI（dev serverのみ）
 - `npx tsx scripts/split-pages.ts --source makio --input /tmp/claude/fusens/pages/` — 見開き→左右分割
@@ -226,15 +239,13 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - ノートドメインコンポーネント: `src/components/notes/`（FusenGrid, SubjectSection, FusenThumbnail, EmptyState, RelatedQuestionList, FusenBreadcrumb, FlashCardSection）
 - 付箋コアロジック: `src/utils/fusen-library-core.ts`（FusenLibraryCore — グルーピング・フィルター・ソート・バッジ計算。純粋関数テスト13件）
 - 問題ドメインコンポーネント: `src/components/question/`（ProgressHeader, QuestionBody, ChoiceList, ChoiceCard, ActionArea, ResultBanner, ExplanationSection, OfficialNoteCard, NoteImageViewer, MetaAccordion）— LinkedQuestionViewer からも再利用前提
-- 公式付箋データ: `src/data/official-notes.ts`（実データ23枚、実画像パス使用）、型: `src/types/official-note.ts`（linkedCardIds廃止済み、exemplarIds?/noteType?追加）
+- 公式付箋データ: `src/data/official-notes.ts`（現在23枚、1,642枚への拡大待ち）、型: `src/types/official-note.ts`（linkedCardIds廃止済み、exemplarIds?/noteType?追加）
 - データバリデーター: `src/utils/data-validator/`（44ルール、4カテゴリ: 構造/整合性/品質/付箋）
 - レビューUI: `src/dev-tools/review/`（Vite dev server統合、本番ビルドに含まれない）
 - 修正スクリプト: `scripts/apply-corrections.ts`（中間JSON方式） + `scripts/json-to-exam-ts.ts`
 - 選択肢サフィックス漏れ検出: `scripts/fix-choice-suffix-leak.ts`（CLI） + `scripts/lib/suffix-leak-detector.ts`（コアロジック、50テスト）
 - レビューUI 3カラム: PDF / ReviewCard+メモ / CorrectionPanel常時表示
-- 付箋データパイプライン（旧）: `ocr-results.json`(生データ) → `fusens-master.json`(ID付きマスター) → `official-notes.ts`(プロダクト用)
-- 付箋データパイプライン（新・推奨）: annotation JSON → `crop-manifest.json` → `crop-ocr-results.json` → `fusens-master.json` → `official-notes.ts`
-- 付箋OCR（旧）: `scripts/ocr-fusens.ts`（Gemini 2.5 Flash、bbox座標付き、429失敗時null返却で保存スキップ）
+- 付箋データパイプライン: annotation JSON → `crop-manifest.json` → `crop-ocr-results.json` → `fusens-master.json` → `official-notes.ts`（旧パイプライン廃止済み。手順スキル: `pharma-exam-fusen-pipeline`）
 - 付箋crop: `scripts/crop-from-annotation.ts` + `scripts/lib/crop-annotation-core.ts`（bbox→sharp extract変換、テスト14件）
 - 付箋OCR（新）: `scripts/ocr-cropped-notes.ts` + `scripts/lib/ocr-cropped-core.ts`（個別画像テキスト読み取り、bbox検出不要で精度UP、テスト11件）
 - 付箋マスター型: `scripts/lib/fusens-master-types.ts`（Fusen, FusenMaster, FusenSource に pageId/side 追加）
@@ -243,14 +254,15 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - 付箋→例示マッチング: `src/data/fusens/note-exemplar-mappings.json`（Claude推論結果、confidence+reasoning付き）
 - 付箋→例示マッチング型: `src/types/note-exemplar-mapping.ts`（NoteExemplarMatch, MappingEntry, MappingsFile）
 - 付箋レビューUI: `src/dev-tools/fusen-review/`（既存review/と同パターン、localStorage永続化）
-- 付箋→例示マッチングUI: `src/dev-tools/exemplar-mapping/`（1カラム、候補単位の承認/却下/primary切替）
+- 付箋→例示マッチングUI: `src/dev-tools/exemplar-mapping/`（1カラム、候補承認/却下/primary切替 + 同topicId全exemplar折りたたみ一覧 + 手動追加機能）
+- effective matches: `src/dev-tools/exemplar-mapping/utils/effective-matches.ts`（getEffectiveMatches — original+added+overridesマージ、テスト13件）
+- マッチングUI型: `src/dev-tools/exemplar-mapping/types.ts`（MappingReviewState v2、AddedMatch）
 - 付箋アノテーションUI: `src/dev-tools/fusen-annotate/`（Canvas bbox描画、localStorage永続化）
 - 付箋アノテーション型: `src/dev-tools/fusen-annotate/types.ts`（NormalizedBbox [y1,x1,y2,x2] 0-1000）
 - 付箋ロジック: `utils/CanvasDrawManager.ts`（座標変換・hitTest）、`utils/AnnotationStateManager.ts`（永続化・エクスポート）
 - 付箋左右分割画像: `public/images/fusens/sources/makio/page-NNN-left.png`
 - split-pagesコア: `scripts/lib/split-pages-core.ts`（parsePageFiles, generatePageIds）
-- 付箋画像（旧）: `public/images/fusens/page-NNN/note-NN.png`（見開き全体からcrop）
-- 付箋画像（新）: `public/images/fusens/page-NNN-{left|right}/note-NN.png`（半ページからcrop、座標系が異なるので旧とは混在不可）
+- 付箋画像: `public/images/fusens/page-NNN-{left|right}/note-NN.png`（半ページからcrop、1,642枚）
 - 付箋PDF: Google Drive > pharma-exam-ai > fusen-image > fusen-note-makio.pdf → `/tmp/claude/fusens/all-subjects.pdf`
 - ブループリント: 科目 → 大項目(MajorCategory) → 中項目(MiddleCategory) の3階層
 
@@ -264,6 +276,8 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - ページコンポーネントのexportパターン: `export function PageName()`（named export）。`export default` は不可。routes.tsx が `.then(m => ({ default: m.PageName }))` でラップ
 - CSS変数: セカンダリテキストは `var(--text-2)`。`var(--text-sub)` は存在しない
 - ロジック分離パターン: FusenLibraryCore のように純粋クラスに抽出 → フック(useFusenLibrary)がラップ → コンポーネントはフック経由で使用。テストはクラスに対して行う
+- exemplar-mapping effective list パターン: `entry.matches` を直接参照せず `getEffectiveMatches()` を単一真実源にする。手動追加分の Exemplar lookup は `exemplarById` Map でフォールバック
+- キーボードショートカット除外: `tagName` ベースではなく `closest('button, summary, [contenteditable], input, textarea, select')` が堅牢
 
 ## Vite dev server の注意事項
 - `server.fs.allow` を明示指定すると**プロジェクトルートのデフォルト許可が消える** → 必ず `__dirname` を先頭に含める
@@ -277,7 +291,8 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `codex review --base <SHA>` と `codex review --commit <SHA>` は排他。同時指定不可（エラーになる）
 - `codex exec "プロンプト"` で GPT-5.4 に設計レビュー等の自由質問が可能
 - official-notes.ts の linkedQuestionIds は暫定マッピング（question-topic-mapから逆引き）。本格運用時にトピック紐付けで自動化予定
-- Gemini 2.5 Flash 無料枠: 250RPD/日、10RPM。429エラー時はnullを返し保存しない（0枚保存バグ修正済み）
+- Gemini 2.5 Flash: GCP課金有効（$300クレジット）、RATE_LIMIT_MS=200ms。旧無料枠（250RPD/10RPM）から大幅緩和済み
+- ocr-cropped-notes.ts は**必ず1プロセスのみ実行**。並列実行すると `.tmp` ファイル rename 競合で ENOENT クラッシュ
 - `fusens-master.json` は `src/data/` と `public/data/` の両方に存在。`build-fusens-master.ts` が両方に書き出す
 - OCRの空ページ（notes:[]）は429失敗の可能性あり。付箋0枚ページは保存しない設計（API失敗=null、本当に空=[]で区別）
 - `erasableSyntaxOnly: true` → `constructor(private x: T)` パラメータプロパティ構文は使えない。フィールド宣言+constructor内代入
@@ -288,7 +303,7 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - corrections JSON形式: `apply-corrections.ts` はフラット配列を期待。レビューUIの `CorrectionsFile`（`Record<qId, {items}>` 形式）とは異なるので注意
 - suffix-leak検出: 複数ターミネータ（連問テキスト）は即null返却が安全。AUTO_MEDIUMの自動適用は危険（GPT-5.4 P1指摘）
 - 付箋座標系: 既存パイプライン全体が0-1000正規化。新規コードも必ず0-1000に統一すること
-- 旧パイプライン（見開き）と新パイプライン（半ページ）の座標系は別空間。同じ0-1000だが参照画像が異なるため直接変換不可
+- 付箋座標系は半ページ画像基準の0-1000正規化（旧パイプライン廃止済み）
 - `scripts/lib/` のコードは `src/` から import 不可（ビルドスコープ外）。同じロジックが必要な場合はインラインか `src/utils/` に配置
 - textSummaryは実画像の内容と正確に一致させること（GPT-5.4 P1指摘: 画像と矛盾するサマリーはユーザーに誤情報を与える）
 
@@ -330,6 +345,7 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `docs/superpowers/plans/2026-03-25-fix-choice-suffix-leak.md` — 選択肢サフィックス漏れ修正計画（全5タスク完了）
 - `docs/superpowers/specs/2026-03-26-learning-cycle-architecture-design.md` — **学習サイクル循環設計 v1.2**（3機能紐付け+ナビ+カード生成+DB蓄積、GPT-5.4×3回+5人チームレビュー済み）
 - `docs/superpowers/specs/2026-03-26-notespage-redesign-design.md` — NotesPage リデザイン v1.3（循環設計と整合済み、§4.1暗記カード実装済み）
+- `docs/superpowers/specs/2026-03-27-db-design-spec.md` — **DB設計spec v1.1**（20テーブルDDL+RLS+課金6テーブル+認証+削除、GPT-5.4×4+エージェント4チームレビュー済み）
 - `docs/superpowers/plans/2026-03-26-notespage-redesign.md` — NotesPage 実装計画 v1.1（7タスク全完了、GPT-5.4+Spec Review済み）
 - `docs/superpowers/plans/2026-03-26-flashcard-data-layer.md` — **FlashCard データ層実装計画**（14タスク全完了）
 
