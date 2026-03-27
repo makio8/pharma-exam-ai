@@ -97,16 +97,26 @@ const TOPIC_PREFIX_TO_SUBJECT: Record<string, string> = {
 
 function resolveSubject(topicId: string): string {
   const prefix = topicId.split('-')[0]
-  return TOPIC_PREFIX_TO_SUBJECT[prefix] ?? '物理'
+  const subject = TOPIC_PREFIX_TO_SUBJECT[prefix]
+  if (!subject) {
+    throw new Error(
+      `未知の topicId prefix: "${prefix}" (topicId="${topicId}")。TOPIC_PREFIX_TO_SUBJECT に追加してください`,
+    )
+  }
+  return subject
 }
 
 // ---------- question-topic-map.ts をパースして topicId → questionId[] を構築 ----------
+
+// 最低限の問題数閾値。question-topic-map.ts のパースが壊れた場合に早期検知する
+const MIN_EXPECTED_QUESTIONS = 3000
 
 function buildTopicToQuestionsMap(): Record<string, string[]> {
   const filePath = path.join(ROOT, 'src/data/question-topic-map.ts')
   const content = fs.readFileSync(filePath, 'utf-8')
 
   const map: Record<string, string[]> = {}
+  let totalQuestions = 0
   // パターン: "r100-001": "physics-material-structure",
   const re = /"(r\d+-\d+)":\s*"([^"]+)"/g
   let match: RegExpExecArray | null
@@ -116,7 +126,19 @@ function buildTopicToQuestionsMap(): Record<string, string[]> {
       map[topicId] = []
     }
     map[topicId].push(questionId)
+    totalQuestions++
   }
+
+  // P1修正: 正規表現パースが壊れた場合の安全弁（GPT-5.4指摘）
+  if (totalQuestions < MIN_EXPECTED_QUESTIONS) {
+    throw new Error(
+      `question-topic-map.ts から ${totalQuestions} 件しか抽出できませんでした（期待: ${MIN_EXPECTED_QUESTIONS}+件）。` +
+        'ファイル形式が変更された可能性があります。正規表現パターンを確認してください。',
+    )
+  }
+  console.log(
+    `  question-topic-map: ${totalQuestions} 問 → ${Object.keys(map).length} トピック`,
+  )
   return map
 }
 
@@ -198,9 +220,26 @@ function main() {
 
   const subjectCounts: Record<string, number> = {}
 
+  // P2修正: noteType / tier の許可値（GPT-5.4指摘）
+  const VALID_NOTE_TYPES = new Set([
+    'mnemonic',
+    'knowledge',
+    'related',
+    'caution',
+    'solution',
+  ])
+  const VALID_TIERS = new Set(['free', 'premium'])
+
   for (const fusenId of sortedIds) {
     const entry = fusens[fusenId]
     if (!entry) continue
+
+    // P2修正: record key と entry.id の整合チェック（GPT-5.4指摘）
+    if (fusenId !== entry.id) {
+      throw new Error(
+        `ID不整合: record key="${fusenId}" !== entry.id="${entry.id}"`,
+      )
+    }
 
     // subject は topicId から逆算（OCR由来の subject は不正確）
     const subject = resolveSubject(entry.topicId)
@@ -226,6 +265,20 @@ function main() {
     // importance: linkedQuestionIds の件数ベース
     const importance = computeImportance(linkedQuestionIds.length)
 
+    // P2修正: noteType / tier のバリデーション（GPT-5.4指摘）
+    const noteType = entry.noteType || 'knowledge'
+    if (!VALID_NOTE_TYPES.has(noteType)) {
+      throw new Error(
+        `不正な noteType: "${noteType}" (fusen=${fusenId})。許可値: ${[...VALID_NOTE_TYPES].join(', ')}`,
+      )
+    }
+    const tier = entry.tier || 'free'
+    if (!VALID_TIERS.has(tier)) {
+      throw new Error(
+        `不正な tier: "${tier}" (fusen=${fusenId})。許可値: ${[...VALID_TIERS].join(', ')}`,
+      )
+    }
+
     notes.push({
       id: entry.id,
       title: entry.title,
@@ -236,9 +289,9 @@ function main() {
       tags: entry.tags,
       linkedQuestionIds,
       exemplarIds,
-      noteType: entry.noteType || 'knowledge',
+      noteType,
       importance,
-      tier: entry.tier || 'free',
+      tier,
     })
   }
 
