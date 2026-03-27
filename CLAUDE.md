@@ -87,7 +87,7 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - Vite のポート番号は起動のたびに変わる可能性あり（5173, 5174, 5175...）
 - 未解決: スマホ Safari で演習データが保存されない問題（SW キャッシュが原因の可能性大、要調査）
 
-## 開発状況（2026-03-25時点）
+## 開発状況（2026-03-27時点）
 - Phase 1 Week 1-2 完了: PracticePage + HomePage を Soft Companion にリデザイン済み
 - Phase 1 Week 3 完了: QuestionPage を Soft Companion にフルリデザイン
   - 730行→285行（61%削減）、Ant Design依存ゼロ
@@ -135,7 +135,14 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - GPT-5.4レビュー3回（セクション1-2-4）+ 5人チームレビュー（PdM/グロース/アナリティクス/アーキテクト/モバイル）
   - 設計: `docs/superpowers/specs/2026-03-26-learning-cycle-architecture-design.md`（v1.2）
   - NotesPage spec v1.3と整合確認済み
-  - **次: DB設計spec策定 → FlashCardPage UIリデザイン**
+  - **次: FlashCardPage UIリデザイン**
+- **DB設計 + Supabaseスキーマ構築（2026-03-27）**
+  - DB設計spec v1.1: 20テーブル完全DDL+RLS+課金6テーブル+認証設計（GPT-5.4×4回+エージェント4チーム）
+  - Supabaseマイグレーション5ファイル作成済み（001_functions, 002_tables, 003_rls, 004_app_functions, 005_seed）
+  - questions_catalogシード: 全4,094問（第100〜111回）自動生成
+  - 実装計画 Plan 1-5 全て策定済み（スキーマ→認証→Repo移行→課金→削除+移行）
+  - Plan 1（スキーマ構築）: Task 1-6,8 完了、Task 7（Docker実行検証）は次セッション
+  - **次: Docker Install → supabase start → db push検証 → Plan 2（認証統合）**
 - **付箋→例示マッチング パイプライン（2026-03-26）**
   - 付箋23枚を例示986件にClaude推論でセマンティックマッチング（topicId第一制約）
   - 中間JSON（confidence + reasoning付き）→ レビューUI → official-notes.ts反映の3段階フロー
@@ -211,6 +218,9 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `codex review --base <SHA>` — GPT-5.4によるコードレビュー（マルチモデル戦略）
 - `codex review --commit <SHA>` — 特定コミットのレビュー
 - `npm run validate` — 全問データ品質チェック（44ルール、CLI + JSONレポート出力）
+- `npx supabase start` — ローカルSupabase起動（Docker必須）
+- `npx supabase db push` — マイグレーション適用（5ファイル: functions→tables→rls→app_functions→seed）
+- `npx tsx scripts/generate-questions-catalog-seed.ts` — questions_catalogシードSQL再生成（4,094問）
 - `/dev-tools/review` — データ品質レビューUI（dev serverのみ。`npm run dev` → ブラウザでアクセス）
 - `npx tsx scripts/crop-from-annotation.ts <annotation-json>` — アノテーションJSON→個別画像切り抜き（`--dry-run`対応）
 - `npx tsx scripts/ocr-cropped-notes.ts` — 個別画像→Gemini OCR（resume対応、`--status`/`--limit N`/`--all`）**※1プロセスのみ実行**
