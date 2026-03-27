@@ -145,3 +145,108 @@ describe('note-has-exemplars', () => {
     expect(issues).toHaveLength(1)
   })
 })
+
+describe('note-id-unique', () => {
+  it('ユニークなIDはエラーなし', () => {
+    const ctx: ValidationContext = {
+      ...baseContext,
+      officialNotesWithExemplars: [
+        { id: 'fusen-0001', exemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0002', exemplarIds: ['ex-chemistry-001'], subject: '化学', topicId: 'chemistry-basic-properties' },
+      ],
+    }
+    const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-id-unique')
+    expect(issues).toHaveLength(0)
+  })
+
+  it('重複IDはerror', () => {
+    const ctx: ValidationContext = {
+      ...baseContext,
+      officialNotesWithExemplars: [
+        { id: 'fusen-0001', exemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', exemplarIds: ['ex-chemistry-001'], subject: '化学', topicId: 'chemistry-basic-properties' },
+      ],
+    }
+    const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-id-unique')
+    expect(issues).toHaveLength(1)
+    expect(issues[0].severity).toBe('error')
+    expect(issues[0].message).toContain('fusen-0001')
+  })
+
+  it('3件同IDは2件のerror', () => {
+    const ctx: ValidationContext = {
+      ...baseContext,
+      officialNotesWithExemplars: [
+        { id: 'fusen-0001', exemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', exemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', exemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
+      ],
+    }
+    const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-id-unique')
+    expect(issues).toHaveLength(2)
+  })
+})
+
+describe('note-exemplar-max-count', () => {
+  it('5件以下はエラーなし', () => {
+    const manyExemplars: Exemplar[] = Array.from({ length: 5 }, (_, i) => ({
+      id: `ex-test-${String(i + 1).padStart(3, '0')}`,
+      minorCategory: `cat-${i}`,
+      middleCategoryId: 'physics-material-structure',
+      subject: '物理',
+      text: `テスト${i}`,
+    }))
+    const ctx: ValidationContext = {
+      ...baseContext,
+      exemplars: [...testExemplars, ...manyExemplars],
+      officialNotesWithExemplars: [
+        {
+          id: 'fusen-0001',
+          exemplarIds: manyExemplars.map(e => e.id),
+          subject: '物理',
+          topicId: 'physics-material-structure',
+        },
+      ],
+    }
+    const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-exemplar-max-count')
+    expect(issues).toHaveLength(0)
+  })
+
+  it('6件以上はerror', () => {
+    const manyExemplars: Exemplar[] = Array.from({ length: 6 }, (_, i) => ({
+      id: `ex-test-${String(i + 1).padStart(3, '0')}`,
+      minorCategory: `cat-${i}`,
+      middleCategoryId: 'physics-material-structure',
+      subject: '物理',
+      text: `テスト${i}`,
+    }))
+    const ctx: ValidationContext = {
+      ...baseContext,
+      exemplars: [...testExemplars, ...manyExemplars],
+      officialNotesWithExemplars: [
+        {
+          id: 'fusen-0001',
+          exemplarIds: manyExemplars.map(e => e.id),
+          subject: '物理',
+          topicId: 'physics-material-structure',
+        },
+      ],
+    }
+    const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-exemplar-max-count')
+    expect(issues).toHaveLength(1)
+    expect(issues[0].severity).toBe('error')
+    expect(issues[0].message).toContain('6')
+    expect(issues[0].message).toContain('上限5件')
+  })
+
+  it('exemplarIds未設定はスキップ', () => {
+    const ctx: ValidationContext = {
+      ...baseContext,
+      officialNotesWithExemplars: [
+        { id: 'fusen-0001', exemplarIds: undefined, subject: '物理', topicId: 'physics-material-structure' },
+      ],
+    }
+    const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-exemplar-max-count')
+    expect(issues).toHaveLength(0)
+  })
+})

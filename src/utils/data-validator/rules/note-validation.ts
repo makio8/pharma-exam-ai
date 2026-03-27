@@ -11,6 +11,26 @@ export function noteValidationRules(
     context.exemplars.map(e => [e.id, e])
   )
 
+  // note-id-unique: 付箋IDの重複チェック
+  const idCount = new Map<string, number>()
+  for (const note of notes) {
+    idCount.set(note.id, (idCount.get(note.id) || 0) + 1)
+  }
+  for (const [id, count] of idCount) {
+    if (count > 1) {
+      for (let i = 1; i < count; i++) {
+        issues.push({
+          questionId: id,
+          rule: 'note-id-unique',
+          severity: 'error',
+          message: `付箋ID ${id} が重複しています`,
+          field: 'id',
+          actual: count,
+        })
+      }
+    }
+  }
+
   for (const note of notes) {
     const exemplarIds = note.exemplarIds
 
@@ -23,6 +43,19 @@ export function noteValidationRules(
         message: `付箋 ${note.id} に exemplarIds が未設定です`,
       })
       continue
+    }
+
+    // note-exemplar-max-count: exemplarIds上限チェック
+    if (exemplarIds.length > 5) {
+      issues.push({
+        questionId: note.id,
+        rule: 'note-exemplar-max-count',
+        severity: 'error',
+        message: `付箋 ${note.id} の exemplarIds が ${exemplarIds.length} 件（上限5件）`,
+        field: 'exemplarIds',
+        actual: exemplarIds.length,
+        expected: 5,
+      })
     }
 
     // note-exemplar-no-duplicates: 重複チェック
