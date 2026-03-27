@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import { AppLayout } from './components/layout/AppLayout'
+import { AuthGuard } from './components/auth/AuthGuard'
 
 const HomePage = React.lazy(() => import('./pages/HomePage').then(m => ({ default: m.HomePage })))
 const PracticePage = React.lazy(() => import('./pages/PracticePage').then(m => ({ default: m.PracticePage })))
@@ -11,6 +12,8 @@ const AnalysisPage = React.lazy(() => import('./pages/AnalysisPage').then(m => (
 const FlashCardListPage = React.lazy(() => import('./pages/FlashCardListPage').then(m => ({ default: m.FlashCardListPage })))
 const FlashCardPage = React.lazy(() => import('./pages/FlashCardPage').then(m => ({ default: m.FlashCardPage })))
 const LoginPage = React.lazy(() => import('./pages/LoginPage').then(m => ({ default: m.LoginPage })))
+const AuthCallbackPage = React.lazy(() => import('./pages/AuthCallbackPage').then(m => ({ default: m.AuthCallbackPage })))
+const OnboardingPage = React.lazy(() => import('./pages/OnboardingPage').then(m => ({ default: m.OnboardingPage })))
 
 const DevToolsReview = import.meta.env.DEV
   ? React.lazy(() => import('./dev-tools/review/ReviewPage'))
@@ -30,43 +33,61 @@ const ExemplarMapping = import.meta.env.DEV
 
 const Loading = () => <div style={{ padding: '2rem', textAlign: 'center' }}>読み込み中...</div>
 
+/** AuthGuard でラップするヘルパー */
+function Protected({ children }: { children: React.ReactNode }) {
+  return <AuthGuard>{children}</AuthGuard>
+}
+
 export const router = createBrowserRouter([
+  // --- 公開ルート（認証不要） ---
   {
     path: '/login',
     element: <Suspense fallback={<Loading />}><LoginPage /></Suspense>,
   },
   {
+    path: '/auth/callback',
+    element: <Suspense fallback={<Loading />}><AuthCallbackPage /></Suspense>,
+  },
+  {
+    path: '/onboarding',
+    element: <Suspense fallback={<Loading />}><OnboardingPage /></Suspense>,
+  },
+
+  // --- 認証必須ルート ---
+  {
     path: '/',
-    element: <AppLayout><Suspense fallback={<Loading />}><HomePage /></Suspense></AppLayout>,
+    element: <Protected><AppLayout><Suspense fallback={<Loading />}><HomePage /></Suspense></AppLayout></Protected>,
   },
   {
     path: '/practice',
-    element: <AppLayout><Suspense fallback={<Loading />}><PracticePage /></Suspense></AppLayout>,
+    element: <Protected><AppLayout><Suspense fallback={<Loading />}><PracticePage /></Suspense></AppLayout></Protected>,
   },
   {
     path: '/practice/:questionId',
-    element: <AppLayout><Suspense fallback={<Loading />}><QuestionPage /></Suspense></AppLayout>,
+    element: <Protected><AppLayout><Suspense fallback={<Loading />}><QuestionPage /></Suspense></AppLayout></Protected>,
   },
   {
     path: '/notes',
-    element: <AppLayout><Suspense fallback={<Loading />}><NotesPage /></Suspense></AppLayout>,
+    element: <Protected><AppLayout><Suspense fallback={<Loading />}><NotesPage /></Suspense></AppLayout></Protected>,
   },
   {
     path: '/notes/:fusenId',
-    element: <AppLayout><Suspense fallback={<Loading />}><FusenDetailPage /></Suspense></AppLayout>,
+    element: <Protected><AppLayout><Suspense fallback={<Loading />}><FusenDetailPage /></Suspense></AppLayout></Protected>,
   },
   {
     path: '/cards',
-    element: <AppLayout><Suspense fallback={<Loading />}><FlashCardListPage /></Suspense></AppLayout>,
+    element: <Protected><AppLayout><Suspense fallback={<Loading />}><FlashCardListPage /></Suspense></AppLayout></Protected>,
   },
   {
     path: '/cards/review',
-    element: <AppLayout><Suspense fallback={<Loading />}><FlashCardPage /></Suspense></AppLayout>,
+    element: <Protected><AppLayout><Suspense fallback={<Loading />}><FlashCardPage /></Suspense></AppLayout></Protected>,
   },
   {
     path: '/analysis',
-    element: <AppLayout><Suspense fallback={<Loading />}><AnalysisPage /></Suspense></AppLayout>,
+    element: <Protected><AppLayout><Suspense fallback={<Loading />}><AnalysisPage /></Suspense></AppLayout></Protected>,
   },
+
+  // --- Dev Tools（認証不要。DEV環境のみ） ---
   ...(import.meta.env.DEV && DevToolsReview ? [{
     path: '/dev-tools/review',
     element: <Suspense fallback={<Loading />}><DevToolsReview /></Suspense>,

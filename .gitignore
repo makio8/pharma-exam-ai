@@ -32,3 +32,7 @@ data/pdfs/
 data/exam-pages/
 
 reports/
+
+# Supabase local dev（Dockerコンテナ一時ファイル）
+supabase/.branches/
+supabase/.temp/

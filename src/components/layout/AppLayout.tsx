@@ -71,12 +71,13 @@ export function AppLayout({ children }: AppLayoutProps) {
             label: <Link to={item.key}>{item.label}</Link>,
           }))}
         />
-        {/* 認証ステータス */}
+        {/* 認証ステータス（AuthGuard 内なので user は必ず存在） */}
         <div style={{ flexShrink: 0 }}>
-          {user ? (
-            <Tooltip title={`${user.email} でログイン中`}>
+          {user && (
+            <Tooltip title={user.user_metadata?.name ?? user.email ?? 'ユーザー'}>
               <Avatar
-                icon={<UserOutlined />}
+                src={user.user_metadata?.picture ?? user.user_metadata?.avatar_url}
+                icon={!user.user_metadata?.picture && !user.user_metadata?.avatar_url ? <UserOutlined /> : undefined}
                 size="small"
                 style={{ cursor: 'pointer', background: '#1890ff', marginRight: 8 }}
               />
@@ -88,14 +89,6 @@ export function AppLayout({ children }: AppLayoutProps) {
                 onClick={handleSignOut}
               />
             </Tooltip>
-          ) : (
-            <Button
-              size="small"
-              onClick={() => navigate('/login')}
-              style={{ color: '#8c8c8c', borderColor: '#434343' }}
-            >
-              ログイン
-            </Button>
           )}
         </div>
       </Header>}

@@ -1,13 +1,42 @@
-// ユーザープロフィール型
+// ユーザー関連の型定義（DB設計spec v1.1 §3.2 準拠）
 
-export type UserRole = 'student' | 'graduate' | 'lecturer'
+// --- users テーブル ---
+export type UserStatus = 'active' | 'disabled' | 'pending_deletion'
+export type UserRole = 'student' | 'graduate' | 'lecturer' | 'admin'
 
-export interface UserProfile {
+export interface DbUser {
   id: string
-  display_name: string
-  grade?: number          // 学年 (1〜6)
-  exam_year?: number      // 受験予定年（例: 2027）
+  status: UserStatus
   role: UserRole
-  pass_year?: number      // 合格年（任意）
   created_at: string
+  updated_at: string
+  deletion_requested_at: string | null
+  scheduled_purge_at: string | null
+  purged_at: string | null
+}
+
+// --- user_profiles テーブル ---
+export interface UserProfile {
+  user_id: string
+  display_name: string | null
+  target_exam_year: number | null
+  university: string | null
+  study_start_date: string | null
+  target_score: number | null
+  onboarding_completed_at: string | null
+  last_active_at: string | null
+  created_at: string
+  updated_at: string
+}
+
+// --- line_accounts テーブル ---
+export interface LineAccount {
+  user_id: string
+  line_user_id: string
+  display_name: string | null
+  picture_url: string | null
+  is_friend: boolean
+  friend_added_at: string | null
+  created_at: string
+  updated_at: string
 }
