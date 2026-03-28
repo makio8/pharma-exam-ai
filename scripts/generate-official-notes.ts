@@ -106,22 +106,54 @@ function resolveSubject(topicId: string): string {
   return subject
 }
 
-// ---------- textSummary 生成（OCR body から簡潔な要約を作る） ----------
+// ---------- textSummary 生成（OCR body からクリーンな要約を作る） ----------
 
+/** OCR テキストをクリーンアップしてサマリーに変換 */
 function generateTextSummary(entry: FusenMasterEntry): string {
   const body = entry.body.trim()
   if (!body) return entry.title
 
-  // OCR テキストをそのまま使う（最大200文字に切り詰め）
-  // 改行を句点区切りに変換し、読みやすくする
+  // 改行を句点区切りに変換
   const lines = body
     .split('\n')
     .map((l) => l.trim())
     .filter((l) => l.length > 0)
-  const joined = lines.join('。')
+  let joined = lines.join('。')
 
-  if (joined.length <= 200) return joined
-  return joined.slice(0, 197) + '...'
+  // --- クリーンアップ処理（PdM レビュー指摘対応）---
+
+  // 1. Markdown テーブルセパレータ行を丸ごと除去（|---|---| 等）
+  joined = joined.replace(/。?\s*\|[-─\s|]+\|?\s*。?/g, '。')
+
+  // 2. Markdown 太字・見出しを除去（** ## 等）
+  joined = joined.replace(/\*\*/g, '')
+  joined = joined.replace(/#{1,3}\s*/g, '')
+
+  // 3. パイプをスペース区切りに（テーブルセル残骸）
+  joined = joined.replace(/\|\s*/g, ' ').replace(/\s*\|/g, ' ')
+
+  // 4. 二重句点・空白混じり句点の正規化（。。→。、。 。→。）
+  joined = joined.replace(/(?:。\s*){2,}/g, '。')
+
+  // 5. 連続スペース・先頭末尾の句点を整理
+  joined = joined.replace(/\s{2,}/g, ' ').trim()
+  joined = joined.replace(/^。+/, '')
+  joined = joined.replace(/。+$/, '')
+
+  // 6. 極短（<20文字）の場合、タイトルを先頭に付与して補強
+  if (joined.length < 20 && entry.title.length > 0) {
+    const titlePrefix = entry.title + ': '
+    if (!joined.startsWith(entry.title)) {
+      joined = titlePrefix + joined
+    }
+  }
+
+  // 最大300文字に拡大（200文字だと112件が切れていた）
+  if (joined.length <= 300) return joined
+  // 句点で切れる位置を探す（文の途中で切らない）
+  const cutPos = joined.lastIndexOf('。', 297)
+  if (cutPos > 100) return joined.slice(0, cutPos + 1)
+  return joined.slice(0, 297) + '...'
 }
 
 // ---------- importance 計算 ----------
