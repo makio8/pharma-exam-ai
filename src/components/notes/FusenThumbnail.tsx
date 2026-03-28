@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FusenLibraryCore } from '../../utils/fusen-library-core'
 import type { OfficialNote } from '../../types/official-note'
@@ -9,7 +10,7 @@ interface Props {
   isBookmarked: boolean
 }
 
-export function FusenThumbnail({ note, isBookmarked }: Props) {
+export const FusenThumbnail = memo(function FusenThumbnail({ note, isBookmarked }: Props) {
   const navigate = useNavigate()
   const badge = FusenLibraryCore.getImportanceBadge(note.importance)
 
@@ -41,4 +42,4 @@ export function FusenThumbnail({ note, isBookmarked }: Props) {
       </div>
     </div>
   )
-}
+})

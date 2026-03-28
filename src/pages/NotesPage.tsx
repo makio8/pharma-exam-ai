@@ -23,13 +23,17 @@ export function NotesPage() {
 
         <div className={styles.tabs}>
           <Chip label="マイ付箋" active={tab === 'my'} onClick={() => setTab('my')} />
-          <Chip label="全付箋" active={tab === 'all'} onClick={() => setTab('all')} />
+          <Chip label={`全付箋 (${allGrouped.reduce((s, g) => s + g.fusens.length, 0)})`} active={tab === 'all'} onClick={() => setTab('all')} />
         </div>
 
         {showEmpty ? (
           <EmptyState />
         ) : (
-          <FusenGrid groups={groups} bookmarkedIds={bookmarkedIds} />
+          <FusenGrid
+            groups={groups}
+            bookmarkedIds={bookmarkedIds}
+            defaultOpen={tab === 'my'}
+          />
         )}
       </div>
       <FloatingNav />

@@ -16,9 +16,18 @@ export interface ImportanceBadge {
 
 export class FusenLibraryCore {
   private notes: OfficialNote[]
+  private idMap: Map<string, OfficialNote> | null = null
 
   constructor(notes: OfficialNote[]) {
     this.notes = notes
+  }
+
+  /** ID → OfficialNote の Map を遅延構築（O(1) ルックアップ用） */
+  private getIdMap(): Map<string, OfficialNote> {
+    if (!this.idMap) {
+      this.idMap = new Map(this.notes.map(n => [n.id, n]))
+    }
+    return this.idMap
   }
 
   /** 科目ごとにグルーピング（科目の出現順を維持） */
@@ -53,8 +62,8 @@ export class FusenLibraryCore {
     return null
   }
 
-  /** IDで付箋を検索 */
+  /** IDで付箋を検索（Map キャッシュで O(1)） */
   getFusenById(id: string): OfficialNote | undefined {
-    return this.notes.find(n => n.id === id)
+    return this.getIdMap().get(id)
   }
 }

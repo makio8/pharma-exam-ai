@@ -1,21 +1,58 @@
+.section {
+  border-bottom: 1px solid var(--border, #e5e5e5);
+}
+
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px 0 8px;
+  padding: 16px 0;
+  cursor: pointer;
+  user-select: none;
+  list-style: none; /* <summary> のデフォルト▶を消す */
 }
+
+/* Safari 対応: summary のデフォルトマーカー消去 */
+.header::-webkit-details-marker {
+  display: none;
+}
+
 .title {
   font-size: 15px;
   font-weight: 700;
   color: var(--text);
   margin: 0;
+  flex: 1;
 }
+
 .count {
   font-size: 13px;
   color: var(--text-2);
+  margin-right: 8px;
 }
+
+.chevron {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.chevron::after {
+  content: '▸';
+  font-size: 14px;
+  color: var(--text-2);
+}
+
+/* 開いているとき chevron を下向きに */
+.section[open] > .header .chevron {
+  transform: rotate(90deg);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+  padding-bottom: 16px;
 }
