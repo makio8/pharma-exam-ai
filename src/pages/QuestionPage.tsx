@@ -208,23 +208,24 @@ function QuestionPageContent({
       return result.is_correct ? 3 : 2
     }
 
-    // 第1キー: 回答状態（未解答→スキップ→不正解→正解）、第2キー: 新しい年度順
-    // 2キーソートにより answerPriority内の年度多様性を自然に確保
-    const twoKeySort = (ids: string[]) =>
-      [...ids].sort((a, b) => {
-        const pa = answerPriority(a), pb = answerPriority(b)
-        if (pa !== pb) return pa - pb
-        return getYear(b) - getYear(a)
-      })
-
     // exemplar一致グループ（topicFallbackは渡さず、コンポーネント側で管理）
     const exemplarMatched = linkService.getRelatedQuestions(questionId, [], 10)
-    // topic fallback（exemplar一致を除く、最大10問）
     const seen = new Set([questionId, ...exemplarMatched])
-    const fallback = topicFallback.filter(qId => !seen.has(qId)).slice(0, 10)
 
-    const sortedExemplar = twoKeySort(exemplarMatched)
-    const sortedFallback = twoKeySort(fallback)
+    // fallback: answerPriorityを第1キーにソートしてからスライス
+    // 年度ソート後スライスだと古い未解答問題がtruncationで落ちるため、priority優先を保証
+    const sortedFallback = topicFallback
+      .filter(qId => !seen.has(qId))
+      .sort((a, b) => {
+        const pa = answerPriority(a), pb = answerPriority(b)
+        if (pa !== pb) return pa - pb
+        return getYear(b) - getYear(a) // 同一priorityグループ内は新しい年度順
+      })
+      .slice(0, 10)
+
+    // exemplar: answerPriorityのみでソート
+    // JS安定ソートにより同一priority内はgetRelatedQuestionsのexemplarスコア順を維持
+    const sortedExemplar = [...exemplarMatched].sort((a, b) => answerPriority(a) - answerPriority(b))
 
     return { exemplarIds: sortedExemplar, fallbackIds: sortedFallback }
   }, [questionId, linkService, getQuestionResult])
