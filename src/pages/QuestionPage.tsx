@@ -8,7 +8,7 @@ import { ALL_TOPICS } from '../data/exam-blueprint'
 import { useQuestionAnswerState } from '../hooks/useQuestionAnswerState'
 import { useTimeTracking } from '../hooks/useTimeTracking'
 import { useSwipeNavigation } from '../hooks/useSwipeNavigation'
-import { useOfficialNotes } from '../hooks/useOfficialNotes'
+import { useScoredOfficialNotes } from '../hooks/useScoredOfficialNotes'
 import { useBookmarks } from '../hooks/useBookmarks'
 import { useLinkedQuestions } from '../hooks/useLinkedQuestions'
 import {
@@ -65,7 +65,7 @@ export function QuestionPage() {
   const { getElapsedSeconds } = useTimeTracking(questionId ?? '')
 
   // --- 公式付箋 ---
-  const { notes } = useOfficialNotes(questionId ?? '')
+  const { notes } = useScoredOfficialNotes(question)
 
   // --- ブックマーク ---
   const { isBookmarked, toggleBookmark } = useBookmarks()

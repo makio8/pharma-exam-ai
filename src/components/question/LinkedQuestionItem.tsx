@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import type { Question, AnswerHistory } from '../../types/question'
 import { useQuestionAnswerState } from '../../hooks/useQuestionAnswerState'
 import { useTimeTracking } from '../../hooks/useTimeTracking'
-import { useOfficialNotes } from '../../hooks/useOfficialNotes'
+import { useScoredOfficialNotes } from '../../hooks/useScoredOfficialNotes'
 import { useBookmarks } from '../../hooks/useBookmarks'
 import { normalizeForDisplay, getDisplayMode } from '../../utils/text-normalizer'
 import { extractQuestionBody } from '../../utils/extract-question-body'
@@ -44,7 +44,7 @@ export function LinkedQuestionItem({
   })
 
   const { getElapsedSeconds } = useTimeTracking(question.id)
-  const { notes } = useOfficialNotes(question.id)
+  const { notes } = useScoredOfficialNotes(question)
   const { isBookmarked, toggleBookmark } = useBookmarks()
 
   const resultRef = useRef<HTMLDivElement>(null)
