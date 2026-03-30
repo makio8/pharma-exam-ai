@@ -1,0 +1,88 @@
+name: Auto-fix Vercel build errors
+
+# Vercelがデプロイ状態を更新するたびに発火
+on:
+  deployment_status
+
+# 同時実行を防ぐ（3プロジェクト同時失敗しても1回だけ修正する）
+concurrency:
+  group: auto-fix-vercel
+  cancel-in-progress: false
+
+jobs:
+  auto-fix:
+    # mainブランチのデプロイが失敗したときのみ実行
+    if: |
+      github.event.deployment_status.state == 'failure' &&
+      (github.event.deployment.ref == 'main' ||
+       github.event.deployment.ref == 'refs/heads/main')
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # git push に必要
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check if already fixed (前のauto-fixが既にpush済みなら何もしない)
+        id: already_fixed
+        run: |
+          if npm run build 2>/dev/null; then
+            echo "already_ok=true" >> $GITHUB_OUTPUT
+          else
+            echo "already_ok=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Fix with Claude Code
+        if: steps.already_fixed.outputs.already_ok == 'false'
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Vercelの本番デプロイが失敗しました。ビルドエラーを修正してください。
+
+            手順:
+            1. `npm run build` を実行してエラーを確認する
+            2. TypeScriptエラー・未使用import・型不一致などを修正する
+            3. `npx tsc --noEmit` でも確認する
+            4. `npm run build` が通ることを確認する
+
+            制約:
+            - 最小限の修正のみ（機能追加・リファクタリング不要）
+            - コミット・pushはしない（後のステップで行う）
+          claude_args: "--max-turns 10"
+
+      - name: Verify fix and push
+        if: steps.already_fixed.outputs.already_ok == 'false'
+        run: |
+          # ビルドが通ることを確認
+          if ! npm run build 2>&1; then
+            echo "❌ Build still failing after Claude's fix attempt"
+            exit 1
+          fi
+
+          # 変更があればコミット&push
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "Claude Code Bot"
+            git config user.email "noreply@anthropic.com"
+            git add -A
+            git commit -m "fix: [auto-fix] Vercelビルドエラー自動修正"
+            git push
+            echo "✅ Fix committed and pushed"
+          else
+            echo "ℹ️ Build passed but no file changes (already fixed by concurrent job?)"
+          fi
