@@ -187,15 +187,16 @@ function QuestionPageContent({
     [linkService, questionId],
   )
 
-  // 同じ単元の類似問題（現在の問題を除く、最大10件）
+  // 同じ単元の類似問題（exemplar一致優先 → トピック補完、最大10件）
   const relatedQuestionIds = useMemo(() => {
     const topicId = QUESTION_TOPIC_MAP[questionId]
-    if (!topicId) return []
-    return Object.entries(QUESTION_TOPIC_MAP)
-      .filter(([qId, tid]) => tid === topicId && qId !== questionId)
-      .map(([qId]) => qId)
-      .slice(0, 10)
-  }, [questionId])
+    const topicFallback = topicId
+      ? Object.entries(QUESTION_TOPIC_MAP)
+          .filter(([qId, tid]) => tid === topicId && qId !== questionId)
+          .map(([qId]) => qId)
+      : []
+    return linkService.getRelatedQuestions(questionId, topicFallback, 10)
+  }, [questionId, linkService])
 
   // 回答後に ResultBanner へ自動スクロール
   useEffect(() => {

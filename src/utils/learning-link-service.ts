@@ -119,6 +119,44 @@ export class LearningLinkService {
     return this.exemplarToQuestions.get(card.primary_exemplar_id) ?? []
   }
 
+  /**
+   * 類似問題を返す（exemplar一致優先 → トピック補完）
+   * - 同じexemplarに紐づく問題をスコア降順で優先
+   * - limit に満たない場合は topicFallbackIds で補完
+   */
+  getRelatedQuestions(
+    questionId: string,
+    topicFallbackIds: string[],
+    limit = 10,
+  ): string[] {
+    const exemplarIds = this.questionToExemplars.get(questionId) ?? []
+
+    // exemplar経由の候補をマッチ数でスコアリング
+    const scoreMap = new Map<string, number>()
+    for (const exId of exemplarIds) {
+      for (const qId of this.exemplarToQuestions.get(exId) ?? []) {
+        if (qId === questionId) continue
+        scoreMap.set(qId, (scoreMap.get(qId) ?? 0) + 1)
+      }
+    }
+
+    // スコア降順でソートして最大 limit 件取得
+    const exemplarMatched = [...scoreMap.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .map(([qId]) => qId)
+      .slice(0, limit)
+
+    if (exemplarMatched.length >= limit) return exemplarMatched
+
+    // 不足分をトピック補完（重複除去）
+    const seen = new Set([questionId, ...exemplarMatched])
+    const fallback = topicFallbackIds
+      .filter(qId => !seen.has(qId))
+      .slice(0, limit - exemplarMatched.length)
+
+    return [...exemplarMatched, ...fallback]
+  }
+
   private pushToMap(map: Map<string, string[]>, key: string, value: string): void {
     const existing = map.get(key)
     if (existing) {
