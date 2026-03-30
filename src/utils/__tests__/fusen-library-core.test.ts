@@ -11,6 +11,8 @@ function makeNote(overrides: Partial<OfficialNote>): OfficialNote {
     subject: '物理',
     topicId: 'physics-material-structure',
     tags: [],
+    primaryExemplarIds: [],
+    secondaryExemplarIds: [],
     importance: 2,
     tier: 'free',
     ...overrides,

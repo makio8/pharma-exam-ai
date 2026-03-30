@@ -8,17 +8,18 @@ export type NoteType = 'mnemonic' | 'knowledge' | 'related' | 'caution' | 'solut
 /** 公式付箋（運営提供コンテンツ） */
 export interface OfficialNote {
   id: string
-  title: string                // 例: 「交感神経 α1受容体の作用機序」
-  imageUrl: string             // 手書きノート画像（PNG/WebP）
-  textSummary: string          // AIテキスト要約
-  subject: QuestionSubject     // 例: 「薬理」
-  topicId: string              // ALL_TOPICS.id で join
+  title: string
+  imageUrl: string
+  textSummary: string
+  subject: QuestionSubject
+  topicId: string
   tags: string[]
-  /** @deprecated JSON から除外済み。ランタイムで topicId → QUESTION_TOPIC_MAP 逆引きを使う */
-  linkedQuestionIds?: string[]
-  exemplarIds?: string[]       // AIマッチング結果（類題ID群）
-  noteType?: NoteType          // 付箋種別（デフォルト: 'knowledge'）
-  importance: number           // 紐づく問題数から自動算出
+  primaryExemplarIds: string[]    // 主要な紐づき（isPrimary=true）
+  secondaryExemplarIds: string[]  // 補助的な紐づき（isPrimary=false）
+  /** @deprecated primaryExemplarIds / secondaryExemplarIds を使用すること。新JSONには含まれない */
+  exemplarIds?: string[]
+  noteType?: NoteType
+  importance: number
   tier: 'free' | 'premium'
 }
 
@@ -26,8 +27,8 @@ export interface OfficialNote {
 export interface BookmarkedNote {
   id: string
   user_id: string
-  note_id: string              // OfficialNote.id
-  bookmarked_at: string        // ISO8601
-  review_count: number         // 何回見たか
-  last_reviewed_at?: string    // 最後に確認した日時
+  note_id: string
+  bookmarked_at: string
+  review_count: number
+  last_reviewed_at?: string
 }

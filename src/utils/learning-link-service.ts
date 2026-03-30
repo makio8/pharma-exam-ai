@@ -37,9 +37,14 @@ export class LearningLinkService {
 
     for (const note of notes) {
       this.notesById.set(note.id, note)
-      if (note.exemplarIds && note.exemplarIds.length > 0) {
-        this.noteToExemplars.set(note.id, note.exemplarIds)
-        for (const exId of note.exemplarIds) {
+      const allExemplarIds = [
+        ...(note.primaryExemplarIds ?? []),
+        ...(note.secondaryExemplarIds ?? []),
+        ...(note.exemplarIds ?? []),
+      ].filter((id, i, arr) => arr.indexOf(id) === i)
+      if (allExemplarIds.length > 0) {
+        this.noteToExemplars.set(note.id, allExemplarIds)
+        for (const exId of allExemplarIds) {
           this.pushToMap(this.exemplarToNotes, exId, note.id)
         }
       }
