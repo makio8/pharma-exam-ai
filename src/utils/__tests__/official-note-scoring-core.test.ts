@@ -100,8 +100,8 @@ describe('OfficialNoteScoringCore', () => {
     expect(score).toBeCloseTo(2 * SCORING_WEIGHTS.importance)
   })
 
-  // T6: importance降順ソート確認（exemplarなし環境）
-  it('T6: exemplarマッチなしのとき importance降順で返る', () => {
+  // T6: exemplarマッチなし・textMatchなし → スコアが閾値未満 → 空配列を返す
+  it('T6: exemplarマッチなし・textMatchなしのとき空配列を返す（関連付箋なしUI向け）', () => {
     const notes = [
       makeNote({ id: 'n1', importance: 2 }),
       makeNote({ id: 'n2', importance: 4 }),
@@ -110,20 +110,20 @@ describe('OfficialNoteScoringCore', () => {
     const question = makeQuestion({ id: 'no-exemplar-question' })
     const core = new OfficialNoteScoringCore([]) // exemplarなし
     const result = core.topNotes(notes, question, 5)
-    expect(result[0].id).toBe('n2') // importance=4が1位
-    expect(result[1].id).toBe('n3') // importance=3が2位
+    expect(result).toHaveLength(0)
   })
 
-  // T6b: フォールバック実際の発動確認（importance=1でfilterを抜けない）
-  it('T6b: 全件importance=1のときフォールバックが発動しimportance降順を返す', () => {
+  // T6b: textMatchあり付箋がある場合はスコア順で返る
+  it('T6b: textMatchありの付箋はMEANINGFUL_SCORE_THRESHOLD以上でスコア順に返る', () => {
     const notes = [
-      makeNote({ id: 'n1', importance: 1 }),
-      makeNote({ id: 'n2', importance: 1 }),
+      makeNote({ id: 'n1', tags: ['コバラミン'], importance: 2 }),
+      makeNote({ id: 'n2', tags: [], importance: 4 }), // textMatchなし → 閾値未満
     ]
-    const question = makeQuestion({ id: 'no-match-question' })
+    const question = makeQuestion({ question_text: 'コバラミンについて', id: 'q-text-match' })
     const core = new OfficialNoteScoringCore([])
     const result = core.topNotes(notes, question, 5)
-    expect(result).toHaveLength(2) // フォールバックは全件返す
+    expect(result).toHaveLength(1)
+    expect(result[0].id).toBe('n1')
   })
 
   // T7: note.tagsが空のときtextMatch=0
@@ -206,5 +206,82 @@ describe('OfficialNoteScoringCore', () => {
     expect(core.score(noteSpecific, question)).toBeCloseTo(
       SCORING_WEIGHTS.correctAnswerMatch + 2 * SCORING_WEIGHTS.importance
     )
+  })
+
+  // T14: 複数選択問題（correct_answer: number[]）でcorrectAnswerMatchが適用される
+  it('T14: correct_answer=[1,3]の複数選択問題でcorrectAnswerMatchが適用される', () => {
+    const note = makeNote({ tags: ['抗コリン薬'] })
+    const question = makeQuestion({
+      choices: [
+        { key: 1, text: '抗コリン薬' },
+        { key: 2, text: '交感神経刺激薬' },
+        { key: 3, text: 'ムスカリン受容体拮抗薬' },
+      ],
+      correct_answer: [1, 3],
+    })
+    const core = new OfficialNoteScoringCore([])
+    const score = core.score(note, question)
+    expect(score).toBeCloseTo(SCORING_WEIGHTS.correctAnswerMatch + 2 * SCORING_WEIGHTS.importance)
+  })
+
+  // T14b: 複数選択問題で複数の正解にマッチしても二重加算しない
+  it('T14b: correct_answer=[1,3]で複数の正解にタグがマッチしても+1.5は一度だけ', () => {
+    const note = makeNote({ tags: ['抗コリン薬', 'ムスカリン受容体拮抗薬'] })
+    const question = makeQuestion({
+      choices: [
+        { key: 1, text: '抗コリン薬' },
+        { key: 3, text: 'ムスカリン受容体拮抗薬' },
+      ],
+      correct_answer: [1, 3],
+    })
+    const core = new OfficialNoteScoringCore([])
+    const score = core.score(note, question)
+    expect(score).toBeCloseTo(SCORING_WEIGHTS.correctAnswerMatch + 2 * SCORING_WEIGHTS.importance)
+  })
+
+  // T14c: 複数選択問題で不正解選択肢にのみマッチするタグはcorrectAnswerMatchされない
+  it('T14c: correct_answer=[1,3]で不正解の選択肢2にマッチするタグはcorrectAnswerMatchしない', () => {
+    const note = makeNote({ tags: ['交感神経刺激薬'] }) // 選択肢2=不正解
+    const question = makeQuestion({
+      choices: [
+        { key: 1, text: '抗コリン薬' },
+        { key: 2, text: '交感神経刺激薬' }, // 不正解
+        { key: 3, text: 'ムスカリン受容体拮抗薬' },
+      ],
+      correct_answer: [1, 3],
+    })
+    const core = new OfficialNoteScoringCore([])
+    const score = core.score(note, question)
+    expect(score).toBeCloseTo(2 * SCORING_WEIGHTS.importance)
+  })
+
+  // T17: 閾値変更後のフォールバック（topNotes が空配列を返す）
+  it('T17: スコアがMEANINGFUL_SCORE_THRESHOLD未満の付箋のみのとき空配列を返す', () => {
+    const notes = [
+      makeNote({ id: 'n1', importance: 4 }), // スコア0.04（importanceのみ）
+      makeNote({ id: 'n2', importance: 2 }), // スコア0.02
+    ]
+    const question = makeQuestion({ id: 'no-match-question' })
+    const core = new OfficialNoteScoringCore([])
+    expect(core.topNotes(notes, question, 5)).toHaveLength(0)
+  })
+
+  // T19: limit > notes.length のとき全件返す
+  it('T19: limit=10でnotes=3件のとき3件全件返す', () => {
+    const notes = [
+      makeNote({ id: 'n1', primaryExemplarIds: ['ex-hygiene-001'] }),
+      makeNote({ id: 'n2', primaryExemplarIds: ['ex-hygiene-001'] }),
+      makeNote({ id: 'n3', primaryExemplarIds: ['ex-hygiene-001'] }),
+    ]
+    const question = makeQuestion()
+    const core = new OfficialNoteScoringCore(mockQEM)
+    expect(core.topNotes(notes, question, 10)).toHaveLength(3)
+  })
+
+  // T20: notes=[]のときtopNotesは空配列を返す
+  it('T20: notes=[]のときtopNotesは空配列を返す', () => {
+    const question = makeQuestion()
+    const core = new OfficialNoteScoringCore(mockQEM)
+    expect(core.topNotes([], question, 5)).toEqual([])
   })
 })

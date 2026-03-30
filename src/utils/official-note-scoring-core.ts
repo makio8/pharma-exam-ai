@@ -11,6 +11,9 @@ export const SCORING_WEIGHTS = {
   importance: 0.01,         // タイブレーク（importance最大4 × 0.01 = 0.04）
 } as const
 
+/** 意味のある関連があるとみなすスコア最低ライン（textMatch 1件分 = 0.5） */
+export const MEANINGFUL_SCORE_THRESHOLD = 0.5
+
 type ExemplarEntry = {
   primary: Set<string>  // isPrimary=true のexemplarId群
   all: Set<string>      // isPrimary問わず全exemplarId群
@@ -73,14 +76,21 @@ export class OfficialNoteScoringCore {
     // 例: 正解「ビタミンB12」→ tags に「ビタミンB12」を持つ付箋が上位に
     // ルール: tag が正解テキストを含む（tag.includes(ct)）
     //   ※ 逆方向（ct.includes(tag)）は「ビタミンB1」が「ビタミンB12」に誤マッチするため使用しない
-    // correct_answerは number | number[] → 単一回答の問題のみ対応（配列は複数選択問題）
-    const ca = question.correct_answer
-    if (typeof ca === 'number' && ca > 0 && question.choices) {
-      const correctChoice = question.choices.find(c => c.key === ca)
-      if (correctChoice?.text && correctChoice.text.length >= 3) {
-        const ct = correctChoice.text
-        const hasMatch = note.tags.some(tag => tag.includes(ct))
-        if (hasMatch) s += SCORING_WEIGHTS.correctAnswerMatch
+    // correct_answerは number | number[] の両方に対応（複数選択問題も含む）
+    // 複数正解でも一回のみ加算（break で二重加算防止）
+    if (question.choices) {
+      const ca = question.correct_answer
+      const caArr = Array.isArray(ca) ? ca : (typeof ca === 'number' && ca > 0 ? [ca] : [])
+      for (const key of caArr) {
+        const correctChoice = question.choices.find(c => c.key === key)
+        if (correctChoice?.text && correctChoice.text.length >= 3) {
+          const ct = correctChoice.text
+          const hasMatch = note.tags.some(tag => tag.includes(ct))
+          if (hasMatch) {
+            s += SCORING_WEIGHTS.correctAnswerMatch
+            break // 複数正解でも1回のみ加算
+          }
+        }
       }
     }
 
@@ -92,23 +102,18 @@ export class OfficialNoteScoringCore {
 
   /**
    * 付箋リストをスコアリングして上位limit件を返す
-   * score > SCORING_WEIGHTS.importance * 1 の場合のみ（= importanceのみは除外）
-   * 全件除外の場合は importance 降順フォールバック
+   * score >= MEANINGFUL_SCORE_THRESHOLD（0.5 = textMatch1件分）の付箋のみ対象
+   * 全件除外の場合は空配列を返す（呼び出し側で「関連付箋なし」UIを表示）
    */
   topNotes(notes: OfficialNote[], question: Question, limit: number): OfficialNote[] {
     if (limit <= 0) return []
 
     const scored = notes
       .map((note) => ({ note, score: this.score(note, question) }))
-      .filter(({ score }) => score > SCORING_WEIGHTS.importance) // importance=1のみはフォールバック候補
+      .filter(({ score }) => score >= MEANINGFUL_SCORE_THRESHOLD)
       .sort((a, b) => b.score - a.score)
       .map(({ note }) => note)
 
-    if (scored.length > 0) return scored.slice(0, limit)
-
-    // フォールバック: importance降順
-    return [...notes]
-      .sort((a, b) => b.importance - a.importance)
-      .slice(0, limit)
+    return scored.slice(0, limit)
   }
 }
