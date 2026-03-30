@@ -179,4 +179,32 @@ describe('OfficialNoteScoringCore', () => {
     const core = new OfficialNoteScoringCore(mockQEM)
     expect(core.topNotes(notes, question, 0)).toHaveLength(0)
   })
+
+  // T12: 正解選択肢テキストとのマッチング
+  it('T12: note.tagsが正解選択肢テキストと一致するとcorrectAnswerMatchが加算される', () => {
+    const note = makeNote({ tags: ['ビタミンB12', 'コバラミン'] })
+    const question = makeQuestion({
+      choices: [{ key: 1, text: 'ビタミンB1' }, { key: 2, text: 'ビタミンB12' }],
+      correct_answer: 2,
+    })
+    const core = new OfficialNoteScoringCore([])
+    const score = core.score(note, question)
+    // correctAnswerMatch(1.5) + 2 * importance(0.02)
+    expect(score).toBeCloseTo(SCORING_WEIGHTS.correctAnswerMatch + 2 * SCORING_WEIGHTS.importance)
+  })
+
+  // T13: 短いタグ（4文字以下）は reverse match しない（誤マッチ防止）
+  it('T13: 正解「ビタミンB12」に対しタグ「ビタミン」(4文字)はcorrectAnswerMatchしない', () => {
+    const noteGeneric = makeNote({ tags: ['ビタミン'] })   // 4文字 → reverse matchしない
+    const noteSpecific = makeNote({ tags: ['ビタミンB12'] }) // exact match → する
+    const question = makeQuestion({
+      choices: [{ key: 1, text: 'ビタミンB12' }],
+      correct_answer: 1,
+    })
+    const core = new OfficialNoteScoringCore([])
+    expect(core.score(noteGeneric, question)).toBeCloseTo(2 * SCORING_WEIGHTS.importance)
+    expect(core.score(noteSpecific, question)).toBeCloseTo(
+      SCORING_WEIGHTS.correctAnswerMatch + 2 * SCORING_WEIGHTS.importance
+    )
+  })
 })

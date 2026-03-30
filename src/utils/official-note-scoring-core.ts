@@ -4,10 +4,11 @@ import type { OfficialNote } from '../types/official-note'
 import type { Question } from '../types/question'
 
 export const SCORING_WEIGHTS = {
-  primaryExemplar: 2,    // questionのprimary exemplarとnoteのprimaryExemplarIdsが一致
-  secondaryExemplar: 1,  // それ以外のexemplar一致（note/questionいずれかがsecondary）
-  textMatch: 0.5,        // note.tagsの語がquestion_textに含まれる（1件あたり）
-  importance: 0.01,      // タイブレーク（importance最大4 × 0.01 = 0.04）
+  primaryExemplar: 2,       // questionのprimary exemplarとnoteのprimaryExemplarIdsが一致
+  secondaryExemplar: 1,     // それ以外のexemplar一致（note/questionいずれかがsecondary）
+  textMatch: 0.5,           // note.tagsの語がquestion_textに含まれる（1件あたり）
+  correctAnswerMatch: 1.5,  // note.tagsが正解選択肢テキストと一致（B12問題→B12付箋を上位に）
+  importance: 0.01,         // タイブレーク（importance最大4 × 0.01 = 0.04）
 } as const
 
 type ExemplarEntry = {
@@ -66,6 +67,21 @@ export class OfficialNoteScoringCore {
     const text = question.question_text
     for (const tag of note.tags) {
       if (text.includes(tag)) s += SCORING_WEIGHTS.textMatch
+    }
+
+    // correctAnswerMatch: note.tagsが正解選択肢テキストと一致
+    // 例: 正解「ビタミンB12」→ tags に「ビタミンB12」を持つ付箋が上位に
+    // ルール: tag が正解テキストを含む（tag.includes(ct)）
+    //   ※ 逆方向（ct.includes(tag)）は「ビタミンB1」が「ビタミンB12」に誤マッチするため使用しない
+    // correct_answerは number | number[] → 単一回答の問題のみ対応（配列は複数選択問題）
+    const ca = question.correct_answer
+    if (typeof ca === 'number' && ca > 0 && question.choices) {
+      const correctChoice = question.choices.find(c => c.key === ca)
+      if (correctChoice?.text && correctChoice.text.length >= 3) {
+        const ct = correctChoice.text
+        const hasMatch = note.tags.some(tag => tag.includes(ct))
+        if (hasMatch) s += SCORING_WEIGHTS.correctAnswerMatch
+      }
     }
 
     // タイブレーク
