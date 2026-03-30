@@ -316,7 +316,7 @@ function QuestionPageContent({
                   onClick={() => {
                     const cards = linkService.getCardsForQuestion(questionId)
                     const ctx: FlashCardPracticeContext = {
-                      mode: 'topic',
+                      mode: 'exemplar',
                       cardIds: cards.map(c => c.id),
                       returnTo: location.pathname,
                     }
