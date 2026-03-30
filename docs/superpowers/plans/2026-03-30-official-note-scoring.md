@@ -15,20 +15,39 @@
 | ファイル | 変更種別 | 役割 |
 |---------|---------|------|
 | `src/types/official-note.ts` | 変更 | primaryExemplarIds/secondaryExemplarIds 追加 |
+| `src/utils/__tests__/fusen-library-core.test.ts` | 変更 | makeNote ヘルパーに新フィールド追加 |
+| `src/utils/__tests__/learning-link-service.test.ts` | 変更 | makeNote ヘルパーに新フィールド追加 |
+| `src/utils/learning-link-service.ts` | 変更 | exemplarIds フォールバック対応 |
+| `src/utils/data-validator/rules/note-validation.ts` | 変更 | primaryExemplarIds ベースに更新 |
 | `scripts/generate-official-notes.ts` | 変更 | isPrimary情報を分けて出力 |
 | `src/data/official-notes.json` | 再生成 | 上記スクリプトで上書き |
 | `src/utils/official-note-scoring-core.ts` | 新規 | スコアリング純粋クラス |
-| `src/utils/__tests__/official-note-scoring-core.test.ts` | 新規 | スコアリングテスト（11件） |
+| `src/utils/__tests__/official-note-scoring-core.test.ts` | 新規 | スコアリングテスト（12件） |
 | `src/hooks/useScoredOfficialNotes.ts` | 新規 | スコアリングフック（ラップのみ） |
 | `src/pages/QuestionPage.tsx` | 変更 | フック切り替え |
 | `src/components/question/LinkedQuestionItem.tsx` | 変更 | フック切り替え |
 
 ---
 
-## Task 1: OfficialNote 型に primary/secondary を追加
+## 事前確認: テスト基準件数を記録する
+
+- [ ] **実装前に現在のテスト件数を確認する**
+
+```bash
+npx vitest run 2>&1 | tail -5
+```
+
+出力された `Tests X passed` の数値をメモしておく（この計画では525件を想定）。
+
+---
+
+## Task 1: OfficialNote 型に primary/secondary を追加 + 既存テスト修正
 
 **Files:**
 - Modify: `src/types/official-note.ts`
+- Modify: `src/utils/__tests__/fusen-library-core.test.ts`
+- Modify: `src/utils/__tests__/learning-link-service.test.ts`
+- Modify: `src/utils/learning-link-service.ts`
 
 - [ ] **Step 1: 型定義を更新する**
 
@@ -53,7 +72,7 @@ export interface OfficialNote {
   tags: string[]
   primaryExemplarIds: string[]    // 主要な紐づき（isPrimary=true）
   secondaryExemplarIds: string[]  // 補助的な紐づき（isPrimary=false）
-  /** @deprecated primaryExemplarIds / secondaryExemplarIds を使用すること */
+  /** @deprecated primaryExemplarIds / secondaryExemplarIds を使用すること。新JSONには含まれない */
   exemplarIds?: string[]
   noteType?: NoteType
   importance: number
@@ -71,13 +90,90 @@ export interface BookmarkedNote {
 }
 ```
 
-- [ ] **Step 2: 型エラーがないか確認する**
+- [ ] **Step 2: fusen-library-core.test.ts の makeNote を修正する**
 
-```bash
-npx tsc --noEmit 2>&1 | head -30
+`src/utils/__tests__/fusen-library-core.test.ts` の `makeNote` 関数のデフォルトオブジェクトに追加：
+
+```ts
+// 変更前
+function makeNote(overrides: Partial<OfficialNote>): OfficialNote {
+  return {
+    id: 'test-001',
+    title: 'テスト付箋',
+    imageUrl: '/images/fusens/test.png',
+    textSummary: 'テスト要約',
+    subject: '物理',
+    topicId: 'physics-material-structure',
+    tags: [],
+    importance: 2,
+    tier: 'free',
+    ...overrides,
+  }
+}
+
+// 変更後（primaryExemplarIds / secondaryExemplarIds を追加）
+function makeNote(overrides: Partial<OfficialNote>): OfficialNote {
+  return {
+    id: 'test-001',
+    title: 'テスト付箋',
+    imageUrl: '/images/fusens/test.png',
+    textSummary: 'テスト要約',
+    subject: '物理',
+    topicId: 'physics-material-structure',
+    tags: [],
+    primaryExemplarIds: [],
+    secondaryExemplarIds: [],
+    importance: 2,
+    tier: 'free',
+    ...overrides,
+  }
+}
 ```
 
-Expected: エラーが出る（`official-notes.json` がまだ旧形式のため）。Task 2・3 で解消する。
+- [ ] **Step 3: learning-link-service.test.ts の makeNote を修正する**
+
+`src/utils/__tests__/learning-link-service.test.ts` の `makeNote` 関数にも同様に追加：
+
+```ts
+// 変更前のデフォルトオブジェクトに以下2行を追加
+primaryExemplarIds: [],
+secondaryExemplarIds: [],
+```
+
+- [ ] **Step 4: LearningLinkService の exemplarIds フォールバックを追加する**
+
+`src/utils/learning-link-service.ts` の exemplarIds 参照箇所を確認し、`primaryExemplarIds ?? exemplarIds ?? []` にフォールバックする。該当箇所：
+
+```ts
+// 変更前（exemplarIdsのみ参照）
+for (const exemplarId of note.exemplarIds ?? []) {
+
+// 変更後（primaryExemplarIds優先、fallback）
+const allExemplarIds = [
+  ...(note.primaryExemplarIds ?? []),
+  ...(note.secondaryExemplarIds ?? []),
+  ...(note.exemplarIds ?? []),
+].filter((id, i, arr) => arr.indexOf(id) === i) // 重複除去
+for (const exemplarId of allExemplarIds) {
+```
+
+- [ ] **Step 5: 既存テストが通ることを確認する**
+
+```bash
+npx vitest run 2>&1 | tail -5
+```
+
+Expected: 事前確認で記録した件数と同じ（型エラーによる件数減少がないこと）
+
+- [ ] **Step 6: コミットする**
+
+```bash
+git add src/types/official-note.ts \
+  src/utils/__tests__/fusen-library-core.test.ts \
+  src/utils/__tests__/learning-link-service.test.ts \
+  src/utils/learning-link-service.ts
+git commit -m "feat: OfficialNote型にprimary/secondaryExemplarIds追加 + 既存テスト修正"
+```
 
 ---
 
@@ -87,12 +183,41 @@ Expected: エラーが出る（`official-notes.json` がまだ旧形式のため
 - Modify: `scripts/generate-official-notes.ts`
 - Regenerate: `src/data/official-notes.json`
 
-- [ ] **Step 1: スクリプトの出力部分を修正する**
+- [ ] **Step 1: スクリプトの notes 配列型定義を修正する**
 
-`scripts/generate-official-notes.ts` の `notes.push(...)` ブロック（現在 `exemplarIds` を出力している部分）を以下に変更：
+`scripts/generate-official-notes.ts` の `notes` 配列の型定義（L204付近）の `exemplarIds: string[]` を削除し `primaryExemplarIds`/`secondaryExemplarIds` に置換：
 
 ```ts
-    // exemplarIds を primary / secondary に分けて出力
+// 変更前
+const notes: Array<{
+  id: string
+  // ...
+  exemplarIds: string[]
+  // ...
+}> = []
+
+// 変更後
+const notes: Array<{
+  id: string
+  title: string
+  imageUrl: string
+  textSummary: string
+  subject: string
+  topicId: string
+  tags: string[]
+  primaryExemplarIds: string[]
+  secondaryExemplarIds: string[]
+  noteType: string
+  importance: number
+  tier: string
+}> = []
+```
+
+- [ ] **Step 2: notes.push() ブロックを修正する**
+
+同ファイルの `notes.push(...)` ブロックを以下に変更：
+
+```ts
     const primaryExemplarIds = mapping
       ? mapping.matches.filter((m) => m.isPrimary).map((m) => m.exemplarId)
       : []
@@ -100,7 +225,6 @@ Expected: エラーが出る（`official-notes.json` がまだ旧形式のため
       ? mapping.matches.filter((m) => !m.isPrimary).map((m) => m.exemplarId)
       : []
 
-    // importance: primary + secondary の合計件数ベース
     const importance = computeImportance(primaryExemplarIds.length + secondaryExemplarIds.length)
 
     notes.push({
@@ -119,9 +243,23 @@ Expected: エラーが出る（`official-notes.json` がまだ旧形式のため
     })
 ```
 
-> 注: 旧 `exemplarIds` フィールドは出力しない（`@deprecated` なので新JSONには含めない）。
+- [ ] **Step 3: 統計出力コードを修正する**
 
-- [ ] **Step 2: JSON を再生成する**
+同ファイルの統計出力部分（L294付近）の `exemplarIds` 参照を更新：
+
+```ts
+// 変更前
+console.log(`  exemplarIds 付き: ${notes.filter((n) => n.exemplarIds.length > 0).length}`)
+console.log(`  exemplarIds 合計: ${notes.reduce((s, n) => s + n.exemplarIds.length, 0)}`)
+
+// 変更後
+console.log(`  primaryExemplarIds 付き: ${notes.filter((n) => n.primaryExemplarIds.length > 0).length}`)
+console.log(`  secondaryExemplarIds 付き: ${notes.filter((n) => n.secondaryExemplarIds.length > 0).length}`)
+console.log(`  primary合計: ${notes.reduce((s, n) => s + n.primaryExemplarIds.length, 0)}`)
+console.log(`  secondary合計: ${notes.reduce((s, n) => s + n.secondaryExemplarIds.length, 0)}`)
+```
+
+- [ ] **Step 4: JSON を再生成する**
 
 ```bash
 npx tsx scripts/generate-official-notes.ts --stats
@@ -132,22 +270,49 @@ Expected:
 📊 official-notes.ts 生成統計
   付箋数: 1642
   primaryExemplarIds 付き: 1642
-  ...
+  secondaryExemplarIds 付き: 819以上
 ```
 
-- [ ] **Step 3: 再生成後に型エラーがないか確認する**
+- [ ] **Step 5: JSON に primaryExemplarIds フィールドが存在することを確認する**
+
+```bash
+node -e "const d=require('./src/data/official-notes.json'); const f=d[0]; console.log('primaryExemplarIds' in f, 'secondaryExemplarIds' in f, 'exemplarIds' in f)"
+```
+
+Expected: `true true false`（exemplarIds が含まれないこと）
+
+- [ ] **Step 6: 型エラーがないか確認する**
 
 ```bash
 npx tsc --noEmit 2>&1 | head -20
 ```
 
-Expected: エラーなし（0件）
+Expected: エラーなし
 
-- [ ] **Step 4: コミットする**
+- [ ] **Step 7: note-validation.ts を primaryExemplarIds ベースに更新する**
+
+`src/utils/data-validator/rules/note-validation.ts` で `exemplarIds` を参照している箇所を `primaryExemplarIds` に変更：
 
 ```bash
-git add src/types/official-note.ts scripts/generate-official-notes.ts src/data/official-notes.json
-git commit -m "feat: OfficialNote型にprimary/secondaryExemplarIds追加 + JSON再生成"
+grep -n "exemplarIds" src/utils/data-validator/rules/note-validation.ts
+```
+
+該当行を `note.primaryExemplarIds` または `[...(note.primaryExemplarIds ?? []), ...(note.secondaryExemplarIds ?? [])]` に修正する。
+
+- [ ] **Step 8: 全テストが通ることを確認する**
+
+```bash
+npx vitest run 2>&1 | tail -5
+```
+
+Expected: 事前確認と同じ件数でパス
+
+- [ ] **Step 9: コミットする**
+
+```bash
+git add scripts/generate-official-notes.ts src/data/official-notes.json \
+  src/utils/data-validator/rules/note-validation.ts
+git commit -m "feat: generate-official-notes primary/secondary分離 + JSON再生成"
 ```
 
 ---
@@ -167,8 +332,6 @@ import { describe, it, expect } from 'vitest'
 import { OfficialNoteScoringCore, SCORING_WEIGHTS } from '../official-note-scoring-core'
 import type { OfficialNote } from '../../types/official-note'
 import type { Question } from '../../types/question'
-
-// --- テスト用ヘルパー ---
 
 function makeNote(overrides: Partial<OfficialNote> = {}): OfficialNote {
   return {
@@ -207,7 +370,7 @@ function makeQuestion(overrides: Partial<Question> = {}): Question {
   }
 }
 
-// QUESTION_EXEMPLAR_MAP をモックとして渡す
+// mockQEM: ex-hygiene-001=primary, ex-hygiene-002=secondary
 const mockQEM = [
   { questionId: 'r100-001', exemplarId: 'ex-hygiene-001', isPrimary: true },
   { questionId: 'r100-001', exemplarId: 'ex-hygiene-002', isPrimary: false },
@@ -216,20 +379,29 @@ const mockQEM = [
 describe('OfficialNoteScoringCore', () => {
   // T1: primary exemplar一致で+2
   it('T1: note.primaryExemplarIdsがquestionのprimary exemplarと一致すると+2点', () => {
-    const note = makeNote({ primaryExemplarIds: ['ex-hygiene-001'], secondaryExemplarIds: [] })
+    const note = makeNote({ primaryExemplarIds: ['ex-hygiene-001'] })
     const question = makeQuestion()
     const core = new OfficialNoteScoringCore(mockQEM)
     const score = core.score(note, question)
-    expect(score).toBeCloseTo(SCORING_WEIGHTS.primaryExemplar + 2 * 0.01)
+    expect(score).toBeCloseTo(
+      SCORING_WEIGHTS.primaryExemplar + 2 * SCORING_WEIGHTS.importance
+    )
   })
 
-  // T2: secondary < primary
+  // T2: secondary < primary（ex-hygiene-002はsecondary）
   it('T2: secondary一致(+1)はprimary一致(+2)より低スコア', () => {
     const notePrimary = makeNote({ primaryExemplarIds: ['ex-hygiene-001'] })
-    const noteSecondary = makeNote({ primaryExemplarIds: [], secondaryExemplarIds: ['ex-hygiene-001'] })
+    // ex-hygiene-002 は mockQEM で isPrimary: false → +1 が実際に加算される
+    const noteSecondary = makeNote({ secondaryExemplarIds: ['ex-hygiene-002'] })
     const question = makeQuestion()
     const core = new OfficialNoteScoringCore(mockQEM)
-    expect(core.score(notePrimary, question)).toBeGreaterThan(core.score(noteSecondary, question))
+    const scorePrimary = core.score(notePrimary, question)
+    const scoreSecondary = core.score(noteSecondary, question)
+    expect(scorePrimary).toBeGreaterThan(scoreSecondary)
+    // secondary は +1 が実際に加算されていることを確認
+    expect(scoreSecondary).toBeCloseTo(
+      SCORING_WEIGHTS.secondaryExemplar + 2 * SCORING_WEIGHTS.importance
+    )
   })
 
   // T3: textMatchスコア加算
@@ -238,7 +410,9 @@ describe('OfficialNoteScoringCore', () => {
     const question = makeQuestion({ question_text: 'コバラミンとビタミンB12について' })
     const core = new OfficialNoteScoringCore([])
     const score = core.score(note, question)
-    expect(score).toBeCloseTo(2 * SCORING_WEIGHTS.textMatch + 2 * 0.01)
+    expect(score).toBeCloseTo(
+      2 * SCORING_WEIGHTS.textMatch + 2 * SCORING_WEIGHTS.importance
+    )
   })
 
   // T4: question.tagsが空でもクラッシュしない
@@ -249,18 +423,17 @@ describe('OfficialNoteScoringCore', () => {
     expect(() => core.score(note, question)).not.toThrow()
   })
 
-  // T5: exemplarIds未定義はスコア0
-  it('T5: primaryExemplarIdsが空の付箋はexemplarスコア0', () => {
+  // T5: primaryExemplarIds空の付箋はexemplarスコア0（importanceスコアのみ）
+  it('T5: primaryExemplarIdsが空の付箋はexemplarスコア0でimportanceスコアのみ', () => {
     const note = makeNote({ primaryExemplarIds: [], secondaryExemplarIds: [] })
     const question = makeQuestion()
     const core = new OfficialNoteScoringCore(mockQEM)
     const score = core.score(note, question)
-    // importanceスコアのみ
-    expect(score).toBeCloseTo(2 * 0.01)
+    expect(score).toBeCloseTo(2 * SCORING_WEIGHTS.importance)
   })
 
-  // T6: スコア全0のフォールバック
-  it('T6: スコア全0のとき importance降順フォールバックを返す', () => {
+  // T6: importance降順ソート確認（exemplarなし環境）
+  it('T6: exemplarマッチなしのとき importance降順で返る', () => {
     const notes = [
       makeNote({ id: 'n1', importance: 2 }),
       makeNote({ id: 'n2', importance: 4 }),
@@ -269,10 +442,21 @@ describe('OfficialNoteScoringCore', () => {
     const question = makeQuestion({ id: 'no-exemplar-question' })
     const core = new OfficialNoteScoringCore([]) // exemplarなし
     const result = core.topNotes(notes, question, 5)
-    // importanceスコアが全件 > 0 なのでフォールバックにはならないが
-    // importance降順で並ぶことを確認
-    expect(result[0].id).toBe('n2')
-    expect(result[1].id).toBe('n3')
+    expect(result[0].id).toBe('n2') // importance=4が1位
+    expect(result[1].id).toBe('n3') // importance=3が2位
+  })
+
+  // T6b: フォールバック実際の発動確認（importance=1でfilterを抜けない）
+  it('T6b: 全件importance=1のときフォールバックが発動しimportance降順を返す', () => {
+    const notes = [
+      makeNote({ id: 'n1', importance: 1 }),
+      makeNote({ id: 'n2', importance: 1 }),
+    ]
+    // importance=1 → score=0.01, threshold=0.01 → 0.01>0.01=false → フォールバック発動
+    const question = makeQuestion({ id: 'no-match-question' })
+    const core = new OfficialNoteScoringCore([])
+    const result = core.topNotes(notes, question, 5)
+    expect(result).toHaveLength(2) // フォールバックは全件返す
   })
 
   // T7: note.tagsが空のときtextMatch=0
@@ -281,7 +465,7 @@ describe('OfficialNoteScoringCore', () => {
     const question = makeQuestion({ question_text: 'コバラミン' })
     const core = new OfficialNoteScoringCore([])
     const score = core.score(note, question)
-    expect(score).toBeCloseTo(2 * 0.01) // importanceのみ
+    expect(score).toBeCloseTo(2 * SCORING_WEIGHTS.importance)
   })
 
   // T8: importanceタイブレークがexemplar不一致を逆転しない
@@ -290,7 +474,9 @@ describe('OfficialNoteScoringCore', () => {
     const noteHighImportance = makeNote({ primaryExemplarIds: [], importance: 4 })
     const question = makeQuestion()
     const core = new OfficialNoteScoringCore(mockQEM)
-    expect(core.score(noteWithExemplar, question)).toBeGreaterThan(core.score(noteHighImportance, question))
+    expect(core.score(noteWithExemplar, question)).toBeGreaterThan(
+      core.score(noteHighImportance, question)
+    )
   })
 
   // T9: limit引数で返却件数を変更できる
@@ -307,14 +493,16 @@ describe('OfficialNoteScoringCore', () => {
   it('T10: questionの同一exemplarIdがprimary/secondary両方にあっても二重加算しない', () => {
     const dupQEM = [
       { questionId: 'r100-001', exemplarId: 'ex-hygiene-001', isPrimary: true },
-      { questionId: 'r100-001', exemplarId: 'ex-hygiene-001', isPrimary: false }, // 重複
+      { questionId: 'r100-001', exemplarId: 'ex-hygiene-001', isPrimary: false },
     ]
     const note = makeNote({ primaryExemplarIds: ['ex-hygiene-001'] })
     const question = makeQuestion()
     const core = new OfficialNoteScoringCore(dupQEM)
     const score = core.score(note, question)
     // primary一致の+2のみ（二重加算されると+3になる）
-    expect(score).toBeCloseTo(SCORING_WEIGHTS.primaryExemplar + 2 * 0.01)
+    expect(score).toBeCloseTo(
+      SCORING_WEIGHTS.primaryExemplar + 2 * SCORING_WEIGHTS.importance
+    )
   })
 
   // T11: limit境界値
@@ -333,7 +521,7 @@ describe('OfficialNoteScoringCore', () => {
 npx vitest run src/utils/__tests__/official-note-scoring-core.test.ts 2>&1 | tail -10
 ```
 
-Expected: `FAIL` （`official-note-scoring-core` が存在しないため）
+Expected: `FAIL`（`official-note-scoring-core` が存在しないため Cannot find module エラー）
 
 - [ ] **Step 3: OfficialNoteScoringCore クラスを実装する**
 
@@ -342,26 +530,28 @@ Expected: `FAIL` （`official-note-scoring-core` が存在しないため）
 ```ts
 // 公式付箋スコアリングコア
 // FusenLibraryCore / SM2Scheduler と同じ純粋クラスパターン
-// フックからのみ使用（useScoredOfficialNotes）
-
 import type { OfficialNote } from '../types/official-note'
 import type { Question } from '../types/question'
 import type { QuestionExemplarMapping } from '../types/blueprint'
 
 export const SCORING_WEIGHTS = {
-  primaryExemplar: 2,    // questionのprimary exemplarとnoteのprimaryが一致
-  secondaryExemplar: 1,  // それ以外のexemplar一致
+  primaryExemplar: 2,    // questionのprimary exemplarとnoteのprimaryExemplarIdsが一致
+  secondaryExemplar: 1,  // それ以外のexemplar一致（note/questionいずれかがsecondary）
   textMatch: 0.5,        // note.tagsの語がquestion_textに含まれる（1件あたり）
   importance: 0.01,      // タイブレーク（importance最大4 × 0.01 = 0.04）
 } as const
 
-type ExemplarEntry = { primary: Set<string>; all: Set<string> }
+type ExemplarEntry = {
+  primary: Set<string>  // isPrimary=true のexemplarId群
+  all: Set<string>      // isPrimary問わず全exemplarId群
+}
 
 export class OfficialNoteScoringCore {
   private readonly qExemplarIndex: Map<string, ExemplarEntry>
 
   constructor(questionExemplarMap: QuestionExemplarMapping[]) {
     // questionId → { primary: Set, all: Set } のMapを構築（O(1)参照用）
+    // Setを使うため重複登録があっても二重加算しない
     this.qExemplarIndex = new Map()
     for (const { questionId, exemplarId, isPrimary } of questionExemplarMap) {
       let entry = this.qExemplarIndex.get(questionId)
@@ -369,7 +559,6 @@ export class OfficialNoteScoringCore {
         entry = { primary: new Set(), all: new Set() }
         this.qExemplarIndex.set(questionId, entry)
       }
-      // 重複登録されても Set なので二重加算しない
       entry.all.add(exemplarId)
       if (isPrimary) entry.primary.add(exemplarId)
     }
@@ -384,7 +573,7 @@ export class OfficialNoteScoringCore {
       const primaryIds = note.primaryExemplarIds ?? []
       const secondaryIds = note.secondaryExemplarIds ?? []
 
-      // primary exemplar一致: +2
+      // note.primaryExemplarIds が question の primary exemplar と一致: +2
       for (const id of primaryIds) {
         if (entry.primary.has(id)) {
           s += SCORING_WEIGHTS.primaryExemplar
@@ -392,9 +581,11 @@ export class OfficialNoteScoringCore {
         }
       }
 
-      // secondary exemplar一致（primary未加算のもの）: +1
+      // note の全exemplarId（primary/secondary両方）が question の secondary exemplar と一致: +1
+      // ただし上記で既にprimary加算済みの場合はスキップされる（breakで抜けているため）
       const allNoteExemplars = [...primaryIds, ...secondaryIds]
       for (const id of allNoteExemplars) {
+        // questionのall（primary+secondary）にある && questionのprimaryではない → secondary一致
         if (entry.all.has(id) && !entry.primary.has(id)) {
           s += SCORING_WEIGHTS.secondaryExemplar
           break // 1回のみ加算
@@ -402,13 +593,13 @@ export class OfficialNoteScoringCore {
       }
     }
 
-    // textMatch: note.tagsの語がquestion_textに含まれる
+    // textMatch: note.tagsの語がquestion_textに含まれる（大文字小文字区別あり）
     const text = question.question_text
     for (const tag of note.tags) {
       if (text.includes(tag)) s += SCORING_WEIGHTS.textMatch
     }
 
-    // タイブレーク: importance（最大4 × 0.01 = 0.04）
+    // タイブレーク（importance最大4 × 0.01 = 0.04、exemplarスコアを逆転しない）
     s += Math.min(note.importance, 10) * SCORING_WEIGHTS.importance
 
     return s
@@ -416,14 +607,15 @@ export class OfficialNoteScoringCore {
 
   /**
    * 付箋リストをスコアリングして上位limit件を返す
-   * スコア > 0 の付箋を優先。全件スコア = 0 なら importance 降順フォールバック。
+   * score > SCORING_WEIGHTS.importance（= importanceのみの場合は除外）
+   * 全件除外（全てimportance=1）の場合は importance 降順フォールバック
    */
   topNotes(notes: OfficialNote[], question: Question, limit: number): OfficialNote[] {
     if (limit <= 0) return []
 
     const scored = notes
       .map((note) => ({ note, score: this.score(note, question) }))
-      .filter(({ score }) => score > SCORING_WEIGHTS.importance) // importanceのみ(タイブレーク)は除外
+      .filter(({ score }) => score > SCORING_WEIGHTS.importance) // importance=1のみはフォールバック候補
       .sort((a, b) => b.score - a.score)
       .map(({ note }) => note)
 
@@ -446,14 +638,23 @@ npx vitest run src/utils/__tests__/official-note-scoring-core.test.ts 2>&1 | tai
 Expected:
 ```
 Test Files  1 passed (1)
-     Tests  11 passed (11)
+     Tests  12 passed (12)
 ```
 
-- [ ] **Step 5: コミットする**
+- [ ] **Step 5: 全テストが通ることを確認する**
 
 ```bash
-git add src/utils/official-note-scoring-core.ts src/utils/__tests__/official-note-scoring-core.test.ts
-git commit -m "feat: OfficialNoteScoringCore 純粋クラス + テスト11件"
+npx vitest run 2>&1 | tail -5
+```
+
+Expected: 事前確認件数 + 12件
+
+- [ ] **Step 6: コミットする**
+
+```bash
+git add src/utils/official-note-scoring-core.ts \
+  src/utils/__tests__/official-note-scoring-core.test.ts
+git commit -m "feat: OfficialNoteScoringCore 純粋クラス + テスト12件"
 ```
 
 ---
@@ -479,9 +680,9 @@ import { QUESTION_EXEMPLAR_MAP } from '../data/question-exemplar-map'
 import { OfficialNoteScoringCore } from '../utils/official-note-scoring-core'
 
 // モジュールスコープで事前構築（再マウントでも再計算しない）
+// TODO: 将来的に useOfficialNotes.ts の topicToNotes と統合して重複を排除する
 const scoringCore = new OfficialNoteScoringCore(QUESTION_EXEMPLAR_MAP)
 
-// topicId → OfficialNote[] のマップ（同じく事前構築）
 const topicToNotes = new Map<string, OfficialNote[]>()
 for (const note of OFFICIAL_NOTES) {
   const list = topicToNotes.get(note.topicId)
@@ -496,10 +697,8 @@ export function useScoredOfficialNotes(
 ): { notes: OfficialNote[]; isLoading: boolean } {
   const notes = useMemo(() => {
     if (!question) return []
-
     const topicId = QUESTION_TOPIC_MAP[question.id]
     if (!topicId) return []
-
     const topicNotes = topicToNotes.get(topicId) ?? []
     return scoringCore.topNotes(topicNotes, question, limit)
   }, [question, limit])
@@ -516,15 +715,7 @@ npx tsc --noEmit 2>&1 | head -20
 
 Expected: エラーなし
 
-- [ ] **Step 3: 全テストが通ることを確認する**
-
-```bash
-npx vitest run 2>&1 | tail -5
-```
-
-Expected: `32 passed` （既存31 + 新規1）
-
-- [ ] **Step 4: コミットする**
+- [ ] **Step 3: コミットする**
 
 ```bash
 git add src/hooks/useScoredOfficialNotes.ts
@@ -533,20 +724,29 @@ git commit -m "feat: useScoredOfficialNotes フック追加"
 
 ---
 
-## Task 5: QuestionPage.tsx のフック切り替え
+## Task 5: QuestionPage.tsx・LinkedQuestionItem.tsx のフック切り替え
 
 **Files:**
 - Modify: `src/pages/QuestionPage.tsx`
+- Modify: `src/components/question/LinkedQuestionItem.tsx`
 
-- [ ] **Step 1: フックを切り替える**
+- [ ] **Step 1: useOfficialNotes の呼び出し元を全件確認する**
 
-`src/pages/QuestionPage.tsx` の以下を変更：
+```bash
+grep -rn "useOfficialNotes" src/
+```
+
+Expected: `QuestionPage.tsx` と `LinkedQuestionItem.tsx` の2箇所のみ。他にあれば同様に切り替えること。
+
+- [ ] **Step 2: QuestionPage.tsx を切り替える**
+
+`src/pages/QuestionPage.tsx` を変更：
 
 ```ts
-// 変更前（削除）
+// 削除
 import { useOfficialNotes } from '../hooks/useOfficialNotes'
 
-// 変更後（追加）
+// 追加
 import { useScoredOfficialNotes } from '../hooks/useScoredOfficialNotes'
 ```
 
@@ -558,39 +758,15 @@ const { notes } = useOfficialNotes(questionId ?? '')
 const { notes } = useScoredOfficialNotes(question)
 ```
 
-> `question` は同ファイル L39〜42 で定義済み（`ALL_QUESTIONS.find(q => q.id === questionId)`）。`undefined` の場合はフック内で空配列を返す。
+- [ ] **Step 3: LinkedQuestionItem.tsx を切り替える**
 
-- [ ] **Step 2: 型エラーがないか確認する**
-
-```bash
-npx tsc --noEmit 2>&1 | head -20
-```
-
-Expected: エラーなし
-
-- [ ] **Step 3: コミットする**
-
-```bash
-git add src/pages/QuestionPage.tsx
-git commit -m "feat: QuestionPage を useScoredOfficialNotes に切り替え"
-```
-
----
-
-## Task 6: LinkedQuestionItem.tsx のフック切り替え
-
-**Files:**
-- Modify: `src/components/question/LinkedQuestionItem.tsx`
-
-- [ ] **Step 1: フックを切り替える**
-
-`src/components/question/LinkedQuestionItem.tsx` の以下を変更：
+`src/components/question/LinkedQuestionItem.tsx` を変更：
 
 ```ts
-// 変更前（削除）
+// 削除
 import { useOfficialNotes } from '../../hooks/useOfficialNotes'
 
-// 変更後（追加）
+// 追加
 import { useScoredOfficialNotes } from '../../hooks/useScoredOfficialNotes'
 ```
 
@@ -602,7 +778,7 @@ const { notes } = useOfficialNotes(question.id)
 const { notes } = useScoredOfficialNotes(question)
 ```
 
-- [ ] **Step 2: 型エラーと全テストを確認する**
+- [ ] **Step 4: 型エラーと全テストを確認する**
 
 ```bash
 npx tsc --noEmit 2>&1 | head -20 && npx vitest run 2>&1 | tail -5
@@ -612,29 +788,36 @@ Expected:
 ```
 (型エラーなし)
 Test Files  32 passed (32)
-     Tests  536 passed (536)
+     Tests  537 passed (537)
 ```
 
-- [ ] **Step 3: 最終コミットする**
+- [ ] **Step 5: ビルドが通ることを確認する**
 
 ```bash
-git add src/components/question/LinkedQuestionItem.tsx
-git commit -m "feat: LinkedQuestionItem を useScoredOfficialNotes に切り替え"
+npm run build 2>&1 | tail -10
+```
+
+Expected: `built in X.Xs`（エラーなし）
+
+- [ ] **Step 6: 最終コミットする**
+
+```bash
+git add src/pages/QuestionPage.tsx \
+  src/components/question/LinkedQuestionItem.tsx
+git commit -m "feat: QuestionPage・LinkedQuestionItem を useScoredOfficialNotes に切り替え"
 ```
 
 ---
 
 ## 完了確認
 
-全タスク完了後に以下を確認：
-
 ```bash
 npx vitest run 2>&1 | tail -5
 npx tsc --noEmit
-npm run build 2>&1 | tail -10
+npm run build 2>&1 | tail -5
 ```
 
 Expected:
-- テスト: 32ファイル、536件パス（既存525 + 新規11）
+- テスト: 32ファイル、537件パス（既存525 + 新規12）
 - 型エラー: 0件
 - ビルド: エラーなし
