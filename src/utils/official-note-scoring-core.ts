@@ -80,7 +80,7 @@ export class OfficialNoteScoringCore {
     // 複数正解でも一回のみ加算（break で二重加算防止）
     if (question.choices) {
       const ca = question.correct_answer
-      const caArr = Array.isArray(ca) ? ca : (typeof ca === 'number' && ca > 0 ? [ca] : [])
+      const caArr = Array.isArray(ca) ? ca.filter(k => k > 0) : (typeof ca === 'number' && ca > 0 ? [ca] : [])
       for (const key of caArr) {
         const correctChoice = question.choices.find(c => c.key === key)
         if (correctChoice?.text && correctChoice.text.length >= 3) {

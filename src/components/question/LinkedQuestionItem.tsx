@@ -15,6 +15,7 @@ import { ActionArea } from './ActionArea'
 import { ResultBanner } from './ResultBanner'
 import { ExplanationSection } from './ExplanationSection'
 import { OfficialNoteCard } from './OfficialNoteCard'
+import { NoNotesMessage } from './NoNotesMessage'
 import styles from './LinkedQuestionItem.module.css'
 
 interface Props {
@@ -139,11 +140,7 @@ export function LinkedQuestionItem({
               />
             )}
 
-            {notes.length === 0 && (
-              <p style={{ color: 'var(--text-2)', fontSize: '0.85rem', textAlign: 'center', padding: '8px 0' }}>
-                この問題に関連する付箋はありません
-              </p>
-            )}
+            {notes.length === 0 && <NoNotesMessage />}
             {notes.map((note) => (
               <OfficialNoteCard
                 key={note.id}

@@ -255,6 +255,34 @@ describe('OfficialNoteScoringCore', () => {
     expect(score).toBeCloseTo(2 * SCORING_WEIGHTS.importance)
   })
 
+  // T14d: 配列の先頭正解(key=1)にはマッチせず、末尾正解(key=3)にのみマッチするケース
+  it('T14d: correct_answer=[1,3]で先頭正解にマッチせず末尾正解にマッチする場合も+1.5', () => {
+    const note = makeNote({ tags: ['ムスカリン受容体拮抗薬'] }) // key=3のみマッチ
+    const question = makeQuestion({
+      choices: [
+        { key: 1, text: '抗コリン薬' },          // key=1: マッチしない
+        { key: 2, text: '交感神経刺激薬' },
+        { key: 3, text: 'ムスカリン受容体拮抗薬' }, // key=3: マッチする
+      ],
+      correct_answer: [1, 3],
+    })
+    const core = new OfficialNoteScoringCore([])
+    const score = core.score(note, question)
+    expect(score).toBeCloseTo(SCORING_WEIGHTS.correctAnswerMatch + 2 * SCORING_WEIGHTS.importance)
+  })
+
+  // T14e: correct_answer=[]（空配列）のときcorrectAnswerMatchは加算されない
+  it('T14e: correct_answer=[]のときcorrectAnswerMatchは加算されない', () => {
+    const note = makeNote({ tags: ['抗コリン薬'] })
+    const question = makeQuestion({
+      choices: [{ key: 1, text: '抗コリン薬' }],
+      correct_answer: [] as unknown as number,
+    })
+    const core = new OfficialNoteScoringCore([])
+    const score = core.score(note, question)
+    expect(score).toBeCloseTo(2 * SCORING_WEIGHTS.importance)
+  })
+
   // T17: 閾値変更後のフォールバック（topNotes が空配列を返す）
   it('T17: スコアがMEANINGFUL_SCORE_THRESHOLD未満の付箋のみのとき空配列を返す', () => {
     const notes = [
