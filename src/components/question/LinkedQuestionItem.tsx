@@ -1,5 +1,5 @@
 // src/components/question/LinkedQuestionItem.tsx
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import type { Question, AnswerHistory } from '../../types/question'
 import { useQuestionAnswerState } from '../../hooks/useQuestionAnswerState'
@@ -15,7 +15,6 @@ import { ActionArea } from './ActionArea'
 import { ResultBanner } from './ResultBanner'
 import { ExplanationSection } from './ExplanationSection'
 import { OfficialNoteCard } from './OfficialNoteCard'
-import { NoNotesMessage } from './NoNotesMessage'
 import styles from './LinkedQuestionItem.module.css'
 
 interface Props {
@@ -47,6 +46,12 @@ export function LinkedQuestionItem({
   const { getElapsedSeconds } = useTimeTracking(question.id)
   const { notes } = useScoredOfficialNotes(question)
   const { isBookmarked, toggleBookmark } = useBookmarks()
+
+  // 付箋アコーディオン: 不正解時デフォルト展開、正解/スキップ時は折りたたみ
+  const [notesOpen, setNotesOpen] = useState(false)
+  useEffect(() => {
+    setNotesOpen(answerState.isAnswered && !answerState.isCorrect && !answerState.isSkipped)
+  }, [question.id, answerState.isAnswered, answerState.isCorrect, answerState.isSkipped])
 
   const resultRef = useRef<HTMLDivElement>(null)
 
@@ -140,18 +145,40 @@ export function LinkedQuestionItem({
               />
             )}
 
-            {notes.length === 0 && <NoNotesMessage />}
-            {notes.map((note) => (
-              <OfficialNoteCard
-                key={note.id}
-                note={note}
-                isBookmarked={isBookmarked(note.id)}
-                onToggleBookmark={() => toggleBookmark(note.id)}
-                onFlashCard={() => navigate('/cards')}
-                flashCardCount={0}
-                onImageTap={() => {}}
-              />
-            ))}
+            {/* 付箋アコーディオン: 付箋がある問題のみ表示 */}
+            {notes.length > 0 && (
+              <div style={{ margin: '4px 0' }}>
+                <button
+                  type="button"
+                  aria-expanded={notesOpen}
+                  onClick={() => setNotesOpen(o => !o)}
+                  style={{
+                    width: '100%', padding: '10px 16px', background: 'var(--card)',
+                    border: '1px solid var(--border)', borderRadius: '10px',
+                    color: 'var(--text-1)', fontSize: '0.9rem', textAlign: 'left',
+                    cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                  }}
+                >
+                  <span>📌 関連付箋（{notes.length}枚）</span>
+                  <span style={{ color: 'var(--accent)', transition: 'transform 0.2s', display: 'inline-block', transform: notesOpen ? 'rotate(90deg)' : 'none' }}>▶</span>
+                </button>
+                {notesOpen && (
+                  <div style={{ marginTop: '8px' }}>
+                    {notes.map((note) => (
+                      <OfficialNoteCard
+                        key={note.id}
+                        note={note}
+                        isBookmarked={isBookmarked(note.id)}
+                        onToggleBookmark={() => toggleBookmark(note.id)}
+                        onFlashCard={() => navigate('/cards')}
+                        flashCardCount={0}
+                        onImageTap={() => {}}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
           </>
         )}
       </div>

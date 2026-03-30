@@ -1,5 +1,5 @@
 // 問題演習画面 — Soft Companion リデザイン
-import { useMemo, useRef, useEffect } from 'react'
+import { useMemo, useRef, useEffect, useState } from 'react'
 import type { RefObject } from 'react'
 import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { ALL_QUESTIONS } from '../data/all-questions'
@@ -19,7 +19,6 @@ import {
   ResultBanner,
   ExplanationSection,
   OfficialNoteCard,
-  NoNotesMessage,
   MetaAccordion,
 } from '../components/question'
 import { FloatingNav } from '../components/ui/FloatingNav'
@@ -168,6 +167,12 @@ function QuestionPageContent({
   const linkService = useLearningLinks()
   const answerState = useQuestionAnswerState(question)
 
+  // 付箋アコーディオン: 不正解時デフォルト展開、正解/スキップ時は折りたたみ
+  const [notesOpen, setNotesOpen] = useState(false)
+  useEffect(() => {
+    setNotesOpen(answerState.isAnswered && !answerState.isCorrect && !answerState.isSkipped)
+  }, [questionId, answerState.isAnswered, answerState.isCorrect, answerState.isSkipped])
+
   // トピック名の取得
   const topicName = useMemo(() => {
     const topicId = QUESTION_TOPIC_MAP[questionId]
@@ -285,35 +290,29 @@ function QuestionPageContent({
               />
             )}
 
-            {notes.length === 0 && <NoNotesMessage />}
-            {notes.map((note) => (
-              <OfficialNoteCard
-                key={note.id}
-                note={note}
-                isBookmarked={isBookmarked(note.id)}
-                onToggleBookmark={() => toggleBookmark(note.id)}
-                onFlashCard={() => {
-                  const cards = linkService.getSourceCards(note.id)
-                  if (cards.length > 0) {
-                    const ctx: FlashCardPracticeContext = {
-                      mode: 'note',
-                      noteId: note.id,
-                      cardIds: cards.map(c => c.id),
-                      returnTo: location.pathname,
-                    }
-                    navigate('/cards/review', { state: ctx })
-                  } else {
-                    navigate('/cards')
-                  }
-                }}
-                flashCardCount={linkService.getSourceCards(note.id).length}
-                onImageTap={() => {}}
-              />
-            ))}
-
+            {/* CTA群: 類似問題 → 暗記カード の順 */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', margin: '12px 0' }}>
+              {relatedQuestionIds.length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    localStorage.setItem('practice_session', JSON.stringify(relatedQuestionIds))
+                    navigate(`/practice/${relatedQuestionIds[0]}`)
+                  }}
+                  style={{
+                    width: '100%', padding: '12px 16px', background: 'var(--card)',
+                    border: '1px solid var(--border)', borderRadius: '10px',
+                    color: 'var(--text-1)', fontSize: '0.9rem', textAlign: 'left',
+                    cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                  }}
+                >
+                  <span>📝 同じ単元の問題（{relatedQuestionIds.length}問）</span>
+                  <span style={{ color: 'var(--accent)' }}>→</span>
+                </button>
+              )}
               {topicCardCount > 0 && (
                 <button
+                  type="button"
                   onClick={() => {
                     const cards = linkService.getCardsForQuestion(questionId)
                     const ctx: FlashCardPracticeContext = {
@@ -334,24 +333,55 @@ function QuestionPageContent({
                   <span style={{ color: 'var(--accent)' }}>→</span>
                 </button>
               )}
-              {relatedQuestionIds.length > 0 && (
+            </div>
+
+            {/* 付箋アコーディオン: 付箋がある問題のみ表示 */}
+            {notes.length > 0 && (
+              <div style={{ margin: '4px 0' }}>
                 <button
-                  onClick={() => {
-                    localStorage.setItem('practice_session', JSON.stringify(relatedQuestionIds))
-                    navigate(`/practice/${relatedQuestionIds[0]}`)
-                  }}
+                  type="button"
+                  aria-expanded={notesOpen}
+                  onClick={() => setNotesOpen(o => !o)}
                   style={{
-                    width: '100%', padding: '12px 16px', background: 'var(--card)',
+                    width: '100%', padding: '10px 16px', background: 'var(--card)',
                     border: '1px solid var(--border)', borderRadius: '10px',
                     color: 'var(--text-1)', fontSize: '0.9rem', textAlign: 'left',
                     cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                   }}
                 >
-                  <span>📝 同じ単元の問題（{relatedQuestionIds.length}問）</span>
-                  <span style={{ color: 'var(--accent)' }}>→</span>
+                  <span>📌 関連付箋（{notes.length}枚）</span>
+                  <span style={{ color: 'var(--accent)', transition: 'transform 0.2s', display: 'inline-block', transform: notesOpen ? 'rotate(90deg)' : 'none' }}>▶</span>
                 </button>
-              )}
-            </div>
+                {notesOpen && (
+                  <div style={{ marginTop: '8px' }}>
+                    {notes.map((note) => (
+                      <OfficialNoteCard
+                        key={note.id}
+                        note={note}
+                        isBookmarked={isBookmarked(note.id)}
+                        onToggleBookmark={() => toggleBookmark(note.id)}
+                        onFlashCard={() => {
+                          const cards = linkService.getSourceCards(note.id)
+                          if (cards.length > 0) {
+                            const ctx: FlashCardPracticeContext = {
+                              mode: 'note',
+                              noteId: note.id,
+                              cardIds: cards.map(c => c.id),
+                              returnTo: location.pathname,
+                            }
+                            navigate('/cards/review', { state: ctx })
+                          } else {
+                            navigate('/cards')
+                          }
+                        }}
+                        flashCardCount={linkService.getSourceCards(note.id).length}
+                        onImageTap={() => {}}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
 
             <MetaAccordion question={question} topicName={topicName} />
           </>
