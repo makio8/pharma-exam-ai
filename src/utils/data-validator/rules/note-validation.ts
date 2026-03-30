@@ -32,10 +32,13 @@ export function noteValidationRules(
   }
 
   for (const note of notes) {
-    const exemplarIds = note.exemplarIds
+    const exemplarIds = [
+      ...(note.primaryExemplarIds ?? []),
+      ...(note.secondaryExemplarIds ?? []),
+    ]
 
     // note-has-exemplars: 未設定または空配列チェック
-    if (!exemplarIds || exemplarIds.length === 0) {
+    if (exemplarIds.length === 0) {
       issues.push({
         questionId: note.id,
         rule: 'note-has-exemplars',

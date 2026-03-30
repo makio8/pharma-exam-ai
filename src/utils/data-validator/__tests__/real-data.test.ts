@@ -32,7 +32,8 @@ const context: ValidationContext = {
   exemplars: EXEMPLARS,
   officialNotesWithExemplars: OFFICIAL_NOTES.map(n => ({
     id: n.id,
-    exemplarIds: n.exemplarIds,
+    primaryExemplarIds: n.primaryExemplarIds,
+    secondaryExemplarIds: n.secondaryExemplarIds,
     subject: n.subject,
     topicId: n.topicId,
   })),

@@ -209,7 +209,8 @@ function main() {
     subject: string
     topicId: string
     tags: string[]
-    exemplarIds: string[]
+    primaryExemplarIds: string[]
+    secondaryExemplarIds: string[]
     noteType: string
     importance: number
     tier: string
@@ -242,24 +243,19 @@ function main() {
     const subject = resolveSubject(entry.topicId)
     subjectCounts[subject] = (subjectCounts[subject] ?? 0) + 1
 
-    // exemplarIds: マッピングから取得
+    // exemplarIds: マッピングから primary / secondary に分離
     const mapping = mappingByNoteId.get(fusenId)
-    const exemplarIds: string[] = []
-    if (mapping) {
-      // isPrimary を先、secondary を後に
-      const primary = mapping.matches
-        .filter((m) => m.isPrimary)
-        .map((m) => m.exemplarId)
-      const secondary = mapping.matches
-        .filter((m) => !m.isPrimary)
-        .map((m) => m.exemplarId)
-      exemplarIds.push(...primary, ...secondary)
-    }
+    const primaryExemplarIds = mapping
+      ? mapping.matches.filter((m) => m.isPrimary).map((m) => m.exemplarId)
+      : []
+    const secondaryExemplarIds = mapping
+      ? mapping.matches.filter((m) => !m.isPrimary).map((m) => m.exemplarId)
+      : []
 
     // importance: exemplarIds の件数ベース（4チームレビュー P2 修正）
     // 旧: linkedQuestionIds.length ベース → 95.7% が importance=4 で無意味
     // 新: exemplarIds.length ベース → 1-4件で意味のある分布に
-    const importance = computeImportance(exemplarIds.length)
+    const importance = computeImportance(primaryExemplarIds.length + secondaryExemplarIds.length)
 
     // P2修正: noteType / tier のバリデーション（GPT-5.4指摘）
     const noteType = entry.noteType || 'knowledge'
@@ -283,7 +279,8 @@ function main() {
       subject,
       topicId: entry.topicId,
       tags: entry.tags,
-      exemplarIds,
+      primaryExemplarIds,
+      secondaryExemplarIds,
       noteType,
       importance,
       tier,
@@ -293,12 +290,10 @@ function main() {
   // ---------- 統計表示 ----------
   console.log(`\n📊 official-notes.ts 生成統計`)
   console.log(`  付箋数: ${notes.length}`)
-  console.log(
-    `  exemplarIds 付き: ${notes.filter((n) => n.exemplarIds.length > 0).length}`,
-  )
-  console.log(
-    `  exemplarIds 合計: ${notes.reduce((s, n) => s + n.exemplarIds.length, 0)}`,
-  )
+  console.log(`  primaryExemplarIds 付き: ${notes.filter((n) => n.primaryExemplarIds.length > 0).length}`)
+  console.log(`  secondaryExemplarIds 付き: ${notes.filter((n) => n.secondaryExemplarIds.length > 0).length}`)
+  console.log(`  primary合計: ${notes.reduce((s, n) => s + n.primaryExemplarIds.length, 0)}`)
+  console.log(`  secondary合計: ${notes.reduce((s, n) => s + n.secondaryExemplarIds.length, 0)}`)
   console.log(
     `  linkedQuestionIds: JSON から除外（ランタイムで topicId 逆引き）`,
   )

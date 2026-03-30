@@ -25,7 +25,7 @@ export interface ValidationContext {
   /** 例示マスタ（付箋バリデーション用） */
   exemplars: Exemplar[]
   /** exemplarIds 付き付箋（付箋バリデーション用） */
-  officialNotesWithExemplars: Array<{ id: string; exemplarIds?: string[]; subject: string; topicId: string }>
+  officialNotesWithExemplars: Array<{ id: string; primaryExemplarIds?: string[]; secondaryExemplarIds?: string[]; subject: string; topicId: string }>
 }
 
 export interface ValidationReport {

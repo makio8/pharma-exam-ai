@@ -24,7 +24,7 @@ describe('note-exemplar-exists', () => {
     const ctx: ValidationContext = {
       ...baseContext,
       officialNotesWithExemplars: [
-        { id: 'fusen-0001', exemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
       ],
     }
     const issues = noteValidationRules([], ctx)
@@ -36,7 +36,7 @@ describe('note-exemplar-exists', () => {
     const ctx: ValidationContext = {
       ...baseContext,
       officialNotesWithExemplars: [
-        { id: 'fusen-0001', exemplarIds: ['ex-nonexistent'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: ['ex-nonexistent'], subject: '物理', topicId: 'physics-material-structure' },
       ],
     }
     const issues = noteValidationRules([], ctx)
@@ -51,7 +51,7 @@ describe('note-exemplar-no-duplicates', () => {
     const ctx: ValidationContext = {
       ...baseContext,
       officialNotesWithExemplars: [
-        { id: 'fusen-0001', exemplarIds: ['ex-physics-001', 'ex-chemistry-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: ['ex-physics-001', 'ex-chemistry-001'], subject: '物理', topicId: 'physics-material-structure' },
       ],
     }
     const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-exemplar-no-duplicates')
@@ -62,7 +62,7 @@ describe('note-exemplar-no-duplicates', () => {
     const ctx: ValidationContext = {
       ...baseContext,
       officialNotesWithExemplars: [
-        { id: 'fusen-0001', exemplarIds: ['ex-physics-001', 'ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: ['ex-physics-001', 'ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
       ],
     }
     const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-exemplar-no-duplicates')
@@ -76,7 +76,7 @@ describe('note-exemplar-subject-match', () => {
     const ctx: ValidationContext = {
       ...baseContext,
       officialNotesWithExemplars: [
-        { id: 'fusen-0001', exemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
       ],
     }
     const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-exemplar-subject-match')
@@ -87,7 +87,7 @@ describe('note-exemplar-subject-match', () => {
     const ctx: ValidationContext = {
       ...baseContext,
       officialNotesWithExemplars: [
-        { id: 'fusen-0001', exemplarIds: ['ex-chemistry-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: ['ex-chemistry-001'], subject: '物理', topicId: 'physics-material-structure' },
       ],
     }
     const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-exemplar-subject-match')
@@ -101,7 +101,7 @@ describe('note-exemplar-topic-match', () => {
     const ctx: ValidationContext = {
       ...baseContext,
       officialNotesWithExemplars: [
-        { id: 'fusen-0001', exemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
       ],
     }
     const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-exemplar-topic-match')
@@ -112,7 +112,7 @@ describe('note-exemplar-topic-match', () => {
     const ctx: ValidationContext = {
       ...baseContext,
       officialNotesWithExemplars: [
-        { id: 'fusen-0001', exemplarIds: ['ex-chemistry-001'], subject: '化学', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: ['ex-chemistry-001'], subject: '化学', topicId: 'physics-material-structure' },
       ],
     }
     const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-exemplar-topic-match')
@@ -126,7 +126,7 @@ describe('note-has-exemplars', () => {
     const ctx: ValidationContext = {
       ...baseContext,
       officialNotesWithExemplars: [
-        { id: 'fusen-0001', exemplarIds: undefined, subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: undefined, subject: '物理', topicId: 'physics-material-structure' },
       ],
     }
     const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-has-exemplars')
@@ -138,7 +138,7 @@ describe('note-has-exemplars', () => {
     const ctx: ValidationContext = {
       ...baseContext,
       officialNotesWithExemplars: [
-        { id: 'fusen-0001', exemplarIds: [], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: [], subject: '物理', topicId: 'physics-material-structure' },
       ],
     }
     const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-has-exemplars')
@@ -151,8 +151,8 @@ describe('note-id-unique', () => {
     const ctx: ValidationContext = {
       ...baseContext,
       officialNotesWithExemplars: [
-        { id: 'fusen-0001', exemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
-        { id: 'fusen-0002', exemplarIds: ['ex-chemistry-001'], subject: '化学', topicId: 'chemistry-basic-properties' },
+        { id: 'fusen-0001', primaryExemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0002', primaryExemplarIds: ['ex-chemistry-001'], subject: '化学', topicId: 'chemistry-basic-properties' },
       ],
     }
     const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-id-unique')
@@ -163,8 +163,8 @@ describe('note-id-unique', () => {
     const ctx: ValidationContext = {
       ...baseContext,
       officialNotesWithExemplars: [
-        { id: 'fusen-0001', exemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
-        { id: 'fusen-0001', exemplarIds: ['ex-chemistry-001'], subject: '化学', topicId: 'chemistry-basic-properties' },
+        { id: 'fusen-0001', primaryExemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: ['ex-chemistry-001'], subject: '化学', topicId: 'chemistry-basic-properties' },
       ],
     }
     const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-id-unique')
@@ -177,9 +177,9 @@ describe('note-id-unique', () => {
     const ctx: ValidationContext = {
       ...baseContext,
       officialNotesWithExemplars: [
-        { id: 'fusen-0001', exemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
-        { id: 'fusen-0001', exemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
-        { id: 'fusen-0001', exemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: ['ex-physics-001'], subject: '物理', topicId: 'physics-material-structure' },
       ],
     }
     const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-id-unique')
@@ -202,7 +202,7 @@ describe('note-exemplar-max-count', () => {
       officialNotesWithExemplars: [
         {
           id: 'fusen-0001',
-          exemplarIds: manyExemplars.map(e => e.id),
+          primaryExemplarIds: manyExemplars.map(e => e.id),
           subject: '物理',
           topicId: 'physics-material-structure',
         },
@@ -226,7 +226,7 @@ describe('note-exemplar-max-count', () => {
       officialNotesWithExemplars: [
         {
           id: 'fusen-0001',
-          exemplarIds: manyExemplars.map(e => e.id),
+          primaryExemplarIds: manyExemplars.map(e => e.id),
           subject: '物理',
           topicId: 'physics-material-structure',
         },
@@ -243,7 +243,7 @@ describe('note-exemplar-max-count', () => {
     const ctx: ValidationContext = {
       ...baseContext,
       officialNotesWithExemplars: [
-        { id: 'fusen-0001', exemplarIds: undefined, subject: '物理', topicId: 'physics-material-structure' },
+        { id: 'fusen-0001', primaryExemplarIds: undefined, subject: '物理', topicId: 'physics-material-structure' },
       ],
     }
     const issues = noteValidationRules([], ctx).filter(i => i.rule === 'note-exemplar-max-count')
