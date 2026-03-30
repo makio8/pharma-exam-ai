@@ -189,24 +189,18 @@ function QuestionPageContent({
     [linkService, questionId],
   )
 
-  // 同じ単元の類似問題（exemplar一致優先 → 新年度順トピック補完 → 回答状態でソート）
-  const relatedQuestionIds = useMemo(() => {
+  // 同じ単元の類似問題（exemplar一致優先 → トピック補完 → 回答状態+年度でソート）
+  const relatedGroups = useMemo(() => {
+    const getYear = (qId: string) => parseInt(qId.match(/^r(\d+)/)?.[1] ?? '0', 10)
+
     const topicId = QUESTION_TOPIC_MAP[questionId]
-    // P1-2: トピック補完は新しい年度順（"r111-xxx" > "r100-xxx"）
     const topicFallback = topicId
       ? Object.entries(QUESTION_TOPIC_MAP)
           .filter(([qId, tid]) => tid === topicId && qId !== questionId)
           .map(([qId]) => qId)
-          .sort((a, b) => {
-            const yearA = parseInt(a.match(/^r(\d+)/)?.[1] ?? '0', 10)
-            const yearB = parseInt(b.match(/^r(\d+)/)?.[1] ?? '0', 10)
-            return yearB - yearA
-          })
       : []
 
-    // P1-1: グループ内でのみ回答状態ソート（exemplar一致グループがtopic補完より常に上位）
     // 優先順: 未解答(0) → スキップ(1) → 不正解(2) → 正解済み(3)
-    // スキップ = 知識の穴であり誤答より優先して再挑戦させる
     const answerPriority = (qId: string): number => {
       const result = getQuestionResult(qId)
       if (!result) return 0
@@ -214,16 +208,25 @@ function QuestionPageContent({
       return result.is_correct ? 3 : 2
     }
 
-    // exemplar一致グループ（topic fallbackなし）
-    const exemplarMatched = linkService.getRelatedQuestions(questionId, [], 10)
-    // topic fallback（exemplar一致を除く）
-    const seen = new Set([questionId, ...exemplarMatched])
-    const remaining = Math.max(0, 10 - exemplarMatched.length)
-    const fallback = topicFallback.filter(qId => !seen.has(qId)).slice(0, remaining)
+    // 第1キー: 回答状態（未解答→スキップ→不正解→正解）、第2キー: 新しい年度順
+    // 2キーソートにより answerPriority内の年度多様性を自然に確保
+    const twoKeySort = (ids: string[]) =>
+      [...ids].sort((a, b) => {
+        const pa = answerPriority(a), pb = answerPriority(b)
+        if (pa !== pb) return pa - pb
+        return getYear(b) - getYear(a)
+      })
 
-    const sortedExemplar = [...exemplarMatched].sort((a, b) => answerPriority(a) - answerPriority(b))
-    const sortedFallback = [...fallback].sort((a, b) => answerPriority(a) - answerPriority(b))
-    return [...sortedExemplar, ...sortedFallback]
+    // exemplar一致グループ（topicFallbackは渡さず、コンポーネント側で管理）
+    const exemplarMatched = linkService.getRelatedQuestions(questionId, [], 10)
+    // topic fallback（exemplar一致を除く、最大10問）
+    const seen = new Set([questionId, ...exemplarMatched])
+    const fallback = topicFallback.filter(qId => !seen.has(qId)).slice(0, 10)
+
+    const sortedExemplar = twoKeySort(exemplarMatched)
+    const sortedFallback = twoKeySort(fallback)
+
+    return { exemplarIds: sortedExemplar, fallbackIds: sortedFallback }
   }, [questionId, linkService, getQuestionResult])
 
   // 回答後に ResultBanner へ自動スクロール
@@ -319,14 +322,14 @@ function QuestionPageContent({
               />
             )}
 
-            {/* CTA群: 類似問題 → 暗記カード の順 */}
+            {/* CTA群: 類似問題（exemplar一致 / topic補完を分離表示）→ 暗記カード の順 */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', margin: '12px 0' }}>
-              {relatedQuestionIds.length > 0 && (
+              {relatedGroups.exemplarIds.length > 0 && (
                 <button
                   type="button"
                   onClick={() => {
-                    localStorage.setItem('practice_session', JSON.stringify(relatedQuestionIds))
-                    navigate(`/practice/${relatedQuestionIds[0]}`)
+                    localStorage.setItem('practice_session', JSON.stringify(relatedGroups.exemplarIds))
+                    navigate(`/practice/${relatedGroups.exemplarIds[0]}`)
                   }}
                   style={{
                     width: '100%', padding: '12px 16px', background: 'var(--card)',
@@ -335,7 +338,25 @@ function QuestionPageContent({
                     cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                   }}
                 >
-                  <span>📝 同じ単元の問題（{relatedQuestionIds.length}問）</span>
+                  <span>📝 この知識の問題（{relatedGroups.exemplarIds.length}問）</span>
+                  <span style={{ color: 'var(--accent)' }}>→</span>
+                </button>
+              )}
+              {relatedGroups.fallbackIds.length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    localStorage.setItem('practice_session', JSON.stringify(relatedGroups.fallbackIds))
+                    navigate(`/practice/${relatedGroups.fallbackIds[0]}`)
+                  }}
+                  style={{
+                    width: '100%', padding: '12px 16px', background: 'var(--card)',
+                    border: '1px solid var(--border)', borderRadius: '10px',
+                    color: 'var(--text-2)', fontSize: '0.9rem', textAlign: 'left',
+                    cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                  }}
+                >
+                  <span>📚 同じ分野の関連問題（{relatedGroups.fallbackIds.length}問）</span>
                   <span style={{ color: 'var(--accent)' }}>→</span>
                 </button>
               )}
