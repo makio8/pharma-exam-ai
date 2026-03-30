@@ -1,8 +1,8 @@
 # 公式付箋レコメンドロジック改善 設計仕様
 
-- バージョン: v1.0
+- バージョン: v1.1
 - 作成日: 2026-03-30
-- レビュー: エージェント3チーム（PdM / アーキテクト / QA）
+- レビュー: エージェント3チーム×2ラウンド（PdM / アーキテクト / QA）
 - ステータス: 承認済み
 
 ---
@@ -52,17 +52,49 @@ src/hooks/useScoredOfficialNotes.ts       ← フック（ラップのみ）
 
 ---
 
-## 3. スコアリングロジック
+## 3. データ層変更（v1.1追加）
+
+### 背景
+`OfficialNote.exemplarIds` は現状フラット配列（`string[]`）で primary/secondary の区別がない。
+`note-exemplar-mappings.json` には `isPrimary: boolean` が存在するが、`official-notes.json` 生成時に情報が脱落していた。
+
+### OfficialNote 型変更
+
+```ts
+// 変更前
+exemplarIds?: string[]
+
+// 変更後
+primaryExemplarIds?: string[]    // 主要な紐づき（isPrimary=true）
+secondaryExemplarIds?: string[]  // 補助的な紐づき（isPrimary=false）
+/** @deprecated primaryExemplarIds / secondaryExemplarIds に移行済み */
+exemplarIds?: string[]
+```
+
+### generate-official-notes.ts 修正
+`note-exemplar-mappings.json` の `isPrimary` を参照して primary/secondary を分けて出力する。
+
+```ts
+primaryExemplarIds: matches.filter(m => m.isPrimary).map(m => m.exemplarId),
+secondaryExemplarIds: matches.filter(m => !m.isPrimary).map(m => m.exemplarId),
+```
+
+---
+
+## 4. スコアリングロジック
 
 ### スコア計算式
 
 ```
 score(note, question) =
-  + SCORING_WEIGHTS.primaryExemplar   // primary exemplarId一致
-  + SCORING_WEIGHTS.secondaryExemplar // secondary exemplarId一致
-  + (question.tags ∩ note.tags).length × SCORING_WEIGHTS.tagMatch
+  + SCORING_WEIGHTS.primaryExemplar    // note.primaryExemplarIds ∩ question の primary exemplarIds
+  + SCORING_WEIGHTS.secondaryExemplar  // note.secondaryExemplarIds ∩ question の全 exemplarIds
+  + (note.tags の中で question_text に含まれる語の数) × SCORING_WEIGHTS.textMatch
   + Math.min(note.importance, 10) × SCORING_WEIGHTS.importance
 ```
+
+> **v1.1変更点**: タグスコア `question.tags ∩ note.tags` を削除（全問 `tags:[]` のため機能しない）。
+> 代わりに `question_text` と `note.tags` の部分一致を採用。
 
 ### 重み定数
 
@@ -70,16 +102,14 @@ score(note, question) =
 const SCORING_WEIGHTS = {
   primaryExemplar: 2,
   secondaryExemplar: 1,
-  tagMatch: 1,        // タグ一致1件あたり
-  importance: 0.01,   // タイブレーク用（importance最大4 × 0.01 = 0.04）
+  textMatch: 0.5,      // question_text に note.tags の語が含まれる（1件あたり）
+  importance: 0.01,    // タイブレーク用（importance最大4 × 0.01 = 0.04）
 } as const
 ```
 
-> importanceの実データ範囲: 2〜4（上限キャップ10は余裕を持たせた設定）
-
 ### exemplarId一致の判定
 
-`QUESTION_EXEMPLAR_MAP`（フラット配列）から対象questionIdのエントリをフック初期化時に**Mapに変換**してO(1)参照する。
+`QUESTION_EXEMPLAR_MAP`（フラット配列）をモジュールスコープで**Mapに変換**してO(1)参照する。
 
 ```ts
 // モジュールスコープで事前構築（再マウントでも再計算しない）
@@ -93,23 +123,18 @@ for (const { questionId, exemplarId, isPrimary } of QUESTION_EXEMPLAR_MAP) {
 }
 ```
 
-### タグ一致の判定
-
-キーワードトークナイズ（スペース分割）は日本語で機能しないため採用しない。
-代わりに `question.tags` と `note.tags` の集合積を使用する。
+### テキストマッチの判定
 
 ```ts
-const tagScore = question.tags.filter(t => note.tags.includes(t)).length
+// note.tagsの各語がquestion_textに含まれるか
+const textScore = note.tags.filter(tag => question.question_text.includes(tag)).length
 ```
 
-### correct_answer の扱い
-
-`correct_answer: number | number[]` の型に対応する。
-（選択肢参照はタグ方式に変更したため、直接参照は不要）
+> `question.tags` は全問空配列のため使用しない。`question_text` のテキスト検索で代替。
 
 ---
 
-## 4. フィルタリング・ソート
+## 5. フィルタリング・ソート
 
 ### 処理フロー
 
@@ -132,42 +157,49 @@ if (scored.length === 0) {
 
 ---
 
-## 5. ビタミンB12問題でのシミュレーション
+## 6. ビタミンB12問題でのシミュレーション（実データ検証済み）
 
-問題ID: `r100-016`（野菜に含まれないビタミン、正解: ビタミンB12）
-`question.tags`: `['ビタミンB12', 'コバラミン', '動物性食品', '衛生']`（想定）
+- 問題ID: `r100-016`「野菜に含まれていないビタミンはどれか」
+- question_text: `"野菜に含まれていないビタミンはどれか。１つ選べ。"`
+- r100-016 のexemplar: primary=`ex-biology-012`、secondary=`ex-hygiene-022`
 
-| 付箋 | exemplar | タグ一致 | total |
-|------|---------|---------|-------|
-| fusen-0373「ビタミンB12（コバラミン）」| +2 | B12,コバラミン → +2 | **4.04** |
-| fusen-0265「ビタミンのポイント」| +2 | ビタミン系のみ → +1 | 3.03 |
-| fusen-0367「ビタミンB1 (チアミン)」| +2 | ビタミン系のみ → +1 | 3.04 |
+fusen-0373「ビタミンB12（コバラミン）」の実tags:
+`['ビタミンB12', 'コバラミン', '巨赤芽球性貧血', '語呂合わせ', '内因子', 'コバルト', 'メチル転位']`
 
-→ fusen-0373が1位
+| 付箋 | exemplar | textMatch | total |
+|------|---------|-----------|-------|
+| fusen-0373「ビタミンB12（コバラミン）」| secondary +1（ex-hygiene-022） | 「ビタミン」ヒット → +0.5 | **1.54** |
+| fusen-0265「ビタミンのポイント」| secondary +1 | 「ビタミン」ヒット → +0.5 | 1.53 |
+| fusen-0269「脂溶性ビタミン」| secondary +1 | 「ビタミン」ヒット → +0.5 | 1.53 |
+
+> r100-016 の primary exemplar は `ex-biology-012`（生物系）であり、hygiene-nutrition の付箋とは一致しない。
+> secondary の `ex-hygiene-022` が一致するため +1。importance(4) × 0.01 = 0.04 のタイブレークで fusen-0373 が1位。
 
 ---
 
-## 6. テスト方針
+## 7. テスト方針
 
 `OfficialNoteScoringCore` クラスに純粋関数を実装し、以下のケースをカバーする。
 
 | # | テストケース |
 |---|------------|
-| T1 | primary exemplarが一致する付箋が高スコアになる |
-| T2 | secondary exemplarはprimaryより低スコア |
-| T3 | タグ一致数に応じてスコアが加算される |
-| T4 | `correct_answer` が配列でもクラッシュしない |
-| T5 | `exemplarIds` が未定義の付箋はexemplarスコア0で処理 |
+| T1 | primary exemplarが一致する付箋が高スコアになる（+2） |
+| T2 | secondary exemplarはprimaryより低スコア（+1） |
+| T3 | note.tagsのうちquestion_textに含まれる語でスコアが加算される |
+| T4 | `question.tags` が空でもクラッシュしない |
+| T5 | `primaryExemplarIds` が未定義の付箋はexemplarスコア0で処理 |
 | T6 | スコア全0のとき importance降順フォールバックが返る |
-| T7 | `question.tags` が空のときタグスコアは0 |
+| T7 | `note.tags` が空のときtextMatchスコアは0 |
 | T8 | importanceが最大値(4)でもexemplar不一致を逆転しない |
 | T9 | `limit` 引数で返却件数を変更できる |
+| T10 | 同一exemplarIdがprimary/secondary両方に存在しても二重加算しない |
+| T11 | limit=0、limit>全件数の境界値 |
 
 ---
 
-## 7. 呼び出し側の変更
+## 8. 呼び出し側の変更
 
-`QuestionPage.tsx` で `useOfficialNotes` を `useScoredOfficialNotes` に切り替える。
+`QuestionPage.tsx` と **`LinkedQuestionItem.tsx`**（v1.1追加）で切り替える。
 
 ```ts
 // 変更前
@@ -181,21 +213,28 @@ const { notes } = useScoredOfficialNotes(question)
 
 ---
 
-## 8. GPT-5.4レビュー対応記録
+## 9. GPT-5.4レビュー対応記録
 
 - GPT-5.4（codex exec）: サンドボックス制限によりセッション内実行不可（2026-03-30）
-- エージェントチームレビュー（PdM / アーキテクト / QA）: 実施済み
-  - P1指摘5件 → 全て設計に反映済み
-  - P2指摘3件 → SCORING_WEIGHTS定数化・importanceキャップ・フォールバック改善を反映
-  - P3指摘2件 → OfficialNoteScoringCoreクラス分離・limit引数化を採用
+- エージェントチームレビュー Round 1（PdM / アーキテクト / QA）: 実施済み → P1×5修正
+- エージェントチームレビュー Round 2（PdM / アーキテクト / QA）: 実施済み → 以下を修正
+  - P1: `question.tags` 全件空 → タグスコア削除、`question_text` 部分一致に変更
+  - P1: `exemplarIds` にprimary/secondary区別なし → 型変更 + スクリプト修正をスコープ追加
+  - P1: `LinkedQuestionItem.tsx` 変更漏れ → 対象ファイルに追加
+  - P1: シミュレーション§5を実データで書き直し（r100-016、fusen-0373の実tags使用）
+  - P2: テストケースT10・T11追加
 
 ---
 
-## 9. 対象ファイル
+## 10. 対象ファイル
 
 | ファイル | 変更種別 |
 |--------|---------|
+| `src/types/official-note.ts` | 変更（primaryExemplarIds/secondaryExemplarIds追加） |
+| `scripts/generate-official-notes.ts` | 変更（isPrimary情報を保持して出力） |
+| `src/data/official-notes.json` | 再生成 |
 | `src/utils/official-note-scoring-core.ts` | 新規作成 |
 | `src/hooks/useScoredOfficialNotes.ts` | 新規作成 |
 | `src/pages/QuestionPage.tsx` | 変更（フック切り替え） |
+| `src/components/question/LinkedQuestionItem.tsx` | 変更（フック切り替え） |
 | `src/hooks/useOfficialNotes.ts` | 変更なし |
