@@ -205,10 +205,13 @@ function QuestionPageContent({
       : []
 
     // P1-1: グループ内でのみ回答状態ソート（exemplar一致グループがtopic補完より常に上位）
+    // 優先順: 未解答(0) → スキップ(1) → 不正解(2) → 正解済み(3)
+    // スキップ = 知識の穴であり誤答より優先して再挑戦させる
     const answerPriority = (qId: string): number => {
       const result = getQuestionResult(qId)
       if (!result) return 0
-      return result.is_correct ? 2 : 1
+      if (result.skipped) return 1
+      return result.is_correct ? 3 : 2
     }
 
     // exemplar一致グループ（topic fallbackなし）

@@ -36,3 +36,6 @@ reports/
 # Supabase local dev（Dockerコンテナ一時ファイル）
 supabase/.branches/
 supabase/.temp/
+
+# Playwright test cache（stale run state）
+test-results/
