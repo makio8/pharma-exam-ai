@@ -6,6 +6,7 @@ import { ALL_QUESTIONS } from '../data/all-questions'
 import { QUESTION_TOPIC_MAP } from '../data/question-topic-map'
 import { ALL_TOPICS } from '../data/exam-blueprint'
 import { useQuestionAnswerState } from '../hooks/useQuestionAnswerState'
+import { useAnswerHistory } from '../hooks/useAnswerHistory'
 import { useTimeTracking } from '../hooks/useTimeTracking'
 import { useSwipeNavigation } from '../hooks/useSwipeNavigation'
 import { useScoredOfficialNotes } from '../hooks/useScoredOfficialNotes'
@@ -166,6 +167,7 @@ function QuestionPageContent({
   const location = useLocation()
   const linkService = useLearningLinks()
   const answerState = useQuestionAnswerState(question)
+  const { getQuestionResult } = useAnswerHistory()
 
   // 付箋アコーディオン: 不正解時デフォルト展開、正解/スキップ時は折りたたみ
   const [notesOpen, setNotesOpen] = useState(false)
@@ -187,16 +189,39 @@ function QuestionPageContent({
     [linkService, questionId],
   )
 
-  // 同じ単元の類似問題（exemplar一致優先 → トピック補完、最大10件）
+  // 同じ単元の類似問題（exemplar一致優先 → 新年度順トピック補完 → 回答状態でソート）
   const relatedQuestionIds = useMemo(() => {
     const topicId = QUESTION_TOPIC_MAP[questionId]
+    // P1-2: トピック補完は新しい年度順（"r111-xxx" > "r100-xxx"）
     const topicFallback = topicId
       ? Object.entries(QUESTION_TOPIC_MAP)
           .filter(([qId, tid]) => tid === topicId && qId !== questionId)
           .map(([qId]) => qId)
+          .sort((a, b) => {
+            const yearA = parseInt(a.match(/^r(\d+)/)?.[1] ?? '0', 10)
+            const yearB = parseInt(b.match(/^r(\d+)/)?.[1] ?? '0', 10)
+            return yearB - yearA
+          })
       : []
-    return linkService.getRelatedQuestions(questionId, topicFallback, 10)
-  }, [questionId, linkService])
+
+    // P1-1: グループ内でのみ回答状態ソート（exemplar一致グループがtopic補完より常に上位）
+    const answerPriority = (qId: string): number => {
+      const result = getQuestionResult(qId)
+      if (!result) return 0
+      return result.is_correct ? 2 : 1
+    }
+
+    // exemplar一致グループ（topic fallbackなし）
+    const exemplarMatched = linkService.getRelatedQuestions(questionId, [], 10)
+    // topic fallback（exemplar一致を除く）
+    const seen = new Set([questionId, ...exemplarMatched])
+    const remaining = Math.max(0, 10 - exemplarMatched.length)
+    const fallback = topicFallback.filter(qId => !seen.has(qId)).slice(0, remaining)
+
+    const sortedExemplar = [...exemplarMatched].sort((a, b) => answerPriority(a) - answerPriority(b))
+    const sortedFallback = [...fallback].sort((a, b) => answerPriority(a) - answerPriority(b))
+    return [...sortedExemplar, ...sortedFallback]
+  }, [questionId, linkService, getQuestionResult])
 
   // 回答後に ResultBanner へ自動スクロール
   useEffect(() => {
