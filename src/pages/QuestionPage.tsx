@@ -176,6 +176,22 @@ function QuestionPageContent({
     return topic ? `${topic.major} > ${topic.middle}` : undefined
   }, [questionId])
 
+  // 暗記カード枚数（問題のexemplarに紐づくカード）
+  const topicCardCount = useMemo(
+    () => linkService.getCardsForQuestion(questionId).length,
+    [linkService, questionId],
+  )
+
+  // 同じ単元の類似問題（現在の問題を除く、最大10件）
+  const relatedQuestionIds = useMemo(() => {
+    const topicId = QUESTION_TOPIC_MAP[questionId]
+    if (!topicId) return []
+    return Object.entries(QUESTION_TOPIC_MAP)
+      .filter(([qId, tid]) => tid === topicId && qId !== questionId)
+      .map(([qId]) => qId)
+      .slice(0, 10)
+  }, [questionId])
+
   // 回答後に ResultBanner へ自動スクロール
   useEffect(() => {
     if (answerState.isAnswered) {
@@ -294,6 +310,48 @@ function QuestionPageContent({
                 onImageTap={() => {}}
               />
             ))}
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', margin: '12px 0' }}>
+              {topicCardCount > 0 && (
+                <button
+                  onClick={() => {
+                    const cards = linkService.getCardsForQuestion(questionId)
+                    const ctx: FlashCardPracticeContext = {
+                      mode: 'topic',
+                      cardIds: cards.map(c => c.id),
+                      returnTo: location.pathname,
+                    }
+                    navigate('/cards/review', { state: ctx })
+                  }}
+                  style={{
+                    width: '100%', padding: '12px 16px', background: 'var(--card)',
+                    border: '1px solid var(--border)', borderRadius: '10px',
+                    color: 'var(--text-1)', fontSize: '0.9rem', textAlign: 'left',
+                    cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                  }}
+                >
+                  <span>🃏 この単元の暗記カード（{topicCardCount}枚）</span>
+                  <span style={{ color: 'var(--accent)' }}>→</span>
+                </button>
+              )}
+              {relatedQuestionIds.length > 0 && (
+                <button
+                  onClick={() => {
+                    localStorage.setItem('practice_session', JSON.stringify(relatedQuestionIds))
+                    navigate(`/practice/${relatedQuestionIds[0]}`)
+                  }}
+                  style={{
+                    width: '100%', padding: '12px 16px', background: 'var(--card)',
+                    border: '1px solid var(--border)', borderRadius: '10px',
+                    color: 'var(--text-1)', fontSize: '0.9rem', textAlign: 'left',
+                    cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                  }}
+                >
+                  <span>📝 同じ単元の問題（{relatedQuestionIds.length}問）</span>
+                  <span style={{ color: 'var(--accent)' }}>→</span>
+                </button>
+              )}
+            </div>
 
             <MetaAccordion question={question} topicName={topicName} />
           </>
