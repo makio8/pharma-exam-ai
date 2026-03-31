@@ -626,7 +626,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "source_id": "struct-phenothiazine",
     "subject": "薬理",
     "front": "2つのベンゼン環が硫黄原子と窒素原子を介して縮合した三環性複素環の名称は？",
-    "back": "フェノチアジン環（Phenothiazine）。[含窒素・含硫黄三環性複素環]に分類される。定型抗精神病薬（クロルプロマジン・ハロペリドール類縁）のD2受容体遮断作用を持つ薬物の共通母核であり、抗ヒスタミン薬（プロメタジン）にも含まれる。",
+    "back": "フェノチアジン環（Phenothiazine）。[含窒素・含硫黄三環性複素環]に分類される。定型抗精神病薬（クロルプロマジン・チオリダジン・フルフェナジンなど）のD2受容体遮断作用を持つ薬物の共通母核であり、抗ヒスタミン薬（プロメタジン）にも含まれる。なおハロペリドールはブチロフェノン系であり、フェノチアジン環を持たない。",
     "format": "structural_identification",
     "tags": [
       "フェノチアジン環",
@@ -1432,14 +1432,15 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "化学",
     "front": "ヒスタミン（Histamine）の構造的特徴を3つ挙げよ。",
-    "back": "・イミダゾール環（窒素2個を含む5員複素環）の4位に2-アミノエチル側鎖（-CH2CH2NH2）を持つ\n・イミダゾール環のN-H（τ型・π型互変異性体）とアミノ基の2つの塩基性窒素を持ち、生理的pHで一方が陽電荷を帯びる\n・ヒスチジンの脱炭酸（ヒスチジン脱炭酸酵素）により生合成され、MAOおよびジアミン酸化酵素で代謝される",
+    "back": "・イミダゾール環（窒素2個を含む5員複素環）の4位に2-アミノエチル側鎖（-CH2CH2NH2）を持つ\n・イミダゾール環のN-H（τ型・π型互変異性体）とアミノ基の2つの塩基性窒素を持ち、生理的pHで一方が陽電荷を帯びる\n・ヒスチジンの脱炭酸（ヒスチジン脱炭酸酵素）により生合成され、ヒスタミンN-メチルトランスフェラーゼ（HNMT）およびジアミンオキシダーゼ（DAO）で代謝される",
     "format": "structural_features",
     "tags": [
       "イミダゾール環",
       "ヒスタミン",
       "生体アミン",
       "互変異性",
-      "MAO"
+      "HNMT",
+      "DAO"
     ],
     "media_url": "/images/structures/histamine.svg",
     "smiles": "C1=C(NC=N1)CCN"
@@ -2720,7 +2721,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "衛生",
     "front": "α-トコフェロール(ビタミンE)の構造的特徴を3つ挙げよ",
-    "back": "1. クロマン環（6員環の酸素含有環とベンゼン環が縮合した構造）を母核とし、フェノール性-OHが抗酸化活性の中心\n2. ベンゼン環に2・5・7・8位の4つのメチル基（α体）が置換し、メチル基の数がα>β>γ>δの順で抗酸化活性と一致\n3. C16のフィチル側鎖（3つのイソプレン単位からなる飽和長鎖）が脂溶性を付与し生体膜への取り込みを促進する",
+    "back": "1. クロマン環（6員環の酸素含有環とベンゼン環が縮合した構造）を母核とし、フェノール性-OHが抗酸化活性の中心\n2. 芳香環の5・7・8位に3つのメチル基（α体）が置換し（クロマン環2位にもメチル基があるが環骨格の一部）、芳香環上のメチル基の数がα>β>γ>δの順で抗酸化活性と一致\n3. C16のフィチル側鎖（3つのイソプレン単位からなる飽和長鎖）が脂溶性を付与し生体膜への取り込みを促進する",
     "format": "structural_features",
     "tags": [
       "ビタミンE",
@@ -5286,7 +5287,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "source_id": "struct-stevioside",
     "primary_exemplar_id": "",
     "subject": "衛生",
-    "front": "エント-カウレン型ジテルペン骨格に、2つのグルコース残基が配糖体として結合した天然甘味成分。ステビア葉から抽出される。砂糖の約100〜300倍の甘味。この構造式の物質名は？",
+    "front": "エント-カウレン型ジテルペン骨格に、3つのグルコース残基が配糖体として結合した天然甘味成分（C13位にソホロース＝グルコース×2、C19位カルボキシルにグルコース×1）。ステビア葉から抽出される。砂糖の約100〜300倍の甘味。この構造式の物質名は？",
     "back": "ステビオシド（Stevioside）\n分類：天然甘味料（ジテルペン配糖体）\n用途：低カロリー食品・飲料の甘味付与に使用され、耐熱性に優れる植物由来の非糖質甘味料。",
     "format": "structural_identification",
     "tags": [
@@ -5822,7 +5823,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "衛生",
     "front": "γ-ラクトン（5員環エステル）構造中にエンジオール基（HO-C=C-OH）を持つ C₆ 化合物。L-アスコルビン酸（ビタミンC）のC-5位立体異性体（エピマー）で、ビタミンC活性は持たない。食品の酸化防止剤・発色助剤として使用。この物質名は？",
-    "back": "エリソルビン酸（Erythorbic acid；D-アスコルビン酸）\n分類：酸化防止剤（エンジオール型）\n用途：食肉加工品・魚介類の脂質酸化防止および亜硝酸塩と併用した発色促進に使用。ビタミンC活性がないため栄養強化目的には使えない。",
+    "back": "エリソルビン酸（Erythorbic acid；D-イソアスコルビン酸）\n分類：酸化防止剤（エンジオール型）\n用途：食肉加工品・魚介類の脂質酸化防止および亜硝酸塩と併用した発色促進に使用。ビタミンC活性がないため栄養強化目的には使えない。",
     "format": "structural_identification",
     "tags": [
       "酸化防止剤",
@@ -6965,7 +6966,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "source_id": "struct-atropine",
     "primary_exemplar_id": "",
     "subject": "薬理",
-    "front": "トロパン環にエステル結合でトロピン酸（フェニル基・ヒドロキシメチル基を持つ）が結合したアルカロイド構造。",
+    "front": "トロパン環にエステル結合でトロパ酸（フェニル基・ヒドロキシメチル基を持つ）が結合したアルカロイド構造。",
     "back": "アトロピン（Atropine）\n分類: 抗コリン薬（ムスカリン受容体遮断薬）/ 解毒薬\n用途: 有機リン・カーバメイト中毒時のムスカリン様症状（縮瞳・気管支痙攣・徐脈）を緩解する。",
     "format": "structural_identification",
     "tags": [
@@ -7079,7 +7080,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "source_id": "struct-dimercaprol",
     "primary_exemplar_id": "",
     "subject": "薬理",
-    "front": "3炭素鎖（グリセロール類縁体）の1・2位に2つのチオール基（-SH）、3位にヒドロキシ基を持つ小分子。",
+    "front": "3炭素鎖（グリセロール類縁体）の2・3位に2つのチオール基（-SH）、1位にヒドロキシ基を持つ小分子。",
     "back": "ジメルカプロール（Dimercaprol / BAL: British Anti-Lewisite）\n分類: キレート剤 / 解毒薬\n用途: ヒ素・水銀・鉛・金などの重金属中毒に対して、2つのSH基でキレート環を形成し排泄促進する。",
     "format": "structural_identification",
     "tags": [
@@ -7676,7 +7677,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "化学",
     "front": "ノルアドレナリンの構造的特徴を3つ挙げよ",
-    "back": "・N上の置換基なし（一次アミン）のためアドレナリン（二次アミン・N-メチル）より塩基性が高く、β₂受容体への親和性が相対的に低い\n・β炭素の(R)配置ヒドロキシ基がα₁受容体と水素結合を形成し、血管平滑筋収縮の主要構造要件となる\n・カテコール基がCOMT基質であり代謝が速いため、持続静注で使用される（t₁/₂ 約2.5分）",
+    "back": "・N上の置換基なし（一次アミン・-NH₂）。アドレナリンの二次アミン（-NHCH₃）と比べてpKaは近似値（約8.6 vs 8.7）。N-メチル基の電子供与効果で二次アミンの方がわずかに塩基性が高く、β₂受容体への親和性はアドレナリンの方が高い\n・β炭素の(R)配置ヒドロキシ基がα₁受容体と水素結合を形成し、血管平滑筋収縮の主要構造要件となる\n・カテコール基がCOMT基質であり代謝が速いため、持続静注で使用される（t₁/₂ 約2.5分）",
     "format": "structural_features",
     "tags": [
       "カテコールアミン",
@@ -8082,7 +8083,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "薬理",
     "front": "メタンフェタミンの構造的特徴を3つ挙げよ",
-    "back": "・フェネチルアミン骨格（C₆H₅-CH₂-CH(CH₃)-NHCH₃）：ノルアドレナリン・ドパミンと類似しモノアミントランスポーター（DAT/NET）の基質として取り込まれ逆輸送を誘導\n・α-メチル基（β炭素のメチル）：MAOによる酸化的脱アミノを立体的に阻害し作用を延長\n・N-メチル基：塩基性を調整しBBBを透過；またコカインと異なりエステル結合を持たず加水分解されない",
+    "back": "・フェネチルアミン骨格（C₆H₅-CH₂-CH(CH₃)-NHCH₃）：ノルアドレナリン・ドパミンと類似しモノアミントランスポーター（DAT/NET）の基質として取り込まれ逆輸送を誘導\n・α-メチル基（α炭素＝アミノ基に隣接する炭素に結合）：MAOによる酸化的脱アミノを立体的に阻害し作用を延長\n・N-メチル基：塩基性を調整しBBBを透過；またコカインと異なりエステル結合を持たず加水分解されない",
     "format": "structural_features",
     "tags": [
       "フェネチルアミン",
