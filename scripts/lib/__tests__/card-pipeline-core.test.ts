@@ -241,6 +241,30 @@ describe('buildExemplarContext', () => {
     expect(ctx.notes).toHaveLength(2)
   })
 
+  it('mapping有だがquestion本体がないケース: スキップされる', () => {
+    const mappingsWithMissing: QuestionExemplarMapping[] = [
+      makeMapping({ questionId: 'r110-001', exemplarId: 'ex-001', isPrimary: true }),
+      makeMapping({ questionId: 'r999-999', exemplarId: 'ex-001', isPrimary: false }), // 存在しない問題
+    ]
+
+    const ctx = buildExemplarContext(
+      'ex-001', 'frequent', 15,
+      exemplars, mappingsWithMissing, questions, notes,
+    )
+
+    expect(ctx.questions).toHaveLength(1)
+    expect(ctx.questions[0].id).toBe('r110-001')
+  })
+
+  it('exemplar が見つからない場合は throw する', () => {
+    expect(() =>
+      buildExemplarContext(
+        'ex-999', 'frequent', 15,
+        exemplars, mappings, questions, notes,
+      ),
+    ).toThrow('Exemplar not found: ex-999')
+  })
+
   it('付箋の noteType が NoteSummary に含まれる', () => {
     const ctx = buildExemplarContext(
       'ex-001', 'frequent', 15,
@@ -329,6 +353,31 @@ describe('formatContextForPrompt', () => {
 
     expect(output).not.toContain('### 過去問')
     expect(output).toContain('### 付箋メモ')
+  })
+
+  it('number[] 正答（複数選択）が "1, 3" 形式で出力される', () => {
+    const ctx: ExemplarContext = {
+      exemplarId: 'ex-multi',
+      subject: '薬理',
+      exemplarText: '複数選択テスト',
+      tier: 'regular',
+      maxAtoms: 8,
+      questions: [
+        {
+          id: 'r110-050',
+          year: 110,
+          questionText: '正しいものを2つ選べ',
+          choices: ['1. A', '2. B', '3. C'],
+          correctAnswer: [1, 3],
+          explanation: '解説',
+          isPrimary: true,
+        },
+      ],
+      notes: [],
+    }
+
+    const output = formatContextForPrompt(ctx)
+    expect(output).toContain('正解: 1, 3')
   })
 
   it('付箋が0件の場合、付箋セクションを出力しない', () => {

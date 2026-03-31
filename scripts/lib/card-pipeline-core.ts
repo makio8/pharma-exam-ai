@@ -107,8 +107,11 @@ export function buildExemplarContext(
 ): ExemplarContext {
   // exemplar 本体を探す
   const exemplar = exemplars.find(e => e.id === exemplarId)
-  const exemplarText = exemplar?.text ?? ''
-  const subject = exemplar?.subject ?? '物理'
+  if (!exemplar) {
+    throw new Error(`Exemplar not found: ${exemplarId}`)
+  }
+  const exemplarText = exemplar.text
+  const subject = exemplar.subject
 
   // マッピング経由で問題を収集
   const questionMap = new Map<string, Question>()
