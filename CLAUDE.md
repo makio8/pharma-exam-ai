@@ -199,7 +199,9 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - 設計: `docs/superpowers/specs/2026-03-31-structural-formula-cards-spec.md`
   - 化合物リスト: `docs/superpowers/specs/2026-03-31-structural-formula-compound-list.md`
   - 計画: `docs/superpowers/plans/2026-03-31-structural-formula-pipeline.md`
-  - **次: exemplarマッピング → 薬剤師レビュー → L1R（逆方向）カード追加**
+  - AI薬学レビュー: Opus 5バッチ並列。P1=22件+追加9件=31件修正済み、P2=89件（改善推奨）
+  - レビューUI: `/dev-tools/structural-review`（カテゴリフィルタ、SVG表示、キーボードナビ）
+  - **次: 人間レビュー（レビューUI目視） → exemplarマッピング → L1R（逆方向）カード追加**
 - **テキストカード生成パイプライン（2026-03-31）**
   - 設計spec §5「テキストカード生成パイプライン」の実装
   - 型拡張: KnowledgeType(11種), CardFormat(3→10種), FlashCardTemplate(12 optional新フィールド), KnowledgeAtom型
