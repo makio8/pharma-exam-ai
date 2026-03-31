@@ -1,0 +1,1319 @@
+[
+  {
+    "id": "ex-practice-043a-classification-001-type_to_secretion",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-classification-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "超速効型・速効型インスリンは{{c1::追加分泌}}を補う製剤である",
+    "back": "追加分泌",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "type_to_secretion",
+    "reverse_of_id": "ex-practice-043a-classification-001-secretion_to_type",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-244",
+      "r103-269"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-classification-001-secretion_to_type",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-classification-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "基礎分泌を補うインスリン製剤は{{c1::持効型}}と{{c2::中間型}}である",
+    "back": "持効型、中間型",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "secretion_to_type",
+    "reverse_of_id": "ex-practice-043a-classification-001-type_to_secretion",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-244",
+      "r103-269"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-indication-001-su_combination_to_insulin_type",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-indication-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "SU薬にインスリンを併用するBOT療法で推奨されるインスリン製剤の種類は？",
+    "back": "持効型インスリン（1日1回）。速効型ではない。BOT = Basal-supported Oral Therapy",
+    "format": "question_answer",
+    "tags": [
+      "indication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-indication-001",
+    "knowledge_type": "indication",
+    "recall_direction": "su_combination_to_insulin_type",
+    "reverse_of_id": "ex-practice-043a-indication-001-bot_to_definition",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-244"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-indication-001-bot_to_definition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-indication-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "BOT療法（Basal-supported Oral Therapy）とは？",
+    "back": "経口血糖降下薬に持効型インスリンを1日1回追加する治療法。SU薬との併用では低血糖に注意",
+    "format": "term_definition",
+    "tags": [
+      "indication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-indication-001",
+    "knowledge_type": "indication",
+    "recall_direction": "bot_to_definition",
+    "reverse_of_id": "ex-practice-043a-indication-001-su_combination_to_insulin_type",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-244"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-pharmacokinetics-001-opened_to_storage",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-pharmacokinetics-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "使用開始後のインスリンペン型製剤は{{c1::室温}}で保管する（凍結・高温は避ける）",
+    "back": "室温",
+    "format": "cloze",
+    "tags": [
+      "pharmacokinetics",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-pharmacokinetics-001",
+    "knowledge_type": "pharmacokinetics",
+    "recall_direction": "opened_to_storage",
+    "reverse_of_id": "ex-practice-043a-pharmacokinetics-001-unopened_to_storage",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r108-286"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-pharmacokinetics-001-unopened_to_storage",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-pharmacokinetics-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "未使用（未開封）のインスリン製剤は{{c1::冷蔵（2〜8℃）}}で保管する",
+    "back": "冷蔵（2〜8℃）",
+    "format": "cloze",
+    "tags": [
+      "pharmacokinetics",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-pharmacokinetics-001",
+    "knowledge_type": "pharmacokinetics",
+    "recall_direction": "unopened_to_storage",
+    "reverse_of_id": "ex-practice-043a-pharmacokinetics-001-opened_to_storage",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r108-286"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-adverse_effect-001-prevention_to_method",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-adverse_effect-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "インスリン注射部位の硬結防止のため、前回の注射部位から少なくとも{{c1::2〜3cm}}離して注射する",
+    "back": "2〜3cm",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-adverse_effect-001",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "prevention_to_method",
+    "reverse_of_id": "ex-practice-043a-adverse_effect-001-complication_to_cause",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r108-286"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-adverse_effect-001-complication_to_cause",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-adverse_effect-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "インスリン注射部位にできる硬結（リポハイパートロフィー）の原因と影響は？",
+    "back": "原因：同一部位への反復注射。影響：インスリン吸収が不安定になり血糖コントロールが悪化する",
+    "format": "question_answer",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-adverse_effect-001",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "complication_to_cause",
+    "reverse_of_id": "ex-practice-043a-adverse_effect-001-prevention_to_method",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r108-286"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-mechanism-001-drug_to_timing",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-mechanism-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "α-グルコシダーゼ阻害薬（ボグリボース等）は{{c1::食直前}}に服用する（食間では効果なし）",
+    "back": "食直前",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_timing",
+    "reverse_of_id": "ex-practice-043a-mechanism-001-hypoglycemia_to_treatment",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-226"
+    ],
+    "source_note_ids": [
+      "fusen-note-1"
+    ]
+  },
+  {
+    "id": "ex-practice-043a-mechanism-001-hypoglycemia_to_treatment",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-mechanism-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "α-GI薬服用中に低血糖が起きた場合、砂糖ではなく何を使うか？その理由は？",
+    "back": "ブドウ糖を使用する。理由：α-GI薬がショ糖（二糖類）の分解を阻害するため、砂糖では血糖上昇が遅れる",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "hypoglycemia_to_treatment",
+    "reverse_of_id": "ex-practice-043a-mechanism-001-drug_to_timing",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-226"
+    ],
+    "source_note_ids": [
+      "fusen-note-1"
+    ]
+  },
+  {
+    "id": "ex-practice-043a-adverse_effect-002-drug_to_side_effect",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-adverse_effect-002",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "α-GI薬の高頻度副作用は{{c1::放屁（おなら）}}・{{c2::腹部膨満感}}・{{c3::下痢}}で、軽度なら継続可能",
+    "back": "放屁・腹部膨満感・下痢",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-adverse_effect-002",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "drug_to_side_effect",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-226"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-classification-002-explanation_to_drug_class",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-classification-002",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "以下の患者説明はどの糖尿病薬？\n① 尿に糖を出す薬\n② 糖の吸収を抑える薬\n③ 肝臓で糖ができるのを抑える薬\n④ 血糖値に応じてインスリン分泌を促進する薬",
+    "back": "① SGLT2阻害薬\n② α-GI薬\n③ メトホルミン\n④ DPP-4阻害薬",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "explanation_to_drug_class",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r104-267",
+      "r106-210"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-adverse_effect-003-drug_to_adverse_effects",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-adverse_effect-003",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "SGLT2阻害薬の主な副作用は{{c1::尿路感染症}}・{{c2::脱水（口渇）}}・ケトアシドーシスである",
+    "back": "尿路感染症、脱水（口渇）",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-adverse_effect-003",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "drug_to_adverse_effects",
+    "reverse_of_id": "ex-practice-043a-adverse_effect-003-sglt2_counseling_points",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-217",
+      "r108-210"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-adverse_effect-003-sglt2_counseling_points",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-adverse_effect-003",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "SGLT2阻害薬（ダパグリフロジン等）の服薬指導で伝えるべき2点は？",
+    "back": "① 排尿時の違和感があれば申告（尿路感染症リスク）\n② 喉の渇きを感じることがある（利尿作用による脱水）",
+    "format": "question_answer",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-adverse_effect-003",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "sglt2_counseling_points",
+    "reverse_of_id": "ex-practice-043a-adverse_effect-003-drug_to_adverse_effects",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-217",
+      "r108-210"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-mechanism-002-drug_to_mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-mechanism-002",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "プレガバリンは電位依存性Caチャネルの{{c1::α2δサブユニット}}に結合し、Ca流入を抑制して神経伝達物質放出を抑える",
+    "back": "α2δサブユニット",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mechanism",
+    "reverse_of_id": "ex-practice-043a-mechanism-002-drug_to_counseling",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-258"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-mechanism-002-drug_to_counseling",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-mechanism-002",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "プレガバリンの服薬指導で伝えるべき副作用と注意事項は？",
+    "back": "① めまい・眠気・意識消失などの中枢系副作用\n② アルコールで中枢抑制が増強するため飲酒を控える\n③ 自己判断で中止しない（長期治療が必要）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_counseling",
+    "reverse_of_id": "ex-practice-043a-mechanism-002-drug_to_mechanism",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-258"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-adverse_effect-004-drug_to_risk_factors",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-adverse_effect-004",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "メトホルミンの{{c1::乳酸アシドーシス}}のリスク因子は、腎機能低下・脱水・過度の飲酒・ヨード造影剤使用である",
+    "back": "乳酸アシドーシス",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-adverse_effect-004",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "drug_to_risk_factors",
+    "reverse_of_id": "ex-practice-043a-adverse_effect-004-contrast_to_action",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r109-296",
+      "r106-243"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-adverse_effect-004-contrast_to_action",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-adverse_effect-004",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "メトホルミン服用中の患者がヨード造影剤を使う検査を受ける場合の対応は？",
+    "back": "検査前にメトホルミンを一時中止し、検査後48時間は再開しない（乳酸アシドーシス予防）",
+    "format": "question_answer",
+    "tags": [
+      "adverse_effect",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-adverse_effect-004",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "contrast_to_action",
+    "reverse_of_id": "ex-practice-043a-adverse_effect-004-drug_to_risk_factors",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r109-296",
+      "r106-243"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-indication-002-drug_to_dosing",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-indication-002",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "セマグルチド皮下注は{{c1::週1回同じ曜日}}に注射するGLP-1受容体作動薬である",
+    "back": "週1回同じ曜日",
+    "format": "cloze",
+    "tags": [
+      "indication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-indication-002",
+    "knowledge_type": "indication",
+    "recall_direction": "drug_to_dosing",
+    "reverse_of_id": "ex-practice-043a-indication-002-glp1_vs_dpp4",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r109-260"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-indication-002-glp1_vs_dpp4",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-indication-002",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "シタグリプチン（DPP-4阻害薬）からセマグルチド（GLP-1受容体作動薬）への変更で注意すべき点は？",
+    "back": "① 薬効群が異なる（DPP-4iは経口、GLP-1RAは注射）\n② 低血糖に注意が必要\n③ GLP-1RAには食欲抑制・体重減少効果がある",
+    "format": "question_answer",
+    "tags": [
+      "indication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-indication-002",
+    "knowledge_type": "indication",
+    "recall_direction": "glp1_vs_dpp4",
+    "reverse_of_id": "ex-practice-043a-indication-002-drug_to_dosing",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r109-260"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-interaction-001-resistance_to_cause",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-interaction-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "クロピドグレルの治療抵抗性の原因として最も考えられるのは、代謝酵素{{c1::CYP2C19}}の{{c2::遺伝子多型}}である",
+    "back": "CYP2C19の遺伝子多型",
+    "format": "cloze",
+    "tags": [
+      "interaction",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-interaction-001",
+    "knowledge_type": "interaction",
+    "recall_direction": "resistance_to_cause",
+    "reverse_of_id": "ex-practice-043a-interaction-001-cause_to_drug",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r102-304"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-interaction-001-cause_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-interaction-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "CYP2C19の遺伝子多型（PM：代謝が遅い人）が問題になる抗血小板薬は？",
+    "back": "クロピドグレル。プロドラッグのためCYP2C19で活性代謝物に変換される。PMでは効果不十分→ステント血栓症リスク",
+    "format": "question_answer",
+    "tags": [
+      "interaction",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-interaction-001",
+    "knowledge_type": "interaction",
+    "recall_direction": "cause_to_drug",
+    "reverse_of_id": "ex-practice-043a-interaction-001-resistance_to_cause",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r102-304"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-regulation-001-biosimilar_to_requirement",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-regulation-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "バイオ後続品の承認申請には{{c1::臨床試験成績}}が必要だが、後発医薬品は生物学的同等性試験のみで足りる",
+    "back": "臨床試験成績",
+    "format": "cloze",
+    "tags": [
+      "regulation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-regulation-001",
+    "knowledge_type": "regulation",
+    "recall_direction": "biosimilar_to_requirement",
+    "reverse_of_id": "ex-practice-043a-regulation-001-requirement_to_reason",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r106-307"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-regulation-001-requirement_to_reason",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-regulation-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "バイオ後続品に臨床試験が必要で後発医薬品に不要な理由は？",
+    "back": "バイオ医薬品はタンパク質製剤で分子構造が複雑なため、化学合成品のように完全同一にできない。品質・非臨床・臨床の比較試験で同等性・同質性を示す必要がある",
+    "format": "question_answer",
+    "tags": [
+      "regulation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-regulation-001",
+    "knowledge_type": "regulation",
+    "recall_direction": "requirement_to_reason",
+    "reverse_of_id": "ex-practice-043a-regulation-001-biosimilar_to_requirement",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r106-307"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-adverse_effect-005-drug_to_precaution",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-adverse_effect-005",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "以下のハイリスク薬の特徴的な注意点は？\n① カペシタビン\n② オキサリプラチン",
+    "back": "① カペシタビン → 手足症候群（保湿指導が必要）\n② オキサリプラチン → 末梢神経障害（寒冷刺激を避ける）",
+    "format": "comparison",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-adverse_effect-005",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "drug_to_precaution",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r106-329"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043a-mnemonic-001-timing_to_drugs",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043a-mnemonic-001",
+    "primary_exemplar_id": "ex-practice-043a",
+    "subject": "実務",
+    "front": "「食直前」に服用する必要がある薬剤群を3つ挙げよ",
+    "back": "① α-GI薬（ボグリボース等）：食事中の糖分解を阻害するため\n② グリニド系（ナテグリニド等）：速効型インスリン分泌促進のため\n③ 高リン血症治療薬（セベラマー・ビキサロマー等）：食事中のリンを吸着するため",
+    "format": "question_answer",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043a-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "timing_to_drugs",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r104-226"
+    ],
+    "source_note_ids": [
+      "fusen-note-1"
+    ]
+  },
+  {
+    "id": "ex-practice-043j-mechanism-001-mechanism→site",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-mechanism-001",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "PPIは{{c1::胃壁細胞の酸性環境}}でスルフェンアミド体に変換され、H⁺,K⁺-ATPaseを不可逆的に阻害する",
+    "back": "胃壁細胞の酸性環境（小腸ではない）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mechanism→site",
+    "reverse_of_id": "ex-practice-043j-mechanism-001-site→drug_class",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-206"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-mechanism-001-site→drug_class",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-mechanism-001",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "胃壁細胞の酸性環境（分泌細管）で活性体に変換され、H⁺,K⁺-ATPaseを不可逆的に阻害する薬物群は？",
+    "back": "PPI（プロトンポンプ阻害薬）：オメプラゾール、ランソプラゾール等",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "site→drug_class",
+    "reverse_of_id": "ex-practice-043j-mechanism-001-mechanism→site",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-206"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-pharmacokinetics-001-drug→enzyme",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-pharmacokinetics-001",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "オメプラゾールは主に{{c1::CYP2C19}}で代謝される（CYP2D6ではない）",
+    "back": "CYP2C19",
+    "format": "cloze",
+    "tags": [
+      "pharmacokinetics",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-pharmacokinetics-001",
+    "knowledge_type": "pharmacokinetics",
+    "recall_direction": "drug→enzyme",
+    "reverse_of_id": "ex-practice-043j-pharmacokinetics-001-enzyme→clinical_impact",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-206"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-pharmacokinetics-001-enzyme→clinical_impact",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-pharmacokinetics-001",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "CYP2C19の活性が低い患者（PM）でオメプラゾールの血中濃度はどうなるか？",
+    "back": "血中濃度が上昇しやすい（代謝が遅延するため）",
+    "format": "question_answer",
+    "tags": [
+      "pharmacokinetics",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-pharmacokinetics-001",
+    "knowledge_type": "pharmacokinetics",
+    "recall_direction": "enzyme→clinical_impact",
+    "reverse_of_id": "ex-practice-043j-pharmacokinetics-001-drug→enzyme",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-206"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-interaction-001-mechanism→result",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-interaction-001",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "PPIとアタザナビル硫酸塩を併用すると、アタザナビルの吸収はどうなるか？その理由は？",
+    "back": "吸収率は低下する。PPIによる胃酸分泌低下→アタザナビルの溶解性低下が原因。併用禁忌",
+    "format": "question_answer",
+    "tags": [
+      "interaction",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-interaction-001",
+    "knowledge_type": "interaction",
+    "recall_direction": "mechanism→result",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-206"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-adverse_effect-001-component→adverse_effect",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-adverse_effect-001",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "甘草含有漢方薬の重大な副作用として{{c1::偽アルドステロン症}}がある（低K血症・浮腫・高血圧）",
+    "back": "偽アルドステロン症",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-adverse_effect-001",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "component→adverse_effect",
+    "reverse_of_id": "ex-practice-043j-adverse_effect-001-symptoms→cause",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-214"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-adverse_effect-001-symptoms→cause",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-adverse_effect-001",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "漢方薬服用中に脱力感・筋肉痛が出現した場合、疑うべき副作用と原因成分は？",
+    "back": "偽アルドステロン症によるミオパチー（低K血症による筋障害）。原因成分は甘草（グリチルリチン）",
+    "format": "question_answer",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-adverse_effect-001",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "symptoms→cause",
+    "reverse_of_id": "ex-practice-043j-adverse_effect-001-component→adverse_effect",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-214"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-adverse_effect-002-structure→adverse_effect",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-adverse_effect-002",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "ピボキシル基含有抗菌薬（セフジトレン、セフカペン等）は小児で{{c1::低カルニチン血症}}を起こし、{{c2::低血糖・痙攣}}に至ることがある",
+    "back": "低カルニチン血症→低血糖・痙攣",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-adverse_effect-002",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "structure→adverse_effect",
+    "reverse_of_id": "ex-practice-043j-adverse_effect-002-adverse_effect→mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r102-210"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-adverse_effect-002-adverse_effect→mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-adverse_effect-002",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "ピボキシル基含有抗菌薬が低カルニチン血症を起こすメカニズムは？",
+    "back": "ピボキシル基の代謝でピバリン酸が生成→カルニチンと結合して排泄→カルニチン消費→脂肪酸β酸化障害→低血糖",
+    "format": "question_answer",
+    "tags": [
+      "adverse_effect",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-adverse_effect-002",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "adverse_effect→mechanism",
+    "reverse_of_id": "ex-practice-043j-adverse_effect-002-structure→adverse_effect",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r102-210"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-adverse_effect-003-drug_class→adverse_effects",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-adverse_effect-003",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "β2刺激薬（サルメテロール等）の副作用は{{c1::振戦}}・{{c2::頻脈}}・{{c3::低K血症}}（血清K濃度は上昇ではなく低下）",
+    "back": "振戦・頻脈・低K血症",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-adverse_effect-003",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "drug_class→adverse_effects",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-254"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-regulation-001-drug→instructions",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-regulation-001",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "ビスホスホネート製剤（リセドロン酸・アレンドロン酸等）の服薬指導で必ず伝える4つの注意点は？",
+    "back": "(1)起床時に十分な水（180mL程度）で服用 (2)服用後30分は横にならない（食道潰瘍予防） (3)Ca・金属イオン含有物と同時服用しない（キレート形成で吸収低下） (4)定期的に歯科検査を受ける（顎骨壊死リスク：BRONJ/MRONJ）",
+    "format": "question_answer",
+    "tags": [
+      "regulation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-regulation-001",
+    "knowledge_type": "regulation",
+    "recall_direction": "drug→instructions",
+    "reverse_of_id": "ex-practice-043j-regulation-001-adverse_effect→instruction",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.65,
+    "source_question_ids": [
+      "r101-260",
+      "r107-212"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-regulation-001-adverse_effect→instruction",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-regulation-001",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "BP製剤服用患者が歯科受診前に必要な対応と、その理由は？",
+    "back": "BP製剤の服用を歯科医に告知する。理由：BP関連顎骨壊死（BRONJ/MRONJ）のリスクがあり、抜歯前にBP休薬を検討する必要があるため",
+    "format": "question_answer",
+    "tags": [
+      "regulation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-regulation-001",
+    "knowledge_type": "regulation",
+    "recall_direction": "adverse_effect→instruction",
+    "reverse_of_id": "ex-practice-043j-regulation-001-drug→instructions",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.65,
+    "source_question_ids": [
+      "r101-260",
+      "r107-212"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-indication-001-drug→dosing_schedule",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-indication-001",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "メトトレキサート（RA治療）は{{c1::週1〜2日のみ}}服用する薬であり、毎日服用ではない。開始量は{{c2::6mg/週}}から",
+    "back": "週1〜2日のみ（毎日ではない）、6mg/週から開始",
+    "format": "cloze",
+    "tags": [
+      "indication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-indication-001",
+    "knowledge_type": "indication",
+    "recall_direction": "drug→dosing_schedule",
+    "reverse_of_id": "ex-practice-043j-indication-001-timing→supplement",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.65,
+    "source_question_ids": [
+      "r101-296",
+      "r106-222"
+    ],
+    "source_note_ids": [
+      "メトトレキサートの使い方"
+    ]
+  },
+  {
+    "id": "ex-practice-043j-indication-001-timing→supplement",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-indication-001",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "MTXの副作用軽減のため、MTX最終服用の{{c1::24〜48時間後}}に{{c2::葉酸（フォリアミン）}}を服用する",
+    "back": "24〜48時間後に葉酸",
+    "format": "cloze",
+    "tags": [
+      "indication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-indication-001",
+    "knowledge_type": "indication",
+    "recall_direction": "timing→supplement",
+    "reverse_of_id": "ex-practice-043j-indication-001-drug→dosing_schedule",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.65,
+    "source_question_ids": [
+      "r101-296",
+      "r106-222"
+    ],
+    "source_note_ids": [
+      "メトトレキサートの使い方"
+    ]
+  },
+  {
+    "id": "ex-practice-043j-adverse_effect-004-drug→contraindication_site",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-adverse_effect-004",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "タクロリムス軟膏は{{c1::傷・ただれ（びらん面）}}には使用禁忌。理由は{{c2::血中濃度上昇}}のリスクがあるため",
+    "back": "びらん面には使用禁忌（血中濃度上昇リスク）",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-adverse_effect-004",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "drug→contraindication_site",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-344"
+    ],
+    "source_note_ids": [
+      "密封療法"
+    ]
+  },
+  {
+    "id": "ex-practice-043j-mechanism-002-drug→mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-mechanism-002",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "バレニクリンは{{c1::α4β2ニコチン受容体部分作動薬}}である。刺激作用で{{c2::少量のドパミン放出→離脱症状軽減}}、拮抗作用で{{c3::喫煙の満足感低下}}",
+    "back": "α4β2 nAChR部分作動薬。刺激作用→離脱症状軽減、拮抗作用→満足感低下",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug→mechanism",
+    "reverse_of_id": "ex-practice-043j-mechanism-002-feature→drug",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r107-210"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-mechanism-002-feature→drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-mechanism-002",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "禁煙開始1週間前から服用を開始し、治療開始時は喫煙しながら服用できる禁煙補助薬は？",
+    "back": "バレニクリン酒石酸塩（チャンピックス）。ニコチンを含まないため離脱症状と切望感を軽減できる",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "feature→drug",
+    "reverse_of_id": "ex-practice-043j-mechanism-002-drug→mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r107-210"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-interaction-002-combination→problem",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-interaction-002",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "クラリスロマイシンDSと{{c1::カルボシステインDS}}を同時服用すると、{{c2::苦味が増強}}する。カルボシステインが口腔内を酸性にし、コーティングが溶解するため",
+    "back": "カルボシステインDS（酸性）→コーティング溶解→苦味増強",
+    "format": "cloze",
+    "tags": [
+      "interaction",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-interaction-002",
+    "knowledge_type": "interaction",
+    "recall_direction": "combination→problem",
+    "reverse_of_id": "ex-practice-043j-interaction-002-problem→solution",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r107-338",
+      "r109-282"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-interaction-002-problem→solution",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-interaction-002",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "クラリスロマイシンDSの苦味を防ぐための対策2つは？",
+    "back": "(1)カルボシステインDSとは服用間隔をあける (2)酸性飲料（ジュース・スポーツ飲料）で服用しない。チョコアイス等に混ぜるのは可",
+    "format": "question_answer",
+    "tags": [
+      "interaction",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-interaction-002",
+    "knowledge_type": "interaction",
+    "recall_direction": "problem→solution",
+    "reverse_of_id": "ex-practice-043j-interaction-002-combination→problem",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r107-338",
+      "r109-282"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-adverse_effect-005-drug→adverse_effect",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-adverse_effect-005",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "結核治療4剤（RIPE）の主な副作用をそれぞれ答えよ：R（リファンピシン）、I（イソニアジド）、P（ピラジナミド）、E（エタンブトール）",
+    "back": "R＝体液の橙赤色着色・肝障害、I＝末梢神経炎・MAO阻害（チラミン注意）、P＝高尿酸血症、E＝視神経障害（Eye）",
+    "format": "comparison",
+    "tags": [
+      "adverse_effect",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-adverse_effect-005",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "drug→adverse_effect",
+    "reverse_of_id": "ex-practice-043j-adverse_effect-005-adverse_effect→drug",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.65,
+    "source_question_ids": [
+      "r110-264"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-adverse_effect-005-adverse_effect→drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-adverse_effect-005",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "結核治療中に視力低下・色覚異常が出現した場合、原因薬として最も疑われるのは？",
+    "back": "エタンブトール（E）。視神経障害が重大な副作用。「EはEyeのE」で覚える",
+    "format": "question_answer",
+    "tags": [
+      "adverse_effect",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-adverse_effect-005",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "adverse_effect→drug",
+    "reverse_of_id": "ex-practice-043j-adverse_effect-005-drug→adverse_effect",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r110-264"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-contraindication-001-condition→restriction",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-contraindication-001",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "免疫抑制薬（タクロリムス、MTX等）服用中は{{c1::生ワクチン}}の接種は禁忌である",
+    "back": "生ワクチン（弱毒生ワクチン含む）の接種は禁忌",
+    "format": "cloze",
+    "tags": [
+      "contraindication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-contraindication-001",
+    "knowledge_type": "contraindication",
+    "recall_direction": "condition→restriction",
+    "reverse_of_id": "ex-practice-043j-contraindication-001-restriction→reason",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r105-246"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-contraindication-001-restriction→reason",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-contraindication-001",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "免疫抑制薬服用中に生ワクチンが禁忌となる理由は？",
+    "back": "免疫抑制状態では弱毒化ウイルスでも感染・発症するリスクがあるため",
+    "format": "question_answer",
+    "tags": [
+      "contraindication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-contraindication-001",
+    "knowledge_type": "contraindication",
+    "recall_direction": "restriction→reason",
+    "reverse_of_id": "ex-practice-043j-contraindication-001-condition→restriction",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r105-246"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-043j-regulation-002-drug→key_points",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-043j-regulation-002",
+    "primary_exemplar_id": "ex-practice-043j",
+    "subject": "実務",
+    "front": "緊急避妊薬（レボノルゲストレル1.5mg）の服薬指導で伝えるべき3つの「ない」は？",
+    "back": "(1)完全には妊娠を防げない（成功率約85%） (2)性感染症は防げない (3)計画的避妊には使えない。服用は性交後72時間以内にできるだけ早く",
+    "format": "question_answer",
+    "tags": [
+      "regulation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-043j-regulation-002",
+    "knowledge_type": "regulation",
+    "recall_direction": "drug→key_points",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.65,
+    "source_question_ids": [
+      "r107-312"
+    ],
+    "source_note_ids": []
+  }
+]

@@ -1,0 +1,1482 @@
+[
+  {
+    "id": "ex-pharmacology-063-mechanism-001-drug_to_target",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-mechanism-001",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "β-ラクタム系抗菌薬（ペニシリン・セフェム・カルバペネム）は{{c1::トランスペプチダーゼ（PBP）}}に結合し細胞壁合成を阻害する",
+    "back": "トランスペプチダーゼ（PBP）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_target",
+    "reverse_of_id": "ex-pharmacology-063-mechanism-001-target_to_drug_class",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-039",
+      "r108-166",
+      "r110-166",
+      "r111-168",
+      "r111-247"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-mechanism-001-target_to_drug_class",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-mechanism-001",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "トランスペプチダーゼ（PBP）を阻害して細胞壁合成を阻害する抗菌薬の系統は？",
+    "back": "β-ラクタム系（ペニシリン系・セフェム系・カルバペネム系）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "target_to_drug_class",
+    "reverse_of_id": "ex-pharmacology-063-mechanism-001-drug_to_target",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-039",
+      "r108-166",
+      "r110-166",
+      "r111-168",
+      "r111-247"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-mechanism-002-drug_to_target",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-mechanism-002",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "バンコマイシンはペプチドグリカン前駆体の{{c1::D-Ala-D-Ala}}末端に結合し細胞壁合成を阻害する",
+    "back": "D-Ala-D-Ala",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_target",
+    "reverse_of_id": "ex-pharmacology-063-mechanism-002-target_to_drug",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r110-039",
+      "r111-168"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-mechanism-002-target_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-mechanism-002",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "D-Ala-D-Ala末端に結合して細胞壁合成を阻害する抗菌薬は？",
+    "back": "バンコマイシン（グリコペプチド系）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "target_to_drug",
+    "reverse_of_id": "ex-pharmacology-063-mechanism-002-drug_to_target",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r110-039",
+      "r111-168"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-classification-001-beta_lactam_vs_vancomycin",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-classification-001",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "細胞壁合成阻害の作用点の違い：β-ラクタム系 vs バンコマイシン",
+    "back": "β-ラクタム系：PBP（トランスペプチダーゼ）に直接結合して阻害\nバンコマイシン：基質であるD-Ala-D-Ala末端に結合して架橋形成を物理的に阻害",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "beta_lactam_vs_vancomycin",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r104-039",
+      "r110-039",
+      "r111-168"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-classification-002-30S_to_drugs",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-classification-002",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "細菌リボソーム30Sサブユニットに結合してタンパク質合成を阻害する抗菌薬の系統を2つ挙げよ",
+    "back": "アミノグリコシド系（ストレプトマイシン、ゲンタマイシン等）、テトラサイクリン系",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "30S_to_drugs",
+    "reverse_of_id": "ex-pharmacology-063-classification-002-aminoglycoside_to_target",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-039",
+      "r107-040",
+      "r108-166"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-classification-002-aminoglycoside_to_target",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-classification-002",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "アミノグリコシド系抗菌薬（ゲンタマイシン、ストレプトマイシン等）はリボソーム{{c1::30S}}サブユニットに結合してタンパク質合成を阻害する",
+    "back": "30S",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "aminoglycoside_to_target",
+    "reverse_of_id": "ex-pharmacology-063-classification-002-30S_to_drugs",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-039",
+      "r107-040",
+      "r108-166"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-classification-003-50S_to_drugs",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-classification-003",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "細菌リボソーム50Sサブユニットに結合する抗菌薬を4系統挙げよ",
+    "back": "マクロライド系（エリスロマイシン、アジスロマイシン等）、リンコマイシン系（クリンダマイシン）、クロラムフェニコール、オキサゾリジノン系（リネゾリド）",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "50S_to_drugs",
+    "reverse_of_id": "ex-pharmacology-063-classification-003-macrolide_to_target",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-263",
+      "r107-040",
+      "r105-264",
+      "r110-166"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-classification-003-macrolide_to_target",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-classification-003",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "マクロライド系抗菌薬（エリスロマイシン、アジスロマイシン等）はリボソーム{{c1::50S}}サブユニットに結合してタンパク質合成を阻害する",
+    "back": "50S",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "macrolide_to_target",
+    "reverse_of_id": "ex-pharmacology-063-classification-003-50S_to_drugs",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-263",
+      "r107-040",
+      "r105-264",
+      "r110-166"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-mechanism-003-drug_to_target",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-mechanism-003",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "ニューキノロン系抗菌薬（レボフロキサシン等）は{{c1::DNAジャイレース}}およびトポイソメラーゼIVを阻害しDNA複製を抑制する",
+    "back": "DNAジャイレース",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_target",
+    "reverse_of_id": "ex-pharmacology-063-mechanism-003-target_to_drug_class",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-263",
+      "r103-161",
+      "r109-039"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-mechanism-003-target_to_drug_class",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-mechanism-003",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "DNAジャイレースおよびトポイソメラーゼIVを阻害する抗菌薬の系統は？",
+    "back": "ニューキノロン系（レボフロキサシン、シプロフロキサシン、ノルフロキサシン等）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "target_to_drug_class",
+    "reverse_of_id": "ex-pharmacology-063-mechanism-003-drug_to_target",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-263",
+      "r103-161",
+      "r109-039"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-mechanism-004-drug_to_mech",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-mechanism-004",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "メトロニダゾールは細菌内で還元され、{{c1::ニトロ化物がDNAを切断}}して抗菌作用を示す",
+    "back": "ニトロ化物がDNAを切断",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mech",
+    "reverse_of_id": "ex-pharmacology-063-mechanism-004-mech_to_drug",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-258",
+      "r100-259",
+      "r105-225"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-mechanism-004-mech_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-mechanism-004",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "細菌内で還元されたニトロ化物がDNAを切断する作用機序を持つ抗菌薬は？",
+    "back": "メトロニダゾール",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mech_to_drug",
+    "reverse_of_id": "ex-pharmacology-063-mechanism-004-drug_to_mech",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-258",
+      "r100-259",
+      "r105-225"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-mechanism-005-drug_to_mech",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-mechanism-005",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "リネゾリド（オキサゾリジノン系）は50Sサブユニットに結合し{{c1::70S開始複合体の形成を阻害}}してタンパク質合成を阻害する",
+    "back": "70S開始複合体の形成を阻害",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mech",
+    "reverse_of_id": "ex-pharmacology-063-mechanism-005-mech_to_drug",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r105-264",
+      "r107-040"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-mechanism-005-mech_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-mechanism-005",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "70S開始複合体の形成を阻害する作用機序を持つ抗菌薬は？",
+    "back": "リネゾリド（オキサゾリジノン系）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mech_to_drug",
+    "reverse_of_id": "ex-pharmacology-063-mechanism-005-drug_to_mech",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r105-264",
+      "r107-040"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-mechanism-006-drug_to_mech",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-mechanism-006",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "ホスホマイシンは{{c1::N-アセチルムラミン酸}}の合成を阻害して細胞壁合成を阻害する",
+    "back": "N-アセチルムラミン酸",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mech",
+    "reverse_of_id": "ex-pharmacology-063-mechanism-006-mech_to_drug",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-263",
+      "r105-264",
+      "r110-166"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-mechanism-006-mech_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-mechanism-006",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "N-アセチルムラミン酸の合成（ピルビン酸転移酵素）を阻害する抗菌薬は？",
+    "back": "ホスホマイシン",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mech_to_drug",
+    "reverse_of_id": "ex-pharmacology-063-mechanism-006-drug_to_mech",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-263",
+      "r105-264",
+      "r110-166"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-mechanism-007-drug_to_mech",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-mechanism-007",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "スルファメトキサゾール（スルホンアミド系）は{{c1::パラアミノ安息香酸（PABA）}}と競合的に拮抗し葉酸合成を阻害する",
+    "back": "パラアミノ安息香酸（PABA）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mech",
+    "reverse_of_id": "ex-pharmacology-063-mechanism-007-mech_to_drug_class",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r103-161"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-mechanism-007-mech_to_drug_class",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-mechanism-007",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "PABAと競合し葉酸のジヒドロプテリン酸合成を阻害する抗菌薬の系統は？",
+    "back": "スルホンアミド系（スルファメトキサゾール等）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mech_to_drug_class",
+    "reverse_of_id": "ex-pharmacology-063-mechanism-007-drug_to_mech",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r103-161"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-indication-001-indication_to_drugs",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-indication-001",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "MRSA感染症に使用できる抗菌薬を5つ挙げよ",
+    "back": "バンコマイシン、テイコプラニン、リネゾリド、ダプトマイシン、アルベカシン",
+    "format": "question_answer",
+    "tags": [
+      "indication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-indication-001",
+    "knowledge_type": "indication",
+    "recall_direction": "indication_to_drugs",
+    "reverse_of_id": "ex-pharmacology-063-indication-001-VCM_allergy_alternative",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-272",
+      "r103-232",
+      "r105-264",
+      "r108-275"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-indication-001-VCM_allergy_alternative",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-indication-001",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "バンコマイシンアレルギーのMRSA肺炎患者に最も適切な代替薬は？",
+    "back": "リネゾリド（作用機序が異なる、腎排泄率が低く腎機能低下時にも使用可能）",
+    "format": "question_answer",
+    "tags": [
+      "indication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-indication-001",
+    "knowledge_type": "indication",
+    "recall_direction": "VCM_allergy_alternative",
+    "reverse_of_id": "ex-pharmacology-063-indication-001-indication_to_drugs",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r100-272",
+      "r103-232",
+      "r105-264",
+      "r108-275"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-indication-002-pathogen_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-indication-002",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "マイコプラズマ肺炎の第一選択薬は{{c1::マクロライド系（アジスロマイシン等）}}である",
+    "back": "マクロライド系（アジスロマイシン等）",
+    "format": "cloze",
+    "tags": [
+      "indication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-indication-002",
+    "knowledge_type": "indication",
+    "recall_direction": "pathogen_to_drug",
+    "reverse_of_id": "ex-pharmacology-063-indication-002-reason_beta_lactam_ineffective",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r108-067",
+      "r105-287"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-indication-002-reason_beta_lactam_ineffective",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-indication-002",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "マイコプラズマにβ-ラクタム系抗菌薬が無効な理由は？",
+    "back": "マイコプラズマには細胞壁がないため、細胞壁合成阻害薬であるβ-ラクタム系は無効",
+    "format": "question_answer",
+    "tags": [
+      "indication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-indication-002",
+    "knowledge_type": "indication",
+    "recall_direction": "reason_beta_lactam_ineffective",
+    "reverse_of_id": "ex-pharmacology-063-indication-002-pathogen_to_drug",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r108-067",
+      "r105-287"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-indication-003-pathogen_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-indication-003",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "レジオネラ肺炎（細胞内寄生菌）の治療薬は{{c1::ニューキノロン系（レボフロキサシン等）}}またはマクロライド系である",
+    "back": "ニューキノロン系（レボフロキサシン等）",
+    "format": "cloze",
+    "tags": [
+      "indication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-indication-003",
+    "knowledge_type": "indication",
+    "recall_direction": "pathogen_to_drug",
+    "reverse_of_id": "ex-pharmacology-063-indication-003-reason_beta_lactam_ineffective_legionella",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r109-228"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-indication-003-reason_beta_lactam_ineffective_legionella",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-indication-003",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "レジオネラ肺炎にβ-ラクタム系が無効な理由は？",
+    "back": "レジオネラは細胞内寄生菌であり、β-ラクタム系は細胞内移行性が悪いため無効",
+    "format": "question_answer",
+    "tags": [
+      "indication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-indication-003",
+    "knowledge_type": "indication",
+    "recall_direction": "reason_beta_lactam_ineffective_legionella",
+    "reverse_of_id": "ex-pharmacology-063-indication-003-pathogen_to_drug",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r109-228"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-adverse_effect-001-drug_to_adverse_effect",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-adverse_effect-001",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "セフメタゾール・セフォペラゾン・ラタモキセフ（MTT基を持つセフェム系）は{{c1::ジスルフィラム様作用}}があり、飲酒でアセトアルデヒドが蓄積する",
+    "back": "ジスルフィラム様作用",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-adverse_effect-001",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "drug_to_adverse_effect",
+    "reverse_of_id": "ex-pharmacology-063-adverse_effect-001-adverse_effect_to_drugs",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-164"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-adverse_effect-001-adverse_effect_to_drugs",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-adverse_effect-001",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "ジスルフィラム様作用（ALDH阻害）を示す抗菌薬を3つ挙げよ",
+    "back": "セフメタゾール、セフォペラゾン、ラタモキセフ（いずれもMTT基を持つセフェム系）。メトロニダゾールも同様の作用あり",
+    "format": "question_answer",
+    "tags": [
+      "adverse_effect",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-adverse_effect-001",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "adverse_effect_to_drugs",
+    "reverse_of_id": "ex-pharmacology-063-adverse_effect-001-drug_to_adverse_effect",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-164"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-pharmacokinetics-001-imipenem_to_combination",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-pharmacokinetics-001",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "イミペネムは腎尿細管の{{c1::デヒドロペプチダーゼI（DHP-I）}}で分解され、分解物が腎毒性を示すためシラスタチン（DHP-I阻害薬）と併用する",
+    "back": "デヒドロペプチダーゼI（DHP-I）",
+    "format": "cloze",
+    "tags": [
+      "pharmacokinetics",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-pharmacokinetics-001",
+    "knowledge_type": "pharmacokinetics",
+    "recall_direction": "imipenem_to_combination",
+    "reverse_of_id": "ex-pharmacology-063-pharmacokinetics-001-meropenem_vs_imipenem",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-164"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-063-pharmacokinetics-001-meropenem_vs_imipenem",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-063-pharmacokinetics-001",
+    "primary_exemplar_id": "ex-pharmacology-063",
+    "subject": "薬理",
+    "front": "メロペネムがシラスタチンなしで単剤使用できる理由は？",
+    "back": "メロペネムはDHP-Iに安定であり分解されないため、シラスタチン併用不要",
+    "format": "question_answer",
+    "tags": [
+      "pharmacokinetics",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-063-pharmacokinetics-001",
+    "knowledge_type": "pharmacokinetics",
+    "recall_direction": "meropenem_vs_imipenem",
+    "reverse_of_id": "ex-pharmacology-063-pharmacokinetics-001-imipenem_to_combination",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-164"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-001-drug_to_mech",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-001",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "ビンクリスチンは{{c1::チューブリンの重合を阻害}}して微小管形成を阻害する",
+    "back": "チューブリンの重合を阻害",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mech",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-001-mech_to_drug",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-165",
+      "r101-165",
+      "r107-167",
+      "r109-040"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-001-mech_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-001",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "チューブリンの重合を阻害して微小管形成を阻害するビンカアルカロイドの代表薬は？",
+    "back": "ビンクリスチン、ビンブラスチン",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mech_to_drug",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-001-drug_to_mech",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-165",
+      "r101-165",
+      "r107-167",
+      "r109-040"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-002-drug_to_mech",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-002",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "パクリタキセル・ドセタキセルは微小管を{{c1::安定化（脱重合を阻害）}}して有糸分裂を阻害する",
+    "back": "安定化（脱重合を阻害）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mech",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-002-mech_to_drug",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-165",
+      "r103-164",
+      "r108-167",
+      "r110-167"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-002-mech_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-002",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "微小管を安定化させて有糸分裂を阻害するタキサン系抗がん薬を2つ挙げよ",
+    "back": "パクリタキセル、ドセタキセル",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mech_to_drug",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-002-drug_to_mech",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-165",
+      "r103-164",
+      "r108-167",
+      "r110-167"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-classification-001-comparison_vinca_vs_taxane",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-classification-001",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "微小管阻害薬：ビンカアルカロイドとタキサン系の作用の違いは？",
+    "back": "ビンカアルカロイド（ビンクリスチン等）＝チューブリン重合阻害（微小管形成を妨げる）。タキサン系（パクリタキセル等）＝微小管安定化・脱重合阻害。どちらもM期（分裂期）に作用する",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "comparison_vinca_vs_taxane",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-165",
+      "r101-165",
+      "r108-167",
+      "r109-040"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-003-drug_to_mech",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-003",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "ブレオマイシンは{{c1::活性酸素を発生させてDNA鎖を切断}}する",
+    "back": "活性酸素を発生させてDNA鎖を切断",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mech",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-003-mech_to_drug",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-165",
+      "r103-164"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-003-mech_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-003",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "鉄キレートにより活性酸素を発生させてDNA鎖を切断する抗がん薬は？",
+    "back": "ブレオマイシン（副作用に肺線維症あり）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mech_to_drug",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-003-drug_to_mech",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-165",
+      "r103-164"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-004-drug_to_mech",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-004",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "カルボプラチン・オキサリプラチン（白金製剤）は{{c1::DNA鎖に架橋を形成}}してDNA複製を阻害する",
+    "back": "DNA鎖に架橋を形成",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mech",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-004-mech_to_drug",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-165",
+      "r110-167"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-004-mech_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-004",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "DNA鎖内・鎖間に架橋を形成してDNA複製を阻害する白金製剤を2つ挙げよ",
+    "back": "シスプラチン、カルボプラチン、オキサリプラチン",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mech_to_drug",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-004-drug_to_mech",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-165",
+      "r110-167"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-005-drug_to_mech",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-005",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "イリノテカンは体内で{{c1::SN-38}}に代謝され、{{c1::トポイソメラーゼI}}を阻害する",
+    "back": "SN-38 / トポイソメラーゼI",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mech",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-005-mech_to_drug",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-264",
+      "r105-040",
+      "r110-167",
+      "r111-169"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-005-mech_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-005",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "トポイソメラーゼIを阻害する抗がん薬で「〜テカン」と命名されるものを2つ挙げよ",
+    "back": "イリノテカン（プロドラッグ→SN-38）、ノギテカン",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mech_to_drug",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-005-drug_to_mech",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-264",
+      "r105-040",
+      "r110-167",
+      "r111-169"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-006-drug_to_mech",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-006",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "エトポシドは{{c1::トポイソメラーゼII}}を阻害して切断されたDNA鎖の再結合を阻害する",
+    "back": "トポイソメラーゼII",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mech",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-006-mech_to_drug",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-165",
+      "r108-167"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-006-mech_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-006",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "トポイソメラーゼIIを阻害する抗がん薬は？",
+    "back": "エトポシド、ドキソルビシン（インターカレーション＋トポII阻害）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mech_to_drug",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-006-drug_to_mech",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-165",
+      "r108-167"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-007-drug_to_target",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-007",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "ゲフィチニブは{{c1::EGFR（上皮増殖因子受容体）}}チロシンキナーゼを選択的に阻害する",
+    "back": "EGFR（上皮増殖因子受容体）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_target",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-007-target_to_drug",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-165",
+      "r105-219"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-007-target_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-007",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "EGFRチロシンキナーゼを阻害する低分子TKIを2つ挙げよ",
+    "back": "ゲフィチニブ、エルロチニブ（非小細胞肺がんに使用。EGFR変異検査が必須）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "target_to_drug",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-007-drug_to_target",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-165",
+      "r105-219"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-classification-002-drug_to_target_vegf",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-classification-002",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "血管新生阻害薬の弁別：ベバシズマブとラムシルマブの標的の違いは？",
+    "back": "ベバシズマブ＝VEGF（リガンド・増殖因子そのもの）に結合。ラムシルマブ＝VEGFR-2（受容体）に結合。どちらもモノクローナル抗体で血管新生を抑制する",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "drug_to_target_vegf",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-165",
+      "r103-164",
+      "r106-039",
+      "r110-167"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-008-drug_to_target",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-008",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "トラスツズマブは{{c1::HER2（ヒト上皮増殖因子受容体2型）}}に結合するモノクローナル抗体で、HER2陽性乳がんに用いる",
+    "back": "HER2（ヒト上皮増殖因子受容体2型）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-008",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_target",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-008-target_to_drug",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-070",
+      "r110-040"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-008-target_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-008",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "HER2陽性乳がんに用いるモノクローナル抗体は？",
+    "back": "トラスツズマブ（ハーセプチン）。HER2のシグナル伝達阻害＋ADCC（抗体依存性細胞傷害）作用を示す",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-008",
+    "knowledge_type": "mechanism",
+    "recall_direction": "target_to_drug",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-008-drug_to_target",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-070",
+      "r110-040"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-009-drug_to_mech",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-009",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "タモキシフェンの組織選択的なエストロゲン受容体（ER）への作用は？",
+    "back": "乳腺ではER拮抗作用（抗がん効果）、子宮内膜ではER刺激作用（子宮体がんリスク上昇の原因）。SERMに分類される",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-009",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mech",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-009-adverse_effect_to_drug",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-255"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-009-adverse_effect_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-009",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "子宮体がんリスク上昇が副作用として注意される乳がん治療薬は？その理由は？",
+    "back": "タモキシフェン。子宮内膜ではER刺激作用を示すため子宮内膜増殖→子宮体がんリスク上昇",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-009",
+    "knowledge_type": "mechanism",
+    "recall_direction": "adverse_effect_to_drug",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-009-drug_to_mech",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r104-255"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-010-drug_to_mech_gnrh",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-010",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "前立腺がんのホルモン療法：デガレリクスとリュープロレリンの作用機序の違いは？",
+    "back": "デガレリクス＝GnRHアンタゴニスト（受容体を直接遮断→即座にLH/FSH低下、フレアアップなし）。リュープロレリン＝GnRHアゴニスト（持続投与→ダウンレギュレーション→LH/FSH低下。初期にフレアアップあり）",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-010",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mech_gnrh",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r108-039",
+      "r111-169"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-011-drug_to_mech",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-011",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "シタラビンは細胞内で{{c1::三リン酸化体}}となり、{{c1::DNAポリメラーゼ}}を阻害してDNA合成を阻害する",
+    "back": "三リン酸化体 / DNAポリメラーゼ",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-011",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mech",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r107-167",
+      "r109-169"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-012-drug_to_mech",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-012",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "5-FU（フルオロウラシル）の代謝物5-FdUMPは{{c1::チミジル酸合成酵素}}を阻害する",
+    "back": "チミジル酸合成酵素",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-012",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_mech",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-012-enhancement_mech",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-264",
+      "r109-169"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-mechanism-012-enhancement_mech",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-mechanism-012",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "レボホリナートが5-FUの抗腫瘍効果を増強する機序は？",
+    "back": "レボホリナートの代謝物が5-FdUMP・チミジル酸合成酵素と三者複合体を形成し、チミジル酸合成酵素の阻害を安定化させることで5-FUの作用を増強する",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-mechanism-012",
+    "knowledge_type": "mechanism",
+    "recall_direction": "enhancement_mech",
+    "reverse_of_id": "ex-pharmacology-067d-mechanism-012-drug_to_mech",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r102-264",
+      "r109-169"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-adverse_effect-001-drug_to_adverse",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-adverse_effect-001",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "シクロホスファミド・イホスファミドの代謝で生じるアクロレインが引き起こす特徴的副作用と、その予防薬は？",
+    "back": "出血性膀胱炎。予防薬はメスナ（アクロレインと結合して無毒化する）",
+    "format": "question_answer",
+    "tags": [
+      "adverse_effect",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-adverse_effect-001",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "drug_to_adverse",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.65,
+    "source_question_ids": [
+      "r100-260"
+    ],
+    "source_note_ids": []
+  }
+]
