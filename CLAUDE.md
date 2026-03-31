@@ -187,7 +187,19 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - 差別化: 「作らなくていいAnki」— 点数直結の3,300枚が最初から入っている
   - 設計spec: `docs/superpowers/specs/2026-03-31-flashcard-design-spec.md`（v1.0）
   - 構造式spec: `docs/superpowers/specs/2026-03-31-structural-formula-cards-spec.md`（v1.0）
-  - **次: 構造式カードパイプライン実装（別セッション） → テキストカードパイプライン実装**
+  - **構造式カードパイプライン実装完了（2026-03-31 セッション2）**
+  - 過去問4,094問から構造式出題192問を分析 → ハイブリッド選定（経験×データ）
+  - 16カテゴリ145化合物のレジストリ（複素環/ビタミン/アミノ酸/プロドラッグ/発がん物質/甘味料/保存料/酸化防止剤/防カビ剤/農薬/内分泌撹乱/化審法/中毒解毒薬/トクホ/頻出薬理/核酸塩基）
+  - PubChem SMILES自動取得（144/145成功、name_enベース）
+  - RDKit SVG生成（144ファイル、CoordGen使用、合計1.5MB）
+  - 並列エージェント10バッチでカードテキスト生成（432枚 = 144化合物 × L1/L2/L3）
+  - TemplatePractice.tsx: 構造式SVG表示対応（L1=SVG表面、L2/L3=SVG裏面）
+  - 品質検証スクリプト: エラー0件、警告15件（name_jaカッコ表記の軽微な不一致のみ）
+  - テスト: 37ファイル661件全パス
+  - 設計: `docs/superpowers/specs/2026-03-31-structural-formula-cards-spec.md`
+  - 化合物リスト: `docs/superpowers/specs/2026-03-31-structural-formula-compound-list.md`
+  - 計画: `docs/superpowers/plans/2026-03-31-structural-formula-pipeline.md`
+  - **次: exemplarマッピング → 薬剤師レビュー → L1R（逆方向）カード追加**
 - **テキストカード生成パイプライン（2026-03-31）**
   - 設計spec §5「テキストカード生成パイプライン」の実装
   - 型拡張: KnowledgeType(11種), CardFormat(3→10種), FlashCardTemplate(12 optional新フィールド), KnowledgeAtom型
