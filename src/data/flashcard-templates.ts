@@ -1,13 +1,14 @@
 // src/data/flashcard-templates.ts
-// サンプル暗記カードテンプレート（Phase 1: 手動作成10枚）
-// 本格データは scripts/generate-flashcard-templates.ts で AI バッチ生成予定
+// 暗記カードテンプレート（公式コンテンツ）
 //
+// 手動作成10枚 + 構造式カード432枚
 // primary_exemplar_id は question-exemplar-map.ts の実データと整合
-// source_id は official-notes.ts の付箋ID / 問題ID と整合
+// source_id は official-notes.ts の付箋ID / 問題ID / struct-xxx と整合
 
 import type { FlashCardTemplate } from '../types/flashcard-template'
+import { STRUCTURAL_FLASHCARD_TEMPLATES } from './structural-flashcard-templates'
 
-export const FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
+const MANUAL_TEMPLATES: FlashCardTemplate[] = [
   // ========================================
   // 付箋ベース: fusen-0001（SI基本単位）
   // r100-001→ex-physics-058, r109-001→ex-physics-006
@@ -133,4 +134,10 @@ export const FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     format: 'question_answer',
     tags: ['単位換算', '仕事'],
   },
+]
+
+/** 全テンプレート（手動 + 構造式） */
+export const FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
+  ...MANUAL_TEMPLATES,
+  ...STRUCTURAL_FLASHCARD_TEMPLATES,
 ]
