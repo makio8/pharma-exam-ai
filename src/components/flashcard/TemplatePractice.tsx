@@ -74,6 +74,9 @@ export function TemplatePractice({ context }: Props) {
 
   const card = practiceCards[currentIndex]
   const formatConfig = CARD_FORMAT_CONFIG[card.format]
+  const isStructural = card.format.startsWith('structural_')
+  const showSvgOnFront = card.format === 'structural_identification' && card.media_url
+  const showSvgOnBack = isStructural && !showSvgOnFront && card.media_url
 
   return (
     <div style={{ maxWidth: 600, margin: '0 auto', padding: '0 8px' }}>
@@ -144,9 +147,16 @@ export function TemplatePractice({ context }: Props) {
           <Text type="secondary" style={{ fontSize: 12, marginBottom: 8 }}>
             {formatConfig.frontLabel}
           </Text>
+          {showSvgOnFront && (
+            <img
+              src={card.media_url}
+              alt="構造式"
+              style={{ maxWidth: '100%', maxHeight: 200, marginBottom: 12 }}
+            />
+          )}
           <Paragraph
             style={{
-              fontSize: 18,
+              fontSize: showSvgOnFront ? 14 : 18,
               fontWeight: 'bold',
               textAlign: 'center',
               marginBottom: 0,
@@ -173,15 +183,22 @@ export function TemplatePractice({ context }: Props) {
             alignItems: 'center',
             justifyContent: 'center',
             padding: 24,
-            background: '#e6f7ff',
+            background: isStructural ? '#f0f5ff' : '#e6f7ff',
             borderRadius: 12,
-            border: '1px solid #91d5ff',
+            border: `1px solid ${isStructural ? '#adc6ff' : '#91d5ff'}`,
             boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
           }}
         >
           <Text type="secondary" style={{ fontSize: 12, marginBottom: 8 }}>
             {formatConfig.backLabel}
           </Text>
+          {showSvgOnBack && (
+            <img
+              src={card.media_url}
+              alt="構造式"
+              style={{ maxWidth: '100%', maxHeight: 160, marginBottom: 12 }}
+            />
+          )}
           <Paragraph
             style={{
               fontSize: 16,
