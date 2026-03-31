@@ -43,9 +43,9 @@ export const CARD_FORMAT_CONFIG: Record<CardFormat, { label: string; emoji: stri
   mnemonic: { label: '語呂↔対象', emoji: '🎵', frontLabel: '語呂合わせ', backLabel: '覚える内容' },
   cloze: { label: '穴埋め', emoji: '🔲', frontLabel: '文（穴あき）', backLabel: '答え' },
   comparison: { label: '比較・弁別', emoji: '⚖️', frontLabel: '比較問い', backLabel: '違い' },
-  structural_identification: { label: '構造式→名前', emoji: '🔬', frontLabel: '構造式', backLabel: '物質名' },
-  structural_features: { label: '名前→構造特徴', emoji: '🧬', frontLabel: '物質名', backLabel: '構造的特徴' },
-  structural_pattern: { label: '部分構造→分類', emoji: '🧩', frontLabel: '部分構造', backLabel: '分類' },
+  structural_identification: { label: '構造式→物質名', emoji: '🔬', frontLabel: '構造式', backLabel: '物質名' },
+  structural_features: { label: '物質名→構造的特徴', emoji: '🧪', frontLabel: '物質名', backLabel: '構造的特徴' },
+  structural_pattern: { label: '部分構造→分類', emoji: '🧩', frontLabel: '部分構造', backLabel: '化合物群' },
   structure_activity: { label: '構造→薬理作用', emoji: '💊', frontLabel: '構造', backLabel: '薬理作用' },
   structural_comparison: { label: '構造比較', emoji: '🔄', frontLabel: '2つの構造', backLabel: '違い' },
 }
@@ -54,7 +54,7 @@ export const CARD_FORMAT_CONFIG: Record<CardFormat, { label: string; emoji: stri
 export interface FlashCardTemplate {
   // 既存（必須）
   id: string                      // 'fct-001' or 'ex-pharmacology-067d-mechanism-drug_to_mech'
-  source_type: 'fusen' | 'explanation' | 'knowledge_atom'
+  source_type: 'fusen' | 'explanation' | 'knowledge_atom' | 'structure_db'
   source_id: string               // 付箋ID or 問題ID or knowledge_atom_id
   primary_exemplar_id: string     // Exemplarハブへの接続点
   subject: QuestionSubject
