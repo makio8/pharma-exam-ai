@@ -201,7 +201,10 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - 計画: `docs/superpowers/plans/2026-03-31-structural-formula-pipeline.md`
   - AI薬学レビュー: Opus 5バッチ並列。P1=22件+追加9件=31件修正済み、P2=89件（改善推奨）
   - レビューUI: `/dev-tools/structural-review`（カテゴリフィルタ、SVG表示、キーボードナビ）
-  - **次: 人間レビュー（レビューUI目視） → exemplarマッピング → L1R（逆方向）カード追加**
+  - L0a/L0b追加: 名前↔構造式のシンプルカード288枚（合計720枚 → FlashCardTemplate統合で730枚）
+  - レビューUI: L0a/L0b/L1/L2/L3の5枚表示対応
+  - コマンド: `npx tsx scripts/validate-structural-cards.ts`（品質検証）、`npx tsx scripts/analyze-structural-formula-questions.ts`（出題分析）
+  - **次: 人間レビュー進行中（/dev-tools/structural-review） → exemplarマッピング**
 - **テキストカード生成パイプライン（2026-03-31）**
   - 設計spec §5「テキストカード生成パイプライン」の実装
   - 型拡張: KnowledgeType(11種), CardFormat(3→10種), FlashCardTemplate(12 optional新フィールド), KnowledgeAtom型
