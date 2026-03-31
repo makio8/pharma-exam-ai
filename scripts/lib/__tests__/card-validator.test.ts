@@ -37,8 +37,18 @@ describe('validateCard', () => {
   const atomId = 'ex-pharmacology-067d-mechanism-001'
 
   it('正常なカード → エラーなし', () => {
-    const errors = validateCard(makeCard(), atomId)
+    const errors = validateCard(makeCard(), atomId, 0)
     expect(errors).toHaveLength(0)
+  })
+
+  it('cardIndex がエラーに含まれる', () => {
+    const errors = validateCard(makeCard({ front: '' }), atomId, 2)
+    expect(errors[0].cardIndex).toBe(2)
+  })
+
+  it('cardIndex 省略時は undefined', () => {
+    const errors = validateCard(makeCard({ front: '' }), atomId)
+    expect(errors[0].cardIndex).toBeUndefined()
   })
 
   it('EMPTY_FRONT: front が空文字', () => {
@@ -110,6 +120,27 @@ describe('validateCard', () => {
   it('confidence_score が 1.0 → OK（境界値）', () => {
     const errors = validateCard(makeCard({ confidence_score: 1.0 }), atomId)
     expect(errors).toHaveLength(0)
+  })
+
+  it('INVALID_CONFIDENCE: confidence_score が NaN', () => {
+    const errors = validateCard(makeCard({ confidence_score: NaN }), atomId)
+    expect(errors.some(e => e.code === 'INVALID_CONFIDENCE')).toBe(true)
+  })
+
+  it('INVALID_CONFIDENCE: confidence_score が文字列(as any)', () => {
+    const errors = validateCard(makeCard({ confidence_score: 'high' as any }), atomId)
+    expect(errors.some(e => e.code === 'INVALID_CONFIDENCE')).toBe(true)
+  })
+
+  it('INVALID_FORMAT: 無効なformat値', () => {
+    const errors = validateCard(makeCard({ format: 'invalid_format' as any }), atomId)
+    expect(errors.some(e => e.code === 'INVALID_FORMAT')).toBe(true)
+    expect(errors.find(e => e.code === 'INVALID_FORMAT')!.severity).toBe('error')
+  })
+
+  it('有効なformat値 → INVALID_FORMATなし', () => {
+    const errors = validateCard(makeCard({ format: 'term_definition' }), atomId)
+    expect(errors.some(e => e.code === 'INVALID_FORMAT')).toBe(false)
   })
 
   it('CLOZE_MISSING_PLACEHOLDER: cloze形式に {{c1::}} がない', () => {
@@ -215,6 +246,52 @@ describe('validateAtom', () => {
     expect(errors.some(e => e.code === 'INVALID_ATOM_ID')).toBe(false)
   })
 
+  it('ATOM_ID_TYPE_MISMATCH: IDのknowledge_typeとatom.knowledge_typeが不一致', () => {
+    const errors = validateAtom(makeAtom({
+      id: 'ex-pharm-001-adverse_effect-001',
+      knowledge_type: 'mechanism',
+    }))
+    expect(errors.some(e => e.code === 'ATOM_ID_TYPE_MISMATCH')).toBe(true)
+    expect(errors.find(e => e.code === 'ATOM_ID_TYPE_MISMATCH')!.severity).toBe('error')
+  })
+
+  it('IDのknowledge_typeとatom.knowledge_typeが一致 → ATOM_ID_TYPE_MISMATCHなし', () => {
+    const errors = validateAtom(makeAtom({
+      id: 'ex-pharm-001-mechanism-001',
+      knowledge_type: 'mechanism',
+    }))
+    expect(errors.some(e => e.code === 'ATOM_ID_TYPE_MISMATCH')).toBe(false)
+  })
+
+  it('IDフォーマットが不正な場合はATOM_ID_TYPE_MISMATCHチェックをスキップ', () => {
+    const errors = validateAtom(makeAtom({ id: 'bad-id' }))
+    expect(errors.some(e => e.code === 'ATOM_ID_TYPE_MISMATCH')).toBe(false)
+    expect(errors.some(e => e.code === 'INVALID_ATOM_ID')).toBe(true)
+  })
+
+  it('INVALID_KNOWLEDGE_TYPE: 無効なknowledge_type', () => {
+    const errors = validateAtom(makeAtom({ knowledge_type: 'invalid_type' as any }))
+    expect(errors.some(e => e.code === 'INVALID_KNOWLEDGE_TYPE')).toBe(true)
+    expect(errors.find(e => e.code === 'INVALID_KNOWLEDGE_TYPE')!.severity).toBe('error')
+  })
+
+  it('有効なknowledge_type → INVALID_KNOWLEDGE_TYPEなし', () => {
+    const errors = validateAtom(makeAtom({ knowledge_type: 'adverse_effect' }))
+    // IDとの不一致は出るが、knowledge_type自体は有効
+    expect(errors.some(e => e.code === 'INVALID_KNOWLEDGE_TYPE')).toBe(false)
+  })
+
+  it('INVALID_DIFFICULTY_TIER: 無効なdifficulty_tier', () => {
+    const errors = validateAtom(makeAtom({ difficulty_tier: 'expert' as any }))
+    expect(errors.some(e => e.code === 'INVALID_DIFFICULTY_TIER')).toBe(true)
+    expect(errors.find(e => e.code === 'INVALID_DIFFICULTY_TIER')!.severity).toBe('error')
+  })
+
+  it('有効なdifficulty_tier → INVALID_DIFFICULTY_TIERなし', () => {
+    const errors = validateAtom(makeAtom({ difficulty_tier: 'integrated' }))
+    expect(errors.some(e => e.code === 'INVALID_DIFFICULTY_TIER')).toBe(false)
+  })
+
   it('DUPLICATE_RECALL_DIRECTION: 同じrecall_directionが2回', () => {
     const errors = validateAtom(
       makeAtom({
@@ -250,6 +327,19 @@ describe('validateAtom', () => {
     const codes = errors.map(e => e.code)
     expect(codes).toContain('NO_SOURCE_QUESTIONS')
     expect(codes).toContain('EMPTY_FRONT')
+  })
+
+  it('card-levelエラーにcardIndexが付与される', () => {
+    const errors = validateAtom(
+      makeAtom({
+        cards: [
+          makeCard(), // index 0: OK
+          makeCard({ front: '' }), // index 1: EMPTY_FRONT
+        ],
+      }),
+    )
+    const emptyFront = errors.find(e => e.code === 'EMPTY_FRONT')!
+    expect(emptyFront.cardIndex).toBe(1)
   })
 })
 

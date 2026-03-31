@@ -9,6 +9,7 @@ export interface ValidationError {
   code: string
   message: string
   atomId: string
+  cardIndex?: number  // カードレベルのエラー時のみ設定
   severity: 'error' | 'warning'
 }
 
@@ -35,17 +36,28 @@ const CLOZE_PATTERN = /\{\{c\d+::[^}]+\}\}/
 const FRONT_MAX_LENGTH = 200
 const BACK_MAX_LENGTH = 500
 
+/** 有効な knowledge_type 値 */
+const VALID_KNOWLEDGE_TYPES = ['mechanism', 'classification', 'adverse_effect', 'pharmacokinetics', 'interaction', 'indication', 'contraindication', 'structure', 'calculation', 'regulation', 'mnemonic'] as const
+
+/** 有効な CardFormat 値 */
+const VALID_CARD_FORMATS = ['term_definition', 'question_answer', 'mnemonic', 'cloze', 'comparison', 'structural_identification', 'structural_features', 'structural_pattern', 'structure_activity', 'structural_comparison'] as const
+
+/** 有効な difficulty_tier 値 */
+const VALID_DIFFICULTY_TIERS = ['basic', 'applied', 'integrated'] as const
+
 // --- カードレベルのバリデーション ---
 
-export function validateCard(card: KnowledgeAtomCard, atomId: string): ValidationError[] {
+export function validateCard(card: KnowledgeAtomCard, atomId: string, cardIndex?: number): ValidationError[] {
   const errors: ValidationError[] = []
+
+  const base = { atomId, cardIndex }
 
   // EMPTY_FRONT
   if (!card.front || card.front.trim() === '') {
     errors.push({
+      ...base,
       code: 'EMPTY_FRONT',
       message: 'カードの表面(front)が空です',
-      atomId,
       severity: 'error',
     })
   }
@@ -53,9 +65,9 @@ export function validateCard(card: KnowledgeAtomCard, atomId: string): Validatio
   // EMPTY_BACK
   if (!card.back || card.back.trim() === '') {
     errors.push({
+      ...base,
       code: 'EMPTY_BACK',
       message: 'カードの裏面(back)が空です',
-      atomId,
       severity: 'error',
     })
   }
@@ -63,9 +75,9 @@ export function validateCard(card: KnowledgeAtomCard, atomId: string): Validatio
   // FRONT_TOO_LONG
   if (card.front && card.front.length > FRONT_MAX_LENGTH) {
     errors.push({
+      ...base,
       code: 'FRONT_TOO_LONG',
       message: `表面が${card.front.length}文字（上限${FRONT_MAX_LENGTH}）`,
-      atomId,
       severity: 'warning',
     })
   }
@@ -73,19 +85,29 @@ export function validateCard(card: KnowledgeAtomCard, atomId: string): Validatio
   // BACK_TOO_LONG
   if (card.back && card.back.length > BACK_MAX_LENGTH) {
     errors.push({
+      ...base,
       code: 'BACK_TOO_LONG',
       message: `裏面が${card.back.length}文字（上限${BACK_MAX_LENGTH}）`,
-      atomId,
       severity: 'warning',
     })
   }
 
-  // INVALID_CONFIDENCE
-  if (card.confidence_score < 0 || card.confidence_score > 1) {
+  // INVALID_CONFIDENCE（型チェック強化: NaN, null, undefined, 文字列も弾く）
+  if (typeof card.confidence_score !== 'number' || isNaN(card.confidence_score) || card.confidence_score < 0 || card.confidence_score > 1) {
     errors.push({
+      ...base,
       code: 'INVALID_CONFIDENCE',
-      message: `confidence_score=${card.confidence_score}（0〜1の範囲外）`,
-      atomId,
+      message: `confidence_score=${card.confidence_score}（0〜1の数値でない）`,
+      severity: 'error',
+    })
+  }
+
+  // INVALID_FORMAT（enum値バリデーション）
+  if (!(VALID_CARD_FORMATS as readonly string[]).includes(card.format)) {
+    errors.push({
+      ...base,
+      code: 'INVALID_FORMAT',
+      message: `format "${card.format}" は無効な値です`,
       severity: 'error',
     })
   }
@@ -93,9 +115,9 @@ export function validateCard(card: KnowledgeAtomCard, atomId: string): Validatio
   // CLOZE_MISSING_PLACEHOLDER
   if (card.format === 'cloze' && !CLOZE_PATTERN.test(card.front)) {
     errors.push({
+      ...base,
       code: 'CLOZE_MISSING_PLACEHOLDER',
       message: 'cloze形式ですが {{c1::テキスト}} パターンがありません',
-      atomId,
       severity: 'error',
     })
   }
@@ -103,9 +125,9 @@ export function validateCard(card: KnowledgeAtomCard, atomId: string): Validatio
   // EMPTY_RECALL_DIRECTION
   if (!card.recall_direction || card.recall_direction.trim() === '') {
     errors.push({
+      ...base,
       code: 'EMPTY_RECALL_DIRECTION',
       message: 'recall_directionが空です',
-      atomId,
       severity: 'error',
     })
   }
@@ -124,6 +146,42 @@ export function validateAtom(atom: KnowledgeAtom): ValidationError[] {
     errors.push({
       code: 'INVALID_ATOM_ID',
       message: `ID "${atomId}" がパターン ex-*-<type>-<3桁> に合致しません`,
+      atomId,
+      severity: 'error',
+    })
+  }
+
+  // ATOM_ID_TYPE_MISMATCH（IDに含まれるknowledge_typeとの整合性チェック）
+  if (ATOM_ID_PATTERN.test(atomId)) {
+    const idParts = atomId.split('-')
+    // 末尾から: 3桁数字の直前のパートがknowledge_type
+    // ただしknowledge_typeにハイフンが含まれない前提（adverse_effectなどアンダースコア区切り）
+    const secondLastPart = idParts[idParts.length - 2]
+    if (secondLastPart && secondLastPart !== atom.knowledge_type) {
+      errors.push({
+        code: 'ATOM_ID_TYPE_MISMATCH',
+        message: `ID内のtype "${secondLastPart}" ≠ atom.knowledge_type "${atom.knowledge_type}"`,
+        atomId,
+        severity: 'error',
+      })
+    }
+  }
+
+  // INVALID_KNOWLEDGE_TYPE（enum値バリデーション）
+  if (!(VALID_KNOWLEDGE_TYPES as readonly string[]).includes(atom.knowledge_type)) {
+    errors.push({
+      code: 'INVALID_KNOWLEDGE_TYPE',
+      message: `knowledge_type "${atom.knowledge_type}" は無効な値です`,
+      atomId,
+      severity: 'error',
+    })
+  }
+
+  // INVALID_DIFFICULTY_TIER（enum値バリデーション）
+  if (!(VALID_DIFFICULTY_TIERS as readonly string[]).includes(atom.difficulty_tier)) {
+    errors.push({
+      code: 'INVALID_DIFFICULTY_TIER',
+      message: `difficulty_tier "${atom.difficulty_tier}" は無効な値です`,
       atomId,
       severity: 'error',
     })
@@ -169,9 +227,9 @@ export function validateAtom(atom: KnowledgeAtom): ValidationError[] {
       })
     }
 
-    // 各カードのバリデーション
-    for (const card of atom.cards) {
-      errors.push(...validateCard(card, atomId))
+    // 各カードのバリデーション（cardIndex付き）
+    for (let i = 0; i < atom.cards.length; i++) {
+      errors.push(...validateCard(atom.cards[i], atomId, i))
     }
   }
 
