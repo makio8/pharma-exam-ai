@@ -54,14 +54,14 @@ const singleCardAtom: KnowledgeAtom = {
 // --- generateCardId ---
 
 describe('generateCardId', () => {
-  it('exemplar_id × knowledge_type × recall_direction の形式でIDを生成する', () => {
-    const id = generateCardId('ex-pharm-001', 'mechanism', 'drug_to_mech')
-    expect(id).toBe('ex-pharm-001-mechanism-drug_to_mech')
+  it('atomId + recall_direction の形式でIDを生成する', () => {
+    const id = generateCardId('ex-pharm-001-mechanism-001', 'drug_to_mech')
+    expect(id).toBe('ex-pharm-001-mechanism-001-drug_to_mech')
   })
 
   it('異なる recall_direction で異なるIDになる', () => {
-    const id1 = generateCardId('ex-pharm-001', 'mechanism', 'drug_to_mech')
-    const id2 = generateCardId('ex-pharm-001', 'mechanism', 'mech_to_drug')
+    const id1 = generateCardId('ex-pharm-001-mechanism-001', 'drug_to_mech')
+    const id2 = generateCardId('ex-pharm-001-mechanism-001', 'mech_to_drug')
     expect(id1).not.toBe(id2)
   })
 })
@@ -85,7 +85,7 @@ describe('atomToTemplates', () => {
     const templates = atomToTemplates(sampleAtom)
     const first = templates[0]
 
-    expect(first.id).toBe('ex-pharm-001-mechanism-drug_to_mech')
+    expect(first.id).toBe('ex-pharm-001-mechanism-001-drug_to_mech')
     expect(first.source_id).toBe('ex-pharm-001-mechanism-001')
     expect(first.primary_exemplar_id).toBe('ex-pharm-001')
     expect(first.subject).toBe('薬理')
@@ -142,5 +142,14 @@ describe('atomToTemplates', () => {
     for (const t of templates) {
       expect(t.reverse_of_id).toBeUndefined()
     }
+  })
+
+  it('同じknowledge_typeの異なるatomでカードIDが衝突しない', () => {
+    const atom1 = { ...sampleAtom, id: 'ex-pharm-001-mechanism-001' }
+    const atom2 = { ...sampleAtom, id: 'ex-pharm-001-mechanism-002' }
+    const t1 = atomToTemplates(atom1)
+    const t2 = atomToTemplates(atom2)
+    const allIds = [...t1, ...t2].map(t => t.id)
+    expect(new Set(allIds).size).toBe(allIds.length)
   })
 })

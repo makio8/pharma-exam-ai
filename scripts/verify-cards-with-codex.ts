@@ -207,11 +207,13 @@ function generateBatchPrompt(cards: LowConfidenceCard[], batchIndex: number): st
 2. 修正がある場合、修正後のfront/back
 3. 理由（簡潔に）
 
-JSON形式で出力:
+JSON形式で出力（1カードにつき1オブジェクト）:
 \`\`\`json
 {
   "reviews": [
-    { "index": 1, "verdict": "OK" | "fix" | "delete", "front?": "...", "back?": "...", "reason": "..." }
+    { "index": 1, "verdict": "OK", "reason": "正確" },
+    { "index": 2, "verdict": "fix", "front": "修正後の表面", "back": "修正後の裏面", "reason": "理由" },
+    { "index": 3, "verdict": "delete", "reason": "削除理由" }
   ]
 }
 \`\`\`

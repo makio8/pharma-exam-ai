@@ -104,9 +104,20 @@ function main(): void {
     }
   }
 
-  // 4. atom → FlashCardTemplate 変換
+  // 4. エラーatomを除外してから変換
+  const validAtomIds = new Set(allAtoms.map(a => a.id))
+  for (const err of validation.errors.filter(e => e.severity === 'error')) {
+    validAtomIds.delete(err.atomId)
+  }
+  const validAtoms = allAtoms.filter(a => validAtomIds.has(a.id))
+
+  if (validAtoms.length < allAtoms.length) {
+    console.log(`⚠️ ${allAtoms.length - validAtoms.length}件のatomをエラーのためスキップ`)
+  }
+
+  // atom → FlashCardTemplate 変換
   const allTemplates: FlashCardTemplate[] = []
-  for (const atom of allAtoms) {
+  for (const atom of validAtoms) {
     allTemplates.push(...atomToTemplates(atom))
   }
 

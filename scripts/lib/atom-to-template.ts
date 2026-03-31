@@ -4,15 +4,15 @@
 import type { FlashCardTemplate } from '../../src/types/flashcard-template'
 import type { KnowledgeAtom } from '../../src/types/knowledge-atom'
 
-/** カードIDを生成: exemplar_id × knowledge_type × recall_direction */
-export function generateCardId(exemplarId: string, knowledgeType: string, recallDirection: string): string {
-  return `${exemplarId}-${knowledgeType}-${recallDirection}`
+/** カードIDを生成: atomId + recall_direction（atom IDが一意なので衝突しない） */
+export function generateCardId(atomId: string, recallDirection: string): string {
+  return `${atomId}-${recallDirection}`
 }
 
 /** 1つのKnowledgeAtomからFlashCardTemplate[]に変換 */
 export function atomToTemplates(atom: KnowledgeAtom): FlashCardTemplate[] {
   const cardIds = atom.cards.map(card =>
-    generateCardId(atom.exemplar_id, atom.knowledge_type, card.recall_direction),
+    generateCardId(atom.id, card.recall_direction),
   )
 
   return atom.cards.map((card, idx) => {
