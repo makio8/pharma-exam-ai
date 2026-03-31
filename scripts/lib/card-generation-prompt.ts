@@ -51,8 +51,6 @@ ${BACKTICKS}json
   "atoms": [
     {
       "id": "<exemplar_id>-<knowledge_type>-<連番3桁>",
-      "exemplar_id": "<自動補完>",
-      "subject": "<自動補完>",
       "knowledge_type": "mechanism",
       "difficulty_tier": "basic",
       "description": "このatomの説明（日本語、1行）",
@@ -79,7 +77,7 @@ ${BACKTICKS}json
 }
 ${BACKTICKS}
 
-※ \`exemplar_id\` と \`subject\` はパイプラインが自動補完するため、出力不要です。
+※ exemplar_id と subject はパイプラインが自動補完します。出力JSONに含めないでください。
 
 ## 出力の厳密ルール
 - 上記JSONフォーマット以外のキーを含めないこと

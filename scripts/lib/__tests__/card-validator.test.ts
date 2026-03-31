@@ -51,6 +51,24 @@ describe('validateCard', () => {
     expect(errors[0].cardIndex).toBeUndefined()
   })
 
+  it('INVALID_FRONT_TYPE: front が数値(as any)', () => {
+    const errors = validateCard(makeCard({ front: 123 as any }), atomId)
+    expect(errors.some(e => e.code === 'INVALID_FRONT_TYPE')).toBe(true)
+    expect(errors.find(e => e.code === 'INVALID_FRONT_TYPE')!.severity).toBe('error')
+  })
+
+  it('INVALID_BACK_TYPE: back がオブジェクト(as any)', () => {
+    const errors = validateCard(makeCard({ back: { text: 'hello' } as any }), atomId)
+    expect(errors.some(e => e.code === 'INVALID_BACK_TYPE')).toBe(true)
+    expect(errors.find(e => e.code === 'INVALID_BACK_TYPE')!.severity).toBe('error')
+  })
+
+  it('INVALID_RECALL_DIRECTION_TYPE: recall_direction が数値(as any)', () => {
+    const errors = validateCard(makeCard({ recall_direction: 42 as any }), atomId)
+    expect(errors.some(e => e.code === 'INVALID_RECALL_DIRECTION_TYPE')).toBe(true)
+    expect(errors.find(e => e.code === 'INVALID_RECALL_DIRECTION_TYPE')!.severity).toBe('error')
+  })
+
   it('EMPTY_FRONT: front が空文字', () => {
     const errors = validateCard(makeCard({ front: '' }), atomId)
     expect(errors).toHaveLength(1)
@@ -209,6 +227,18 @@ describe('validateAtom', () => {
   it('正常なatom → エラーなし', () => {
     const errors = validateAtom(makeAtom())
     expect(errors).toHaveLength(0)
+  })
+
+  it('INVALID_SOURCE_QUESTIONS_TYPE: source_question_ids が文字列(as any)', () => {
+    const errors = validateAtom(makeAtom({ source_question_ids: 'r100-001' as any }))
+    expect(errors.some(e => e.code === 'INVALID_SOURCE_QUESTIONS_TYPE')).toBe(true)
+    expect(errors.find(e => e.code === 'INVALID_SOURCE_QUESTIONS_TYPE')!.severity).toBe('error')
+  })
+
+  it('INVALID_CARDS_TYPE: cards がオブジェクト(as any)', () => {
+    const errors = validateAtom(makeAtom({ cards: 'not-array' as any }))
+    expect(errors.some(e => e.code === 'INVALID_CARDS_TYPE')).toBe(true)
+    expect(errors.find(e => e.code === 'INVALID_CARDS_TYPE')!.severity).toBe('error')
   })
 
   it('NO_SOURCE_QUESTIONS: source_question_ids が空', () => {

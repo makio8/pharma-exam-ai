@@ -52,8 +52,15 @@ export function validateCard(card: KnowledgeAtomCard, atomId: string, cardIndex?
 
   const base = { atomId, cardIndex }
 
-  // EMPTY_FRONT
-  if (!card.front || card.front.trim() === '') {
+  // INVALID_FRONT_TYPE / EMPTY_FRONT
+  if (typeof card.front !== 'string') {
+    errors.push({
+      ...base,
+      code: 'INVALID_FRONT_TYPE',
+      message: `frontが文字列でない: ${typeof card.front}`,
+      severity: 'error',
+    })
+  } else if (!card.front || card.front.trim() === '') {
     errors.push({
       ...base,
       code: 'EMPTY_FRONT',
@@ -62,8 +69,15 @@ export function validateCard(card: KnowledgeAtomCard, atomId: string, cardIndex?
     })
   }
 
-  // EMPTY_BACK
-  if (!card.back || card.back.trim() === '') {
+  // INVALID_BACK_TYPE / EMPTY_BACK
+  if (typeof card.back !== 'string') {
+    errors.push({
+      ...base,
+      code: 'INVALID_BACK_TYPE',
+      message: `backが文字列でない: ${typeof card.back}`,
+      severity: 'error',
+    })
+  } else if (!card.back || card.back.trim() === '') {
     errors.push({
       ...base,
       code: 'EMPTY_BACK',
@@ -122,8 +136,15 @@ export function validateCard(card: KnowledgeAtomCard, atomId: string, cardIndex?
     })
   }
 
-  // EMPTY_RECALL_DIRECTION
-  if (!card.recall_direction || card.recall_direction.trim() === '') {
+  // INVALID_RECALL_DIRECTION_TYPE / EMPTY_RECALL_DIRECTION
+  if (typeof card.recall_direction !== 'string') {
+    errors.push({
+      ...base,
+      code: 'INVALID_RECALL_DIRECTION_TYPE',
+      message: `recall_directionが文字列でない: ${typeof card.recall_direction}`,
+      severity: 'error',
+    })
+  } else if (!card.recall_direction || card.recall_direction.trim() === '') {
     errors.push({
       ...base,
       code: 'EMPTY_RECALL_DIRECTION',
@@ -187,8 +208,15 @@ export function validateAtom(atom: KnowledgeAtom): ValidationError[] {
     })
   }
 
-  // NO_SOURCE_QUESTIONS
-  if (!atom.source_question_ids || atom.source_question_ids.length === 0) {
+  // INVALID_SOURCE_QUESTIONS_TYPE / NO_SOURCE_QUESTIONS
+  if (!Array.isArray(atom.source_question_ids)) {
+    errors.push({
+      code: 'INVALID_SOURCE_QUESTIONS_TYPE',
+      message: 'source_question_idsが配列でない',
+      atomId,
+      severity: 'error',
+    })
+  } else if (atom.source_question_ids.length === 0) {
     errors.push({
       code: 'NO_SOURCE_QUESTIONS',
       message: 'source_question_idsが空です',
@@ -197,8 +225,15 @@ export function validateAtom(atom: KnowledgeAtom): ValidationError[] {
     })
   }
 
-  // NO_CARDS
-  if (!atom.cards || atom.cards.length === 0) {
+  // INVALID_CARDS_TYPE / NO_CARDS
+  if (!Array.isArray(atom.cards)) {
+    errors.push({
+      code: 'INVALID_CARDS_TYPE',
+      message: 'cardsが配列でない',
+      atomId,
+      severity: 'error',
+    })
+  } else if (atom.cards.length === 0) {
     errors.push({
       code: 'NO_CARDS',
       message: 'cardsが空です',
@@ -208,7 +243,7 @@ export function validateAtom(atom: KnowledgeAtom): ValidationError[] {
   }
 
   // DUPLICATE_RECALL_DIRECTION
-  if (atom.cards && atom.cards.length > 0) {
+  if (Array.isArray(atom.cards) && atom.cards.length > 0) {
     const directions = atom.cards.map(c => c.recall_direction)
     const seen = new Set<string>()
     const duplicates = new Set<string>()

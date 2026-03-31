@@ -218,46 +218,53 @@ function main(): void {
 
   // Step 6: 各 exemplar のコンテキスト生成 & 書き出し
   let written = 0
+  let failed = 0
   let totalQuestions = 0
   let totalNotes = 0
 
   for (const target of targets) {
-    // パフォーマンス最適化: 関連するマッピング・問題だけを渡す
-    const relevantMappings = mappingsByExemplar.get(target.exemplarId) ?? []
-    const relevantQuestionIds = new Set(relevantMappings.map(m => m.questionId))
-    const relevantQuestions = [...relevantQuestionIds]
-      .map(id => questionMap.get(id))
-      .filter((q): q is Question => q !== undefined)
+    try {
+      // パフォーマンス最適化: 関連するマッピング・問題だけを渡す
+      const relevantMappings = mappingsByExemplar.get(target.exemplarId) ?? []
+      const relevantQuestionIds = new Set(relevantMappings.map(m => m.questionId))
+      const relevantQuestions = [...relevantQuestionIds]
+        .map(id => questionMap.get(id))
+        .filter((q): q is Question => q !== undefined)
 
-    const ctx = buildExemplarContext(
-      target.exemplarId,
-      target.tier,
-      target.maxAtoms,
-      EXEMPLARS,
-      relevantMappings,
-      relevantQuestions,
-      OFFICIAL_NOTES,
-    )
+      const ctx = buildExemplarContext(
+        target.exemplarId,
+        target.tier,
+        target.maxAtoms,
+        EXEMPLARS,
+        relevantMappings,
+        relevantQuestions,
+        OFFICIAL_NOTES,
+      )
 
-    const promptText = formatContextForPrompt(ctx)
+      const promptText = formatContextForPrompt(ctx)
 
-    const contextFile: ContextFile = {
-      exemplarId: ctx.exemplarId,
-      subject: ctx.subject,
-      tier: ctx.tier,
-      maxAtoms: ctx.maxAtoms,
-      questionCount: ctx.questions.length,
-      noteCount: ctx.notes.length,
-      promptText,
-      createdAt: new Date().toISOString(),
+      const contextFile: ContextFile = {
+        exemplarId: ctx.exemplarId,
+        subject: ctx.subject,
+        tier: ctx.tier,
+        maxAtoms: ctx.maxAtoms,
+        questionCount: ctx.questions.length,
+        noteCount: ctx.notes.length,
+        promptText,
+        createdAt: new Date().toISOString(),
+      }
+
+      const outPath = path.join(CONTEXT_DIR, `${ctx.exemplarId}.json`)
+      fs.writeFileSync(outPath, JSON.stringify(contextFile, null, 2), 'utf-8')
+
+      written++
+      totalQuestions += ctx.questions.length
+      totalNotes += ctx.notes.length
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err)
+      console.error(`  ❌ ${target.exemplarId}: ${msg}`)
+      failed++
     }
-
-    const outPath = path.join(CONTEXT_DIR, `${ctx.exemplarId}.json`)
-    fs.writeFileSync(outPath, JSON.stringify(contextFile, null, 2), 'utf-8')
-
-    written++
-    totalQuestions += ctx.questions.length
-    totalNotes += ctx.notes.length
   }
 
   // Step 7: サマリー表示
@@ -268,6 +275,7 @@ function main(): void {
   console.log('=== コンテキスト準備完了 ===')
   console.log(`対象: ${allTargets.length}件`)
   console.log(`書き出し: ${written}件`)
+  console.log(`失敗: ${failed}件`)
   console.log(`スキップ: ${skipped}件`)
   console.log(`平均問題数: ${avgQuestions}問/exemplar`)
   console.log(`平均付箋数: ${avgNotes}枚/exemplar`)
