@@ -1,1612 +1,2301 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-03-31T00:00:00Z",
+  "generated_at": "2026-03-31T04:45:20.973Z",
   "entries": [
     {
       "id": "struct-purine",
       "name_ja": "プリン環",
       "name_en": "Purine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 1044,
       "scaffold": "",
       "functional_groups": [],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学"]
+      "subjects": [
+        "化学"
+      ],
+      "smiles": "C1=C2C(=NC=N1)N=CN2"
     },
     {
       "id": "struct-pyrimidine",
       "name_ja": "ピリミジン環",
       "name_en": "Pyrimidine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 9260,
       "scaffold": "",
       "functional_groups": [],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学"]
+      "subjects": [
+        "化学"
+      ],
+      "smiles": "C1=CN=CN=C1"
     },
     {
       "id": "struct-indole",
       "name_ja": "インドール環",
       "name_en": "Indole",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 798,
       "scaffold": "",
       "functional_groups": [],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学"]
+      "subjects": [
+        "化学"
+      ],
+      "smiles": "C1=CC=C2C(=C1)C=CN2"
     },
     {
       "id": "struct-quinoline",
       "name_ja": "キノリン環",
       "name_en": "Quinoline",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 7047,
       "scaffold": "",
       "functional_groups": [],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学"]
+      "subjects": [
+        "化学"
+      ],
+      "smiles": "C1=CC=C2C(=C1)C=CC=N2"
     },
     {
       "id": "struct-imidazole",
       "name_ja": "イミダゾール環",
       "name_en": "Imidazole",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 795,
       "scaffold": "",
       "functional_groups": [],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学"]
+      "subjects": [
+        "化学"
+      ],
+      "smiles": "C1=CN=CN1"
     },
     {
       "id": "struct-thiazole",
       "name_ja": "チアゾール環",
       "name_en": "Thiazole",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 9256,
       "scaffold": "",
       "functional_groups": [],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学"]
+      "subjects": [
+        "化学"
+      ],
+      "smiles": "C1=CSC=N1"
     },
     {
       "id": "struct-pyridine",
       "name_ja": "ピリジン環",
       "name_en": "Pyridine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 1049,
       "scaffold": "",
       "functional_groups": [],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学"]
+      "subjects": [
+        "化学"
+      ],
+      "smiles": "C1=CC=NC=C1"
     },
     {
       "id": "struct-pyrrole",
       "name_ja": "ピロール環",
       "name_en": "Pyrrole",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 8027,
       "scaffold": "",
       "functional_groups": [],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学"]
+      "subjects": [
+        "化学"
+      ],
+      "smiles": "C1=CNC=C1"
     },
     {
       "id": "struct-furan",
       "name_ja": "フラン環",
       "name_en": "Furan",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 8029,
       "scaffold": "",
       "functional_groups": [],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学"]
+      "subjects": [
+        "化学"
+      ],
+      "smiles": "C1=COC=C1"
     },
     {
       "id": "struct-thiophene",
       "name_ja": "チオフェン環",
       "name_en": "Thiophene",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 8030,
       "scaffold": "",
       "functional_groups": [],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学"]
+      "subjects": [
+        "化学"
+      ],
+      "smiles": "C1=CSC=C1"
     },
     {
       "id": "struct-benzodiazepine",
       "name_ja": "ベンゾジアゼピン環",
       "name_en": "Benzodiazepine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 134664,
       "scaffold": "",
       "functional_groups": [],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "C1=CC=C2C(=C1)C=CC=NN2"
     },
     {
       "id": "struct-phenothiazine",
       "name_ja": "フェノチアジン環",
       "name_en": "Phenothiazine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 7108,
       "scaffold": "",
       "functional_groups": [],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "C1=CC=C2C(=C1)NC3=CC=CC=C3S2"
     },
     {
       "id": "struct-steroid",
       "name_ja": "ステロイド骨格",
       "name_en": "Steroid",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 139082353,
       "scaffold": "",
       "functional_groups": [],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学", "薬理"]
+      "subjects": [
+        "化学",
+        "薬理"
+      ],
+      "smiles": "CC(C1CCC2C1(CCC3C2CC=C4C3(CCC(C4)N(C)C)C)C)N(C)C(=O)C"
     },
     {
       "id": "struct-beta-lactam",
       "name_ja": "β-ラクタム環",
       "name_en": "Beta-Lactam",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 136721,
       "scaffold": "",
       "functional_groups": [],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "C1CNC1=O"
     },
     {
       "id": "struct-adenine",
       "name_ja": "アデニン",
       "name_en": "Adenine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 190,
       "scaffold": "プリン環",
-      "functional_groups": ["アミノ基"],
+      "functional_groups": [
+        "アミノ基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学", "生物"],
-      "representative_of": "プリン環"
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "representative_of": "プリン環",
+      "smiles": "C1=NC2=NC=NC(=C2N1)N"
     },
     {
       "id": "struct-guanine",
       "name_ja": "グアニン",
       "name_en": "Guanine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 135398634,
       "scaffold": "プリン環",
-      "functional_groups": ["アミノ基", "カルボニル基"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボニル基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学", "生物"],
-      "representative_of": "プリン環"
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "representative_of": "プリン環",
+      "smiles": "C1=NC2=C(N1)C(=O)NC(=N2)N"
     },
     {
       "id": "struct-caffeine",
       "name_ja": "カフェイン",
       "name_en": "Caffeine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 2519,
       "scaffold": "プリン環(キサンチン骨格)",
-      "functional_groups": ["N-メチル基"],
+      "functional_groups": [
+        "N-メチル基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学"],
-      "representative_of": "プリン環"
+      "subjects": [
+        "化学"
+      ],
+      "representative_of": "プリン環",
+      "smiles": "CN1C=NC2=C1C(=O)N(C(=O)N2C)C"
     },
     {
       "id": "struct-hypoxanthine",
       "name_ja": "ヒポキサンチン",
       "name_en": "Hypoxanthine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 135398638,
       "scaffold": "プリン環",
-      "functional_groups": ["カルボニル基"],
+      "functional_groups": [
+        "カルボニル基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学", "生物"],
-      "representative_of": "プリン環"
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "representative_of": "プリン環",
+      "smiles": "C1=NC2=C(N1)C(=O)NC=N2"
     },
     {
       "id": "struct-uric-acid",
       "name_ja": "尿酸",
       "name_en": "Uric acid",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 1175,
       "scaffold": "プリン環",
-      "functional_groups": ["カルボニル基"],
+      "functional_groups": [
+        "カルボニル基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["生物"],
-      "representative_of": "プリン環"
+      "subjects": [
+        "生物"
+      ],
+      "representative_of": "プリン環",
+      "smiles": "C12=C(NC(=O)N1)NC(=O)NC2=O"
     },
     {
       "id": "struct-cytosine",
       "name_ja": "シトシン",
       "name_en": "Cytosine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 597,
       "scaffold": "ピリミジン環",
-      "functional_groups": ["アミノ基", "カルボニル基"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボニル基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学", "生物"],
-      "representative_of": "ピリミジン環"
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "representative_of": "ピリミジン環",
+      "smiles": "C1=C(NC(=O)N=C1)N"
     },
     {
       "id": "struct-uracil",
       "name_ja": "ウラシル",
       "name_en": "Uracil",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 1174,
       "scaffold": "ピリミジン環",
-      "functional_groups": ["カルボニル基"],
+      "functional_groups": [
+        "カルボニル基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学", "生物"],
-      "representative_of": "ピリミジン環"
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "representative_of": "ピリミジン環",
+      "smiles": "C1=CNC(=O)NC1=O"
     },
     {
       "id": "struct-thymine",
       "name_ja": "チミン",
       "name_en": "Thymine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 1135,
       "scaffold": "ピリミジン環",
-      "functional_groups": ["カルボニル基", "メチル基"],
+      "functional_groups": [
+        "カルボニル基",
+        "メチル基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学", "生物"],
-      "representative_of": "ピリミジン環"
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "representative_of": "ピリミジン環",
+      "smiles": "CC1=CNC(=O)NC1=O"
     },
     {
       "id": "struct-serotonin",
       "name_ja": "セロトニン",
       "name_en": "Serotonin",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5202,
       "scaffold": "インドール環",
-      "functional_groups": ["ヒドロキシ基", "アミノ基"],
+      "functional_groups": [
+        "ヒドロキシ基",
+        "アミノ基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学", "薬理"],
-      "representative_of": "インドール環"
+      "subjects": [
+        "化学",
+        "薬理"
+      ],
+      "representative_of": "インドール環",
+      "smiles": "C1=CC2=C(C=C1O)C(=CN2)CCN"
     },
     {
       "id": "struct-tryptophan",
       "name_ja": "トリプトファン",
       "name_en": "Tryptophan",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6305,
       "scaffold": "インドール環",
-      "functional_groups": ["アミノ基", "カルボキシ基", "インドール環"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "インドール環"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学", "生物"],
-      "representative_of": "インドール環"
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "representative_of": "インドール環",
+      "smiles": "C1=CC=C2C(=C1)C(=CN2)CC(C(=O)O)N"
     },
     {
       "id": "struct-quinine",
       "name_ja": "キニーネ",
       "name_en": "Quinine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 3034034,
       "scaffold": "キノリン環",
-      "functional_groups": ["メトキシ基", "ヒドロキシ基", "ビニル基"],
+      "functional_groups": [
+        "メトキシ基",
+        "ヒドロキシ基",
+        "ビニル基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学", "薬理"],
-      "representative_of": "キノリン環"
+      "subjects": [
+        "化学",
+        "薬理"
+      ],
+      "representative_of": "キノリン環",
+      "smiles": "COC1=CC2=C(C=CN=C2C=C1)C(C3CC4CCN3CC4C=C)O"
     },
     {
       "id": "struct-histamine",
       "name_ja": "ヒスタミン",
       "name_en": "Histamine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 774,
       "scaffold": "イミダゾール環",
-      "functional_groups": ["アミノ基"],
+      "functional_groups": [
+        "アミノ基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学", "薬理"],
-      "representative_of": "イミダゾール環"
+      "subjects": [
+        "化学",
+        "薬理"
+      ],
+      "representative_of": "イミダゾール環",
+      "smiles": "C1=C(NC=N1)CCN"
     },
     {
       "id": "struct-histidine",
       "name_ja": "ヒスチジン",
       "name_en": "Histidine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6274,
       "scaffold": "イミダゾール環",
-      "functional_groups": ["アミノ基", "カルボキシ基", "イミダゾール環"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "イミダゾール環"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学", "生物"],
-      "representative_of": "イミダゾール環"
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "representative_of": "イミダゾール環",
+      "smiles": "C1=C(NC=N1)CC(C(=O)O)N"
     },
     {
       "id": "struct-furosemide",
       "name_ja": "フロセミド",
       "name_en": "Furosemide",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 3440,
       "scaffold": "フラン環",
-      "functional_groups": ["スルホンアミド基", "カルボキシ基", "塩素"],
+      "functional_groups": [
+        "スルホンアミド基",
+        "カルボキシ基",
+        "塩素"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["薬理"],
-      "representative_of": "フラン環"
+      "subjects": [
+        "薬理"
+      ],
+      "representative_of": "フラン環",
+      "smiles": "C1=COC(=C1)CNC2=CC(=C(C=C2C(=O)O)S(=O)(=O)N)Cl"
     },
     {
       "id": "struct-ticlopidine",
       "name_ja": "チクロピジン",
       "name_en": "Ticlopidine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5472,
       "scaffold": "チオフェン環",
-      "functional_groups": ["塩素"],
+      "functional_groups": [
+        "塩素"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["薬理"],
-      "representative_of": "チオフェン環"
+      "subjects": [
+        "薬理"
+      ],
+      "representative_of": "チオフェン環",
+      "smiles": "C1CN(CC2=C1SC=C2)CC3=CC=CC=C3Cl"
     },
     {
       "id": "struct-diazepam",
       "name_ja": "ジアゼパム",
       "name_en": "Diazepam",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 3016,
       "scaffold": "ベンゾジアゼピン環",
-      "functional_groups": ["カルボニル基", "N-メチル基", "塩素"],
+      "functional_groups": [
+        "カルボニル基",
+        "N-メチル基",
+        "塩素"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["薬理"],
-      "representative_of": "ベンゾジアゼピン環"
+      "subjects": [
+        "薬理"
+      ],
+      "representative_of": "ベンゾジアゼピン環",
+      "smiles": "CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3"
     },
     {
       "id": "struct-midazolam",
       "name_ja": "ミダゾラム",
       "name_en": "Midazolam",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 4192,
       "scaffold": "ベンゾジアゼピン環",
-      "functional_groups": ["イミダゾール環", "フッ素", "塩素"],
+      "functional_groups": [
+        "イミダゾール環",
+        "フッ素",
+        "塩素"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["薬理"],
-      "representative_of": "ベンゾジアゼピン環"
+      "subjects": [
+        "薬理"
+      ],
+      "representative_of": "ベンゾジアゼピン環",
+      "smiles": "CC1=NC=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4F"
     },
     {
       "id": "struct-chlorpromazine",
       "name_ja": "クロルプロマジン",
       "name_en": "Chlorpromazine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 2726,
       "scaffold": "フェノチアジン環",
-      "functional_groups": ["塩素", "ジメチルアミノ基"],
+      "functional_groups": [
+        "塩素",
+        "ジメチルアミノ基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["薬理"],
-      "representative_of": "フェノチアジン環"
+      "subjects": [
+        "薬理"
+      ],
+      "representative_of": "フェノチアジン環",
+      "smiles": "CN(C)CCCN1C2=CC=CC=C2SC3=C1C=C(C=C3)Cl"
     },
     {
       "id": "struct-cholesterol",
       "name_ja": "コレステロール",
       "name_en": "Cholesterol",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5997,
       "scaffold": "ステロイド骨格",
-      "functional_groups": ["ヒドロキシ基", "二重結合"],
+      "functional_groups": [
+        "ヒドロキシ基",
+        "二重結合"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["化学"],
-      "representative_of": "ステロイド骨格"
+      "subjects": [
+        "化学"
+      ],
+      "representative_of": "ステロイド骨格",
+      "smiles": "CC(C)CCCC(C)C1CCC2C1(CCC3C2CC=C4C3(CCC(C4)O)C)C"
     },
     {
       "id": "struct-prednisolone",
       "name_ja": "プレドニゾロン",
       "name_en": "Prednisolone",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5755,
       "scaffold": "ステロイド骨格",
-      "functional_groups": ["ヒドロキシ基", "カルボニル基", "二重結合"],
+      "functional_groups": [
+        "ヒドロキシ基",
+        "カルボニル基",
+        "二重結合"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["薬理"],
-      "representative_of": "ステロイド骨格"
+      "subjects": [
+        "薬理"
+      ],
+      "representative_of": "ステロイド骨格",
+      "smiles": "CC12CC(C3C(C1CCC2(C(=O)CO)O)CCC4=CC(=O)C=CC34C)O"
     },
     {
       "id": "struct-penicillin-g",
       "name_ja": "ペニシリンG",
       "name_en": "Penicillin G",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5904,
       "scaffold": "β-ラクタム環(ペナム骨格)",
-      "functional_groups": ["β-ラクタム環", "チアゾリジン環", "カルボキシ基"],
+      "functional_groups": [
+        "β-ラクタム環",
+        "チアゾリジン環",
+        "カルボキシ基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["薬理"],
-      "representative_of": "β-ラクタム環"
+      "subjects": [
+        "薬理"
+      ],
+      "representative_of": "β-ラクタム環",
+      "smiles": "CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)O)C"
     },
     {
       "id": "struct-cephalothin",
       "name_ja": "セファロチン",
       "name_en": "Cephalothin",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6024,
       "scaffold": "β-ラクタム環(セフェム骨格)",
-      "functional_groups": ["β-ラクタム環", "ジヒドロチアジン環", "カルボキシ基"],
+      "functional_groups": [
+        "β-ラクタム環",
+        "ジヒドロチアジン環",
+        "カルボキシ基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["薬理"],
-      "representative_of": "β-ラクタム環"
+      "subjects": [
+        "薬理"
+      ],
+      "representative_of": "β-ラクタム環",
+      "smiles": "CC(=O)OCC1=C(N2C(C(C2=O)NC(=O)CC3=CC=CS3)SC1)C(=O)O"
     },
     {
       "id": "struct-tetracycline",
       "name_ja": "テトラサイクリン",
       "name_en": "Tetracycline",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 54675776,
       "scaffold": "テトラサイクリン骨格",
-      "functional_groups": ["4環構造", "ヒドロキシ基", "アミド基"],
+      "functional_groups": [
+        "4環構造",
+        "ヒドロキシ基",
+        "アミド基"
+      ],
       "category": "heterocycle",
       "priority": 1,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "CC1(C2CC3C(C(=O)C(=C(C3(C(=O)C2=C(C4=C1C=CC=C4O)O)O)O)C(=O)N)N(C)C)O"
     },
     {
       "id": "struct-retinol",
       "name_ja": "レチノール(ビタミンA)",
       "name_en": "Retinol",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 445354,
       "scaffold": "レチノイド骨格",
-      "functional_groups": ["ヒドロキシ基", "共役二重結合"],
+      "functional_groups": [
+        "ヒドロキシ基",
+        "共役二重結合"
+      ],
       "category": "vitamin",
       "priority": 2,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC1=C(C(CCC1)(C)C)C=CC(=CC=CC(=CCO)C)C"
     },
     {
       "id": "struct-thiamine",
       "name_ja": "チアミン(ビタミンB1)",
       "name_en": "Thiamine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 1130,
       "scaffold": "チアゾール環+ピリミジン環",
-      "functional_groups": ["アミノ基", "4級窒素"],
+      "functional_groups": [
+        "アミノ基",
+        "4級窒素"
+      ],
       "category": "vitamin",
       "priority": 2,
-      "subjects": ["化学", "衛生"]
+      "subjects": [
+        "化学",
+        "衛生"
+      ],
+      "smiles": "CC1=C(SC=[N+]1CC2=CN=C(N=C2N)C)CCO"
     },
     {
       "id": "struct-riboflavin",
       "name_ja": "リボフラビン(ビタミンB2)",
       "name_en": "Riboflavin",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 493570,
       "scaffold": "イソアロキサジン環",
-      "functional_groups": ["リビトール側鎖"],
+      "functional_groups": [
+        "リビトール側鎖"
+      ],
       "category": "vitamin",
       "priority": 2,
-      "subjects": ["化学", "衛生"]
+      "subjects": [
+        "化学",
+        "衛生"
+      ],
+      "smiles": "CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)CC(C(C(CO)O)O)O"
     },
     {
       "id": "struct-niacin",
       "name_ja": "ナイアシン(ビタミンB3)",
       "name_en": "Niacin",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 938,
       "scaffold": "ピリジン環",
-      "functional_groups": ["カルボキシ基"],
+      "functional_groups": [
+        "カルボキシ基"
+      ],
       "category": "vitamin",
       "priority": 2,
-      "subjects": ["化学", "衛生"]
+      "subjects": [
+        "化学",
+        "衛生"
+      ],
+      "smiles": "C1=CC(=CN=C1)C(=O)O"
     },
     {
       "id": "struct-pantothenic-acid",
       "name_ja": "パントテン酸(ビタミンB5)",
       "name_en": "Pantothenic acid",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6613,
       "scaffold": "β-アラニン+パントイン酸",
-      "functional_groups": ["アミド結合", "ヒドロキシ基"],
+      "functional_groups": [
+        "アミド結合",
+        "ヒドロキシ基"
+      ],
       "category": "vitamin",
       "priority": 2,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC(C)(CO)C(C(=O)NCCC(=O)O)O"
     },
     {
       "id": "struct-pyridoxine",
       "name_ja": "ピリドキシン(ビタミンB6)",
       "name_en": "Pyridoxine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 1054,
       "scaffold": "ピリジン環",
-      "functional_groups": ["ヒドロキシ基", "ヒドロキシメチル基"],
+      "functional_groups": [
+        "ヒドロキシ基",
+        "ヒドロキシメチル基"
+      ],
       "category": "vitamin",
       "priority": 2,
-      "subjects": ["化学", "衛生"]
+      "subjects": [
+        "化学",
+        "衛生"
+      ],
+      "smiles": "CC1=NC=C(C(=C1O)CO)CO"
     },
     {
       "id": "struct-biotin",
       "name_ja": "ビオチン(ビタミンB7)",
       "name_en": "Biotin",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 171548,
       "scaffold": "ウレイド環+チオフェン環",
-      "functional_groups": ["ウレイド基", "チオエーテル", "カルボキシ基"],
+      "functional_groups": [
+        "ウレイド基",
+        "チオエーテル",
+        "カルボキシ基"
+      ],
       "category": "vitamin",
       "priority": 2,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C1C2C(C(S1)CCCCC(=O)O)NC(=O)N2"
     },
     {
       "id": "struct-folic-acid",
       "name_ja": "葉酸(ビタミンB9)",
       "name_en": "Folic acid",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 135398658,
       "scaffold": "プテリジン環+PABA+グルタミン酸",
-      "functional_groups": ["プテリジン環", "アミド結合", "グルタミン酸"],
+      "functional_groups": [
+        "プテリジン環",
+        "アミド結合",
+        "グルタミン酸"
+      ],
       "category": "vitamin",
       "priority": 2,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C1=CC(=CC=C1C(=O)NC(CCC(=O)O)C(=O)O)NCC2=CN=C3C(=N2)C(=O)NC(=N3)N"
     },
     {
       "id": "struct-cyanocobalamin",
       "name_ja": "シアノコバラミン(ビタミンB12)",
       "name_en": "Cyanocobalamin",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 166596686,
       "scaffold": "コリン環",
-      "functional_groups": ["コバルト", "コリン環", "シアノ基"],
+      "functional_groups": [
+        "コバルト",
+        "コリン環",
+        "シアノ基"
+      ],
       "category": "vitamin",
       "priority": 2,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC1=CC2=C(C=C1C)[N+](=CN2)C3C(C(C(O3)CO)OP(=O)(O)OC(C)CNC(=O)CCC4(C(C5C6(C(C(C(=N6)C(=C7C(C(C(=CC8=NC(=C(C4=N5)C)C(C8(C)C)CCC(=N)[O-])N7)CCC(=N)[O-])(C)CC(=O)N)C)CCC(=N)[O-])(C)CC(=O)N)C)CC(=O)N)C)O.[C]#N.[Co+2]"
     },
     {
       "id": "struct-ascorbic-acid",
       "name_ja": "アスコルビン酸(ビタミンC)",
       "name_en": "Ascorbic acid",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 54670067,
       "scaffold": "ラクトン環",
-      "functional_groups": ["エンジオール基", "ラクトン環"],
+      "functional_groups": [
+        "エンジオール基",
+        "ラクトン環"
+      ],
       "category": "vitamin",
       "priority": 2,
-      "subjects": ["化学", "衛生"]
+      "subjects": [
+        "化学",
+        "衛生"
+      ],
+      "smiles": "C(C(C1C(=C(C(=O)O1)O)O)O)O"
     },
     {
       "id": "struct-cholecalciferol",
       "name_ja": "コレカルシフェロール(ビタミンD3)",
       "name_en": "Cholecalciferol",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5280795,
       "scaffold": "セコステロイド骨格",
-      "functional_groups": ["ヒドロキシ基", "共役トリエン"],
+      "functional_groups": [
+        "ヒドロキシ基",
+        "共役トリエン"
+      ],
       "category": "vitamin",
       "priority": 2,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC(C)CCCC(C)C1CCC2C1(CCCC2=CC=C3CC(CCC3=C)O)C"
     },
     {
       "id": "struct-alpha-tocopherol",
       "name_ja": "α-トコフェロール(ビタミンE)",
       "name_en": "alpha-Tocopherol",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 14985,
       "scaffold": "クロマン環",
-      "functional_groups": ["フェノール性ヒドロキシ基", "フィチル側鎖"],
+      "functional_groups": [
+        "フェノール性ヒドロキシ基",
+        "フィチル側鎖"
+      ],
       "category": "vitamin",
       "priority": 2,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC1=C(C2=C(CCC(O2)(C)CCCC(C)CCCC(C)CCCC(C)C)C(=C1O)C)C"
     },
     {
       "id": "struct-phylloquinone",
       "name_ja": "フィロキノン(ビタミンK1)",
       "name_en": "Phylloquinone",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5284607,
       "scaffold": "ナフトキノン環",
-      "functional_groups": ["キノン構造", "フィチル側鎖"],
+      "functional_groups": [
+        "キノン構造",
+        "フィチル側鎖"
+      ],
       "category": "vitamin",
       "priority": 2,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC1=C(C(=O)C2=CC=CC=C2C1=O)CC=C(C)CCCC(C)CCCC(C)CCCC(C)C"
     },
     {
       "id": "struct-glycine",
       "name_ja": "グリシン",
       "name_en": "Glycine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 750,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "水素(側鎖)"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "水素(側鎖)"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "C(C(=O)O)N"
     },
     {
       "id": "struct-alanine",
       "name_ja": "アラニン",
       "name_en": "Alanine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5950,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "メチル基"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "メチル基"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "CC(C(=O)O)N"
     },
     {
       "id": "struct-valine",
       "name_ja": "バリン",
       "name_en": "Valine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6287,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "イソプロピル基"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "イソプロピル基"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "CC(C)C(C(=O)O)N"
     },
     {
       "id": "struct-leucine",
       "name_ja": "ロイシン",
       "name_en": "Leucine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6106,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "イソブチル基"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "イソブチル基"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "CC(C)CC(C(=O)O)N"
     },
     {
       "id": "struct-isoleucine",
       "name_ja": "イソロイシン",
       "name_en": "Isoleucine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6306,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "sec-ブチル基"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "sec-ブチル基"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "CCC(C)C(C(=O)O)N"
     },
     {
       "id": "struct-proline",
       "name_ja": "プロリン",
       "name_en": "Proline",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 145742,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "ピロリジン環(イミノ酸)"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "ピロリジン環(イミノ酸)"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "C1CC(NC1)C(=O)O"
     },
     {
       "id": "struct-phenylalanine",
       "name_ja": "フェニルアラニン",
       "name_en": "Phenylalanine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6140,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "ベンジル基"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "ベンジル基"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "C1=CC=C(C=C1)CC(C(=O)O)N"
     },
     {
       "id": "struct-methionine",
       "name_ja": "メチオニン",
       "name_en": "Methionine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6137,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "チオエーテル"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "チオエーテル"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "CSCCC(C(=O)O)N"
     },
     {
       "id": "struct-serine",
       "name_ja": "セリン",
       "name_en": "Serine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5951,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "ヒドロキシメチル基"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "ヒドロキシメチル基"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "C(C(C(=O)O)N)O"
     },
     {
       "id": "struct-threonine",
       "name_ja": "トレオニン",
       "name_en": "Threonine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6288,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "ヒドロキシエチル基"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "ヒドロキシエチル基"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "CC(C(C(=O)O)N)O"
     },
     {
       "id": "struct-cysteine",
       "name_ja": "システイン",
       "name_en": "Cysteine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5862,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "チオール基"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "チオール基"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "C(C(C(=O)O)N)S"
     },
     {
       "id": "struct-tyrosine",
       "name_ja": "チロシン",
       "name_en": "Tyrosine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6057,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "フェノール性ヒドロキシ基"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "フェノール性ヒドロキシ基"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "C1=CC(=CC=C1CC(C(=O)O)N)O"
     },
     {
       "id": "struct-asparagine",
       "name_ja": "アスパラギン",
       "name_en": "Asparagine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6267,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "アミド基(短鎖)"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "アミド基(短鎖)"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "C(C(C(=O)O)N)C(=O)N"
     },
     {
       "id": "struct-glutamine",
       "name_ja": "グルタミン",
       "name_en": "Glutamine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5961,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "アミド基(長鎖)"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "アミド基(長鎖)"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "C(CC(=O)N)C(C(=O)O)N"
     },
     {
       "id": "struct-aspartic-acid",
       "name_ja": "アスパラギン酸",
       "name_en": "Aspartic acid",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5960,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "カルボキシ基(酸性側鎖)"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "カルボキシ基(酸性側鎖)"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "C(C(C(=O)O)N)C(=O)O"
     },
     {
       "id": "struct-glutamic-acid",
       "name_ja": "グルタミン酸",
       "name_en": "Glutamic acid",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 33032,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "カルボキシ基(酸性側鎖)"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "カルボキシ基(酸性側鎖)"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "C(CC(=O)O)C(C(=O)O)N"
     },
     {
       "id": "struct-lysine",
       "name_ja": "リシン",
       "name_en": "Lysine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5962,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "ε-アミノ基"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "ε-アミノ基"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "C(CCN)CC(C(=O)O)N"
     },
     {
       "id": "struct-arginine",
       "name_ja": "アルギニン",
       "name_en": "Arginine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6322,
       "scaffold": "α-アミノ酸",
-      "functional_groups": ["アミノ基", "カルボキシ基", "グアニジノ基"],
+      "functional_groups": [
+        "アミノ基",
+        "カルボキシ基",
+        "グアニジノ基"
+      ],
       "category": "amino_acid",
       "priority": 3,
-      "subjects": ["化学", "生物"]
+      "subjects": [
+        "化学",
+        "生物"
+      ],
+      "smiles": "C(CC(C(=O)O)N)CN=C(N)N"
     },
     {
       "id": "struct-lansoprazole",
       "name_ja": "ランソプラゾール",
       "name_en": "Lansoprazole",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 3883,
       "scaffold": "ベンゾイミダゾール+ピリジン",
-      "functional_groups": ["スルフィニル基", "トリフルオロメチル基"],
+      "functional_groups": [
+        "スルフィニル基",
+        "トリフルオロメチル基"
+      ],
       "category": "prodrug",
       "priority": 3,
-      "subjects": ["薬理", "実務"]
+      "subjects": [
+        "薬理",
+        "実務"
+      ],
+      "smiles": "CC1=C(C=CN=C1CS(=O)C2=NC3=CC=CC=C3N2)OCC(F)(F)F"
     },
     {
       "id": "struct-omeprazole",
       "name_ja": "オメプラゾール",
       "name_en": "Omeprazole",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 4594,
       "scaffold": "ベンゾイミダゾール+ピリジン",
-      "functional_groups": ["スルフィニル基", "メトキシ基"],
+      "functional_groups": [
+        "スルフィニル基",
+        "メトキシ基"
+      ],
       "category": "prodrug",
       "priority": 3,
-      "subjects": ["化学", "実務"]
+      "subjects": [
+        "化学",
+        "実務"
+      ],
+      "smiles": "CC1=CN=C(C(=C1OC)C)CS(=O)C2=NC3=C(N2)C=C(C=C3)OC"
     },
     {
       "id": "struct-levodopa",
       "name_ja": "レボドパ",
       "name_en": "Levodopa",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6047,
       "scaffold": "カテコール+α-アミノ酸",
-      "functional_groups": ["カテコール基", "アミノ基", "カルボキシ基"],
+      "functional_groups": [
+        "カテコール基",
+        "アミノ基",
+        "カルボキシ基"
+      ],
       "category": "prodrug",
       "priority": 3,
-      "subjects": ["薬理", "実務"]
+      "subjects": [
+        "薬理",
+        "実務"
+      ],
+      "smiles": "C1=CC(=C(C=C1CC(C(=O)O)N)O)O"
     },
     {
       "id": "struct-valacyclovir",
       "name_ja": "バラシクロビル",
       "name_en": "Valacyclovir",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 135398742,
       "scaffold": "プリン環+バリンエステル",
-      "functional_groups": ["プリン環", "バリンエステル"],
+      "functional_groups": [
+        "プリン環",
+        "バリンエステル"
+      ],
       "category": "prodrug",
       "priority": 3,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "CC(C)C(C(=O)OCCOCN1C=NC2=C1N=C(NC2=O)N)N"
     },
     {
       "id": "struct-oseltamivir",
       "name_ja": "オセルタミビル",
       "name_en": "Oseltamivir",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 65028,
       "scaffold": "シクロヘキセン",
-      "functional_groups": ["エチルエステル", "アミノ基", "アセチルアミノ基"],
+      "functional_groups": [
+        "エチルエステル",
+        "アミノ基",
+        "アセチルアミノ基"
+      ],
       "category": "prodrug",
       "priority": 3,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "CCC(CC)OC1C=C(CC(C1NC(=O)C)N)C(=O)OCC"
     },
     {
       "id": "struct-cefcapene-pivoxil",
       "name_ja": "セフカペンピボキシル",
       "name_en": "Cefcapene pivoxil",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5282438,
       "scaffold": "β-ラクタム(セフェム)",
-      "functional_groups": ["ピバロイルオキシメチル基", "β-ラクタム環"],
+      "functional_groups": [
+        "ピバロイルオキシメチル基",
+        "β-ラクタム環"
+      ],
       "category": "prodrug",
       "priority": 3,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "CCC=C(C1=CSC(=N1)N)C(=O)NC2C3N(C2=O)C(=C(CS3)COC(=O)N)C(=O)OCOC(=O)C(C)(C)C"
     },
     {
       "id": "struct-clopidogrel",
       "name_ja": "クロピドグレル",
       "name_en": "Clopidogrel",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 60606,
       "scaffold": "チエノピリジン",
-      "functional_groups": ["チオフェン環", "塩素", "メチルエステル"],
+      "functional_groups": [
+        "チオフェン環",
+        "塩素",
+        "メチルエステル"
+      ],
       "category": "prodrug",
       "priority": 3,
-      "subjects": ["薬理", "実務"]
+      "subjects": [
+        "薬理",
+        "実務"
+      ],
+      "smiles": "COC(=O)C(C1=CC=CC=C1Cl)N2CCC3=C(C2)C=CS3"
     },
     {
       "id": "struct-docarpamine",
       "name_ja": "ドカルパミン",
       "name_en": "Docarpamine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 71137,
       "scaffold": "カテコール誘導体",
-      "functional_groups": ["カルバメート基", "アミド結合"],
+      "functional_groups": [
+        "カルバメート基",
+        "アミド結合"
+      ],
       "category": "prodrug",
       "priority": 3,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "CCOC(=O)OC1=C(C=C(C=C1)CCNC(=O)C(CCSC)NC(=O)C)OC(=O)OCC"
     },
     {
       "id": "struct-aflatoxin-b1",
       "name_ja": "アフラトキシンB1",
       "name_en": "Aflatoxin B1",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 186907,
       "scaffold": "フロクマリン骨格",
-      "functional_groups": ["フラン環", "ラクトン環"],
+      "functional_groups": [
+        "フラン環",
+        "ラクトン環"
+      ],
       "category": "carcinogen",
       "priority": 3,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "COC1=C2C3=C(C(=O)CC3)C(=O)OC2=C4C5C=COC5OC4=C1"
     },
     {
       "id": "struct-benzo-a-pyrene",
       "name_ja": "ベンゾ[a]ピレン",
       "name_en": "Benzo[a]pyrene",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 2336,
       "scaffold": "多環芳香族",
-      "functional_groups": ["5環縮合構造"],
+      "functional_groups": [
+        "5環縮合構造"
+      ],
       "category": "carcinogen",
       "priority": 3,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C1=CC=C2C3=C4C(=CC2=C1)C=CC5=C4C(=CC=C5)C=C3"
     },
     {
       "id": "struct-ndma",
       "name_ja": "N-ニトロソジメチルアミン",
       "name_en": "N-Nitrosodimethylamine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6124,
       "scaffold": "ニトロソアミン",
-      "functional_groups": ["N-ニトロソ基", "メチル基"],
+      "functional_groups": [
+        "N-ニトロソ基",
+        "メチル基"
+      ],
       "category": "carcinogen",
       "priority": 3,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CN(C)N=O"
     },
     {
       "id": "struct-acrylamide",
       "name_ja": "アクリルアミド",
       "name_en": "Acrylamide",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6579,
       "scaffold": "アクリル酸アミド",
-      "functional_groups": ["ビニル基", "アミド基"],
+      "functional_groups": [
+        "ビニル基",
+        "アミド基"
+      ],
       "category": "carcinogen",
       "priority": 3,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C=CC(=O)N"
     },
     {
       "id": "struct-o-toluidine",
       "name_ja": "o-トルイジン",
       "name_en": "o-Toluidine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 7242,
       "scaffold": "アニリン誘導体",
-      "functional_groups": ["アミノ基", "メチル基"],
+      "functional_groups": [
+        "アミノ基",
+        "メチル基"
+      ],
       "category": "carcinogen",
       "priority": 3,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC1=CC=CC=C1N"
     },
     {
       "id": "struct-benzidine",
       "name_ja": "ベンジジン",
       "name_en": "Benzidine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 7111,
       "scaffold": "ビフェニル",
-      "functional_groups": ["アミノ基×2"],
+      "functional_groups": [
+        "アミノ基×2"
+      ],
       "category": "carcinogen",
       "priority": 3,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C1=CC(=CC=C1C2=CC=C(C=C2)N)N"
     },
     {
       "id": "struct-beta-naphthylamine",
       "name_ja": "β-ナフチルアミン",
       "name_en": "beta-Naphthylamine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 7057,
       "scaffold": "ナフタレン",
-      "functional_groups": ["アミノ基"],
+      "functional_groups": [
+        "アミノ基"
+      ],
       "category": "carcinogen",
       "priority": 3,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C1=CC=C2C=C(C=CC2=C1)N"
     },
     {
       "id": "struct-bcme",
       "name_ja": "ビス(クロロメチル)エーテル",
       "name_en": "Bis(chloromethyl) ether",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 10967,
       "scaffold": "エーテル",
-      "functional_groups": ["クロロメチル基×2"],
+      "functional_groups": [
+        "クロロメチル基×2"
+      ],
       "category": "carcinogen",
       "priority": 3,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C(OCCl)Cl"
     },
     {
       "id": "struct-vinyl-chloride",
       "name_ja": "塩化ビニル",
       "name_en": "Vinyl chloride",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6338,
       "scaffold": "エチレン誘導体",
-      "functional_groups": ["塩素", "ビニル基"],
+      "functional_groups": [
+        "塩素",
+        "ビニル基"
+      ],
       "category": "carcinogen",
       "priority": 3,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C=CCl"
     },
     {
       "id": "struct-deoxynivalenol",
       "name_ja": "デオキシニバレノール",
       "name_en": "Deoxynivalenol",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 40024,
       "scaffold": "トリコテセン骨格",
-      "functional_groups": ["エポキシ環", "ヒドロキシ基"],
+      "functional_groups": [
+        "エポキシ環",
+        "ヒドロキシ基"
+      ],
       "category": "carcinogen",
       "priority": 3,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC1=CC2C(C(C1=O)O)(C3(CC(C(C34CO4)O2)O)C)CO"
     },
     {
       "id": "struct-tcdd",
       "name_ja": "2,3,7,8-TCDD",
       "name_en": "2,3,7,8-TCDD",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 15625,
       "scaffold": "ジベンゾ-p-ジオキシン",
-      "functional_groups": ["塩素×4", "ジオキシン環"],
+      "functional_groups": [
+        "塩素×4",
+        "ジオキシン環"
+      ],
       "category": "carcinogen",
       "priority": 3,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C1=C2C(=CC(=C1Cl)Cl)OC3=CC(=C(C=C3O2)Cl)Cl"
     },
     {
       "id": "struct-phenacetin",
       "name_ja": "フェナセチン",
       "name_en": "Phenacetin",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 4754,
       "scaffold": "アセトアニリド誘導体",
-      "functional_groups": ["アセトアミド基", "エトキシ基"],
+      "functional_groups": [
+        "アセトアミド基",
+        "エトキシ基"
+      ],
       "category": "carcinogen",
       "priority": 3,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CCOC1=CC=C(C=C1)NC(=O)C"
     },
     {
       "id": "struct-aspartame",
       "name_ja": "アスパルテーム",
       "name_en": "Aspartame",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 134601,
       "scaffold": "ジペプチドメチルエステル",
-      "functional_groups": ["アスパラギン酸", "フェニルアラニンメチルエステル"],
+      "functional_groups": [
+        "アスパラギン酸",
+        "フェニルアラニンメチルエステル"
+      ],
       "category": "sweetener",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "COC(=O)C(CC1=CC=CC=C1)NC(=O)C(CC(=O)O)N"
     },
     {
       "id": "struct-saccharin",
       "name_ja": "サッカリン",
       "name_en": "Saccharin",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5143,
       "scaffold": "ベンゾイソチアゾール",
-      "functional_groups": ["スルホンアミド基", "カルボニル基"],
+      "functional_groups": [
+        "スルホンアミド基",
+        "カルボニル基"
+      ],
       "category": "sweetener",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C1=CC=C2C(=C1)C(=O)NS2(=O)=O"
     },
     {
       "id": "struct-acesulfame-k",
       "name_ja": "アセスルファムカリウム",
       "name_en": "Acesulfame potassium",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 11074431,
       "scaffold": "オキサチアジノン環",
-      "functional_groups": ["スルホニル基", "カルボニル基"],
+      "functional_groups": [
+        "スルホニル基",
+        "カルボニル基"
+      ],
       "category": "sweetener",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC1=CC(=O)[N-]S(=O)(=O)O1.[K+]"
     },
     {
       "id": "struct-sucralose",
       "name_ja": "スクラロース",
       "name_en": "Sucralose",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 71485,
       "scaffold": "スクロース誘導体",
-      "functional_groups": ["塩素×3", "ヒドロキシ基"],
+      "functional_groups": [
+        "塩素×3",
+        "ヒドロキシ基"
+      ],
       "category": "sweetener",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C(C1C(C(C(C(O1)OC2(C(C(C(O2)CCl)O)O)CCl)O)O)Cl)O"
     },
     {
       "id": "struct-stevioside",
       "name_ja": "ステビオシド",
       "name_en": "Stevioside",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 442089,
       "scaffold": "ジテルペン配糖体",
-      "functional_groups": ["エント-カウレン骨格", "配糖体"],
+      "functional_groups": [
+        "エント-カウレン骨格",
+        "配糖体"
+      ],
       "category": "sweetener",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC12CCCC(C1CCC34C2CCC(C3)(C(=C)C4)OC5C(C(C(C(O5)CO)O)O)OC6C(C(C(C(O6)CO)O)O)O)(C)C(=O)OC7C(C(C(C(O7)CO)O)O)O"
     },
     {
       "id": "struct-glycyrrhizin",
       "name_ja": "グリチルリチン",
       "name_en": "Glycyrrhizin",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 14982,
       "scaffold": "トリテルペン配糖体",
-      "functional_groups": ["オレアナン骨格", "グルクロン酸×2"],
+      "functional_groups": [
+        "オレアナン骨格",
+        "グルクロン酸×2"
+      ],
       "category": "sweetener",
       "priority": 4,
-      "subjects": ["衛生", "化学"]
+      "subjects": [
+        "衛生",
+        "化学"
+      ],
+      "smiles": "CC1(C2CCC3(C(C2(CCC1OC4C(C(C(C(O4)C(=O)O)O)O)OC5C(C(C(C(O5)C(=O)O)O)O)O)C)C(=O)C=C6C3(CCC7(C6CC(CC7)(C)C(=O)O)C)C)C)C"
     },
     {
       "id": "struct-sorbic-acid",
       "name_ja": "ソルビン酸",
       "name_en": "Sorbic acid",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 643460,
       "scaffold": "不飽和脂肪酸",
-      "functional_groups": ["共役二重結合", "カルボキシ基"],
+      "functional_groups": [
+        "共役二重結合",
+        "カルボキシ基"
+      ],
       "category": "preservative",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC=CC=CC(=O)O"
     },
     {
       "id": "struct-benzoic-acid",
       "name_ja": "安息香酸",
       "name_en": "Benzoic acid",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 243,
       "scaffold": "芳香族カルボン酸",
-      "functional_groups": ["カルボキシ基", "ベンゼン環"],
+      "functional_groups": [
+        "カルボキシ基",
+        "ベンゼン環"
+      ],
       "category": "preservative",
       "priority": 4,
-      "subjects": ["衛生", "化学"]
+      "subjects": [
+        "衛生",
+        "化学"
+      ],
+      "smiles": "C1=CC=C(C=C1)C(=O)O"
     },
     {
       "id": "struct-dehydroacetic-acid",
       "name_ja": "デヒドロ酢酸",
       "name_en": "Dehydroacetic acid",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 122903,
       "scaffold": "ピラノン環",
-      "functional_groups": ["ラクトン環", "アセチル基"],
+      "functional_groups": [
+        "ラクトン環",
+        "アセチル基"
+      ],
       "category": "preservative",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC1=CC(=O)C(C(=O)O1)C(=O)C"
     },
     {
       "id": "struct-methylparaben",
       "name_ja": "パラオキシ安息香酸メチル",
       "name_en": "Methylparaben",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 7456,
       "scaffold": "安息香酸エステル",
-      "functional_groups": ["エステル基", "フェノール性OH"],
+      "functional_groups": [
+        "エステル基",
+        "フェノール性OH"
+      ],
       "category": "preservative",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "COC(=O)C1=CC=C(C=C1)O"
     },
     {
       "id": "struct-propionic-acid",
       "name_ja": "プロピオン酸",
       "name_en": "Propionic acid",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 1032,
       "scaffold": "短鎖脂肪酸",
-      "functional_groups": ["カルボキシ基"],
+      "functional_groups": [
+        "カルボキシ基"
+      ],
       "category": "preservative",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CCC(=O)O"
     },
     {
       "id": "struct-bha",
       "name_ja": "BHA",
       "name_en": "BHA",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 8456,
       "scaffold": "フェノール誘導体",
-      "functional_groups": ["tert-ブチル基", "メトキシ基", "フェノール性OH"],
+      "functional_groups": [
+        "tert-ブチル基",
+        "メトキシ基",
+        "フェノール性OH"
+      ],
       "category": "antioxidant",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC(C)(C)C1=C(C=CC(=C1)OC)O"
     },
     {
       "id": "struct-bht",
       "name_ja": "BHT",
       "name_en": "BHT",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 31404,
       "scaffold": "ヒンダードフェノール",
-      "functional_groups": ["tert-ブチル基×2", "メチル基", "フェノール性OH"],
+      "functional_groups": [
+        "tert-ブチル基×2",
+        "メチル基",
+        "フェノール性OH"
+      ],
       "category": "antioxidant",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC1=CC(=C(C(=C1)C(C)(C)C)O)C(C)(C)C"
     },
     {
       "id": "struct-erythorbic-acid",
       "name_ja": "エリソルビン酸",
       "name_en": "Erythorbic acid",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 54675810,
       "scaffold": "ラクトン環(アスコルビン酸エピマー)",
-      "functional_groups": ["エンジオール基", "ラクトン環"],
+      "functional_groups": [
+        "エンジオール基",
+        "ラクトン環"
+      ],
       "category": "antioxidant",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C(C(C1C(=C(C(=O)O1)O)O)O)O"
     },
     {
       "id": "struct-propyl-gallate",
       "name_ja": "没食子酸プロピル",
       "name_en": "Propyl gallate",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 4947,
       "scaffold": "ガロイル基",
-      "functional_groups": ["トリヒドロキシベンゼン", "プロピルエステル"],
+      "functional_groups": [
+        "トリヒドロキシベンゼン",
+        "プロピルエステル"
+      ],
       "category": "antioxidant",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CCCOC(=O)C1=CC(=C(C(=C1)O)O)O"
     },
     {
       "id": "struct-opp",
       "name_ja": "OPP",
       "name_en": "o-Phenylphenol",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 7017,
       "scaffold": "ビフェニル",
-      "functional_groups": ["フェノール性OH"],
+      "functional_groups": [
+        "フェノール性OH"
+      ],
       "category": "antifungal",
       "priority": 5,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C1=CC=C(C=C1)C2=CC=CC=C2O"
     },
     {
       "id": "struct-tbz",
       "name_ja": "TBZ",
       "name_en": "Thiabendazole",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5430,
       "scaffold": "ベンゾイミダゾール+チアゾール",
-      "functional_groups": ["ベンゾイミダゾール環", "チアゾール環"],
+      "functional_groups": [
+        "ベンゾイミダゾール環",
+        "チアゾール環"
+      ],
       "category": "antifungal",
       "priority": 5,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C1=CC=C2C(=C1)NC(=N2)C3=CSC=N3"
     },
     {
       "id": "struct-imazalil",
       "name_ja": "イマザリル",
       "name_en": "Imazalil",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 37175,
       "scaffold": "イミダゾール誘導体",
-      "functional_groups": ["イミダゾール環", "ジクロロフェニル基", "アリルオキシ基"],
+      "functional_groups": [
+        "イミダゾール環",
+        "ジクロロフェニル基",
+        "アリルオキシ基"
+      ],
       "category": "antifungal",
       "priority": 5,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C=CCOC(CN1C=CN=C1)C2=C(C=C(C=C2)Cl)Cl"
     },
     {
       "id": "struct-diphenyl",
       "name_ja": "ジフェニル",
       "name_en": "Biphenyl",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 7095,
       "scaffold": "ビフェニル",
       "functional_groups": [],
       "category": "antifungal",
       "priority": 5,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C1=CC=C(C=C1)C2=CC=CC=C2"
     },
     {
       "id": "struct-malathion",
       "name_ja": "マラチオン",
       "name_en": "Malathion",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 4004,
       "scaffold": "有機リン(ジチオリン酸)",
-      "functional_groups": ["チオリン酸エステル", "コハク酸ジエチル"],
+      "functional_groups": [
+        "チオリン酸エステル",
+        "コハク酸ジエチル"
+      ],
       "category": "pesticide",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CCOC(=O)CC(C(=O)OCC)SP(=S)(OC)OC"
     },
     {
       "id": "struct-parathion",
       "name_ja": "パラチオン",
       "name_en": "Parathion",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 991,
       "scaffold": "有機リン(チオリン酸)",
-      "functional_groups": ["チオリン酸エステル", "ニトロフェニル基"],
+      "functional_groups": [
+        "チオリン酸エステル",
+        "ニトロフェニル基"
+      ],
       "category": "pesticide",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CCOP(=S)(OCC)OC1=CC=C(C=C1)[N+](=O)[O-]"
     },
     {
       "id": "struct-ddt",
       "name_ja": "DDT",
       "name_en": "DDT",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 3036,
       "scaffold": "ジフェニルトリクロロエタン",
-      "functional_groups": ["トリクロロメチル基", "塩素化フェニル×2"],
+      "functional_groups": [
+        "トリクロロメチル基",
+        "塩素化フェニル×2"
+      ],
       "category": "pesticide",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C1=CC(=CC=C1C(C2=CC=C(C=C2)Cl)C(Cl)(Cl)Cl)Cl"
     },
     {
       "id": "struct-glyphosate",
       "name_ja": "グリホサート",
       "name_en": "Glyphosate",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 3496,
       "scaffold": "アミノ酸系除草剤",
-      "functional_groups": ["ホスホン酸基", "アミノ基", "カルボキシ基"],
+      "functional_groups": [
+        "ホスホン酸基",
+        "アミノ基",
+        "カルボキシ基"
+      ],
       "category": "pesticide",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C(C(=O)O)NCP(=O)(O)O"
     },
     {
       "id": "struct-paraquat",
       "name_ja": "パラコート",
       "name_en": "Paraquat",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 15939,
       "scaffold": "ビピリジニウム",
-      "functional_groups": ["4級窒素×2", "メチル基×2"],
+      "functional_groups": [
+        "4級窒素×2",
+        "メチル基×2"
+      ],
       "category": "pesticide",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C[N+]1=CC=C(C=C1)C2=CC=[N+](C=C2)C"
     },
     {
       "id": "struct-permethrin",
       "name_ja": "ペルメトリン",
       "name_en": "Permethrin",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 40326,
       "scaffold": "ピレスロイド",
-      "functional_groups": ["シクロプロパン環", "ジクロロビニル基", "エステル結合"],
+      "functional_groups": [
+        "シクロプロパン環",
+        "ジクロロビニル基",
+        "エステル結合"
+      ],
       "category": "pesticide",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC1(C(C1C(=O)OCC2=CC(=CC=C2)OC3=CC=CC=C3)C=C(Cl)Cl)C"
     },
     {
       "id": "struct-carbaryl",
       "name_ja": "カルバリル",
       "name_en": "Carbaryl",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6129,
       "scaffold": "カーバメート",
-      "functional_groups": ["カルバモイル基", "ナフチル基"],
+      "functional_groups": [
+        "カルバモイル基",
+        "ナフチル基"
+      ],
       "category": "pesticide",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CNC(=O)OC1=CC=CC2=CC=CC=C21"
     },
     {
       "id": "struct-diazinon",
       "name_ja": "ダイアジノン",
       "name_en": "Diazinon",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 3017,
       "scaffold": "有機リン+ピリミジン",
-      "functional_groups": ["チオリン酸エステル", "ピリミジン環", "イソプロピル基"],
+      "functional_groups": [
+        "チオリン酸エステル",
+        "ピリミジン環",
+        "イソプロピル基"
+      ],
       "category": "pesticide",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CCOP(=S)(OCC)OC1=NC(=NC(=C1)C)C(C)C"
     },
     {
       "id": "struct-pcb",
       "name_ja": "PCB",
-      "name_en": "PCB",
-      "pubchem_cid": null,
-      "smiles": null,
+      "name_en": "2,2',4,4',5,5'-Hexachlorobiphenyl",
+      "pubchem_cid": 37034,
+      "smiles": "C1=C(C(=CC(=C1Cl)Cl)Cl)C2=CC(=C(C=C2Cl)Cl)Cl",
       "scaffold": "ポリ塩化ビフェニル",
-      "functional_groups": ["ビフェニル", "塩素(多数)"],
+      "functional_groups": [
+        "ビフェニル",
+        "塩素(多数)"
+      ],
       "category": "endocrine_disruptor",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ]
     },
     {
       "id": "struct-bisphenol-a",
       "name_ja": "ビスフェノールA",
       "name_en": "Bisphenol A",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6623,
       "scaffold": "ビスフェノール",
-      "functional_groups": ["フェノール性OH×2", "イソプロピリデン基"],
+      "functional_groups": [
+        "フェノール性OH×2",
+        "イソプロピリデン基"
+      ],
       "category": "endocrine_disruptor",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CC(C)(C1=CC=C(C=C1)O)C2=CC=C(C=C2)O"
     },
     {
       "id": "struct-dehp",
       "name_ja": "フタル酸ジ(2-エチルヘキシル)",
       "name_en": "DEHP",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 8343,
       "scaffold": "フタル酸エステル",
-      "functional_groups": ["フタル酸", "2-エチルヘキシルエステル×2"],
+      "functional_groups": [
+        "フタル酸",
+        "2-エチルヘキシルエステル×2"
+      ],
       "category": "endocrine_disruptor",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CCCCC(CC)COC(=O)C1=CC=CC=C1C(=O)OCC(CC)CCCC"
     },
     {
       "id": "struct-nonylphenol",
       "name_ja": "ノニルフェノール",
       "name_en": "Nonylphenol",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 67296,
       "scaffold": "アルキルフェノール",
-      "functional_groups": ["フェノール性OH", "ノニル基"],
+      "functional_groups": [
+        "フェノール性OH",
+        "ノニル基"
+      ],
       "category": "endocrine_disruptor",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CCCCCCCCCC1=CC=CC=C1O"
     },
     {
       "id": "struct-tributyltin",
       "name_ja": "トリブチルスズ",
       "name_en": "Tributyltin",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5948,
       "scaffold": "有機スズ",
-      "functional_groups": ["スズ", "ブチル基×3"],
+      "functional_groups": [
+        "スズ",
+        "ブチル基×3"
+      ],
       "category": "endocrine_disruptor",
       "priority": 4,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CCCC[SnH](CCCC)CCCC"
     },
     {
       "id": "struct-pralidoxime",
       "name_ja": "プラリドキシム(PAM)",
       "name_en": "Pralidoxime",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 135398747,
       "scaffold": "ピリジニウムオキシム",
-      "functional_groups": ["ピリジニウム環", "オキシム基"],
+      "functional_groups": [
+        "ピリジニウム環",
+        "オキシム基"
+      ],
       "category": "antidote",
       "priority": 4,
-      "subjects": ["衛生", "薬理"]
+      "subjects": [
+        "衛生",
+        "薬理"
+      ],
+      "smiles": "C[N+]1=CC=CC=C1C=NO"
     },
     {
       "id": "struct-atropine",
       "name_ja": "アトロピン",
       "name_en": "Atropine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 174174,
       "scaffold": "トロパン骨格",
-      "functional_groups": ["トロパン環", "エステル結合", "フェニル基", "ヒドロキシ基"],
+      "functional_groups": [
+        "トロパン環",
+        "エステル結合",
+        "フェニル基",
+        "ヒドロキシ基"
+      ],
       "category": "antidote",
       "priority": 4,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "CN1C2CCC1CC(C2)OC(=O)C(CO)C3=CC=CC=C3"
     },
     {
       "id": "struct-nac",
       "name_ja": "N-アセチルシステイン",
       "name_en": "N-Acetylcysteine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 12035,
       "scaffold": "システイン誘導体",
-      "functional_groups": ["アセチルアミノ基", "チオール基", "カルボキシ基"],
+      "functional_groups": [
+        "アセチルアミノ基",
+        "チオール基",
+        "カルボキシ基"
+      ],
       "category": "antidote",
       "priority": 4,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "CC(=O)NC(CS)C(=O)O"
     },
     {
       "id": "struct-dimercaprol",
       "name_ja": "ジメルカプロール(BAL)",
       "name_en": "Dimercaprol",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 3080,
       "scaffold": "プロパンジオール",
-      "functional_groups": ["チオール基×2", "ヒドロキシ基"],
+      "functional_groups": [
+        "チオール基×2",
+        "ヒドロキシ基"
+      ],
       "category": "antidote",
       "priority": 4,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "C(C(CS)S)O"
     },
     {
       "id": "struct-deferoxamine",
       "name_ja": "デフェロキサミン",
       "name_en": "Deferoxamine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 2973,
       "scaffold": "ヒドロキサム酸",
-      "functional_groups": ["ヒドロキサム酸基×3", "アミド結合"],
+      "functional_groups": [
+        "ヒドロキサム酸基×3",
+        "アミド結合"
+      ],
       "category": "antidote",
       "priority": 4,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "CC(=O)N(CCCCCNC(=O)CCC(=O)N(CCCCCNC(=O)CCC(=O)N(CCCCCN)O)O)O"
     },
     {
       "id": "struct-naloxone",
       "name_ja": "ナロキソン",
       "name_en": "Naloxone",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5284596,
       "scaffold": "モルフィナン骨格",
-      "functional_groups": ["フェノール性OH", "カルボニル基", "アリル基"],
+      "functional_groups": [
+        "フェノール性OH",
+        "カルボニル基",
+        "アリル基"
+      ],
       "category": "antidote",
       "priority": 4,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "C=CCN1CCC23C4C(=O)CCC2(C1CC5=C3C(=C(C=C5)O)O4)O"
     },
     {
       "id": "struct-flumazenil",
       "name_ja": "フルマゼニル",
       "name_en": "Flumazenil",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 3373,
       "scaffold": "イミダゾベンゾジアゼピン",
-      "functional_groups": ["イミダゾール環", "カルボニル基", "フッ素", "エチルエステル"],
+      "functional_groups": [
+        "イミダゾール環",
+        "カルボニル基",
+        "フッ素",
+        "エチルエステル"
+      ],
       "category": "antidote",
       "priority": 4,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "CCOC(=O)C1=C2CN(C(=O)C3=C(N2C=N1)C=CC(=C3)F)C"
     },
     {
       "id": "struct-methylene-blue",
       "name_ja": "メチレンブルー",
       "name_en": "Methylene blue",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 6099,
       "scaffold": "フェノチアジン誘導体",
-      "functional_groups": ["フェノチアジン環", "ジメチルアミノ基×2"],
+      "functional_groups": [
+        "フェノチアジン環",
+        "ジメチルアミノ基×2"
+      ],
       "category": "antidote",
       "priority": 4,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "CN(C)C1=CC2=C(C=C1)N=C3C=CC(=[N+](C)C)C=C3S2.[Cl-]"
     },
     {
       "id": "struct-epa",
       "name_ja": "EPA",
       "name_en": "Eicosapentaenoic acid",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5282847,
       "scaffold": "ω-3多価不飽和脂肪酸",
-      "functional_groups": ["二重結合×5", "カルボキシ基"],
+      "functional_groups": [
+        "二重結合×5",
+        "カルボキシ基"
+      ],
       "category": "foshu",
       "priority": 5,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CCC=CCC=CCC=CCC=CCC=CCCCC(=O)O"
     },
     {
       "id": "struct-dha",
       "name_ja": "DHA",
       "name_en": "Docosahexaenoic acid",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 445580,
       "scaffold": "ω-3多価不飽和脂肪酸",
-      "functional_groups": ["二重結合×6", "カルボキシ基"],
+      "functional_groups": [
+        "二重結合×6",
+        "カルボキシ基"
+      ],
       "category": "foshu",
       "priority": 5,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "CCC=CCC=CCC=CCC=CCC=CCC=CCCC(=O)O"
     },
     {
       "id": "struct-daidzein",
       "name_ja": "ダイゼイン",
       "name_en": "Daidzein",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5281708,
       "scaffold": "イソフラボン",
-      "functional_groups": ["イソフラボン骨格", "フェノール性OH×2"],
+      "functional_groups": [
+        "イソフラボン骨格",
+        "フェノール性OH×2"
+      ],
       "category": "foshu",
       "priority": 5,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C1=CC(=CC=C1C2=COC3=C(C2=O)C=CC(=C3)O)O"
     },
     {
       "id": "struct-egcg",
       "name_ja": "EGCG",
       "name_en": "Epigallocatechin gallate",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 65064,
       "scaffold": "カテキン+ガロイル基",
-      "functional_groups": ["フラバン-3-オール", "ガロイルエステル", "フェノール性OH(多数)"],
+      "functional_groups": [
+        "フラバン-3-オール",
+        "ガロイルエステル",
+        "フェノール性OH(多数)"
+      ],
       "category": "foshu",
       "priority": 5,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ],
+      "smiles": "C1C(C(OC2=CC(=CC(=C21)O)O)C3=CC(=C(C(=C3)O)O)O)OC(=O)C4=CC(=C(C(=C4)O)O)O"
     },
     {
       "id": "struct-indigestible-dextrin",
@@ -1615,154 +2304,237 @@
       "pubchem_cid": null,
       "smiles": null,
       "scaffold": "デキストリン(分岐グルコース重合体)",
-      "functional_groups": ["グルコース単位", "α-1,4/1,6結合"],
+      "functional_groups": [
+        "グルコース単位",
+        "α-1,4/1,6結合"
+      ],
       "category": "foshu",
       "priority": 5,
-      "subjects": ["衛生"]
+      "subjects": [
+        "衛生"
+      ]
     },
     {
       "id": "struct-adrenaline",
       "name_ja": "アドレナリン",
       "name_en": "Adrenaline",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5816,
       "scaffold": "カテコールアミン",
-      "functional_groups": ["カテコール基", "β-ヒドロキシ基", "N-メチルアミノ基"],
+      "functional_groups": [
+        "カテコール基",
+        "β-ヒドロキシ基",
+        "N-メチルアミノ基"
+      ],
       "category": "pharmacology",
       "priority": 3,
-      "subjects": ["化学", "薬理"]
+      "subjects": [
+        "化学",
+        "薬理"
+      ],
+      "smiles": "CNCC(C1=CC(=C(C=C1)O)O)O"
     },
     {
       "id": "struct-noradrenaline",
       "name_ja": "ノルアドレナリン",
       "name_en": "Noradrenaline",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 439260,
       "scaffold": "カテコールアミン",
-      "functional_groups": ["カテコール基", "β-ヒドロキシ基", "アミノ基"],
+      "functional_groups": [
+        "カテコール基",
+        "β-ヒドロキシ基",
+        "アミノ基"
+      ],
       "category": "pharmacology",
       "priority": 3,
-      "subjects": ["化学", "薬理"]
+      "subjects": [
+        "化学",
+        "薬理"
+      ],
+      "smiles": "C1=CC(=C(C=C1C(CN)O)O)O"
     },
     {
       "id": "struct-dopamine",
       "name_ja": "ドパミン",
       "name_en": "Dopamine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 681,
       "scaffold": "カテコールアミン",
-      "functional_groups": ["カテコール基", "アミノ基"],
+      "functional_groups": [
+        "カテコール基",
+        "アミノ基"
+      ],
       "category": "pharmacology",
       "priority": 3,
-      "subjects": ["化学", "薬理"]
+      "subjects": [
+        "化学",
+        "薬理"
+      ],
+      "smiles": "C1=CC(=C(C=C1CCN)O)O"
     },
     {
       "id": "struct-acetylcholine",
       "name_ja": "アセチルコリン",
       "name_en": "Acetylcholine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 187,
       "scaffold": "コリンエステル",
-      "functional_groups": ["アセチル基", "4級アンモニウム"],
+      "functional_groups": [
+        "アセチル基",
+        "4級アンモニウム"
+      ],
       "category": "pharmacology",
       "priority": 3,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "CC(=O)OCC[N+](C)(C)C"
     },
     {
       "id": "struct-indomethacin",
       "name_ja": "インドメタシン",
       "name_en": "Indomethacin",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 3715,
       "scaffold": "インドール酢酸",
-      "functional_groups": ["インドール環", "メトキシ基", "塩素", "カルボキシ基"],
+      "functional_groups": [
+        "インドール環",
+        "メトキシ基",
+        "塩素",
+        "カルボキシ基"
+      ],
       "category": "pharmacology",
       "priority": 3,
-      "subjects": ["化学", "薬理"]
+      "subjects": [
+        "化学",
+        "薬理"
+      ],
+      "smiles": "CC1=C(C2=C(N1C(=O)C3=CC=C(C=C3)Cl)C=CC(=C2)OC)CC(=O)O"
     },
     {
       "id": "struct-diclofenac",
       "name_ja": "ジクロフェナク",
       "name_en": "Diclofenac",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 3033,
       "scaffold": "フェニル酢酸",
-      "functional_groups": ["ジクロロフェニル基", "アミノ基", "カルボキシ基"],
+      "functional_groups": [
+        "ジクロロフェニル基",
+        "アミノ基",
+        "カルボキシ基"
+      ],
       "category": "pharmacology",
       "priority": 3,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "C1=CC=C(C(=C1)CC(=O)O)NC2=C(C=CC=C2Cl)Cl"
     },
     {
       "id": "struct-cimetidine",
       "name_ja": "シメチジン",
       "name_en": "Cimetidine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 2756,
       "scaffold": "イミダゾール誘導体",
-      "functional_groups": ["イミダゾール環", "シアノグアニジン基", "チオエーテル"],
+      "functional_groups": [
+        "イミダゾール環",
+        "シアノグアニジン基",
+        "チオエーテル"
+      ],
       "category": "pharmacology",
       "priority": 3,
-      "subjects": ["薬理", "実務"]
+      "subjects": [
+        "薬理",
+        "実務"
+      ],
+      "smiles": "CC1=C(N=CN1)CSCCNC(=NC)NC#N"
     },
     {
       "id": "struct-warfarin",
       "name_ja": "ワルファリン",
       "name_en": "Warfarin",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 54678486,
       "scaffold": "クマリン誘導体",
-      "functional_groups": ["クマリン環", "4-ヒドロキシ基"],
+      "functional_groups": [
+        "クマリン環",
+        "4-ヒドロキシ基"
+      ],
       "category": "pharmacology",
       "priority": 3,
-      "subjects": ["薬理", "実務"]
+      "subjects": [
+        "薬理",
+        "実務"
+      ],
+      "smiles": "CC(=O)CC(C1=CC=CC=C1)C2=C(C3=CC=CC=C3OC2=O)O"
     },
     {
       "id": "struct-methamphetamine",
       "name_ja": "メタンフェタミン",
       "name_en": "Methamphetamine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 10836,
       "scaffold": "フェネチルアミン",
-      "functional_groups": ["フェニル基", "N-メチルアミノ基", "メチル基"],
+      "functional_groups": [
+        "フェニル基",
+        "N-メチルアミノ基",
+        "メチル基"
+      ],
       "category": "pharmacology",
       "priority": 3,
-      "subjects": ["衛生", "薬理"]
+      "subjects": [
+        "衛生",
+        "薬理"
+      ],
+      "smiles": "CC(CC1=CC=CC=C1)NC"
     },
     {
       "id": "struct-codeine",
       "name_ja": "コデイン",
       "name_en": "Codeine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5284371,
       "scaffold": "モルフィナン骨格",
-      "functional_groups": ["メトキシ基", "ヒドロキシ基", "N-メチル基"],
+      "functional_groups": [
+        "メトキシ基",
+        "ヒドロキシ基",
+        "N-メチル基"
+      ],
       "category": "pharmacology",
       "priority": 3,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "CN1CCC23C4C1CC5=C2C(=C(C=C5)OC)OC3C(C=C4)O"
     },
     {
       "id": "struct-morphine",
       "name_ja": "モルヒネ",
       "name_en": "Morphine",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5288826,
       "scaffold": "モルフィナン骨格",
-      "functional_groups": ["フェノール性OH", "アルコール性OH", "N-メチル基"],
+      "functional_groups": [
+        "フェノール性OH",
+        "アルコール性OH",
+        "N-メチル基"
+      ],
       "category": "pharmacology",
       "priority": 3,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O"
     },
     {
       "id": "struct-dexamethasone",
       "name_ja": "デキサメタゾン",
       "name_en": "Dexamethasone",
-      "pubchem_cid": null,
-      "smiles": null,
+      "pubchem_cid": 5743,
       "scaffold": "ステロイド骨格",
-      "functional_groups": ["フッ素", "ヒドロキシ基", "カルボニル基", "メチル基"],
+      "functional_groups": [
+        "フッ素",
+        "ヒドロキシ基",
+        "カルボニル基",
+        "メチル基"
+      ],
       "category": "pharmacology",
       "priority": 3,
-      "subjects": ["薬理"]
+      "subjects": [
+        "薬理"
+      ],
+      "smiles": "CC1CC2C3CCC4=CC(=O)C=CC4(C3(C(CC2(C1(C(=O)CO)O)C)O)F)C"
     }
   ]
 }
