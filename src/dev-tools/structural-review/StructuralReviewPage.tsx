@@ -92,7 +92,14 @@ function buildCompoundGroups(): CompoundGroup[] {
       category: meta?.category ?? 'other',
       mediaUrl,
       cards: cards.sort((a, b) => {
-        const lvl = (id: string) => id.endsWith('-L1') ? 1 : id.endsWith('-L2') ? 2 : 3
+        const lvl = (id: string) => {
+          if (id.endsWith('-L0a')) return 0
+          if (id.endsWith('-L0b')) return 1
+          if (id.endsWith('-L1')) return 2
+          if (id.endsWith('-L2')) return 3
+          if (id.endsWith('-L3')) return 4
+          return 5
+        }
         return lvl(a.id) - lvl(b.id)
       }),
     })
@@ -288,7 +295,11 @@ export default function StructuralReviewPage() {
           {/* 右: L1/L2/L3カード */}
           <div className={styles.cardList}>
             {current.cards.map((card, i) => {
-              const level = card.id.endsWith('-L1') ? 'L1' : card.id.endsWith('-L2') ? 'L2' : `L${i + 1}`
+              const level = card.id.endsWith('-L0a') ? 'L0a 名前→構造' :
+                            card.id.endsWith('-L0b') ? 'L0b 構造→名前' :
+                            card.id.endsWith('-L1') ? 'L1 構造→物質名(詳細)' :
+                            card.id.endsWith('-L2') ? 'L2 物質名→特徴' :
+                            card.id.endsWith('-L3') ? 'L3 部分構造→分類' : `Card ${i + 1}`
               return (
                 <div key={card.id} className={styles.cardItem}>
                   <div className={styles.cardLabel}>{level} — {card.format}</div>
