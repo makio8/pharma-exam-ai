@@ -39,3 +39,6 @@ supabase/.temp/
 
 # Playwright test cache（stale run state）
 test-results/
+
+# Python virtual environment
+.venv/
