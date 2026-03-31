@@ -1,12 +1,12 @@
 [
   {
-    "id": "ex-pharmaceutics-031-calculation-001-formula_to_calculation",
+    "id": "ex-pharmaceutics-031-calculation-001-公式→定常状態濃度の求め方",
     "source_type": "knowledge_atom",
     "source_id": "ex-pharmaceutics-031-calculation-001",
     "primary_exemplar_id": "ex-pharmaceutics-031",
     "subject": "薬剤",
-    "front": "点滴静注の定常状態血中濃度Cssは{{c1::投与速度(R0) / 全身クリアランス(CL)}}で求められる",
-    "back": "投与速度(R0) / 全身クリアランス(CL)",
+    "front": "点滴静注における定常状態血中濃度 Css = {{c1::R0（投与速度）/ CL（全身クリアランス）}}",
+    "back": "Css = R0/CL — 定常状態では薬物の投入速度と消失速度が等しくなるため、血中濃度はCLと投与速度のみで決まり、分布容積（Vd）には依存しない",
     "format": "cloze",
     "tags": [
       "calculation",
@@ -14,8 +14,8 @@
     ],
     "knowledge_atom_id": "ex-pharmaceutics-031-calculation-001",
     "knowledge_type": "calculation",
-    "recall_direction": "formula_to_calculation",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-001-calculation_to_formula",
+    "recall_direction": "公式→定常状態濃度の求め方",
+    "reverse_of_id": "ex-pharmaceutics-031-calculation-001-投与速度→Css×CLから逆算",
     "difficulty_tier": "basic",
     "content_type": "text",
     "generation_model": "claude-opus-4-6",
@@ -27,13 +27,13 @@
     "source_note_ids": []
   },
   {
-    "id": "ex-pharmaceutics-031-calculation-001-calculation_to_formula",
+    "id": "ex-pharmaceutics-031-calculation-001-投与速度→Css×CLから逆算",
     "source_type": "knowledge_atom",
     "source_id": "ex-pharmaceutics-031-calculation-001",
     "primary_exemplar_id": "ex-pharmaceutics-031",
     "subject": "薬剤",
-    "front": "全身クリアランス50 L/hの薬物を10 mg/hで点滴静注した場合、定常状態の血中濃度は?",
-    "back": "Css = 10 mg/h / 50 L/h = 0.2 mg/L = 0.2 μg/mL",
+    "front": "全身CLが40 L/hの薬物を点滴静注し、Css = 0.50 mg/Lにしたい。投与速度（mg/h）は？",
+    "back": "20 mg/h（= 0.50 × 40）— Css = R0/CL を変形して R0 = Css × CL。目標濃度にクリアランスを掛けるだけで投与速度が求まる",
     "format": "question_answer",
     "tags": [
       "calculation",
@@ -41,8 +41,8 @@
     ],
     "knowledge_atom_id": "ex-pharmaceutics-031-calculation-001",
     "knowledge_type": "calculation",
-    "recall_direction": "calculation_to_formula",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-001-formula_to_calculation",
+    "recall_direction": "投与速度→Css×CLから逆算",
+    "reverse_of_id": "ex-pharmaceutics-031-calculation-001-公式→定常状態濃度の求め方",
     "difficulty_tier": "basic",
     "content_type": "text",
     "generation_model": "claude-opus-4-6",
@@ -54,13 +54,41 @@
     "source_note_ids": []
   },
   {
-    "id": "ex-pharmaceutics-031-calculation-002-target_css_to_infusion_rate",
+    "id": "ex-pharmaceutics-031-calculation-002-公式→反復経口投与Css,avの求め方",
     "source_type": "knowledge_atom",
     "source_id": "ex-pharmaceutics-031-calculation-002",
     "primary_exemplar_id": "ex-pharmaceutics-031",
     "subject": "薬剤",
-    "front": "全身クリアランス40 L/hの薬物で定常状態血中濃度0.50 mg/Lを達成したい。投与速度は?",
-    "back": "R0 = Css × CL = 0.50 × 40 = 20 mg/h",
+    "front": "反復経口投与における定常状態の平均血中濃度 Css,av = {{c1::F × D / (CL × τ)}}",
+    "back": "Css,av = F × D / (CL × τ) — 1投与間隔あたりに体内に入る薬物量（F×D）を、クリアランスと投与間隔の積で割る。CL/F = D/AUC の関係も利用できる",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "公式→反復経口投与Css,avの求め方",
+    "reverse_of_id": "ex-pharmaceutics-031-calculation-002-目標Css,avから投与量を逆算",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-171",
+      "r102-171",
+      "r109-046"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-031-calculation-002-目標Css,avから投与量を逆算",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-031-calculation-002",
+    "primary_exemplar_id": "ex-pharmaceutics-031",
+    "subject": "薬剤",
+    "front": "CL/F = 100 L/h の薬物を8時間毎に経口投与し、Css,av = 150 ng/mLにしたい。1回投与量は？",
+    "back": "120 mg（= 100 × 150 × 10⁻⁶ × 8）— D = Css,av × CL/F × τ で求める。単位換算（ng/mL → mg/L）に注意",
     "format": "question_answer",
     "tags": [
       "calculation",
@@ -68,34 +96,8 @@
     ],
     "knowledge_atom_id": "ex-pharmaceutics-031-calculation-002",
     "knowledge_type": "calculation",
-    "recall_direction": "target_css_to_infusion_rate",
-    "difficulty_tier": "basic",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r106-047",
-      "r101-046"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-calculation-003-formula_to_css_oral",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-calculation-003",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "経口反復投与の定常状態平均血中濃度は Css,av = {{c1::F×D / (CL×τ)}} で求められる",
-    "back": "F×D / (CL×τ)",
-    "format": "cloze",
-    "tags": [
-      "calculation",
-      "basic"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-003",
-    "knowledge_type": "calculation",
-    "recall_direction": "formula_to_css_oral",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-003-css_oral_to_dose",
+    "recall_direction": "目標Css,avから投与量を逆算",
+    "reverse_of_id": "ex-pharmaceutics-031-calculation-002-公式→反復経口投与Css,avの求め方",
     "difficulty_tier": "basic",
     "content_type": "text",
     "generation_model": "claude-opus-4-6",
@@ -108,1135 +110,413 @@
     "source_note_ids": []
   },
   {
-    "id": "ex-pharmaceutics-031-calculation-003-css_oral_to_dose",
+    "id": "ex-pharmaceutics-031-pharmacokinetics-001-τ=t1/2のとき蓄積率を答える",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-031-pharmacokinetics-001",
+    "primary_exemplar_id": "ex-pharmaceutics-031",
+    "subject": "薬剤",
+    "front": "投与間隔（τ）= 消失半減期（t1/2）のとき、蓄積率 R = {{c1::2}}",
+    "back": "R = 2 — 蓄積率 R = 1/(1 − e^(−ke×τ))。τ = t1/2 のとき e^(−ke×τ) = 0.5 なので R = 1/(1−0.5) = 2。定常状態の最高血中濃度は初回の2倍になる",
+    "format": "cloze",
+    "tags": [
+      "pharmacokinetics",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-001",
+    "knowledge_type": "pharmacokinetics",
+    "recall_direction": "τ=t1/2のとき蓄積率を答える",
+    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-001-蓄積率の一般公式を答える",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r105-047",
+      "r101-271"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-031-pharmacokinetics-001-蓄積率の一般公式を答える",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-031-pharmacokinetics-001",
+    "primary_exemplar_id": "ex-pharmaceutics-031",
+    "subject": "薬剤",
+    "front": "反復投与における蓄積率 R の公式: R = {{c1::1 / (1 − e^(−ke × τ))}}",
+    "back": "R = 1/(1 − e^(−ke×τ)) — 投与間隔τが短いほど蓄積率は大きくなる。定常状態の最高血中濃度 = 初回Cmax × R",
+    "format": "cloze",
+    "tags": [
+      "pharmacokinetics",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-001",
+    "knowledge_type": "pharmacokinetics",
+    "recall_direction": "蓄積率の一般公式を答える",
+    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-001-τ=t1/2のとき蓄積率を答える",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r105-047",
+      "r101-271"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-031-pharmacokinetics-002-肝抽出率E→CLの変動要因を判別",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-031-pharmacokinetics-002",
+    "primary_exemplar_id": "ex-pharmaceutics-031",
+    "subject": "薬剤",
+    "front": "肝抽出率（E）が0.7より大きい薬物の全身クリアランスは、主にどの要因の変動を受けるか？",
+    "back": "肝血流量の変動を顕著に受ける（血流律速型）— E > 0.7 では肝臓を通過するほぼ全ての薬物が代謝されるため、CLはどれだけ血液が肝臓に流れるか（血流量）で決まる。代謝酵素の活性変化やタンパク結合変動の影響は小さい",
+    "format": "question_answer",
+    "tags": [
+      "pharmacokinetics",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-002",
+    "knowledge_type": "pharmacokinetics",
+    "recall_direction": "肝抽出率E→CLの変動要因を判別",
+    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-002-E<0.3のとき→CLの変動要因",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-170"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-031-pharmacokinetics-002-E<0.3のとき→CLの変動要因",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-031-pharmacokinetics-002",
+    "primary_exemplar_id": "ex-pharmaceutics-031",
+    "subject": "薬剤",
+    "front": "肝抽出率（E）が0.3未満の薬物の全身クリアランスは、主にどの要因の変動を受けるか？",
+    "back": "代謝酵素活性（固有クリアランス）やタンパク結合率の変動を受ける（代謝能律速型）— E < 0.3 では肝臓に到達した薬物の大部分が素通りするため、酵素阻害・誘導やアルブミン結合の変化がCLに直結する",
+    "format": "question_answer",
+    "tags": [
+      "pharmacokinetics",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-002",
+    "knowledge_type": "pharmacokinetics",
+    "recall_direction": "E<0.3のとき→CLの変動要因",
+    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-002-肝抽出率E→CLの変動要因を判別",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-170"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-031-calculation-003-腎機能低下→投与量補正の公式",
     "source_type": "knowledge_atom",
     "source_id": "ex-pharmaceutics-031-calculation-003",
     "primary_exemplar_id": "ex-pharmaceutics-031",
     "subject": "薬剤",
-    "front": "定常状態の平均血中濃度から経口投与量を求める式は D = {{c1::Css,av × CL × τ / F}}",
-    "back": "Css,av × CL × τ / F",
+    "front": "腎機能低下時の投与量補正: D腎障害 = D正常 × {{c1::(1 − fe × (1 − GFR比))}}  ※feは腎排泄率",
+    "back": "D腎障害 = D正常 × (1 − fe × (1 − GFR比)) — 腎排泄率60%の薬物でGFRが50%低下 → 補正係数 = 1 − 0.6 × 0.5 = 0.7（投与量を正常の70%に）。肝クリアランスは変化しない前提",
     "format": "cloze",
     "tags": [
       "calculation",
-      "basic"
+      "applied"
     ],
     "knowledge_atom_id": "ex-pharmaceutics-031-calculation-003",
     "knowledge_type": "calculation",
-    "recall_direction": "css_oral_to_dose",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-003-formula_to_css_oral",
-    "difficulty_tier": "basic",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r100-171",
-      "r102-171",
-      "r109-046"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-calculation-004-auc_to_cl_f",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-calculation-004",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "経口投与後のCL/F（見かけの全身クリアランス）は{{c1::投与量D / AUC}}から求められる",
-    "back": "投与量D / AUC",
-    "format": "cloze",
-    "tags": [
-      "calculation",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-004",
-    "knowledge_type": "calculation",
-    "recall_direction": "auc_to_cl_f",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-004-cl_f_to_dose_design",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r100-171"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-calculation-004-cl_f_to_dose_design",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-calculation-004",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "薬物A 60mg経口投与後のAUCが600 ng・h/mL。8時間毎投与で平均血中濃度150 ng/mLにするための投与量は?",
-    "back": "CL/F = 60mg / 600ng・h/mL = 100 L/h。D = CL/F × Css × τ = 100 × 150×10^-6 × 8 = 120 mg",
-    "format": "question_answer",
-    "tags": [
-      "calculation",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-004",
-    "knowledge_type": "calculation",
-    "recall_direction": "cl_f_to_dose_design",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-004-auc_to_cl_f",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r100-171"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-001-tau_equals_t12_to_R",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-001",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "反復投与で投与間隔τ = 消失半減期t1/2のとき、蓄積率Rは{{c1::2}}である",
-    "back": "2",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "basic"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-001",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "tau_equals_t12_to_R",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-001-R_formula",
-    "difficulty_tier": "basic",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r105-047",
-      "r101-271"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-001-R_formula",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-001",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "反復投与の蓄積率Rの一般式は R = {{c1::1/(1 - e^(-ke×τ))}}",
-    "back": "1/(1 - e^(-ke×τ))",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "basic"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-001",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "R_formula",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-001-tau_equals_t12_to_R",
-    "difficulty_tier": "basic",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r105-047",
-      "r101-271"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-002-t12_to_steady_state_time",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-002",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "薬物が定常状態に達するまでに必要な時間は消失半減期の約{{c1::4〜5}}倍である",
-    "back": "4〜5",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "basic"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-002",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "t12_to_steady_state_time",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-002-amlodipine_steady_state",
-    "difficulty_tier": "basic",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r106-344"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-002-amlodipine_steady_state",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-002",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "アムロジピン(半減期約36時間)が定常状態に達するまでの日数は?",
-    "back": "36h × 5 ≒ 180h ≒ 7.5日 → 約7日",
-    "format": "question_answer",
-    "tags": [
-      "pharmacokinetics",
-      "basic"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-002",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "amlodipine_steady_state",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-002-t12_to_steady_state_time",
-    "difficulty_tier": "basic",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r106-344"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-003-high_E_to_rate_limiting",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-003",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "肝抽出率E > 0.7の薬物では、全身クリアランスは{{c1::肝血流量}}の変動の影響を顕著に受ける",
-    "back": "肝血流量",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-003",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "high_E_to_rate_limiting",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-003-low_E_to_rate_limiting",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r100-170"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-003-low_E_to_rate_limiting",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-003",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "肝抽出率E < 0.3の薬物では、全身クリアランスは{{c1::肝代謝酵素活性やタンパク結合率}}の変動の影響を顕著に受ける",
-    "back": "肝代謝酵素活性やタンパク結合率",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-003",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "low_E_to_rate_limiting",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-003-high_E_to_rate_limiting",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r100-170"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-004-E_calculation",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-004",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "肝抽出率Eは{{c1::CL肝 / 肝血流量(Q肝)}}で計算される",
-    "back": "CL肝 / 肝血流量(Q肝)",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-004",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "E_calculation",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-004-E_threshold_classification",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r100-170"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-004-E_threshold_classification",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-004",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "肝抽出率Eの閾値による薬物分類: E > 0.7 vs E < 0.3",
-    "back": "E > 0.7: 血流律速型(肝血流量依存) → リドカイン、プロプラノロール、モルヒネ。E < 0.3: 代謝能律速型(酵素活性・タンパク結合依存)",
-    "format": "comparison",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-004",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "E_threshold_classification",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-004-E_calculation",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r100-170"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-calculation-005-renal_dose_adjustment_formula",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-calculation-005",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "腎機能低下時の投与量補正(Giusti-Hayton法): D腎障害 = D正常 × {{c1::(1 - fe × (1 - GFR比))}}",
-    "back": "(1 - fe × (1 - GFR比))",
-    "format": "cloze",
-    "tags": [
-      "calculation",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-005",
-    "knowledge_type": "calculation",
-    "recall_direction": "renal_dose_adjustment_formula",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-005-renal_dose_adjustment_example",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r106-173"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-calculation-005-renal_dose_adjustment_example",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-calculation-005",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "腎排泄率60%の薬物で、GFRが正常の50%に低下した場合、投与量を正常時の何%にするか?",
-    "back": "投与量比 = 1 - 0.6 × (1 - 0.5) = 1 - 0.3 = 0.7 → 70%に減量",
-    "format": "question_answer",
-    "tags": [
-      "calculation",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-005",
-    "knowledge_type": "calculation",
-    "recall_direction": "renal_dose_adjustment_example",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-005-renal_dose_adjustment_formula",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r106-173"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-calculation-006-mm_dosing_formula",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-calculation-006",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "非線形薬物動態(フェニトイン)の定常状態における投与速度は R = {{c1::Vmax × Css / (Km + Css)}} で求められる",
-    "back": "Vmax × Css / (Km + Css)",
-    "format": "cloze",
-    "tags": [
-      "calculation",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-006",
-    "knowledge_type": "calculation",
-    "recall_direction": "mm_dosing_formula",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-006-mm_vmax_calculation",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r101-302"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-calculation-006-mm_vmax_calculation",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-calculation-006",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "フェニトイン150 mg/日でCss=5μg/mL、Km=5μg/mLの場合、Vmaxはいくらか?",
-    "back": "R = Vmax×Css/(Km+Css)。150 = Vmax×5/(5+5)。Vmax = 300 mg/日",
-    "format": "question_answer",
-    "tags": [
-      "calculation",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-006",
-    "knowledge_type": "calculation",
-    "recall_direction": "mm_vmax_calculation",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-006-mm_dosing_formula",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r101-302"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-005-phenytoin_nonlinear",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-005",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "フェニトインの体内からの消失は{{c1::ミカエリス・メンテン}}式に従う非線形薬物動態を示す",
-    "back": "ミカエリス・メンテン",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-005",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "phenytoin_nonlinear",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-005-phenytoin_dose_risk",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r101-302"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-005-phenytoin_dose_risk",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-005",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "フェニトインの投与量を少し増やすだけで血中濃度が急上昇するのはなぜか?",
-    "back": "フェニトインの代謝がミカエリス・メンテン式に従い、治療域付近で代謝が飽和に近いため。投与量がVmaxに近づくとCssが急激に上昇する",
-    "format": "question_answer",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-005",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "phenytoin_dose_risk",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-005-phenytoin_nonlinear",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r101-302"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-calculation-007-ke_two_point_formula",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-calculation-007",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "2点の血中濃度から消失速度定数keを求める式: ke = {{c1::ln(C1/C2) / (t2 - t1)}}",
-    "back": "ln(C1/C2) / (t2 - t1)",
-    "format": "cloze",
-    "tags": [
-      "calculation",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-007",
-    "knowledge_type": "calculation",
-    "recall_direction": "ke_two_point_formula",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-007-ke_to_t12",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r108-274"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-calculation-007-ke_to_t12",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-calculation-007",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "消失速度定数keと消失半減期t1/2の関係式: t1/2 = {{c1::0.693 / ke}}",
-    "back": "0.693 / ke",
-    "format": "cloze",
-    "tags": [
-      "calculation",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-007",
-    "knowledge_type": "calculation",
-    "recall_direction": "ke_to_t12",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-007-ke_two_point_formula",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r108-274"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-calculation-008-water_deficit_formula",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-calculation-008",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "高張性脱水の水分欠乏量 = 体水分量(TBW) × {{c1::(1 - 目標Na / 実測Na)}}",
-    "back": "(1 - 目標Na / 実測Na)",
-    "format": "cloze",
-    "tags": [
-      "calculation",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-008",
-    "knowledge_type": "calculation",
-    "recall_direction": "water_deficit_formula",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-008-tbw_calculation",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r101-345"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-calculation-008-tbw_calculation",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-calculation-008",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "成人男性の体水分量(TBW)は体重の約{{c1::60}}%である",
-    "back": "60",
-    "format": "cloze",
-    "tags": [
-      "calculation",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-008",
-    "knowledge_type": "calculation",
-    "recall_direction": "tbw_calculation",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-008-water_deficit_formula",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r101-345"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-006-mrt_formula",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-006",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "平均滞留時間MRTは{{c1::AUMC / AUC}}で求められる",
-    "back": "AUMC / AUC",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-006",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "mrt_formula",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-006-mat_formula",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r107-270",
-      "r110-175"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-006-mat_formula",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-006",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "平均吸収時間MATは{{c1::MRT経口 - MRT静注}}で求められる",
-    "back": "MRT経口 - MRT静注",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-006",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "mat_formula",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-006-mrt_formula",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r107-270",
-      "r110-175"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-007-mrt_oral_components",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-007",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "経口投与のMRT = {{c1::1/ka + 1/ke}}（kaは吸収速度定数、keは消失速度定数）",
-    "back": "1/ka + 1/ke",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-007",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "mrt_oral_components",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-007-mrt_iv_formula",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r107-270",
-      "r110-175"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-007-mrt_iv_formula",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-007",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "静脈内投与のMRTiv = {{c1::1/ke}}",
-    "back": "1/ke",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-007",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "mrt_iv_formula",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-007-mrt_oral_components",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r107-270",
-      "r110-175"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-classification-001-conc_dependent_pkpd",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-classification-001",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "フルオロキノロン・アミノグリコシドは{{c1::濃度依存型}}の抗菌薬で、PK/PDパラメータは{{c2::Cmax/MICまたはAUC/MIC}}を用いる",
-    "back": "濃度依存型 / Cmax/MICまたはAUC/MIC",
-    "format": "cloze",
-    "tags": [
-      "classification",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-classification-001",
-    "knowledge_type": "classification",
-    "recall_direction": "conc_dependent_pkpd",
-    "reverse_of_id": "ex-pharmaceutics-031-classification-001-time_dependent_pkpd",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r108-272"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-classification-001-time_dependent_pkpd",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-classification-001",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "β-ラクタム系抗菌薬は{{c1::時間依存型}}で、PK/PDパラメータは{{c2::TAM(Time above MIC)}}を用いる",
-    "back": "時間依存型 / TAM(Time above MIC)",
-    "format": "cloze",
-    "tags": [
-      "classification",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-classification-001",
-    "knowledge_type": "classification",
-    "recall_direction": "time_dependent_pkpd",
-    "reverse_of_id": "ex-pharmaceutics-031-classification-001-conc_dependent_pkpd",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r108-272"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-classification-002-lvfx_dosing_regimen",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-classification-002",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "レボフロキサシンの投与法は{{c1::1回500mg 1日1回}}点滴(濃度依存型なので高用量・少回数)",
-    "back": "1回500mg 1日1回",
-    "format": "cloze",
-    "tags": [
-      "classification",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-classification-002",
-    "knowledge_type": "classification",
-    "recall_direction": "lvfx_dosing_regimen",
-    "reverse_of_id": "ex-pharmaceutics-031-classification-002-conc_dependent_dosing_principle",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r108-272",
-      "r108-273"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-classification-002-conc_dependent_dosing_principle",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-classification-002",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "濃度依存型抗菌薬の投与設計の原則は?",
-    "back": "1回高用量・少回数投与。高いCmaxを達成することで殺菌効果が最大化される",
-    "format": "question_answer",
-    "tags": [
-      "classification",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-classification-002",
-    "knowledge_type": "classification",
-    "recall_direction": "conc_dependent_dosing_principle",
-    "reverse_of_id": "ex-pharmaceutics-031-classification-002-lvfx_dosing_regimen",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r108-272",
-      "r108-273"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-008-vcm_trough_formula",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-008",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "バンコマイシン1000mg投与、Vd=62.5L、t1/2=τ=12hのとき、2回目投与直前濃度と定常状態トラフ値は?",
-    "back": "C0=D/Vd=16μg/mL。2回目直前=C0×0.5=8μg/mL。定常トラフ=C0×0.5/(1-0.5)=16μg/mL",
-    "format": "question_answer",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-008",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "vcm_trough_formula",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-008-vcm_tdm_target",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r109-277",
-      "r108-274"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-008-vcm_tdm_target",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-008",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "バンコマイシンのTDM目標: トラフ値{{c1::10〜20}}μg/mL、最新ではAUC/MIC ≧ {{c2::400}}が推奨",
-    "back": "10〜20 / 400",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-008",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "vcm_tdm_target",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-008-vcm_trough_formula",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r109-277",
-      "r108-274"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-calculation-009-iv_to_oral_switch_formula",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-calculation-009",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "点滴静注から経口投与に切り替える際の投与量は D = Css × CL × τ / {{c1::F(バイオアベイラビリティ)}}で補正する",
-    "back": "F(バイオアベイラビリティ)",
-    "format": "cloze",
-    "tags": [
-      "calculation",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-009",
-    "knowledge_type": "calculation",
-    "recall_direction": "iv_to_oral_switch_formula",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-009-vrcz_switch_example",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r108-333",
-      "r102-171"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-calculation-009-vrcz_switch_example",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-calculation-009",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "ボリコナゾール点滴(Css=1.25mg/L)を経口12時間毎に切替。CL=10L/h、F=0.75の場合の1回投与量は?",
-    "back": "D = 1.25 × 10 × 12 / 0.75 = 200 mg",
-    "format": "question_answer",
-    "tags": [
-      "calculation",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-009",
-    "knowledge_type": "calculation",
-    "recall_direction": "vrcz_switch_example",
-    "reverse_of_id": "ex-pharmaceutics-031-calculation-009-iv_to_oral_switch_formula",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r108-333",
-      "r102-171"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-009-mdt_formula",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-009",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "平均溶出時間(MDT) = {{c1::MAT散剤 - MAT液剤}}",
-    "back": "MAT散剤 - MAT液剤",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-009",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "mdt_formula",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-009-mean_disintegration_formula",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r110-175"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-009-mean_disintegration_formula",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-009",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "平均崩壊時間 = {{c1::MAT錠剤 - MAT散剤}}",
-    "back": "MAT錠剤 - MAT散剤",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-009",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "mean_disintegration_formula",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-009-mdt_formula",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r110-175"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-regulation-001-cya_tdm_method",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-regulation-001",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "シクロスポリンの投与設計は一般に{{c1::トラフ濃度}}に基づいて行われる",
-    "back": "トラフ濃度",
-    "format": "cloze",
-    "tags": [
-      "regulation",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-regulation-001",
-    "knowledge_type": "regulation",
-    "recall_direction": "cya_tdm_method",
-    "reverse_of_id": "ex-pharmaceutics-031-regulation-001-cya_self_emulsifying",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r100-271"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-regulation-001-cya_self_emulsifying",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-regulation-001",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "シクロスポリンの自己乳化型マイクロエマルション製剤は、{{c1::胆汁分泌量や食事}}の影響を受けにくい",
-    "back": "胆汁分泌量や食事",
-    "format": "cloze",
-    "tags": [
-      "regulation",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-regulation-001",
-    "knowledge_type": "regulation",
-    "recall_direction": "cya_self_emulsifying",
-    "reverse_of_id": "ex-pharmaceutics-031-regulation-001-cya_tdm_method",
+    "recall_direction": "腎機能低下→投与量補正の公式",
     "difficulty_tier": "applied",
     "content_type": "text",
     "generation_model": "claude-opus-4-6",
     "confidence_score": 0.85,
     "source_question_ids": [
-      "r100-271"
+      "r106-173"
     ],
     "source_note_ids": []
   },
   {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-010-vpa_therapeutic_range",
+    "id": "ex-pharmaceutics-031-pharmacokinetics-003-定常状態到達→必要時間の目安",
     "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-010",
+    "source_id": "ex-pharmaceutics-031-pharmacokinetics-003",
     "primary_exemplar_id": "ex-pharmaceutics-031",
     "subject": "薬剤",
-    "front": "バルプロ酸の有効安全濃度域は{{c1::50〜100}}μg/mLである",
-    "back": "50〜100",
+    "front": "薬物が定常状態に到達するまでの時間は、消失半減期の約{{c1::4〜5}}倍である",
+    "back": "半減期の4〜5倍 — 4半減期で約94%、5半減期で約97%の定常状態に到達。アムロジピン（t1/2 ≈ 36h）なら約7日で安定した降圧効果が得られる",
     "format": "cloze",
     "tags": [
       "pharmacokinetics",
       "basic"
     ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-010",
+    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-003",
     "knowledge_type": "pharmacokinetics",
-    "recall_direction": "vpa_therapeutic_range",
+    "recall_direction": "定常状態到達→必要時間の目安",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-344"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-031-calculation-004-非線形PK→投与速度とCssの関係式",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-031-calculation-004",
+    "primary_exemplar_id": "ex-pharmaceutics-031",
+    "subject": "薬剤",
+    "front": "フェニトインなど非線形薬物動態を示す薬物の定常状態: 投与速度 R = {{c1::Vmax × Css / (Km + Css)}}",
+    "back": "R = Vmax × Css / (Km + Css) — ミカエリス・メンテン式。投与速度がVmaxに近づくとCssが急上昇し中毒域に入るため、少量の増量でも血中濃度が大きく変動する危険がある",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-004",
+    "knowledge_type": "calculation",
+    "recall_direction": "非線形PK→投与速度とCssの関係式",
+    "reverse_of_id": "ex-pharmaceutics-031-calculation-004-フェニトインの非線形PK→臨床的注意点",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r101-302"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-031-calculation-004-フェニトインの非線形PK→臨床的注意点",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-031-calculation-004",
+    "primary_exemplar_id": "ex-pharmaceutics-031",
+    "subject": "薬剤",
+    "front": "フェニトインの投与量を少し増やすだけで血中濃度が急上昇する理由は？",
+    "back": "フェニトインの代謝がミカエリス・メンテン式（飽和型の非線形薬物動態）に従うため — 治療域（10〜20 µg/mL）付近で代謝酵素が飽和に近づき、わずかな増量で消失が追いつかず血中濃度が急激に上昇する",
+    "format": "question_answer",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-004",
+    "knowledge_type": "calculation",
+    "recall_direction": "フェニトインの非線形PK→臨床的注意点",
+    "reverse_of_id": "ex-pharmaceutics-031-calculation-004-非線形PK→投与速度とCssの関係式",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-302"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-031-calculation-005-水分欠乏量の計算公式",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-031-calculation-005",
+    "primary_exemplar_id": "ex-pharmaceutics-031",
+    "subject": "薬剤",
+    "front": "高張性脱水の水分欠乏量 = TBW × {{c1::(1 − 目標Na / 実測Na)}}　※TBW = 体重 × 0.6（成人男性）",
+    "back": "水分欠乏量 = TBW × (1 − 目標Na/実測Na) — 体重70kgの男性でNa 147→140 mEq/Lにするなら 42 × (1 − 140/147) ≒ 2.0 L。補液は5%ブドウ糖液が基本で、急速補正は脳浮腫リスクあり",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-005",
+    "knowledge_type": "calculation",
+    "recall_direction": "水分欠乏量の計算公式",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r101-345"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-031-pharmacokinetics-004-MRT/MAT/MDTの求め方",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-031-pharmacokinetics-004",
+    "primary_exemplar_id": "ex-pharmaceutics-031",
+    "subject": "薬剤",
+    "front": "MRT（平均滞留時間）、MAT（平均吸収時間）、MDT（平均溶出時間）はそれぞれどう計算するか？",
+    "back": "MRT = AUMC/AUC、MAT = MRT経口 − MRT静注、MDT = MAT散剤 − MAT液剤（平均溶出時間）、平均崩壊時間 = MAT錠剤 − MAT散剤 — それぞれの差分で吸収過程の各段階にかかる時間を分離できる",
+    "format": "question_answer",
+    "tags": [
+      "pharmacokinetics",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-004",
+    "knowledge_type": "pharmacokinetics",
+    "recall_direction": "MRT/MAT/MDTの求め方",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r110-175"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-031-classification-001-抗菌薬タイプ→PK/PDパラメータ",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-031-classification-001",
+    "primary_exemplar_id": "ex-pharmaceutics-031",
+    "subject": "薬剤",
+    "front": "濃度依存型抗菌薬と時間依存型抗菌薬で、それぞれ用いるPK/PDパラメータと代表薬は？",
+    "back": "濃度依存型（FQ・アミノグリコシド）→ Cmax/MIC, AUC/MIC。1回高用量・少回数投与が有効。時間依存型（β-ラクタム系）→ TAM（Time above MIC）。MIC以上の時間を長く保つことが重要で、頻回投与や持続点滴が有効",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-031-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "抗菌薬タイプ→PK/PDパラメータ",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r108-272",
+      "r108-273"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-031-calculation-006-2点の血中濃度→ke計算法",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-031-calculation-006",
+    "primary_exemplar_id": "ex-pharmaceutics-031",
+    "subject": "薬剤",
+    "front": "2つの時点の血中濃度（C1, C2）から消失速度定数を求める式: ke = {{c1::ln(C1/C2) / (t2 − t1)}}",
+    "back": "ke = ln(C1/C2)/(t2−t1) — 1-コンパートメントモデルで消失相の2点を使う。t1/2 = 0.693/ke で半減期も求まる。例: 8時間で14.1→6.9 µg/mLなら ke ≒ 0.086 h⁻¹",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-006",
+    "knowledge_type": "calculation",
+    "recall_direction": "2点の血中濃度→ke計算法",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r108-274"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-031-calculation-007-CLcr推算式を答える",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-031-calculation-007",
+    "primary_exemplar_id": "ex-pharmaceutics-031",
+    "subject": "薬剤",
+    "front": "Cockcroft-Gault式: CLcr (mL/min) = {{c1::(140 − 年齢) × 体重(kg) / (72 × Scr(mg/dL))}} × 女性は0.85",
+    "back": "(140 − 年齢) × 体重 / (72 × Scr)、女性は×0.85 — 腎排泄型薬物の投与量調節に必須の式。筋肉量が少ない高齢者や女性ではCLcrが過大評価されやすい点に注意",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-031-calculation-007",
+    "knowledge_type": "calculation",
+    "recall_direction": "CLcr推算式を答える",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-287"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-031-regulation-001-バンコマイシン→TDM目標値",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-031-regulation-001",
+    "primary_exemplar_id": "ex-pharmaceutics-031",
+    "subject": "薬剤",
+    "front": "バンコマイシンのTDMにおけるトラフ値の目標範囲と、最新の推奨指標は？",
+    "back": "トラフ値: 10〜20 µg/mL（MRSA感染症）。最新ではAUC/MIC ≧ 400〜600 が推奨 — トラフ値だけでなくAUCベースの管理が腎毒性軽減に有用とされ、ベイジアン推定法が活用される",
+    "format": "question_answer",
+    "tags": [
+      "regulation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-031-regulation-001",
+    "knowledge_type": "regulation",
+    "recall_direction": "バンコマイシン→TDM目標値",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.7,
+    "source_question_ids": [
+      "r108-274",
+      "r109-277"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-031-mnemonic-001-ローディングドーズ→代表薬を列挙",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-031-mnemonic-001",
+    "primary_exemplar_id": "ex-pharmaceutics-031",
+    "subject": "薬剤",
+    "front": "ローディングドーズ（負荷投与＝初回に多めに投与して素早く有効血中濃度に到達させる方法）が必要な代表的薬物を3つ挙げよ",
+    "back": "テイコプラニン、クロピドグレル、ボリコナゾール — いずれも半減期が長い、または定常状態到達に時間がかかる薬物で、「遅く効いては困る」感染症や血栓症に使われるため初回高用量が必要",
+    "format": "question_answer",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-031-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "ローディングドーズ→代表薬を列挙",
     "difficulty_tier": "basic",
     "content_type": "text",
     "generation_model": "claude-opus-4-6",
     "confidence_score": 0.7,
     "source_question_ids": [
-      "r100-292"
+      "r103-275"
     ],
     "source_note_ids": []
   },
   {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-011-loading_dose_formula",
+    "id": "ex-pharmaceutics-031-pharmacokinetics-005-τ=t1/2時の2回目直前とCss,minの関係",
     "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-011",
+    "source_id": "ex-pharmaceutics-031-pharmacokinetics-005",
     "primary_exemplar_id": "ex-pharmaceutics-031",
     "subject": "薬剤",
-    "front": "負荷投与量(ローディングドーズ)の計算式: DL = {{c1::Css × Vd}}",
-    "back": "Css × Vd",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-011",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "loading_dose_formula",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-011-css_independent_of_vd",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r103-275",
-      "r101-046"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-011-css_independent_of_vd",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-011",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "点滴静注の定常状態血中濃度Cssを決めるパラメータは? Vdは影響するか?",
-    "back": "CssはCLのみに依存(Css=R0/CL)。Vdは定常状態到達速度に影響するが、Cssの値そのものには影響しない",
+    "front": "投与間隔τ = 半減期t1/2のとき、初回投与直後の濃度C0に対して、2回目投与直前の濃度と定常状態トラフ値はそれぞれいくらか？",
+    "back": "2回目直前 = C0/2、定常状態トラフ = C0 — τ = t1/2 では1投与間隔で濃度が半分に低下し、蓄積率R = 2なので定常状態トラフは初回トラフの2倍。Css,min = C0 × e^(−ke×τ) / (1 − e^(−ke×τ)) で一般化できる",
     "format": "question_answer",
     "tags": [
       "pharmacokinetics",
       "applied"
     ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-011",
+    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-005",
     "knowledge_type": "pharmacokinetics",
-    "recall_direction": "css_independent_of_vd",
-    "reverse_of_id": "ex-pharmaceutics-031-pharmacokinetics-011-loading_dose_formula",
-    "difficulty_tier": "applied",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.95,
-    "source_question_ids": [
-      "r103-275",
-      "r101-046"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-pharmacokinetics-012-tacrolimus_ba_and_tdm",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-pharmacokinetics-012",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "タクロリムスのバイオアベイラビリティは約{{c1::20%}}と低く、{{c2::CYP3A4}}とP-gpの基質でTDMが必須である",
-    "back": "20% / CYP3A4",
-    "format": "cloze",
-    "tags": [
-      "pharmacokinetics",
-      "applied"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-pharmacokinetics-012",
-    "knowledge_type": "pharmacokinetics",
-    "recall_direction": "tacrolimus_ba_and_tdm",
+    "recall_direction": "τ=t1/2時の2回目直前とCss,minの関係",
     "difficulty_tier": "applied",
     "content_type": "text",
     "generation_model": "claude-opus-4-6",
     "confidence_score": 0.85,
     "source_question_ids": [
-      "r107-270",
-      "r105-271"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-classification-003-gilbert_gene",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-classification-003",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "体質性黄疸(Gilbert症候群)で間接ビリルビン高値の場合、推奨すべき遺伝子診断の対象は{{c1::UGT1A1}}である",
-    "back": "UGT1A1",
-    "format": "cloze",
-    "tags": [
-      "classification",
-      "basic"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-classification-003",
-    "knowledge_type": "classification",
-    "recall_direction": "gilbert_gene",
-    "reverse_of_id": "ex-pharmaceutics-031-classification-003-ugt1a1_clinical_significance",
-    "difficulty_tier": "basic",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.9,
-    "source_question_ids": [
-      "r102-266"
-    ],
-    "source_note_ids": []
-  },
-  {
-    "id": "ex-pharmaceutics-031-classification-003-ugt1a1_clinical_significance",
-    "source_type": "knowledge_atom",
-    "source_id": "ex-pharmaceutics-031-classification-003",
-    "primary_exemplar_id": "ex-pharmaceutics-031",
-    "subject": "薬剤",
-    "front": "UGT1A1遺伝子多型が薬物治療上重要な理由は?",
-    "back": "UGT1A1はグルクロン酸抱合酵素で、イリノテカン(CPT-11)の活性代謝物SN-38を代謝する。UGT1A1*6/*28多型では重篤な副作用(好中球減少・下痢)のリスクが上昇する",
-    "format": "question_answer",
-    "tags": [
-      "classification",
-      "basic"
-    ],
-    "knowledge_atom_id": "ex-pharmaceutics-031-classification-003",
-    "knowledge_type": "classification",
-    "recall_direction": "ugt1a1_clinical_significance",
-    "reverse_of_id": "ex-pharmaceutics-031-classification-003-gilbert_gene",
-    "difficulty_tier": "basic",
-    "content_type": "text",
-    "generation_model": "claude-opus-4-6",
-    "confidence_score": 0.85,
-    "source_question_ids": [
-      "r102-266"
+      "r109-277",
+      "r103-275"
     ],
     "source_note_ids": []
   }
