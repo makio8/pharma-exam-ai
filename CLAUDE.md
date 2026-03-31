@@ -176,6 +176,43 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - 設計: `docs/superpowers/specs/2026-03-27-fusen-exemplar-mapping-pipeline-design.md`（v1.0）
   - 計画: `docs/superpowers/plans/2026-03-27-fusen-exemplar-mapping-pipeline.md`
   - **次: official-notes.ts 1,642件生成スクリプト → FlashCardテンプレート自動生成**
+- **暗記フラッシュカード設計（2026-03-31）**
+  - エージェントチーム4名（PdM/教育工学/エンジニア/QA）+ GPT-5.4レビューで設計議論
+  - Knowledge Atom設計: exemplar軸で体系化、過去問4回以上出題の約430exemplarを対象（全986件の44%）
+  - 重複排除: 生成前にID設計（exemplar_id × knowledge_type × recall_direction）で主制御
+  - 構造式カード: 5レベル設計（Phase 1はL1-L3のみ）、SMILES→RDKit SVG描画、PubChem正規データが正
+  - カードタイプ8種: 穴埋め/因果Q&A/用語定義/比較/画像/正誤修正/臨床シナリオ/計算
+  - 推定総数: テキスト約3,100枚 + 構造式約200枚 = 約3,300枚
+  - 生成: Claude Opus 4.6（MAXサブスク）、品質検証: Claude Opus + GPT-5.4
+  - 差別化: 「作らなくていいAnki」— 点数直結の3,300枚が最初から入っている
+  - 設計spec: `docs/superpowers/specs/2026-03-31-flashcard-design-spec.md`（v1.0）
+  - 構造式spec: `docs/superpowers/specs/2026-03-31-structural-formula-cards-spec.md`（v1.0）
+  - **次: 構造式カードパイプライン実装（別セッション） → テキストカードパイプライン実装**
+- **テキストカード生成パイプライン（2026-03-31）**
+  - 設計spec §5「テキストカード生成パイプライン」の実装
+  - 型拡張: KnowledgeType(11種), CardFormat(3→10種), FlashCardTemplate(12 optional新フィールド), KnowledgeAtom型
+  - コアロジック: exemplar-stats→4回以上フィルタ(404件)→過去問+付箋集約→コンテキストJSON
+  - プロンプト: SYSTEM_PROMPT(atom抽出指示+schema厳密化+untrustedデータ注記) + buildUserPrompt
+  - バリデーター: 13ルール(atom/card品質チェック) + ランタイム型ガード + enum検証
+  - atom→FlashCardTemplate変換: atomId含むカードID（衝突防止）、reverse_of_id相互設定
+  - アセンブラ: 全生成JSON→バリデーション→エラーatomスキップ→科目別JSON分割→dynamic importローダー
+  - Codex検証: 低confidenceカードのバッチプロンプト生成(20枚/batch)
+  - 生成方式: Claude Codeセッション内サブエージェント（Anthropic SDK API呼び出しではない、MAXプランのトークン使用）
+  - GPT-5.4レビュー×5回: P1指摘計8件修正（ID衝突防止、型ガード強化、schema厳密化、エラーatomスキップ等）
+  - テスト: 35ファイル639テスト全パス
+  - 計画: `docs/superpowers/plans/2026-03-31-text-card-pipeline.md`
+  - **次: サブエージェントでカード生成実行（404件バッチ）→ アセンブル → Codex検証 → FlashCardPage UIリデザイン**
+- **Vertex AI 移行 + Nano Banana 画像生成実験（2026-03-28）**
+  - OCRスクリプト（ocr-cropped-notes.ts）を AI Studio → Vertex AI エンドポイントに移行
+  - 認証: API Key → google-auth-library ADC（GCP無料クレジット¥46,955消費可能に）
+  - Vertex AI 必須変更: `role:'user'` 追加、`inline_data` → `inlineData`（camelCase）
+  - 画像生成実験スクリプト: `scripts/experiment-image-gen.ts`（AI Studio / Vertex AI 自動切替）
+  - Nano Banana 初代（gemini-2.5-flash-image）: Vertex AI ✅ → 日本語テキスト崩壊（寺→第、商→問）
+  - **Nano Banana 2（gemini-3.1-flash-image-preview）: AI Studio ✅ / Vertex AI ❌（allowlist必要）**
+  - Nano Banana 2 で日本語テキスト精度**劇的改善**: 構造式描画OK、思考フロー付き解説カード生成成功
+  - 実験画像: `scripts/output/image-gen/`（r100-001 SI基本単位、r100-006 ウェーラー合成）
+  - テスト: 30ファイル520件全パス
+  - **次: Vertex AI allowlist申請（Gemini 3.x Preview → GCPクレジットで利用可能に）**
 - **FlashCard データ層リファクタリング（2026-03-26）**
   - FlashCard → FlashCardTemplate（公式コンテンツ）+ CardProgress（ユーザー進捗）に分離
   - SM2Scheduler 純粋クラス抽出（12テスト）
@@ -223,7 +260,7 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 ## コマンド
 - `npm run dev` — 開発サーバー
 - `npm run build` — `tsc -b && vite build`（noUnusedLocals: true、未使用importでエラー）
-- `npx vitest run` — テスト（29ファイル499テスト）
+- `npx vitest run` — テスト（35ファイル639テスト）
 - `npx tsc --noEmit` — 型チェックのみ
 - `codex review --base <SHA>` — GPT-5.4によるコードレビュー（マルチモデル戦略）
 - `codex review --commit <SHA>` — 特定コミットのレビュー
@@ -233,7 +270,9 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `npx tsx scripts/generate-questions-catalog-seed.ts` — questions_catalogシードSQL再生成（4,094問）
 - `/dev-tools/review` — データ品質レビューUI（dev serverのみ。`npm run dev` → ブラウザでアクセス）
 - `npx tsx scripts/crop-from-annotation.ts <annotation-json>` — アノテーションJSON→個別画像切り抜き（`--dry-run`対応）
-- `npx tsx scripts/ocr-cropped-notes.ts` — 個別画像→Gemini OCR（resume対応、`--status`/`--limit N`/`--all`）**※1プロセスのみ実行**
+- `npx tsx scripts/ocr-cropped-notes.ts` — 個別画像→Gemini OCR **via Vertex AI**（resume対応、`--status`/`--limit N`/`--all`）**※1プロセスのみ実行**
+- `npx tsx scripts/experiment-image-gen.ts <問題ID>` — 過去問まとめ画像生成（Nano Banana 2 = デフォルト）
+- `npx tsx scripts/experiment-image-gen.ts <問題ID> --model nano-banana` — 初代（Vertex AI、GCPクレジット）
 - `npx tsx scripts/build-fusens-master.ts --from-crop` — crop-OCR結果→マスターJSON変換
 - `npx tsx scripts/build-fusens-master.ts --stats` — 付箋統計（半ページ体系の件数も表示）
 - `/dev-tools/fusen-review` — 付箋レビューUI（dev serverのみ）
@@ -243,6 +282,13 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `npx tsx scripts/fix-choice-suffix-leak.ts` — 選択肢サフィックス漏れ検出（全年度スキャン）
 - `npx tsx scripts/fix-choice-suffix-leak.ts --dry-run --year 101` — 年度指定ドライラン
 - `npx tsx scripts/fix-choice-suffix-leak.ts --apply` — corrections JSON出力（AUTO_HIGHのみ）
+- `npx tsx scripts/prepare-card-contexts.ts --status` — テキストカード生成コンテキスト準備の進捗確認
+- `npx tsx scripts/prepare-card-contexts.ts --limit 10` — コンテキスト準備（10件限定）
+- `npx tsx scripts/prepare-card-contexts.ts --subject 薬理` — 科目フィルタ付きコンテキスト準備
+- `npx tsx scripts/prepare-card-contexts.ts --resume` — 中断再開（既存結果をスキップ）
+- `npx tsx scripts/assemble-card-templates.ts` — 生成済みatom→科目別JSON変換
+- `npx tsx scripts/assemble-card-templates.ts --stats` — 生成済みカード統計
+- `npx tsx scripts/verify-cards-with-codex.ts --stats` — 低confidenceカード統計
 
 ## アーキテクチャ
 - デザイントークン: `src/styles/tokens.css`（CSS変数 `--accent`, `--bg`, `--card` 等）
@@ -251,7 +297,19 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - データ層: `src/data/`（all-questions, exam-blueprint, question-topic-map, exemplar-stats, flashcard-templates）
 - カスタムフック: `src/hooks/`（useAnswerHistory, useTopicMastery, useAnalytics, useFlashCards）
 - カスタムフック（新規）: `src/hooks/`（useQuestionAnswerState, useTimeTracking, useSwipeNavigation, useOfficialNotes, useBookmarks, useFusenLibrary, useFusenDetail, useFlashCardTemplates, useCardProgress, useLearningLinks）
-- カードテンプレート: `src/data/flashcard-templates.ts`（サンプル10枚）、型: `src/types/flashcard-template.ts`
+- カードテンプレート: `src/data/flashcard-templates.ts`（サンプル10枚）、型: `src/types/flashcard-template.ts`（KnowledgeType/DifficultyTier/ContentType/拡張CardFormat含む）
+- Knowledge Atom型: `src/types/knowledge-atom.ts`（KnowledgeAtom + KnowledgeAtomCard — exemplarから抽出した最小知識単位）
+- テキストカードパイプライン: exemplar-stats→フィルタ→過去問集約→Claude Opus atom抽出→バリデーション→科目別JSON
+- パイプラインコア: `scripts/lib/card-pipeline-core.ts`（classifyTier/filterTargetExemplars/buildExemplarContext/formatContextForPrompt — 純粋関数、テスト20件）
+- パイプライン型: `scripts/lib/card-pipeline-types.ts`（FrequencyTier/TIER_CONFIG/ExemplarContext/QuestionSummary/NoteSummary/GenerationResult）
+- カード生成プロンプト: `scripts/lib/card-generation-prompt.ts`（SYSTEM_PROMPT+buildUserPrompt、schema厳密化+untrustedデータ注記済み）
+- カードバリデーター: `scripts/lib/card-validator.ts`（validateCard/validateAtom/validateAllAtoms — 13ルール+ランタイム型ガード+enum検証、テスト38件）
+- atom→テンプレート変換: `scripts/lib/atom-to-template.ts`（generateCardId[atomId含む衝突防止]+atomToTemplates[reverse_of_id相互設定]、テスト11件）
+- コンテキスト準備: `scripts/prepare-card-contexts.ts`（CLI: --status/--limit/--subject/--exemplar/--resume、事前Map索引化でO(E)）
+- カードアセンブラ: `scripts/assemble-card-templates.ts`（全生成JSON→validate→エラーatomスキップ→科目別JSON+dynamic importローダー生成）
+- Codex検証: `scripts/verify-cards-with-codex.ts`（低confidenceカード→20枚/batchプロンプト生成）
+- 生成済みカード: `scripts/output/text-cards/`（exemplarごとのJSON中間成果物）
+- 科目別カードJSON: `src/data/generated-cards/`（科目別JSONファイル+index.ts dynamic importローダー）
 - カード進捗: localStorage `card_progress` キー、型: `src/types/card-progress.ts`
 - SM-2 スケジューラ: `src/utils/sm2-scheduler.ts`（純粋クラス、テスト12件）
 - 学習循環サービス: `src/utils/learning-link-service.ts`（6種Map逆引き、テスト17件）
@@ -315,6 +373,11 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
 - `codex exec "プロンプト"` で GPT-5.4 に設計レビュー等の自由質問が可能
 - official-notes.ts の linkedQuestionIds は暫定マッピング（question-topic-mapから逆引き）。本格運用時にトピック紐付けで自動化予定
 - Gemini 2.5 Flash: GCP課金有効（$300クレジット）、RATE_LIMIT_MS=200ms。旧無料枠（250RPD/10RPM）から大幅緩和済み
+- **Vertex AI vs AI Studio**: OCRスクリプトはVertex AI（GCPクレジット消費）。画像生成実験はAI Studio（Nano Banana 2/Pro がVertex AI未開放のため）
+- **Nano Banana モデル一覧**: 初代=`gemini-2.5-flash-image`（Vertex AI ✅）、2=`gemini-3.1-flash-image-preview`（AI Studio のみ）、Pro=`gemini-3-pro-image-preview`（AI Studio のみ）
+- **Vertex AI allowlist**: Gemini 3.x Preview モデルは2026-03時点でallowlist制。Google Cloud Console → Vertex AI から申請必要
+- GCP環境変数: `.env.local` に `GCP_PROJECT_ID=gen-lang-client-0058140647` と `GCP_REGION=us-central1`、ADC認証は `gcloud auth application-default login`
+- gcloud CLI: `export PATH="/opt/homebrew/share/google-cloud-sdk/bin:$PATH"` が必要（Homebrew cask でインストール済み）
 - ocr-cropped-notes.ts は**必ず1プロセスのみ実行**。並列実行すると `.tmp` ファイル rename 競合で ENOENT クラッシュ
 - `fusens-master.json` は `src/data/` と `public/data/` の両方に存在。`build-fusens-master.ts` が両方に書き出す
 - OCRの空ページ（notes:[]）は429失敗の可能性あり。付箋0枚ページは保存しない設計（API失敗=null、本当に空=[]で区別）
