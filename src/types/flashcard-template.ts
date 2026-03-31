@@ -30,6 +30,8 @@ export type CardFormat =
   | 'mnemonic'
   | 'cloze'
   | 'comparison'
+  | 'structural_name_to_image'
+  | 'structural_image_to_name'
   | 'structural_identification'
   | 'structural_features'
   | 'structural_pattern'
@@ -43,6 +45,8 @@ export const CARD_FORMAT_CONFIG: Record<CardFormat, { label: string; emoji: stri
   mnemonic: { label: '語呂↔対象', emoji: '🎵', frontLabel: '語呂合わせ', backLabel: '覚える内容' },
   cloze: { label: '穴埋め', emoji: '🔲', frontLabel: '文（穴あき）', backLabel: '答え' },
   comparison: { label: '比較・弁別', emoji: '⚖️', frontLabel: '比較問い', backLabel: '違い' },
+  structural_name_to_image: { label: '名前→構造式', emoji: '📝', frontLabel: '物質名', backLabel: '構造式' },
+  structural_image_to_name: { label: '構造式→名前', emoji: '🔍', frontLabel: '構造式', backLabel: '物質名' },
   structural_identification: { label: '構造式→物質名', emoji: '🔬', frontLabel: '構造式', backLabel: '物質名' },
   structural_features: { label: '物質名→構造的特徴', emoji: '🧪', frontLabel: '物質名', backLabel: '構造的特徴' },
   structural_pattern: { label: '部分構造→分類', emoji: '🧩', frontLabel: '部分構造', backLabel: '化合物群' },

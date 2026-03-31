@@ -1,10 +1,4618 @@
 // src/data/structural-flashcard-templates.ts
-// 構造式フラッシュカードテンプレート（Phase 1: 144化合物 × L1/L2/L3 = 432枚）
-// 生成元: scripts/generate-structural-cards.ts + 並列エージェント生成
+// 構造式フラッシュカードテンプレート
+// L0a/L0b(基礎: 名前↔画像) 288枚 + L1/L2/L3(応用) 432枚 = 720枚
 
 import type { FlashCardTemplate } from "../types/flashcard-template"
 
 export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
+  {
+    "id": "sfct-purine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-purine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "プリン環",
+    "back": "Purine。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "プリン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/purine.svg",
+    "smiles": "C1=C2C(=NC=N1)N=CN2"
+  },
+  {
+    "id": "sfct-purine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-purine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "プリン環（Purine）。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "プリン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/purine.svg",
+    "smiles": "C1=C2C(=NC=N1)N=CN2"
+  },
+  {
+    "id": "sfct-pyrimidine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-pyrimidine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "ピリミジン環",
+    "back": "Pyrimidine。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ピリミジン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/pyrimidine.svg",
+    "smiles": "C1=CN=CN=C1"
+  },
+  {
+    "id": "sfct-pyrimidine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-pyrimidine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "ピリミジン環（Pyrimidine）。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ピリミジン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/pyrimidine.svg",
+    "smiles": "C1=CN=CN=C1"
+  },
+  {
+    "id": "sfct-indole-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-indole",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "インドール環",
+    "back": "Indole。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "インドール環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/indole.svg",
+    "smiles": "C1=CC=C2C(=C1)C=CN2"
+  },
+  {
+    "id": "sfct-indole-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-indole",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "インドール環（Indole）。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "インドール環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/indole.svg",
+    "smiles": "C1=CC=C2C(=C1)C=CN2"
+  },
+  {
+    "id": "sfct-quinoline-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-quinoline",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "キノリン環",
+    "back": "Quinoline。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "キノリン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/quinoline.svg",
+    "smiles": "C1=CC=C2C(=C1)C=CC=N2"
+  },
+  {
+    "id": "sfct-quinoline-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-quinoline",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "キノリン環（Quinoline）。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "キノリン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/quinoline.svg",
+    "smiles": "C1=CC=C2C(=C1)C=CC=N2"
+  },
+  {
+    "id": "sfct-imidazole-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-imidazole",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "イミダゾール環",
+    "back": "Imidazole。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "イミダゾール環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/imidazole.svg",
+    "smiles": "C1=CN=CN1"
+  },
+  {
+    "id": "sfct-imidazole-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-imidazole",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "イミダゾール環（Imidazole）。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "イミダゾール環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/imidazole.svg",
+    "smiles": "C1=CN=CN1"
+  },
+  {
+    "id": "sfct-thiazole-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-thiazole",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "チアゾール環",
+    "back": "Thiazole。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "チアゾール環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/thiazole.svg",
+    "smiles": "C1=CSC=N1"
+  },
+  {
+    "id": "sfct-thiazole-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-thiazole",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "チアゾール環（Thiazole）。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "チアゾール環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/thiazole.svg",
+    "smiles": "C1=CSC=N1"
+  },
+  {
+    "id": "sfct-pyridine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-pyridine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "ピリジン環",
+    "back": "Pyridine。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ピリジン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/pyridine.svg",
+    "smiles": "C1=CC=NC=C1"
+  },
+  {
+    "id": "sfct-pyridine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-pyridine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "ピリジン環（Pyridine）。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ピリジン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/pyridine.svg",
+    "smiles": "C1=CC=NC=C1"
+  },
+  {
+    "id": "sfct-pyrrole-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-pyrrole",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "ピロール環",
+    "back": "Pyrrole。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ピロール環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/pyrrole.svg",
+    "smiles": "C1=CNC=C1"
+  },
+  {
+    "id": "sfct-pyrrole-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-pyrrole",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "ピロール環（Pyrrole）。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ピロール環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/pyrrole.svg",
+    "smiles": "C1=CNC=C1"
+  },
+  {
+    "id": "sfct-furan-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-furan",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "フラン環",
+    "back": "Furan。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "フラン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/furan.svg",
+    "smiles": "C1=COC=C1"
+  },
+  {
+    "id": "sfct-furan-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-furan",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "フラン環（Furan）。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "フラン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/furan.svg",
+    "smiles": "C1=COC=C1"
+  },
+  {
+    "id": "sfct-thiophene-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-thiophene",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "チオフェン環",
+    "back": "Thiophene。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "チオフェン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/thiophene.svg",
+    "smiles": "C1=CSC=C1"
+  },
+  {
+    "id": "sfct-thiophene-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-thiophene",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "チオフェン環（Thiophene）。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "チオフェン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/thiophene.svg",
+    "smiles": "C1=CSC=C1"
+  },
+  {
+    "id": "sfct-benzodiazepine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-benzodiazepine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "ベンゾジアゼピン環",
+    "back": "Benzodiazepine。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ベンゾジアゼピン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/benzodiazepine.svg",
+    "smiles": "C1=CC=C2C(=C1)C=CC=NN2"
+  },
+  {
+    "id": "sfct-benzodiazepine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-benzodiazepine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "ベンゾジアゼピン環（Benzodiazepine）。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ベンゾジアゼピン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/benzodiazepine.svg",
+    "smiles": "C1=CC=C2C(=C1)C=CC=NN2"
+  },
+  {
+    "id": "sfct-phenothiazine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-phenothiazine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "フェノチアジン環",
+    "back": "Phenothiazine。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "フェノチアジン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/phenothiazine.svg",
+    "smiles": "C1=CC=C2C(=C1)NC3=CC=CC=C3S2"
+  },
+  {
+    "id": "sfct-phenothiazine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-phenothiazine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "フェノチアジン環（Phenothiazine）。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "フェノチアジン環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/phenothiazine.svg",
+    "smiles": "C1=CC=C2C(=C1)NC3=CC=CC=C3S2"
+  },
+  {
+    "id": "sfct-steroid-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-steroid",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "ステロイド骨格",
+    "back": "Steroid。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ステロイド骨格",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/steroid.svg",
+    "smiles": "CC(C1CCC2C1(CCC3C2CC=C4C3(CCC(C4)N(C)C)C)C)N(C)C(=O)C"
+  },
+  {
+    "id": "sfct-steroid-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-steroid",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "ステロイド骨格（Steroid）。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ステロイド骨格",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/steroid.svg",
+    "smiles": "CC(C1CCC2C1(CCC3C2CC=C4C3(CCC(C4)N(C)C)C)C)N(C)C(=O)C"
+  },
+  {
+    "id": "sfct-beta-lactam-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-beta-lactam",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "β-ラクタム環",
+    "back": "Beta-Lactam。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "β-ラクタム環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/beta-lactam.svg",
+    "smiles": "C1CNC1=O"
+  },
+  {
+    "id": "sfct-beta-lactam-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-beta-lactam",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "β-ラクタム環（Beta-Lactam）。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "β-ラクタム環",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/beta-lactam.svg",
+    "smiles": "C1CNC1=O"
+  },
+  {
+    "id": "sfct-adenine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-adenine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "アデニン",
+    "back": "Adenine。プリン環。特徴的な官能基: アミノ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "アデニン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/adenine.svg",
+    "smiles": "C1=NC2=NC=NC(=C2N1)N"
+  },
+  {
+    "id": "sfct-adenine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-adenine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "アデニン（Adenine）。プリン環。特徴的な官能基: アミノ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "アデニン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/adenine.svg",
+    "smiles": "C1=NC2=NC=NC(=C2N1)N"
+  },
+  {
+    "id": "sfct-guanine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-guanine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "グアニン",
+    "back": "Guanine。プリン環。特徴的な官能基: アミノ基、カルボニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "グアニン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/guanine.svg",
+    "smiles": "C1=NC2=C(N1)C(=O)NC(=N2)N"
+  },
+  {
+    "id": "sfct-guanine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-guanine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "グアニン（Guanine）。プリン環。特徴的な官能基: アミノ基、カルボニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "グアニン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/guanine.svg",
+    "smiles": "C1=NC2=C(N1)C(=O)NC(=N2)N"
+  },
+  {
+    "id": "sfct-caffeine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-caffeine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "カフェイン",
+    "back": "Caffeine。プリン環(キサンチン骨格)。特徴的な官能基: N-メチル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "カフェイン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/caffeine.svg",
+    "smiles": "CN1C=NC2=C1C(=O)N(C(=O)N2C)C"
+  },
+  {
+    "id": "sfct-caffeine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-caffeine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "カフェイン（Caffeine）。プリン環(キサンチン骨格)。特徴的な官能基: N-メチル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "カフェイン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/caffeine.svg",
+    "smiles": "CN1C=NC2=C1C(=O)N(C(=O)N2C)C"
+  },
+  {
+    "id": "sfct-hypoxanthine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-hypoxanthine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "ヒポキサンチン",
+    "back": "Hypoxanthine。プリン環。特徴的な官能基: カルボニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ヒポキサンチン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/hypoxanthine.svg",
+    "smiles": "C1=NC2=C(N1)C(=O)NC=N2"
+  },
+  {
+    "id": "sfct-hypoxanthine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-hypoxanthine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "ヒポキサンチン（Hypoxanthine）。プリン環。特徴的な官能基: カルボニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ヒポキサンチン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/hypoxanthine.svg",
+    "smiles": "C1=NC2=C(N1)C(=O)NC=N2"
+  },
+  {
+    "id": "sfct-uric-acid-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-uric-acid",
+    "primary_exemplar_id": "",
+    "subject": "生物",
+    "front": "尿酸",
+    "back": "Uric acid。プリン環。特徴的な官能基: カルボニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "尿酸",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/uric-acid.svg",
+    "smiles": "C12=C(NC(=O)N1)NC(=O)NC2=O"
+  },
+  {
+    "id": "sfct-uric-acid-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-uric-acid",
+    "primary_exemplar_id": "",
+    "subject": "生物",
+    "front": "この構造式の物質名は？",
+    "back": "尿酸（Uric acid）。プリン環。特徴的な官能基: カルボニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "尿酸",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/uric-acid.svg",
+    "smiles": "C12=C(NC(=O)N1)NC(=O)NC2=O"
+  },
+  {
+    "id": "sfct-cytosine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-cytosine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "シトシン",
+    "back": "Cytosine。ピリミジン環。特徴的な官能基: アミノ基、カルボニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "シトシン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/cytosine.svg",
+    "smiles": "C1=C(NC(=O)N=C1)N"
+  },
+  {
+    "id": "sfct-cytosine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-cytosine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "シトシン（Cytosine）。ピリミジン環。特徴的な官能基: アミノ基、カルボニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "シトシン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/cytosine.svg",
+    "smiles": "C1=C(NC(=O)N=C1)N"
+  },
+  {
+    "id": "sfct-uracil-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-uracil",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "ウラシル",
+    "back": "Uracil。ピリミジン環。特徴的な官能基: カルボニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ウラシル",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/uracil.svg",
+    "smiles": "C1=CNC(=O)NC1=O"
+  },
+  {
+    "id": "sfct-uracil-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-uracil",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "ウラシル（Uracil）。ピリミジン環。特徴的な官能基: カルボニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ウラシル",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/uracil.svg",
+    "smiles": "C1=CNC(=O)NC1=O"
+  },
+  {
+    "id": "sfct-thymine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-thymine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "チミン",
+    "back": "Thymine。ピリミジン環。特徴的な官能基: カルボニル基、メチル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "チミン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/thymine.svg",
+    "smiles": "CC1=CNC(=O)NC1=O"
+  },
+  {
+    "id": "sfct-thymine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-thymine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "チミン（Thymine）。ピリミジン環。特徴的な官能基: カルボニル基、メチル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "チミン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/thymine.svg",
+    "smiles": "CC1=CNC(=O)NC1=O"
+  },
+  {
+    "id": "sfct-serotonin-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-serotonin",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "セロトニン",
+    "back": "Serotonin。インドール環。特徴的な官能基: ヒドロキシ基、アミノ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "セロトニン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/serotonin.svg",
+    "smiles": "C1=CC2=C(C=C1O)C(=CN2)CCN"
+  },
+  {
+    "id": "sfct-serotonin-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-serotonin",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "セロトニン（Serotonin）。インドール環。特徴的な官能基: ヒドロキシ基、アミノ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "セロトニン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/serotonin.svg",
+    "smiles": "C1=CC2=C(C=C1O)C(=CN2)CCN"
+  },
+  {
+    "id": "sfct-tryptophan-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-tryptophan",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "トリプトファン",
+    "back": "Tryptophan。インドール環。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "トリプトファン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/tryptophan.svg",
+    "smiles": "C1=CC=C2C(=C1)C(=CN2)CC(C(=O)O)N"
+  },
+  {
+    "id": "sfct-tryptophan-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-tryptophan",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "トリプトファン（Tryptophan）。インドール環。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "トリプトファン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/tryptophan.svg",
+    "smiles": "C1=CC=C2C(=C1)C(=CN2)CC(C(=O)O)N"
+  },
+  {
+    "id": "sfct-quinine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-quinine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "キニーネ",
+    "back": "Quinine。キノリン環。特徴的な官能基: メトキシ基、ヒドロキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "キニーネ",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/quinine.svg",
+    "smiles": "COC1=CC2=C(C=CN=C2C=C1)C(C3CC4CCN3CC4C=C)O"
+  },
+  {
+    "id": "sfct-quinine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-quinine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "キニーネ（Quinine）。キノリン環。特徴的な官能基: メトキシ基、ヒドロキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "キニーネ",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/quinine.svg",
+    "smiles": "COC1=CC2=C(C=CN=C2C=C1)C(C3CC4CCN3CC4C=C)O"
+  },
+  {
+    "id": "sfct-histamine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-histamine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "ヒスタミン",
+    "back": "Histamine。イミダゾール環。特徴的な官能基: アミノ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ヒスタミン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/histamine.svg",
+    "smiles": "C1=C(NC=N1)CCN"
+  },
+  {
+    "id": "sfct-histamine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-histamine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "ヒスタミン（Histamine）。イミダゾール環。特徴的な官能基: アミノ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ヒスタミン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/histamine.svg",
+    "smiles": "C1=C(NC=N1)CCN"
+  },
+  {
+    "id": "sfct-histidine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-histidine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "ヒスチジン",
+    "back": "Histidine。イミダゾール環。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ヒスチジン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/histidine.svg",
+    "smiles": "C1=C(NC=N1)CC(C(=O)O)N"
+  },
+  {
+    "id": "sfct-histidine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-histidine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "ヒスチジン（Histidine）。イミダゾール環。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ヒスチジン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/histidine.svg",
+    "smiles": "C1=C(NC=N1)CC(C(=O)O)N"
+  },
+  {
+    "id": "sfct-furosemide-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-furosemide",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "フロセミド",
+    "back": "Furosemide。フラン環。特徴的な官能基: スルホンアミド基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "フロセミド",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/furosemide.svg",
+    "smiles": "C1=COC(=C1)CNC2=CC(=C(C=C2C(=O)O)S(=O)(=O)N)Cl"
+  },
+  {
+    "id": "sfct-furosemide-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-furosemide",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "フロセミド（Furosemide）。フラン環。特徴的な官能基: スルホンアミド基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "フロセミド",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/furosemide.svg",
+    "smiles": "C1=COC(=C1)CNC2=CC(=C(C=C2C(=O)O)S(=O)(=O)N)Cl"
+  },
+  {
+    "id": "sfct-ticlopidine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-ticlopidine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "チクロピジン",
+    "back": "Ticlopidine。チオフェン環。特徴的な官能基: 塩素",
+    "format": "structural_name_to_image",
+    "tags": [
+      "チクロピジン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/ticlopidine.svg",
+    "smiles": "C1CN(CC2=C1SC=C2)CC3=CC=CC=C3Cl"
+  },
+  {
+    "id": "sfct-ticlopidine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-ticlopidine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "チクロピジン（Ticlopidine）。チオフェン環。特徴的な官能基: 塩素",
+    "format": "structural_image_to_name",
+    "tags": [
+      "チクロピジン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/ticlopidine.svg",
+    "smiles": "C1CN(CC2=C1SC=C2)CC3=CC=CC=C3Cl"
+  },
+  {
+    "id": "sfct-diazepam-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-diazepam",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "ジアゼパム",
+    "back": "Diazepam。ベンゾジアゼピン環。特徴的な官能基: カルボニル基、N-メチル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ジアゼパム",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/diazepam.svg",
+    "smiles": "CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3"
+  },
+  {
+    "id": "sfct-diazepam-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-diazepam",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "ジアゼパム（Diazepam）。ベンゾジアゼピン環。特徴的な官能基: カルボニル基、N-メチル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ジアゼパム",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/diazepam.svg",
+    "smiles": "CN1C(=O)CN=C(C2=C1C=CC(=C2)Cl)C3=CC=CC=C3"
+  },
+  {
+    "id": "sfct-midazolam-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-midazolam",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "ミダゾラム",
+    "back": "Midazolam。ベンゾジアゼピン環。特徴的な官能基: イミダゾール環、フッ素",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ミダゾラム",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/midazolam.svg",
+    "smiles": "CC1=NC=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4F"
+  },
+  {
+    "id": "sfct-midazolam-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-midazolam",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "ミダゾラム（Midazolam）。ベンゾジアゼピン環。特徴的な官能基: イミダゾール環、フッ素",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ミダゾラム",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/midazolam.svg",
+    "smiles": "CC1=NC=C2N1C3=C(C=C(C=C3)Cl)C(=NC2)C4=CC=CC=C4F"
+  },
+  {
+    "id": "sfct-chlorpromazine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-chlorpromazine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "クロルプロマジン",
+    "back": "Chlorpromazine。フェノチアジン環。特徴的な官能基: 塩素、ジメチルアミノ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "クロルプロマジン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/chlorpromazine.svg",
+    "smiles": "CN(C)CCCN1C2=CC=CC=C2SC3=C1C=C(C=C3)Cl"
+  },
+  {
+    "id": "sfct-chlorpromazine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-chlorpromazine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "クロルプロマジン（Chlorpromazine）。フェノチアジン環。特徴的な官能基: 塩素、ジメチルアミノ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "クロルプロマジン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/chlorpromazine.svg",
+    "smiles": "CN(C)CCCN1C2=CC=CC=C2SC3=C1C=C(C=C3)Cl"
+  },
+  {
+    "id": "sfct-cholesterol-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-cholesterol",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "コレステロール",
+    "back": "Cholesterol。ステロイド骨格。特徴的な官能基: ヒドロキシ基、二重結合",
+    "format": "structural_name_to_image",
+    "tags": [
+      "コレステロール",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/cholesterol.svg",
+    "smiles": "CC(C)CCCC(C)C1CCC2C1(CCC3C2CC=C4C3(CCC(C4)O)C)C"
+  },
+  {
+    "id": "sfct-cholesterol-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-cholesterol",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "コレステロール（Cholesterol）。ステロイド骨格。特徴的な官能基: ヒドロキシ基、二重結合",
+    "format": "structural_image_to_name",
+    "tags": [
+      "コレステロール",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/cholesterol.svg",
+    "smiles": "CC(C)CCCC(C)C1CCC2C1(CCC3C2CC=C4C3(CCC(C4)O)C)C"
+  },
+  {
+    "id": "sfct-prednisolone-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-prednisolone",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "プレドニゾロン",
+    "back": "Prednisolone。ステロイド骨格。特徴的な官能基: ヒドロキシ基、カルボニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "プレドニゾロン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/prednisolone.svg",
+    "smiles": "CC12CC(C3C(C1CCC2(C(=O)CO)O)CCC4=CC(=O)C=CC34C)O"
+  },
+  {
+    "id": "sfct-prednisolone-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-prednisolone",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "プレドニゾロン（Prednisolone）。ステロイド骨格。特徴的な官能基: ヒドロキシ基、カルボニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "プレドニゾロン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/prednisolone.svg",
+    "smiles": "CC12CC(C3C(C1CCC2(C(=O)CO)O)CCC4=CC(=O)C=CC34C)O"
+  },
+  {
+    "id": "sfct-penicillin-g-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-penicillin-g",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "ペニシリンG",
+    "back": "Penicillin G。β-ラクタム環(ペナム骨格)。特徴的な官能基: β-ラクタム環、チアゾリジン環",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ペニシリンG",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/penicillin-g.svg",
+    "smiles": "CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)O)C"
+  },
+  {
+    "id": "sfct-penicillin-g-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-penicillin-g",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "ペニシリンG（Penicillin G）。β-ラクタム環(ペナム骨格)。特徴的な官能基: β-ラクタム環、チアゾリジン環",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ペニシリンG",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/penicillin-g.svg",
+    "smiles": "CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)O)C"
+  },
+  {
+    "id": "sfct-cephalothin-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-cephalothin",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "セファロチン",
+    "back": "Cephalothin。β-ラクタム環(セフェム骨格)。特徴的な官能基: β-ラクタム環、ジヒドロチアジン環",
+    "format": "structural_name_to_image",
+    "tags": [
+      "セファロチン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/cephalothin.svg",
+    "smiles": "CC(=O)OCC1=C(N2C(C(C2=O)NC(=O)CC3=CC=CS3)SC1)C(=O)O"
+  },
+  {
+    "id": "sfct-cephalothin-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-cephalothin",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "セファロチン（Cephalothin）。β-ラクタム環(セフェム骨格)。特徴的な官能基: β-ラクタム環、ジヒドロチアジン環",
+    "format": "structural_image_to_name",
+    "tags": [
+      "セファロチン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/cephalothin.svg",
+    "smiles": "CC(=O)OCC1=C(N2C(C(C2=O)NC(=O)CC3=CC=CS3)SC1)C(=O)O"
+  },
+  {
+    "id": "sfct-tetracycline-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-tetracycline",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "テトラサイクリン",
+    "back": "Tetracycline。テトラサイクリン骨格。特徴的な官能基: 4環構造、ヒドロキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "テトラサイクリン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/tetracycline.svg",
+    "smiles": "CC1(C2CC3C(C(=O)C(=C(C3(C(=O)C2=C(C4=C1C=CC=C4O)O)O)O)C(=O)N)N(C)C)O"
+  },
+  {
+    "id": "sfct-tetracycline-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-tetracycline",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "テトラサイクリン（Tetracycline）。テトラサイクリン骨格。特徴的な官能基: 4環構造、ヒドロキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "テトラサイクリン",
+      "heterocycle"
+    ],
+    "media_url": "/images/structures/tetracycline.svg",
+    "smiles": "CC1(C2CC3C(C(=O)C(=C(C3(C(=O)C2=C(C4=C1C=CC=C4O)O)O)O)C(=O)N)N(C)C)O"
+  },
+  {
+    "id": "sfct-retinol-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-retinol",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "レチノール(ビタミンA)",
+    "back": "Retinol。レチノイド骨格。特徴的な官能基: ヒドロキシ基、共役二重結合",
+    "format": "structural_name_to_image",
+    "tags": [
+      "レチノール(ビタミンA)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/retinol.svg",
+    "smiles": "CC1=C(C(CCC1)(C)C)C=CC(=CC=CC(=CCO)C)C"
+  },
+  {
+    "id": "sfct-retinol-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-retinol",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "レチノール(ビタミンA)（Retinol）。レチノイド骨格。特徴的な官能基: ヒドロキシ基、共役二重結合",
+    "format": "structural_image_to_name",
+    "tags": [
+      "レチノール(ビタミンA)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/retinol.svg",
+    "smiles": "CC1=C(C(CCC1)(C)C)C=CC(=CC=CC(=CCO)C)C"
+  },
+  {
+    "id": "sfct-thiamine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-thiamine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "チアミン(ビタミンB1)",
+    "back": "Thiamine。チアゾール環+ピリミジン環。特徴的な官能基: アミノ基、4級窒素",
+    "format": "structural_name_to_image",
+    "tags": [
+      "チアミン(ビタミンB1)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/thiamine.svg",
+    "smiles": "CC1=C(SC=[N+]1CC2=CN=C(N=C2N)C)CCO"
+  },
+  {
+    "id": "sfct-thiamine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-thiamine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "チアミン(ビタミンB1)（Thiamine）。チアゾール環+ピリミジン環。特徴的な官能基: アミノ基、4級窒素",
+    "format": "structural_image_to_name",
+    "tags": [
+      "チアミン(ビタミンB1)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/thiamine.svg",
+    "smiles": "CC1=C(SC=[N+]1CC2=CN=C(N=C2N)C)CCO"
+  },
+  {
+    "id": "sfct-riboflavin-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-riboflavin",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "リボフラビン(ビタミンB2)",
+    "back": "Riboflavin。イソアロキサジン環。特徴的な官能基: リビトール側鎖",
+    "format": "structural_name_to_image",
+    "tags": [
+      "リボフラビン(ビタミンB2)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/riboflavin.svg",
+    "smiles": "CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)CC(C(C(CO)O)O)O"
+  },
+  {
+    "id": "sfct-riboflavin-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-riboflavin",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "リボフラビン(ビタミンB2)（Riboflavin）。イソアロキサジン環。特徴的な官能基: リビトール側鎖",
+    "format": "structural_image_to_name",
+    "tags": [
+      "リボフラビン(ビタミンB2)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/riboflavin.svg",
+    "smiles": "CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)CC(C(C(CO)O)O)O"
+  },
+  {
+    "id": "sfct-niacin-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-niacin",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "ナイアシン(ビタミンB3)",
+    "back": "Niacin。ピリジン環。特徴的な官能基: カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ナイアシン(ビタミンB3)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/niacin.svg",
+    "smiles": "C1=CC(=CN=C1)C(=O)O"
+  },
+  {
+    "id": "sfct-niacin-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-niacin",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "ナイアシン(ビタミンB3)（Niacin）。ピリジン環。特徴的な官能基: カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ナイアシン(ビタミンB3)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/niacin.svg",
+    "smiles": "C1=CC(=CN=C1)C(=O)O"
+  },
+  {
+    "id": "sfct-pantothenic-acid-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-pantothenic-acid",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "パントテン酸(ビタミンB5)",
+    "back": "Pantothenic acid。β-アラニン+パントイン酸。特徴的な官能基: アミド結合、ヒドロキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "パントテン酸(ビタミンB5)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/pantothenic-acid.svg",
+    "smiles": "CC(C)(CO)C(C(=O)NCCC(=O)O)O"
+  },
+  {
+    "id": "sfct-pantothenic-acid-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-pantothenic-acid",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "パントテン酸(ビタミンB5)（Pantothenic acid）。β-アラニン+パントイン酸。特徴的な官能基: アミド結合、ヒドロキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "パントテン酸(ビタミンB5)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/pantothenic-acid.svg",
+    "smiles": "CC(C)(CO)C(C(=O)NCCC(=O)O)O"
+  },
+  {
+    "id": "sfct-pyridoxine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-pyridoxine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "ピリドキシン(ビタミンB6)",
+    "back": "Pyridoxine。ピリジン環。特徴的な官能基: ヒドロキシ基、ヒドロキシメチル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ピリドキシン(ビタミンB6)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/pyridoxine.svg",
+    "smiles": "CC1=NC=C(C(=C1O)CO)CO"
+  },
+  {
+    "id": "sfct-pyridoxine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-pyridoxine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "ピリドキシン(ビタミンB6)（Pyridoxine）。ピリジン環。特徴的な官能基: ヒドロキシ基、ヒドロキシメチル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ピリドキシン(ビタミンB6)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/pyridoxine.svg",
+    "smiles": "CC1=NC=C(C(=C1O)CO)CO"
+  },
+  {
+    "id": "sfct-biotin-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-biotin",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "ビオチン(ビタミンB7)",
+    "back": "Biotin。ウレイド環+チオフェン環。特徴的な官能基: ウレイド基、チオエーテル",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ビオチン(ビタミンB7)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/biotin.svg",
+    "smiles": "C1C2C(C(S1)CCCCC(=O)O)NC(=O)N2"
+  },
+  {
+    "id": "sfct-biotin-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-biotin",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "ビオチン(ビタミンB7)（Biotin）。ウレイド環+チオフェン環。特徴的な官能基: ウレイド基、チオエーテル",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ビオチン(ビタミンB7)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/biotin.svg",
+    "smiles": "C1C2C(C(S1)CCCCC(=O)O)NC(=O)N2"
+  },
+  {
+    "id": "sfct-folic-acid-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-folic-acid",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "葉酸(ビタミンB9)",
+    "back": "Folic acid。プテリジン環+PABA+グルタミン酸。特徴的な官能基: プテリジン環、アミド結合",
+    "format": "structural_name_to_image",
+    "tags": [
+      "葉酸(ビタミンB9)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/folic-acid.svg",
+    "smiles": "C1=CC(=CC=C1C(=O)NC(CCC(=O)O)C(=O)O)NCC2=CN=C3C(=N2)C(=O)NC(=N3)N"
+  },
+  {
+    "id": "sfct-folic-acid-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-folic-acid",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "葉酸(ビタミンB9)（Folic acid）。プテリジン環+PABA+グルタミン酸。特徴的な官能基: プテリジン環、アミド結合",
+    "format": "structural_image_to_name",
+    "tags": [
+      "葉酸(ビタミンB9)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/folic-acid.svg",
+    "smiles": "C1=CC(=CC=C1C(=O)NC(CCC(=O)O)C(=O)O)NCC2=CN=C3C(=N2)C(=O)NC(=N3)N"
+  },
+  {
+    "id": "sfct-cyanocobalamin-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-cyanocobalamin",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "シアノコバラミン(ビタミンB12)",
+    "back": "Cyanocobalamin。コリン環。特徴的な官能基: コバルト、コリン環",
+    "format": "structural_name_to_image",
+    "tags": [
+      "シアノコバラミン(ビタミンB12)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/cyanocobalamin.svg",
+    "smiles": "CC1=CC2=C(C=C1C)[N+](=CN2)C3C(C(C(O3)CO)OP(=O)(O)OC(C)CNC(=O)CCC4(C(C5C6(C(C(C(=N6)C(=C7C(C(C(=CC8=NC(=C(C4=N5)C)C(C8(C)C)CCC(=N)[O-])N7)CCC(=N)[O-])(C)CC(=O)N)C)CCC(=N)[O-])(C)CC(=O)N)C)CC(=O)N)C)O.[C]#N.[Co+2]"
+  },
+  {
+    "id": "sfct-cyanocobalamin-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-cyanocobalamin",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "シアノコバラミン(ビタミンB12)（Cyanocobalamin）。コリン環。特徴的な官能基: コバルト、コリン環",
+    "format": "structural_image_to_name",
+    "tags": [
+      "シアノコバラミン(ビタミンB12)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/cyanocobalamin.svg",
+    "smiles": "CC1=CC2=C(C=C1C)[N+](=CN2)C3C(C(C(O3)CO)OP(=O)(O)OC(C)CNC(=O)CCC4(C(C5C6(C(C(C(=N6)C(=C7C(C(C(=CC8=NC(=C(C4=N5)C)C(C8(C)C)CCC(=N)[O-])N7)CCC(=N)[O-])(C)CC(=O)N)C)CCC(=N)[O-])(C)CC(=O)N)C)CC(=O)N)C)O.[C]#N.[Co+2]"
+  },
+  {
+    "id": "sfct-ascorbic-acid-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-ascorbic-acid",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "アスコルビン酸(ビタミンC)",
+    "back": "Ascorbic acid。ラクトン環。特徴的な官能基: エンジオール基、ラクトン環",
+    "format": "structural_name_to_image",
+    "tags": [
+      "アスコルビン酸(ビタミンC)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/ascorbic-acid.svg",
+    "smiles": "C(C(C1C(=C(C(=O)O1)O)O)O)O"
+  },
+  {
+    "id": "sfct-ascorbic-acid-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-ascorbic-acid",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "アスコルビン酸(ビタミンC)（Ascorbic acid）。ラクトン環。特徴的な官能基: エンジオール基、ラクトン環",
+    "format": "structural_image_to_name",
+    "tags": [
+      "アスコルビン酸(ビタミンC)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/ascorbic-acid.svg",
+    "smiles": "C(C(C1C(=C(C(=O)O1)O)O)O)O"
+  },
+  {
+    "id": "sfct-cholecalciferol-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-cholecalciferol",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "コレカルシフェロール(ビタミンD3)",
+    "back": "Cholecalciferol。セコステロイド骨格。特徴的な官能基: ヒドロキシ基、共役トリエン",
+    "format": "structural_name_to_image",
+    "tags": [
+      "コレカルシフェロール(ビタミンD3)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/cholecalciferol.svg",
+    "smiles": "CC(C)CCCC(C)C1CCC2C1(CCCC2=CC=C3CC(CCC3=C)O)C"
+  },
+  {
+    "id": "sfct-cholecalciferol-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-cholecalciferol",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "コレカルシフェロール(ビタミンD3)（Cholecalciferol）。セコステロイド骨格。特徴的な官能基: ヒドロキシ基、共役トリエン",
+    "format": "structural_image_to_name",
+    "tags": [
+      "コレカルシフェロール(ビタミンD3)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/cholecalciferol.svg",
+    "smiles": "CC(C)CCCC(C)C1CCC2C1(CCCC2=CC=C3CC(CCC3=C)O)C"
+  },
+  {
+    "id": "sfct-alpha-tocopherol-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-alpha-tocopherol",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "α-トコフェロール(ビタミンE)",
+    "back": "alpha-Tocopherol。クロマン環。特徴的な官能基: フェノール性ヒドロキシ基、フィチル側鎖",
+    "format": "structural_name_to_image",
+    "tags": [
+      "α-トコフェロール(ビタミンE)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/alpha-tocopherol.svg",
+    "smiles": "CC1=C(C2=C(CCC(O2)(C)CCCC(C)CCCC(C)CCCC(C)C)C(=C1O)C)C"
+  },
+  {
+    "id": "sfct-alpha-tocopherol-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-alpha-tocopherol",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "α-トコフェロール(ビタミンE)（alpha-Tocopherol）。クロマン環。特徴的な官能基: フェノール性ヒドロキシ基、フィチル側鎖",
+    "format": "structural_image_to_name",
+    "tags": [
+      "α-トコフェロール(ビタミンE)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/alpha-tocopherol.svg",
+    "smiles": "CC1=C(C2=C(CCC(O2)(C)CCCC(C)CCCC(C)CCCC(C)C)C(=C1O)C)C"
+  },
+  {
+    "id": "sfct-phylloquinone-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-phylloquinone",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "フィロキノン(ビタミンK1)",
+    "back": "Phylloquinone。ナフトキノン環。特徴的な官能基: キノン構造、フィチル側鎖",
+    "format": "structural_name_to_image",
+    "tags": [
+      "フィロキノン(ビタミンK1)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/phylloquinone.svg",
+    "smiles": "CC1=C(C(=O)C2=CC=CC=C2C1=O)CC=C(C)CCCC(C)CCCC(C)CCCC(C)C"
+  },
+  {
+    "id": "sfct-phylloquinone-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-phylloquinone",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "フィロキノン(ビタミンK1)（Phylloquinone）。ナフトキノン環。特徴的な官能基: キノン構造、フィチル側鎖",
+    "format": "structural_image_to_name",
+    "tags": [
+      "フィロキノン(ビタミンK1)",
+      "vitamin"
+    ],
+    "media_url": "/images/structures/phylloquinone.svg",
+    "smiles": "CC1=C(C(=O)C2=CC=CC=C2C1=O)CC=C(C)CCCC(C)CCCC(C)CCCC(C)C"
+  },
+  {
+    "id": "sfct-glycine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-glycine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "グリシン",
+    "back": "Glycine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "グリシン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/glycine.svg",
+    "smiles": "C(C(=O)O)N"
+  },
+  {
+    "id": "sfct-glycine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-glycine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "グリシン（Glycine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "グリシン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/glycine.svg",
+    "smiles": "C(C(=O)O)N"
+  },
+  {
+    "id": "sfct-alanine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-alanine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "アラニン",
+    "back": "Alanine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "アラニン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/alanine.svg",
+    "smiles": "CC(C(=O)O)N"
+  },
+  {
+    "id": "sfct-alanine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-alanine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "アラニン（Alanine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "アラニン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/alanine.svg",
+    "smiles": "CC(C(=O)O)N"
+  },
+  {
+    "id": "sfct-valine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-valine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "バリン",
+    "back": "Valine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "バリン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/valine.svg",
+    "smiles": "CC(C)C(C(=O)O)N"
+  },
+  {
+    "id": "sfct-valine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-valine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "バリン（Valine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "バリン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/valine.svg",
+    "smiles": "CC(C)C(C(=O)O)N"
+  },
+  {
+    "id": "sfct-leucine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-leucine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "ロイシン",
+    "back": "Leucine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ロイシン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/leucine.svg",
+    "smiles": "CC(C)CC(C(=O)O)N"
+  },
+  {
+    "id": "sfct-leucine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-leucine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "ロイシン（Leucine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ロイシン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/leucine.svg",
+    "smiles": "CC(C)CC(C(=O)O)N"
+  },
+  {
+    "id": "sfct-isoleucine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-isoleucine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "イソロイシン",
+    "back": "Isoleucine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "イソロイシン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/isoleucine.svg",
+    "smiles": "CCC(C)C(C(=O)O)N"
+  },
+  {
+    "id": "sfct-isoleucine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-isoleucine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "イソロイシン（Isoleucine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "イソロイシン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/isoleucine.svg",
+    "smiles": "CCC(C)C(C(=O)O)N"
+  },
+  {
+    "id": "sfct-proline-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-proline",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "プロリン",
+    "back": "Proline。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "プロリン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/proline.svg",
+    "smiles": "C1CC(NC1)C(=O)O"
+  },
+  {
+    "id": "sfct-proline-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-proline",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "プロリン（Proline）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "プロリン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/proline.svg",
+    "smiles": "C1CC(NC1)C(=O)O"
+  },
+  {
+    "id": "sfct-phenylalanine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-phenylalanine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "フェニルアラニン",
+    "back": "Phenylalanine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "フェニルアラニン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/phenylalanine.svg",
+    "smiles": "C1=CC=C(C=C1)CC(C(=O)O)N"
+  },
+  {
+    "id": "sfct-phenylalanine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-phenylalanine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "フェニルアラニン（Phenylalanine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "フェニルアラニン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/phenylalanine.svg",
+    "smiles": "C1=CC=C(C=C1)CC(C(=O)O)N"
+  },
+  {
+    "id": "sfct-methionine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-methionine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "メチオニン",
+    "back": "Methionine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "メチオニン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/methionine.svg",
+    "smiles": "CSCCC(C(=O)O)N"
+  },
+  {
+    "id": "sfct-methionine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-methionine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "メチオニン（Methionine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "メチオニン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/methionine.svg",
+    "smiles": "CSCCC(C(=O)O)N"
+  },
+  {
+    "id": "sfct-serine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-serine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "セリン",
+    "back": "Serine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "セリン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/serine.svg",
+    "smiles": "C(C(C(=O)O)N)O"
+  },
+  {
+    "id": "sfct-serine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-serine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "セリン（Serine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "セリン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/serine.svg",
+    "smiles": "C(C(C(=O)O)N)O"
+  },
+  {
+    "id": "sfct-threonine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-threonine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "トレオニン",
+    "back": "Threonine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "トレオニン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/threonine.svg",
+    "smiles": "CC(C(C(=O)O)N)O"
+  },
+  {
+    "id": "sfct-threonine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-threonine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "トレオニン（Threonine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "トレオニン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/threonine.svg",
+    "smiles": "CC(C(C(=O)O)N)O"
+  },
+  {
+    "id": "sfct-cysteine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-cysteine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "システイン",
+    "back": "Cysteine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "システイン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/cysteine.svg",
+    "smiles": "C(C(C(=O)O)N)S"
+  },
+  {
+    "id": "sfct-cysteine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-cysteine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "システイン（Cysteine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "システイン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/cysteine.svg",
+    "smiles": "C(C(C(=O)O)N)S"
+  },
+  {
+    "id": "sfct-tyrosine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-tyrosine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "チロシン",
+    "back": "Tyrosine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "チロシン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/tyrosine.svg",
+    "smiles": "C1=CC(=CC=C1CC(C(=O)O)N)O"
+  },
+  {
+    "id": "sfct-tyrosine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-tyrosine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "チロシン（Tyrosine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "チロシン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/tyrosine.svg",
+    "smiles": "C1=CC(=CC=C1CC(C(=O)O)N)O"
+  },
+  {
+    "id": "sfct-asparagine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-asparagine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "アスパラギン",
+    "back": "Asparagine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "アスパラギン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/asparagine.svg",
+    "smiles": "C(C(C(=O)O)N)C(=O)N"
+  },
+  {
+    "id": "sfct-asparagine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-asparagine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "アスパラギン（Asparagine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "アスパラギン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/asparagine.svg",
+    "smiles": "C(C(C(=O)O)N)C(=O)N"
+  },
+  {
+    "id": "sfct-glutamine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-glutamine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "グルタミン",
+    "back": "Glutamine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "グルタミン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/glutamine.svg",
+    "smiles": "C(CC(=O)N)C(C(=O)O)N"
+  },
+  {
+    "id": "sfct-glutamine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-glutamine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "グルタミン（Glutamine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "グルタミン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/glutamine.svg",
+    "smiles": "C(CC(=O)N)C(C(=O)O)N"
+  },
+  {
+    "id": "sfct-aspartic-acid-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-aspartic-acid",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "アスパラギン酸",
+    "back": "Aspartic acid。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "アスパラギン酸",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/aspartic-acid.svg",
+    "smiles": "C(C(C(=O)O)N)C(=O)O"
+  },
+  {
+    "id": "sfct-aspartic-acid-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-aspartic-acid",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "アスパラギン酸（Aspartic acid）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "アスパラギン酸",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/aspartic-acid.svg",
+    "smiles": "C(C(C(=O)O)N)C(=O)O"
+  },
+  {
+    "id": "sfct-glutamic-acid-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-glutamic-acid",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "グルタミン酸",
+    "back": "Glutamic acid。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "グルタミン酸",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/glutamic-acid.svg",
+    "smiles": "C(CC(=O)O)C(C(=O)O)N"
+  },
+  {
+    "id": "sfct-glutamic-acid-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-glutamic-acid",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "グルタミン酸（Glutamic acid）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "グルタミン酸",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/glutamic-acid.svg",
+    "smiles": "C(CC(=O)O)C(C(=O)O)N"
+  },
+  {
+    "id": "sfct-lysine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-lysine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "リシン",
+    "back": "Lysine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "リシン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/lysine.svg",
+    "smiles": "C(CCN)CC(C(=O)O)N"
+  },
+  {
+    "id": "sfct-lysine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-lysine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "リシン（Lysine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "リシン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/lysine.svg",
+    "smiles": "C(CCN)CC(C(=O)O)N"
+  },
+  {
+    "id": "sfct-arginine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-arginine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "アルギニン",
+    "back": "Arginine。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "アルギニン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/arginine.svg",
+    "smiles": "C(CC(C(=O)O)N)CN=C(N)N"
+  },
+  {
+    "id": "sfct-arginine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-arginine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "アルギニン（Arginine）。α-アミノ酸。特徴的な官能基: アミノ基、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "アルギニン",
+      "amino_acid"
+    ],
+    "media_url": "/images/structures/arginine.svg",
+    "smiles": "C(CC(C(=O)O)N)CN=C(N)N"
+  },
+  {
+    "id": "sfct-lansoprazole-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-lansoprazole",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "ランソプラゾール",
+    "back": "Lansoprazole。ベンゾイミダゾール+ピリジン。特徴的な官能基: スルフィニル基、トリフルオロメチル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ランソプラゾール",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/lansoprazole.svg",
+    "smiles": "CC1=C(C=CN=C1CS(=O)C2=NC3=CC=CC=C3N2)OCC(F)(F)F"
+  },
+  {
+    "id": "sfct-lansoprazole-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-lansoprazole",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "ランソプラゾール（Lansoprazole）。ベンゾイミダゾール+ピリジン。特徴的な官能基: スルフィニル基、トリフルオロメチル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ランソプラゾール",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/lansoprazole.svg",
+    "smiles": "CC1=C(C=CN=C1CS(=O)C2=NC3=CC=CC=C3N2)OCC(F)(F)F"
+  },
+  {
+    "id": "sfct-omeprazole-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-omeprazole",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "オメプラゾール",
+    "back": "Omeprazole。ベンゾイミダゾール+ピリジン。特徴的な官能基: スルフィニル基、メトキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "オメプラゾール",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/omeprazole.svg",
+    "smiles": "CC1=CN=C(C(=C1OC)C)CS(=O)C2=NC3=C(N2)C=C(C=C3)OC"
+  },
+  {
+    "id": "sfct-omeprazole-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-omeprazole",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "オメプラゾール（Omeprazole）。ベンゾイミダゾール+ピリジン。特徴的な官能基: スルフィニル基、メトキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "オメプラゾール",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/omeprazole.svg",
+    "smiles": "CC1=CN=C(C(=C1OC)C)CS(=O)C2=NC3=C(N2)C=C(C=C3)OC"
+  },
+  {
+    "id": "sfct-levodopa-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-levodopa",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "レボドパ",
+    "back": "Levodopa。カテコール+α-アミノ酸。特徴的な官能基: カテコール基、アミノ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "レボドパ",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/levodopa.svg",
+    "smiles": "C1=CC(=C(C=C1CC(C(=O)O)N)O)O"
+  },
+  {
+    "id": "sfct-levodopa-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-levodopa",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "レボドパ（Levodopa）。カテコール+α-アミノ酸。特徴的な官能基: カテコール基、アミノ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "レボドパ",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/levodopa.svg",
+    "smiles": "C1=CC(=C(C=C1CC(C(=O)O)N)O)O"
+  },
+  {
+    "id": "sfct-valacyclovir-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-valacyclovir",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "バラシクロビル",
+    "back": "Valacyclovir。プリン環+バリンエステル。特徴的な官能基: プリン環、バリンエステル",
+    "format": "structural_name_to_image",
+    "tags": [
+      "バラシクロビル",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/valacyclovir.svg",
+    "smiles": "CC(C)C(C(=O)OCCOCN1C=NC2=C1N=C(NC2=O)N)N"
+  },
+  {
+    "id": "sfct-valacyclovir-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-valacyclovir",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "バラシクロビル（Valacyclovir）。プリン環+バリンエステル。特徴的な官能基: プリン環、バリンエステル",
+    "format": "structural_image_to_name",
+    "tags": [
+      "バラシクロビル",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/valacyclovir.svg",
+    "smiles": "CC(C)C(C(=O)OCCOCN1C=NC2=C1N=C(NC2=O)N)N"
+  },
+  {
+    "id": "sfct-oseltamivir-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-oseltamivir",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "オセルタミビル",
+    "back": "Oseltamivir。シクロヘキセン。特徴的な官能基: エチルエステル、アミノ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "オセルタミビル",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/oseltamivir.svg",
+    "smiles": "CCC(CC)OC1C=C(CC(C1NC(=O)C)N)C(=O)OCC"
+  },
+  {
+    "id": "sfct-oseltamivir-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-oseltamivir",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "オセルタミビル（Oseltamivir）。シクロヘキセン。特徴的な官能基: エチルエステル、アミノ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "オセルタミビル",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/oseltamivir.svg",
+    "smiles": "CCC(CC)OC1C=C(CC(C1NC(=O)C)N)C(=O)OCC"
+  },
+  {
+    "id": "sfct-cefcapene-pivoxil-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-cefcapene-pivoxil",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "セフカペンピボキシル",
+    "back": "Cefcapene pivoxil。β-ラクタム(セフェム)。特徴的な官能基: ピバロイルオキシメチル基、β-ラクタム環",
+    "format": "structural_name_to_image",
+    "tags": [
+      "セフカペンピボキシル",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/cefcapene-pivoxil.svg",
+    "smiles": "CCC=C(C1=CSC(=N1)N)C(=O)NC2C3N(C2=O)C(=C(CS3)COC(=O)N)C(=O)OCOC(=O)C(C)(C)C"
+  },
+  {
+    "id": "sfct-cefcapene-pivoxil-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-cefcapene-pivoxil",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "セフカペンピボキシル（Cefcapene pivoxil）。β-ラクタム(セフェム)。特徴的な官能基: ピバロイルオキシメチル基、β-ラクタム環",
+    "format": "structural_image_to_name",
+    "tags": [
+      "セフカペンピボキシル",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/cefcapene-pivoxil.svg",
+    "smiles": "CCC=C(C1=CSC(=N1)N)C(=O)NC2C3N(C2=O)C(=C(CS3)COC(=O)N)C(=O)OCOC(=O)C(C)(C)C"
+  },
+  {
+    "id": "sfct-clopidogrel-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-clopidogrel",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "クロピドグレル",
+    "back": "Clopidogrel。チエノピリジン。特徴的な官能基: チオフェン環、塩素",
+    "format": "structural_name_to_image",
+    "tags": [
+      "クロピドグレル",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/clopidogrel.svg",
+    "smiles": "COC(=O)C(C1=CC=CC=C1Cl)N2CCC3=C(C2)C=CS3"
+  },
+  {
+    "id": "sfct-clopidogrel-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-clopidogrel",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "クロピドグレル（Clopidogrel）。チエノピリジン。特徴的な官能基: チオフェン環、塩素",
+    "format": "structural_image_to_name",
+    "tags": [
+      "クロピドグレル",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/clopidogrel.svg",
+    "smiles": "COC(=O)C(C1=CC=CC=C1Cl)N2CCC3=C(C2)C=CS3"
+  },
+  {
+    "id": "sfct-docarpamine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-docarpamine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "ドカルパミン",
+    "back": "Docarpamine。カテコール誘導体。特徴的な官能基: カルバメート基、アミド結合",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ドカルパミン",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/docarpamine.svg",
+    "smiles": "CCOC(=O)OC1=C(C=C(C=C1)CCNC(=O)C(CCSC)NC(=O)C)OC(=O)OCC"
+  },
+  {
+    "id": "sfct-docarpamine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-docarpamine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "ドカルパミン（Docarpamine）。カテコール誘導体。特徴的な官能基: カルバメート基、アミド結合",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ドカルパミン",
+      "prodrug"
+    ],
+    "media_url": "/images/structures/docarpamine.svg",
+    "smiles": "CCOC(=O)OC1=C(C=C(C=C1)CCNC(=O)C(CCSC)NC(=O)C)OC(=O)OCC"
+  },
+  {
+    "id": "sfct-aflatoxin-b1-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-aflatoxin-b1",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "アフラトキシンB1",
+    "back": "Aflatoxin B1。フロクマリン骨格。特徴的な官能基: フラン環、ラクトン環",
+    "format": "structural_name_to_image",
+    "tags": [
+      "アフラトキシンB1",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/aflatoxin-b1.svg",
+    "smiles": "COC1=C2C3=C(C(=O)CC3)C(=O)OC2=C4C5C=COC5OC4=C1"
+  },
+  {
+    "id": "sfct-aflatoxin-b1-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-aflatoxin-b1",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "アフラトキシンB1（Aflatoxin B1）。フロクマリン骨格。特徴的な官能基: フラン環、ラクトン環",
+    "format": "structural_image_to_name",
+    "tags": [
+      "アフラトキシンB1",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/aflatoxin-b1.svg",
+    "smiles": "COC1=C2C3=C(C(=O)CC3)C(=O)OC2=C4C5C=COC5OC4=C1"
+  },
+  {
+    "id": "sfct-benzo-a-pyrene-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-benzo-a-pyrene",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "ベンゾ[a]ピレン",
+    "back": "Benzo[a]pyrene。多環芳香族。特徴的な官能基: 5環縮合構造",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ベンゾ[a]ピレン",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/benzo-a-pyrene.svg",
+    "smiles": "C1=CC=C2C3=C4C(=CC2=C1)C=CC5=C4C(=CC=C5)C=C3"
+  },
+  {
+    "id": "sfct-benzo-a-pyrene-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-benzo-a-pyrene",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "ベンゾ[a]ピレン（Benzo[a]pyrene）。多環芳香族。特徴的な官能基: 5環縮合構造",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ベンゾ[a]ピレン",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/benzo-a-pyrene.svg",
+    "smiles": "C1=CC=C2C3=C4C(=CC2=C1)C=CC5=C4C(=CC=C5)C=C3"
+  },
+  {
+    "id": "sfct-ndma-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-ndma",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "N-ニトロソジメチルアミン",
+    "back": "N-Nitrosodimethylamine。ニトロソアミン。特徴的な官能基: N-ニトロソ基、メチル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "N-ニトロソジメチルアミン",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/ndma.svg",
+    "smiles": "CN(C)N=O"
+  },
+  {
+    "id": "sfct-ndma-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-ndma",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "N-ニトロソジメチルアミン（N-Nitrosodimethylamine）。ニトロソアミン。特徴的な官能基: N-ニトロソ基、メチル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "N-ニトロソジメチルアミン",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/ndma.svg",
+    "smiles": "CN(C)N=O"
+  },
+  {
+    "id": "sfct-acrylamide-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-acrylamide",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "アクリルアミド",
+    "back": "Acrylamide。アクリル酸アミド。特徴的な官能基: ビニル基、アミド基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "アクリルアミド",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/acrylamide.svg",
+    "smiles": "C=CC(=O)N"
+  },
+  {
+    "id": "sfct-acrylamide-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-acrylamide",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "アクリルアミド（Acrylamide）。アクリル酸アミド。特徴的な官能基: ビニル基、アミド基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "アクリルアミド",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/acrylamide.svg",
+    "smiles": "C=CC(=O)N"
+  },
+  {
+    "id": "sfct-o-toluidine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-o-toluidine",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "o-トルイジン",
+    "back": "o-Toluidine。アニリン誘導体。特徴的な官能基: アミノ基、メチル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "o-トルイジン",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/o-toluidine.svg",
+    "smiles": "CC1=CC=CC=C1N"
+  },
+  {
+    "id": "sfct-o-toluidine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-o-toluidine",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "o-トルイジン（o-Toluidine）。アニリン誘導体。特徴的な官能基: アミノ基、メチル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "o-トルイジン",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/o-toluidine.svg",
+    "smiles": "CC1=CC=CC=C1N"
+  },
+  {
+    "id": "sfct-benzidine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-benzidine",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "ベンジジン",
+    "back": "Benzidine。ビフェニル。特徴的な官能基: アミノ基×2",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ベンジジン",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/benzidine.svg",
+    "smiles": "C1=CC(=CC=C1C2=CC=C(C=C2)N)N"
+  },
+  {
+    "id": "sfct-benzidine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-benzidine",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "ベンジジン（Benzidine）。ビフェニル。特徴的な官能基: アミノ基×2",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ベンジジン",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/benzidine.svg",
+    "smiles": "C1=CC(=CC=C1C2=CC=C(C=C2)N)N"
+  },
+  {
+    "id": "sfct-beta-naphthylamine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-beta-naphthylamine",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "β-ナフチルアミン",
+    "back": "beta-Naphthylamine。ナフタレン。特徴的な官能基: アミノ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "β-ナフチルアミン",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/beta-naphthylamine.svg",
+    "smiles": "C1=CC=C2C=C(C=CC2=C1)N"
+  },
+  {
+    "id": "sfct-beta-naphthylamine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-beta-naphthylamine",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "β-ナフチルアミン（beta-Naphthylamine）。ナフタレン。特徴的な官能基: アミノ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "β-ナフチルアミン",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/beta-naphthylamine.svg",
+    "smiles": "C1=CC=C2C=C(C=CC2=C1)N"
+  },
+  {
+    "id": "sfct-bcme-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-bcme",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "ビス(クロロメチル)エーテル",
+    "back": "Bis(chloromethyl) ether。エーテル。特徴的な官能基: クロロメチル基×2",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ビス(クロロメチル)エーテル",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/bcme.svg",
+    "smiles": "C(OCCl)Cl"
+  },
+  {
+    "id": "sfct-bcme-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-bcme",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "ビス(クロロメチル)エーテル（Bis(chloromethyl) ether）。エーテル。特徴的な官能基: クロロメチル基×2",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ビス(クロロメチル)エーテル",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/bcme.svg",
+    "smiles": "C(OCCl)Cl"
+  },
+  {
+    "id": "sfct-vinyl-chloride-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-vinyl-chloride",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "塩化ビニル",
+    "back": "Vinyl chloride。エチレン誘導体。特徴的な官能基: 塩素、ビニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "塩化ビニル",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/vinyl-chloride.svg",
+    "smiles": "C=CCl"
+  },
+  {
+    "id": "sfct-vinyl-chloride-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-vinyl-chloride",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "塩化ビニル（Vinyl chloride）。エチレン誘導体。特徴的な官能基: 塩素、ビニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "塩化ビニル",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/vinyl-chloride.svg",
+    "smiles": "C=CCl"
+  },
+  {
+    "id": "sfct-deoxynivalenol-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-deoxynivalenol",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "デオキシニバレノール",
+    "back": "Deoxynivalenol。トリコテセン骨格。特徴的な官能基: エポキシ環、ヒドロキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "デオキシニバレノール",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/deoxynivalenol.svg",
+    "smiles": "CC1=CC2C(C(C1=O)O)(C3(CC(C(C34CO4)O2)O)C)CO"
+  },
+  {
+    "id": "sfct-deoxynivalenol-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-deoxynivalenol",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "デオキシニバレノール（Deoxynivalenol）。トリコテセン骨格。特徴的な官能基: エポキシ環、ヒドロキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "デオキシニバレノール",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/deoxynivalenol.svg",
+    "smiles": "CC1=CC2C(C(C1=O)O)(C3(CC(C(C34CO4)O2)O)C)CO"
+  },
+  {
+    "id": "sfct-tcdd-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-tcdd",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "2,3,7,8-TCDD",
+    "back": "2,3,7,8-TCDD。ジベンゾ-p-ジオキシン。特徴的な官能基: 塩素×4、ジオキシン環",
+    "format": "structural_name_to_image",
+    "tags": [
+      "2,3,7,8-TCDD",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/tcdd.svg",
+    "smiles": "C1=C2C(=CC(=C1Cl)Cl)OC3=CC(=C(C=C3O2)Cl)Cl"
+  },
+  {
+    "id": "sfct-tcdd-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-tcdd",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "2,3,7,8-TCDD（2,3,7,8-TCDD）。ジベンゾ-p-ジオキシン。特徴的な官能基: 塩素×4、ジオキシン環",
+    "format": "structural_image_to_name",
+    "tags": [
+      "2,3,7,8-TCDD",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/tcdd.svg",
+    "smiles": "C1=C2C(=CC(=C1Cl)Cl)OC3=CC(=C(C=C3O2)Cl)Cl"
+  },
+  {
+    "id": "sfct-phenacetin-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-phenacetin",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "フェナセチン",
+    "back": "Phenacetin。アセトアニリド誘導体。特徴的な官能基: アセトアミド基、エトキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "フェナセチン",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/phenacetin.svg",
+    "smiles": "CCOC1=CC=C(C=C1)NC(=O)C"
+  },
+  {
+    "id": "sfct-phenacetin-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-phenacetin",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "フェナセチン（Phenacetin）。アセトアニリド誘導体。特徴的な官能基: アセトアミド基、エトキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "フェナセチン",
+      "carcinogen"
+    ],
+    "media_url": "/images/structures/phenacetin.svg",
+    "smiles": "CCOC1=CC=C(C=C1)NC(=O)C"
+  },
+  {
+    "id": "sfct-aspartame-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-aspartame",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "アスパルテーム",
+    "back": "Aspartame。ジペプチドメチルエステル。特徴的な官能基: アスパラギン酸、フェニルアラニンメチルエステル",
+    "format": "structural_name_to_image",
+    "tags": [
+      "アスパルテーム",
+      "sweetener"
+    ],
+    "media_url": "/images/structures/aspartame.svg",
+    "smiles": "COC(=O)C(CC1=CC=CC=C1)NC(=O)C(CC(=O)O)N"
+  },
+  {
+    "id": "sfct-aspartame-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-aspartame",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "アスパルテーム（Aspartame）。ジペプチドメチルエステル。特徴的な官能基: アスパラギン酸、フェニルアラニンメチルエステル",
+    "format": "structural_image_to_name",
+    "tags": [
+      "アスパルテーム",
+      "sweetener"
+    ],
+    "media_url": "/images/structures/aspartame.svg",
+    "smiles": "COC(=O)C(CC1=CC=CC=C1)NC(=O)C(CC(=O)O)N"
+  },
+  {
+    "id": "sfct-saccharin-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-saccharin",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "サッカリン",
+    "back": "Saccharin。ベンゾイソチアゾール。特徴的な官能基: スルホンアミド基、カルボニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "サッカリン",
+      "sweetener"
+    ],
+    "media_url": "/images/structures/saccharin.svg",
+    "smiles": "C1=CC=C2C(=C1)C(=O)NS2(=O)=O"
+  },
+  {
+    "id": "sfct-saccharin-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-saccharin",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "サッカリン（Saccharin）。ベンゾイソチアゾール。特徴的な官能基: スルホンアミド基、カルボニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "サッカリン",
+      "sweetener"
+    ],
+    "media_url": "/images/structures/saccharin.svg",
+    "smiles": "C1=CC=C2C(=C1)C(=O)NS2(=O)=O"
+  },
+  {
+    "id": "sfct-acesulfame-k-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-acesulfame-k",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "アセスルファムカリウム",
+    "back": "Acesulfame potassium。オキサチアジノン環。特徴的な官能基: スルホニル基、カルボニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "アセスルファムカリウム",
+      "sweetener"
+    ],
+    "media_url": "/images/structures/acesulfame-k.svg",
+    "smiles": "CC1=CC(=O)[N-]S(=O)(=O)O1.[K+]"
+  },
+  {
+    "id": "sfct-acesulfame-k-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-acesulfame-k",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "アセスルファムカリウム（Acesulfame potassium）。オキサチアジノン環。特徴的な官能基: スルホニル基、カルボニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "アセスルファムカリウム",
+      "sweetener"
+    ],
+    "media_url": "/images/structures/acesulfame-k.svg",
+    "smiles": "CC1=CC(=O)[N-]S(=O)(=O)O1.[K+]"
+  },
+  {
+    "id": "sfct-sucralose-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-sucralose",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "スクラロース",
+    "back": "Sucralose。スクロース誘導体。特徴的な官能基: 塩素×3、ヒドロキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "スクラロース",
+      "sweetener"
+    ],
+    "media_url": "/images/structures/sucralose.svg",
+    "smiles": "C(C1C(C(C(C(O1)OC2(C(C(C(O2)CCl)O)O)CCl)O)O)Cl)O"
+  },
+  {
+    "id": "sfct-sucralose-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-sucralose",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "スクラロース（Sucralose）。スクロース誘導体。特徴的な官能基: 塩素×3、ヒドロキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "スクラロース",
+      "sweetener"
+    ],
+    "media_url": "/images/structures/sucralose.svg",
+    "smiles": "C(C1C(C(C(C(O1)OC2(C(C(C(O2)CCl)O)O)CCl)O)O)Cl)O"
+  },
+  {
+    "id": "sfct-stevioside-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-stevioside",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "ステビオシド",
+    "back": "Stevioside。ジテルペン配糖体。特徴的な官能基: エント-カウレン骨格、配糖体",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ステビオシド",
+      "sweetener"
+    ],
+    "media_url": "/images/structures/stevioside.svg",
+    "smiles": "CC12CCCC(C1CCC34C2CCC(C3)(C(=C)C4)OC5C(C(C(C(O5)CO)O)O)OC6C(C(C(C(O6)CO)O)O)O)(C)C(=O)OC7C(C(C(C(O7)CO)O)O)O"
+  },
+  {
+    "id": "sfct-stevioside-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-stevioside",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "ステビオシド（Stevioside）。ジテルペン配糖体。特徴的な官能基: エント-カウレン骨格、配糖体",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ステビオシド",
+      "sweetener"
+    ],
+    "media_url": "/images/structures/stevioside.svg",
+    "smiles": "CC12CCCC(C1CCC34C2CCC(C3)(C(=C)C4)OC5C(C(C(C(O5)CO)O)O)OC6C(C(C(C(O6)CO)O)O)O)(C)C(=O)OC7C(C(C(C(O7)CO)O)O)O"
+  },
+  {
+    "id": "sfct-glycyrrhizin-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-glycyrrhizin",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "グリチルリチン",
+    "back": "Glycyrrhizin。トリテルペン配糖体。特徴的な官能基: オレアナン骨格、グルクロン酸×2",
+    "format": "structural_name_to_image",
+    "tags": [
+      "グリチルリチン",
+      "sweetener"
+    ],
+    "media_url": "/images/structures/glycyrrhizin.svg",
+    "smiles": "CC1(C2CCC3(C(C2(CCC1OC4C(C(C(C(O4)C(=O)O)O)O)OC5C(C(C(C(O5)C(=O)O)O)O)O)C)C(=O)C=C6C3(CCC7(C6CC(CC7)(C)C(=O)O)C)C)C)C"
+  },
+  {
+    "id": "sfct-glycyrrhizin-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-glycyrrhizin",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "グリチルリチン（Glycyrrhizin）。トリテルペン配糖体。特徴的な官能基: オレアナン骨格、グルクロン酸×2",
+    "format": "structural_image_to_name",
+    "tags": [
+      "グリチルリチン",
+      "sweetener"
+    ],
+    "media_url": "/images/structures/glycyrrhizin.svg",
+    "smiles": "CC1(C2CCC3(C(C2(CCC1OC4C(C(C(C(O4)C(=O)O)O)O)OC5C(C(C(C(O5)C(=O)O)O)O)O)C)C(=O)C=C6C3(CCC7(C6CC(CC7)(C)C(=O)O)C)C)C)C"
+  },
+  {
+    "id": "sfct-sorbic-acid-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-sorbic-acid",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "ソルビン酸",
+    "back": "Sorbic acid。不飽和脂肪酸。特徴的な官能基: 共役二重結合、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ソルビン酸",
+      "preservative"
+    ],
+    "media_url": "/images/structures/sorbic-acid.svg",
+    "smiles": "CC=CC=CC(=O)O"
+  },
+  {
+    "id": "sfct-sorbic-acid-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-sorbic-acid",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "ソルビン酸（Sorbic acid）。不飽和脂肪酸。特徴的な官能基: 共役二重結合、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ソルビン酸",
+      "preservative"
+    ],
+    "media_url": "/images/structures/sorbic-acid.svg",
+    "smiles": "CC=CC=CC(=O)O"
+  },
+  {
+    "id": "sfct-benzoic-acid-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-benzoic-acid",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "安息香酸",
+    "back": "Benzoic acid。芳香族カルボン酸。特徴的な官能基: カルボキシ基、ベンゼン環",
+    "format": "structural_name_to_image",
+    "tags": [
+      "安息香酸",
+      "preservative"
+    ],
+    "media_url": "/images/structures/benzoic-acid.svg",
+    "smiles": "C1=CC=C(C=C1)C(=O)O"
+  },
+  {
+    "id": "sfct-benzoic-acid-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-benzoic-acid",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "安息香酸（Benzoic acid）。芳香族カルボン酸。特徴的な官能基: カルボキシ基、ベンゼン環",
+    "format": "structural_image_to_name",
+    "tags": [
+      "安息香酸",
+      "preservative"
+    ],
+    "media_url": "/images/structures/benzoic-acid.svg",
+    "smiles": "C1=CC=C(C=C1)C(=O)O"
+  },
+  {
+    "id": "sfct-dehydroacetic-acid-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-dehydroacetic-acid",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "デヒドロ酢酸",
+    "back": "Dehydroacetic acid。ピラノン環。特徴的な官能基: ラクトン環、アセチル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "デヒドロ酢酸",
+      "preservative"
+    ],
+    "media_url": "/images/structures/dehydroacetic-acid.svg",
+    "smiles": "CC1=CC(=O)C(C(=O)O1)C(=O)C"
+  },
+  {
+    "id": "sfct-dehydroacetic-acid-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-dehydroacetic-acid",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "デヒドロ酢酸（Dehydroacetic acid）。ピラノン環。特徴的な官能基: ラクトン環、アセチル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "デヒドロ酢酸",
+      "preservative"
+    ],
+    "media_url": "/images/structures/dehydroacetic-acid.svg",
+    "smiles": "CC1=CC(=O)C(C(=O)O1)C(=O)C"
+  },
+  {
+    "id": "sfct-methylparaben-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-methylparaben",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "パラオキシ安息香酸メチル",
+    "back": "Methylparaben。安息香酸エステル。特徴的な官能基: エステル基、フェノール性OH",
+    "format": "structural_name_to_image",
+    "tags": [
+      "パラオキシ安息香酸メチル",
+      "preservative"
+    ],
+    "media_url": "/images/structures/methylparaben.svg",
+    "smiles": "COC(=O)C1=CC=C(C=C1)O"
+  },
+  {
+    "id": "sfct-methylparaben-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-methylparaben",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "パラオキシ安息香酸メチル（Methylparaben）。安息香酸エステル。特徴的な官能基: エステル基、フェノール性OH",
+    "format": "structural_image_to_name",
+    "tags": [
+      "パラオキシ安息香酸メチル",
+      "preservative"
+    ],
+    "media_url": "/images/structures/methylparaben.svg",
+    "smiles": "COC(=O)C1=CC=C(C=C1)O"
+  },
+  {
+    "id": "sfct-propionic-acid-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-propionic-acid",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "プロピオン酸",
+    "back": "Propionic acid。短鎖脂肪酸。特徴的な官能基: カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "プロピオン酸",
+      "preservative"
+    ],
+    "media_url": "/images/structures/propionic-acid.svg",
+    "smiles": "CCC(=O)O"
+  },
+  {
+    "id": "sfct-propionic-acid-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-propionic-acid",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "プロピオン酸（Propionic acid）。短鎖脂肪酸。特徴的な官能基: カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "プロピオン酸",
+      "preservative"
+    ],
+    "media_url": "/images/structures/propionic-acid.svg",
+    "smiles": "CCC(=O)O"
+  },
+  {
+    "id": "sfct-bha-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-bha",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "BHA",
+    "back": "BHA。フェノール誘導体。特徴的な官能基: tert-ブチル基、メトキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "BHA",
+      "antioxidant"
+    ],
+    "media_url": "/images/structures/bha.svg",
+    "smiles": "CC(C)(C)C1=C(C=CC(=C1)OC)O"
+  },
+  {
+    "id": "sfct-bha-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-bha",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "BHA（BHA）。フェノール誘導体。特徴的な官能基: tert-ブチル基、メトキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "BHA",
+      "antioxidant"
+    ],
+    "media_url": "/images/structures/bha.svg",
+    "smiles": "CC(C)(C)C1=C(C=CC(=C1)OC)O"
+  },
+  {
+    "id": "sfct-bht-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-bht",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "BHT",
+    "back": "BHT。ヒンダードフェノール。特徴的な官能基: tert-ブチル基×2、メチル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "BHT",
+      "antioxidant"
+    ],
+    "media_url": "/images/structures/bht.svg",
+    "smiles": "CC1=CC(=C(C(=C1)C(C)(C)C)O)C(C)(C)C"
+  },
+  {
+    "id": "sfct-bht-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-bht",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "BHT（BHT）。ヒンダードフェノール。特徴的な官能基: tert-ブチル基×2、メチル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "BHT",
+      "antioxidant"
+    ],
+    "media_url": "/images/structures/bht.svg",
+    "smiles": "CC1=CC(=C(C(=C1)C(C)(C)C)O)C(C)(C)C"
+  },
+  {
+    "id": "sfct-erythorbic-acid-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-erythorbic-acid",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "エリソルビン酸",
+    "back": "Erythorbic acid。ラクトン環(アスコルビン酸エピマー)。特徴的な官能基: エンジオール基、ラクトン環",
+    "format": "structural_name_to_image",
+    "tags": [
+      "エリソルビン酸",
+      "antioxidant"
+    ],
+    "media_url": "/images/structures/erythorbic-acid.svg",
+    "smiles": "C(C(C1C(=C(C(=O)O1)O)O)O)O"
+  },
+  {
+    "id": "sfct-erythorbic-acid-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-erythorbic-acid",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "エリソルビン酸（Erythorbic acid）。ラクトン環(アスコルビン酸エピマー)。特徴的な官能基: エンジオール基、ラクトン環",
+    "format": "structural_image_to_name",
+    "tags": [
+      "エリソルビン酸",
+      "antioxidant"
+    ],
+    "media_url": "/images/structures/erythorbic-acid.svg",
+    "smiles": "C(C(C1C(=C(C(=O)O1)O)O)O)O"
+  },
+  {
+    "id": "sfct-propyl-gallate-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-propyl-gallate",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "没食子酸プロピル",
+    "back": "Propyl gallate。ガロイル基。特徴的な官能基: トリヒドロキシベンゼン、プロピルエステル",
+    "format": "structural_name_to_image",
+    "tags": [
+      "没食子酸プロピル",
+      "antioxidant"
+    ],
+    "media_url": "/images/structures/propyl-gallate.svg",
+    "smiles": "CCCOC(=O)C1=CC(=C(C(=C1)O)O)O"
+  },
+  {
+    "id": "sfct-propyl-gallate-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-propyl-gallate",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "没食子酸プロピル（Propyl gallate）。ガロイル基。特徴的な官能基: トリヒドロキシベンゼン、プロピルエステル",
+    "format": "structural_image_to_name",
+    "tags": [
+      "没食子酸プロピル",
+      "antioxidant"
+    ],
+    "media_url": "/images/structures/propyl-gallate.svg",
+    "smiles": "CCCOC(=O)C1=CC(=C(C(=C1)O)O)O"
+  },
+  {
+    "id": "sfct-opp-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-opp",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "OPP",
+    "back": "o-Phenylphenol。ビフェニル。特徴的な官能基: フェノール性OH",
+    "format": "structural_name_to_image",
+    "tags": [
+      "OPP",
+      "antifungal"
+    ],
+    "media_url": "/images/structures/opp.svg",
+    "smiles": "C1=CC=C(C=C1)C2=CC=CC=C2O"
+  },
+  {
+    "id": "sfct-opp-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-opp",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "OPP（o-Phenylphenol）。ビフェニル。特徴的な官能基: フェノール性OH",
+    "format": "structural_image_to_name",
+    "tags": [
+      "OPP",
+      "antifungal"
+    ],
+    "media_url": "/images/structures/opp.svg",
+    "smiles": "C1=CC=C(C=C1)C2=CC=CC=C2O"
+  },
+  {
+    "id": "sfct-tbz-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-tbz",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "TBZ",
+    "back": "Thiabendazole。ベンゾイミダゾール+チアゾール。特徴的な官能基: ベンゾイミダゾール環、チアゾール環",
+    "format": "structural_name_to_image",
+    "tags": [
+      "TBZ",
+      "antifungal"
+    ],
+    "media_url": "/images/structures/tbz.svg",
+    "smiles": "C1=CC=C2C(=C1)NC(=N2)C3=CSC=N3"
+  },
+  {
+    "id": "sfct-tbz-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-tbz",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "TBZ（Thiabendazole）。ベンゾイミダゾール+チアゾール。特徴的な官能基: ベンゾイミダゾール環、チアゾール環",
+    "format": "structural_image_to_name",
+    "tags": [
+      "TBZ",
+      "antifungal"
+    ],
+    "media_url": "/images/structures/tbz.svg",
+    "smiles": "C1=CC=C2C(=C1)NC(=N2)C3=CSC=N3"
+  },
+  {
+    "id": "sfct-imazalil-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-imazalil",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "イマザリル",
+    "back": "Imazalil。イミダゾール誘導体。特徴的な官能基: イミダゾール環、ジクロロフェニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "イマザリル",
+      "antifungal"
+    ],
+    "media_url": "/images/structures/imazalil.svg",
+    "smiles": "C=CCOC(CN1C=CN=C1)C2=C(C=C(C=C2)Cl)Cl"
+  },
+  {
+    "id": "sfct-imazalil-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-imazalil",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "イマザリル（Imazalil）。イミダゾール誘導体。特徴的な官能基: イミダゾール環、ジクロロフェニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "イマザリル",
+      "antifungal"
+    ],
+    "media_url": "/images/structures/imazalil.svg",
+    "smiles": "C=CCOC(CN1C=CN=C1)C2=C(C=C(C=C2)Cl)Cl"
+  },
+  {
+    "id": "sfct-diphenyl-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-diphenyl",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "ジフェニル",
+    "back": "Biphenyl。ビフェニル。",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ジフェニル",
+      "antifungal"
+    ],
+    "media_url": "/images/structures/diphenyl.svg",
+    "smiles": "C1=CC=C(C=C1)C2=CC=CC=C2"
+  },
+  {
+    "id": "sfct-diphenyl-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-diphenyl",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "ジフェニル（Biphenyl）。ビフェニル。",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ジフェニル",
+      "antifungal"
+    ],
+    "media_url": "/images/structures/diphenyl.svg",
+    "smiles": "C1=CC=C(C=C1)C2=CC=CC=C2"
+  },
+  {
+    "id": "sfct-malathion-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-malathion",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "マラチオン",
+    "back": "Malathion。有機リン(ジチオリン酸)。特徴的な官能基: チオリン酸エステル、コハク酸ジエチル",
+    "format": "structural_name_to_image",
+    "tags": [
+      "マラチオン",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/malathion.svg",
+    "smiles": "CCOC(=O)CC(C(=O)OCC)SP(=S)(OC)OC"
+  },
+  {
+    "id": "sfct-malathion-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-malathion",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "マラチオン（Malathion）。有機リン(ジチオリン酸)。特徴的な官能基: チオリン酸エステル、コハク酸ジエチル",
+    "format": "structural_image_to_name",
+    "tags": [
+      "マラチオン",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/malathion.svg",
+    "smiles": "CCOC(=O)CC(C(=O)OCC)SP(=S)(OC)OC"
+  },
+  {
+    "id": "sfct-parathion-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-parathion",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "パラチオン",
+    "back": "Parathion。有機リン(チオリン酸)。特徴的な官能基: チオリン酸エステル、ニトロフェニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "パラチオン",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/parathion.svg",
+    "smiles": "CCOP(=S)(OCC)OC1=CC=C(C=C1)[N+](=O)[O-]"
+  },
+  {
+    "id": "sfct-parathion-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-parathion",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "パラチオン（Parathion）。有機リン(チオリン酸)。特徴的な官能基: チオリン酸エステル、ニトロフェニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "パラチオン",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/parathion.svg",
+    "smiles": "CCOP(=S)(OCC)OC1=CC=C(C=C1)[N+](=O)[O-]"
+  },
+  {
+    "id": "sfct-ddt-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-ddt",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "DDT",
+    "back": "DDT。ジフェニルトリクロロエタン。特徴的な官能基: トリクロロメチル基、塩素化フェニル×2",
+    "format": "structural_name_to_image",
+    "tags": [
+      "DDT",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/ddt.svg",
+    "smiles": "C1=CC(=CC=C1C(C2=CC=C(C=C2)Cl)C(Cl)(Cl)Cl)Cl"
+  },
+  {
+    "id": "sfct-ddt-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-ddt",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "DDT（DDT）。ジフェニルトリクロロエタン。特徴的な官能基: トリクロロメチル基、塩素化フェニル×2",
+    "format": "structural_image_to_name",
+    "tags": [
+      "DDT",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/ddt.svg",
+    "smiles": "C1=CC(=CC=C1C(C2=CC=C(C=C2)Cl)C(Cl)(Cl)Cl)Cl"
+  },
+  {
+    "id": "sfct-glyphosate-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-glyphosate",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "グリホサート",
+    "back": "Glyphosate。アミノ酸系除草剤。特徴的な官能基: ホスホン酸基、アミノ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "グリホサート",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/glyphosate.svg",
+    "smiles": "C(C(=O)O)NCP(=O)(O)O"
+  },
+  {
+    "id": "sfct-glyphosate-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-glyphosate",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "グリホサート（Glyphosate）。アミノ酸系除草剤。特徴的な官能基: ホスホン酸基、アミノ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "グリホサート",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/glyphosate.svg",
+    "smiles": "C(C(=O)O)NCP(=O)(O)O"
+  },
+  {
+    "id": "sfct-paraquat-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-paraquat",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "パラコート",
+    "back": "Paraquat。ビピリジニウム。特徴的な官能基: 4級窒素×2、メチル基×2",
+    "format": "structural_name_to_image",
+    "tags": [
+      "パラコート",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/paraquat.svg",
+    "smiles": "C[N+]1=CC=C(C=C1)C2=CC=[N+](C=C2)C"
+  },
+  {
+    "id": "sfct-paraquat-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-paraquat",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "パラコート（Paraquat）。ビピリジニウム。特徴的な官能基: 4級窒素×2、メチル基×2",
+    "format": "structural_image_to_name",
+    "tags": [
+      "パラコート",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/paraquat.svg",
+    "smiles": "C[N+]1=CC=C(C=C1)C2=CC=[N+](C=C2)C"
+  },
+  {
+    "id": "sfct-permethrin-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-permethrin",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "ペルメトリン",
+    "back": "Permethrin。ピレスロイド。特徴的な官能基: シクロプロパン環、ジクロロビニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ペルメトリン",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/permethrin.svg",
+    "smiles": "CC1(C(C1C(=O)OCC2=CC(=CC=C2)OC3=CC=CC=C3)C=C(Cl)Cl)C"
+  },
+  {
+    "id": "sfct-permethrin-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-permethrin",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "ペルメトリン（Permethrin）。ピレスロイド。特徴的な官能基: シクロプロパン環、ジクロロビニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ペルメトリン",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/permethrin.svg",
+    "smiles": "CC1(C(C1C(=O)OCC2=CC(=CC=C2)OC3=CC=CC=C3)C=C(Cl)Cl)C"
+  },
+  {
+    "id": "sfct-carbaryl-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-carbaryl",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "カルバリル",
+    "back": "Carbaryl。カーバメート。特徴的な官能基: カルバモイル基、ナフチル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "カルバリル",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/carbaryl.svg",
+    "smiles": "CNC(=O)OC1=CC=CC2=CC=CC=C21"
+  },
+  {
+    "id": "sfct-carbaryl-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-carbaryl",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "カルバリル（Carbaryl）。カーバメート。特徴的な官能基: カルバモイル基、ナフチル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "カルバリル",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/carbaryl.svg",
+    "smiles": "CNC(=O)OC1=CC=CC2=CC=CC=C21"
+  },
+  {
+    "id": "sfct-diazinon-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-diazinon",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "ダイアジノン",
+    "back": "Diazinon。有機リン+ピリミジン。特徴的な官能基: チオリン酸エステル、ピリミジン環",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ダイアジノン",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/diazinon.svg",
+    "smiles": "CCOP(=S)(OCC)OC1=NC(=NC(=C1)C)C(C)C"
+  },
+  {
+    "id": "sfct-diazinon-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-diazinon",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "ダイアジノン（Diazinon）。有機リン+ピリミジン。特徴的な官能基: チオリン酸エステル、ピリミジン環",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ダイアジノン",
+      "pesticide"
+    ],
+    "media_url": "/images/structures/diazinon.svg",
+    "smiles": "CCOP(=S)(OCC)OC1=NC(=NC(=C1)C)C(C)C"
+  },
+  {
+    "id": "sfct-pcb-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-pcb",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "PCB",
+    "back": "2,2',4,4',5,5'-Hexachlorobiphenyl。ポリ塩化ビフェニル。特徴的な官能基: ビフェニル、塩素(多数)",
+    "format": "structural_name_to_image",
+    "tags": [
+      "PCB",
+      "endocrine_disruptor"
+    ],
+    "media_url": "/images/structures/pcb.svg",
+    "smiles": "C1=C(C(=CC(=C1Cl)Cl)Cl)C2=CC(=C(C=C2Cl)Cl)Cl"
+  },
+  {
+    "id": "sfct-pcb-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-pcb",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "PCB（2,2',4,4',5,5'-Hexachlorobiphenyl）。ポリ塩化ビフェニル。特徴的な官能基: ビフェニル、塩素(多数)",
+    "format": "structural_image_to_name",
+    "tags": [
+      "PCB",
+      "endocrine_disruptor"
+    ],
+    "media_url": "/images/structures/pcb.svg",
+    "smiles": "C1=C(C(=CC(=C1Cl)Cl)Cl)C2=CC(=C(C=C2Cl)Cl)Cl"
+  },
+  {
+    "id": "sfct-bisphenol-a-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-bisphenol-a",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "ビスフェノールA",
+    "back": "Bisphenol A。ビスフェノール。特徴的な官能基: フェノール性OH×2、イソプロピリデン基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ビスフェノールA",
+      "endocrine_disruptor"
+    ],
+    "media_url": "/images/structures/bisphenol-a.svg",
+    "smiles": "CC(C)(C1=CC=C(C=C1)O)C2=CC=C(C=C2)O"
+  },
+  {
+    "id": "sfct-bisphenol-a-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-bisphenol-a",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "ビスフェノールA（Bisphenol A）。ビスフェノール。特徴的な官能基: フェノール性OH×2、イソプロピリデン基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ビスフェノールA",
+      "endocrine_disruptor"
+    ],
+    "media_url": "/images/structures/bisphenol-a.svg",
+    "smiles": "CC(C)(C1=CC=C(C=C1)O)C2=CC=C(C=C2)O"
+  },
+  {
+    "id": "sfct-dehp-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-dehp",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "フタル酸ジ(2-エチルヘキシル)",
+    "back": "DEHP。フタル酸エステル。特徴的な官能基: フタル酸、2-エチルヘキシルエステル×2",
+    "format": "structural_name_to_image",
+    "tags": [
+      "フタル酸ジ(2-エチルヘキシル)",
+      "endocrine_disruptor"
+    ],
+    "media_url": "/images/structures/dehp.svg",
+    "smiles": "CCCCC(CC)COC(=O)C1=CC=CC=C1C(=O)OCC(CC)CCCC"
+  },
+  {
+    "id": "sfct-dehp-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-dehp",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "フタル酸ジ(2-エチルヘキシル)（DEHP）。フタル酸エステル。特徴的な官能基: フタル酸、2-エチルヘキシルエステル×2",
+    "format": "structural_image_to_name",
+    "tags": [
+      "フタル酸ジ(2-エチルヘキシル)",
+      "endocrine_disruptor"
+    ],
+    "media_url": "/images/structures/dehp.svg",
+    "smiles": "CCCCC(CC)COC(=O)C1=CC=CC=C1C(=O)OCC(CC)CCCC"
+  },
+  {
+    "id": "sfct-nonylphenol-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-nonylphenol",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "ノニルフェノール",
+    "back": "Nonylphenol。アルキルフェノール。特徴的な官能基: フェノール性OH、ノニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ノニルフェノール",
+      "endocrine_disruptor"
+    ],
+    "media_url": "/images/structures/nonylphenol.svg",
+    "smiles": "CCCCCCCCCC1=CC=CC=C1O"
+  },
+  {
+    "id": "sfct-nonylphenol-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-nonylphenol",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "ノニルフェノール（Nonylphenol）。アルキルフェノール。特徴的な官能基: フェノール性OH、ノニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ノニルフェノール",
+      "endocrine_disruptor"
+    ],
+    "media_url": "/images/structures/nonylphenol.svg",
+    "smiles": "CCCCCCCCCC1=CC=CC=C1O"
+  },
+  {
+    "id": "sfct-tributyltin-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-tributyltin",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "トリブチルスズ",
+    "back": "Tributyltin。有機スズ。特徴的な官能基: スズ、ブチル基×3",
+    "format": "structural_name_to_image",
+    "tags": [
+      "トリブチルスズ",
+      "endocrine_disruptor"
+    ],
+    "media_url": "/images/structures/tributyltin.svg",
+    "smiles": "CCCC[SnH](CCCC)CCCC"
+  },
+  {
+    "id": "sfct-tributyltin-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-tributyltin",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "トリブチルスズ（Tributyltin）。有機スズ。特徴的な官能基: スズ、ブチル基×3",
+    "format": "structural_image_to_name",
+    "tags": [
+      "トリブチルスズ",
+      "endocrine_disruptor"
+    ],
+    "media_url": "/images/structures/tributyltin.svg",
+    "smiles": "CCCC[SnH](CCCC)CCCC"
+  },
+  {
+    "id": "sfct-pralidoxime-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-pralidoxime",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "プラリドキシム(PAM)",
+    "back": "Pralidoxime。ピリジニウムオキシム。特徴的な官能基: ピリジニウム環、オキシム基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "プラリドキシム(PAM)",
+      "antidote"
+    ],
+    "media_url": "/images/structures/pralidoxime.svg",
+    "smiles": "C[N+]1=CC=CC=C1C=NO"
+  },
+  {
+    "id": "sfct-pralidoxime-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-pralidoxime",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "プラリドキシム(PAM)（Pralidoxime）。ピリジニウムオキシム。特徴的な官能基: ピリジニウム環、オキシム基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "プラリドキシム(PAM)",
+      "antidote"
+    ],
+    "media_url": "/images/structures/pralidoxime.svg",
+    "smiles": "C[N+]1=CC=CC=C1C=NO"
+  },
+  {
+    "id": "sfct-atropine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-atropine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "アトロピン",
+    "back": "Atropine。トロパン骨格。特徴的な官能基: トロパン環、エステル結合",
+    "format": "structural_name_to_image",
+    "tags": [
+      "アトロピン",
+      "antidote"
+    ],
+    "media_url": "/images/structures/atropine.svg",
+    "smiles": "CN1C2CCC1CC(C2)OC(=O)C(CO)C3=CC=CC=C3"
+  },
+  {
+    "id": "sfct-atropine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-atropine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "アトロピン（Atropine）。トロパン骨格。特徴的な官能基: トロパン環、エステル結合",
+    "format": "structural_image_to_name",
+    "tags": [
+      "アトロピン",
+      "antidote"
+    ],
+    "media_url": "/images/structures/atropine.svg",
+    "smiles": "CN1C2CCC1CC(C2)OC(=O)C(CO)C3=CC=CC=C3"
+  },
+  {
+    "id": "sfct-nac-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-nac",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "N-アセチルシステイン",
+    "back": "N-Acetylcysteine。システイン誘導体。特徴的な官能基: アセチルアミノ基、チオール基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "N-アセチルシステイン",
+      "antidote"
+    ],
+    "media_url": "/images/structures/nac.svg",
+    "smiles": "CC(=O)NC(CS)C(=O)O"
+  },
+  {
+    "id": "sfct-nac-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-nac",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "N-アセチルシステイン（N-Acetylcysteine）。システイン誘導体。特徴的な官能基: アセチルアミノ基、チオール基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "N-アセチルシステイン",
+      "antidote"
+    ],
+    "media_url": "/images/structures/nac.svg",
+    "smiles": "CC(=O)NC(CS)C(=O)O"
+  },
+  {
+    "id": "sfct-dimercaprol-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-dimercaprol",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "ジメルカプロール(BAL)",
+    "back": "Dimercaprol。プロパンジオール。特徴的な官能基: チオール基×2、ヒドロキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ジメルカプロール(BAL)",
+      "antidote"
+    ],
+    "media_url": "/images/structures/dimercaprol.svg",
+    "smiles": "C(C(CS)S)O"
+  },
+  {
+    "id": "sfct-dimercaprol-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-dimercaprol",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "ジメルカプロール(BAL)（Dimercaprol）。プロパンジオール。特徴的な官能基: チオール基×2、ヒドロキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ジメルカプロール(BAL)",
+      "antidote"
+    ],
+    "media_url": "/images/structures/dimercaprol.svg",
+    "smiles": "C(C(CS)S)O"
+  },
+  {
+    "id": "sfct-deferoxamine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-deferoxamine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "デフェロキサミン",
+    "back": "Deferoxamine。ヒドロキサム酸。特徴的な官能基: ヒドロキサム酸基×3、アミド結合",
+    "format": "structural_name_to_image",
+    "tags": [
+      "デフェロキサミン",
+      "antidote"
+    ],
+    "media_url": "/images/structures/deferoxamine.svg",
+    "smiles": "CC(=O)N(CCCCCNC(=O)CCC(=O)N(CCCCCNC(=O)CCC(=O)N(CCCCCN)O)O)O"
+  },
+  {
+    "id": "sfct-deferoxamine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-deferoxamine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "デフェロキサミン（Deferoxamine）。ヒドロキサム酸。特徴的な官能基: ヒドロキサム酸基×3、アミド結合",
+    "format": "structural_image_to_name",
+    "tags": [
+      "デフェロキサミン",
+      "antidote"
+    ],
+    "media_url": "/images/structures/deferoxamine.svg",
+    "smiles": "CC(=O)N(CCCCCNC(=O)CCC(=O)N(CCCCCNC(=O)CCC(=O)N(CCCCCN)O)O)O"
+  },
+  {
+    "id": "sfct-naloxone-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-naloxone",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "ナロキソン",
+    "back": "Naloxone。モルフィナン骨格。特徴的な官能基: フェノール性OH、カルボニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ナロキソン",
+      "antidote"
+    ],
+    "media_url": "/images/structures/naloxone.svg",
+    "smiles": "C=CCN1CCC23C4C(=O)CCC2(C1CC5=C3C(=C(C=C5)O)O4)O"
+  },
+  {
+    "id": "sfct-naloxone-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-naloxone",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "ナロキソン（Naloxone）。モルフィナン骨格。特徴的な官能基: フェノール性OH、カルボニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ナロキソン",
+      "antidote"
+    ],
+    "media_url": "/images/structures/naloxone.svg",
+    "smiles": "C=CCN1CCC23C4C(=O)CCC2(C1CC5=C3C(=C(C=C5)O)O4)O"
+  },
+  {
+    "id": "sfct-flumazenil-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-flumazenil",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "フルマゼニル",
+    "back": "Flumazenil。イミダゾベンゾジアゼピン。特徴的な官能基: イミダゾール環、カルボニル基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "フルマゼニル",
+      "antidote"
+    ],
+    "media_url": "/images/structures/flumazenil.svg",
+    "smiles": "CCOC(=O)C1=C2CN(C(=O)C3=C(N2C=N1)C=CC(=C3)F)C"
+  },
+  {
+    "id": "sfct-flumazenil-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-flumazenil",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "フルマゼニル（Flumazenil）。イミダゾベンゾジアゼピン。特徴的な官能基: イミダゾール環、カルボニル基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "フルマゼニル",
+      "antidote"
+    ],
+    "media_url": "/images/structures/flumazenil.svg",
+    "smiles": "CCOC(=O)C1=C2CN(C(=O)C3=C(N2C=N1)C=CC(=C3)F)C"
+  },
+  {
+    "id": "sfct-methylene-blue-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-methylene-blue",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "メチレンブルー",
+    "back": "Methylene blue。フェノチアジン誘導体。特徴的な官能基: フェノチアジン環、ジメチルアミノ基×2",
+    "format": "structural_name_to_image",
+    "tags": [
+      "メチレンブルー",
+      "antidote"
+    ],
+    "media_url": "/images/structures/methylene-blue.svg",
+    "smiles": "CN(C)C1=CC2=C(C=C1)N=C3C=CC(=[N+](C)C)C=C3S2.[Cl-]"
+  },
+  {
+    "id": "sfct-methylene-blue-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-methylene-blue",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "メチレンブルー（Methylene blue）。フェノチアジン誘導体。特徴的な官能基: フェノチアジン環、ジメチルアミノ基×2",
+    "format": "structural_image_to_name",
+    "tags": [
+      "メチレンブルー",
+      "antidote"
+    ],
+    "media_url": "/images/structures/methylene-blue.svg",
+    "smiles": "CN(C)C1=CC2=C(C=C1)N=C3C=CC(=[N+](C)C)C=C3S2.[Cl-]"
+  },
+  {
+    "id": "sfct-epa-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-epa",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "EPA",
+    "back": "Eicosapentaenoic acid。ω-3多価不飽和脂肪酸。特徴的な官能基: 二重結合×5、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "EPA",
+      "foshu"
+    ],
+    "media_url": "/images/structures/epa.svg",
+    "smiles": "CCC=CCC=CCC=CCC=CCC=CCCCC(=O)O"
+  },
+  {
+    "id": "sfct-epa-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-epa",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "EPA（Eicosapentaenoic acid）。ω-3多価不飽和脂肪酸。特徴的な官能基: 二重結合×5、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "EPA",
+      "foshu"
+    ],
+    "media_url": "/images/structures/epa.svg",
+    "smiles": "CCC=CCC=CCC=CCC=CCC=CCCCC(=O)O"
+  },
+  {
+    "id": "sfct-dha-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-dha",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "DHA",
+    "back": "Docosahexaenoic acid。ω-3多価不飽和脂肪酸。特徴的な官能基: 二重結合×6、カルボキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "DHA",
+      "foshu"
+    ],
+    "media_url": "/images/structures/dha.svg",
+    "smiles": "CCC=CCC=CCC=CCC=CCC=CCC=CCCC(=O)O"
+  },
+  {
+    "id": "sfct-dha-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-dha",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "DHA（Docosahexaenoic acid）。ω-3多価不飽和脂肪酸。特徴的な官能基: 二重結合×6、カルボキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "DHA",
+      "foshu"
+    ],
+    "media_url": "/images/structures/dha.svg",
+    "smiles": "CCC=CCC=CCC=CCC=CCC=CCC=CCCC(=O)O"
+  },
+  {
+    "id": "sfct-daidzein-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-daidzein",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "ダイゼイン",
+    "back": "Daidzein。イソフラボン。特徴的な官能基: イソフラボン骨格、フェノール性OH×2",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ダイゼイン",
+      "foshu"
+    ],
+    "media_url": "/images/structures/daidzein.svg",
+    "smiles": "C1=CC(=CC=C1C2=COC3=C(C2=O)C=CC(=C3)O)O"
+  },
+  {
+    "id": "sfct-daidzein-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-daidzein",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "ダイゼイン（Daidzein）。イソフラボン。特徴的な官能基: イソフラボン骨格、フェノール性OH×2",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ダイゼイン",
+      "foshu"
+    ],
+    "media_url": "/images/structures/daidzein.svg",
+    "smiles": "C1=CC(=CC=C1C2=COC3=C(C2=O)C=CC(=C3)O)O"
+  },
+  {
+    "id": "sfct-egcg-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-egcg",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "EGCG",
+    "back": "Epigallocatechin gallate。カテキン+ガロイル基。特徴的な官能基: フラバン-3-オール、ガロイルエステル",
+    "format": "structural_name_to_image",
+    "tags": [
+      "EGCG",
+      "foshu"
+    ],
+    "media_url": "/images/structures/egcg.svg",
+    "smiles": "C1C(C(OC2=CC(=CC(=C21)O)O)C3=CC(=C(C(=C3)O)O)O)OC(=O)C4=CC(=C(C(=C4)O)O)O"
+  },
+  {
+    "id": "sfct-egcg-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-egcg",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "EGCG（Epigallocatechin gallate）。カテキン+ガロイル基。特徴的な官能基: フラバン-3-オール、ガロイルエステル",
+    "format": "structural_image_to_name",
+    "tags": [
+      "EGCG",
+      "foshu"
+    ],
+    "media_url": "/images/structures/egcg.svg",
+    "smiles": "C1C(C(OC2=CC(=CC(=C21)O)O)C3=CC(=C(C(=C3)O)O)O)OC(=O)C4=CC(=C(C(=C4)O)O)O"
+  },
+  {
+    "id": "sfct-adrenaline-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-adrenaline",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "アドレナリン",
+    "back": "Adrenaline。カテコールアミン。特徴的な官能基: カテコール基、β-ヒドロキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "アドレナリン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/adrenaline.svg",
+    "smiles": "CNCC(C1=CC(=C(C=C1)O)O)O"
+  },
+  {
+    "id": "sfct-adrenaline-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-adrenaline",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "アドレナリン（Adrenaline）。カテコールアミン。特徴的な官能基: カテコール基、β-ヒドロキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "アドレナリン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/adrenaline.svg",
+    "smiles": "CNCC(C1=CC(=C(C=C1)O)O)O"
+  },
+  {
+    "id": "sfct-noradrenaline-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-noradrenaline",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "ノルアドレナリン",
+    "back": "Noradrenaline。カテコールアミン。特徴的な官能基: カテコール基、β-ヒドロキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ノルアドレナリン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/noradrenaline.svg",
+    "smiles": "C1=CC(=C(C=C1C(CN)O)O)O"
+  },
+  {
+    "id": "sfct-noradrenaline-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-noradrenaline",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "ノルアドレナリン（Noradrenaline）。カテコールアミン。特徴的な官能基: カテコール基、β-ヒドロキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ノルアドレナリン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/noradrenaline.svg",
+    "smiles": "C1=CC(=C(C=C1C(CN)O)O)O"
+  },
+  {
+    "id": "sfct-dopamine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-dopamine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "ドパミン",
+    "back": "Dopamine。カテコールアミン。特徴的な官能基: カテコール基、アミノ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ドパミン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/dopamine.svg",
+    "smiles": "C1=CC(=C(C=C1CCN)O)O"
+  },
+  {
+    "id": "sfct-dopamine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-dopamine",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "ドパミン（Dopamine）。カテコールアミン。特徴的な官能基: カテコール基、アミノ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ドパミン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/dopamine.svg",
+    "smiles": "C1=CC(=C(C=C1CCN)O)O"
+  },
+  {
+    "id": "sfct-acetylcholine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-acetylcholine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "アセチルコリン",
+    "back": "Acetylcholine。コリンエステル。特徴的な官能基: アセチル基、4級アンモニウム",
+    "format": "structural_name_to_image",
+    "tags": [
+      "アセチルコリン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/acetylcholine.svg",
+    "smiles": "CC(=O)OCC[N+](C)(C)C"
+  },
+  {
+    "id": "sfct-acetylcholine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-acetylcholine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "アセチルコリン（Acetylcholine）。コリンエステル。特徴的な官能基: アセチル基、4級アンモニウム",
+    "format": "structural_image_to_name",
+    "tags": [
+      "アセチルコリン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/acetylcholine.svg",
+    "smiles": "CC(=O)OCC[N+](C)(C)C"
+  },
+  {
+    "id": "sfct-indomethacin-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-indomethacin",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "インドメタシン",
+    "back": "Indomethacin。インドール酢酸。特徴的な官能基: インドール環、メトキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "インドメタシン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/indomethacin.svg",
+    "smiles": "CC1=C(C2=C(N1C(=O)C3=CC=C(C=C3)Cl)C=CC(=C2)OC)CC(=O)O"
+  },
+  {
+    "id": "sfct-indomethacin-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-indomethacin",
+    "primary_exemplar_id": "",
+    "subject": "化学",
+    "front": "この構造式の物質名は？",
+    "back": "インドメタシン（Indomethacin）。インドール酢酸。特徴的な官能基: インドール環、メトキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "インドメタシン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/indomethacin.svg",
+    "smiles": "CC1=C(C2=C(N1C(=O)C3=CC=C(C=C3)Cl)C=CC(=C2)OC)CC(=O)O"
+  },
+  {
+    "id": "sfct-diclofenac-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-diclofenac",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "ジクロフェナク",
+    "back": "Diclofenac。フェニル酢酸。特徴的な官能基: ジクロロフェニル基、アミノ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ジクロフェナク",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/diclofenac.svg",
+    "smiles": "C1=CC=C(C(=C1)CC(=O)O)NC2=C(C=CC=C2Cl)Cl"
+  },
+  {
+    "id": "sfct-diclofenac-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-diclofenac",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "ジクロフェナク（Diclofenac）。フェニル酢酸。特徴的な官能基: ジクロロフェニル基、アミノ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ジクロフェナク",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/diclofenac.svg",
+    "smiles": "C1=CC=C(C(=C1)CC(=O)O)NC2=C(C=CC=C2Cl)Cl"
+  },
+  {
+    "id": "sfct-cimetidine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-cimetidine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "シメチジン",
+    "back": "Cimetidine。イミダゾール誘導体。特徴的な官能基: イミダゾール環、シアノグアニジン基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "シメチジン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/cimetidine.svg",
+    "smiles": "CC1=C(N=CN1)CSCCNC(=NC)NC#N"
+  },
+  {
+    "id": "sfct-cimetidine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-cimetidine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "シメチジン（Cimetidine）。イミダゾール誘導体。特徴的な官能基: イミダゾール環、シアノグアニジン基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "シメチジン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/cimetidine.svg",
+    "smiles": "CC1=C(N=CN1)CSCCNC(=NC)NC#N"
+  },
+  {
+    "id": "sfct-warfarin-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-warfarin",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "ワルファリン",
+    "back": "Warfarin。クマリン誘導体。特徴的な官能基: クマリン環、4-ヒドロキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "ワルファリン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/warfarin.svg",
+    "smiles": "CC(=O)CC(C1=CC=CC=C1)C2=C(C3=CC=CC=C3OC2=O)O"
+  },
+  {
+    "id": "sfct-warfarin-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-warfarin",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "ワルファリン（Warfarin）。クマリン誘導体。特徴的な官能基: クマリン環、4-ヒドロキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "ワルファリン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/warfarin.svg",
+    "smiles": "CC(=O)CC(C1=CC=CC=C1)C2=C(C3=CC=CC=C3OC2=O)O"
+  },
+  {
+    "id": "sfct-methamphetamine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-methamphetamine",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "メタンフェタミン",
+    "back": "Methamphetamine。フェネチルアミン。特徴的な官能基: フェニル基、N-メチルアミノ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "メタンフェタミン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/methamphetamine.svg",
+    "smiles": "CC(CC1=CC=CC=C1)NC"
+  },
+  {
+    "id": "sfct-methamphetamine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-methamphetamine",
+    "primary_exemplar_id": "",
+    "subject": "衛生",
+    "front": "この構造式の物質名は？",
+    "back": "メタンフェタミン（Methamphetamine）。フェネチルアミン。特徴的な官能基: フェニル基、N-メチルアミノ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "メタンフェタミン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/methamphetamine.svg",
+    "smiles": "CC(CC1=CC=CC=C1)NC"
+  },
+  {
+    "id": "sfct-codeine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-codeine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "コデイン",
+    "back": "Codeine。モルフィナン骨格。特徴的な官能基: メトキシ基、ヒドロキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "コデイン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/codeine.svg",
+    "smiles": "CN1CCC23C4C1CC5=C2C(=C(C=C5)OC)OC3C(C=C4)O"
+  },
+  {
+    "id": "sfct-codeine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-codeine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "コデイン（Codeine）。モルフィナン骨格。特徴的な官能基: メトキシ基、ヒドロキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "コデイン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/codeine.svg",
+    "smiles": "CN1CCC23C4C1CC5=C2C(=C(C=C5)OC)OC3C(C=C4)O"
+  },
+  {
+    "id": "sfct-morphine-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-morphine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "モルヒネ",
+    "back": "Morphine。モルフィナン骨格。特徴的な官能基: フェノール性OH、アルコール性OH",
+    "format": "structural_name_to_image",
+    "tags": [
+      "モルヒネ",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/morphine.svg",
+    "smiles": "CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O"
+  },
+  {
+    "id": "sfct-morphine-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-morphine",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "モルヒネ（Morphine）。モルフィナン骨格。特徴的な官能基: フェノール性OH、アルコール性OH",
+    "format": "structural_image_to_name",
+    "tags": [
+      "モルヒネ",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/morphine.svg",
+    "smiles": "CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O"
+  },
+  {
+    "id": "sfct-dexamethasone-L0a",
+    "source_type": "structure_db",
+    "source_id": "struct-dexamethasone",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "デキサメタゾン",
+    "back": "Dexamethasone。ステロイド骨格。特徴的な官能基: フッ素、ヒドロキシ基",
+    "format": "structural_name_to_image",
+    "tags": [
+      "デキサメタゾン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/dexamethasone.svg",
+    "smiles": "CC1CC2C3CCC4=CC(=O)C=CC4(C3(C(CC2(C1(C(=O)CO)O)C)O)F)C"
+  },
+  {
+    "id": "sfct-dexamethasone-L0b",
+    "source_type": "structure_db",
+    "source_id": "struct-dexamethasone",
+    "primary_exemplar_id": "",
+    "subject": "薬理",
+    "front": "この構造式の物質名は？",
+    "back": "デキサメタゾン（Dexamethasone）。ステロイド骨格。特徴的な官能基: フッ素、ヒドロキシ基",
+    "format": "structural_image_to_name",
+    "tags": [
+      "デキサメタゾン",
+      "pharmacology"
+    ],
+    "media_url": "/images/structures/dexamethasone.svg",
+    "smiles": "CC1CC2C3CCC4=CC(=O)C=CC4(C3(C(CC2(C1(C(=O)CO)O)C)O)F)C"
+  },
   {
     "id": "sfct-purine-L1",
     "source_type": "structure_db",
@@ -198,7 +4806,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "source_id": "struct-quinoline",
     "subject": "化学",
     "front": "キノリン環の構造的特徴を3つ挙げよ",
-    "back": "① ベンゼン環とピリジン環が縮合したbenzo[b]pyridine構造（二環性芳香族複素環）；1位に窒素原子を持つ\n② ピリジン環の窒素（N1）が塩基性（pKa ≈ 4.9）で、酸塩（塩酸塩）として医薬品に用いられることが多い\n③ ピリジン環の4位（N1に対しパラ位）が求核芳香族置換反応を受けやすく、フルオロキノロン系薬ではC-3位にカルボキシル基が導入される",
+    "back": "① ベンゼン環とピリジン環が[2,3]位で縮合した二環性芳香族複素環；1位に窒素原子を持つ\n② ピリジン環の窒素（N1）が塩基性（pKa ≈ 4.9）で、酸塩（塩酸塩）として医薬品に用いられることが多い\n③ ピリジン環の4位（N1に対しパラ位）が求核芳香族置換反応を受けやすく、フルオロキノロン系薬ではC-3位にカルボキシル基が導入される",
     "format": "structural_features",
     "tags": [
       "キノリン環",
@@ -291,7 +4899,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "source_id": "struct-thiazole",
     "subject": "化学",
     "front": "3位に窒素、1位（または4位）に硫黄を持つ5員環の複素環の名称は？",
-    "back": "チアゾール環（Thiazole）。[含窒素・含硫黄複素環]に分類される。ビタミンB1（チアミン）のチアゾール部位、セフォタキシム等のアミノチアゾリル側鎖（芳香族チアゾール環）、抗菌薬（スルタミシリン等）に含まれる重要な複素環母核である。なお、ペニシリンに含まれるのはチアゾリジン環（飽和環）であり、芳香族チアゾール環とは異なる点に注意。",
+    "back": "チアゾール環（Thiazole）。[含窒素・含硫黄複素環]に分類される。ビタミンB1（チアミン）のチアゾール部位、ペニシリン系β-ラクタム薬の側鎖、抗菌薬（スルタミシリン等）に含まれる重要な複素環母核である。",
     "format": "structural_identification",
     "tags": [
       "チアゾール環",
@@ -496,7 +5104,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "source_id": "struct-furan",
     "subject": "化学",
     "front": "フラン環を持つ代表的な化合物を3つ挙げよ",
-    "back": "① ニトロフラントイン：ニトロフラン系抗菌薬；尿路感染症治療（腸内細菌のニトロレダクターゼにより活性化）\n② フロセミド：フルフリルアミノ基（フラン環含有）を持つ安息香酸誘導体のループ利尿薬；Na-K-2Cl共輸送体阻害\n③ ラニチジン：フラン環を含むH2受容体拮抗薬（チメチジンのフラン環類縁体）；胃酸分泌抑制",
+    "back": "① ニトロフラントイン：ニトロフラン系抗菌薬；尿路感染症治療（腸内細菌のニトロレダクターゼにより活性化）\n② フロセミド（フロセミド）：ベンゾフラン関連構造を持つループ利尿薬；Na-K-2Cl共輸送体阻害\n③ ラロキシフェン：ベンゾ[b]チオフェン誘導体（フラン類縁体）；選択的エストロゲン受容体モジュレーター（SERM）（要確認：厳密にはチオフェン系）",
     "format": "structural_pattern",
     "tags": [
       "フラン環",
@@ -626,7 +5234,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "source_id": "struct-phenothiazine",
     "subject": "薬理",
     "front": "2つのベンゼン環が硫黄原子と窒素原子を介して縮合した三環性複素環の名称は？",
-    "back": "フェノチアジン環（Phenothiazine）。[含窒素・含硫黄三環性複素環]に分類される。定型抗精神病薬（クロルプロマジン・チオリダジン・フルフェナジンなど）のD2受容体遮断作用を持つ薬物の共通母核であり、抗ヒスタミン薬（プロメタジン）にも含まれる。なおハロペリドールはブチロフェノン系であり、フェノチアジン環を持たない。",
+    "back": "フェノチアジン環（Phenothiazine）。[含窒素・含硫黄三環性複素環]に分類される。定型抗精神病薬（クロルプロマジン・ハロペリドール類縁）のD2受容体遮断作用を持つ薬物の共通母核であり、抗ヒスタミン薬（プロメタジン）にも含まれる。",
     "format": "structural_identification",
     "tags": [
       "フェノチアジン環",
@@ -1432,15 +6040,14 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "化学",
     "front": "ヒスタミン（Histamine）の構造的特徴を3つ挙げよ。",
-    "back": "・イミダゾール環（窒素2個を含む5員複素環）の4位に2-アミノエチル側鎖（-CH2CH2NH2）を持つ\n・イミダゾール環のN-H（τ型・π型互変異性体）とアミノ基の2つの塩基性窒素を持ち、生理的pHで一方が陽電荷を帯びる\n・ヒスチジンの脱炭酸（ヒスチジン脱炭酸酵素）により生合成され、ヒスタミンN-メチルトランスフェラーゼ（HNMT）およびジアミンオキシダーゼ（DAO）で代謝される",
+    "back": "・イミダゾール環（窒素2個を含む5員複素環）の4位に2-アミノエチル側鎖（-CH2CH2NH2）を持つ\n・イミダゾール環のN-H（τ型・π型互変異性体）とアミノ基の2つの塩基性窒素を持ち、生理的pHで一方が陽電荷を帯びる\n・ヒスチジンの脱炭酸（ヒスチジン脱炭酸酵素）により生合成され、MAOおよびジアミン酸化酵素で代謝される",
     "format": "structural_features",
     "tags": [
       "イミダゾール環",
       "ヒスタミン",
       "生体アミン",
       "互変異性",
-      "HNMT",
-      "DAO"
+      "MAO"
     ],
     "media_url": "/images/structures/histamine.svg",
     "smiles": "C1=C(NC=N1)CCN"
@@ -1935,7 +6542,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "薬理",
     "front": "ペニシリンGの構造的特徴を3つ挙げよ。",
-    "back": "① 四員環β-ラクタム環と五員環チアゾリジン環が縮合したペナム骨格を持ち、β-ラクタム環のひずみにより活性を示す\n② β-ラクタム環のカルボニル炭素が細菌のトランスペプチダーゼ（PBP）の活性セリンを不可逆アシル化する\n③ 6位アシルアミド側鎖にフェニルアセチル基（PhCH₂-CO-NH-）を持ち、酸・酵素に不安定",
+    "back": "① 四員環β-ラクタム環と五員環チアゾリジン環が縮合したペナム骨格を持ち、β-ラクタム環のひずみにより活性を示す\n② β-ラクタム環のカルボニル炭素が細菌のトランスペプチダーゼ（PBP）の活性セリンを不可逆アシル化する\n③ 6位側鎖にベンジルオキシカルボニル（フェニルアセチル）基を持ち、酸・酵素に不安定",
     "format": "structural_features",
     "tags": [
       "β-ラクタム",
@@ -2045,7 +6652,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "薬理",
     "front": "テトラサイクリンの構造的特徴を3つ挙げよ。",
-    "back": "① 4つの6員環が直線状に縮合したテトラサイクリン（ナフタセン誘導体）骨格を持つ\n② 複数のヒドロキシ基・カルボニル基からなるβ-ジカルボニル構造がCa2+・Mg2+等のキレート形成能を持ち、吸収を阻害する（牛乳・制酸薬との相互作用）\n③ 4位（C4位）にジメチルアミノ基（N(CH3)2）を持ち、塩基性を示す",
+    "back": "① 4つの6員環が直線状に縮合したテトラサイクリン（ナフタセン誘導体）骨格を持つ\n② 複数のヒドロキシ基・カルボニル基からなるβ-ジカルボニル構造がCa2+・Mg2+等のキレート形成能を持ち、吸収を阻害する（牛乳・制酸薬との相互作用）\n③ 4a位にジメチルアミノ基（N(CH3)2）を持ち、塩基性を示す",
     "format": "structural_features",
     "tags": [
       "テトラサイクリン",
@@ -2486,7 +7093,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "衛生",
     "front": "葉酸(ビタミンB9)の構造的特徴を3つ挙げよ。",
-    "back": "① プテリン（2-アミノ-4-ヒドロキシプテリジン）とp-アミノベンゾイルグルタミン酸からなる三部構造を持つ\n② プテリジン環の5,6,7,8位が還元（テトラヒドロ化）されてTHFとなり、N5・N10位が一炭素基（-CH3, -CH2-, -CHO等）の運搬部位となる\n③ ジヒドロ葉酸還元酵素（DHFR）阻害薬（メトトレキサート・トリメトプリム）の標的であり、メトトレキサートはプテリジン環部分でDHFR活性部位に競合的に結合する（PABAとの競合はサルファ剤の文脈であり、DHFR阻害薬とは異なる機序）",
+    "back": "① プテリン（2-アミノ-4-ヒドロキシプテリジン）とp-アミノベンゾイルグルタミン酸からなる三部構造を持つ\n② プテリジン環の5,6,7,8位が還元（テトラヒドロ化）されてTHFとなり、N5・N10位が一炭素基（-CH3, -CH2-, -CHO等）の運搬部位となる\n③ ジヒドロ葉酸還元酵素（DHFR）阻害薬（メトトレキサート・トリメトプリム）の標的であり、PABA類似構造がDHFR活性部位と競合的に結合する",
     "format": "structural_features",
     "tags": [
       "プテリジン",
@@ -2604,7 +7211,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "化学",
     "front": "アスコルビン酸(ビタミンC)の構造的特徴を3つ挙げよ",
-    "back": "1. γ-ラクトン環（5員環の環状エステル）を基本骨格とする\n2. C2・C3位にエンジオール基（-C(OH)=C(OH)-）を持ち（ラクトン環カルボニルをC1とした場合）、これが酸化されてデヒドロアスコルビン酸になる還元剤として機能する\n3. C4・C5位に不斉炭素を2つ持つ（L体のみが生物活性を示す）",
+    "back": "1. γ-ラクトン環（5員環の環状エステル）を基本骨格とする\n2. C2・C3位にエンジオール基（-C(OH)=C(OH)-）を持ち、これが酸化されてデヒドロアスコルビン酸になる還元剤として機能する\n3. C4・C5位に不斉炭素を2つ持つ（L体のみが生物活性を示す）",
     "format": "structural_features",
     "tags": [
       "ビタミンC",
@@ -2721,7 +7328,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "衛生",
     "front": "α-トコフェロール(ビタミンE)の構造的特徴を3つ挙げよ",
-    "back": "1. クロマン環（6員環の酸素含有環とベンゼン環が縮合した構造）を母核とし、フェノール性-OHが抗酸化活性の中心\n2. 芳香環の5・7・8位に3つのメチル基（α体）が置換し（クロマン環2位にもメチル基があるが環骨格の一部）、芳香環上のメチル基の数がα>β>γ>δの順で抗酸化活性と一致\n3. C16のフィチル側鎖（3つのイソプレン単位からなる飽和長鎖）が脂溶性を付与し生体膜への取り込みを促進する",
+    "back": "1. クロマン環（6員環の酸素含有環とベンゼン環が縮合した構造）を母核とし、フェノール性-OHが抗酸化活性の中心\n2. ベンゼン環に2・5・7・8位の4つのメチル基（α体）が置換し、メチル基の数がα>β>γ>δの順で抗酸化活性と一致\n3. C16のフィチル側鎖（3つのイソプレン単位からなる飽和長鎖）が脂溶性を付与し生体膜への取り込みを促進する",
     "format": "structural_features",
     "tags": [
       "ビタミンE",
@@ -3391,7 +7998,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "化学",
     "front": "トレオニンの構造的特徴を3つ挙げよ",
-    "back": "1. 側鎖が1-ヒドロキシエチル基（-CH(OH)-CH₃）で、α炭素とβ炭素の2か所に不斉炭素を持つ（理論上4種の立体異性体、生物活性体はL-トレオニン：2S,3R配置）\n2. セリンと同様にヒドロキシル基がリン酸化（Thr-P）またはO-結合型糖鎖付加（O-GlcNAc等）の標的部位となる重要な修飾アミノ酸\n3. 代謝ではトレオニンデヒドラターゼによりα-ケト酪酸に変換（→スクシニルCoA：糖原性）、またはトレオニンアルドラーゼによりグリシン＋アセトアルデヒドに分解（→アセチルCoA：ケト原性）され、糖原性兼ケト原性アミノ酸として分類される",
+    "back": "1. 側鎖が1-ヒドロキシエチル基（-CH(OH)-CH₃）で、α炭素とβ炭素の2か所に不斉炭素を持つ（理論上4種の立体異性体、生物活性体はL-トレオニン：2S,3R配置）\n2. セリンと同様にヒドロキシル基がリン酸化（Thr-P）またはO-結合型糖鎖付加（O-GlcNAc等）の標的部位となる重要な修飾アミノ酸\n3. 代謝ではピルビン酸・α-ケト酪酸に変換され、糖原性兼ケト原性アミノ酸として分類される",
     "format": "structural_features",
     "tags": [
       "トレオニン",
@@ -3452,7 +8059,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "化学",
     "front": "システインの構造的特徴を3つ挙げよ。",
-    "back": "1. 側鎖にチオール基（-SH）を持つ：酸化されてジスルフィド結合（-S-S-）を形成し、タンパク質の高次構造維持に寄与する\n2. α-アミノ酸骨格：L体が生体に存在、pKa（-SH）≒8.3で生理的pHでは主に非解離型\n3. キラル中心（α炭素）を持つ：L-システインはCIP則ではR配置（硫黄の優先順位が高いため、他のL-アミノ酸のS配置と異なる例外）",
+    "back": "1. 側鎖にチオール基（-SH）を持つ：酸化されてジスルフィド結合（-S-S-）を形成し、タンパク質の高次構造維持に寄与する\n2. α-アミノ酸骨格：L体が生体に存在、pKa（-SH）≒8.3で生理的pHでは主に非解離型\n3. キラル中心（α炭素）を持つ：R配置（CIP則）に相当するが、アミノ酸命名ではL-システイン",
     "format": "structural_features",
     "tags": [
       "アミノ酸",
@@ -3894,7 +8501,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "薬理",
     "front": "ランソプラゾールの構造的特徴を3つ挙げよ。",
-    "back": "1. スルフィニル基（-S(=O)-）によるプロドラッグ機構：胃壁細胞の酸性環境（pH<4）でスルフェン酸→スルフェンアミドに変換され、H⁺/K⁺-ATPaseのCys813/Cys892に共有結合（不可逆阻害）\n2. 2,2,2-トリフルオロエトキシ基（-OCH₂CF₃）：強い電子求引性で疎水性を増し、PPIの中でも強力な酸分泌抑制を示す\n3. キラル中心（スルフィニル硫黄）：ラセミ体として使用（エソメプラゾールはS体選択的）、CYP2C19で代謝",
+    "back": "1. スルフィニル基（-S(=O)-）によるプロドラッグ機構：胃壁細胞の酸性環境（pH<4）でスルフェン酸→スルフェンアミドに変換され、H⁺/K⁺-ATPaseのCys813/Cys892に共有結合（不可逆阻害）\n2. トリフルオロメトキシ基（-OCH₂CF₃）：強い電子求引性で疎水性を増し、PPIの中でも強力な酸分泌抑制を示す\n3. キラル中心（スルフィニル硫黄）：ラセミ体として使用（エソメプラゾールはS体選択的）、CYP2C19で代謝",
     "format": "structural_features",
     "tags": [
       "プロドラッグ",
@@ -4232,7 +8839,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "薬理",
     "front": "クロピドグレルの構造的特徴を3つ挙げよ。",
-    "back": "1. CYP2C19依存的な2ステップ酸化活性化：プロドラッグ自体はP2Y₁₂受容体に不活性→CYP2C19（及びCYP3A4）がチオフェン環を酸化してチオラクトン中間体を経て活性チオール代謝物を生成\n2. 活性チオール代謝物がP2Y₁₂ Cys残基に不可逆的ジスルフィド結合：ADP刺激によるGi共役・cAMP低下・血小板凝集をブロック（不可逆=血小板寿命中持続）\n3. キラル中心（α炭素）S体（右旋性）のみが活性：市販品はS体（硫酸水素塩）として製剤化されており、活性代謝物のキラリティーが受容体選択性に重要",
+    "back": "1. CYP2C19依存的な2ステップ酸化活性化：プロドラッグ自体はP2Y₁₂受容体に不活性→CYP2C19（及びCYP3A4）がチオフェン環を酸化してチオラクトン中間体を経て活性チオール代謝物を生成\n2. 活性チオール代謝物がP2Y₁₂ Cys残基に不可逆的ジスルフィド結合：ADP刺激によるGi共役・cAMP低下・血小板凝集をブロック（不可逆=血小板寿命中持続）\n3. キラル中心（α炭素）S体（レボ体）のみが活性：市販品はS体ラセミ体を含む塩酸塩であるが、活性代謝物のキラリティーが受容体選択性に重要",
     "format": "structural_features",
     "tags": [
       "プロドラッグ",
@@ -4290,7 +8897,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "薬理",
     "front": "ドカルパミンの構造的特徴を3つ挙げよ",
-    "back": "・カテコール環の2位・4位（オルト・パラ位）のヒドロキシ基が2つのエチル炭酸エステル（カーボネート）基(-OC(=O)OEt)でマスクされており、経口吸収後に加水分解されてカテコール体が遊離する\n・フェネチルアミン側鎖にL-N-アセチルメチオニン残基（-NHCOCH(CH₂CH₂SCH₃)NHCOCH₃）がアミド結合で連結されており、プロドラッグの消化管安定性を高める\n・活性体ドーパミンの生成には生体内エステラーゼおよびアミダーゼによる2段階加水分解が必要なダブルプロドラッグ構造を持つ",
+    "back": "・カテコール環の2位・4位（オルト・パラ位）のヒドロキシ基が2つのエチルカルバメート基(-OC(=O)OEt)でマスクされており、経口吸収後に加水分解されてカテコール体が遊離する\n・フェネチルアミン側鎖にL-N-アセチルメチオニン残基（-NHCOCH(CH₂CH₂SCH₃)NHCOCH₃）がアミド結合で連結されており、プロドラッグの消化管安定性を高める\n・活性体ドーパミンの生成には生体内エステラーゼおよびアミダーゼによる2段階加水分解が必要なダブルプロドラッグ構造を持つ",
     "format": "structural_features",
     "tags": [
       "prodrug",
@@ -4309,7 +8916,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "薬理",
     "front": "ドカルパミンと同じカテコールアミン系プロドラッグの化合物を3つ挙げよ",
-    "back": "・レボドパ（L-DOPA）：ドーパミンのアミノ酸プロドラッグ。芳香族アミノ酸脱炭酸酵素でドーパミンに変換。パーキンソン病治療薬。\n・ドパミン塩酸塩：プロドラッグではなく活性体そのものだが静注製剤として急性心不全に使用。\n・ドロキシドパ（L-threo-DOPS）：ノルエピネフリンの前駆体プロドラッグ。芳香族L-アミノ酸脱炭酸酵素（AADC）によりノルエピネフリンに変換。神経因性起立性低血圧・パーキンソン病に使用。",
+    "back": "・レボドパ（L-DOPA）：ドーパミンのアミノ酸プロドラッグ。芳香族アミノ酸脱炭酸酵素でドーパミンに変換。パーキンソン病治療薬。\n・ドパミン塩酸塩：プロドラッグではなく活性体そのものだが静注製剤として急性心不全に使用。\n・イバプラジン（類似概念）：受容体選択性を変えた誘導体設計の例。",
     "format": "structural_pattern",
     "tags": [
       "prodrug",
@@ -5070,7 +9677,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "衛生",
     "front": "アスパルテームの構造的特徴を3つ挙げよ",
-    "back": "・L-アスパラギン酸のα-カルボキシル基とL-フェニルアラニンメチルエステルのα-アミノ基がペプチド結合で連結したジペプチド構造で、両アミノ酸ともL-（S-）立体配置でなければ甘味を示さない（D-異性体は甘くない）\n・フェニルアラニン側鎖のベンジル基（-CH₂-C₆H₅）が疎水性相互作用で甘味受容体（T1R2/T1R3ヘテロ二量体）に結合し、砂糖の約200倍の甘味強度を発現する\n・C末端のメチルエステル（-COOCH₃）が胃腸内エステラーゼで加水分解されてメタノール（約10%）を遊離する。高温（60℃超）でジケトピペラジン（環状化）・フェニルアラニンへの分解が進むため、加熱調理には不向き",
+    "back": "・L-アスパラギン酸のα-アミノ基とL-フェニルアラニンメチルエステルのα-カルボキシル基がアミド結合で連結したジペプチド構造で、両アミノ酸ともL-（S-）立体配置でなければ甘味を示さない（D-異性体は甘くない）\n・フェニルアラニン側鎖のベンジル基（-CH₂-C₆H₅）が疎水性相互作用で甘味受容体（T1R2/T1R3ヘテロ二量体）に結合し、砂糖の約200倍の甘味強度を発現する\n・C末端のメチルエステル（-COOCH₃）が胃腸内エステラーゼで加水分解されてメタノール（約10%）を遊離する。高温（60℃超）でジケトピペラジン（環状化）・フェニルアラニンへの分解が進むため、加熱調理には不向き",
     "format": "structural_features",
     "tags": [
       "sweetener",
@@ -5130,7 +9737,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "衛生",
     "front": "サッカリンの構造的特徴を3つ挙げよ",
-    "back": "・ベンゼン環に縮合した5員環（イソチアゾロン環）内にスルホンアミド結合（-SO₂-NH-）とカルボニル基（-CO-）が含まれる構造で、NHが中程度の酸性プロトン（pKa≈2.0前後）として解離し水中でサッカリンナトリウム塩として存在しやすい\n・スルホン基（-SO₂-）上の硫黄原子が最高酸化状態（+4相当）で強い電子求引性を示し、分子全体の疎水面と親水面のバランス（両親媒性）が甘味受容体T1R2/T1R3への結合に寄与する\n・ヒトへの代謝がほぼなく腸管から吸収後、腎臓から未変化体として尿中排泄される。ラットで膀胱がんが報告されたが（高用量）、ヒトでは発がん性は否定されIARCグループ3（ヒトに対する発がん性を分類できない）に再分類（2023年：グループ2Bへ暫定移行に関する議論もある）",
+    "back": "・ベンゼン環に縮合した5員環（イソチアゾロン環）内にスルホンアミド結合（-SO₂-NH-）とカルボニル基（-CO-）が含まれる構造で、NHが弱酸性プロトン（pKa≈1.6）として解離し水中でサッカリンナトリウム塩として存在しやすい\n・スルホン基（-SO₂-）上の硫黄原子が最高酸化状態（+4相当）で強い電子求引性を示し、分子全体の疎水面と親水面のバランス（両親媒性）が甘味受容体T1R2/T1R3への結合に寄与する\n・ヒトへの代謝がほぼなく腸管から吸収後、腎臓から未変化体として尿中排泄される。ラットで膀胱がんが報告されたが（高用量）、ヒトでは発がん性は否定されIARCグループ3（ヒトに対する発がん性を分類できない）に再分類（2023年：グループ2Bへ暫定移行に関する議論もある）",
     "format": "structural_features",
     "tags": [
       "sweetener",
@@ -5287,7 +9894,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "source_id": "struct-stevioside",
     "primary_exemplar_id": "",
     "subject": "衛生",
-    "front": "エント-カウレン型ジテルペン骨格に、3つのグルコース残基が配糖体として結合した天然甘味成分（C13位にソホロース＝グルコース×2、C19位カルボキシルにグルコース×1）。ステビア葉から抽出される。砂糖の約100〜300倍の甘味。この構造式の物質名は？",
+    "front": "エント-カウレン型ジテルペン骨格に、2つのグルコース残基が配糖体として結合した天然甘味成分。ステビア葉から抽出される。砂糖の約100〜300倍の甘味。この構造式の物質名は？",
     "back": "ステビオシド（Stevioside）\n分類：天然甘味料（ジテルペン配糖体）\n用途：低カロリー食品・飲料の甘味付与に使用され、耐熱性に優れる植物由来の非糖質甘味料。",
     "format": "structural_identification",
     "tags": [
@@ -5823,7 +10430,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "衛生",
     "front": "γ-ラクトン（5員環エステル）構造中にエンジオール基（HO-C=C-OH）を持つ C₆ 化合物。L-アスコルビン酸（ビタミンC）のC-5位立体異性体（エピマー）で、ビタミンC活性は持たない。食品の酸化防止剤・発色助剤として使用。この物質名は？",
-    "back": "エリソルビン酸（Erythorbic acid；D-イソアスコルビン酸）\n分類：酸化防止剤（エンジオール型）\n用途：食肉加工品・魚介類の脂質酸化防止および亜硝酸塩と併用した発色促進に使用。ビタミンC活性がないため栄養強化目的には使えない。",
+    "back": "エリソルビン酸（Erythorbic acid；D-アスコルビン酸）\n分類：酸化防止剤（エンジオール型）\n用途：食肉加工品・魚介類の脂質酸化防止および亜硝酸塩と併用した発色促進に使用。ビタミンC活性がないため栄養強化目的には使えない。",
     "format": "structural_identification",
     "tags": [
       "酸化防止剤",
@@ -6284,7 +10891,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "source_id": "struct-ddt",
     "primary_exemplar_id": "",
     "subject": "衛生",
-    "front": "【構造の特徴】\n・メチン基（CH）に2つのp-クロロフェニル基とトリクロロメチル基（-CCl₃）が結合した\n・塩素原子を合計5個持つ有機塩素化合物\n→ この化合物は何か？",
+    "front": "【構造の特徴】\n・CHClを挟んで2つのp-クロロフェニル基\n・CHClに結合するトリクロロメチル基（-CCl₃）\n・塩素原子を合計5個持つ有機塩素化合物\n→ この化合物は何か？",
     "back": "DDT（Dichlorodiphenyltrichloroethane）\n分類：有機塩素系農薬\n用途・毒性：かつての代表的殺虫剤；残留性・生物濃縮・内分泌撹乱作用により現在使用禁止；脂肪組織に蓄積しDDEへ代謝",
     "format": "structural_identification",
     "tags": [
@@ -6966,7 +11573,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "source_id": "struct-atropine",
     "primary_exemplar_id": "",
     "subject": "薬理",
-    "front": "トロパン環にエステル結合でトロパ酸（フェニル基・ヒドロキシメチル基を持つ）が結合したアルカロイド構造。",
+    "front": "トロパン環にエステル結合でトロピン酸（フェニル基・ヒドロキシメチル基を持つ）が結合したアルカロイド構造。",
     "back": "アトロピン（Atropine）\n分類: 抗コリン薬（ムスカリン受容体遮断薬）/ 解毒薬\n用途: 有機リン・カーバメイト中毒時のムスカリン様症状（縮瞳・気管支痙攣・徐脈）を緩解する。",
     "format": "structural_identification",
     "tags": [
@@ -7080,7 +11687,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "source_id": "struct-dimercaprol",
     "primary_exemplar_id": "",
     "subject": "薬理",
-    "front": "3炭素鎖（グリセロール類縁体）の2・3位に2つのチオール基（-SH）、1位にヒドロキシ基を持つ小分子。",
+    "front": "3炭素鎖（グリセロール類縁体）の1・2位に2つのチオール基（-SH）、3位にヒドロキシ基を持つ小分子。",
     "back": "ジメルカプロール（Dimercaprol / BAL: British Anti-Lewisite）\n分類: キレート剤 / 解毒薬\n用途: ヒ素・水銀・鉛・金などの重金属中毒に対して、2つのSH基でキレート環を形成し排泄促進する。",
     "format": "structural_identification",
     "tags": [
@@ -7350,7 +11957,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "薬理",
     "front": "対象毒物別の解毒薬を3つ挙げよ（亜硝酸塩・一酸化炭素・シアン化物）",
-    "back": "・亜硝酸塩・アニリン（メトヘモグロビン血症）→ メチレンブルー（NADPH依存還元促進）\n・一酸化炭素（COHb形成）→ 高濃度酸素吸入（100% O₂）または高気圧酸素療法\n・シアン化物（チトクローム酸化酵素阻害）→ チオ硫酸ナトリウム＋亜硝酸アミル（亜硝酸アミルによるMetHb形成→シアンメトヘモグロビン形成によるシアン捕捉）",
+    "back": "・亜硝酸塩・アニリン（メトヘモグロビン血症）→ メチレンブルー（NADPH依存還元促進）\n・一酸化炭素（COHb形成）→ 高濃度酸素吸入（100% O₂）または高気圧酸素療法\n・シアン化物（チトクローム酸化酵素阻害）→ チオ硫酸ナトリウム＋亜硝酸アミル（COHb形成→シアン捕捉）",
     "format": "structural_pattern",
     "tags": [
       "解毒薬",
@@ -7677,7 +12284,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "化学",
     "front": "ノルアドレナリンの構造的特徴を3つ挙げよ",
-    "back": "・N上の置換基なし（一次アミン・-NH₂）。アドレナリンの二次アミン（-NHCH₃）と比べてpKaは近似値（約8.6 vs 8.7）。N-メチル基の電子供与効果で二次アミンの方がわずかに塩基性が高く、β₂受容体への親和性はアドレナリンの方が高い\n・β炭素の(R)配置ヒドロキシ基がα₁受容体と水素結合を形成し、血管平滑筋収縮の主要構造要件となる\n・カテコール基がCOMT基質であり代謝が速いため、持続静注で使用される（t₁/₂ 約2.5分）",
+    "back": "・N上の置換基なし（一次アミン）のためアドレナリン（二次アミン・N-メチル）より塩基性が高く、β₂受容体への親和性が相対的に低い\n・β炭素の(R)配置ヒドロキシ基がα₁受容体と水素結合を形成し、血管平滑筋収縮の主要構造要件となる\n・カテコール基がCOMT基質であり代謝が速いため、持続静注で使用される（t₁/₂ 約2.5分）",
     "format": "structural_features",
     "tags": [
       "カテコールアミン",
@@ -8083,7 +12690,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "薬理",
     "front": "メタンフェタミンの構造的特徴を3つ挙げよ",
-    "back": "・フェネチルアミン骨格（C₆H₅-CH₂-CH(CH₃)-NHCH₃）：ノルアドレナリン・ドパミンと類似しモノアミントランスポーター（DAT/NET）の基質として取り込まれ逆輸送を誘導\n・α-メチル基（α炭素＝アミノ基に隣接する炭素に結合）：MAOによる酸化的脱アミノを立体的に阻害し作用を延長\n・N-メチル基：塩基性を調整しBBBを透過；またコカインと異なりエステル結合を持たず加水分解されない",
+    "back": "・フェネチルアミン骨格（C₆H₅-CH₂-CH(CH₃)-NHCH₃）：ノルアドレナリン・ドパミンと類似しモノアミントランスポーター（DAT/NET）の基質として取り込まれ逆輸送を誘導\n・α-メチル基（β炭素のメチル）：MAOによる酸化的脱アミノを立体的に阻害し作用を延長\n・N-メチル基：塩基性を調整しBBBを透過；またコカインと異なりエステル結合を持たず加水分解されない",
     "format": "structural_features",
     "tags": [
       "フェネチルアミン",
@@ -8162,7 +12769,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "薬理",
     "front": "コデインと同じ「モルフィナン骨格を持つオピオイド鎮痛薬・μ受容体作動薬」分類の化合物を3つ挙げよ",
-    "back": "・モルヒネ：3位・6位がフェノール性OH、麻薬性鎮痛薬の原型\n・オキシコドン：テバイン由来の半合成オピオイド、14-OH基と6-ケト基を持つ、より強力なμ受容体作動薬\n・ヒドロモルフォン：モルヒネの6-ケト-7,8-ジヒドロ体、モルヒネの5〜10倍の鎮痛力",
+    "back": "・モルヒネ：3位・6位がフェノール性OH、麻薬性鎮痛薬の原型\n・オキシコドン：コデインの6-ケト体、より強力なμ受容体作動薬\n・ヒドロモルフォン：モルヒネの3-ケト体、モルヒネの5〜10倍の鎮痛力",
     "format": "structural_pattern",
     "tags": [
       "オピオイド",
@@ -8280,7 +12887,7 @@ export const STRUCTURAL_FLASHCARD_TEMPLATES: FlashCardTemplate[] = [
     "primary_exemplar_id": "",
     "subject": "薬理",
     "front": "デキサメタゾンと同じ「合成副腎皮質ステロイド薬（糖質コルチコイド）」分類の化合物を3つ挙げよ",
-    "back": "・プレドニゾロン：1,2位二重結合を導入した半合成ステロイド、コルチゾールの4倍強度、標準的免疫抑制薬\n・ベタメタゾン：デキサメタゾンの16β-メチル異性体、外用および全身投与（注射等）に使用、強力な抗炎症\n・トリアムシノロン：9α-F・16α-OH、鉱質コルチコイド活性ほぼなし、関節内注射に使用",
+    "back": "・プレドニゾロン：1,2位二重結合を導入した半合成ステロイド、コルチゾールの4倍強度、標準的免疫抑制薬\n・ベタメタゾン：デキサメタゾンの16β-メチル異性体、外用に使用、強力な抗炎症\n・トリアムシノロン：9α-F・16α-OH、鉱質コルチコイド活性ほぼなし、関節内注射に使用",
     "format": "structural_pattern",
     "tags": [
       "副腎皮質ステロイド",

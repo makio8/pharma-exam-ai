@@ -75,8 +75,8 @@ export function TemplatePractice({ context }: Props) {
   const card = practiceCards[currentIndex]
   const formatConfig = CARD_FORMAT_CONFIG[card.format]
   const isStructural = card.format.startsWith('structural_')
-  const showSvgOnFront = card.format === 'structural_identification' && card.media_url
-  const showSvgOnBack = isStructural && !showSvgOnFront && card.media_url
+  const showSvgOnFront = (card.format === 'structural_image_to_name' || card.format === 'structural_identification') && card.media_url
+  const showSvgOnBack = isStructural && card.media_url  // 全構造式カードの裏面にSVG表示
 
   return (
     <div style={{ maxWidth: 600, margin: '0 auto', padding: '0 8px' }}>
