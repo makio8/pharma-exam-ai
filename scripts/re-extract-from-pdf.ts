@@ -435,7 +435,8 @@ function extractChoicesFromLines(lines: string[]): { key: number; text: string }
     }
 
     // Vertical choices: indented number + text (as few as 1-2 spaces indent in PDF)
-    const vertMatch = line.match(/^(\s{1,})([1-6])\s{1,}(\S.{1,})/)
+    // \S.{0,} allows single-character choices like "Ａ", "Ｂ"
+    const vertMatch = line.match(/^(\s{1,})([1-6])\s{1,}(\S.{0,})/)
     if (vertMatch) {
       const num = parseInt(vertMatch[2])
       let text = vertMatch[3].trim()
@@ -727,8 +728,13 @@ function extractYear(year: number): ExtractedQuestion[] {
       if (rangeStartIdx < 0) continue
 
       // Find individual question headers within this range
+      // Find individual question headers within this range
+      // Include both 'individual' (問N（科目）) and 'standalone' (問N テキスト) types
+      // since some exam years (e.g., 111) omit the subject tag in linked groups
       const individualHeaders = headers.filter(
-        h => h.type === 'individual' && h.qNum >= rh.qNum && h.qNum <= rh.rangeEnd!
+        h => (h.type === 'individual' || h.type === 'standalone') &&
+          h.qNum >= rh.qNum && h.qNum <= rh.rangeEnd! &&
+          h.globalLineIndex !== rh.globalLineIndex  // exclude the range header itself
       )
 
       // Find the next range header or standalone question after this range
