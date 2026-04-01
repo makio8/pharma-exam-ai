@@ -1,0 +1,3779 @@
+[
+  {
+    "id": "ex-chemistry-001-classification-001-priority_order",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-001-classification-001",
+    "primary_exemplar_id": "ex-chemistry-001",
+    "subject": "化学",
+    "front": "IUPAC命名法の官能基優先順位（高→低）：カルボン酸 > {{c1::エステル}} > アミド > ニトリル > {{c2::アルデヒド}} > {{c3::ケトン}} > アルコール > チオール > アミン",
+    "back": "エステル / アルデヒド / ケトン\n\n【ポイント】語呂「イーオンナにかえるアミドあるけどオッサンには」。最も優先順位の高い官能基が主基（接尾辞 -oic acid, -oate等）となり、それ以外は置換基（接頭辞 oxo-, hydroxy-等）として命名する。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-001-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "priority_order",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-010"
+    ],
+    "source_note_ids": [
+      "官能基の優先順位"
+    ]
+  },
+  {
+    "id": "ex-chemistry-001-structure-001-procedure→steps",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-001-structure-001",
+    "primary_exemplar_id": "ex-chemistry-001",
+    "subject": "化学",
+    "front": "IUPAC命名の手順：①{{c1::主たる基を含む最長炭素鎖}}を選ぶ → ②{{c2::主たる基に最小番号}}を付ける → ③置換基を接頭辞で付ける",
+    "back": "主たる基を含む最長炭素鎖 / 主たる基に最小番号\n\n【ポイント】主鎖の選定が最重要ステップ。OH基があれば-olで終わる主鎖を優先し、OH基に最も小さい番号を与える。",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-001-structure-001",
+    "knowledge_type": "structure",
+    "recall_direction": "procedure→steps",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-006",
+      "r105-007",
+      "r107-006"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-001-structure-002-name→structure",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-001-structure-002",
+    "primary_exemplar_id": "ex-chemistry-001",
+    "subject": "化学",
+    "front": "2-メチルブチル基とイソペンチル基（3-メチルブチル基）の構造上の違いは？",
+    "back": "【2-メチルブチル基】主鎖4炭素のうち2位にメチル分岐：CH₃CH(CH₃)CH₂CH₂-\n【3-メチルブチル基（イソペンチル基）】主鎖4炭素のうち3位にメチル分岐：(CH₃)₂CHCH₂CH₂-\n\n【ポイント】アルキル基の命名は「主鎖に最も近い炭素から番号をつける」。ネオペンチル基＝2,2-ジメチルプロピル基。",
+    "format": "comparison",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-001-structure-002",
+    "knowledge_type": "structure",
+    "recall_direction": "name→structure",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r103-006"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-001-structure-003-rule→application",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-001-structure-003",
+    "primary_exemplar_id": "ex-chemistry-001",
+    "subject": "化学",
+    "front": "天然型L-アミノ酸のR/S表示はどちらか？（システインを除く）",
+    "back": "S配置\n\n【ポイント】CIP則（Cahn-Ingold-Prelog則）で原子番号の大きい順に優先順位をつける。天然L-アミノ酸はFischer投影式でNH₂が左に来る。S配置のアミノ酸がL体に対応する（システインはSH基のS原子の原子番号が大きいためR配置でL体）。",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-001-structure-003",
+    "knowledge_type": "structure",
+    "recall_direction": "rule→application",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r105-007",
+      "r108-006"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-001-structure-004-concept→examples",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-001-structure-004",
+    "primary_exemplar_id": "ex-chemistry-001",
+    "subject": "化学",
+    "front": "ラセミックスイッチ（キラルスイッチ）とは、{{c1::ラセミ体の医薬品から活性の高い光学活性体だけを取り出す}}開発戦略。例：レボセチリジン（←{{c2::セチリジン}}）、エスオメプラゾール（←オメプラゾール）",
+    "back": "ラセミ体の医薬品から活性の高い光学活性体だけを取り出す / セチリジン\n\n【ポイント】レボ(levo)は左旋性を意味する。エス(es)はS配置を意味する。ラセミックスイッチにより用量半減・副作用軽減・特許延長が可能になる。",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-001-structure-004",
+    "knowledge_type": "structure",
+    "recall_direction": "concept→examples",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-107"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-001-structure-005-name→decode",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-001-structure-005",
+    "primary_exemplar_id": "ex-chemistry-001",
+    "subject": "化学",
+    "front": "3-メチルブタ-2-エン-1-オールの構造を読み解くポイントは？",
+    "back": "ブタ=炭素4個の鎖、2-エン=C2-C3間に二重結合、1-オール=C1にOH基、3-メチル=C3にメチル基\n\n【ポイント】IUPAC名の読み方：「末端の-ol/-al等→主基の位置」「-en/-yn→不飽和結合の位置」「接頭辞→置換基の位置」の順に構造を組み立てる。",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-001-structure-005",
+    "knowledge_type": "structure",
+    "recall_direction": "name→decode",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r107-006"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-001-structure-006-name→amino_acid",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-001-structure-006",
+    "primary_exemplar_id": "ex-chemistry-001",
+    "subject": "化学",
+    "front": "(2S)-2-Amino-4-methylpentanoic acid はどのアミノ酸か？",
+    "back": "L-ロイシン（Leu）\n\n【ポイント】pentanoic acid（5炭素カルボン酸）の2位にアミノ基、4位にメチル分岐がある構造。イソロイシンは3位にメチル分岐。Fischer投影式でL体はNH₂が左側。",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-001-structure-006",
+    "knowledge_type": "structure",
+    "recall_direction": "name→amino_acid",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r108-006"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-003-structure-001-rule→application",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-003-structure-001",
+    "primary_exemplar_id": "ex-chemistry-003",
+    "subject": "化学",
+    "front": "分子の総電子数が{{c1::奇数}}ならば、その分子は必ず{{c2::不対電子}}を1つ持つ（ラジカル分子）。代表例：{{c3::NO}}（電子数11）",
+    "back": "奇数 / 不対電子 / NO\n\n【ポイント】NOは体内で血管拡張作用を持つ生理活性物質（EDRF: 内皮由来弛緩因子）。NO合成酵素（NOS）がアルギニンからNOを産生する。NO₂（電子数17）も代表的ラジカル。",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-003-structure-001",
+    "knowledge_type": "structure",
+    "recall_direction": "rule→application",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-009",
+      "r107-009",
+      "r111-007"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-003-structure-002-molecule→lewis",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-003-structure-002",
+    "primary_exemplar_id": "ex-chemistry-003",
+    "subject": "化学",
+    "front": "一酸化窒素（NO）のルイス構造式で、不対電子はN原子とO原子のどちらに配置されるか？",
+    "back": "窒素（N）原子上に不対電子が配置される\n\n【ポイント】NとOは二重結合で結ばれ、価電子合計11個のうちペアにできない1電子が、電気陰性度の小さいN原子上にラジカルとして残る。",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-003-structure-002",
+    "knowledge_type": "structure",
+    "recall_direction": "molecule→lewis",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r111-007",
+      "r100-009",
+      "r107-009"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-003-classification-001-orbital→aromaticity",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-003-classification-001",
+    "primary_exemplar_id": "ex-chemistry-003",
+    "subject": "化学",
+    "front": "ピロール型とピリジン型の非共有電子対の違いを比較せよ",
+    "back": "【ピロール型（ピロール・フランの1対）】非共有電子対がp軌道に収容→芳香族性に参加（6π電子に寄与）\n【ピリジン型（ピリジン・フランのもう1対）】非共有電子対がsp²混成軌道に収容→芳香族性に不参加（塩基性を示す）\n\n【ポイント】フランのO原子は2対の非共有電子対を持ち、1対はp軌道（芳香族性に寄与）、もう1対はsp²軌道（塩基性に関与）に収容される。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-003-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "orbital→aromaticity",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-007"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-003-structure-003-hybridization→shape",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-003-structure-003",
+    "primary_exemplar_id": "ex-chemistry-003",
+    "subject": "化学",
+    "front": "VSEPR理論：sp³混成で非共有電子対0個＝{{c1::正四面体}}、1個＝{{c2::三角錐}}、2個＝{{c3::折れ線形}}",
+    "back": "正四面体 / 三角錐 / 折れ線形\n\n【ポイント】三角錐型の代表はNH₃やCH₃⁻（sp³ + 非共有電子対1個）。水（H₂O）はsp³ + 非共有電子対2個で折れ線形。非共有電子対も空間を占めるため結合角が理想値から小さくなる。",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-003-structure-003",
+    "knowledge_type": "structure",
+    "recall_direction": "hybridization→shape",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r107-007"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-003-structure-004-species→properties",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-003-structure-004",
+    "primary_exemplar_id": "ex-chemistry-003",
+    "subject": "化学",
+    "front": "メチルカチオン・メチルアニオン・メチルラジカルの最外殻電子数と形状を比較せよ",
+    "back": "【メチルカチオン⁺CH₃】電子6個、sp²混成、平面三角形（空のp軌道あり）\n【メチルアニオン⁻CH₃】電子8個、sp³混成、三角錐形（非共有電子対1個）\n【メチルラジカル•CH₃】電子7個、ほぼsp²（平面に近い）、不対電子1個\n\n【ポイント】カルボカチオンは電子不足で求電子剤。安定性は3級>2級>1級>メチル（超共役・誘起効果）。",
+    "format": "comparison",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-003-structure-004",
+    "knowledge_type": "structure",
+    "recall_direction": "species→properties",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r105-006",
+      "r107-007"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-003-structure-005-molecule→structure",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-003-structure-005",
+    "primary_exemplar_id": "ex-chemistry-003",
+    "subject": "化学",
+    "front": "オゾン（O₃）の構造の特徴（形状・結合・形式電荷）を説明せよ",
+    "back": "く の字型（折れ線形）。中央O原子は配位結合で電子対を供与→形式電荷+1。受け取った末端O原子は形式電荷-1\n\n【ポイント】中央の酸素が2つの末端酸素と結合し、一方は通常の共有結合、もう一方は配位結合。全原子がオクテット則を満たす。オゾンは強い酸化力を持ち殺菌・脱臭に利用。",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-003-structure-005",
+    "knowledge_type": "structure",
+    "recall_direction": "molecule→structure",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r102-009"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-006-classification-001-category→definition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-006-classification-001",
+    "primary_exemplar_id": "ex-chemistry-006",
+    "subject": "化学",
+    "front": "有機反応の4大分類（置換・付加・脱離・転位）をそれぞれ定義せよ",
+    "back": "【置換】ある基が別の基に置き換わる（結合が1本切れて1本できる）\n【付加】二重/三重結合に原子や基が付加する（π結合が切れてσ結合ができる）\n【脱離】分子から原子や基が抜けて不飽和結合ができる（付加の逆）\n【転位】原子や基が分子内で位置を変える（骨格が変わる）\n\n【ポイント】反応分類はまず「結合の切断と生成の数」を数えて判断する。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-006-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "category→definition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-104",
+      "r109-008"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-006-mechanism-001-reaction→mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-006-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-006",
+    "subject": "化学",
+    "front": "芳香族求電子置換反応（SEAr）の3段階：①{{c1::求電子剤の生成}} → ②{{c2::π複合体→σ複合体（アレニウムイオン）}} → ③{{c3::脱プロトンで芳香族性回復}}",
+    "back": "求電子剤の生成 / π複合体→σ複合体（アレニウムイオン） / 脱プロトンで芳香族性回復\n\n【ポイント】ニトロ化・ハロゲン化・フリーデルクラフツアシル化/アルキル化はすべてSEAr機構。芳香環は求核剤として振る舞い、π電子が求電子剤を攻撃する。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-006-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reaction→mechanism",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-104"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-006-mechanism-002-rule→application",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-006-mechanism-002",
+    "primary_exemplar_id": "ex-chemistry-006",
+    "subject": "化学",
+    "front": "マルコフニコフ則と逆マルコフニコフ付加の条件と生成物を比較せよ",
+    "back": "【マルコフニコフ（酸触媒水和）】H⁺はH原子が多い炭素に付加、OHは置換基多い炭素に付加。カルボカチオン経由\n【逆マルコフニコフ（ヒドロホウ素化-酸化）】BH₃はH少ない炭素に結合（立体障害小）、酸化後OHは末端炭素に付く\n\n【ポイント】マルコフニコフ則の本質は「より安定なカルボカチオン中間体を経由する」こと。ヒドロホウ素化はカルボカチオンを経由しない協奏的反応。",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-006-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "rule→application",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-101"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-006-mechanism-003-reaction→product",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-006-mechanism-003",
+    "primary_exemplar_id": "ex-chemistry-006",
+    "subject": "化学",
+    "front": "ベックマン転位：{{c1::オキシム}}に酸（H₂SO₄）を作用させると、N-O結合が切れて隣接基がNに転位し、{{c2::ラクタム（環状アミド）}}が生成する。",
+    "back": "オキシム / ラクタム（環状アミド）\n\n【ポイント】シクロヘキサノンオキシム→カプロラクタム（ナイロン6の原料）が代表例。「ベックマンはオキシムのお引っ越し」で覚える。他の転位反応：ピナコール転位、クライゼン転位、ホフマン転位。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-006-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reaction→product",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r109-008"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-006-mechanism-004-reagent→stereochemistry",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-006-mechanism-004",
+    "primary_exemplar_id": "ex-chemistry-006",
+    "subject": "化学",
+    "front": "アルケンへのBr₂付加はシン付加かアンチ付加か？その理由は？",
+    "back": "アンチ付加（トランス付加）\n\n【ポイント】Br₂は環状ブロモニウムイオン中間体を経由するため、2つのBr原子は二重結合の反対側から付加する（アンチ付加）。結果として2つのBrがトランスの関係になる。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-006-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reagent→stereochemistry",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-101"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-006-mechanism-005-strategy→application",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-006-mechanism-005",
+    "primary_exemplar_id": "ex-chemistry-006",
+    "subject": "化学",
+    "front": "有機合成の反応追跡問題を解くための基本戦略は？",
+    "back": "「どの結合が切れて、どの結合が作られたか」を反応前後で追跡する\n\n【ポイント】エステルの求核置換反応ではOR基が脱離基となる。エステルのOCH₃由来の酸素は脱離するため生成物に残らない。C=O由来の酸素は反応前後で保持されることが多い。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-006-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "strategy→application",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r108-101"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-013-structure-001-definition→criteria",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-013-structure-001",
+    "primary_exemplar_id": "ex-chemistry-013",
+    "subject": "化学",
+    "front": "メソ化合物の判定3ステップ：①{{c1::不斉炭素が複数ある}} → ②{{c2::分子内に対称面がある}} → ③両方YESなら{{c3::メソ体（光学不活性）}}",
+    "back": "不斉炭素が複数ある / 分子内に対称面がある / メソ体（光学不活性）\n\n【ポイント】メソ体は不斉中心を持つにもかかわらず分子全体として光学不活性。代表例はメソ酒石酸。ラセミ体（エナンチオマーの等量混合物）とは異なり、分割できない。",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-013-structure-001",
+    "knowledge_type": "structure",
+    "recall_direction": "definition→criteria",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-008",
+      "r108-007"
+    ],
+    "source_note_ids": [
+      "ターゲット"
+    ]
+  },
+  {
+    "id": "ex-chemistry-013-structure-002-ring→meso",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-013-structure-002",
+    "primary_exemplar_id": "ex-chemistry-013",
+    "subject": "化学",
+    "front": "環状化合物（例：1,2-ジメチルシクロヘキサン）でメソ体になりやすいのはcis体かtrans体か？",
+    "back": "cis体がメソ体になりやすい\n\n【ポイント】cis-1,2-ジメチルシクロヘキサンは不斉中心2つ+分子内対称面あり→メソ体。trans体は対称面がなく、一対のエナンチオマーとして存在する。",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-013-structure-002",
+    "knowledge_type": "structure",
+    "recall_direction": "ring→meso",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r108-007"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-013-structure-003-compound→isomers",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-013-structure-003",
+    "primary_exemplar_id": "ex-chemistry-013",
+    "subject": "化学",
+    "front": "酒石酸の立体異性体は全部で{{c1::3}}種類：{{c2::(+)-体}}、{{c3::(-)-体}}、{{c4::メソ体}}。エナンチオマーの等量混合物を{{c5::ラセミ体}}という。",
+    "back": "3 / (+)-体 / (-)-体 / メソ体 / ラセミ体\n\n【ポイント】不斉中心2つで通常4種の立体異性体だが、酒石酸はメソ体が存在するため3種に減る。メソ体は旋光性を示さず、(+)体と(-)体のどちらとも異なる化合物（ジアステレオマーの関係）。",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-013-structure-003",
+    "knowledge_type": "structure",
+    "recall_direction": "compound→isomers",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-008"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-013-mechanism-001-stereochemistry→product",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-013-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-013",
+    "subject": "化学",
+    "front": "対称アルケンへの付加でメソ体を与える反応とラセミ体を与える反応を比較せよ",
+    "back": "【メソ体を与える反応】対称アルケン + トランス付加（Br₂）、対称アルケン + シン付加で対称基質（OsO₄、H₂/Pd-C）\n【ラセミ体を与える反応】対称アルケン + シン付加で不斉中心1つ（BH₃/H₂O₂）、対称アルケン + アンチ付加で不斉中心2つ同配置\n\n【ポイント】鍵は「付加の立体」と「生成物の対称性」。同じ基が両側に付加する反応は対称面が生じやすくメソ体になる。",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-013-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "stereochemistry→product",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r102-101",
+      "r107-103"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-013-classification-001-relationship→properties",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-013-classification-001",
+    "primary_exemplar_id": "ex-chemistry-013",
+    "subject": "化学",
+    "front": "エナンチオマー（鏡像異性体）の融点と比旋光度はどのような関係にあるか？",
+    "back": "融点は同じ、比旋光度の絶対値は同じ（符号は逆）\n\n【ポイント】エナンチオマーはキラルな環境（旋光度、酵素反応）以外では同一の物理的性質を示す。融点・沸点・溶解度・IR/NMRスペクトルは全て同一。ラセミ体は融点が異なることがある。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-013-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "relationship→properties",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r106-008"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-013-mechanism-002-reaction→stereo_outcome",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-013-mechanism-002",
+    "primary_exemplar_id": "ex-chemistry-013",
+    "subject": "化学",
+    "front": "アルケンへのヒドロホウ素化-酸化反応で生成物がラセミ体になるのはなぜか？",
+    "back": "BH₃はアルケンの上面と下面に等確率でsyn付加するため、R体とS体が等量生成してラセミ体になる\n\n【ポイント】ヒドロホウ素化は逆マルコフニコフ則+syn付加。面選択性がないため新しい不斉中心が生じるとラセミ体になる。カルボカチオンを経由しない協奏的反応。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-013-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reaction→stereo_outcome",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r102-101"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-022-mechanism-001-reaction→features",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-022-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-022",
+    "subject": "化学",
+    "front": "ヒドロホウ素化-酸化反応の特徴3つ：位置選択性＝{{c1::逆マルコフニコフ}}、立体選択性＝{{c2::syn（シン）付加}}、生成物＝{{c3::ラセミ体}}",
+    "back": "逆マルコフニコフ / syn（シン）付加 / ラセミ体\n\n【ポイント】BH₃がまず立体障害の小さい炭素に結合（逆マルコフニコフ）し、同じ面からHとBが同時に付加（syn付加）。H₂O₂/NaOH酸化でB→OHに置換。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-022-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reaction→features",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-102",
+      "r105-102",
+      "r111-104"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-022-mechanism-002-reagent→mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-022-mechanism-002",
+    "primary_exemplar_id": "ex-chemistry-022",
+    "subject": "化学",
+    "front": "mCPBA（メタクロロ過安息香酸）によるアルケンのエポキシ化で、エポキシドの酸素原子はどこに由来するか？また立体化学は？",
+    "back": "過酸のO-O結合の一方の酸素原子がアルケンに移る（syn付加）\n\n【ポイント】過酸のペルオキシ基(-O-OH)のうち末端Oがアルケンπ結合に協奏的にsyn付加してエポキシド（三員環エーテル）を形成する。対称基質ではメソ体が生成。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-022-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reagent→mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r103-102",
+      "r111-104"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-022-mechanism-003-reagent→stereo",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-022-mechanism-003",
+    "primary_exemplar_id": "ex-chemistry-022",
+    "subject": "化学",
+    "front": "代表的な付加試薬と立体化学・生成物の対応を比較せよ",
+    "back": "【syn付加】BH₃（→ラセミ体）、OsO₄（→メソ体/シスジオール）、H₂/Pd-C（→メソ体）、mCPBA（→メソ体/エポキシド）\n【anti付加】Br₂（→ラセミ体 or メソ体※基質依存）、ハロヒドリン化\n\n【ポイント】対称基質でsyn付加→対称面あり→メソ体。対称基質でanti付加→同配置の不斉中心→ラセミ体。基質の対称性が生成物の立体を決める。",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-022-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reagent→stereo",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r105-102",
+      "r106-103",
+      "r111-104"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-022-mechanism-004-reagent→product",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-022-mechanism-004",
+    "primary_exemplar_id": "ex-chemistry-022",
+    "subject": "化学",
+    "front": "OsO₄（四酸化オスミウム）はアルケンに{{c1::syn}}付加して{{c2::シスジオール（cis-1,2-ジオール）}}を生成する。環状中間体は{{c3::5員環オスミウムエステル}}である。",
+    "back": "syn / シスジオール（cis-1,2-ジオール） / 5員環オスミウムエステル\n\n【ポイント】OsO₄のsyn付加は5員環中間体を経由するため両方のOHが同じ面に付く。対称基質ではメソ体を生成。NaHSO₃やNMO（N-メチルモルホリンN-オキシド）で後処理。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-022-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reagent→product",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r106-103",
+      "r111-104"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-022-mechanism-005-reaction→selectivity",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-022-mechanism-005",
+    "primary_exemplar_id": "ex-chemistry-022",
+    "subject": "化学",
+    "front": "アルケンの酸触媒水和反応でOH基が付く位置はどこか？その理由は？",
+    "back": "置換基の多い炭素にOH基が付く（マルコフニコフ則）\n\n【ポイント】H⁺がまず付加してカルボカチオンを形成する際、より安定な3級>2級>1級カルボカチオンを経由する。結果としてOHは置換基の多い炭素側に付く。ヒドロホウ素化とは位置選択性が逆。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-022-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reaction→selectivity",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-102",
+      "r105-102"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-022-mechanism-006-substrate→product",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-022-mechanism-006",
+    "primary_exemplar_id": "ex-chemistry-022",
+    "subject": "化学",
+    "front": "Br₂のアルケンへのanti付加で、ラセミ体が生成する場合とメソ体が生成する場合の違いは？",
+    "back": "cis-アルケン（同じ基が同側）へのanti付加→ラセミ体（(R,R)と(S,S)の混合）\ntrans-アルケン（同じ基が反対側）へのanti付加→メソ体（(R,S)対称面あり）\n\n【ポイント】生成物の対称性は出発アルケンの幾何異性と付加の立体化学の両方で決まる。環状ブロモニウムイオンの裏面攻撃の方向を考えると理解しやすい。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-022-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "substrate→product",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r106-103",
+      "r111-104"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-033-mechanism-001-mechanism→features",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-033-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-033",
+    "subject": "化学",
+    "front": "SN1反応の特徴：反応速度は{{c1::基質濃度のみ}}に依存、{{c2::カルボカチオン}}中間体を経由、生成物は{{c3::ラセミ体}}",
+    "back": "基質濃度のみ / カルボカチオン / ラセミ体\n\n【ポイント】SN1の「1」は一分子反応＝律速段階に基質1分子のみ関与。平面カルボカチオンの両面から求核剤が攻撃するためラセミ化する。3級基質で優先。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-033-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mechanism→features",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-103",
+      "r105-103",
+      "r111-103"
+    ],
+    "source_note_ids": [
+      "SN1/SN2反応条件"
+    ]
+  },
+  {
+    "id": "ex-chemistry-033-mechanism-002-mechanism→features",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-033-mechanism-002",
+    "primary_exemplar_id": "ex-chemistry-033",
+    "subject": "化学",
+    "front": "SN2反応の特徴：反応速度は{{c1::基質と求核剤の両方の濃度}}に比例、{{c2::背面攻撃}}によるWalden反転（{{c3::立体反転}}）が起こる",
+    "back": "基質と求核剤の両方の濃度 / 背面攻撃 / 立体反転\n\n【ポイント】SN2の「2」は二分子反応＝律速段階に基質+求核剤の2分子が関与。遷移状態で基質の裏側から求核剤が攻撃するためR→S（またはS→R）に反転。1級基質で優先。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-033-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mechanism→features",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-104",
+      "r105-103",
+      "r111-103"
+    ],
+    "source_note_ids": [
+      "SN1/SN2反応条件"
+    ]
+  },
+  {
+    "id": "ex-chemistry-033-mechanism-003-substrate→preference",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-033-mechanism-003",
+    "primary_exemplar_id": "ex-chemistry-033",
+    "subject": "化学",
+    "front": "SN1反応とSN2反応の基質の級数による反応速度の順を比較せよ",
+    "back": "【SN1（カルボカチオン安定性）】3級 > 2級 > 1級 > メチル\n【SN2（立体障害の小ささ）】メチル > 1級 > 2級 > 3級\n\n【ポイント】SN1はカルボカチオンが安定なほど速い（超共役・誘起効果）。SN2は遷移状態の立体的な混み合いが少ないほど速い。2級基質はSN1とSN2が競合する。",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-033-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "substrate→preference",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-104",
+      "r105-103"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-033-mechanism-004-conditions→mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-033-mechanism-004",
+    "primary_exemplar_id": "ex-chemistry-033",
+    "subject": "化学",
+    "front": "SN1反応とSN2反応が優先する溶媒・条件を比較せよ",
+    "back": "【SN1が優先】プロトン性溶媒（水・アルコール等）、酸性条件、弱い求核剤、3級基質\n【SN2が優先】非プロトン性極性溶媒（DMSO・アセトン等）、塩基性条件、強い求核剤、1級基質\n\n【ポイント】プロトン性溶媒はカルボカチオンを安定化→SN1有利。非プロトン性溶媒は求核剤を溶媒和しにくい→求核性維持→SN2有利。",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-033-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "conditions→mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r111-103"
+    ],
+    "source_note_ids": [
+      "SN1/SN2反応条件"
+    ]
+  },
+  {
+    "id": "ex-chemistry-033-mechanism-005-solvent→nucleophilicity",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-033-mechanism-005",
+    "primary_exemplar_id": "ex-chemistry-033",
+    "subject": "化学",
+    "front": "プロトン性溶媒と非プロトン性溶媒での求核性の序列を比較せよ（ハロゲン化物イオンの例）",
+    "back": "【プロトン性溶媒】I⁻ > Br⁻ > Cl⁻ > F⁻（周期表の下ほど強い）\n【非プロトン性溶媒】F⁻ > Cl⁻ > Br⁻ > I⁻（電気陰性度が高いほど強い）\n\n【ポイント】プロトン性溶媒中では小さいイオン（F⁻）ほど水素結合で強く溶媒和され求核性が低下する。大きいイオン（I⁻）は溶媒和されにくく求核性が維持される。",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-033-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "solvent→nucleophilicity",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r108-103"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-033-mechanism-006-atom→nucleophilicity",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-033-mechanism-006",
+    "primary_exemplar_id": "ex-chemistry-033",
+    "subject": "化学",
+    "front": "エタノール（プロトン性溶媒）中で、PhS⁻がCH₃O⁻より高い求核性を示す理由は？",
+    "back": "硫黄原子は酸素原子より電気陰性度が小さく分極しやすいため、プロトン性溶媒による水素結合の溶媒和を受けにくく、求核性が維持される\n\n【ポイント】O原子は電気陰性度が高いため水素結合で強く溶媒和→反応に使えるローンペアが減少→求核性低下。「硫黄は溶媒に邪魔されない→求核性が高い」と覚える。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-033-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "atom→nucleophilicity",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r108-103"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-033-mechanism-007-principle→application",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-033-mechanism-007",
+    "primary_exemplar_id": "ex-chemistry-033",
+    "subject": "化学",
+    "front": "良い脱離基の条件：脱離して生じるアニオンの{{c1::共役酸のpKaが小さい}}（つまり{{c2::強い酸の共役塩基}}）ほど良い脱離基になる。",
+    "back": "共役酸のpKaが小さい / 強い酸の共役塩基\n\n【ポイント】例：トシラート（TsO⁻）、ハロゲン化物イオン（I⁻, Br⁻）は共役酸が強酸→良い脱離基。OH⁻やNH₂⁻は共役酸が弱酸→悪い脱離基（だからプロトン化やトシル化で脱離能を高める）。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-033-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "principle→application",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r106-104"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-033-mechanism-008-substrate+base→reaction",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-033-mechanism-008",
+    "primary_exemplar_id": "ex-chemistry-033",
+    "subject": "化学",
+    "front": "3級ハロゲン化アルキルに嵩高い強塩基（t-BuO⁻）を反応させると、SN2とE2のどちらが起こるか？",
+    "back": "E2脱離反応が排他的に進行する（SN2は起こらない）\n\n【ポイント】3級炭素は立体障害が大きくSN2の背面攻撃が不可能。嵩高い塩基はさらにSN2を阻害し、β水素の引き抜きによるE2脱離が優先する。1級基質+強求核剤ならSN2が優先。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-033-mechanism-008",
+    "knowledge_type": "mechanism",
+    "recall_direction": "substrate+base→reaction",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r111-103"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-037-mechanism-001-reaction→product",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-037-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-037",
+    "subject": "化学",
+    "front": "Wittig反応：{{c1::カルボニル化合物}}＋{{c2::ホスホニウムイリド（Ph₃P=CR₂）}}→ {{c3::アルケン}}＋Ph₃P=O",
+    "back": "カルボニル化合物 / ホスホニウムイリド（Ph₃P=CR₂） / アルケン\n\n【ポイント】Wittig反応はC=OをC=Cに変換する「骨格変換反応」。手順：ハロゲン化物+PPh₃→ホスホニウム塩→塩基でイリド生成→カルボニルと反応。二重結合の位置を正確に指定できる。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-037-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reaction→product",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-103"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-037-mechanism-002-reaction→mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-037-mechanism-002",
+    "primary_exemplar_id": "ex-chemistry-037",
+    "subject": "化学",
+    "front": "ロビンソン環化は、①{{c1::マイケル付加（1,4-共役付加）}}でまず鎖状中間体を作り、次に②{{c2::分子内アルドール反応}}で閉環して{{c3::6員環}}を形成する二段階反応である。",
+    "back": "マイケル付加（1,4-共役付加） / 分子内アルドール反応 / 6員環\n\n【ポイント】マイケル付加はエノラートイオンがα,β-不飽和カルボニルのβ炭素を求核攻撃する1,4-付加反応。ロビンソン環化はステロイド合成の鍵反応として重要。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-037-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reaction→mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-104"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-037-mechanism-003-reagent→H_source",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-037-mechanism-003",
+    "primary_exemplar_id": "ex-chemistry-037",
+    "subject": "化学",
+    "front": "LiAlH₄でカルボン酸を第一級アルコールに還元する際、生成物の-CH₂OHのH原子の由来は？",
+    "back": "CH₂のH 2つ：LiAlH₄のヒドリド（H⁻）由来\nOHのH 1つ：後処理のH₃O⁺（酸性水溶液）由来\n\n【ポイント】LiAlH₄は「ヒドリドH⁻の供給源」。カルボニル炭素に2回求核攻撃してアルコキシドを形成し、最後のOHのプロトン化はH₃O⁺が担当する。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-037-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reagent→H_source",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r102-103"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-037-classification-001-reagent→scope",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-037-classification-001",
+    "primary_exemplar_id": "ex-chemistry-037",
+    "subject": "化学",
+    "front": "LiAlH₄とNaBH₄の還元対象の違いを比較せよ",
+    "back": "【LiAlH₄（強力）】カルボン酸・エステル・アミド・アルデヒド・ケトンをすべて還元可能\n【NaBH₄（温和）】アルデヒド・ケトンのみ還元（カルボン酸・エステルは還元不可）\n\n【ポイント】LiAlH₄は水と激しく反応するためエーテル溶媒（THF等）中で使用。NaBH₄は水・アルコール中でも使用可能な温和な還元剤。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-037-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "reagent→scope",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-103"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-037-mechanism-004-reaction→product",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-037-mechanism-004",
+    "primary_exemplar_id": "ex-chemistry-037",
+    "subject": "化学",
+    "front": "アルドール反応：ケトン/アルデヒドの{{c1::α炭素}}のエノラートが、別のカルボニルの{{c2::C=O}}に求核付加して{{c3::β-ヒドロキシカルボニル}}化合物が生成する。",
+    "back": "α炭素 / C=O / β-ヒドロキシカルボニル\n\n【ポイント】解糖系のアルドラーゼ反応は生体内のアルドール反応。フルクトース1,6-ビスリン酸をジヒドロキシアセトンリン酸とグリセルアルデヒド3-リン酸に分解（逆アルドール）する。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-037-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reaction→product",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r103-106"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-037-mechanism-005-reagent→product",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-037-mechanism-005",
+    "primary_exemplar_id": "ex-chemistry-037",
+    "subject": "化学",
+    "front": "2,4-ジニトロフェニルヒドラジン（2,4-DNPH）はケトン・アルデヒドと{{c1::脱水縮合}}反応して{{c2::ヒドラゾン}}（{{c3::橙赤色}}沈殿）を生成する。",
+    "back": "脱水縮合 / ヒドラゾン / 橙赤色\n\n【ポイント】2,4-DNPHはカルボニル基の確認試薬。生成物はヒドラゾン（C=N-NH-Ar）であり、オキシム（C=N-OH、ヒドロキシルアミンとの反応で生成）とは異なる。橙赤色は共役系による発色。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-037-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reagent→product",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-103"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-037-mechanism-006-reaction→chirality",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-037-mechanism-006",
+    "primary_exemplar_id": "ex-chemistry-037",
+    "subject": "化学",
+    "front": "ベンズアルデヒドにHCNを付加するシアノヒドリン反応で不斉炭素が生じるのはなぜか？",
+    "back": "カルボニル炭素にCNとOHが付加し、Ph・H・CN・OHの4つの異なる置換基が結合するため不斉炭素になる\n\n【ポイント】不斉炭素＝4つの置換基がすべて異なる炭素。対称ケトン（シクロヘキサノン等）のNaBH₄還元では環の対称性により不斉炭素は生じにくい。アルデヒドはHが1つ残るため不斉になりやすい。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-037-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reaction→chirality",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r108-009"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-042-classification-001-官能基→酸性度の序列",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-042-classification-001",
+    "primary_exemplar_id": "ex-chemistry-042",
+    "subject": "化学",
+    "front": "有機化合物の酸性度の序列: {{c1::カルボン酸}} > {{c2::フェノール}} > {{c3::チオール}} > {{c4::アルコール}}",
+    "back": "RCOOH > ArOH > RSH > ROH — 共役塩基の安定性が高いほど酸性度が強い。カルボン酸のカルボキシラートアニオンは共鳴安定化が最も大きい",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-042-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "官能基→酸性度の序列",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-010",
+      "r110-008"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-042-mechanism-001-電子求引基→酸性度への影響",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-042-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-042",
+    "subject": "化学",
+    "front": "CF₃CO₂HがCH₃CO₂Hより酸性度が高い理由を説明せよ",
+    "back": "CF₃の強い電子求引効果（-I効果）により共役塩基（CF₃COO⁻）の負電荷が安定化されるため。電子求引基は共役塩基を安定化→酸性度UP",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-042-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "電子求引基→酸性度への影響",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-010",
+      "r103-010"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-042-classification-002-ハロゲン→電子求引力の序列",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-042-classification-002",
+    "primary_exemplar_id": "ex-chemistry-042",
+    "subject": "化学",
+    "front": "ハロゲン置換酢酸のpKa（小さい＝酸性度大）の順: {{c1::F-CH₂CO₂H}} < {{c2::Cl-CH₂CO₂H}} < {{c3::Br-CH₂CO₂H}} < {{c4::I-CH₂CO₂H}} < CH₃CO₂H",
+    "back": "F > Cl > Br > I の順で電子求引力が強く、pKaが小さい（酸性度が大きい）。電気陰性度が高いほど-I効果が強い",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-042-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "ハロゲン→電子求引力の序列",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-010"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-042-mechanism-002-置換基→フェノールの酸性度変化",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-042-mechanism-002",
+    "primary_exemplar_id": "ex-chemistry-042",
+    "subject": "化学",
+    "front": "フェノール誘導体の酸性度の序列を並べよ: p-ニトロフェノール、p-クロロフェノール、フェノール、p-アミノフェノール",
+    "back": "p-NO₂フェノール > p-Clフェノール > フェノール > p-NH₂フェノール — 電子求引基（NO₂, Cl）はフェノキシドアニオンを安定化→酸性度UP、電子供与基（NH₂）は逆効果。Hammettのσ値: NO₂(+0.78) > Cl(+0.23) > H(0) > NH₂(-0.66)",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-042-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "置換基→フェノールの酸性度変化",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r110-008",
+      "r106-102"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-042-mechanism-003-分液操作の抽出順序→分離される化合物",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-042-mechanism-003",
+    "primary_exemplar_id": "ex-chemistry-042",
+    "subject": "化学",
+    "front": "エーテル溶液からNaHCO₃水溶液→NaOH水溶液→HCl水溶液の順で分液操作を行うと、各水層に何が抽出されるか？",
+    "back": "NaHCO₃水層: カルボン酸（安息香酸等の強酸）、NaOH水層: フェノール類（弱酸）、HCl水層: アミン類（塩基）。エーテル層に残るのは中性・極めて弱い塩基性の化合物。pKaの大小関係を利用した系統的分離法",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-042-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "分液操作の抽出順序→分離される化合物",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-101"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-042-structure-001-pKa値→酸性度の強弱",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-042-structure-001",
+    "primary_exemplar_id": "ex-chemistry-042",
+    "subject": "化学",
+    "front": "pKa値と酸性度の関係はどうなっているか？",
+    "back": "pKa値が小さいほど酸性度が大きい（強い酸）。pKa = -log Ka であるため、Ka（酸解離定数）が大きい＝pKaが小さい＝酸性度が高い",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-042-structure-001",
+    "knowledge_type": "structure",
+    "recall_direction": "pKa値→酸性度の強弱",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-010",
+      "r106-102"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-043-classification-001-塩基性アミノ酸→塩基性の序列",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-043-classification-001",
+    "primary_exemplar_id": "ex-chemistry-043",
+    "subject": "化学",
+    "front": "塩基性アミノ酸の塩基性の強さ: {{c1::アルギニン（Arg）}} > {{c2::リジン（Lys）}} > {{c3::ヒスチジン（His）}}",
+    "back": "Arg > Lys > His — アルギニンのグアニジノ基はプロトン化した共役酸が3つのNに共鳴安定化されるため極めて強い塩基性を示す（pKa約12.5）。語呂:「ある(Arg)日リジ(Lys)ンがヒス(His)テリー」",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-043-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "塩基性アミノ酸→塩基性の序列",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-010",
+      "r104-007"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-043-mechanism-001-グアニジノ基→塩基性が強い理由",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-043-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-043",
+    "subject": "化学",
+    "front": "グアニジン（グアニジノ基）が極めて強い塩基性を示す理由は？",
+    "back": "プロトンを受け取った共役酸（グアニジニウムイオン）の正電荷が3つの窒素原子に共鳴安定化されるため。共役酸が安定 = 塩基性が強い（pKa約12.5）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-043-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "グアニジノ基→塩基性が強い理由",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-010",
+      "r104-007"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-043-mechanism-002-非共有電子対の局在性→塩基性への影響",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-043-mechanism-002",
+    "primary_exemplar_id": "ex-chemistry-043",
+    "subject": "化学",
+    "front": "以下の化合物の塩基性を比較せよ: エチルアミン、ピリミジン、アセトアミド、インドール",
+    "back": "エチルアミン > ピリミジン > アセトアミド > インドール — エチルアミンはsp³のN（電子対が局在→塩基性強）。ピリミジンはsp²のN。アセトアミドのNはカルボニルと共鳴で非局在化→塩基性弱。インドールのNは芳香族性に寄与→塩基性ほぼなし",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-043-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "非共有電子対の局在性→塩基性への影響",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r104-007",
+      "r109-101"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-043-mechanism-003-置換基→アニリンのpKaの序列",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-043-mechanism-003",
+    "primary_exemplar_id": "ex-chemistry-043",
+    "subject": "化学",
+    "front": "p-置換アニリニウムイオンのpKa順（大＝塩基性強）: p-OCH₃({{c1::5.3}}) > p-CH₃({{c2::5.1}}) > H({{c3::4.6}}) > p-Cl({{c4::4.0}}) > p-NO₂({{c5::1.0}})",
+    "back": "電子供与基（OCH₃, CH₃）→塩基性UP→pKa大。電子吸引基（Cl, NO₂）→塩基性DOWN→pKa小。ニトロ基は共鳴+誘起効果の両方で最も強く塩基性を低下させる",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-043-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "置換基→アニリンのpKaの序列",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r109-101"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-043-structure-001-Hammettのσ値→置換基の電子効果",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-043-structure-001",
+    "primary_exemplar_id": "ex-chemistry-043",
+    "subject": "化学",
+    "front": "Hammett則の置換基定数σ値の大小は何を意味するか？代表的な値を挙げよ",
+    "back": "σ > 0: 電子吸引基（酸性度UP、塩基性DOWN）。σ < 0: 電子供与基（酸性度DOWN、塩基性UP）。代表値: p-NO₂(+0.78) > p-Cl(+0.23) > p-H(0) > p-CH₃(-0.17) > p-OCH₃(-0.27)",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-043-structure-001",
+    "knowledge_type": "structure",
+    "recall_direction": "Hammettのσ値→置換基の電子効果",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r109-101",
+      "r107-211"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-043-mechanism-004-塩基性N原子→生体内での性質",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-043-mechanism-004",
+    "primary_exemplar_id": "ex-chemistry-043",
+    "subject": "化学",
+    "front": "ニコチンやバレニクリンが持つ窒素原子の生体内での2つの化学的役割は？",
+    "back": "1) sp³窒素: 生理的pHでプロトン化→カチオン性（受容体とのイオン性相互作用）。2) sp²窒素（ピリジン環）: 非共有電子対が水素結合受容体として働く。受容体への結合に両方が重要",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-043-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "塩基性N原子→生体内での性質",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r107-211"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-048-structure-001-TMS→正式名称と化学シフト",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-048-structure-001",
+    "primary_exemplar_id": "ex-chemistry-048",
+    "subject": "化学",
+    "front": "¹H-NMRの基準物質TMSの正式名称は{{c1::テトラメチルシラン}}で、化学シフトは{{c2::0 ppm}}に設定される",
+    "back": "TMS = Si(CH₃)₄（テトラメチルシラン）。「トリメチルシラン」は誤り。TMSの12個のHは等価で鋭い1本のピーク。全有機プロトンより高磁場側に出るため基準に最適",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-048-structure-001",
+    "knowledge_type": "structure",
+    "recall_direction": "TMS→正式名称と化学シフト",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-108",
+      "r101-108"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-048-structure-002-官能基→化学シフト範囲",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-048-structure-002",
+    "primary_exemplar_id": "ex-chemistry-048",
+    "subject": "化学",
+    "front": "¹H-NMR化学シフト目安: アルキルCH₃/CH₂ = {{c1::0.5-2.0}} ppm, OCH₃ = {{c2::3.3-3.8}} ppm, OCH₂ = {{c3::約4.1}} ppm, 芳香族H = {{c4::6.5-8.5}} ppm, アルデヒドH = {{c5::9-10}} ppm",
+    "back": "電子求引基が近いほど低磁場（高ppm）にシフトする。覚え方: TMS(0)→アルキル(0-2)→O隣接(3-4)→アルケン/芳香族(5-8)→アルデヒド(9-10)→カルボン酸(10-12)",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-048-structure-002",
+    "knowledge_type": "structure",
+    "recall_direction": "官能基→化学シフト範囲",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-108",
+      "r101-108",
+      "r103-107",
+      "r109-107"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-048-mechanism-001-CDCl₃・D₂O→NMRでの意味",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-048-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-048",
+    "subject": "化学",
+    "front": "¹H-NMRでCDCl₃溶媒使用時に7.26 ppmに現れるシグナルは何か？また、D₂O添加で消失するシグナルは何を示すか？",
+    "back": "7.26 ppmのシグナルはCDCl₃中に微量含まれるCHCl₃由来。D₂O添加で消失するシグナルは活性水素（OH, NH, COOH）を示す。重水素交換により¹Hが²Hに置換されNMR不活性になるため",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-048-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "CDCl₃・D₂O→NMRでの意味",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-108",
+      "r104-106",
+      "r109-107"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-048-structure-003-NMR解析→4ステップ手順",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-048-structure-003",
+    "primary_exemplar_id": "ex-chemistry-048",
+    "subject": "化学",
+    "front": "¹H-NMRスペクトルから化合物構造を決定する基本手順（4ステップ）は？",
+    "back": "1) 積分比から各シグナルのH数を決定 → 2) 分裂パターン（多重度）から隣接H数を推定（n+1則） → 3) 化学シフトから官能基を推定 → 4) 以上を組み合わせて構造を決定。積分・分裂・シフトの3情報が鍵",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-048-structure-003",
+    "knowledge_type": "structure",
+    "recall_direction": "NMR解析→4ステップ手順",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-108",
+      "r106-107"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-048-structure-004-J値→E/Z配置の判定",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-048-structure-004",
+    "primary_exemplar_id": "ex-chemistry-048",
+    "subject": "化学",
+    "front": "オレフィンプロトンのカップリング定数: cis(Z)配置 = {{c1::8-12}} Hz, trans(E)配置 = {{c2::14-17}} Hz",
+    "back": "J値が大きい→trans(E)配置。桂皮酸エステルでJ=16 HzならE配置。覚え方:「trans = 大きいJ」",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-048-structure-004",
+    "knowledge_type": "structure",
+    "recall_direction": "J値→E/Z配置の判定",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-106"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-048-structure-005-IR吸収波数→官能基の同定",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-048-structure-005",
+    "primary_exemplar_id": "ex-chemistry-048",
+    "subject": "化学",
+    "front": "IR吸収の目安: C=O（カルボニル）= {{c1::1700-1800}} cm⁻¹, O-H = {{c2::3200-3600}} cm⁻¹, N-H = {{c3::3300-3500}} cm⁻¹",
+    "back": "IRで官能基の有無を判定し、NMRでプロトンの種類と数を決定する。両者を組み合わせて構造を確定させる。MSで分子量情報も加えると更に精度が上がる",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-048-structure-005",
+    "knowledge_type": "structure",
+    "recall_direction": "IR吸収波数→官能基の同定",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r108-109"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-048-structure-006-分子式→不飽和度の計算",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-048-structure-006",
+    "primary_exemplar_id": "ex-chemistry-048",
+    "subject": "化学",
+    "front": "不飽和度の公式（CₐHᵦNᵧOᵨ）: 不飽和度 = {{c1::(2a + 2 - b + c) / 2}}（Nの数＝c）",
+    "back": "Oは計算に含めない。N原子は+1（Hが1つ増えたのと同等）。例: メラトニンC₁₃H₁₆N₂O₂ → (2×13+2-16+2)/2 = 7。ベンゼン環=4、二重結合=1で5と数えがちだが環構造も含めて計算",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-048-structure-006",
+    "knowledge_type": "structure",
+    "recall_direction": "分子式→不飽和度の計算",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-108"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-048-structure-007-窒素の数→分子量の偶奇",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-048-structure-007",
+    "primary_exemplar_id": "ex-chemistry-048",
+    "subject": "化学",
+    "front": "窒素ルールとは何か？メラトニン（C₁₃H₁₆N₂O₂）の整数質量は偶数か奇数か？",
+    "back": "窒素ルール: N原子が偶数個（0含む）→整数質量は偶数、N原子が奇数個→整数質量は奇数。メラトニンはN=2（偶数）→整数質量232（偶数）。MSでの分子量推定に有用",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-048-structure-007",
+    "knowledge_type": "structure",
+    "recall_direction": "窒素の数→分子量の偶奇",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-108"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-048-structure-008-芳香環置換パターン→NMRの特徴",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-048-structure-008",
+    "primary_exemplar_id": "ex-chemistry-048",
+    "subject": "化学",
+    "front": "パラ二置換ベンゼンの¹H-NMRで特徴的なシグナルパターンは？",
+    "back": "2組のダブレット（各2H）が芳香族領域（6.5-8.5 ppm）に現れる。対称性から2種類のHがそれぞれ2個ずつ存在し、互いにオルト位カップリング（J≈8 Hz）を示す",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-048-structure-008",
+    "knowledge_type": "structure",
+    "recall_direction": "芳香環置換パターン→NMRの特徴",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r109-107",
+      "r110-108"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-048-structure-009-芳香環の位置関係→J値",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-048-structure-009",
+    "primary_exemplar_id": "ex-chemistry-048",
+    "subject": "化学",
+    "front": "芳香環上のカップリング定数: オルト位(o) ≈ {{c1::8}} Hz, メタ位(m) ≈ {{c2::3}} Hz, パラ位(p) ≈ {{c3::1 Hz（通常無視）}}",
+    "back": "o位のJ値が最大（約8 Hz）。m位は小さい（約3 Hz）でdd（ダブルダブレット）を生じる。p位は通常無視できる（約1 Hz）。遠隔カップリングの有無で置換パターンを推定できる",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-048-structure-009",
+    "knowledge_type": "structure",
+    "recall_direction": "芳香環の位置関係→J値",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r110-108"
+    ],
+    "source_note_ids": [
+      "遠隔カップリング"
+    ]
+  },
+  {
+    "id": "ex-chemistry-048-structure-010-一重線→構造的意味",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-048-structure-010",
+    "primary_exemplar_id": "ex-chemistry-048",
+    "subject": "化学",
+    "front": "¹H-NMRで一重線（シングレット）として現れるプロトンの構造的特徴は？代表例を3つ挙げよ",
+    "back": "一重線 = 隣接位にカップリングするHがない。代表例: 1) -OCH₃（メトキシ基、約3.5-3.8 ppm）、2) -COCH₃（アセチル基、約2.0 ppm）、3) 芳香環上の孤立したH（隣にHなし）。n+1則: 隣接H数0 → 1本（一重線）",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-048-structure-010",
+    "knowledge_type": "structure",
+    "recall_direction": "一重線→構造的意味",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-108",
+      "r102-108",
+      "r103-107"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-048-classification-001-NMR特徴→医薬品の同定",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-048-classification-001",
+    "primary_exemplar_id": "ex-chemistry-048",
+    "subject": "化学",
+    "front": "チモールとプロポフォールをNMRで区別するポイントは？",
+    "back": "チモール（2-イソプロピル-5-メチルフェノール）: イソプロピル6H(d) + メチル3H(s) + 三置換ベンゼン3H。プロポフォール（2,6-ジイソプロピルフェノール）: イソプロピル12H(d) + 二置換ベンゼン3H。イソプロピル基の数（1個 vs 2個）で区別。プロポフォールは全身麻酔薬",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-048-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "NMR特徴→医薬品の同定",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r102-108",
+      "r106-107"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-068-mechanism-001-セリンプロテアーゼ→触媒三残基の名称と役割",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-068-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-068",
+    "subject": "化学",
+    "front": "セリンプロテアーゼの触媒三残基（電荷リレー系）: {{c1::Asp}} — {{c2::His}} — {{c3::Ser}}。HisがSerのOHから{{c4::プロトン}}を引き抜き、Serの{{c5::求核性}}を高める",
+    "back": "Asp-His-Ser の電荷リレー系: Asp102がHis57の塩基性を安定化→His57がSer195のOHからH⁺を引き抜く→Ser195のO⁻が基質カルボニルに求核攻撃。キモトリプシン、AChEなどに共通",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-068-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "セリンプロテアーゼ→触媒三残基の名称と役割",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-105",
+      "r105-106"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-068-mechanism-002-不可逆的酵素阻害→代表薬と標的",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-068-mechanism-002",
+    "primary_exemplar_id": "ex-chemistry-068",
+    "subject": "化学",
+    "front": "標的酵素と共有結合を形成する（不可逆的に阻害する）代表的な医薬品を3つ挙げ、それぞれの標的酵素を答えよ",
+    "back": "1) ベンジルペニシリン → トランスペプチダーゼ（β-ラクタム環開裂でアシル化）。2) 5-FU（→5-FdUMP）→ チミジル酸合成酵素（自殺基質として共有結合）。3) アスピリン → COX（セリン残基をアセチル化）。共有結合＝不可逆的阻害のキーワード",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-068-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "不可逆的酵素阻害→代表薬と標的",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-105",
+      "r100-207",
+      "r105-106"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-068-mechanism-003-オメプラゾール→活性化の仕組み",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-068-mechanism-003",
+    "primary_exemplar_id": "ex-chemistry-068",
+    "subject": "化学",
+    "front": "オメプラゾール（PPI）はどのように活性化され、H⁺,K⁺-ATPaseを不可逆的に阻害するか？",
+    "back": "強酸性条件下（胃壁細胞の分泌細管内）でプロトン化→分子内環化反応でスルフェンアミド（活性体）に変換→酵素のシステイン残基のSH基とジスルフィド結合を形成→不可逆的阻害。エソメプラゾールはS体のみの光学純品",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-068-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "オメプラゾール→活性化の仕組み",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-207",
+      "r111-208"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-068-mechanism-004-AChE→基質認識の相互作用",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-068-mechanism-004",
+    "primary_exemplar_id": "ex-chemistry-068",
+    "subject": "化学",
+    "front": "AChE（アセチルコリンエステラーゼ）において、アセチルコリンとトリプトファン残基の間の相互作用は何か？",
+    "back": "カチオン-π相互作用（イオン結合ではない）。AChの四級アンモニウムカチオンがTrp残基の芳香環π電子と相互作用。AChEの触媒三残基はGlu-His-Ser（セリンプロテアーゼと同じ電荷リレー機構）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-068-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "AChE→基質認識の相互作用",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r105-106"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-068-mechanism-005-AChE阻害薬→可逆/不可逆の区別",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-068-mechanism-005",
+    "primary_exemplar_id": "ex-chemistry-068",
+    "subject": "化学",
+    "front": "ネオスチグミンとサリンのAChE阻害機構の違いは？",
+    "back": "ネオスチグミン: セリン残基を可逆的にカルバモイル化（カルバメート結合は徐々に加水分解）。サリン: セリン残基を不可逆的にリン酸化（有機リン中毒）。解毒: PAM（プラリドキシム）+アトロピン。カルバモイル化=可逆、リン酸化=不可逆がポイント",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-068-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "AChE阻害薬→可逆/不可逆の区別",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r105-106"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-068-mechanism-006-システインプロテアーゼ→触媒残基と機構",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-068-mechanism-006",
+    "primary_exemplar_id": "ex-chemistry-068",
+    "subject": "化学",
+    "front": "システインプロテアーゼの触媒機構を説明せよ。セリンプロテアーゼとの違いは？",
+    "back": "His残基がCys残基のSH基からプロトンを引き抜き→Cysのチオラートアニオン（S⁻）の求核性を高める→基質のペプチド結合を切断。セリンプロテアーゼ（Asp-His-Ser）との違いは求核剤がSerのOH→CysのSHに替わること",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-068-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "システインプロテアーゼ→触媒残基と機構",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r108-107"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-068-mechanism-007-セレギリン→FADとの共有結合形成",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-068-mechanism-007",
+    "primary_exemplar_id": "ex-chemistry-068",
+    "subject": "化学",
+    "front": "セレギリンはどのようにMAO-Bを不可逆的に阻害するか？FADの役割は？",
+    "back": "FADはドパミンのα位Hをヒドリド（H⁻）として受け取る酸化剤（還元剤ではない）。セレギリンはプロパルギル基（C≡C-）の末端炭素でFADと共有結合→MAO-B不可逆阻害。パーキンソン病のwearing-off改善に使用",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-068-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "セレギリン→FADとの共有結合形成",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r109-207"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-068-mechanism-008-セリンプロテアーゼ→基質特異性の決定因子",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-068-mechanism-008",
+    "primary_exemplar_id": "ex-chemistry-068",
+    "subject": "化学",
+    "front": "キモトリプシンとトリプシンの基質特異性の違いは何か？その構造的理由は？",
+    "back": "キモトリプシン: 芳香族AA（Phe, Tyr, Trp）のC末端側を切断 → 疎水性ポケットが疎水性側鎖を認識。トリプシン: 塩基性AA（Lys, Arg）のC末端側を切断 → ポケット内にAsp残基があり正電荷を引きつける。疎水性ポケットの構造が基質特異性を決定する",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-068-mechanism-008",
+    "knowledge_type": "mechanism",
+    "recall_direction": "セリンプロテアーゼ→基質特異性の決定因子",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r103-105"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-068-mechanism-009-ビルダグリプチン→阻害機構",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-068-mechanism-009",
+    "primary_exemplar_id": "ex-chemistry-068",
+    "subject": "化学",
+    "front": "ビルダグリプチンはDPP-4（セリンプロテアーゼ）をどのように阻害するか？不可逆阻害との違いは？",
+    "back": "ビルダグリプチンのニトリル基（-C≡N）にセリン残基のOHが求核攻撃→イミデート中間体を形成→共有結合複合体。ただしこの反応は可逆的（加水分解で解離する）。不可逆阻害（サリンのリン酸化等）とは異なり、時間経過で酵素活性が回復する",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-068-mechanism-009",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ビルダグリプチン→阻害機構",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r111-211"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-076-structure-001-吸光度→数学的定義",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-076-structure-001",
+    "primary_exemplar_id": "ex-chemistry-076",
+    "subject": "化学",
+    "front": "吸光度Aの定義は？「透過率の逆数」は正しいか？",
+    "back": "A = -log T（透過率Tの常用対数のマイナス）。「透過率の逆数」は誤り（対数変換が必要）。A = log(1/T) = -log T。紫外域（220nm以下）の測定には石英セルが必要（ガラスセルはUV領域を吸収する）",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-076-structure-001",
+    "knowledge_type": "structure",
+    "recall_direction": "吸光度→数学的定義",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-203"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-076-mechanism-001-リファンピシン→尿着色のメカニズム",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-076-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-076",
+    "subject": "化学",
+    "front": "リファンピシン服用中に尿が赤橙色に着色する理由は？",
+    "back": "リファンピシンは475nm付近（青～緑色の光）に吸収ピークを持ち、その補色である赤～橙色が観察される。長い共役系構造が可視光を吸収。尿・涙・汗も着色するため、コンタクトレンズの着色にも注意が必要",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-076-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "リファンピシン→尿着色のメカニズム",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-207",
+      "r104-203"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-076-classification-001-塩の名称→酸性/塩基性の判断",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-076-classification-001",
+    "primary_exemplar_id": "ex-chemistry-076",
+    "subject": "化学",
+    "front": "医薬品名に「～酸」「～塩」とつく場合、それぞれ酸性・塩基性のどちらか？",
+    "back": "「～酸」（例: リセドロン酸Na）→酸性薬物のNa塩（アニオンが有効成分）。「～塩酸塩」「～硫酸塩」→塩基性薬物の酸付加塩（カチオンが有効成分）。Na塩/K塩は水に溶けやすくなる",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-076-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "塩の名称→酸性/塩基性の判断",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r108-209"
+    ],
+    "source_note_ids": [
+      "酸と塩の性質"
+    ]
+  },
+  {
+    "id": "ex-chemistry-076-structure-002-BP製剤→化学的性質のポイント",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-076-structure-002",
+    "primary_exemplar_id": "ex-chemistry-076",
+    "subject": "化学",
+    "front": "ビスホスホネート（BP）製剤のP-C-P結合は{{c1::加水分解に安定}}である。BPは{{c2::ヒドロキシアパタイト}}に吸着して骨に集積する",
+    "back": "P-C-P結合（ピロリン酸のP-O-P結合と異なり炭素介在）は加水分解されにくい。金属イオン（Ca²⁺等）に高い親和性を持つ。服用法: 起床時180mL水で服用+30分座位+金属イオン併用回避",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-076-structure-002",
+    "knowledge_type": "structure",
+    "recall_direction": "BP製剤→化学的性質のポイント",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r107-213"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-076-structure-003-ワルファリン→構造と性状",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-076-structure-003",
+    "primary_exemplar_id": "ex-chemistry-076",
+    "subject": "化学",
+    "front": "ワルファリンカリウムは{{c1::クマリン骨格}}を持ち、カリウム塩のため水に{{c2::極めて溶けやすい}}。光により{{c3::淡黄色}}となる。モニタリング項目は{{c4::PT-INR}}",
+    "back": "クマリン骨格を持つ抗凝固薬。K塩で水溶性が極めて高い。光で着色するため遮光保存。PT-INR（プロトロンビン時間の国際標準比）でモニタリング必須",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-076-structure-003",
+    "knowledge_type": "structure",
+    "recall_direction": "ワルファリン→構造と性状",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r108-209"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-076-mechanism-002-ドパミン→メラニン生成の経路",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-076-mechanism-002",
+    "primary_exemplar_id": "ex-chemistry-076",
+    "subject": "化学",
+    "front": "ドパミンからメラニンが生成される化学的過程は？",
+    "back": "ドパミンのカテコールOH基が塩基性条件下でH⁺を放出しやすい→酸化されてキノン構造に変換→重合してメラニン（茶黒色色素）を形成。レボドパ製剤による皮膚の黒色化とも関連",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-076-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ドパミン→メラニン生成の経路",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r104-203"
+    ],
+    "source_note_ids": [
+      "ドパミンの酸化とメラニン"
+    ]
+  },
+  {
+    "id": "ex-chemistry-077-mechanism-001-プロドラッグ→定義と設計目的",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-077-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-077",
+    "subject": "化学",
+    "front": "プロドラッグとは何か？代表的な設計目的を3つ挙げよ",
+    "back": "プロドラッグ = 体内で代謝されて活性体に変換される不活性（または低活性）な薬物前駆体。目的: 1) 経口吸収率の向上（バラシクロビル）、2) 化学的安定性の向上（ベラプロスト）、3) 副作用の軽減・標的選択性（カペシタビン）。活性体そのものでは不都合な薬物動態を改善する戦略",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-077-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "プロドラッグ→定義と設計目的",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-283",
+      "r104-213"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-077-mechanism-002-バラシクロビル→吸収改善の仕組み",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-077-mechanism-002",
+    "primary_exemplar_id": "ex-chemistry-077",
+    "subject": "化学",
+    "front": "バラシクロビルがアシクロビルより経口吸収率が高い理由は？脂溶性増大が目的か？",
+    "back": "アシクロビルにL-バリンをエステル結合で連結→ペプチド様構造として小腸のPEPT1（ペプチドトランスポーター1）に認識され能動吸収される。脂溶性増大が目的ではない（水溶性を高めて吸収率向上）。BA: アシクロビル15-30% → バラシクロビル54%",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-077-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "バラシクロビル→吸収改善の仕組み",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-283",
+      "r104-213"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-077-mechanism-003-アザチオプリン→活性化経路",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-077-mechanism-003",
+    "primary_exemplar_id": "ex-chemistry-077",
+    "subject": "化学",
+    "front": "アザチオプリンは{{c1::グルタチオン-S-トランスフェラーゼ（GST）}}で代謝され、活性体の{{c2::6-メルカプトプリン（6-MP）}}に変換される免疫抑制薬のプロドラッグ",
+    "back": "エステラーゼではなくGSTが関与（S-イミダゾール結合の切断）。6-MPはキサンチンオキシダーゼ（XO）で代謝されるため、アロプリノール併用で毒性増強に注意",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-077-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "アザチオプリン→活性化経路",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-106"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-077-mechanism-004-プラスグレル→代謝活性化経路",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-077-mechanism-004",
+    "primary_exemplar_id": "ex-chemistry-077",
+    "subject": "化学",
+    "front": "プラスグレルはどのように活性化され、血小板凝集を阻害するか？クロピドグレルとの違いは？",
+    "back": "エステラーゼでエステル加水分解（プロテアーゼではない）→チオラクトン開環（互変異性体を経由）→CYPで活性代謝物C生成→SH基がP2Y12受容体のCys残基と不可逆的に共有結合。クロピドグレルと異なりCYP2C19の寄与が小さく、遺伝子多型の影響を受けにくい",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-077-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "プラスグレル→代謝活性化経路",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r104-209"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-077-adverse_effect-001-ピボキシル基→副作用のメカニズム",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-077-adverse_effect-001",
+    "primary_exemplar_id": "ex-chemistry-077",
+    "subject": "化学",
+    "front": "セフカペンピボキシル等のピボキシル基を含む抗菌薬で低カルニチン血症→低血糖が起こる理由は？特に注意すべき患者は？",
+    "back": "ピボキシル基が加水分解→ピバリン酸が遊離→カルニチンと抱合→尿中排泄→カルニチン消費→脂肪酸β酸化障害→低血糖。小児で特に注意。ピボキシル基含有薬: セフカペンピボキシル、セフジトレンピボキシル、テビペネムピボキシル",
+    "format": "question_answer",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-077-adverse_effect-001",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "ピボキシル基→副作用のメカニズム",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r108-213"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-077-mechanism-005-カペシタビン→3段階活性化経路",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-077-mechanism-005",
+    "primary_exemplar_id": "ex-chemistry-077",
+    "subject": "化学",
+    "front": "カペシタビンの活性化: 肝{{c1::カルボキシルエステラーゼ（CES）}} → {{c2::シチジンデアミナーゼ}} → 腫瘍の{{c3::チミジンホスホリラーゼ（TP）}} → {{c4::5-FU}}",
+    "back": "3段階で段階的にフルオロウラシルに変換。最終段階のTPが腫瘍組織に多いため腫瘍選択性が高い。ペンチルオキシカルボニル基は疎水性→経口吸収性向上。手足症候群はTPが皮膚にも存在するため",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-077-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "カペシタビン→3段階活性化経路",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r109-213"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-077-mechanism-006-オメプラゾール→酸性条件下で増大する性質",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-077-mechanism-006",
+    "primary_exemplar_id": "ex-chemistry-077",
+    "subject": "化学",
+    "front": "オメプラゾールの活性化において、強酸性条件下で増大する化学的性質は何か？",
+    "back": "ベンズイミダゾール環の窒素がプロトン化→隣接する2位炭素の求電子性が増大→分子内環化反応が促進される。不斉中心（S原子上）は活性化過程で消失する。酵素のCys残基のSH基は求核剤として働く",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-077-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "オメプラゾール→酸性条件下で増大する性質",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r111-208",
+      "r103-213"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-077-classification-001-NSAIDs→構造分類の名称",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-077-classification-001",
+    "primary_exemplar_id": "ex-chemistry-077",
+    "subject": "化学",
+    "front": "NSAIDsの主な構造分類を5つ挙げ、それぞれの特徴を答えよ",
+    "back": "1) サリチル酸系（アスピリン）、2) フェナム酸系（メフェナム酸 — フェニル酢酸系ではない）、3) プロピオン酸系（イブプロフェン）、4) フェニル酢酸系（ジクロフェナク）、5) オキシカム系（ピロキシカム — 環状スルホンアミド構造が特徴）。塩基性NSAIDsはチアラミド・エピリゾールのみ（他は全て酸性）",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-077-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "NSAIDs→構造分類の名称",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r109-105"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-077-mechanism-007-PGI₂の不安定性→安定化のアプローチ",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-077-mechanism-007",
+    "primary_exemplar_id": "ex-chemistry-077",
+    "subject": "化学",
+    "front": "ベラプロストとイロプロストはPGI₂のどの構造的弱点をどう改善したか？",
+    "back": "PGI₂のビニルエーテル構造（部分構造a、Z配置）は酸加水分解を受けやすい。ベラプロスト: 芳香環を導入→酸性条件下の安定性向上+Na塩で水溶性向上。イロプロスト: O原子をC原子に置換→CYP代謝を受けにくくして安定化。いずれもプロドラッグではなく活性体そのもの",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-077-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "PGI₂の不安定性→安定化のアプローチ",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r105-213"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-082-structure-001-インドメタシン→骨格構造と分類",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-082-structure-001",
+    "primary_exemplar_id": "ex-chemistry-082",
+    "subject": "化学",
+    "front": "インドメタシンは{{c1::インドール骨格}}を持つNSAIDsで、{{c2::フェニル酢酸系（インドール酢酸系）}}に分類される。COXを{{c3::非選択的}}に阻害する",
+    "back": "インドール骨格（ベンゼン環+ピロール環の縮合環）にCH₂COOH基が結合した構造。スリンダクのインダン骨格（インドール骨格ではない）と混同しないこと",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-082-structure-001",
+    "knowledge_type": "structure",
+    "recall_direction": "インドメタシン→骨格構造と分類",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-107",
+      "r109-105"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-082-mechanism-001-Fischer合成→必要な原料",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-082-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-082",
+    "subject": "化学",
+    "front": "フィッシャーのインドール合成: {{c1::フェニルヒドラジン誘導体}} + {{c2::ケトン（またはアルデヒド）}} → {{c3::酸触媒}}下 → インドール環",
+    "back": "名前反応の代表。フェニルヒドラジンとカルボニル化合物からヒドラゾンを経由してインドール環を構築する。インドメタシンの合成にも利用される",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-082-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "Fischer合成→必要な原料",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-107"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-082-mechanism-002-ジクロフェナク合成→鍵反応",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-082-mechanism-002",
+    "primary_exemplar_id": "ex-chemistry-082",
+    "subject": "化学",
+    "front": "ジクロフェナクナトリウムの合成で用いられるフリーデル-クラフツ反応とは？",
+    "back": "フリーデル-クラフツ反応: ルイス酸触媒（AlCl₃等）で芳香環にアルキル基やアシル基を導入する反応。ジクロフェナク合成では分子内F-Cアルキル化で環化→加水分解→ジクロフェナクを得る。アリール酢酸系NSAIDsの代表薬",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-082-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ジクロフェナク合成→鍵反応",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r102-104"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-082-classification-001-NSAIDs薬物名→構造分類",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-082-classification-001",
+    "primary_exemplar_id": "ex-chemistry-082",
+    "subject": "化学",
+    "front": "以下のNSAIDsの構造分類を答えよ: ザルトプロフェン、メフェナム酸、ピロキシカム、チアラミド、スリンダク",
+    "back": "ザルトプロフェン: プロピオン酸系（不斉中心あり）。メフェナム酸: フェナム酸系（フェニル酢酸系ではない）。ピロキシカム: オキシカム系（環状スルホンアミド構造）。チアラミド: 塩基性NSAID（酸性官能基なし）。スリンダク: インダン骨格（インドール骨格ではない）、S原子に不斉中心あり",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-082-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "NSAIDs薬物名→構造分類",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r109-105"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-082-classification-002-塩基性NSAID→薬物名",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-082-classification-002",
+    "primary_exemplar_id": "ex-chemistry-082",
+    "subject": "化学",
+    "front": "NSAIDsの中で酸性官能基を持たない（塩基性の）例外的薬物は{{c1::チアラミド}}と{{c2::エピリゾール}}の2つ",
+    "back": "ほとんどのNSAIDsはカルボキシ基やエノール性OHなどの酸性官能基を持つ。チアラミドとエピリゾールのみが塩基性NSAIDsとして分類される。国試で「酸性官能基を持つか」の正誤問題として頻出",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-082-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "塩基性NSAID→薬物名",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r109-105"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-082-structure-002-ベラプロストNa→構造改変の意図",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-082-structure-002",
+    "primary_exemplar_id": "ex-chemistry-082",
+    "subject": "化学",
+    "front": "ベラプロストナトリウムにおける2つの構造改変の目的は？PGI₂のプロドラッグか？",
+    "back": "1) 部分構造aに芳香環導入→酸性条件下での安定性向上（PGI₂のビニルエーテルは酸加水分解されやすい）。2) カルボン酸をNa塩化→水溶性向上。PGI₂のプロドラッグではなく、活性体そのもの。エノールエーテル二重結合はZ配置（E配置ではない）",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-082-structure-002",
+    "knowledge_type": "structure",
+    "recall_direction": "ベラプロストNa→構造改変の意図",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r105-213"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-102-classification-001-生薬名→基原植物と薬用部位",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-102-classification-001",
+    "primary_exemplar_id": "ex-chemistry-102",
+    "subject": "化学",
+    "front": "以下の「皮」のつく生薬の薬用部位の違いを答えよ: ボタンピ、ケイヒ、コウボク、オウバク、トチュウ",
+    "back": "ボタンピ（牡丹皮）: ボタンの根皮（唯一の根皮）。ケイヒ（桂皮）: Cinnamomum cassiaの樹皮。コウボク（厚朴）: ホオノキの樹皮。オウバク（黄柏）: キハダの樹皮。トチュウ（杜仲）: トチュウの樹皮。「ボタンだけ根っこの皮」と覚える",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-102-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "生薬名→基原植物と薬用部位",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-109",
+      "r108-008"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-102-classification-002-生薬名→基原と薬効",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-102-classification-002",
+    "primary_exemplar_id": "ex-chemistry-102",
+    "subject": "化学",
+    "front": "キョウニン（杏仁）= {{c1::ホンアンズ/アンズ}}の種子 → {{c2::鎮咳}}。ハンゲ（半夏）= {{c3::カラスビシャク}}の塊茎 → {{c4::鎮吐・去痰}}。チョウトウコウ（釣藤鈎）= {{c5::カギカズラ}}の棘 → {{c6::鎮痙・鎮静}}",
+    "back": "キョウニンは麻黄湯に配合。ハンゲは半夏瀉心湯・六君子湯に配合（瀉下作用ではなく鎮吐作用）。チョウトウコウは抑肝散に配合され、レビー小体型認知症のBPSD改善に使用",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-102-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "生薬名→基原と薬効",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-109",
+      "r106-108"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-102-classification-003-ナス科生薬→成分と薬効",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-102-classification-003",
+    "primary_exemplar_id": "ex-chemistry-102",
+    "subject": "化学",
+    "front": "ロートコンは{{c1::ナス科}}基原の生薬で、{{c2::トロパンアルカロイド}}（l-ヒヨスチアミン等）を含有する。抗コリン作用により{{c3::散瞳薬}}として使用",
+    "back": "トロパンアルカロイド含有のナス科生薬: ロートコン、ベラドンナ、ロートエキス。アトロピン（dl-ヒヨスチアミンのラセミ体）も同系統の成分",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-102-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "ナス科生薬→成分と薬効",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-110"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-102-classification-004-リンドウ科→生薬名と成分",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-102-classification-004",
+    "primary_exemplar_id": "ex-chemistry-102",
+    "subject": "化学",
+    "front": "リンドウ科の生薬を2つ挙げ、部位と主成分を答えよ",
+    "back": "リュウタン（竜胆）: トウリンドウの根及び根茎。主成分: ゲンチオピクロシド（苦味配糖体、フラボノイド配糖体ではない）→苦味健胃薬。センブリ: 全草。主成分: スウェルチアマリン→苦味健胃薬。ゲンチアナも同じリンドウ科で根及び根茎が部位",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-102-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "リンドウ科→生薬名と成分",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-109",
+      "r102-110"
+    ],
+    "source_note_ids": [
+      "リンドウ科生薬まとめ"
+    ]
+  },
+  {
+    "id": "ex-chemistry-102-classification-005-トチュウ→基本情報",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-102-classification-005",
+    "primary_exemplar_id": "ex-chemistry-102",
+    "subject": "化学",
+    "front": "トチュウ（杜仲）は{{c1::トチュウ}}の{{c2::樹皮}}を薬用部位とし、{{c3::リグナン}}を含有する生薬",
+    "back": "トチュウの樹皮は引っ張ると銀白色の糸を引く特徴がある。リグナンは2分子のフェニルプロパノイドが重合した化合物群",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-102-classification-005",
+    "knowledge_type": "classification",
+    "recall_direction": "トチュウ→基本情報",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r102-110"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-102-classification-006-間違いやすい生薬→正しい基原",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-102-classification-006",
+    "primary_exemplar_id": "ex-chemistry-102",
+    "subject": "化学",
+    "front": "以下の組合せの正誤を答えよ: リュウタン=ボタン、サンシシ=クマコケモモ、リュウコツ=硫酸ナトリウム、インチンコウ=果実",
+    "back": "全て誤り。リュウタン=トウリンドウ（ボタンはボタンピ）。サンシシ=クチナシ（クマコケモモはウワウルシ）。リュウコツの主成分=炭酸Ca（硫酸Naではない、硫酸Naはボウショウ）。インチンコウの用部=頭花（果実ではない）。出題者が好む紛らわしい選択肢",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-102-classification-006",
+    "knowledge_type": "classification",
+    "recall_direction": "間違いやすい生薬→正しい基原",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-109",
+      "r102-110"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-102-classification-007-大建中湯→構成生薬と特徴",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-102-classification-007",
+    "primary_exemplar_id": "ex-chemistry-102",
+    "subject": "化学",
+    "front": "大建中湯の構成生薬: {{c1::サンショウ}} + {{c2::カンキョウ}} + {{c3::ニンジン}} + {{c4::膠飴（コウイ）}}。腹部を温め、{{c5::術後イレウス}}予防にも使用",
+    "back": "大建中湯はわずか4生薬の漢方薬。サンショウは腹部を温め健胃作用。カンキョウはショウキョウを蒸して乾燥したもので温める力が強い。術後イレウス予防のエビデンスがある",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-102-classification-007",
+    "knowledge_type": "classification",
+    "recall_direction": "大建中湯→構成生薬と特徴",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-108"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-102-structure-001-ボタンピ→成分と配合漢方",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-102-structure-001",
+    "primary_exemplar_id": "ex-chemistry-102",
+    "subject": "化学",
+    "front": "ボタンピ（牡丹皮）の主要成分は何か？配合される代表的な漢方薬は？",
+    "back": "主要成分: ペオノール（paeonol）。鎮痛・抗炎症作用。配合漢方: 六味丸、牛車腎気丸、桂枝茯苓丸など。ボタンの根皮が基原（樹皮ではない唯一の「皮」生薬）",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-102-structure-001",
+    "knowledge_type": "structure",
+    "recall_direction": "ボタンピ→成分と配合漢方",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r108-008"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-103-classification-001-漢方分類→代表生薬",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-103-classification-001",
+    "primary_exemplar_id": "ex-chemistry-103",
+    "subject": "化学",
+    "front": "漢方の基本分類「補気・補血・利水・理気」の代表生薬をそれぞれ2つ挙げよ",
+    "back": "補気（気虚に対応）: ニンジン、オウギ。補血（血虚に対応）: トウキ、シャクヤク。利水（水滞に対応）: ブクリョウ、タクシャ。理気（気滞に対応）: チンピ、サイコ。覚え方:「ニンジン・オウギで気を補い、トウキ・シャクで血を増やす」",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-103-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "漢方分類→代表生薬",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-110",
+      "r109-109"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-103-classification-002-ニンジン→科名と薬効",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-103-classification-002",
+    "primary_exemplar_id": "ex-chemistry-103",
+    "subject": "化学",
+    "front": "ニンジン/コウジンは{{c1::ウコギ科}}（セリ科ではない）オタネニンジンの{{c2::根}}由来の生薬で、{{c3::補気薬}}として用いる",
+    "back": "国試でセリ科と引っかけられる頻出問題。セリ科はトウキ・センキュウ。ニンジンはウコギ科。コウジン（紅参）も同じオタネニンジンだが蒸して加工したもの",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-103-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "ニンジン→科名と薬効",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-110",
+      "r103-109"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-103-classification-003-セリ科→生薬名と部位",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-103-classification-003",
+    "primary_exemplar_id": "ex-chemistry-103",
+    "subject": "化学",
+    "front": "セリ科の生薬: トウキは{{c1::根}}で{{c2::補血薬}}。センキュウは{{c3::根茎}}で{{c4::駆瘀血薬}}。いずれも{{c5::フタリド類}}を含み婦人薬に配合",
+    "back": "トウキとセンキュウは部位が異なる（根 vs 根茎、「葉」は誤り）。理気薬とする記述も誤り。フタリド類は特有の匂いの原因成分",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-103-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "セリ科→生薬名と部位",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-110",
+      "r103-109"
+    ],
+    "source_note_ids": [
+      "部位"
+    ]
+  },
+  {
+    "id": "ex-chemistry-103-classification-004-ブクリョウ→基原と薬効",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-103-classification-004",
+    "primary_exemplar_id": "ex-chemistry-103",
+    "subject": "化学",
+    "front": "ブクリョウ（茯苓）は{{c1::マツホド}}の{{c2::菌核}}由来の生薬で、{{c3::利水薬}}として用いる",
+    "back": "サルノコシカケ科の菌類。菌核（菌糸の塊）が基原。六君子湯、四君子湯、五苓散などに配合。動物・藻類・菌類由来の生薬の代表",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-103-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "ブクリョウ→基原と薬効",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-110"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-103-classification-005-ショウキョウ vs カンキョウ→加工法と薬効",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-103-classification-005",
+    "primary_exemplar_id": "ex-chemistry-103",
+    "subject": "化学",
+    "front": "ショウキョウとカンキョウは同じ植物由来だが何が異なるか？",
+    "back": "いずれもショウガ科ショウガの根茎が基原。ショウキョウ（生姜）: 生のまま乾燥→鎮嘔・健胃・食欲増進。カンキョウ（乾姜）: 蒸してから乾燥→温める力が強い（温裏薬）。加工法の違いで薬効が異なる。ショウキョウは六君子湯に、カンキョウは大建中湯に配合",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-103-classification-005",
+    "knowledge_type": "classification",
+    "recall_direction": "ショウキョウ vs カンキョウ→加工法と薬効",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-109"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-103-classification-006-ソウジュツ/ビャクジュツ→基原と薬効",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-103-classification-006",
+    "primary_exemplar_id": "ex-chemistry-103",
+    "subject": "化学",
+    "front": "ソウジュツとビャクジュツはいずれも{{c1::キク科}}植物の{{c2::根茎}}を基原とし、{{c3::利水薬}}（健脾・水分調節）として用いる",
+    "back": "イライラ改善作用はない（イライラは気滞→サイコやコウボクが対応）。六君子湯や四君子湯に配合。国試では「イライラ改善」を誤りの選択肢にする出題パターンがある",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-103-classification-006",
+    "knowledge_type": "classification",
+    "recall_direction": "ソウジュツ/ビャクジュツ→基原と薬効",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-109",
+      "r109-109"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-103-adverse_effect-001-カンゾウ→副作用と成分",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-103-adverse_effect-001",
+    "primary_exemplar_id": "ex-chemistry-103",
+    "subject": "化学",
+    "front": "カンゾウの主成分{{c1::グリチルリチン酸}}は{{c2::偽アルドステロン症}}の原因となる。三徴は{{c3::高血圧・低K血症・代謝性アルカローシス}}",
+    "back": "甘草含有漢方薬全般（芍薬甘草湯など多数）で注意が必要。グリチルリチンが11β-HSD2を阻害→コルチゾールがMR活性化→Na再吸収亢進・K排泄亢進",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-103-adverse_effect-001",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "カンゾウ→副作用と成分",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-010"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-103-classification-007-六君子湯→構成と位置づけ",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-103-classification-007",
+    "primary_exemplar_id": "ex-chemistry-103",
+    "subject": "化学",
+    "front": "六君子湯の構成生薬8つと「四君子湯+二陳湯」の関係を説明せよ",
+    "back": "六君子湯 = 四君子湯（ニンジン、ビャクジュツ/ソウジュツ、ブクリョウ、カンゾウ）+ 二陳湯由来（ハンゲ、チンピ）+ ショウキョウ、タイソウ。気虚（疲労・食欲不振）+痰湿（嘔吐・消化不良）に対応。グレリン分泌促進作用も報告されている",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-103-classification-007",
+    "knowledge_type": "classification",
+    "recall_direction": "六君子湯→構成と位置づけ",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r109-109"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-103-mechanism-001-麻黄→成分と薬理",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-103-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-103",
+    "subject": "化学",
+    "front": "麻黄の主成分エフェドリンは{{c1::交感神経興奮薬}}（副交感ではない）。確認試験には{{c2::ニンヒドリン}}TLC法を用いる。副作用に{{c3::不眠}}がある",
+    "back": "麻黄はEphedra sinicaの地上茎。葛根湯・小青竜湯・麻黄湯に配合（桂枝湯には含まれない）。ニンヒドリンはアミノ基と反応して呈色する試薬。エフェドリンは覚せい剤原料に指定されているが、生薬の麻黄自体は対象外",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-103-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "麻黄→成分と薬理",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-108"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-103-adverse_effect-002-ダイオウ→基原と成分",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-103-adverse_effect-002",
+    "primary_exemplar_id": "ex-chemistry-103",
+    "subject": "化学",
+    "front": "ダイオウ（大黄）は{{c1::タデ科}}植物の{{c2::根茎}}を基原とし、主成分{{c3::センノシド}}（アントラキノン誘導体）が{{c4::瀉下作用}}を示す",
+    "back": "セリ科ではない。トロパン型アルカロイドではない。ボウショウ（芒硝）も同様に強い瀉下作用を持つ。大建中湯にダイオウは含まれない（サンショウ・カンキョウ・ニンジン・膠飴で構成）",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-103-adverse_effect-002",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "ダイオウ→基原と成分",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r111-215"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-103-classification-008-トウニン vs キョウニン→基原と薬効",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-103-classification-008",
+    "primary_exemplar_id": "ex-chemistry-103",
+    "subject": "化学",
+    "front": "トウニンとキョウニンの基原植物と薬効の違いは？",
+    "back": "トウニン（桃仁）: モモの種子 → 駆瘀血薬。キョウニン（杏仁）: アンズの種子 → 鎮咳去痰薬。いずれもバラ科だが薬効が全く異なる。トウニンの基原をエビスグサとする記述は誤り（エビスグサの種子はケツメイシ→緩下・整腸）",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-103-classification-008",
+    "knowledge_type": "classification",
+    "recall_direction": "トウニン vs キョウニン→基原と薬効",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-110",
+      "r103-109"
+    ],
+    "source_note_ids": [
+      "生薬の効能"
+    ]
+  },
+  {
+    "id": "ex-chemistry-103-classification-009-抑肝散→精神症状改善の生薬",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-103-classification-009",
+    "primary_exemplar_id": "ex-chemistry-103",
+    "subject": "化学",
+    "front": "抑肝散においてサイコと協力して精神症状（幻視・妄想等）を改善する生薬は何か？",
+    "back": "チョウトウコウ（釣藤鈎）。セロトニン受容体に対する作用があり、興奮・攻撃性を抑制する。レビー小体型認知症のBPSD（行動・心理症状）改善に広く使用される。カンゾウは抗炎症、センキュウは活血鎮痛、ビャクジュツは健脾利水で精神症状改善の主役ではない",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-103-classification-009",
+    "knowledge_type": "classification",
+    "recall_direction": "抑肝散→精神症状改善の生薬",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r106-215"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-110-classification-001-生合成経路→天然物の種類",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-110-classification-001",
+    "primary_exemplar_id": "ex-chemistry-110",
+    "subject": "化学",
+    "front": "天然物の4大生合成経路と代表的な産物を対応づけよ: シキミ酸経路、酢酸-マロン酸経路、イソプレノイド経路、アミノ酸経路",
+    "back": "シキミ酸経路(C6-C3): フェニルプロパノイド（シンナムアルデヒド、カフェ酸）、リグナン。酢酸-マロン酸経路: ポリケチド、アントラキノン（エモジン）。イソプレノイド経路: テルペン（メントール、サントニン）。アミノ酸経路: アルカロイド（パパベリン、レセルピン）",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-110-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "生合成経路→天然物の種類",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-109",
+      "r103-108",
+      "r105-010"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-110-classification-002-シキミ酸経路→代表的産物",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-110-classification-002",
+    "primary_exemplar_id": "ex-chemistry-110",
+    "subject": "化学",
+    "front": "シキミ酸経路の産物: C6-C3骨格 = {{c1::フェニルプロパノイド}}（例: {{c2::シンナムアルデヒド}}、{{c3::カフェ酸}}）。リグナンは{{c4::2分子}}のフェニルプロパノイドから生合成",
+    "back": "シキミ酸経路はフェニルアラニン/チロシンを経由してC6-C3骨格を生成。シンナムアルデヒドはケイヒ（桂皮）の主成分。リグナン（ポドフィロトキシン等）はC6-C3が2量体化したもの",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-110-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "シキミ酸経路→代表的産物",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-108",
+      "r105-010"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-110-classification-003-フラボノイド→生合成経路の組合せ",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-110-classification-003",
+    "primary_exemplar_id": "ex-chemistry-110",
+    "subject": "化学",
+    "front": "フラボノイド（C6-C3-C6）の生合成: {{c1::1分子のフェニルプロパノイド（シキミ酸経路）}} + {{c2::3分子のマロニルCoA（酢酸-マロン酸経路）}}の複合経路",
+    "back": "フラボノイド（クエルセチン、ダイゼイン等）はA環が酢酸-マロン酸由来、B環+C3部分がシキミ酸由来。スチルベン（レスベラトロール）も同様の複合経路。マロニルCoAの数は2個ではなく3個",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-110-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "フラボノイド→生合成経路の組合せ",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-109",
+      "r103-108"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-110-classification-004-エモジン→生合成の原料",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-110-classification-004",
+    "primary_exemplar_id": "ex-chemistry-110",
+    "subject": "化学",
+    "front": "アントラキノン（エモジン等）の生合成: {{c1::1分子のアセチルCoA}} + {{c2::7分子のマロニルCoA}} → 酢酸-マロン酸経路",
+    "back": "エモジンはイソプレノイド経路ではない（国試の引っかけ問題）。アセチルCoA 1個をスターターに、マロニルCoA 7個が伸長して8炭素のポリケチド鎖を形成→環化→アントラキノン骨格",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-110-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "エモジン→生合成の原料",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-109",
+      "r105-010"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-110-classification-005-テルペン→イソプレン単位数と分類",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-110-classification-005",
+    "primary_exemplar_id": "ex-chemistry-110",
+    "subject": "化学",
+    "front": "テルペンの分類: モノテルペン(C{{c1::10}})=イソプレン{{c2::2}}個（例: l-メントール）、セスキテルペン(C{{c3::15}})={{c4::3}}個（例: サントニン）、ジテルペン(C{{c5::20}})={{c6::4}}個",
+    "back": "イソプレン(C5)を基本単位とする。MVA経路とMEP経路の2つの生合成経路がある。ホルボール（ジテルペン）はイソプレン4個（3個は誤り）。トリテルペン(C30)=6個",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-110-classification-005",
+    "knowledge_type": "classification",
+    "recall_direction": "テルペン→イソプレン単位数と分類",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-109",
+      "r105-010"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-110-classification-006-アルカロイド骨格→由来アミノ酸",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-110-classification-006",
+    "primary_exemplar_id": "ex-chemistry-110",
+    "subject": "化学",
+    "front": "以下のアルカロイドの前駆アミノ酸を答えよ: パパベリン、レセルピン",
+    "back": "パパベリン: イソキノリンアルカロイド → チロシン由来（トリプトファンではない）。レセルピン: インドールアルカロイド → トリプトファン由来（チロシンではない）。覚え方: イソキノリン=チロシン（フェニル基→イソキノリン環）、インドール=トリプトファン（インドール環つながり）",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-110-classification-006",
+    "knowledge_type": "classification",
+    "recall_direction": "アルカロイド骨格→由来アミノ酸",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-109",
+      "r103-108"
+    ],
+    "source_note_ids": [
+      "アルカロイドの定義"
+    ]
+  },
+  {
+    "id": "ex-chemistry-110-mechanism-001-タンニン→2つの分類と検出法",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-110-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-110",
+    "subject": "化学",
+    "front": "加水分解型タンニンと縮合型タンニンの違いと検出法は？",
+    "back": "加水分解型: ガロタンニン・エラジタンニン。加水分解で分解される。ゲンノショウコに多い。縮合型: プロアントシアニジン。酸+加熱で赤色（アントシアニジン生成）。「縮合型は酸で赤」が鍵。両方ともFeCl₃でフェノール性OHが呈色する",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-110-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "タンニン→2つの分類と検出法",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-110"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-110-mechanism-002-センノシドA→活性本体と代謝経路",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-110-mechanism-002",
+    "primary_exemplar_id": "ex-chemistry-110",
+    "subject": "化学",
+    "front": "大黄甘草湯の瀉下作用の活性本体は何か？センノシドAからどのように変換されるか？",
+    "back": "活性本体はレインアンスロン。センノシドA（ビアンスロン配糖体、トリテルペンではない）→腸内細菌のβ-グルコシダーゼ等の酵素でセニジン→さらに還元的開裂（酸化的ではない）でレインアンスロン生成→大腸アウエルバッハ神経叢刺激→腸管運動亢進",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-110-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "センノシドA→活性本体と代謝経路",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-215"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-112-classification-001-type→examples",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-112-classification-001",
+    "primary_exemplar_id": "ex-chemistry-112",
+    "subject": "化学",
+    "front": "タンニンの2つの分類と、それぞれの代表例を答えよ。",
+    "back": "**加水分解型タンニン**: ガロタンニン、エラジタンニン（ゲンノショウコに多い）\n**縮合型タンニン**: プロアントシアニジン\n\n📝 加水分解型は酸・塩基で分解される。縮合型はフラバン骨格が炭素-炭素結合で重合しており加水分解されない。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-112-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "type→examples",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-110"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-112-mechanism-001-reaction→product",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-112-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-112",
+    "subject": "化学",
+    "front": "縮合型タンニン（プロアントシアニジン）を{{c1::___}}中で塩酸と加熱すると{{c2::___}}色を呈する。",
+    "back": "**1-ブタノール**中で塩酸と加熱すると**赤**色を呈する。\n\n📝 縮合型タンニンが酸処理でアントシアニジン（赤色色素）を生成する反応。「縮合型は酸で赤」と覚える。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-112-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reaction→product",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-110"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-112-mechanism-002-reagent→result",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-112-mechanism-002",
+    "primary_exemplar_id": "ex-chemistry-112",
+    "subject": "化学",
+    "front": "タンニン（加水分解型・縮合型の両方）に塩化鉄(III)試液（FeCl₃）を加えると何が起こるか？",
+    "back": "呈色反応が起こる（青〜緑色）。\n\n📝 タンニンはいずれもフェノール性OH基を持つため、FeCl₃で呈色する。タンニンに共通の確認試験法。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-112-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reagent→result",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-110"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-112-mechanism-003-prodrug→active",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-112-mechanism-003",
+    "primary_exemplar_id": "ex-chemistry-112",
+    "subject": "化学",
+    "front": "大黄に含まれるセンノシドAは{{c1::___}}が産生する酵素により代謝され、瀉下作用の活性本体である{{c2::___}}になる。",
+    "back": "**腸内細菌**が産生する酵素（β-グルコシダーゼ等）により代謝され、**レインアンスロン**になる。\n\n📝 センノシドA→セニジン→レインアンスロンの順に代謝。レインアンスロンが大腸のアウエルバッハ神経叢を刺激して腸管運動を亢進。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-112-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "prodrug→active",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-215"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-112-classification-002-compound_class→property",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-112-classification-002",
+    "primary_exemplar_id": "ex-chemistry-112",
+    "subject": "化学",
+    "front": "フラボノイドとイソフラボノイドの骨格名とMg-HCl反応の結果をそれぞれ答えよ。",
+    "back": "**フラボノイド**: 2-フェニルクロモン骨格 → Mg-HCl反応 **陽性**\n**イソフラボノイド**: 3-フェニルクロモン骨格 → Mg-HCl反応 **陰性**\n\n📝 「フラボノイド＝2-フェニル＝Mg-HCl陽性」「イソフラボノイド＝3-フェニル＝Mg-HCl陰性」とセットで覚える。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-112-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "compound_class→property",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-109",
+      "r108-105"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-112-classification-003-plant→compound",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-112-classification-003",
+    "primary_exemplar_id": "ex-chemistry-112",
+    "subject": "化学",
+    "front": "以下の生薬と辛味成分を対応させよ：ショウガ、トウガラシ、コショウ、サンショウ",
+    "back": "ショウガ → **[6]-ギンゲロール**\nトウガラシ → **カプサイシン**\nコショウ → **ピペリン**\nサンショウ → **α-サンショオール**\n\n📝 ギンゲロールは加熱するとショウガオールに変化し辛味が増す。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-112-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "plant→compound",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-010"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-112-structure-001-class→structural_feature",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-112-structure-001",
+    "primary_exemplar_id": "ex-chemistry-112",
+    "subject": "化学",
+    "front": "ピレスロイド系殺虫剤（フェノトリン等）の構造的特徴は、{{c1::___}}環に{{c2::___}}基を持つ{{c3::___}}構造である。",
+    "back": "**シクロプロパン**環に**ジメチル**基を持つ**エステル**構造。\n\n📝 天然除虫菊（ピレトリン）由来の構造。Naチャネルの不活性化を遅延させて殺虫作用を示す。哺乳類への毒性は低い。",
+    "format": "cloze",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-112-structure-001",
+    "knowledge_type": "structure",
+    "recall_direction": "class→structural_feature",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r104-233"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-112-structure-002-compound→structural_feature",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-112-structure-002",
+    "primary_exemplar_id": "ex-chemistry-112",
+    "subject": "化学",
+    "front": "ベルガモッティン（グレープフルーツ成分）が持つ部分構造は何か？",
+    "back": "**フラノクマリン**構造（クマリン環にフラン環が縮合した三環性骨格）。\n\n📝 フラノクマリン類はCYP3A4を阻害し、薬物相互作用（グレープフルーツジュース相互作用）の原因物質となる。",
+    "format": "question_answer",
+    "tags": [
+      "structure",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-112-structure-002",
+    "knowledge_type": "structure",
+    "recall_direction": "compound→structural_feature",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r111-010"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-114-classification-001-amino_acid→skeleton",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-114-classification-001",
+    "primary_exemplar_id": "ex-chemistry-114",
+    "subject": "化学",
+    "front": "以下のアミノ酸から生合成されるアルカロイド骨格と代表例を答えよ：トリプトファン、チロシン、オルニチン、リシン",
+    "back": "**トリプトファン** → インドール系 / キノリン系（ビンクリスチン、レセルピン、フィゾスチグミン、キニーネ）\n**チロシン** → イソキノリン系（モルヒネ、コデイン、ベルベリン）\n**オルニチン** → トロパン系（アトロピン、コカイン、スコポラミン）\n**リシン** → ピペリジン系（ロベリン）\n\n📝 「Trp→インドール環（含キノリン）」「Tyr→イソキノリン」「Orn→トロパン」が頻出。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-114-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "amino_acid→skeleton",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r105-109",
+      "r107-010",
+      "r110-010"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-114-classification-002-amino_acid→examples",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-114-classification-002",
+    "primary_exemplar_id": "ex-chemistry-114",
+    "subject": "化学",
+    "front": "トリプトファンを生合成前駆体とするアルカロイドを4つ以上挙げよ。",
+    "back": "**ビンクリスチン**（ニチニチソウ由来、抗がん薬）、**レセルピン**、**フィゾスチグミン**（ChE阻害薬）、**キニーネ**（キノリン骨格）、**エルゴメトリン**（麦角アルカロイド、子宮収縮薬）\n\n📝 インドール環やキノリン骨格を持つアルカロイドはトリプトファン由来。キノリンはインドール環の開裂で生じる。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-114-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "amino_acid→examples",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r105-109",
+      "r107-010",
+      "r110-010"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-114-mechanism-001-compound→pharmacology",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-114-mechanism-001",
+    "primary_exemplar_id": "ex-chemistry-114",
+    "subject": "化学",
+    "front": "マオウに含まれるエフェドリンには4種の立体異性体があり、天然型の{{c1::___}}体が最も強い{{c2::___}}作用を示す。",
+    "back": "天然型の**(1R,2S)**体が最も強い**交感神経興奮**作用を示す。\n\n📝 エフェドリンは不斉炭素を2つ持つため4種の立体異性体が存在。マオウを含む漢方薬（小青竜湯、麻黄湯等）は循環器疾患に注意。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-114-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "compound→pharmacology",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-215",
+      "r108-106"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-114-adverse_effect-001-compound→adverse_effect",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-114-adverse_effect-001",
+    "primary_exemplar_id": "ex-chemistry-114",
+    "subject": "化学",
+    "front": "カンゾウの主成分グリチルリチン酸は{{c1::___}}を阻害し、コルチゾールがアルドステロン受容体に作用することで{{c2::___}}症を引き起こす。",
+    "back": "**11β-HSD2（11β-ヒドロキシステロイド脱水素酵素2型）**を阻害し、**偽アルドステロン**症を引き起こす。\n\n📝 Na再吸収増加+K排泄増加→低カリウム血症・浮腫・高血圧が生じる。甘草を含む漢方薬の重複に注意。",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-114-adverse_effect-001",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "compound→adverse_effect",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-215"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-114-mechanism-002-compound→hydrolysis_products",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-114-mechanism-002",
+    "primary_exemplar_id": "ex-chemistry-114",
+    "subject": "化学",
+    "front": "キョウニン（杏仁）に含まれるアミグダリンは加水分解を受けると{{c1::___}}2分子、{{c2::___}}および{{c3::___}}を生じる。",
+    "back": "**グルコース**2分子、**ベンズアルデヒド**および**HCN（青酸）**を生じる。\n\n📝 アミグダリンは青酸配糖体。過量摂取でHCN中毒の危険がある。「杏の種の青酸配糖体」と覚える。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-114-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "compound→hydrolysis_products",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-215"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-114-mechanism-003-drug→metabolism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-114-mechanism-003",
+    "primary_exemplar_id": "ex-chemistry-114",
+    "subject": "化学",
+    "front": "コカインの体内代謝の特徴と、主な代謝物は何か？",
+    "back": "コカインはエステル結合を持ち、体内で**速やかに加水分解**される。主な代謝物は**ベンゾイルエクゴニン**（尿中検出に利用）。半減期は約1時間と短い。\n\n📝 コカインはNA再取り込み阻害により中枢興奮作用・血管収縮作用を示す。妊婦では胎児血流量減少の危険がある。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-114-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug→metabolism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r105-241"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-114-classification-003-herb→alkaloid",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-114-classification-003",
+    "primary_exemplar_id": "ex-chemistry-114",
+    "subject": "化学",
+    "front": "以下の生薬と主要アルカロイド成分を対応させよ：マオウ、チョウトウコウ、キョウニン",
+    "back": "**マオウ** → エフェドリン（交感神経興奮）\n**チョウトウコウ** → ヒルスチン（アルカロイド）\n**キョウニン** → アミグダリン（青酸配糖体）\n\n📝 マオウ＝エフェドリンは頻脈・動悸の原因。小青竜湯・麻黄湯に含まれ循環器疾患に注意。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-114-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "herb→alkaloid",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-215",
+      "r102-213",
+      "r108-106"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-114-mechanism-004-process→result",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-114-mechanism-004",
+    "primary_exemplar_id": "ex-chemistry-114",
+    "subject": "化学",
+    "front": "トリカブト（{{c1::___}}科）に含まれるアコニチンは、{{c2::___}}（高圧蒸気処理等）によりエステルが加水分解され、毒性が低い{{c3::___}}に変換される。",
+    "back": "トリカブト（**キンポウゲ**科）に含まれるアコニチンは、**修治**（高圧蒸気処理等）によりエステルが加水分解され、毒性が低い**アコニン**に変換される。\n\n📝 修治後は漢方の「附子（ブシ）」として使用。附子を含む漢方は虚証（体力低下）の患者に適応。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-114-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "process→result",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r110-109"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-114-classification-004-compound→biosynthesis",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-114-classification-004",
+    "primary_exemplar_id": "ex-chemistry-114",
+    "subject": "化学",
+    "front": "アコニチンはどの生合成経路で作られるか？また、窒素原子はアミノ酸由来か？",
+    "back": "**メバロン酸経路**（テルペン経路）で生合成される（酢酸-マロン酸経路ではない）。窒素原子は**アミノ酸由来ではない**とされる。\n\n📝 アコニチンはジテルペンアルカロイドに分類される。アルカロイドの定義は「窒素を含む天然物」。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-114-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "compound→biosynthesis",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r110-109"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-chemistry-114-classification-005-test→target",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-114-classification-005",
+    "primary_exemplar_id": "ex-chemistry-114",
+    "subject": "化学",
+    "front": "以下の確認試験が検出する化合物群を答えよ：(1) 塩酸/H₂O₂試液、(2) リボン状Mg/HCl",
+    "back": "**(1) 塩酸/H₂O₂試液** → イソキノリンアルカロイド（ベルベリン等、オウバク由来）\n**(2) リボン状Mg/HCl** → フラボノイド（エイジツ、キジン等）\n\n📝 Mg/HCl反応はフラボノイドの特徴的呈色反応。イソフラボノイドは陰性なので注意。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-114-classification-005",
+    "knowledge_type": "classification",
+    "recall_direction": "test→target",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r102-213"
+    ],
+    "source_note_ids": [
+      "確認試験"
+    ]
+  },
+  {
+    "id": "ex-chemistry-114-classification-006-herb→formulation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-114-classification-006",
+    "primary_exemplar_id": "ex-chemistry-114",
+    "subject": "化学",
+    "front": "附子（ブシ）を含む代表的な漢方処方を3つ挙げよ。",
+    "back": "**八味地黄丸**、**真武湯**、**麻黄附子細辛湯**\n\n📝 附子を含む処方は虚証（体力低下）の患者に適応。アコニチン中毒症状は口唇しびれ→不整脈→致死。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-chemistry-114-classification-006",
+    "knowledge_type": "classification",
+    "recall_direction": "herb→formulation",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r110-109"
+    ],
+    "source_note_ids": []
+  }
+]

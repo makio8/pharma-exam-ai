@@ -1,0 +1,4906 @@
+[
+  {
+    "id": "ex-biology-009-classification-001-definition_to_level",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-009-classification-001",
+    "primary_exemplar_id": "ex-biology-009",
+    "subject": "生物",
+    "front": "タンパク質の{{c1::一次構造}}とは、アミノ酸の配列順序のことである。",
+    "back": "一次構造 — ペプチド結合で連結されたアミノ酸の並び順。遺伝子の塩基配列により決定され、高次構造の基盤となる",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-009-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "definition_to_level",
+    "reverse_of_id": "ex-biology-009-classification-001-level_to_features",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-094",
+      "r108-102"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-009-classification-001-level_to_features",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-009-classification-001",
+    "primary_exemplar_id": "ex-biology-009",
+    "subject": "生物",
+    "front": "タンパク質の二次構造の代表例は{{c1::αヘリックス}}と{{c2::βシート}}であり、主に{{c3::水素結合}}により形成される。",
+    "back": "αヘリックスとβシート — ペプチド結合のC=OとN-H間の水素結合で形成される局所的な規則構造。円偏光二色性（CD）スペクトルで観測可能",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-009-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "level_to_features",
+    "reverse_of_id": "ex-biology-009-classification-001-definition_to_level",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-094",
+      "r108-102"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-009-mechanism-001-helix_hydrogen_bond_pattern",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-009-mechanism-001",
+    "primary_exemplar_id": "ex-biology-009",
+    "subject": "生物",
+    "front": "αヘリックスでは、n番目のペプチド結合のC=Oが{{c1::(n+4)}}番目のペプチド結合のN-Hと水素結合を形成する。",
+    "back": "(n+4) — αヘリックスは1本のポリペプチド鎖内で形成される右巻きらせん構造。1回転あたり約3.6残基。プロリンはヘリックスを折り曲げる",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-009-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "helix_hydrogen_bond_pattern",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-094"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-009-mechanism-002-peptide_bond_planarity",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-009-mechanism-002",
+    "primary_exemplar_id": "ex-biology-009",
+    "subject": "生物",
+    "front": "ペプチド結合のC=O、N-H、および隣接する2つのα炭素が同一平面上にある理由は？",
+    "back": "C-N結合の部分的な二重結合性（共鳴構造）により回転が制限されるため。トランス配置が安定。φ/ψ角は側鎖の立体障害で制限され、許容領域はラマチャンドランプロットで表される",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-009-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "peptide_bond_planarity",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r103-094"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-009-mechanism-003-ss_bond_to_structure",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-009-mechanism-003",
+    "primary_exemplar_id": "ex-biology-009",
+    "subject": "生物",
+    "front": "ジスルフィド（S-S）結合は、2つの{{c1::システイン}}残基のSH基が{{c2::酸化}}されて形成され、主に{{c3::三次構造}}を安定化する。",
+    "back": "システイン残基の酸化によるS-S結合 — 共有結合であり、タンパク質の三次構造（1本の鎖の立体構造）を安定化する主要な力。インスリンではA鎖・B鎖間の鎖間結合（2本）とA鎖内結合（1本）の計3本",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-009-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ss_bond_to_structure",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r108-102",
+      "r100-209"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-009-mechanism-004-cooperativity_to_structure",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-009-mechanism-004",
+    "primary_exemplar_id": "ex-biology-009",
+    "subject": "生物",
+    "front": "ヘモグロビンの酸素結合が協同性（S字型曲線）を示すのは、どの構造レベルの変化で説明されるか？",
+    "back": "四次構造（サブユニット集合体）の変化 — 1つのサブユニットにO₂が結合すると構造変化が他のサブユニットに伝わり、O₂親和性が上昇する。ミオグロビンは単量体のため協同性なし（双曲線型）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-009-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "cooperativity_to_structure",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-094"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-009-mechanism-005-sds_page_principle",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-009-mechanism-005",
+    "primary_exemplar_id": "ex-biology-009",
+    "subject": "生物",
+    "front": "SDS-PAGEでは、SDSがタンパク質に結合して均一な{{c1::負電荷}}を与え、{{c2::2-メルカプトエタノール}}でS-S結合を{{c3::還元}}的に切断し、{{c4::分子量}}に基づいて分離する。",
+    "back": "SDSは陰イオン性界面活性剤で、タンパク質を変性させ均一な負電荷を付与。2-ME（還元剤）でS-S結合を切断。小さい分子→速く移動。タンパク質の検出はCBB染色（臭化エチジウムは核酸用）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-009-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "sds_page_principle",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r100-115",
+      "r103-119"
+    ],
+    "source_note_ids": [
+      "fusen-gel-electrophoresis"
+    ]
+  },
+  {
+    "id": "ex-biology-009-mechanism-006-gel_filtration_vs_sds",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-009-mechanism-006",
+    "primary_exemplar_id": "ex-biology-009",
+    "subject": "生物",
+    "front": "SDS-PAGEとゲルろ過（SEC）で分子量が異なる場合、何がわかるか？",
+    "back": "サブユニット構造（四次構造）が推定できる。SDS-PAGE＝変性条件で単量体の分子量を測定。ゲルろ過＝天然条件で会合体の分子量を測定。両者の比からサブユニット数がわかる（例: SEC50kDa÷SDS25kDa＝二量体）",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-009-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "gel_filtration_vs_sds",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r100-115",
+      "r103-119"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-009-mechanism-007-wavelength_to_target",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-009-mechanism-007",
+    "primary_exemplar_id": "ex-biology-009",
+    "subject": "生物",
+    "front": "タンパク質の検出には{{c1::280}}nm（{{c2::Trp, Tyr}}の吸収）、核酸の検出には{{c3::260}}nmの吸光度を測定する。",
+    "back": "280nm＝芳香族アミノ酸（トリプトファン・チロシン）の吸収。260nm＝核酸塩基の吸収。A260/A280比で核酸の純度を評価（純粋DNA≈1.8、RNA≈2.0）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-009-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "wavelength_to_target",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r100-115"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-009-mechanism-008-prion_structural_change",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-009-mechanism-008",
+    "primary_exemplar_id": "ex-biology-009",
+    "subject": "生物",
+    "front": "プリオン病では、正常型PrPCの{{c1::αヘリックス}}構造が異常型PrPScの{{c2::βシート}}構造に変換されて蓄積する。",
+    "back": "PrPSc（異常型）はβシートが増加した構造で、加熱・ホルマリンでも不活化困難。プロリンの環状構造は二次構造の規則性に影響し、グリシンは側鎖が最小で柔軟なためループ構造に入りやすい",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-009-mechanism-008",
+    "knowledge_type": "mechanism",
+    "recall_direction": "prion_structural_change",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r109-116"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-009-mechanism-009-collagen_structure",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-009-mechanism-009",
+    "primary_exemplar_id": "ex-biology-009",
+    "subject": "生物",
+    "front": "コラーゲンは{{c1::Gly-X-Y}}の繰り返し配列を持ち、3本のポリペプチド鎖が{{c2::三重らせん}}構造を形成する。Yの位置には{{c3::ヒドロキシプロリン}}が多い。",
+    "back": "グリシンが3残基ごとに配置されることで三重らせんの中心に収まる（最小のアミノ酸だから可能）。プロリンの4-ヒドロキシ化にはビタミンCが必須。VitC欠乏→ヒドロキシ化不全→壊血病",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-009-mechanism-009",
+    "knowledge_type": "mechanism",
+    "recall_direction": "collagen_structure",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r110-115"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-009-mechanism-010-insulin_ss_bonds",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-009-mechanism-010",
+    "primary_exemplar_id": "ex-biology-009",
+    "subject": "生物",
+    "front": "インスリンが持つ3本のジスルフィド結合の配置はどうなっているか？",
+    "back": "A鎖とB鎖をつなぐ鎖間結合が2本、A鎖内の鎖内結合が1本の計3本。プロインスリンからCペプチドが切断されてインスリン（A鎖+B鎖）が生成する。超速効型インスリンはアミノ酸置換で二量体形成を抑制",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-009-mechanism-010",
+    "knowledge_type": "mechanism",
+    "recall_direction": "insulin_ss_bonds",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r100-209"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-009-classification-002-cd_spectrum_info",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-009-classification-002",
+    "primary_exemplar_id": "ex-biology-009",
+    "subject": "生物",
+    "front": "円偏光二色性（CD）スペクトルで得られるタンパク質の情報は一次構造？二次構造？",
+    "back": "二次構造の情報（αヘリックスやβシートの含有率）。一次構造（アミノ酸配列）の決定にはエドマン分解や質量分析を用いる。CDスペクトルと一次構造を混同させる出題が頻出",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-009-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "cd_spectrum_info",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-094",
+      "r103-094"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-009-mechanism-011-ip_wb_interpretation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-009-mechanism-011",
+    "primary_exemplar_id": "ex-biology-009",
+    "subject": "生物",
+    "front": "抗A抗体で免疫沈降後にSDS-PAGE+WBを行った場合、増殖因子刺激前後でバンドパターンはどう変わるか？（AとBがヘテロ二量体、刺激後にAのみリン酸化→B解離）",
+    "back": "未刺激：A+Bの両バンドが検出（二量体として共沈降）。刺激後：Aのバンドのみ（Bは解離して沈降されない）。免疫沈降＝抗体で特定タンパク質を「釣る」。SDSは非共有結合を切断するが、S-S結合の切断には還元剤が必要",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "integrated"
+    ],
+    "knowledge_atom_id": "ex-biology-009-mechanism-011",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ip_wb_interpretation",
+    "difficulty_tier": "integrated",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r105-116"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-012-classification-001-fat_soluble_vitamins",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-012-classification-001",
+    "primary_exemplar_id": "ex-biology-012",
+    "subject": "生物",
+    "front": "脂溶性ビタミン4種（A, D, E, K）の主な機能を比較せよ。",
+    "back": "VitA（レチノール/レチナール/レチノイン酸）＝視覚（ロドプシン構成）+遺伝子発現。VitD（コレカルシフェロール）＝Ca²⁺恒常性。VitE（α-トコフェロール）＝抗酸化（ラジカル捕捉）。VitK（メナキノン）＝血液凝固因子合成+オステオカルシン合成",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-012-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "fat_soluble_vitamins",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r109-127",
+      "r109-233"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-012-mechanism-001-vitd_activation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-012-mechanism-001",
+    "primary_exemplar_id": "ex-biology-012",
+    "subject": "生物",
+    "front": "7-デヒドロコレステロール →（{{c1::皮膚で紫外線}}）→ VitD3 →（{{c2::肝臓で25位水酸化}}）→ 25(OH)D3 →（{{c3::腎臓で1α位水酸化}}）→ 活性型1α,25(OH)₂D3",
+    "back": "活性型VitD3は最終的に腎臓で生成される。PTH（副甲状腺ホルモン）が腎臓での1α-水酸化を促進する。欠乏→くる病（小児）、骨軟化症（成人）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-012-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "vitd_activation",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r108-219",
+      "r109-127"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-012-classification-002-b_vitamins_coenzymes",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-012-classification-002",
+    "primary_exemplar_id": "ex-biology-012",
+    "subject": "生物",
+    "front": "B1, B2, B3, B6の補酵素型と関与する反応を比較せよ。",
+    "back": "B1（チアミン）→TPP：ピルビン酸脱水素酵素等の糖代謝。B2（リボフラビン）→FAD/FMN：酸化還元反応。B3（ナイアシン）→NAD⁺/NADP⁺：酸化還元反応。B6（ピリドキサール）→PLP：アミノ酸代謝（脱炭酸・アミノ基転移）",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-012-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "b_vitamins_coenzymes",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r104-118",
+      "r109-127",
+      "r104-223"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-012-mechanism-002-b12_absorption",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-012-mechanism-002",
+    "primary_exemplar_id": "ex-biology-012",
+    "subject": "生物",
+    "front": "ビタミンB12は{{c1::内因子}}（胃壁細胞が分泌）と結合し、{{c2::回腸末端}}で吸収される。胃全摘後は{{c3::巨赤芽球性貧血}}を発症する。",
+    "back": "B12は動物性食品にのみ含まれ（植物で合成されない）、肝臓に3-5年分貯蔵。胃全摘後数年で貯蔵が枯渇し発症。MCV＞100fLの大球性貧血が特徴。B12は葉酸代謝のメチル基転位反応にも関与",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-012-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "b12_absorption",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r107-236",
+      "r107-237",
+      "r100-016"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-012-mechanism-003-b6_levodopa",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-012-mechanism-003",
+    "primary_exemplar_id": "ex-biology-012",
+    "subject": "生物",
+    "front": "レボドパは芳香族L-アミノ酸{{c1::脱炭酸}}酵素（AADC）により{{c2::ドパミン}}に変換される。この反応の補酵素は{{c3::ピリドキサルリン酸（PLP＝活性型VitB6）}}である。",
+    "back": "VitB6含有OTCの服用で末梢での脱炭酸が促進され、レボドパの脳内移行が低下する。カルビドパ併用時は末梢AADCが阻害されるためB6の影響は軽減",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-012-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "b6_levodopa",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-223"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-012-mechanism-004-biotin_carboxylase",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-012-mechanism-004",
+    "primary_exemplar_id": "ex-biology-012",
+    "subject": "生物",
+    "front": "ビオチンは{{c1::カルボキシラーゼ}}（炭酸固定酵素）の補酵素として{{c2::CO₂}}の付加反応に関与する。脂肪酸合成では{{c3::アセチルCoAカルボキシラーゼ}}の補酵素として働く。",
+    "back": "アセチルCoA→マロニルCoA（脂肪酸合成の律速段階）。ビオチン依存性酵素は4つ：アセチルCoA/ピルビン酸/プロピオニルCoA/3-メチルクロトニルCoAの各カルボキシラーゼ。卵白のアビジンがビオチン吸収を阻害",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-012-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "biotin_carboxylase",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r107-216"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-012-mechanism-005-b1_deficiency",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-012-mechanism-005",
+    "primary_exemplar_id": "ex-biology-012",
+    "subject": "生物",
+    "front": "ビタミンB1（チアミン）の活性型は{{c1::チアミンピロリン酸（TPP）}}で、{{c2::ピルビン酸脱水素酵素}}やα-ケトグルタル酸脱水素酵素の補酵素。欠乏すると{{c3::脚気}}や{{c4::ウェルニッケ脳症}}を引き起こす。",
+    "back": "TPPは糖代謝（酸化的脱炭酸反応）に必須。B1欠乏→ピルビン酸がアセチルCoAに変換されず乳酸蓄積（乳酸アシドーシスの原因にもなる）。チアミンの構造はピリミジン環+チアゾール環",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-012-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "b1_deficiency",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r111-018",
+      "r109-104",
+      "r108-235"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-012-adverse_effect-001-niacin_deficiency",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-012-adverse_effect-001",
+    "primary_exemplar_id": "ex-biology-012",
+    "subject": "生物",
+    "front": "ナイアシン欠乏で起こるペラグラの3D症状は{{c1::Dermatitis（皮膚炎）}}、{{c2::Diarrhea（下痢）}}、{{c3::Dementia（認知症）}}である。",
+    "back": "ナイアシン（VitB3）はNAD⁺/NADP⁺の構成成分。トリプトファン60mgからナイアシン1mgを体内合成可能。トウモロコシ主食地域で欠乏リスクが高い（トリプトファン含量が少ないため）",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-012-adverse_effect-001",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "niacin_deficiency",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r110-120"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-012-mechanism-006-vitk_newborn_deficiency",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-012-mechanism-006",
+    "primary_exemplar_id": "ex-biology-012",
+    "subject": "生物",
+    "front": "新生児・乳児でビタミンKが不足する理由として正しいものは？（誤りを見分ける問題）",
+    "back": "正しい理由4つ：①胎盤を通過しにくい ②母乳中の含有量が少ない ③胆汁分泌低下で吸収されにくい ④腸内細菌叢が未発達。「代謝・排泄の亢進」は誤り。メナテトレノンでVitKを補充する",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-012-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "vitk_newborn_deficiency",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r109-233"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-012-classification-003-vita_forms",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-012-classification-003",
+    "primary_exemplar_id": "ex-biology-012",
+    "subject": "生物",
+    "front": "ビタミンAのうち、ロドプシンの構成成分として視覚に関与するのは{{c1::レチナール}}であり、核内受容体に結合して遺伝子発現を調節するのは{{c2::レチノイン酸}}である。",
+    "back": "レチノール↔レチナール（可逆）→レチノイン酸（不可逆）。レチノイン酸を「ロドプシンの成分」とするのは誤り（頻出ひっかけ）。VitA過剰→催奇形性、頭蓋内圧亢進。欠乏→夜盲症",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-012-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "vita_forms",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-118",
+      "r109-127"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-012-classification-004-gut_bacteria_vitamins",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-012-classification-004",
+    "primary_exemplar_id": "ex-biology-012",
+    "subject": "生物",
+    "front": "腸内細菌が合成するビタミンは、{{c1::ビタミンK}}、{{c2::ビオチン}}、葉酸、パントテン酸、B2、B6、B12である。α-トコフェロール（VitE）は腸内細菌で合成{{c3::されない}}。",
+    "back": "覚え方：「チョウチョがカビンの葉っぱに2×6=12」→K、ビオチン、葉酸、パントテン酸、B2、B6、B12。VitEは食事から摂取する",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-012-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "gut_bacteria_vitamins",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r109-127",
+      "r109-233"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-012-classification-005-mcv_anemia_classification",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-012-classification-005",
+    "primary_exemplar_id": "ex-biology-012",
+    "subject": "生物",
+    "front": "MCVによる貧血の分類と関連するビタミン欠乏を比較せよ。",
+    "back": "小球性（MCV<80）＝鉄欠乏性貧血。正球性（MCV 80-100）＝溶血性・腎性貧血。大球性（MCV>100）＝VitB12欠乏 or 葉酸欠乏（巨赤芽球性貧血）。VitB6欠乏→鉄芽球性貧血（小球性）。VitC欠乏→壊血病（貧血ではない）",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-012-classification-005",
+    "knowledge_type": "classification",
+    "recall_direction": "mcv_anemia_classification",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r107-236"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-012-mechanism-007-vitc_collagen",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-012-mechanism-007",
+    "primary_exemplar_id": "ex-biology-012",
+    "subject": "生物",
+    "front": "ビタミンC（アスコルビン酸）は{{c1::プロリン}}や{{c2::リシン}}の{{c3::水酸化酵素}}の補酵素としてコラーゲン合成に関与する。また非ヘム鉄（Fe³⁺）を{{c4::還元}}してFe²⁺にし、吸収を促進する。",
+    "back": "VitCはプロリン/リシンのヒドロキシ化に必須。VitC欠乏→ヒドロキシプロリン合成不全→コラーゲン異常→壊血病（出血傾向、歯肉出血）。還元作用で非ヘム鉄の吸収も促進",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-012-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "vitc_collagen",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-118"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-019-mechanism-001-km_definition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-019-mechanism-001",
+    "primary_exemplar_id": "ex-biology-019",
+    "subject": "生物",
+    "front": "ミカエリス定数Kmとは、反応初速度が{{c1::Vmax/2}}となるときの{{c2::基質濃度}}である。Kmが小さいほど酵素の基質に対する{{c3::親和性}}が高い。",
+    "back": "Kmは酵素-基質間の親和性の指標。グラフは基質濃度に対して双曲線型（飽和曲線）。高基質濃度では速度がVmaxに漸近（頭打ち）。酵素量を増やせばVmaxは増加する",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-019-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "km_definition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r106-014",
+      "r109-115"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-019-mechanism-002-competitive_inhibition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-019-mechanism-002",
+    "primary_exemplar_id": "ex-biology-019",
+    "subject": "生物",
+    "front": "競合阻害では見かけのKmは{{c1::増大}}し、Vmaxは{{c2::変化しない}}。阻害剤は酵素の{{c3::基質結合部位}}に結合する。",
+    "back": "競合阻害剤は基質と同じ部位に結合して競合。基質濃度を十分に上げれば阻害を克服できるためVmaxは不変。ラインウィーバー・バークプロットではx切片（-1/Km）が変化し、y切片（1/Vmax）は不変",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-019-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "competitive_inhibition",
+    "reverse_of_id": "ex-biology-019-mechanism-002-noncompetitive_inhibition",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r101-113",
+      "r109-115"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-019-mechanism-002-noncompetitive_inhibition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-019-mechanism-002",
+    "primary_exemplar_id": "ex-biology-019",
+    "subject": "生物",
+    "front": "非競合阻害ではKmは{{c1::変化しない}}（見かけの親和性は不変）が、Vmaxは{{c2::低下}}する。阻害剤は{{c3::基質結合部位とは異なる部位（アロステリック部位）}}に結合する。",
+    "back": "非競合阻害剤は酵素のアロステリック部位に結合し、触媒効率を低下させる。基質濃度を上げても阻害を克服できない。ラインウィーバー・バークプロットでは傾き（Km/Vmax）が増大",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-019-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "noncompetitive_inhibition",
+    "reverse_of_id": "ex-biology-019-mechanism-002-competitive_inhibition",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r101-113",
+      "r109-115"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-019-mechanism-003-lineweaver_burk_axes",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-019-mechanism-003",
+    "primary_exemplar_id": "ex-biology-019",
+    "subject": "生物",
+    "front": "ラインウィーバー・バークプロットの軸：x軸＝{{c1::1/[S]}}、y軸＝{{c2::1/v}}。y切片＝{{c3::1/Vmax}}、x切片＝{{c4::-1/Km}}、傾き＝{{c5::Km/Vmax}}。",
+    "back": "ミカエリス・メンテン式の逆数をとった直線化プロット。競合阻害→x切片が左にずれ（Km↑）y切片不変。非競合阻害→y切片が上にずれ（Vmax↓）x切片不変。不競合阻害→平行線（KmもVmaxも低下）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-019-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "lineweaver_burk_axes",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-113",
+      "r109-115"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-019-classification-001-serine_protease_types",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-019-classification-001",
+    "primary_exemplar_id": "ex-biology-019",
+    "subject": "生物",
+    "front": "膵臓由来のセリンプロテアーゼ3種の基質特異性を比較せよ。",
+    "back": "トリプシン＝塩基性アミノ酸（Lys, Arg）のC末端側を切断。キモトリプシン＝芳香族アミノ酸（Phe, Trp, Tyr）のC末端側を切断。エラスターゼ＝小さいアミノ酸（Ala, Gly, Ser）のC末端側を切断。すべてエンドペプチダーゼ（鎖の内部を切断）",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-019-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "serine_protease_types",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r102-113"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-019-mechanism-004-trypsinogen_activation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-019-mechanism-004",
+    "primary_exemplar_id": "ex-biology-019",
+    "subject": "生物",
+    "front": "トリプシノーゲンは十二指腸上皮細胞から分泌される{{c1::エンテロペプチダーゼ}}により{{c2::トリプシン}}に変換される。活性化されたトリプシンはさらに{{c3::キモトリプシノーゲン}}やプロエラスターゼを活性化する。",
+    "back": "消化酵素は不活性前駆体（チモーゲン）として分泌され、必要な場所で活性化される。エンテロペプチダーゼがカスケードの引き金。膵炎ではトリプシンが膵臓内で不適切に活性化し自己消化が起こる",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-019-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "trypsinogen_activation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-113"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-019-mechanism-005-specific_activity",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-019-mechanism-005",
+    "primary_exemplar_id": "ex-biology-019",
+    "subject": "生物",
+    "front": "比活性＝{{c1::全活性（U）÷全タンパク質量（mg）}}。酵素の精製が進むほど比活性は{{c2::上昇}}する。",
+    "back": "比活性は酵素の純度の指標。精製過程で不要タンパク質が除去されるため、同じ活性あたりのタンパク質量が減少→比活性が上昇。全活性は精製ロスで減少し得るが、比活性は必ず上昇する",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-019-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "specific_activity",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r103-120",
+      "r104-112"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-019-classification-002-beta_lactamase_class",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-019-classification-002",
+    "primary_exemplar_id": "ex-biology-019",
+    "subject": "生物",
+    "front": "β-ラクタマーゼは6大酵素分類のうちどれに該当するか？",
+    "back": "加水分解酵素（ヒドロラーゼ）— β-ラクタム環のアミド結合を加水分解して不活化する。酸化還元酵素ではない（頻出ひっかけ）。阻害薬：クラブラン酸、スルバクタム、タゾバクタム",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-019-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "beta_lactamase_class",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r109-115"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-019-mechanism-006-induced_fit",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-019-mechanism-006",
+    "primary_exemplar_id": "ex-biology-019",
+    "subject": "生物",
+    "front": "酵素の誘導適合（induced fit）とはどのような現象か？",
+    "back": "基質が酵素に結合する際に、酵素の構造が柔軟に変化して基質にフィットする現象。「酵素を剛体として仮定」するのは鍵と鍵穴モデル（Lock and Key）であり、誘導適合とは異なる（頻出ひっかけ）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-019-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "induced_fit",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r100-094"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-019-mechanism-007-purification_methods",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-019-mechanism-007",
+    "primary_exemplar_id": "ex-biology-019",
+    "subject": "生物",
+    "front": "ゲルろ過と陰イオン交換クロマトグラフィーの分離原理を比較せよ。",
+    "back": "ゲルろ過＝分子量で分離。大きい分子が先に溶出（ゲル粒子の穴に入れないため）。陰イオン交換＝電荷で分離。正電荷樹脂に負電荷タンパク質が保持される。塩濃度を上げて溶出。精製の一般的順序：塩析→イオン交換→ゲルろ過→アフィニティ",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-019-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "purification_methods",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r104-112"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-033-classification-001-rna_types",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-033-classification-001",
+    "primary_exemplar_id": "ex-biology-033",
+    "subject": "生物",
+    "front": "tRNA, mRNA, rRNAの翻訳における役割を比較せよ。",
+    "back": "tRNA（transfer）＝アミノ酸をリボソームへ運搬。3'末端CCA配列にアミノ酸が結合し、アンチコドンでmRNAコドンを認識。mRNA（messenger）＝タンパク質のアミノ酸配列情報を持つ鋳型。rRNA（ribosomal）＝リボソームの構造成分でペプチジルトランスフェラーゼ活性を持つ（リボザイム）",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-033-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "rna_types",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r101-013"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-033-mechanism-001-eukaryote_vs_prokaryote_transcription_translation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-033-mechanism-001",
+    "primary_exemplar_id": "ex-biology-033",
+    "subject": "生物",
+    "front": "真核細胞と原核細胞で、転写と翻訳のタイミングはどう異なるか？",
+    "back": "原核細胞：核膜がないため転写と翻訳が同時進行（共役）。真核細胞：転写は核内→mRNAプロセシング→核外輸送→翻訳は細胞質。転写完結前に翻訳は開始されない。原核はポリシストロン性（1mRNAから複数タンパク質）、真核はモノシストロン性",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-033-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "eukaryote_vs_prokaryote_transcription_translation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r102-116"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-033-mechanism-002-translation_direction",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-033-mechanism-002",
+    "primary_exemplar_id": "ex-biology-033",
+    "subject": "生物",
+    "front": "翻訳はmRNAの{{c1::5'}}→{{c2::3'}}方向に進行し、ペプチド鎖は{{c3::N末端}}→{{c4::C末端}}方向に伸長する。翻訳で使用されるエネルギーは{{c5::GTP}}である。",
+    "back": "翻訳の3段階：開始→伸長→終結。伸長反応ではEF-Tu（アミノアシルtRNAのリボソームA部位への運搬）やEF-G（トランスロケーション）にGTPが必要。ATPはアミノアシルtRNA合成に使用",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-033-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "translation_direction",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-116"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-033-mechanism-003-special_codons",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-033-mechanism-003",
+    "primary_exemplar_id": "ex-biology-033",
+    "subject": "生物",
+    "front": "開始コドンは{{c1::AUG}}（{{c2::メチオニン}}）。終止コドンは{{c3::UAA, UAG, UGA}}の3つ。1つのコドンしか持たないアミノ酸はメチオニンと{{c4::トリプトファン（UGG）}}。",
+    "back": "終止コドンの覚え方：「うあー(UAA) あじがっ(UAG) ⚡(UGA)」。サプレッサーtRNAは終止コドンを認識してナンセンス変異による翻訳終結を抑制する",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-033-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "special_codons",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-116"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-033-mechanism-004-point_mutation_types",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-033-mechanism-004",
+    "primary_exemplar_id": "ex-biology-033",
+    "subject": "生物",
+    "front": "1塩基置換変異の3種類を比較せよ。",
+    "back": "ミスセンス変異＝アミノ酸が別のアミノ酸に変わる（例：鎌状赤血球症 Glu→Val）。ナンセンス変異＝終止コドンになり翻訳が途中で停止。サイレント変異＝コドンの縮重によりアミノ酸が変わらない（同義変異）。フレームシフト変異は挿入/欠失で起こる",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-033-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "point_mutation_types",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-116"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-033-mechanism-005-aminoacyl_trna_formation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-033-mechanism-005",
+    "primary_exemplar_id": "ex-biology-033",
+    "subject": "生物",
+    "front": "アミノアシルtRNAの生成では、{{c1::ATP}}のエネルギーを利用してアミノ酸が活性化され、tRNAの{{c2::3'末端CCA配列}}に結合する。",
+    "back": "アミノアシルtRNA合成酵素がアミノ酸をtRNAに結合させる。ATPがAMPとPPiに分解される（AMP生成型＝高エネルギー反応2個分消費）。正しいアミノ酸-tRNAの対応が翻訳の正確性を保証する",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-033-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "aminoacyl_trna_formation",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r102-116"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-033-mechanism-006-peptidyl_transferase",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-033-mechanism-006",
+    "primary_exemplar_id": "ex-biology-033",
+    "subject": "生物",
+    "front": "リボソームのペプチジルトランスフェラーゼ活性はタンパク質と触媒RNAのどちらが担うか？",
+    "back": "rRNA（リボソームRNA）が触媒活性を持つ＝リボザイム（触媒RNA）。ペプチド結合形成反応を触媒する。リボソームの大サブユニット（真核60S/原核50S）に存在する",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-033-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "peptidyl_transferase",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r102-116"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-034-mechanism-001-pcr_steps",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-034-mechanism-001",
+    "primary_exemplar_id": "ex-biology-034",
+    "subject": "生物",
+    "front": "PCR法の3ステップ：①{{c1::変性（94-95℃）}}→ ②{{c2::アニーリング（55-65℃）}}→ ③{{c3::伸長（72℃）}}。各ステップは{{c4::異なる温度}}で行い、{{c5::耐熱性}}DNAポリメラーゼ（Taq等）を使用する。",
+    "back": "nサイクルで理論上2^n倍に増幅。同一温度ではなく3段階の温度で行う（頻出ひっかけ）。プライマーは増幅領域の両端に相補的な配列を5'→3'方向で設計する",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-034-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "pcr_steps",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-117",
+      "r101-117"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-034-mechanism-002-rt_pcr_principle",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-034-mechanism-002",
+    "primary_exemplar_id": "ex-biology-034",
+    "subject": "生物",
+    "front": "RT-PCRでは、mRNAから{{c1::逆転写酵素}}で{{c2::cDNA}}を合成し、それを鋳型にPCRを行う。逆転写のプライマーはmRNAの{{c3::3'末端}}に相補的な配列（またはオリゴdTプライマー）を使用する。",
+    "back": "RT-PCR＝RNA→cDNA→PCRの2段階。RNAウイルスの検出にはRT-PCRが必要（通常のPCRではDNAしか増幅できない）。リアルタイムPCR（qPCR）は蛍光で増幅を経時的に測定し定量解析が可能。Ct値が小さいほど初期量が多い",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-034-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "rt_pcr_principle",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-117",
+      "r106-113"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-034-mechanism-003-sanger_method",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-034-mechanism-003",
+    "primary_exemplar_id": "ex-biology-034",
+    "subject": "生物",
+    "front": "サンガー法（ジデオキシ法）では、{{c1::ddNTP}}の3'位に{{c2::OH基がない}}ためDNA伸長が停止する。様々な長さの断片を{{c3::ポリアクリルアミドゲル電気泳動}}で分離して塩基配列を解読する。",
+    "back": "ddNTP（ジデオキシNTP）は3'位にOH基がないため次のヌクレオチドとリン酸ジエステル結合を形成できず伸長停止。4種のddNTPを別々に加えて反応させ、断片長のパターンから配列を読む。現在の主流はNGS",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-034-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "sanger_method",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-115"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-034-classification-001-blotting_methods",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-034-classification-001",
+    "primary_exemplar_id": "ex-biology-034",
+    "subject": "生物",
+    "front": "サザンブロット＝{{c1::DNA}}の検出、ノーザンブロット＝{{c2::RNA}}の検出、ウエスタンブロット＝{{c3::タンパク質}}の検出。",
+    "back": "覚え方：「SNW＝スノードロップ」。サザンブロットが最初に開発（Edwin Southern氏）され、DNA用。その後RNA用が「ノーザン」、タンパク質用が「ウエスタン」と命名された（方角のジョーク）",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-034-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "blotting_methods",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r102-117"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-034-mechanism-004-sirna_mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-034-mechanism-004",
+    "primary_exemplar_id": "ex-biology-034",
+    "subject": "生物",
+    "front": "siRNA（低分子干渉RNA）は特定の{{c1::mRNA}}を{{c2::分解}}することで遺伝子発現を抑制する（{{c3::ノックダウン}}）。効果は{{c4::一時的}}である。",
+    "back": "siRNAはmRNAを分解する（染色体DNAは破壊しない）。効果は一時的で時間とともに減弱する。ノックダウン（発現抑制、一時的）とノックアウト（遺伝子破壊、永久的＝CRISPR等）を区別する",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-034-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "sirna_mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-117"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-034-mechanism-005-gene_cloning_steps",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-034-mechanism-005",
+    "primary_exemplar_id": "ex-biology-034",
+    "subject": "生物",
+    "front": "遺伝子クローニング：目的DNAと{{c1::プラスミド}}を同じ{{c2::制限酵素}}で切断→{{c3::DNAリガーゼ}}で結合→組換えDNAを宿主細胞に導入→増殖。",
+    "back": "制限酵素は回文配列（パリンドローム）を認識して切断。例：EcoRI＝GAATTC。プラスミドは原核細胞の染色体外DNAで自己複製能を持つ。組換えタンパク質の生産にはCHO細胞やE.coliが宿主として使われる",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-034-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "gene_cloning_steps",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r100-117"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-034-mechanism-006-griffith_experiment",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-034-mechanism-006",
+    "primary_exemplar_id": "ex-biology-034",
+    "subject": "生物",
+    "front": "グリフィスの肺炎球菌実験で、S型加熱死菌＋R型生菌を混合注射するとマウスが死亡した理由は？",
+    "back": "S型死菌由来の耐熱性物質（DNA）がR型菌に取り込まれ、R型がS型に形質転換したため。後にエイブリーがDNAが形質転換物質であることを証明。肺炎球菌は無芽胞菌（芽胞形成しない）。遺伝子伝達3方式：形質転換（DNA取込み）、接合（F因子）、形質導入（ファージ）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-034-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "griffith_experiment",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r100-118"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-034-classification-002-gel_types",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-034-classification-002",
+    "primary_exemplar_id": "ex-biology-034",
+    "subject": "生物",
+    "front": "アガロースゲルとポリアクリルアミドゲルの用途と検出法を比較せよ。",
+    "back": "アガロースゲル＝核酸（DNA/RNA）の分離。検出は臭化エチジウム（蛍光）。ポリアクリルアミドゲル＝タンパク質の分離（SDS-PAGE）。検出はCBB染色または銀染色。核酸用の臭化エチジウムをタンパク質検出に使うのは誤り（頻出ひっかけ）",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-034-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "gel_types",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-117",
+      "r103-115"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-041-mechanism-001-beta_oxidation_location",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-041-mechanism-001",
+    "primary_exemplar_id": "ex-biology-041",
+    "subject": "生物",
+    "front": "長鎖脂肪酸のβ酸化は{{c1::ミトコンドリアマトリックス}}で行われる。脂肪酸は{{c2::カルニチンシャトル}}を介してミトコンドリア内に輸送される。",
+    "back": "カルニチンパルミトイルトランスフェラーゼ（CPT-I: 外膜、CPT-II: 内膜）が輸送に必要。極長鎖脂肪酸はペルオキシソームで酸化される。脂肪酸の合成は細胞質で行われる（場所が逆！）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-041-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "beta_oxidation_location",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-013"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-041-mechanism-002-beta_oxidation_steps",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-041-mechanism-002",
+    "primary_exemplar_id": "ex-biology-041",
+    "subject": "生物",
+    "front": "β酸化1回転：①脱水素（補酵素{{c1::FAD}}）→ ②{{c2::水和}}→ ③脱水素（補酵素{{c3::NAD⁺}}）→ ④{{c4::チオリシス}}（CoASHが求核剤）→ アセチルCoA + 短縮アシルCoA",
+    "back": "1回転で炭素鎖がC2ずつ短縮。生成物：FADH₂(1.5ATP)＋NADH(2.5ATP)＋アセチルCoA(10ATP)。パルミチン酸(C16)は7回転で8アセチルCoA＝106ATP（活性化に-2ATP）→計104ATP",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-041-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "beta_oxidation_steps",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r104-138",
+      "r106-106"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-041-mechanism-003-fatty_acid_synthesis",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-041-mechanism-003",
+    "primary_exemplar_id": "ex-biology-041",
+    "subject": "生物",
+    "front": "脂肪酸合成は{{c1::細胞質}}で行われ、律速酵素は{{c2::アセチルCoAカルボキシラーゼ（ACC）}}。アシル鎖伸長には{{c3::NADPH}}が使用される。クエン酸は合成を{{c4::促進}}する。",
+    "back": "ACCはビオチンを補酵素としてアセチルCoA→マロニルCoAを触媒（脂肪酸合成の律速段階）。合成はC2ずつ延長してパルミチン酸(C16)まで。β酸化との対比：合成=細胞質/NADPH、分解=ミトコンドリア/NAD⁺+FAD",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-041-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "fatty_acid_synthesis",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r110-114"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-041-classification-001-synthesis_vs_oxidation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-041-classification-001",
+    "primary_exemplar_id": "ex-biology-041",
+    "subject": "生物",
+    "front": "脂肪酸合成とβ酸化の場所・補酵素・炭素変化を比較せよ。",
+    "back": "合成：細胞質、NADPH使用、C2ずつ延長、ACC(ビオチン)が律速。β酸化：ミトコンドリア、NAD⁺/FAD使用、C2ずつ短縮（アセチルCoA放出）。リノール酸やα-リノレン酸はヒトで合成できない必須脂肪酸",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-041-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "synthesis_vs_oxidation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-013",
+      "r110-114"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-041-mechanism-004-beta_hydroxy_dehydrogenase",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-041-mechanism-004",
+    "primary_exemplar_id": "ex-biology-041",
+    "subject": "生物",
+    "front": "β-ヒドロキシアシルCoA脱水素酵素の活性部位では、{{c1::グルタミン酸}}残基が{{c2::ヒスチジン}}残基のイミダゾリル基の塩基性を高め、補酵素{{c3::NAD⁺}}がヒドリド受容体として機能する。",
+    "back": "FADではなくNAD⁺が補酵素（β酸化の第3段階）。NAD⁺はヒドリド（H⁻）受容体であり、プロトン（H⁺）受容体ではない（頻出ひっかけ）。NAD⁺はプリン骨格（アデニン含有）、ピリミジン骨格ではない",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-041-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "beta_hydroxy_dehydrogenase",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r106-106"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-041-mechanism-005-ketone_body_formation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-041-mechanism-005",
+    "primary_exemplar_id": "ex-biology-041",
+    "subject": "生物",
+    "front": "β酸化で生成されたアセチルCoAがケトン体に変換されるのはどのような条件のときか？",
+    "back": "オキサロ酢酸が不足してクエン酸回路に入れないとき（飢餓時・糖尿病時）。余剰アセチルCoAは肝臓でケトン体（アセト酢酸・β-ヒドロキシ酪酸・アセトン）に変換され、肝外組織のエネルギー源となる。ケトン体は肝臓では利用できない",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-041-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ketone_body_formation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.92,
+    "source_question_ids": [
+      "r100-013"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-046-mechanism-001-purine_degradation_pathway",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-046-mechanism-001",
+    "primary_exemplar_id": "ex-biology-046",
+    "subject": "生物",
+    "front": "プリン塩基の分解経路：アデニン→{{c1::ヒポキサンチン}}→{{c2::キサンチン}}→{{c3::尿酸}}。最後の2段階を触媒する酵素は{{c4::キサンチンオキシダーゼ（XOD）}}。",
+    "back": "ヒトでは尿酸が最終代謝産物（ウリカーゼを持たない）。グアニン→キサンチン→尿酸の経路もある。XODは反応中にH₂O₂も生成する→酸化ストレスの原因。痛風＝尿酸結晶の沈着による炎症",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-046-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "purine_degradation_pathway",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r110-012",
+      "r103-114"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-046-mechanism-002-pyrimidine_precursors",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-046-mechanism-002",
+    "primary_exemplar_id": "ex-biology-046",
+    "subject": "生物",
+    "front": "ピリミジン骨格のde novo合成には{{c1::アスパラギン酸}}と{{c2::グルタミン}}（カルバモイルリン酸の原料）が利用される。フィードバック阻害は{{c3::CTP}}が律速酵素を阻害して行う。",
+    "back": "覚え方：「ピリミジンにはアスパラ」。律速酵素はアスパラギン酸カルバモイルトランスフェラーゼ（ATCase）。ピリミジンde novo合成のカルバモイルリン酸はCPS II（細胞質）が生成。尿素回路のCPS I（ミトコンドリア）とは別酵素",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-046-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "pyrimidine_precursors",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r100-014",
+      "r102-115"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-046-classification-001-purine_vs_pyrimidine_catabolism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-046-classification-001",
+    "primary_exemplar_id": "ex-biology-046",
+    "subject": "生物",
+    "front": "プリン塩基とピリミジン塩基の最終分解産物を比較せよ。",
+    "back": "プリン塩基（アデニン・グアニン）→尿酸（水溶性が低く結晶化しやすい→痛風）。ピリミジン塩基→β-アラニン（シトシン・ウラシル由来）/ β-アミノイソ酪酸（チミン由来）＋尿素＋CO₂。「尿酸はプリン！ピリミジンの分解で尿酸は出ない」が鉄板ひっかけ",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-046-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "purine_vs_pyrimidine_catabolism",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r102-115",
+      "r105-114"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-046-mechanism-003-dtmp_synthesis",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-046-mechanism-003",
+    "primary_exemplar_id": "ex-biology-046",
+    "subject": "生物",
+    "front": "dUMP→dTMP（チミジル酸）の合成では、{{c1::チミジル酸シンターゼ}}が触媒し、メチル基供与体は{{c2::N⁵,N¹⁰-メチレンテトラヒドロ葉酸（THF）}}である（SAMではない）。",
+    "back": "5-FU（フルオロウラシル）はチミジル酸シンターゼを阻害する抗がん薬。メトトレキサートはジヒドロ葉酸還元酵素を阻害してTHF供給を断つ→dTMP合成阻害。S-アデノシルメチオニン（SAM）がメチル基供与体というのは誤り（頻出ひっかけ）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-046-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "dtmp_synthesis",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r102-115",
+      "r104-113",
+      "r105-114"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-046-mechanism-004-febuxostat_mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-046-mechanism-004",
+    "primary_exemplar_id": "ex-biology-046",
+    "subject": "生物",
+    "front": "フェブキソスタットは選択的{{c1::キサンチンオキシダーゼ（XOD）}}阻害薬で、ヒポキサンチン→キサンチン→{{c2::尿酸}}の{{c3::両方の段階}}を阻害する。",
+    "back": "アロプリノールも同じXOD阻害薬だがプリン型。フェブキソスタットは非プリン型で選択性が高い。アザチオプリン（免疫抑制薬）の代謝にもXODが関与するため、XOD阻害薬との併用は禁忌（血中濃度上昇→骨髄抑制）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-046-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "febuxostat_mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-222",
+      "r106-221"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-046-mechanism-005-ada_deficiency",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-046-mechanism-005",
+    "primary_exemplar_id": "ex-biology-046",
+    "subject": "生物",
+    "front": "{{c1::アデノシンデアミナーゼ（ADA）}}の遺伝的欠損により、T細胞分化が障害され{{c2::重症複合免疫不全症（SCID）}}が生じる。",
+    "back": "ADAはアデノシン→イノシンの脱アミノ反応を触媒。ADA欠損→dATPの蓄積→リンパ球（特にT細胞）のアポトーシス。遺伝子治療の対象疾患としても有名（「バブルボーイ病」）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-046-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ada_deficiency",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-114"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-046-mechanism-006-purine_denovo_precursors",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-046-mechanism-006",
+    "primary_exemplar_id": "ex-biology-046",
+    "subject": "生物",
+    "front": "プリンヌクレオチドのde novo合成にはPRPPに{{c1::グリシン}}、{{c2::グルタミン}}、{{c3::アスパラギン酸}}等が利用される。中間体として{{c4::IMP}}を経由する。",
+    "back": "覚え方：「グー(グリシン)、グル(グルタミン)、アーさん(アスパラギン酸)がPRPPにくっつける」。IMPからAMP合成にはGTPが、GMP合成にはATPが使用される（相互調節機構）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-046-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "purine_denovo_precursors",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r100-014"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-046-mechanism-007-rnr_mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-046-mechanism-007",
+    "primary_exemplar_id": "ex-biology-046",
+    "subject": "生物",
+    "front": "デオキシヌクレオチドは、{{c1::リボヌクレオチドレダクターゼ}}によりNDP（ヌクレオシド二リン酸）のリボースの{{c2::2'位}}が還元されて生成する。例：CDP→{{c3::dCDP}}→dCTP。",
+    "back": "リボヌクレオチドレダクターゼはNDP段階で還元する（NTPやNMPではない）。サルベージ経路で再利用されるのは塩基（プリン・ピリミジン）であり、リボース1-リン酸はペントースリン酸経路で利用",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-046-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "rnr_mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r104-113"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-046-mechanism-008-mtx_folate_rescue",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-046-mechanism-008",
+    "primary_exemplar_id": "ex-biology-046",
+    "subject": "生物",
+    "front": "メトトレキサート（MTX）の作用機序と、葉酸による副作用軽減の仕組みは？",
+    "back": "MTXはジヒドロ葉酸還元酵素（DHFR）を阻害→テトラヒドロ葉酸（THF）の供給を断つ→dTMP合成阻害→DNA合成阻害。葉酸（ロイコボリン）はDHFRを介してTHFに変換され、正常細胞の葉酸を補充（ロイコボリンレスキュー）。MTX投与24-48時間後に葉酸を投与",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-046-mechanism-008",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mtx_folate_rescue",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r106-223"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-046-classification-002-xanthine_derivatives",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-046-classification-002",
+    "primary_exemplar_id": "ex-biology-046",
+    "subject": "生物",
+    "front": "キサンチン誘導体：カフェイン＝{{c1::1,3,7-トリメチル}}キサンチン、テオフィリン＝{{c2::1,3-ジメチル}}キサンチン、テオブロミン＝{{c3::3,7-ジメチル}}キサンチン。",
+    "back": "キサンチンは2,6-ジオキソプリン。カフェイン（コーヒー）は3つのメチル基。テオフィリン（お茶、気管支拡張薬）は2つ。テオブロミン（カカオ）も2つだが位置が異なる。いずれもPDE阻害作用やアデノシン受容体拮抗作用を持つ",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-046-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "xanthine_derivatives",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r102-105"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-050-classification-001-gpcr_classification",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-050-classification-001",
+    "primary_exemplar_id": "ex-biology-050",
+    "subject": "生物",
+    "front": "Gs, Gi, Gq共役型GPCRの下流シグナルと代表的受容体を比較せよ。",
+    "back": "Gs＝アデニル酸シクラーゼ活性化→cAMP↑。代表：β1,β2,D1,H2,V2。Gi＝アデニル酸シクラーゼ抑制→cAMP↓。代表：M2,α2,D2,μ。Gq＝ホスホリパーゼC活性化→IP3+DG産生。代表：α1,M1,M3,H1,AT1。覚え方：Gs=stimulate, Gi=inhibit, Gq=PLC",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-050-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "gpcr_classification",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r104-151",
+      "r107-151"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-050-mechanism-001-g_protein_cycle",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-050-mechanism-001",
+    "primary_exemplar_id": "ex-biology-050",
+    "subject": "生物",
+    "front": "GPCRが活性化→αサブユニットの{{c1::GDP→GTP}}交換→α-GTPが{{c2::βγ複合体}}から解離→各々が標的に作用。αサブユニットの{{c3::GTPase}}活性でGTP→GDP→不活性化。",
+    "back": "αサブユニット+GTPが活性型。GTPが加水分解されるとGDPに戻り、βγと再会合して不活性化。コレラ毒素はGsαのGTPase活性を阻害→cAMP持続上昇。百日咳毒素はGiαのGTP交換を阻害",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-050-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "g_protein_cycle",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-114"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-050-mechanism-002-gq_plc_pathway",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-050-mechanism-002",
+    "primary_exemplar_id": "ex-biology-050",
+    "subject": "生物",
+    "front": "Gq共役型受容体→{{c1::ホスホリパーゼC（PLC）}}活性化→PIP2を分解→{{c2::IP3}}（小胞体からCa²⁺放出）+{{c3::DG（ジアシルグリセロール）}}（PKC活性化）。",
+    "back": "IP3は水溶性で小胞体のIP3受容体に結合→Ca²⁺放出。DGは膜に留まりプロテインキナーゼC（PKC）を活性化。α1受容体（血管平滑筋収縮）やH1受容体（アレルギー反応）がGq共役型の代表例",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-050-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "gq_plc_pathway",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r104-151",
+      "r107-151"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-050-mechanism-003-insulin_receptor_mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-050-mechanism-003",
+    "primary_exemplar_id": "ex-biology-050",
+    "subject": "生物",
+    "front": "インスリン受容体はGPCRではなく{{c1::酵素共役型（チロシンキナーゼ型）}}受容体。刺激→βサブユニットの{{c2::自己リン酸化}}→{{c3::IRS（インスリン受容体基質）}}のリン酸化→下流シグナル伝達。",
+    "back": "インスリン受容体は1回膜貫通型の受容体チロシンキナーゼ。Gタンパク質は介さない。自己リン酸化＝受容体自身のチロシン残基をリン酸化。下流ではPI3K→Akt経路でGLUT4の膜移行やグリコーゲン合成を促進",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-050-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "insulin_receptor_mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-151",
+      "r107-151"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-050-mechanism-004-jak_stat_pathway",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-050-mechanism-004",
+    "primary_exemplar_id": "ex-biology-050",
+    "subject": "生物",
+    "front": "IFN-α受容体が刺激→{{c1::JAK（ヤヌスキナーゼ）}}のチロシンキナーゼが活性化→{{c2::STAT}}がリン酸化→核内移行→遺伝子発現調節。",
+    "back": "JAK-STAT経路はサイトカイン受容体の主要シグナル伝達経路。受容体自体にキナーゼ活性はなく、JAKが受容体に結合して活性化する。JAK阻害薬（トファシチニブ、バリシチニブ）は関節リウマチ等の治療に使用",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-050-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "jak_stat_pathway",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r107-151"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-050-classification-002-gc_types",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-050-classification-002",
+    "primary_exemplar_id": "ex-biology-050",
+    "subject": "生物",
+    "front": "ANP受容体とNO受容体が活性化するグアニル酸シクラーゼの種類を比較せよ。",
+    "back": "ANP受容体＝膜結合型グアニル酸シクラーゼ（受容体自体がGC活性を持つ）。NO＝可溶性グアニル酸シクラーゼ（sGC、細胞質に存在）を活性化。どちらもcGMPを産生するが、酵素の局在が異なる。「ANP＝膜結合型、NO＝可溶性」は頻出ひっかけポイント",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-050-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "gc_types",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r107-151"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-050-classification-003-receptor_transmembrane",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-050-classification-003",
+    "primary_exemplar_id": "ex-biology-050",
+    "subject": "生物",
+    "front": "イオンチャネル内蔵型受容体＝{{c1::4〜5回}}膜貫通×{{c2::5量体}}。GPCR＝{{c3::7回}}膜貫通×単量体。チロシンキナーゼ型＝{{c4::1回}}膜貫通。",
+    "back": "覚え方：「日本は仕事でごたごたして、G7は孤独。でもちょろい」→イオンチャネル=4-5回/5量体、GPCR=7回/単量体、チロシンキナーゼ=1回。ニコチン受容体(NN/NM)はイオンチャネル内蔵型の代表",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-050-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "receptor_transmembrane",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r104-151"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-056-mechanism-001-cell_cycle_phases",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-056-mechanism-001",
+    "primary_exemplar_id": "ex-biology-056",
+    "subject": "生物",
+    "front": "細胞周期：{{c1::G1期}}（準備）→{{c2::S期}}（DNA複製）→{{c3::G2期}}（分裂準備）→{{c4::M期}}（有糸分裂）。G0期は{{c5::休止期}}で増殖していない状態。",
+    "back": "G1期のDNA量は2n。S期で複製→G2期は4n。M期で分裂→2nに戻る。覚え方：「ジイさん(G1,S) 実は(G2) M(M期)」。G0期の細胞が多い集団は増殖が遅い（肝細胞など）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-056-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "cell_cycle_phases",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r103-112",
+      "r108-113",
+      "r110-117"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-056-mechanism-002-cdk_regulation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-056-mechanism-002",
+    "primary_exemplar_id": "ex-biology-056",
+    "subject": "生物",
+    "front": "細胞周期のG1→S期移行には{{c1::サイクリン依存性キナーゼ（CDK）}}とサイクリンの複合体が関与する。チェックポイントでは{{c2::p53}}や{{c3::Rb}}などのがん抑制遺伝子産物が周期停止やアポトーシスを誘導する。",
+    "back": "CDKはサイクリンと結合して初めて活性化するキナーゼ（リン酸化酵素）。G1/Sチェックポイント＝DNA損傷がないか確認（p53が主役）。CDK4/6阻害薬（パルボシクリブ等）はG1/S移行を阻害する抗がん薬",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-056-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "cdk_regulation",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r103-112",
+      "r108-113"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-056-mechanism-003-m_phase_microtubule",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-056-mechanism-003",
+    "primary_exemplar_id": "ex-biology-056",
+    "subject": "生物",
+    "front": "M期の進行には{{c1::微小管}}（紡錘糸）の形成が必要。コルヒチンは{{c2::チューブリン}}の重合を阻害して紡錘糸形成を{{c3::抑制}}する。",
+    "back": "微小管はαチューブリンとβチューブリンの重合で形成。コルヒチンは痛風発作の治療薬でもある。同様の微小管阻害薬：ビンクリスチン（チューブリン重合阻害）、タキサン系（チューブリン脱重合阻害＝安定化）→いずれもM期阻害",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-056-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "m_phase_microtubule",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r100-113",
+      "r108-113"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-056-mechanism-004-dna_content_flow_cytometry",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-056-mechanism-004",
+    "primary_exemplar_id": "ex-biology-056",
+    "subject": "生物",
+    "front": "DNA結合性蛍光色素で細胞を標識した場合、G1期・S期・G2/M期の細胞はフローサイトメトリーのヒストグラムでどこに分布するか？",
+    "back": "領域A（蛍光強度低い＝DNA量2n）＝G1期/G0期。領域B（中間）＝S期（DNA複製中で2n〜4n）。領域C（蛍光強度高い＝DNA量4n）＝G2期+M期。G2期の細胞は4nのDNA量を持つため領域Cに分布する",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-056-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "dna_content_flow_cytometry",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r110-117"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-056-classification-001-anticancer_cell_cycle",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-056-classification-001",
+    "primary_exemplar_id": "ex-biology-056",
+    "subject": "生物",
+    "front": "S期作用型とM期作用型の抗がん薬をそれぞれ挙げよ。",
+    "back": "S期（DNA合成阻害）：5-FU（チミジル酸シンターゼ阻害）、メトトレキサート（DHFR阻害）、ゲムシタビン（DNAポリメラーゼ阻害）。M期（微小管阻害）：ビンクリスチン（チューブリン重合阻害）、パクリタキセル（チューブリン脱重合阻害）。CDK4/6阻害薬はG1/S移行を阻害",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-056-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "anticancer_cell_cycle",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r110-117",
+      "r108-113"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-056-mechanism-005-mitosis_stages",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-056-mechanism-005",
+    "primary_exemplar_id": "ex-biology-056",
+    "subject": "生物",
+    "front": "体細胞分裂の進行：G1期（{{c1::2倍体}}）→S期（DNA複製）→G2期（{{c2::4倍体}}）→M期前期（染色体凝縮）→中期（{{c3::紡錘体}}形成、赤道面に整列）→後期（染色体分離）→終期・細胞質分裂。",
+    "back": "中期の細胞はコルヒチン処理で紡錘糸形成を阻害すると中期で停止→核型分析に利用。G2期のDNA損傷はG2期のうちに修復される（M期で修復するのは誤り）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-056-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mitosis_stages",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r100-113"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-071-classification-001-osteoblast_vs_osteoclast",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-071-classification-001",
+    "primary_exemplar_id": "ex-biology-071",
+    "subject": "生物",
+    "front": "骨芽細胞と破骨細胞の由来・機能・マーカー酵素を比較せよ。",
+    "back": "骨芽細胞：間葉系幹細胞由来。骨形成（I型コラーゲン分泌+石灰化）。マーカー＝アルカリホスファターゼ（ALP）。破骨細胞：造血幹細胞由来（単球/マクロファージ系）。骨吸収（骨基質分解→Ca²⁺を血中に放出）。マーカー＝酸性ホスファターゼ（TRAP）。覚え方：「骨があつ(ALP)と破こん(酸性)」",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-071-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "osteoblast_vs_osteoclast",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-225",
+      "r105-110",
+      "r109-113"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-071-mechanism-001-calcium_hormones",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-071-mechanism-001",
+    "primary_exemplar_id": "ex-biology-071",
+    "subject": "生物",
+    "front": "PTH・カルシトニン・活性型VitD3の血中Ca²⁺への作用を比較せよ。",
+    "back": "PTH（副甲状腺）＝Ca²⁺上昇（骨吸収↑＋腎再吸収↑＋腎でVitD活性化促進）。カルシトニン（甲状腺傍ろ胞C細胞）＝Ca²⁺低下（破骨細胞抑制）。活性型VitD3＝Ca²⁺上昇（小腸からのCa²⁺吸収促進）。「PTH=上げる、カルシトニン=下げる」",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-071-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "calcium_hormones",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-225",
+      "r109-113"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-071-mechanism-002-alp_mineralization",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-071-mechanism-002",
+    "primary_exemplar_id": "ex-biology-071",
+    "subject": "生物",
+    "front": "骨芽細胞は{{c1::アルカリホスファターゼ（ALP）}}の作用により{{c2::リン酸}}の局所濃度を上昇させ、カルシウムと結合して{{c3::ヒドロキシアパタイト}}を形成し石灰化を促進する。",
+    "back": "ALPはリン酸エステルを分解して無機リン酸を遊離→Ca²⁺と結合してヒドロキシアパタイト[Ca₁₀(PO₄)₆(OH)₂]結晶を形成。骨の有機質はI型コラーゲン（骨芽細胞が分泌）とオステオカルシン。骨細胞は骨芽細胞が骨基質に埋まって成熟した細胞",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-071-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "alp_mineralization",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r105-110"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-071-classification-002-muscle_classification",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-071-classification-002",
+    "primary_exemplar_id": "ex-biology-071",
+    "subject": "生物",
+    "front": "骨格筋・心筋・平滑筋を横紋/平滑と随意/不随意で分類せよ。",
+    "back": "骨格筋＝横紋筋＋随意筋（運動神経支配）。心筋＝横紋筋＋不随意筋（自律神経支配）。平滑筋＝平滑筋＋不随意筋（自律神経支配）。心筋と平滑筋はいずれも不随意筋で自律神経支配を受ける。横紋は筋原線維のアクチン・ミオシンの規則配列による",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-071-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "muscle_classification",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r104-109"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-071-mechanism-003-contraction_mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-071-mechanism-003",
+    "primary_exemplar_id": "ex-biology-071",
+    "subject": "生物",
+    "front": "骨格筋と平滑筋のCa²⁺依存性収縮機構を比較せよ。",
+    "back": "骨格筋：筋小胞体からCa²⁺放出→トロポニンCに結合→トロポミオシンの位置変化→アクチン-ミオシン架橋形成→収縮。平滑筋：細胞外Ca²⁺流入→カルモジュリンに結合→ミオシン軽鎖キナーゼ（MLCK）活性化→ミオシン軽鎖リン酸化→収縮。心筋は細胞外Ca²⁺も収縮に関与",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-071-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "contraction_mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r104-109"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-071-mechanism-004-estrogen_bone",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-071-mechanism-004",
+    "primary_exemplar_id": "ex-biology-071",
+    "subject": "生物",
+    "front": "エストロゲンは骨芽細胞の働きを{{c1::促進}}し、破骨細胞を{{c2::抑制}}する。カルシトニンは甲状腺{{c3::傍ろ胞細胞（C細胞）}}から分泌され、破骨細胞を{{c4::抑制}}する。",
+    "back": "閉経後のエストロゲン低下→骨吸収亢進→骨粗鬆症。カルシトニンの分泌元は甲状腺「ろ胞細胞」ではなく「傍ろ胞細胞（C細胞）」（頻出ひっかけ）。骨粗鬆症治療：ビスホスホネート、デノスマブ（RANKL阻害）、テリパラチド（PTH製剤→間欠投与で骨形成促進）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-071-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "estrogen_bone",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r105-110",
+      "r109-113"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-071-classification-003-bone_structure",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-071-classification-003",
+    "primary_exemplar_id": "ex-biology-071",
+    "subject": "生物",
+    "front": "骨の構造：外側の{{c1::緻密質}}（硬さ）、内側の{{c2::海綿質}}（しなり）、中心の{{c3::骨髄}}（赤色＝造血機能あり、黄色＝造血機能なし）。骨の血管は{{c4::ハバース管}}（縦方向）と{{c5::フォルクマン管}}（横方向）。",
+    "back": "骨髄は一次リンパ器官（T細胞前駆体とB細胞の成熟が起こる場所）。加齢とともに赤色骨髄が黄色骨髄に置き換わる。脊柱は上から頸椎7→胸椎12→腰椎5→仙骨→尾骨",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-071-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "bone_structure",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r108-011"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-075-mechanism-001-洞房結節の相→イオン",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-075-mechanism-001",
+    "primary_exemplar_id": "ex-biology-075",
+    "subject": "生物",
+    "front": "洞房結節の活動電位：4相（緩徐脱分極）＝{{c1::T型Ca²⁺}}チャネル、0相（脱分極）＝{{c2::L型Ca²⁺}}チャネル、3相（再分極）＝{{c3::K⁺}}チャネル。",
+    "back": "T型Ca²⁺→L型Ca²⁺→K⁺。洞房結節はペースメーカー電位（4相の自動脱分極）が特徴で、Na⁺チャネルは関与しない点が心室筋と大きく異なる。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-075-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "洞房結節の相→イオン",
+    "reverse_of_id": "ex-biology-075-mechanism-001-イオン→洞房結節の相",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r102-111",
+      "r110-111"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-075-mechanism-001-イオン→洞房結節の相",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-075-mechanism-001",
+    "primary_exemplar_id": "ex-biology-075",
+    "subject": "生物",
+    "front": "洞房結節の活動電位で、L型Ca²⁺チャネルの開口が関与するのは何相か？",
+    "back": "0相（脱分極相）— 心室筋の0相はNa⁺チャネルだが、洞房結節の0相はL型Ca²⁺チャネルによるCa²⁺流入で生じる。ベラパミルはこのL型Ca²⁺を遮断し房室伝導を抑制する。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-075-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "イオン→洞房結節の相",
+    "reverse_of_id": "ex-biology-075-mechanism-001-洞房結節の相→イオン",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-111",
+      "r110-111"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-075-mechanism-002-心室筋の相→イオン",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-075-mechanism-002",
+    "primary_exemplar_id": "ex-biology-075",
+    "subject": "生物",
+    "front": "心室筋の活動電位：0相＝{{c1::Na⁺}}流入（脱分極）、1相＝K⁺流出（初期再分極）、2相＝{{c2::Ca²⁺}}流入（プラトー相）、3相＝{{c3::K⁺}}流出（再分極）。",
+    "back": "0相Na⁺→1相K⁺→2相Ca²⁺→3相K⁺。プラトー相（2相）のCa²⁺流入が心筋収縮を引き起こし、活動電位が長い（約300ms）ため不応期が長く、心筋は強縮しない。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-075-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "心室筋の相→イオン",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r110-111"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-075-classification-003-洞房結節 vs 心室筋",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-075-classification-003",
+    "primary_exemplar_id": "ex-biology-075",
+    "subject": "生物",
+    "front": "洞房結節と心室筋の活動電位の0相で関与するイオンチャネルの違いは？",
+    "back": "洞房結節の0相＝L型Ca²⁺チャネル、心室筋の0相＝Na⁺チャネル。洞房結節は特殊心筋（刺激伝導系）でリズム形成を担い、心室筋は固有心筋で収縮を担う。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-075-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "洞房結節 vs 心室筋",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-111",
+      "r110-111"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-075-mechanism-004-興奮伝導の順序",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-075-mechanism-004",
+    "primary_exemplar_id": "ex-biology-075",
+    "subject": "生物",
+    "front": "心筋の興奮伝導経路：{{c1::洞房結節}}→心房筋→{{c2::房室結節}}→ヒス束→左脚・右脚→プルキンエ線維→心室筋",
+    "back": "洞房結節→房室結節→ヒス束→プルキンエ線維→心室筋。洞房結節がペースメーカーとして自動的にリズムを生み出し、房室結節で伝導が遅延することで心房→心室の順序収縮が可能になる。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-075-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "興奮伝導の順序",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r110-111"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-075-mechanism-005-循環経路の順序",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-075-mechanism-005",
+    "primary_exemplar_id": "ex-biology-075",
+    "subject": "生物",
+    "front": "血液循環：全身→大静脈→{{c1::右心房}}→右心室→{{c2::肺動脈}}→肺→{{c3::肺静脈}}→左心房→左心室→大動脈→全身",
+    "back": "右心→肺動脈→肺→肺静脈→左心→大動脈。肺動脈は「動脈」だが静脈血（CO₂が多い）を運ぶ。動脈＝心臓から出る血管の意味であり、血液の種類とは別。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-075-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "循環経路の順序",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-011"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-075-calculation-006-計算式→心拍出量",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-075-calculation-006",
+    "primary_exemplar_id": "ex-biology-075",
+    "subject": "生物",
+    "front": "心拍出量＝{{c1::1回拍出量}} × {{c2::心拍数}}。心拍数＝60 ÷ RR間隔（秒）。成人の安静時心拍出量は約{{c3::5}} L/min。",
+    "back": "心拍出量＝1回拍出量×心拍数。例：1回拍出量60mL、RR間隔0.7秒のとき、心拍数=60/0.7≒86回/分、心拍出量=60×86≒5,160mL/min≒5L/min。Frank-Starling機構により前負荷が増加すると1回拍出量が増加する。",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-075-calculation-006",
+    "knowledge_type": "calculation",
+    "recall_direction": "計算式→心拍出量",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r108-203"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-075-mechanism-007-心筋収縮の機序",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-075-mechanism-007",
+    "primary_exemplar_id": "ex-biology-075",
+    "subject": "生物",
+    "front": "心室筋の脱分極に伴い細胞内{{c1::Ca²⁺}}が増加し、{{c2::トロポニン}}に結合することで心室筋が収縮する。",
+    "back": "Ca²⁺がトロポニンCに結合→トロポミオシンが移動→アクチン-ミオシン相互作用が可能に→筋収縮。心筋は活動電位が長い（約300ms）ため不応期が長く、強縮（テタヌス）を起こさない仕組みになっている。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-075-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "心筋収縮の機序",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r110-111"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-075-mnemonic-008-ゴロ→弁の位置",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-075-mnemonic-008",
+    "primary_exemplar_id": "ex-biology-075",
+    "subject": "生物",
+    "front": "心臓の弁の覚え方「うさんくさそう」とは何を意味するか？",
+    "back": "「う」＝右、「さん」＝三尖弁、「くさ」＝左、「そう」＝僧帽弁。右心房と右心室の間＝三尖弁（3枚の弁尖）、左心房と左心室の間＝僧帽弁（2枚の弁尖）。「右は3」で覚える。",
+    "format": "question_answer",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-075-mnemonic-008",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "ゴロ→弁の位置",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r103-011"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-079-classification-001-細胞→分泌物",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-079-classification-001",
+    "primary_exemplar_id": "ex-biology-079",
+    "subject": "生物",
+    "front": "胃腺の分泌細胞：主細胞＝{{c1::ペプシノーゲン}}、壁細胞＝{{c2::胃酸（塩酸）＋内因子}}、副細胞＝{{c3::粘液}}、G細胞＝{{c4::ガストリン}}。",
+    "back": "主(ペプシノーゲン)・壁(胃酸+内因子)・副(粘液)・G(ガストリン)。覚え方：「胃壁をペロっ！」＝壁細胞がペプシノーゲン…ではなく主細胞。壁細胞の内因子はビタミンB12の吸収に必要。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-079-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "細胞→分泌物",
+    "reverse_of_id": "ex-biology-079-classification-001-分泌物→細胞",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r104-110"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-079-classification-001-分泌物→細胞",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-079-classification-001",
+    "primary_exemplar_id": "ex-biology-079",
+    "subject": "生物",
+    "front": "ビタミンB12の小腸での吸収に必要な内因子を分泌する胃の細胞はどれか？",
+    "back": "壁細胞 — 壁細胞は胃酸（塩酸、H⁺/K⁺-ATPase）と内因子の両方を分泌する。内因子はビタミンB12（コバラミン）と複合体を形成し、回腸末端での吸収を可能にする。壁細胞が障害されると悪性貧血（巨赤芽球性貧血）が生じる。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-079-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "分泌物→細胞",
+    "reverse_of_id": "ex-biology-079-classification-001-細胞→分泌物",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r104-110"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-079-classification-002-位置→名称",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-079-classification-002",
+    "primary_exemplar_id": "ex-biology-079",
+    "subject": "生物",
+    "front": "胃の入口（食道との境界）＝{{c1::噴門}}、胃の出口（十二指腸との境界）＝{{c2::幽門}}。",
+    "back": "入口が噴門、出口が幽門。胃の構造順序：噴門→胃底部→胃体部→幽門。幽門部にはG細胞が集中しガストリンを分泌する。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-079-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "位置→名称",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-110",
+      "r106-011"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-079-classification-003-順序の暗記",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-079-classification-003",
+    "primary_exemplar_id": "ex-biology-079",
+    "subject": "生物",
+    "front": "消化管の順序：口→食道→胃→{{c1::十二指腸}}→空腸→{{c2::回腸}}→盲腸→上行結腸→横行結腸→下行結腸→S状結腸→{{c3::直腸}}→肛門",
+    "back": "十二指腸→空腸→回腸が小腸、盲腸〜直腸が大腸。直腸からの薬物吸収は門脈系を部分的にバイパスするため、初回通過効果を一部回避できる（坐剤の利点）。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-079-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "順序の暗記",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-011"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-079-mechanism-004-受容体→消化管への作用",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-079-mechanism-004",
+    "primary_exemplar_id": "ex-biology-079",
+    "subject": "生物",
+    "front": "消化管運動を亢進させる受容体はどれか？（5-HT₄、μオピオイド、β₂、D₂ から選択）",
+    "back": "5-HT₄受容体 — 5-HT₄受容体刺激→ACh遊離促進→消化管運動亢進。代表薬モサプリド。μオピオイド・β₂・D₂受容体はいずれも消化管運動を抑制する方向に作用する。「5-HT4で4進（前進）」と覚える。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-079-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "受容体→消化管への作用",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-033"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-079-classification-005-臓器→筋層数",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-079-classification-005",
+    "primary_exemplar_id": "ex-biology-079",
+    "subject": "生物",
+    "front": "胃の筋層は何層構造か？各層の名称は？",
+    "back": "3層構造：内斜筋・中輪筋・外縦筋 — 他の消化管（食道・小腸・大腸）は内輪筋・外縦筋の2層構造だが、胃だけは3層。これにより胃は複雑な蠕動運動で食物を撹拌できる。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-079-classification-005",
+    "knowledge_type": "classification",
+    "recall_direction": "臓器→筋層数",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r104-110"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-079-classification-006-神経叢→存在部位",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-079-classification-006",
+    "primary_exemplar_id": "ex-biology-079",
+    "subject": "生物",
+    "front": "マイスネル神経叢は消化管壁の{{c1::粘膜下層}}に、アウエルバッハ神経叢は{{c2::筋層間}}に存在する。",
+    "back": "マイスネル＝粘膜下層（分泌制御）、アウエルバッハ＝筋層間（運動制御）。ヒルシュスプルング病はアウエルバッハ神経叢の先天的欠如により巨大結腸を生じる。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-079-classification-006",
+    "knowledge_type": "classification",
+    "recall_direction": "神経叢→存在部位",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r104-110"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-084-classification-001-前→後の順序",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-084-classification-001",
+    "primary_exemplar_id": "ex-biology-084",
+    "subject": "生物",
+    "front": "眼球の構造（前から順に）：{{c1::角膜}}→{{c2::水晶体}}→{{c3::硝子体}}→{{c4::網膜}}",
+    "back": "角膜（透明な窓）→水晶体（レンズ）→硝子体（ゼリー状の中身）→網膜（スクリーン）。水晶体が濁る＝白内障、眼圧上昇で視神経障害＝緑内障。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-084-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "前→後の順序",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-011",
+      "r109-112"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-084-mechanism-002-構造→機能",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-084-mechanism-002",
+    "primary_exemplar_id": "ex-biology-084",
+    "subject": "生物",
+    "front": "毛様体の2つの機能：①{{c1::眼房水の産生}}（眼圧維持）、②{{c2::焦点調節}}（毛様体筋による水晶体の厚さ変化）。",
+    "back": "毛様体＝眼房水の工場＋ピント調節。眼房水はシュレム管から排出され、排出障害→眼圧上昇→緑内障。虹彩は瞳孔サイズ（絞り）の調節で、焦点調節ではない。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-084-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "構造→機能",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r109-112"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-084-classification-003-特徴→構造",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-084-classification-003",
+    "primary_exemplar_id": "ex-biology-084",
+    "subject": "生物",
+    "front": "眼球で血管が存在しない透明な組織を2つ挙げよ。",
+    "back": "角膜と水晶体 — どちらも光を透過させるため血管がなく、栄養は涙液や房水から得ている。角膜の透明性が失われると視力障害、水晶体が濁ると白内障となる。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-084-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "特徴→構造",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r109-112",
+      "r111-218"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-084-classification-004-脳神経番号→感覚",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-084-classification-004",
+    "primary_exemplar_id": "ex-biology-084",
+    "subject": "生物",
+    "front": "感覚に関わる脳神経：第1＝{{c1::嗅神経}}（嗅覚）、第2＝{{c2::視神経}}（視覚）、第8＝{{c3::内耳神経}}（聴覚・平衡覚）。",
+    "back": "第1嗅・第2視・第8聴。語呂「嗅いで見る動く車の三の外、顔聞く舌は迷う副舌」。アミノグリコシド系抗菌薬は第8脳神経障害（聴覚障害・平衡障害）が重大な副作用。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-084-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "脳神経番号→感覚",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r109-011"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-084-classification-005-音の伝達順序",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-084-classification-005",
+    "primary_exemplar_id": "ex-biology-084",
+    "subject": "生物",
+    "front": "音の伝達経路：外耳→{{c1::鼓膜}}→{{c2::耳小骨}}（ツチ骨・キヌタ骨・アブミ骨）→{{c3::蝸牛}}（コルチ器）→聴神経。",
+    "back": "鼓膜→耳小骨→蝸牛の順。耳小骨は人体最小の骨で3つ（ツチ・キヌタ・アブミ）。蝸牛のコルチ器が聴覚受容器。平衡感覚は前庭・半規管が担当。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-084-classification-005",
+    "knowledge_type": "classification",
+    "recall_direction": "音の伝達順序",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-011"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-084-mechanism-006-涙液→抗菌成分",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-084-mechanism-006",
+    "primary_exemplar_id": "ex-biology-084",
+    "subject": "生物",
+    "front": "涙液に含まれる抗菌性の酵素は何か？",
+    "back": "リゾチーム — 細菌の細胞壁（ペプチドグリカン）のβ-1,4結合を加水分解して溶菌する酵素。涙液のほか唾液・鼻汁にも含まれ、自然免疫の一部として機能する。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-084-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "涙液→抗菌成分",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r111-218"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-084-classification-007-構造→機能の区別",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-084-classification-007",
+    "primary_exemplar_id": "ex-biology-084",
+    "subject": "生物",
+    "front": "虹彩と毛様体は、それぞれ眼球のどのような調節を担うか？",
+    "back": "虹彩＝瞳孔の大きさ調節（カメラの絞り）、毛様体＝焦点調節（水晶体の厚さを変える）。虹彩には瞳孔散大筋（交感神経→散瞳）と瞳孔括約筋（副交感神経→縮瞳）がある。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-084-classification-007",
+    "knowledge_type": "classification",
+    "recall_direction": "構造→機能の区別",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r109-112"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-087-mechanism-001-膜電位変化→イオン",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-087-mechanism-001",
+    "primary_exemplar_id": "ex-biology-087",
+    "subject": "生物",
+    "front": "神経細胞の膜電位変化：脱分極＝{{c1::Na⁺}}が細胞内へ流入、再分極＝{{c2::K⁺}}が細胞外へ流出、過分極＝{{c3::Cl⁻}}が細胞内へ流入。",
+    "back": "Na⁺で興奮、K⁺で戻る、Cl⁻で抑制。静止膜電位（約-60〜-90mV）は主にK⁺チャネルのK⁺流出で形成される。GABAₐ受容体はCl⁻チャネル内蔵型で、Cl⁻流入により過分極を引き起こす。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-087-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "膜電位変化→イオン",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-112"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-087-mechanism-002-GABA→イオンチャネル→効果",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-087-mechanism-002",
+    "primary_exemplar_id": "ex-biology-087",
+    "subject": "生物",
+    "front": "GABAₐ受容体は{{c1::Cl⁻}}チャネル内蔵型受容体で、GABA結合によりCl⁻が流入し{{c2::過分極}}（抑制性シナプス後電位）が生じる。",
+    "back": "GABAₐ＝Cl⁻チャネル内蔵型→過分極＝神経活動抑制。ベンゾジアゼピン系はGABAₐ受容体のCl⁻チャネル開口頻度を増加させて機能増強する（直接開口はバルビツール酸系）。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-087-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "GABA→イオンチャネル→効果",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-112"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-087-mechanism-003-合成経路の順序",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-087-mechanism-003",
+    "primary_exemplar_id": "ex-biology-087",
+    "subject": "生物",
+    "front": "カテコールアミンの生合成経路：{{c1::チロシン}}→ドパ→{{c2::ドパミン}}→{{c3::ノルアドレナリン}}→アドレナリン。律速酵素は{{c4::チロシン水酸化酵素}}。",
+    "back": "チロ→ドパ→ドパミン→ノルアド→アド。ドパからカテコールアミンになる（ドパはまだアミノ酸＝COOHがある）。脱炭酸でドパミンに。ドパミンβ水酸化酵素の補因子はビタミンC。PNMT（N-メチル転移酵素）でノルアド→アド。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-087-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "合成経路の順序",
+    "reverse_of_id": "ex-biology-087-mechanism-003-前駆体→生成物",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r105-013"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-087-mechanism-003-前駆体→生成物",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-087-mechanism-003",
+    "primary_exemplar_id": "ex-biology-087",
+    "subject": "生物",
+    "front": "アドレナリンの前駆体として利用されるアミノ酸はどれか？",
+    "back": "チロシン — チロシン（水酸基付きフェニルアラニン）がカテコールアミン合成の出発物質。ヒスチジン→ヒスタミン、トリプトファン→セロトニンと区別する。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-087-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "前駆体→生成物",
+    "reverse_of_id": "ex-biology-087-mechanism-003-合成経路の順序",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r105-013"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-087-mechanism-004-前駆体→神経伝達物質",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-087-mechanism-004",
+    "primary_exemplar_id": "ex-biology-087",
+    "subject": "生物",
+    "front": "セロトニンの生合成：{{c1::トリプトファン}}→水酸化→5-ヒドロキシトリプトファン→脱炭酸→{{c2::セロトニン}}",
+    "back": "トリプトファン→（水酸化）→5-HTP→（脱炭酸）→セロトニン（5-HT）。チロシン→カテコールアミン、ヒスチジン→ヒスタミンと並ぶ「アミノ酸→脱炭酸→アミン」のパターン。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-087-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "前駆体→神経伝達物質",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-221"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-087-mechanism-005-AChの構造的特徴",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-087-mechanism-005",
+    "primary_exemplar_id": "ex-biology-087",
+    "subject": "生物",
+    "front": "アセチルコリン（ACh）は分子内に{{c1::4級アンモニウム基}}をもつ。コリンの取り込みは{{c2::コリントランスポーター}}による（モノアミントランスポーターではない）。",
+    "back": "AChは4級アンモニウム（N⁺に4つの置換基）で永久荷電→BBB通過不可。コリンはモノアミンではないため、モノアミントランスポーターでは取り込まれない。真性ChE（AChE）はACh特異的、偽性ChE（BuChE）は基質特異性が低い。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-087-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "AChの構造的特徴",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r106-111"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-087-mechanism-006-M2受容体→心臓への効果",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-087-mechanism-006",
+    "primary_exemplar_id": "ex-biology-087",
+    "subject": "生物",
+    "front": "心臓の洞房結節でM2受容体が刺激されると{{c1::K⁺チャネル}}が開口し{{c2::過分極}}が生じ、心拍数が{{c3::減少}}する。",
+    "back": "M2→Gi→K⁺チャネル開口→過分極→心拍数低下。迷走神経（副交感神経）終末からAChが放出されM2受容体を刺激。アトロピンはM受容体を遮断して心拍数を増加させる。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-087-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "M2受容体→心臓への効果",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-111"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-087-mechanism-007-代謝経路",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-087-mechanism-007",
+    "primary_exemplar_id": "ex-biology-087",
+    "subject": "生物",
+    "front": "ドパミンの代謝：{{c1::MAO}}による酸化的脱アミノ化と{{c2::COMT}}による水酸基のメチル化の2経路で代謝される。",
+    "back": "MAO（モノアミン酸化酵素）とCOMT（カテコール-O-メチル基転移酵素）の併用で代謝。ドパミンの最終代謝物はホモバニリン酸（HVA）。セレギリンはMAO-B阻害薬、エンタカポンはCOMT阻害薬（パーキンソン病治療に使用）。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-087-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "代謝経路",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r102-221"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-090-classification-001-臓器→ホルモン",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-090-classification-001",
+    "primary_exemplar_id": "ex-biology-090",
+    "subject": "生物",
+    "front": "甲状腺から分泌されるホルモン：濾胞上皮細胞→{{c1::T₃（トリヨードチロニン）・T₄（チロキシン）}}、傍濾胞細胞（C細胞）→{{c2::カルシトニン}}。",
+    "back": "甲状腺＝「T3・T4・カルシトニン工場」。T3/T4は代謝亢進、カルシトニンは血中Ca²⁺低下作用。TSH（甲状腺刺激ホルモン）は甲状腺を刺激する側で下垂体前葉から分泌される（混同注意）。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-090-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "臓器→ホルモン",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-011"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-090-classification-002-層→ホルモン",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-090-classification-002",
+    "primary_exemplar_id": "ex-biology-090",
+    "subject": "生物",
+    "front": "副腎皮質の3層：球状層→{{c1::鉱質コルチコイド（アルドステロン）}}、束状層→{{c2::糖質コルチコイド（コルチゾール）}}、網状層→{{c3::アンドロゲン}}。",
+    "back": "語呂「球束網＝鉱糖ア（こうとうあ）」。球状→鉱質（Na再吸収）、束状→糖質（血糖上昇）、網状→アンドロゲン。副腎髄質はアドレナリン・ノルアドレナリンを分泌（皮質とは別）。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-090-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "層→ホルモン",
+    "reverse_of_id": "ex-biology-090-classification-002-ホルモン→層",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r106-012"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-090-classification-002-ホルモン→層",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-090-classification-002",
+    "primary_exemplar_id": "ex-biology-090",
+    "subject": "生物",
+    "front": "コルチゾールは副腎皮質のどの層から分泌されるか？",
+    "back": "束状層 — コルチゾール（糖質コルチコイド）の過剰分泌＝クッシング症候群、不足＝アジソン病。束状層は副腎皮質の中間層で最も厚い。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-090-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "ホルモン→層",
+    "reverse_of_id": "ex-biology-090-classification-002-層→ホルモン",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-012"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-090-classification-003-前葉/後葉→分泌様式",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-090-classification-003",
+    "primary_exemplar_id": "ex-biology-090",
+    "subject": "生物",
+    "front": "下垂体前葉と後葉のホルモン分泌の違いは？",
+    "back": "前葉＝門脈経由で視床下部ホルモンの調節を受けて自ら合成・分泌。後葉＝視床下部で合成されたホルモン（オキシトシン・バソプレシン）が神経軸索を通って後葉から放出される。語呂「おばさんは後ろから」（お＝オキシトシン、ば＝バソプレシン、後ろ＝後葉）。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-090-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "前葉/後葉→分泌様式",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r105-111"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-090-mechanism-004-ドパミン→プロラクチンへの効果",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-090-mechanism-004",
+    "primary_exemplar_id": "ex-biology-090",
+    "subject": "生物",
+    "front": "ドパミンは下垂体{{c1::前葉}}からの{{c2::プロラクチン}}の分泌を抑制する（PIF＝プロラクチン放出抑制因子）。",
+    "back": "ドパミン＝PIF（プロラクチン放出抑制因子）。ドパミンD₂受容体拮抗薬（メトクロプラミド、ドンペリドン、抗精神病薬など）→プロラクチン分泌亢進→高プロラクチン血症（乳汁漏出・月経異常）。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-090-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ドパミン→プロラクチンへの効果",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r105-111"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-090-mechanism-005-ホルモン→産生細胞",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-090-mechanism-005",
+    "primary_exemplar_id": "ex-biology-090",
+    "subject": "生物",
+    "front": "テストステロンは精巣の{{c1::ライディッヒ細胞（間質細胞）}}で産生される。テストステロンに{{c2::アロマターゼ}}が作用すると{{c3::エストラジオール}}が合成される。",
+    "back": "ライディッヒ細胞＝テストステロン産生（セルトリ細胞は精子形成維持）。アロマターゼはA環を芳香環化する酵素。乳がん治療薬のアナストロゾール・レトロゾールはアロマターゼ阻害薬。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-090-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ホルモン→産生細胞",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-224"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-090-mechanism-006-ホルモン→腎臓での作用",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-090-mechanism-006",
+    "primary_exemplar_id": "ex-biology-090",
+    "subject": "生物",
+    "front": "アルドステロンは遠位尿細管・集合管でNa⁺の{{c1::再吸収}}を促進し、K⁺の{{c2::排泄}}を促進する。結果として水の再吸収も増加し体液量が{{c3::増大}}する。",
+    "back": "アルドステロン→Na⁺再吸収↑・K⁺排泄↑→水再吸収↑→体液量増大→血圧上昇。スピロノラクトン・エプレレノンはアルドステロン受容体拮抗薬（K⁺保持性利尿薬）で高K⁺血症に注意。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-090-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ホルモン→腎臓での作用",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-012"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-090-mechanism-007-ソマトスタチン→効果",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-090-mechanism-007",
+    "primary_exemplar_id": "ex-biology-090",
+    "subject": "生物",
+    "front": "ソマトスタチンは成長ホルモンの分泌を促進するか抑制するか？",
+    "back": "抑制する — ソマトスタチンは視床下部から分泌され、下垂体前葉からの成長ホルモン分泌を抑制する。膵臓のD細胞からも分泌され、インスリン・グルカゴンの分泌も抑制する。オクトレオチドはソマトスタチンアナログ（先端巨大症に使用）。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-090-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ソマトスタチン→効果",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r105-111"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-094-mechanism-001-ホルモン→トランスポーター→効果",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-094-mechanism-001",
+    "primary_exemplar_id": "ex-biology-094",
+    "subject": "生物",
+    "front": "インスリンは{{c1::GLUT4}}のトランスロケーション（細胞膜への移行）を促進し、筋肉・脂肪組織への{{c2::グルコース取り込み}}を促進して血糖値を低下させる。",
+    "back": "インスリン→GLUT4が細胞内小胞から細胞膜へ移動→グルコース取り込み↑。GLUT4はインスリン依存性の唯一のグルコーストランスポーター。GLUT2（肝臓・膵β細胞）やSGLT1（小腸）はインスリン非依存性。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-094-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ホルモン→トランスポーター→効果",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-219",
+      "r102-121"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-094-mechanism-002-回路名→経路",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-094-mechanism-002",
+    "primary_exemplar_id": "ex-biology-094",
+    "subject": "生物",
+    "front": "コリ回路：筋肉で嫌気的代謝により生成した{{c1::乳酸}}が{{c2::肝臓}}に運ばれ、糖新生により{{c3::グルコース}}に変換される。",
+    "back": "筋肉→乳酸→（血液）→肝臓→グルコース→（血液）→筋肉の循環経路。筋肉にはグルコース6-ホスファターゼがないため、筋グリコーゲンからグルコースを血中に直接放出できない（肝臓と異なる点）。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-094-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "回路名→経路",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-219"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-094-classification-003-トランスポーター→分布・特徴",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-094-classification-003",
+    "primary_exemplar_id": "ex-biology-094",
+    "subject": "生物",
+    "front": "グルコーストランスポーター：SGLT1＝{{c1::小腸}}（Na⁺共輸送で吸収）、GLUT2＝{{c2::肝臓・小腸側底膜}}、GLUT4＝{{c3::筋肉・脂肪（インスリン依存性）}}。",
+    "back": "SGLT1＝小腸管腔側のNa⁺共輸送体（能動輸送）、GLUT2＝肝臓・膵β細胞・小腸側底膜（低親和性・高容量）、GLUT4＝筋肉・脂肪組織（インスリンでトランスロケーション）。SGLT2は腎近位尿細管でグルコース再吸収（SGLT2阻害薬＝カナグリフロジン等）。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-094-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "トランスポーター→分布・特徴",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-121"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-094-classification-004-細胞→ホルモン",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-094-classification-004",
+    "primary_exemplar_id": "ex-biology-094",
+    "subject": "生物",
+    "front": "膵ランゲルハンス島：A（α）細胞＝{{c1::グルカゴン}}（血糖↑）、B（β）細胞＝{{c2::インスリン}}（血糖↓）、D（δ）細胞＝{{c3::ソマトスタチン}}。",
+    "back": "A＝グルカゴン（血糖上昇）、B＝インスリン（血糖低下）、D＝ソマトスタチン（A・B両方を抑制）。インスリンの主な作用：グルコース取り込み↑、グリコーゲン合成↑、脂肪合成↑、タンパク質合成↑。グルカゴンは逆の作用。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-094-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "細胞→ホルモン",
+    "reverse_of_id": "ex-biology-094-classification-004-ホルモン→細胞",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r102-121"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-094-classification-004-ホルモン→細胞",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-094-classification-004",
+    "primary_exemplar_id": "ex-biology-094",
+    "subject": "生物",
+    "front": "グルカゴンを分泌する膵ランゲルハンス島の細胞は何か？",
+    "back": "A（α）細胞 — グルカゴンは肝臓でグリコーゲン分解と糖新生を促進し血糖値を上昇させる。低血糖時に分泌が亢進する。B（β）細胞のインスリンと拮抗的に血糖を調節する。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-094-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "ホルモン→細胞",
+    "reverse_of_id": "ex-biology-094-classification-004-細胞→ホルモン",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-121"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-094-mechanism-005-空腹時→血糖維持の仕組み",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-094-mechanism-005",
+    "primary_exemplar_id": "ex-biology-094",
+    "subject": "生物",
+    "front": "空腹時の血糖値はどの臓器が維持しているか？筋肉から血中にグルコースは放出されるか？",
+    "back": "肝臓が維持する（筋肉からは放出されない）— 肝臓はグリコーゲン分解と糖新生によりグルコースを血中に放出する。筋肉にはグルコース6-ホスファターゼがないため、グルコースを直接血中に放出できない。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-094-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "空腹時→血糖維持の仕組み",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-121"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-094-mechanism-006-酵素→反応",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-094-mechanism-006",
+    "primary_exemplar_id": "ex-biology-094",
+    "subject": "生物",
+    "front": "アルドース還元酵素はグルコースの1位（アルデヒド基）を{{c1::還元}}して{{c2::ソルビトール}}に変換する。阻害薬は{{c3::エパルレスタット}}。",
+    "back": "グルコース→（アルドース還元酵素）→ソルビトール→（ソルビトール脱水素酵素）→フルクトース。糖尿病ではポリオール経路の亢進によりソルビトールが蓄積し、末梢神経障害を引き起こす。エパルレスタットはこの経路を阻害し糖尿病性神経障害を改善する。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-094-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "酵素→反応",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r111-220"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-105-classification-001-由来→細胞",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-105-classification-001",
+    "primary_exemplar_id": "ex-biology-105",
+    "subject": "生物",
+    "front": "{{c1::単球}}が組織に移行して分化した細胞が{{c2::マクロファージ}}であり、強い{{c3::貪食能}}と抗原提示能を有する。",
+    "back": "単球（血液中）→マクロファージ（組織中）。マクロ(大きい)+ファージ(食べる)＝大食い細胞。貪食だけでなくMHC II分子を介してT細胞に抗原提示する機能も持つ。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-105-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "由来→細胞",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-015"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-105-classification-002-CD分子→T細胞タイプ",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-105-classification-002",
+    "primary_exemplar_id": "ex-biology-105",
+    "subject": "生物",
+    "front": "T細胞の分類：{{c1::CD4}}陽性＝ヘルパーT細胞（Th1/Th2/Th17に分類）、{{c2::CD8}}陽性＝キラーT細胞。キラーT細胞はMHC{{c3::クラスI}}を認識する。",
+    "back": "CD4＝ヘルパーT→Th1/Th2/Th17。CD8＝キラーT→MHC I認識。ヘルパーTはMHC II認識。CD4とCD8を混同する問題が頻出（第106回r106-117の選択肢3と5で出題）。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-105-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "CD分子→T細胞タイプ",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r106-117"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-105-mechanism-003-分子→機能",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-105-mechanism-003",
+    "primary_exemplar_id": "ex-biology-105",
+    "subject": "生物",
+    "front": "T細胞表面のCD28とCTLA-4はそれぞれどのようなシグナルを伝えるか？",
+    "back": "CD28＝共刺激シグナル（T細胞活性化を促進）、CTLA-4＝抑制性シグナル（T細胞活性化を抑制）。がん免疫療法：イピリムマブはCTLA-4抗体でT細胞のブレーキを外す。PD-1/PD-L1も同様の免疫チェックポイント。",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-105-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "分子→機能",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-116"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-105-classification-004-NK細胞→特徴",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-105-classification-004",
+    "primary_exemplar_id": "ex-biology-105",
+    "subject": "生物",
+    "front": "NK（ナチュラルキラー）細胞は{{c1::自然免疫}}系のリンパ球で、{{c2::抗原感作なし}}で腫瘍細胞やウイルス感染細胞を傷害し、{{c3::IFN-γ}}も産生する。",
+    "back": "NK細胞＝自然免疫のリンパ球。抗原感作不要で即座に細胞傷害活性を発揮する点がキラーT細胞（獲得免疫＝抗原感作必要）と異なる。IFN-γはマクロファージ活性化やTh1分化を促進。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-105-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "NK細胞→特徴",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-116",
+      "r106-117"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-105-classification-005-一次/二次リンパ器官→機能",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-105-classification-005",
+    "primary_exemplar_id": "ex-biology-105",
+    "subject": "生物",
+    "front": "一次リンパ器官：{{c1::骨髄}}（B細胞の分化・成熟）＋{{c2::胸腺}}（T細胞の正・負の選択）。二次リンパ器官：リンパ節・{{c3::脾臓}}・パイエル板。",
+    "back": "骨髄＝B細胞成熟、胸腺＝T細胞の選択（自己反応性T細胞の除去＝負の選択）。脾臓は老化赤血球除去＋血中抗原への免疫応答。パイエル板はM細胞を介した腸管免疫の場。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-105-classification-005",
+    "knowledge_type": "classification",
+    "recall_direction": "一次/二次リンパ器官→機能",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-117"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-105-mechanism-006-M細胞→腸管免疫",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-105-mechanism-006",
+    "primary_exemplar_id": "ex-biology-105",
+    "subject": "生物",
+    "front": "小腸のパイエル板では、上皮層の{{c1::M細胞}}（microfold cell）を介して抗原が取り込まれ、その下の{{c2::免疫細胞}}（B/T/NK細胞等）が免疫応答を開始する。",
+    "back": "M細胞＝腸管免疫の入り口。M細胞が管腔側の抗原を取り込み、パイエル板内の免疫細胞に抗原提示→IgA産生等の粘膜免疫が誘導される。経口ワクチンの標的としても重要。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-105-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "M細胞→腸管免疫",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r107-117"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-105-mechanism-007-抗体産生の流れ",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-105-mechanism-007",
+    "primary_exemplar_id": "ex-biology-105",
+    "subject": "生物",
+    "front": "抗原認識したB細胞は{{c1::ヘルパーT細胞（Th2）}}の補助を受けて{{c2::形質細胞}}に分化し、大量の{{c3::抗体}}を産生する。",
+    "back": "B細胞→Th2の補助（IL-4等）→形質細胞→抗体産生。Fc受容体は抗体のFc部分と結合する受容体で、マクロファージ等に発現（外来菌体と直接結合するのではない）。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-105-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "抗体産生の流れ",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-116"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-110-classification-001-Igクラス→特徴",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-110-classification-001",
+    "primary_exemplar_id": "ex-biology-110",
+    "subject": "生物",
+    "front": "免疫グロブリン：IgG＝{{c1::血中最多・胎盤通過}}、IgA＝{{c2::粘膜分泌型・二量体}}、IgM＝{{c3::一次免疫で最初・五量体}}、IgE＝{{c4::アレルギー（I型）}}、IgD＝B細胞表面。",
+    "back": "IgG（血中最多・胎盤通過）、IgA（粘膜防御・母乳中に豊富）、IgM（五量体・初期免疫）、IgE（肥満細胞のFcεRI結合・即時型アレルギー）、IgD（B細胞分化に関与）。語呂「GAMEDで覚える」。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-110-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "Igクラス→特徴",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r102-015",
+      "r104-015"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-110-mechanism-002-応答の種類→抗体パターン",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-110-mechanism-002",
+    "primary_exemplar_id": "ex-biology-110",
+    "subject": "生物",
+    "front": "一次免疫応答と二次免疫応答で産生される抗体の主なクラスの違いは？",
+    "back": "一次応答＝IgMが先に出る→IgGが遅れて出現。二次応答＝記憶B細胞により迅速かつ大量のIgGが産生される。「2回目はIgGが主役」と覚える。二次応答の急激な抗体価上昇は獲得免疫の特徴（自然免疫ではない）。",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-110-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "応答の種類→抗体パターン",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-119",
+      "r102-015"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-110-mechanism-003-クラススイッチ→分子機構",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-110-mechanism-003",
+    "primary_exemplar_id": "ex-biology-110",
+    "subject": "生物",
+    "front": "抗体のクラススイッチはDNAレベルの{{c1::遺伝子組換え}}（スイッチ領域の組換え）で起こる。変化するのは{{c2::H鎖（重鎖）}}の定常部で、可変部は変わらない。",
+    "back": "クラススイッチ＝V領域不変でC領域が変化（IgM→IgG/IgA/IgE等）。ほとんどがDNA組換え（唯一IgM→IgDのみRNAスプライシング）。T細胞のサイトカインで制御：IL-4→IgE、TGF-β→IgA、IFN-γ→IgG。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-110-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "クラススイッチ→分子機構",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-119",
+      "r109-117"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-110-classification-004-母乳中の抗体→クラス",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-110-classification-004",
+    "primary_exemplar_id": "ex-biology-110",
+    "subject": "生物",
+    "front": "母乳中で二量体として存在し、乳児の感染防御を担う免疫グロブリンはどれか？",
+    "back": "IgA — 血清中では単量体だが、分泌液中（母乳・唾液・腸液）では分泌型IgAとして二量体で存在する。初乳に特に豊富で新生児の消化管粘膜免疫を担う。分泌成分（secretory component）が付加されてプロテアーゼに抵抗性を持つ。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-110-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "母乳中の抗体→クラス",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r104-015"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-110-classification-005-IgG領域→機能",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-110-classification-005",
+    "primary_exemplar_id": "ex-biology-110",
+    "subject": "生物",
+    "front": "IgGの構造：{{c1::Fab}}部＝抗原結合、{{c2::Fc}}部＝エフェクター機能（マクロファージFcγ受容体結合・補体活性化）。2本のH鎖は{{c3::ヒンジ部}}のS-S結合で連結。",
+    "back": "Fab＝Fragment antigen binding、Fc＝Fragment crystallizable。Fc部にN結合型糖鎖が存在。サブクラス（IgG1〜4）はH鎖定常部で決定される。パパインで消化するとFab×2+Fc×1に分かれる。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-110-classification-005",
+    "knowledge_type": "classification",
+    "recall_direction": "IgG領域→機能",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r107-118"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-110-classification-006-語尾→抗体の種類",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-110-classification-006",
+    "primary_exemplar_id": "ex-biology-110",
+    "subject": "生物",
+    "front": "抗体医薬品の語尾：-{{c1::ximab}}＝キメラ型（例：リツキシマブ）、-{{c2::zumab}}＝ヒト化型（例：トラスツズマブ）、-{{c3::mumab}}＝完全ヒト型（例：アダリムマブ）。",
+    "back": "キメラ型＝可変部全体がマウス由来・定常部がヒト由来。ヒト化型＝CDR（相補性決定領域）のみマウス由来。完全ヒト型＝全てヒト由来。マウス由来部分が多いほどHACA（ヒト抗マウス抗体）産生リスクが高い。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-110-classification-006",
+    "knowledge_type": "classification",
+    "recall_direction": "語尾→抗体の種類",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-219"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-110-mechanism-007-胎盤通過→Igクラス",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-110-mechanism-007",
+    "primary_exemplar_id": "ex-biology-110",
+    "subject": "生物",
+    "front": "胎盤を通過して母体から胎児に移行する免疫グロブリンのクラスはどれか？",
+    "back": "IgGのみ — 5種のIgの中でIgGだけが胎盤のFcRn（胎児性Fc受容体）を介して胎盤を通過する。出生後約3ヶ月で母体由来IgGが減少し自己のIgG産生がまだ不十分なため、この時期が感染抵抗力が最も低い。抗体医薬品（IgG製剤）も胎盤通過しうるため妊婦への投与は慎重に。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-110-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "胎盤通過→Igクラス",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r108-117"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-110-mechanism-008-サイトカイン→Igクラス",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-110-mechanism-008",
+    "primary_exemplar_id": "ex-biology-110",
+    "subject": "生物",
+    "front": "クラススイッチのサイトカイン制御：{{c1::IL-4}}→IgEへ、{{c2::TGF-β}}→IgAへ、{{c3::IFN-γ}}→IgGへ。",
+    "back": "IL-4→IgE（アレルギーの元凶）、TGF-β→IgA（粘膜免疫）、IFN-γ→IgG（オプソニン化等）。Th2からはIL-4が多く分泌されるため、Th2優位でIgE産生が増加しアレルギー体質になる。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-110-mechanism-008",
+    "knowledge_type": "mechanism",
+    "recall_direction": "サイトカイン→Igクラス",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r109-117"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-112-classification-001-型→特徴",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-112-classification-001",
+    "primary_exemplar_id": "ex-biology-112",
+    "subject": "生物",
+    "front": "アレルギーの4分類：I型＝{{c1::即時型（IgE）}}、II型＝{{c2::細胞障害型（IgG/IgM）}}、III型＝{{c3::免疫複合体型}}、IV型＝{{c4::遅延型（T細胞）}}。",
+    "back": "語呂「1アナ、2細胞、3免疫複合体、4遅延」。I型はIgEが肥満細胞のFcεRIに結合→再曝露で脱顆粒。II型は細胞表面の抗原に抗体結合→補体やADCC。III型は免疫複合体沈着→補体活性化。IV型はT細胞介在→48時間後ピーク。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-112-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "型→特徴",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-120",
+      "r104-064",
+      "r105-015"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-112-classification-002-疾患→アレルギー型",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-112-classification-002",
+    "primary_exemplar_id": "ex-biology-112",
+    "subject": "生物",
+    "front": "I型：花粉症・気管支喘息・蕁麻疹・{{c1::アナフィラキシー}}。II型：薬剤性溶血性貧血。III型：SLE・{{c2::急性糸球体腎炎}}。IV型：{{c3::接触性皮膚炎}}・ツベルクリン反応。",
+    "back": "I型＝即時型（IgE介在）、II型＝細胞障害型、III型＝免疫複合体沈着型、IV型＝遅延型（T細胞介在）。急性糸球体腎炎はA群β溶血性連鎖球菌感染後1-3週で発症（III型）。接触性皮膚炎の検査はパッチテスト。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-112-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "疾患→アレルギー型",
+    "reverse_of_id": "ex-biology-112-classification-002-アレルギー型→疾患",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-186",
+      "r101-120",
+      "r104-064",
+      "r105-015"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-112-classification-002-アレルギー型→疾患",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-112-classification-002",
+    "primary_exemplar_id": "ex-biology-112",
+    "subject": "生物",
+    "front": "IV型アレルギーに分類される代表的な疾患を2つ挙げよ。",
+    "back": "接触性皮膚炎とツベルクリン反応 — IV型は遅延型（48時間後にピーク）でT細胞が主体。ウルシかぶれも接触性皮膚炎（IV型）。スギ花粉症・アトピー性皮膚炎はI型なので区別する。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-112-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "アレルギー型→疾患",
+    "reverse_of_id": "ex-biology-112-classification-002-疾患→アレルギー型",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-186",
+      "r101-120",
+      "r104-064",
+      "r105-015"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-112-mechanism-003-I型の機序の流れ",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-112-mechanism-003",
+    "primary_exemplar_id": "ex-biology-112",
+    "subject": "生物",
+    "front": "I型アレルギーの機序：アレルゲン→Th2→B細胞→{{c1::IgE}}産生→肥満細胞上の{{c2::FcεRI}}に結合（感作）→再曝露でアレルゲン架橋→{{c3::ケミカルメディエーター}}（ヒスタミン等）放出。",
+    "back": "Th2→IL-4→B細胞→形質細胞→IgE産生→肥満細胞のFcεRIに結合（感作状態）。同一抗原の再侵入でIgEが架橋→脱顆粒→ヒスタミン・ロイコトリエン等の放出→即時型症状（数分〜30分以内）。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-112-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "I型の機序の流れ",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-120",
+      "r104-224"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-112-mechanism-004-IgE産生→制御するT細胞",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-112-mechanism-004",
+    "primary_exemplar_id": "ex-biology-112",
+    "subject": "生物",
+    "front": "IgE抗体の産生を促進するのはTh1細胞かTh2細胞か？",
+    "back": "Th2細胞 — Th2がIL-4を産生→B細胞にIgEへのクラススイッチを誘導→形質細胞がIgEを産生。Th1はIFN-γを産生しIgEへのスイッチを抑制する方向に働く。T細胞自体は抗体を産生しない（抗体を産生するのはB細胞由来の形質細胞）。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-112-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "IgE産生→制御するT細胞",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r105-296"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-112-mechanism-005-花粉症→病態",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-112-mechanism-005",
+    "primary_exemplar_id": "ex-biology-112",
+    "subject": "生物",
+    "front": "花粉症（I型アレルギー）の鼻閉には、ヒスタミン・ロイコトリエンによる鼻粘膜の{{c1::血管透過性亢進}}が関与する。鼻汁中の{{c2::好酸球}}は増加する。",
+    "back": "花粉症の3主徴：くしゃみ・水様性鼻汁・鼻閉。ヒスタミン→くしゃみ・鼻汁、ロイコトリエン→鼻閉（血管透過性亢進→粘膜浮腫）。アレルゲン特定にはスクラッチテスト・プリックテストが有用。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-112-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "花粉症→病態",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r110-288"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-112-mechanism-006-症候群→関連食品",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-112-mechanism-006",
+    "primary_exemplar_id": "ex-biology-112",
+    "subject": "生物",
+    "front": "ラテックス-フルーツ症候群：天然ゴム（ラテックス）と{{c1::栗・バナナ・アボカド・キウイ}}に含まれる成分に共通のエピトープが存在し、{{c2::I型}}アレルギーの交差反応を示す。",
+    "back": "ラテックスアレルゲンと果物のキチナーゼ等に構造的相同性→交差反応→I型アレルギー。ラテックスアレルギー患者には天然ゴム製品（手袋等）を避け、ニトリル手袋等の代替品を使用する。医療従事者にも多い。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-112-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "症候群→関連食品",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r105-228",
+      "r105-229"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-112-mechanism-007-治療法→原理",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-112-mechanism-007",
+    "primary_exemplar_id": "ex-biology-112",
+    "subject": "生物",
+    "front": "スギ花粉症の舌下免疫療法（シダキュア）とはどのような治療法か？",
+    "back": "少量のアレルゲン（スギ花粉エキス）を舌下投与し、段階的に増量して免疫寛容を誘導する減感作療法。花粉飛散シーズン後に開始し3〜5年継続。生ワクチンと同様に細胞性免疫も誘導される。服用前後の激しい運動は避ける。成分量は段階的に増量（減量ではない）。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-112-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "治療法→原理",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r108-217"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-112-classification-008-疾患→原因・型",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-112-classification-008",
+    "primary_exemplar_id": "ex-biology-112",
+    "subject": "生物",
+    "front": "急性糸球体腎炎：{{c1::A群β溶血性連鎖球菌}}感染後に発症、{{c2::III型}}アレルギー（免疫複合体型）。3徴＝{{c3::血尿・タンパク尿・浮腫}}。",
+    "back": "A群β溶連菌の上気道感染後1-3週で発症。免疫複合体が糸球体に沈着→補体活性化→糸球体障害→GFR低下。B群溶連菌（新生児感染症の原因）と混同しないこと。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-112-classification-008",
+    "knowledge_type": "classification",
+    "recall_direction": "疾患→原因・型",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r100-186"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-117-classification-001-種類→定義",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-117-classification-001",
+    "primary_exemplar_id": "ex-biology-117",
+    "subject": "生物",
+    "front": "ワクチンの種類：生ワクチン＝{{c1::弱毒化}}した病原体、不活化ワクチン＝{{c2::死滅させた}}病原体・成分、トキソイド＝毒素を{{c3::免疫原性を残したまま無毒化}}したもの。",
+    "back": "生ワクチン＝弱毒化（毒性を弱めた）ウイルス・細菌で細胞性免疫+体液性免疫の両方を誘導。不活化ワクチン＝主に体液性免疫のみ。トキソイド＝ホルマリン処理等で無毒化した毒素（ジフテリア・破傷風が代表）。組換えワクチン＝HBVワクチン（HBs抗原）が代表。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-117-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "種類→定義",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-221",
+      "r104-219"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-117-classification-002-ワクチン種類→免疫の種類",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-117-classification-002",
+    "primary_exemplar_id": "ex-biology-117",
+    "subject": "生物",
+    "front": "生ワクチンと不活化ワクチンでは、誘導する免疫にどのような違いがあるか？",
+    "back": "生ワクチン＝細胞性免疫+体液性免疫の両方を誘導（ウイルスが体内で増殖するため）。不活化ワクチン/トキソイド＝主に体液性免疫のみ。このため生ワクチンの方が一般に長期間の免疫を獲得しやすいが、免疫抑制患者や妊婦には禁忌。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-117-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "ワクチン種類→免疫の種類",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r104-219"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-117-classification-003-ワクチン名→種類",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-117-classification-003",
+    "primary_exemplar_id": "ex-biology-117",
+    "subject": "生物",
+    "front": "生ワクチン：{{c1::BCG・MR（麻しん風しん）・水痘}}。不活化ワクチン：{{c2::インフルエンザ・DPT-IPV・肺炎球菌・HPV}}。",
+    "back": "生ワクチン＝BCG(結核)、MR(麻しん・風しん)、水痘、ロタ等。不活化＝インフルエンザ（HA成分）、DPT-IPV(4種混合)、肺炎球菌(PPSV23/PCV13)、HPV(VLPワクチン)。トキソイド＝ジフテリア(D)、破傷風(T)。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-117-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "ワクチン名→種類",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-129",
+      "r104-219",
+      "r106-226"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-117-classification-004-分類→目的",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-117-classification-004",
+    "primary_exemplar_id": "ex-biology-117",
+    "subject": "生物",
+    "front": "予防接種法のA類疾病とB類疾病の違いは？",
+    "back": "A類＝集団予防目的（努力義務あり）。小児対象：DPT-IPV、MR、BCG、Hib、HPV等。B類＝個人予防目的（努力義務なし）。高齢者インフルエンザ（65歳以上）、高齢者肺炎球菌等。B類でも定期接種なので予防接種健康被害救済制度の対象。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-117-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "分類→目的",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r100-129",
+      "r106-226",
+      "r107-229"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-117-mechanism-005-感染経路→疾患",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-117-mechanism-005",
+    "primary_exemplar_id": "ex-biology-117",
+    "subject": "生物",
+    "front": "空気感染する3大感染症：{{c1::麻しん}}・{{c2::水痘}}・{{c3::結核}}。",
+    "back": "語呂「マスイケツ（麻・水・結）」。麻しんウイルスは飛沫核（空気感染）で伝播する感染力最強のウイルスの一つ。飛沫感染（インフルエンザ等）や接触感染とは異なり、空間に浮遊する微粒子で感染が成立する。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-117-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "感染経路→疾患",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-219"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-117-classification-006-HPVワクチン→特徴",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-117-classification-006",
+    "primary_exemplar_id": "ex-biology-117",
+    "subject": "生物",
+    "front": "HPVワクチンは{{c1::ウイルス様粒子（VLP）}}を用いた{{c2::不活化}}ワクチンで、{{c3::筋肉内注射}}で3回接種（0・1・6ヶ月）。子宮頸がんの予防目的。",
+    "back": "VLP＝ウイルスの殻だけで遺伝子を含まない→感染しない→不活化ワクチンに分類。9価ワクチン（シルガード9）がHPV6/11/16/18/31/33/45/52/58型に対応。感染前の接種が原則（感染後の治療効果はない）。定期接種対象は小6〜高1女子。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-117-classification-006",
+    "knowledge_type": "classification",
+    "recall_direction": "HPVワクチン→特徴",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r110-226"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-117-classification-007-ワクチン名→特徴",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-117-classification-007",
+    "primary_exemplar_id": "ex-biology-117",
+    "subject": "生物",
+    "front": "帯状疱疹ワクチンの生ワクチン（ビケン）と不活化ワクチン（シングリックス）の違いは？",
+    "back": "ビケン＝弱毒生ワクチン→免疫抑制患者には禁忌、1回接種。シングリックス＝組換え不活化ワクチン（VZV糖タンパク質E+AS01Bアジュバント）→免疫抑制患者にも使用可能、2回接種（0・2ヶ月）、2-8℃保存（凍結回避）。50歳以上が対象。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-117-classification-007",
+    "knowledge_type": "classification",
+    "recall_direction": "ワクチン名→特徴",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r108-303",
+      "r110-282"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-117-mechanism-008-インフルエンザワクチン→特徴",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-117-mechanism-008",
+    "primary_exemplar_id": "ex-biology-117",
+    "subject": "生物",
+    "front": "インフルエンザワクチンの主成分は{{c1::HA（ヘマグルチニン）}}タンパク質（不活化ワクチン）。{{c2::鶏卵}}培養で製造されるため卵アレルギーに注意。",
+    "back": "主成分はHA（ヘマグルチニン）でノイラミニダーゼ（NA）ではない。不活化ワクチンなので接種によるインフルエンザ発症はない（弱毒化ワクチンではない）。予防接種法ではB類疾病（65歳以上の定期接種）に分類。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-117-mechanism-008",
+    "knowledge_type": "mechanism",
+    "recall_direction": "インフルエンザワクチン→特徴",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-221",
+      "r107-229"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-117-classification-009-ワクチン名→特徴",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-117-classification-009",
+    "primary_exemplar_id": "ex-biology-117",
+    "subject": "生物",
+    "front": "肺炎球菌ワクチンのPPSV23とPCV13の違いは？",
+    "back": "PPSV23＝23価莢膜多糖体ワクチン（B類定期接種、65歳以上）。PCV13＝13価結合型ワクチン（CRM197をキャリアタンパク質として結合→T細胞依存性抗原に変換→免疫記憶あり）。PCV13のCRM197は無毒化ジフテリア毒素だがジフテリア予防効果はない。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-117-classification-009",
+    "knowledge_type": "classification",
+    "recall_direction": "ワクチン名→特徴",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r106-226"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-120-mechanism-001-mechanism→detail",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-120-mechanism-001",
+    "primary_exemplar_id": "ex-biology-120",
+    "subject": "生物",
+    "front": "サンドイッチELISAでは、プレートに固定化した{{c1::捕捉抗体}}→{{c2::抗原（タンパク質X）}}→{{c3::酵素標識検出抗体}}の順に結合させて定量する。",
+    "back": "捕捉抗体 / 抗原（タンパク質X） / 酵素標識検出抗体\n\n【ポイント】サンドイッチELISAは2種類の抗体で抗原を「挟む」構造。捕捉抗体と検出抗体は抗原の異なるエピトープ（抗原決定基）に結合する。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-120-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mechanism→detail",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-118"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-120-mechanism-002-bond_type→specifics",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-120-mechanism-002",
+    "primary_exemplar_id": "ex-biology-120",
+    "subject": "生物",
+    "front": "ELISAにおいて、抗体と抗原の結合は共有結合か非共有結合か？",
+    "back": "非共有結合（水素結合・静電的相互作用・疎水性相互作用・ファンデルワールス力の複合）\n\n【ポイント】抗原抗体反応は可逆的な非共有結合であり、共有結合は形成しない。この特異性と可逆性がイムノアッセイの基盤となる。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-120-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "bond_type→specifics",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-118"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-120-mechanism-003-purpose→procedure",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-120-mechanism-003",
+    "primary_exemplar_id": "ex-biology-120",
+    "subject": "生物",
+    "front": "サンドイッチELISAでブロッキング操作が必要な理由は何か？",
+    "back": "プレート表面への酵素標識抗体の非特異的吸着を防ぐため\n\n【ポイント】ブロッキングしないと検出抗体がプレートに直接吸着し、抗原量に関係なくシグナルが出てしまう（偽陽性の原因）。BSA（ウシ血清アルブミン）等でブロッキングする。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-120-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "purpose→procedure",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-118"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-120-mechanism-004-structure→function",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-120-mechanism-004",
+    "primary_exemplar_id": "ex-biology-120",
+    "subject": "生物",
+    "front": "イムノクロマトグラフィーでは、{{c1::金コロイド}}で標識した抗体を用い、判定ラインには{{c2::検出対象抗原に対する抗体}}が、コントロールラインには{{c3::標識抗体に対する抗体}}が固定化されている。",
+    "back": "金コロイド / 検出対象抗原に対する抗体 / 標識抗体に対する抗体\n\n【ポイント】コントロールラインは「検査キット自体が正常に作動したか」を確認する対照。判定ラインに色が出れば陽性、コントロールラインのみなら陰性。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-120-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "structure→function",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-204",
+      "r106-196",
+      "r108-216"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-120-mechanism-005-control_line→antibody",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-120-mechanism-005",
+    "primary_exemplar_id": "ex-biology-120",
+    "subject": "生物",
+    "front": "妊娠検査薬のイムノクロマトグラフィーで、標識抗体がマウス由来の場合、コントロールラインに固定化する抗体は何か？",
+    "back": "抗マウスIgG抗体（標識抗体と同じ動物種のIgGに対する抗体）\n\n【ポイント】コントロールラインは標識抗体そのものを捕捉する仕組み。標識抗体がマウス由来なら、コントロールには抗マウスIgG抗体を使う（ウサギIgGではない）。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-120-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "control_line→antibody",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r106-196"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-120-classification-001-test→analyte",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-120-classification-001",
+    "primary_exemplar_id": "ex-biology-120",
+    "subject": "生物",
+    "front": "イムノクロマト法のアレルギー迅速検査キットで、患者血液中から測定される成分は何か？",
+    "back": "アレルゲンに特異的なIgE\n\n【ポイント】I型アレルギーはIgE介在型。検査キットはアレルゲン（例：スギ花粉）に対する特異的IgEを検出する。アレルゲンそのものや抗IgE抗体（キット側の試薬）を測定するのではない。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-120-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "test→analyte",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r108-216"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-120-mechanism-006-result→interpretation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-120-mechanism-006",
+    "primary_exemplar_id": "ex-biology-120",
+    "subject": "生物",
+    "front": "ウエスタンブロットで還元剤（2-メルカプトエタノール）を加えたときにバンドが分離した場合、何がわかるか？",
+    "back": "そのタンパク質は分子間ジスルフィド結合（S-S結合）を持つ\n\n【ポイント】還元剤はS-S結合を切断する。還元剤添加でバンドが低分子量側に分離すれば、元のタンパク質は複数のサブユニットがS-S結合で繋がっていたと判断できる。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-120-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "result→interpretation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r107-114"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-120-mechanism-007-method→principle",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-120-mechanism-007",
+    "primary_exemplar_id": "ex-biology-120",
+    "subject": "生物",
+    "front": "SDS-PAGE（ドデシル硫酸ナトリウム-ポリアクリルアミド電気泳動）はどのような原理でタンパク質を分離するか？",
+    "back": "分子量の大小で分離する\n\n【ポイント】SDSがタンパク質に結合して均一な負電荷を与え、固有の電荷差を打ち消す。その結果、ゲル中の移動度は分子量のみで決まり、小さいタンパク質ほど速く移動する。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-120-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "method→principle",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r107-114"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-134-classification-001-route→diseases",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-134-classification-001",
+    "primary_exemplar_id": "ex-biology-134",
+    "subject": "生物",
+    "front": "空気感染（飛沫核感染）する疾患は{{c1::結核}}・{{c2::麻疹}}・{{c3::水痘}}の3つである。",
+    "back": "結核 / 麻疹 / 水痘\n\n【ポイント】語呂合わせ「麻水結（ましゅけつ）」で覚える。空気感染対策にはN95マスクと陰圧個室が必要。飛沫感染とは異なる対策が求められる。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-134-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "route→diseases",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-064",
+      "r102-233",
+      "r106-065"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-134-classification-002-route→diseases",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-134-classification-002",
+    "primary_exemplar_id": "ex-biology-134",
+    "subject": "生物",
+    "front": "飛沫感染が主な感染経路の疾患には、{{c1::インフルエンザ}}、{{c2::風疹}}、{{c3::マイコプラズマ肺炎}}、百日咳などがある。",
+    "back": "インフルエンザ / 風疹 / マイコプラズマ肺炎\n\n【ポイント】飛沫感染は咳やくしゃみによる飛沫（粒径5μm以上）で伝播。サージカルマスクで予防できる。空気感染（飛沫核、粒径5μm未満）とは粒子サイズが異なる。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-134-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "route→diseases",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r107-086",
+      "r108-086"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-134-classification-003-comparison_table",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-134-classification-003",
+    "primary_exemplar_id": "ex-biology-134",
+    "subject": "生物",
+    "front": "感染経路による疾患の分類を比較せよ：空気感染 vs 飛沫感染 vs 接触感染 vs 経口感染",
+    "back": "【空気感染】結核・麻疹・水痘（N95マスク＋陰圧個室）\n【飛沫感染】インフルエンザ・風疹・マイコプラズマ肺炎（サージカルマスク）\n【接触感染】疥癬・MRSA・C. difficile・流行性角結膜炎（手洗い・手袋）\n【経口感染】O-157・ポリオ・ノロウイルス（手洗い・食品加熱）\n\n【ポイント】感染経路によって必要な予防策が異なる。空気感染はN95、飛沫感染はサージカルマスクが基本。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-134-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "comparison_table",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-064",
+      "r100-303",
+      "r106-065",
+      "r107-086",
+      "r108-086"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-134-mechanism-001-disease→features",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-134-mechanism-001",
+    "primary_exemplar_id": "ex-biology-134",
+    "subject": "生物",
+    "front": "結核の初感染経路は何か？また主な症状は高熱か微熱か？",
+    "back": "飛沫核による経気道感染（空気感染）。症状は微熱（37-38℃）が持続\n\n【ポイント】結核菌は飛沫核として空中に浮遊し吸入される。高熱ではなく微熱が持続するのが特徴。肺に限定されず腎・リンパ節・骨・脳にも病変が及ぶ。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-134-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "disease→features",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-064"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-134-classification-004-test→allergy_type",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-134-classification-004",
+    "primary_exemplar_id": "ex-biology-134",
+    "subject": "生物",
+    "front": "ツベルクリン反応検査が利用しているアレルギー反応は何型か？",
+    "back": "IV型（遅延型）アレルギー\n\n【ポイント】ツベルクリン反応はT細胞が介在する遅延型過敏反応（48-72時間後に判定）。I型（即時型）はIgE介在型で花粉症やアナフィラキシーが該当し、ツベルクリンとは異なる。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-134-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "test→allergy_type",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-064"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-134-classification-005-prevention→diseases",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-134-classification-005",
+    "primary_exemplar_id": "ex-biology-134",
+    "subject": "生物",
+    "front": "手洗いが感染防止に有効な疾患として、インフルエンザとO-157感染症が挙げられる理由は？",
+    "back": "インフルエンザ：飛沫が手指に付着→粘膜接触で感染（接触感染経路も存在）\nO-157：経口感染であり手指衛生が伝播防止に直結\n\n【ポイント】蚊媒介（デング熱・日本脳炎）や血液感染（C型肝炎）には手洗いは有効でない。感染経路を判断してから予防策を考える。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-134-classification-005",
+    "knowledge_type": "classification",
+    "recall_direction": "prevention→diseases",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r100-303"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-134-classification-006-vector→diseases",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-134-classification-006",
+    "primary_exemplar_id": "ex-biology-134",
+    "subject": "生物",
+    "front": "蚊が媒介する感染症：{{c1::日本脳炎}}（ウイルス）、{{c2::マラリア}}（原虫）、{{c3::デング熱}}（ウイルス）、ジカ熱、ウエストナイル熱、チクングニア熱",
+    "back": "日本脳炎 / マラリア / デング熱\n\n【ポイント】蚊媒介疾患のうちマラリアだけが原虫（寄生虫）で、それ以外はウイルス。手洗いでは予防できず、蚊の駆除・防蚊対策が必要。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-134-classification-006",
+    "knowledge_type": "classification",
+    "recall_direction": "vector→diseases",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-303"
+    ],
+    "source_note_ids": [
+      "蚊が媒介"
+    ]
+  },
+  {
+    "id": "ex-biology-134-mechanism-002-disease→complication",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-134-mechanism-002",
+    "primary_exemplar_id": "ex-biology-134",
+    "subject": "生物",
+    "front": "風疹の主要感染経路は何か？また妊婦が感染すると何が問題になるか？",
+    "back": "主要感染経路：飛沫感染\n妊婦感染のリスク：先天性風疹症候群（白内障・心疾患・難聴の3主徴）\n\n【ポイント】風疹は飛沫感染（空気感染ではない）。垂直感染（胎盤感染）も起こるが、流行の主因は飛沫。MRワクチンで予防。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-134-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "disease→complication",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r107-086"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-134-classification-007-equipment→indication",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-134-classification-007",
+    "primary_exemplar_id": "ex-biology-134",
+    "subject": "生物",
+    "front": "N95マスクとサージカルマスクの使い分けを感染経路別に比較せよ",
+    "back": "【N95マスク】空気感染対策：結核・麻疹・水痘（飛沫核5μm未満をフィルタ）+ 陰圧個室収容\n【サージカルマスク】飛沫感染対策：インフルエンザ・風疹・マイコプラズマ肺炎等（飛沫5μm以上をブロック）\n\n【ポイント】空気感染はマスクだけでなく陰圧個室（室内の空気が廊下に漏れない）も必要。飛沫感染にN95は過剰対応。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-134-classification-007",
+    "knowledge_type": "classification",
+    "recall_direction": "equipment→indication",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r102-233",
+      "r106-065",
+      "r108-086"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-134-mechanism-003-scenario→treatment",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-134-mechanism-003",
+    "primary_exemplar_id": "ex-biology-134",
+    "subject": "生物",
+    "front": "HBV陽性患者の血液で針刺し事故が発生した。受傷者（HBs抗体陰性）に投与すべき薬剤は？",
+    "back": "抗HBs人免疫グロブリン＋組換え沈降B型肝炎ワクチンの併用\n\n【ポイント】抗HBsグロブリンで即時の受動免疫、B型肝炎ワクチンで長期の能動免疫を同時に獲得する二重防御戦略。一般の人免疫グロブリンはHBV特異性がなく不十分。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-134-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "scenario→treatment",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r105-244"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-137-mechanism-001-virus→transmission",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-137-mechanism-001",
+    "primary_exemplar_id": "ex-biology-137",
+    "subject": "生物",
+    "front": "ヒトT細胞白血病ウイルス（HTLV-1）の主な垂直感染経路は何か？その予防策は？",
+    "back": "母乳感染が主経路。完全人工栄養（ミルク育児）で予防する\n\n【ポイント】垂直感染の種類：胎盤感染（風疹・梅毒・HIV）、産道感染（HSV・B群溶連菌）、母乳感染（HTLV-1）。HTLV-1は成人T細胞白血病（ATL）の原因ウイルスで九州・沖縄に多い。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-137-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "virus→transmission",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-019"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-137-classification-001-route→pathogen",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-137-classification-001",
+    "primary_exemplar_id": "ex-biology-137",
+    "subject": "生物",
+    "front": "垂直感染の3つの経路と代表的な病原体を比較せよ",
+    "back": "【胎盤感染】風疹ウイルス・梅毒トレポネーマ・HIV・トキソプラズマ\n【産道感染】単純ヘルペスウイルス（HSV）・B群溶連菌（GBS）・クラミジア\n【母乳感染】HTLV-1\n\n【ポイント】胎盤感染は妊娠中に母体の血液から胎児に移行。産道感染は分娩時の産道通過で感染。母乳感染は授乳時に感染。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-137-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "route→pathogen",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-019"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-137-classification-002-virus→route",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-137-classification-002",
+    "primary_exemplar_id": "ex-biology-137",
+    "subject": "生物",
+    "front": "肝炎ウイルスの感染経路：経口感染＝{{c1::A型}}・{{c2::E型}}、血液感染＝{{c3::B型}}・{{c4::C型}}・D型",
+    "back": "A型 / E型 / B型 / C型\n\n【ポイント】語呂「A・EはAte（食べた）=経口」「B・C・DはBlood=血液」。E型肝炎はブタ・シカ・イノシシの生肉で感染する人獣共通感染症。妊婦で劇症化リスクが高い。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-137-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "virus→route",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-018"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-137-mechanism-002-virus→mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-137-mechanism-002",
+    "primary_exemplar_id": "ex-biology-137",
+    "subject": "生物",
+    "front": "HIVは{{c1::CD4}}陽性T細胞に感染し、{{c2::逆転写酵素}}でRNAからDNAを合成した後、{{c3::インテグラーゼ}}により宿主染色体に組み込まれる（プロウイルス化）。",
+    "back": "CD4 / 逆転写酵素 / インテグラーゼ\n\n【ポイント】HIVはレトロウイルス（RNA→DNA→宿主ゲノム統合）。プロウイルス化により長期潜伏が可能。CD8陽性T細胞には感染しない。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-137-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "virus→mechanism",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-116",
+      "r109-120"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-137-classification-003-virus→genome",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-137-classification-003",
+    "primary_exemplar_id": "ex-biology-137",
+    "subject": "生物",
+    "front": "HIVのゲノムは一本鎖RNAか二本鎖RNAか？",
+    "back": "一本鎖RNA（+鎖、2コピー）\n\n【ポイント】HIVはレトロウイルス科に属し、一本鎖RNAゲノムを2コピー持つ。逆転写酵素でDNAに変換される。二本鎖RNAウイルスの代表はレオウイルス科（ロタウイルスなど）。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-137-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "virus→genome",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r103-116"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-137-mechanism-003-virus→receptor",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-137-mechanism-003",
+    "primary_exemplar_id": "ex-biology-137",
+    "subject": "生物",
+    "front": "HIVが宿主細胞に侵入する際に結合する受容体は何か？",
+    "back": "CD4（主受容体）とケモカイン受容体CXCR4またはCCR5（共受容体）\n\n【ポイント】HIVのgp120がまずCD4に結合し、構造変化を起こした後に共受容体に結合して膜融合・侵入する。Toll様受容体やノイラミニダーゼは関係しない（ノイラミニダーゼはインフルエンザの酵素）。",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-137-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "virus→receptor",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r103-116"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-137-classification-004-morphology→virus",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-137-classification-004",
+    "primary_exemplar_id": "ex-biology-137",
+    "subject": "生物",
+    "front": "花びらのように分かれた核（フラワー細胞）を持つ腫瘍化T細胞が出現するのは、HIV感染かHTLV-1感染か？",
+    "back": "HTLV-1感染（成人T細胞白血病：ATL）\n\n【ポイント】ATLの特徴的な細胞形態が「フラワーセル（花弁状核を持つ異常リンパ球）」。HIV感染ではフラワーセルは出現しない。両者ともT細胞に感染するが病態は全く異なる。",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-biology-137-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "morphology→virus",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r109-120"
+    ],
+    "source_note_ids": []
+  }
+]

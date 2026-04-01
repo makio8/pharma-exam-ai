@@ -1,0 +1,5411 @@
+[
+  {
+    "id": "ex-physics-005-mechanism-001-coulomb_force_distance",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-005-mechanism-001",
+    "primary_exemplar_id": "ex-physics-005",
+    "subject": "物理",
+    "front": "クーロン力は2つのイオン間の距離の{{c1::2乗}}に反比例する。",
+    "back": "距離の2乗に反比例 — クーロンの法則 F = kq₁q₂/r²。ポテンシャルエネルギーは距離の1乗に反比例（U ∝ 1/r）であり、力とエネルギーの違いに注意",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-005-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "coulomb_force_distance",
+    "reverse_of_id": "ex-physics-005-mechanism-001-force_vs_energy_distance",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r106-005",
+      "r109-091"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-005-mechanism-001-force_vs_energy_distance",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-005-mechanism-001",
+    "primary_exemplar_id": "ex-physics-005",
+    "subject": "物理",
+    "front": "静電相互作用において、クーロン「力」と「ポテンシャルエネルギー」の距離依存性の違いは？",
+    "back": "力 F ∝ 1/r²（距離の2乗に反比例）、ポテンシャルエネルギー U ∝ 1/r（距離の1乗に反比例）。国試では「距離に反比例」か「距離の2乗に反比例」かの使い分けが頻出",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-005-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "force_vs_energy_distance",
+    "reverse_of_id": "ex-physics-005-mechanism-001-coulomb_force_distance",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-005",
+      "r109-091"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-005-mechanism-002-dielectric_constant_effect",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-005-mechanism-002",
+    "primary_exemplar_id": "ex-physics-005",
+    "subject": "物理",
+    "front": "クーロン力は媒質の{{c1::比誘電率}}に反比例するため、水中（比誘電率≒80）ではイオン間の力が大幅に{{c2::減少}}する。",
+    "back": "比誘電率に反比例 — 真空中（比誘電率=1）で最も強く、水中では約1/80に弱まる。これがイオン結晶が水に溶解する要因の一つ",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-005-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "dielectric_constant_effect",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-005"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-005-classification-001-distance_dependence_comparison",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-005-classification-001",
+    "primary_exemplar_id": "ex-physics-005",
+    "subject": "物理",
+    "front": "分子間相互作用のポテンシャルエネルギーの距離依存性を比較せよ：静電相互作用 / 双極子-双極子相互作用 / 分散力",
+    "back": "静電（イオン-イオン）= 1/r、双極子-双極子 = 1/r³、分散力（ロンドン力）= 1/r⁶。距離が離れるほど急速に弱まるのは分散力。覚え方：「1, 3, 6」の順",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-005-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "distance_dependence_comparison",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r100-091",
+      "r109-091"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-005-mechanism-003-hydration_orientation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-005-mechanism-003",
+    "primary_exemplar_id": "ex-physics-005",
+    "subject": "物理",
+    "front": "水和において、陽イオンには水分子の{{c1::酸素}}側が配向し、陰イオンには水分子の{{c2::水素}}側が配向する。",
+    "back": "酸素が陽イオン側、水素が陰イオン側 — 酸素は負電荷（δ⁻）、水素は正電荷（δ⁺）を帯びるため、異符号の電荷が引き合う。イオン半径が小さいほど水和エネルギーが大きい",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-005-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "hydration_orientation",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r102-002"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-005-mechanism-004-vdw_attraction_repulsion",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-005-mechanism-004",
+    "primary_exemplar_id": "ex-physics-005",
+    "subject": "物理",
+    "front": "ファンデルワールス相互作用が引力としても斥力としても働く理由を、レナード-ジョーンズポテンシャルの観点から説明せよ。",
+    "back": "レナード-ジョーンズポテンシャル = 引力項（1/r⁶）+ 斥力項（1/r¹²）の和。距離が大きいと引力が優勢、距離が極めて近くなると電子雲の重なりによる斥力が優勢になる",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-005-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "vdw_attraction_repulsion",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r100-091"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-005-mechanism-005-hydrophobic_driving_force",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-005-mechanism-005",
+    "primary_exemplar_id": "ex-physics-005",
+    "subject": "物理",
+    "front": "疎水性相互作用は{{c1::エントロピー}}の増大により駆動される。水溶液中のタンパク質の{{c2::高次構造}}の形成と安定化に寄与する。",
+    "back": "エントロピー駆動 — 疎水性分子が集合すると、周囲の水分子のかご構造（氷山構造）が崩壊し、水の自由度が増加してエントロピーが増大する。ミセル形成も同じ原理",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-005-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "hydrophobic_driving_force",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-091",
+      "r109-091"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-009-classification-001-interaction_type_identification",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-009-classification-001",
+    "primary_exemplar_id": "ex-physics-009",
+    "subject": "物理",
+    "front": "次の分子間相互作用を比較せよ：電荷移動相互作用 / π-πスタッキング / 分散力 / 水素結合",
+    "back": "電荷移動相互作用 = 電子供与体→受容体への電荷移動（呈色する）。π-πスタッキング = 平面芳香環同士の積み重なり。分散力 = 非極性分子同士の普遍的引力。水素結合 = O-H/N-HとO/Nの間の強い双極子相互作用",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-009-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "interaction_type_identification",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r108-201",
+      "r107-197"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-009-mechanism-001-charge_transfer_color",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-009-mechanism-001",
+    "primary_exemplar_id": "ex-physics-009",
+    "subject": "物理",
+    "front": "電荷移動相互作用では、{{c1::電子供与体}}から{{c2::電子受容体}}への電荷の移動が起こり、可視光領域の吸収が生じて{{c3::呈色}}する。",
+    "back": "電子供与体→電子受容体 — ベンゼン（供与体）にヨウ素（受容体）を溶かすと赤色を呈するのが代表例。電荷移動錯体（CT錯体）を形成する",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-009-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "charge_transfer_color",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r107-197"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-009-mechanism-002-pi_stacking_aggregation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-009-mechanism-002",
+    "primary_exemplar_id": "ex-physics-009",
+    "subject": "物理",
+    "front": "ドキソルビシンなどアントラサイクリン系薬物が難溶性凝集体を形成する主な相互作用は{{c1::π-πスタッキング}}であり、これは平面{{c2::芳香環}}同士の積み重なりによる。",
+    "back": "π-πスタッキング — アントラサイクリン系は大きな平面芳香環構造を持つため、分子同士が積み重なって凝集する。十分量の溶媒で速やかに溶解させることで凝集を防止する",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-009-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "pi_stacking_aggregation",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r107-197"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-009-mechanism-003-dispersion_force_adsorption",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-009-mechanism-003",
+    "primary_exemplar_id": "ex-physics-009",
+    "subject": "物理",
+    "front": "ニトログリセリンがPVC製チューブに吸着する際の主な分子間相互作用は{{c1::分散力}}である。非極性分子同士で働く普遍的な力で、{{c2::ロンドン力}}とも呼ばれる。",
+    "back": "分散力（ロンドン力） — ニトログリセリンは非イオン性の低分子、PVCも非極性高分子であり、両者の主な相互作用は分散力。臨床ではPVCフリーのチューブを使用する",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-009-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "dispersion_force_adsorption",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r108-201"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-009-mechanism-004-opioid_pharmacophore_interactions",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-009-mechanism-004",
+    "primary_exemplar_id": "ex-physics-009",
+    "subject": "物理",
+    "front": "オピオイド鎮痛薬の受容体結合におけるファーマコフォアの3種類の主要な相互作用は？",
+    "back": "1) 塩基性窒素のプロトン化体と受容体カルボキシラートのイオン結合、2) フェノール性OH基と受容体の水素結合、3) 芳香環と受容体ベンゼン環のπ-π相互作用。カルボキシ基→グアニジノ基の結合はエンケファリン側の特徴であり鎮痛薬には当てはまらない",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-009-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "opioid_pharmacophore_interactions",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r106-213"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-009-interaction-001-chelate_absorption_decrease",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-009-interaction-001",
+    "primary_exemplar_id": "ex-physics-009",
+    "subject": "物理",
+    "front": "キノロン系抗菌薬（シプロフロキサシン等）とスクラルファート（Al含有）の同時服用で、消化管内で難溶性の{{c1::キレート}}が形成され吸収が{{c2::低下}}する。",
+    "back": "キレート形成 — Al³⁺, Fe²⁺, Ca²⁺, Mg²⁺等の多価金属イオンとキノロン系やレボチロキシンがキレートを形成し、経口吸収が著しく低下する。服用間隔を2時間以上あけることで回避",
+    "format": "cloze",
+    "tags": [
+      "interaction",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-009-interaction-001",
+    "knowledge_type": "interaction",
+    "recall_direction": "chelate_absorption_decrease",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-273",
+      "r106-219"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-009-interaction-002-xo_inhibitor_azathioprine",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-009-interaction-002",
+    "primary_exemplar_id": "ex-physics-009",
+    "subject": "物理",
+    "front": "アザチオプリンは体内で{{c1::6-メルカプトプリン}}に変換され、{{c2::キサンチンオキシダーゼ（XO）}}で代謝される。XO阻害薬（フェブキソスタット等）との併用は{{c3::禁忌}}である。",
+    "back": "併用禁忌 — XO阻害により6-MPの代謝が阻害されると血中濃度が上昇し、重篤な骨髄抑制を起こす。アロプリノールも同様に禁忌",
+    "format": "cloze",
+    "tags": [
+      "interaction",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-009-interaction-002",
+    "knowledge_type": "interaction",
+    "recall_direction": "xo_inhibitor_azathioprine",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-223"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-009-mechanism-005-iodine_charge_transfer_example",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-009-mechanism-005",
+    "primary_exemplar_id": "ex-physics-009",
+    "subject": "物理",
+    "front": "ベンゼンにヨウ素を溶かすと赤色を呈する現象は、どのような分子間相互作用で説明されるか？",
+    "back": "電荷移動相互作用（CT相互作用）。ベンゼン（電子供与体：π電子が豊富）からヨウ素（電子受容体）へ電荷が移動し、電荷移動錯体を形成して可視光を吸収するため呈色する",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-009-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "iodine_charge_transfer_example",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r107-197"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-009-adverse_effect-001-iodine_excess_hashimoto",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-009-adverse_effect-001",
+    "primary_exemplar_id": "ex-physics-009",
+    "subject": "物理",
+    "front": "甲状腺機能低下症（橋本病）患者に海藻類の積極的摂取を勧めてはいけない理由は？",
+    "back": "ヨウ素の過剰摂取により甲状腺機能がさらに低下する可能性がある（Wolff-Chaikoff効果）。レボチロキシン服用中の患者への指導で頻出の誤り選択肢",
+    "format": "question_answer",
+    "tags": [
+      "adverse_effect",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-009-adverse_effect-001",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "iodine_excess_hashimoto",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.92,
+    "source_question_ids": [
+      "r106-219"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-009-indication-001-glaucoma_anticholinergic_avoidance",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-009-indication-001",
+    "primary_exemplar_id": "ex-physics-009",
+    "subject": "物理",
+    "front": "ピロカルピン点眼液使用中（{{c1::緑内障}}治療）の患者にOTC胃薬を推奨する場合、{{c2::抗コリン}}成分（ロートエキス、ブチルスコポラミン等）を含む製品は{{c3::禁忌}}である。",
+    "back": "抗コリン薬は禁忌 — 抗コリン作用により眼圧が上昇し緑内障を悪化させるリスクがある。安中散などの生薬系胃腸薬が適切な選択肢",
+    "format": "cloze",
+    "tags": [
+      "indication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-009-indication-001",
+    "knowledge_type": "indication",
+    "recall_direction": "glaucoma_anticholinergic_avoidance",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r105-344"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-013-mechanism-001-spin_zero_condition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-013-mechanism-001",
+    "primary_exemplar_id": "ex-physics-013",
+    "subject": "物理",
+    "front": "陽子数と中性子数がともに{{c1::偶数}}の原子核は核スピン量子数が{{c2::0}}となり、NMRで{{c3::観測できない}}。代表例は¹²Cと¹⁶O。",
+    "back": "偶-偶核はスピン0 — ¹²C（陽子6・中性子6）、¹⁶O（陽子8・中性子8）はNMR不活性。NMRで使う核は¹H、¹³C、¹⁹F、³¹P（すべてスピン1/2）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-013-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "spin_zero_condition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r105-003"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-013-mechanism-002-zeeman_splitting_nmr",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-013-mechanism-002",
+    "primary_exemplar_id": "ex-physics-013",
+    "subject": "物理",
+    "front": "スピン量子数1/2の原子核が外部磁場中で2つのエネルギー準位に分裂する現象を{{c1::ゼーマン分裂}}という。NMR測定の基本原理である。",
+    "back": "ゼーマン分裂 — 磁場中でスピンが磁場に平行（低エネルギー）と反平行（高エネルギー）の2状態に分かれる。ここにラーモア周波数と等しいラジオ波を照射して共鳴を起こす",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-013-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "zeeman_splitting_nmr",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r110-004",
+      "r111-204"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-013-mechanism-003-mri_principles_cautions",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-013-mechanism-003",
+    "primary_exemplar_id": "ex-physics-013",
+    "subject": "物理",
+    "front": "MRI検査に関して、使用する電磁波の種類と、ペースメーカー患者への注意点は？",
+    "back": "MRIはラジオ波（紫外線より波長が長い）を使用し、X線被曝がない。高磁場でペースメーカーに影響があるため必ず申告が必要。金属含有化粧品や刺青は火傷リスクがある",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-013-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mri_principles_cautions",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-202",
+      "r111-204"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-013-mechanism-004-mri_contrast_agent",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-013-mechanism-004",
+    "primary_exemplar_id": "ex-physics-013",
+    "subject": "物理",
+    "front": "MRI造影剤のガドテル酸メグルミンは{{c1::ガドリニウムイオン（Gd³⁺）}}の{{c2::キレート}}化合物であり、プロトンの緩和時間を{{c3::短縮}}させてコントラストを高める。",
+    "back": "Gd³⁺キレート — 強力な磁性を持つGd³⁺を安全に投与するためキレート剤で包み込む。緩和時間を短縮（延長ではない）して画像の白黒差を明確にする。放射性医薬品ではない",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-013-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mri_contrast_agent",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r111-204"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-013-classification-001-nmr_term_distinction",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-013-classification-001",
+    "primary_exemplar_id": "ex-physics-013",
+    "subject": "物理",
+    "front": "次の用語を区別せよ：ゼーマン分裂 / 化学シフト / 超微細分裂 / McLafferty転位",
+    "back": "ゼーマン分裂 = NMR原理（磁場でスピンエネルギーが分裂）。化学シフト = 電子環境の違いによる共鳴周波数のずれ。超微細分裂 = ESR（電子スピン共鳴）の用語。McLafferty転位 = 質量分析（MS）における分子の開裂反応",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-013-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "nmr_term_distinction",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r110-004"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-013-mechanism-005-larmor_frequency_resonance",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-013-mechanism-005",
+    "primary_exemplar_id": "ex-physics-013",
+    "subject": "物理",
+    "front": "NMRで共鳴を起こすには、プロトンの{{c1::ラーモア周波数}}と{{c2::等しい}}周波数のラジオ波を照射する必要がある。",
+    "back": "ラーモア周波数と等しい — 「高い周波数」では共鳴しない。ラーモア周波数は外部磁場の強さに比例し、ω = γB₀で表される（γ：磁気回転比）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-013-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "larmor_frequency_resonance",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r111-204"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-017-classification-001-decay_type_to_change",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-017-classification-001",
+    "primary_exemplar_id": "ex-physics-017",
+    "subject": "物理",
+    "front": "α壊変では原子番号が{{c1::2減少}}し質量数が{{c2::4減少}}する。β⁻壊変では原子番号が{{c3::1増加}}し質量数は変化しない。",
+    "back": "α粒子＝⁴He核（陽子2+中性子2）の放出。β⁻壊変＝中性子→陽子＋電子（β⁻粒子）の変換",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-017-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "decay_type_to_change",
+    "reverse_of_id": "ex-physics-017-classification-001-beta_plus_and_ec",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r102-003",
+      "r104-001",
+      "r109-003"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-017-classification-001-beta_plus_and_ec",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-017-classification-001",
+    "primary_exemplar_id": "ex-physics-017",
+    "subject": "物理",
+    "front": "β⁺壊変では原子番号が{{c1::1減少}}し質量数は変化しない。軌道電子捕獲（EC）も原子番号が{{c2::1減少}}し質量数は不変。γ転移では原子番号・質量数{{c3::ともに変化しない}}。",
+    "back": "β⁺壊変＝陽子→中性子＋陽電子。EC＝陽子が軌道電子を捕獲→中性子。γ転移＝励起状態からのエネルギー放出のみ",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-017-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "beta_plus_and_ec",
+    "reverse_of_id": "ex-physics-017-classification-001-decay_type_to_change",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r102-003",
+      "r104-001",
+      "r109-003"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-017-mechanism-001-alpha_particle_identity",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-017-mechanism-001",
+    "primary_exemplar_id": "ex-physics-017",
+    "subject": "物理",
+    "front": "α壊変で放出されるα粒子は{{c1::⁴He}}（ヘリウム-4）の原子核であり、{{c2::陽子2個}}と{{c3::中性子2個}}から構成される。",
+    "back": "「α＝He」と直結で暗記。α線は紙1枚で遮蔽可能だが、体内被曝では線質係数20と生物学的効果が大きい",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-017-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "alpha_particle_identity",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r102-003"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-017-regulation-001-bq_definition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-017-regulation-001",
+    "primary_exemplar_id": "ex-physics-017",
+    "subject": "物理",
+    "front": "放射能のSI単位ベクレル（Bq）は、{{c1::1秒間}}に壊変する原子核の数で定義される。74 MBqは1秒間に{{c2::7.4×10⁷}}個の壊変を意味する。",
+    "back": "「Bq＝壊変数/秒」。1分間ではないので注意。Gy（グレイ）は吸収線量、Sv（シーベルト）は等価線量の単位",
+    "format": "cloze",
+    "tags": [
+      "regulation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-017-regulation-001",
+    "knowledge_type": "regulation",
+    "recall_direction": "bq_definition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r107-092",
+      "r111-201"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-017-mechanism-002-decay_kinetics",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-017-mechanism-002",
+    "primary_exemplar_id": "ex-physics-017",
+    "subject": "物理",
+    "front": "放射壊変は{{c1::一次反応}}速度式のみに従う。0次反応と1次の2通りがあるわけではない。",
+    "back": "壊変速度＝λN（λ＝壊変定数、N＝原子核数）。半減期t₁/₂＝0.693/λ",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-017-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "decay_kinetics",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r107-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-017-mechanism-003-beta_spectrum",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-017-mechanism-003",
+    "primary_exemplar_id": "ex-physics-017",
+    "subject": "物理",
+    "front": "β⁻壊変では電子と{{c1::ニュートリノ}}にエネルギーが分配されるため、β⁻線は{{c2::連続}}スペクトルを示す。一方γ線は核種固有の{{c3::線スペクトル}}を示す。",
+    "back": "β線＝連続（ニュートリノと分配）、γ線＝線スペクトル（核種固有のエネルギー）、α線＝線スペクトル",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-017-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "beta_spectrum",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r107-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-017-classification-002-xray_vs_gamma",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-017-classification-002",
+    "primary_exemplar_id": "ex-physics-017",
+    "subject": "物理",
+    "front": "X線とγ線はどちらも電磁波だが、何で区別されるか？",
+    "back": "発生部位で区別される（波長ではない）。X線＝原子の軌道電子が関与、γ線＝原子核が関与。波長領域は重なりうる",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-017-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "xray_vs_gamma",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r107-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-017-calculation-001-halflife_calculation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-017-calculation-001",
+    "primary_exemplar_id": "ex-physics-017",
+    "subject": "物理",
+    "front": "半減期3日の核種74 MBqの6日後（2半減期後）の放射能は、74×(1/2)²＝{{c1::18.5 MBq}}である。",
+    "back": "n半減期後の放射能＝初期値×(1/2)ⁿ。6日÷3日＝2半減期→1/4に減衰",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-017-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "halflife_calculation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r111-201"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-017-classification-003-tl201_properties",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-017-classification-003",
+    "primary_exemplar_id": "ex-physics-017",
+    "subject": "物理",
+    "front": "²⁰¹Tlは{{c1::軌道電子捕獲（EC）}}壊変するシングルフォトン放出核種で、{{c2::SPECT}}検査に用いられる。体内ではTl⁺が{{c3::K⁺}}（カリウムイオン）と似た挙動を示す。",
+    "back": "Na⁺ではなくK⁺に似る点がひっかけポイント。EC壊変→原子番号-1。心筋血流シンチに利用",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-017-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "tl201_properties",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r111-201"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-030-classification-001-extensive_vs_intensive",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-030-classification-001",
+    "primary_exemplar_id": "ex-physics-030",
+    "subject": "物理",
+    "front": "示量性状態関数と示強性状態関数の違いと代表例を比較せよ。",
+    "back": "示量性 = 物質量に比例（V, U, H, S, G）。示強性 = 物質量に依存しない（T, P, 濃度, 化学ポテンシャル）。覚え方：「示量性は量に比例して増える」。頭に「モル」が付くと示強性に変わる",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-030-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "extensive_vs_intensive",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-003",
+      "r107-093",
+      "r109-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-030-classification-002-state_vs_path_function",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-030-classification-002",
+    "primary_exemplar_id": "ex-physics-030",
+    "subject": "物理",
+    "front": "{{c1::熱（q）}}と{{c2::仕事（w）}}は経路関数であり、内部エネルギー（U）は{{c3::状態関数}}である。状態関数の変化量は可逆過程でも不可逆過程でも等しい。",
+    "back": "q, wは経路関数、U, H, S, Gは状態関数 — 熱力学第一法則 ΔU = q + w。経路関数の和であるUが状態関数であることがポイント。状態関数は始状態と終状態のみで変化量が決まる",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-030-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "state_vs_path_function",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r107-093",
+      "r110-091"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-030-mechanism-001-thermodynamic_quantities",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-030-mechanism-001",
+    "primary_exemplar_id": "ex-physics-030",
+    "subject": "物理",
+    "front": "内部エネルギー(U)、エンタルピー(H)、エントロピー(S)、ギブズエネルギー(G)のそれぞれの物理的意味は？",
+    "back": "U = 系の全エネルギー。H = 熱含量（H = U + PV）。S = 系の乱雑さの指標。G = 反応の自発性の指標（G = H - TS）。ΔG < 0で自発的、ΔG = 0で平衡",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-030-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "thermodynamic_quantities",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r103-001",
+      "r105-005",
+      "r108-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-030-mechanism-002-chemical_potential_definition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-030-mechanism-002",
+    "primary_exemplar_id": "ex-physics-030",
+    "subject": "物理",
+    "front": "化学ポテンシャル(μ)は、定温定圧条件下で成分を1 mol加えたときの系全体の{{c1::ギブズエネルギー(G)}}の変化量として定義される。",
+    "back": "ギブズエネルギーの偏微分 — μ = (∂G/∂n)_{T,P}。化学ポテンシャルは示強性状態関数であり、物質量に依存しない",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-030-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "chemical_potential_definition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r105-005"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-030-calculation-001-hess_law_combustion",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-030-calculation-001",
+    "primary_exemplar_id": "ex-physics-030",
+    "subject": "物理",
+    "front": "メタンの標準燃焼エンタルピーは、ΔcH° = Σ{{c1::ΔfH°(生成物)}} − Σ{{c2::ΔfH°(反応物)}}で計算する。CH₄ + 2O₂ → CO₂ + 2H₂Oの場合、−890.3 kJ/mol。",
+    "back": "ヘスの法則の応用 — ΔcH° = [ΔfH°(CO₂) + 2×ΔfH°(H₂O)] − ΔfH°(CH₄) = (−393.5) + 2×(−285.8) − (−74.8) = −890.3 kJ/mol。負のΔHは発熱反応",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-030-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "hess_law_combustion",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r104-095"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-030-mechanism-003-entropy_phase_transition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-030-mechanism-003",
+    "primary_exemplar_id": "ex-physics-030",
+    "subject": "物理",
+    "front": "温度上昇に伴う物質の状態変化は{{c1::固体}}→T₁(融点)→{{c2::液体}}→T₂(沸点)→{{c3::気体}}の順であり、気化エンタルピーは融解エンタルピーより{{c4::大きい}}。",
+    "back": "気化 > 融解 — 分子間結合を完全に断ち切る気化のほうがエネルギーが大きい。トルートンの規則：ΔHvap/Tb ≒ 88 J/(mol·K)。相転移点ではΔG = 0（ΔH = TΔS）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-030-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "entropy_phase_transition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-091"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-030-mechanism-004-entropy_definition_third_law",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-030-mechanism-004",
+    "primary_exemplar_id": "ex-physics-030",
+    "subject": "物理",
+    "front": "エントロピー変化ΔSは{{c1::qrev/T}}で定義される。熱力学第三法則により、完全結晶の絶対零度でのエントロピーは{{c2::0}}である。",
+    "back": "ΔS = qrev/T、S(0K) = 0 — qrevは可逆的に出入りする熱。系と外界のエントロピー変化の和が正になる方向にすべての変化が進行する（第二法則）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-030-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "entropy_definition_third_law",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r103-001",
+      "r108-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-030-mechanism-005-gibbs_equilibrium_constant",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-030-mechanism-005",
+    "primary_exemplar_id": "ex-physics-030",
+    "subject": "物理",
+    "front": "ΔrG° = {{c1::−RT ln K}}。ΔrG° < 0ならK > 1で{{c2::自発的}}に進行し、ΔrG° = 0で{{c3::平衡}}状態である。",
+    "back": "ΔG° = −RT ln K — Kは平衡定数。発熱反応（ΔH < 0）では温度上昇によりKが減少する（ル・シャトリエの原理）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-030-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "gibbs_equilibrium_constant",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r106-098",
+      "r108-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-030-mechanism-006-vant_hoff_plot",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-030-mechanism-006",
+    "primary_exemplar_id": "ex-physics-030",
+    "subject": "物理",
+    "front": "ファントホッフプロットは{{c1::1/T}}（横軸）に対して{{c2::ln K}}（縦軸）をプロットしたもの。傾き = {{c3::−ΔH°/R}}、切片 = ΔS°/R。",
+    "back": "ln K = −ΔH°/RT + ΔS°/R — 傾きからエンタルピー、切片からエントロピーが求まる。アレニウスプロット（ln k vs 1/T）と混同注意：Kは平衡定数、kは速度定数",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-030-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "vant_hoff_plot",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r110-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-030-mechanism-007-first_law_ideal_gas",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-030-mechanism-007",
+    "primary_exemplar_id": "ex-physics-030",
+    "subject": "物理",
+    "front": "理想気体の内部エネルギーUは{{c1::温度}}のみの関数。等温変化ではΔU = 0より{{c2::q = −w}}（加えた熱はすべて仕事に）。断熱変化ではq = 0より{{c3::ΔU = w}}。",
+    "back": "熱力学第一法則 ΔU = q + w — 理想気体ではUは体積・圧力に依存しない。可逆過程の方が不可逆過程より系が外界に対してする仕事が大きい",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-030-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "first_law_ideal_gas",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r110-091"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-030-mechanism-008-energy_diagram_reading",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-030-mechanism-008",
+    "primary_exemplar_id": "ex-physics-030",
+    "subject": "物理",
+    "front": "エネルギー図で、E₁は{{c1::正反応の活性化エネルギー}}、E₂は{{c2::逆反応の活性化エネルギー}}、E₃は{{c3::反応熱（エンタルピー変化量）}}を示す。",
+    "back": "E₁ = 反応物→遷移状態、E₂ = 生成物→遷移状態、E₃ = 反応物→生成物のエネルギー差。発熱反応ではE₃が負（生成物が低エネルギー）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-030-mechanism-008",
+    "knowledge_type": "mechanism",
+    "recall_direction": "energy_diagram_reading",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-002"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-039-mechanism-001-le_chatelier_principle",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-039-mechanism-001",
+    "primary_exemplar_id": "ex-physics-039",
+    "subject": "物理",
+    "front": "ルシャトリエの法則：温度を上げると{{c1::吸熱}}方向に、圧力を上げると{{c2::分子数が減少する}}方向に、物質を加えるとそれを{{c3::消費する}}方向に平衡が移動する。",
+    "back": "「嫌がる方向に逃げる」と覚える。系に加えた変化を打ち消す方向に平衡が移動する",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-039-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "le_chatelier_principle",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r107-002",
+      "r111-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-039-mechanism-002-exothermic_temperature",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-039-mechanism-002",
+    "primary_exemplar_id": "ex-physics-039",
+    "subject": "物理",
+    "front": "発熱反応（ΔH<0）の場合、温度を下げると平衡は{{c1::右（生成物側）}}へ移動し、温度を上げると平衡は{{c2::左（反応物側）}}へ移動する。",
+    "back": "発熱反応は低温が有利。アンモニア合成（ハーバー・ボッシュ法）は発熱反応→低温有利だが速度のため高温+触媒を使用",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-039-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "exothermic_temperature",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r107-002",
+      "r111-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-039-calculation-001-k_from_rate_constants",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-039-calculation-001",
+    "primary_exemplar_id": "ex-physics-039",
+    "subject": "物理",
+    "front": "正逆反応がともに一次反応のとき、平衡定数K＝{{c1::k₁/k₋₁}}。K=0.5のとき平衡時の[A]:[B]＝{{c2::2:1}}。",
+    "back": "K＝正反応速度定数÷逆反応速度定数。K<1なら原系Aが多く残り、K>1なら生成系Bが多い",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-039-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "k_from_rate_constants",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r100-002"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-039-mechanism-003-gibbs_and_k",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-039-mechanism-003",
+    "primary_exemplar_id": "ex-physics-039",
+    "subject": "物理",
+    "front": "標準反応ギブズエネルギーと平衡定数の関係：ΔrG°＝{{c1::−RTlnK}}。ΔrG°<0のときK{{c2::>1}}で自発的反応が進む。",
+    "back": "ΔrG°が負→K>1→生成物側有利→自発的反応。ΔrG°が正→K<1→反応物側有利",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-039-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "gibbs_and_k",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r106-098"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-039-mechanism-004-vant_hoff_plot",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-039-mechanism-004",
+    "primary_exemplar_id": "ex-physics-039",
+    "subject": "物理",
+    "front": "ファントホッフプロットは{{c1::1/T}}（横軸）に対して{{c2::lnK}}（縦軸）をプロットした直線グラフ。傾き＝{{c3::−ΔH°/R}}からエンタルピーが、切片からエントロピーが求まる。",
+    "back": "van't Hoff式：lnK＝−ΔH°/RT+ΔS°/R。アレニウスプロット（lnk vs 1/T）との混同に注意。K＝平衡定数、k＝速度定数",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-039-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "vant_hoff_plot",
+    "reverse_of_id": "ex-physics-039-mechanism-004-slope_sign_meaning",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r110-092",
+      "r111-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-039-mechanism-004-slope_sign_meaning",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-039-mechanism-004",
+    "primary_exemplar_id": "ex-physics-039",
+    "subject": "物理",
+    "front": "ファントホッフプロットで傾きが正のとき反応は{{c1::発熱}}（ΔH<0）であり、温度が上がるにつれて平衡定数は{{c2::大きくなる}}。",
+    "back": "傾き＝−ΔH°/R。ΔH<0（発熱）なら傾き＝正。1/Tが小さくなる（高温側）でlnKが大きくなる",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-039-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "slope_sign_meaning",
+    "reverse_of_id": "ex-physics-039-mechanism-004-vant_hoff_plot",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r110-092",
+      "r111-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-039-classification-001-driving_force_classification",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-039-classification-001",
+    "primary_exemplar_id": "ex-physics-039",
+    "subject": "物理",
+    "front": "発熱反応（ΔH<0）でエントロピー変化が負（ΔS<0）の反応は、エンタルピー駆動かエントロピー駆動か？",
+    "back": "エンタルピー駆動。ΔG＝ΔH−TΔSにおいて、ΔH<0が反応を進める力。気体→固体の反応（NH₃+HCl→NH₄Cl）がその例",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-039-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "driving_force_classification",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-098",
+      "r111-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-039-mechanism-005-pressure_equilibrium",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-039-mechanism-005",
+    "primary_exemplar_id": "ex-physics-039",
+    "subject": "物理",
+    "front": "NH₃(g)+HCl(g)⇌NH₄Cl(s)の反応で圧力を上げると、気体分子数が{{c1::減少}}する方向（{{c2::右}}）へ平衡が移動する。固体の体積は無視する。",
+    "back": "左辺＝気体2mol、右辺＝固体（体積無視）。圧力を上げると気体を減らす方向に移動",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-039-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "pressure_equilibrium",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r107-002",
+      "r111-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-039-mechanism-006-k_temperature_dependence",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-039-mechanism-006",
+    "primary_exemplar_id": "ex-physics-039",
+    "subject": "物理",
+    "front": "平衡定数は温度に依存するか？その関係を表す式は？",
+    "back": "依存する。ファントホッフの式：d(lnK)/d(1/T)＝−ΔH°/R。吸熱反応では温度上昇でK増加、発熱反応では温度上昇でK減少",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-039-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "k_temperature_dependence",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r107-002",
+      "r110-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-044-classification-001-colligative_properties_list",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-044-classification-001",
+    "primary_exemplar_id": "ex-physics-044",
+    "subject": "物理",
+    "front": "束一的性質は{{c1::蒸気圧降下}}、{{c2::沸点上昇}}、{{c3::凝固点降下}}、{{c4::浸透圧}}の4つであり、溶質の種類ではなく{{c5::粒子数（モル濃度）}}に依存する。",
+    "back": "束一的性質 = 溶質のモル濃度のみに依存。覚え方ゴロ：「そうじの不思議」（そう＝蒸気圧降下、じ＝凝固点降下、不＝沸点上昇、思＝浸透圧上昇）",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-044-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "colligative_properties_list",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r104-099",
+      "r106-097",
+      "r101-049"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-044-mechanism-001-freezing_point_depression_formula",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-044-mechanism-001",
+    "primary_exemplar_id": "ex-physics-044",
+    "subject": "物理",
+    "front": "凝固点降下度 ΔTf = {{c1::i}} × {{c2::Kf}} × {{c3::m}}。iはファントホッフ係数、Kfはモル凝固点降下定数、mは{{c4::質量モル濃度}}。",
+    "back": "ΔTf = i × Kf × m — iは溶質が解離して生じる粒子数。非電解質はi=1。電解質は完全解離時にi＝イオン数（NaCl→i=2、CaCl₂→i=3）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-044-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "freezing_point_depression_formula",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-049",
+      "r105-048",
+      "r106-097"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-044-calculation-001-max_freezing_depression",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-044-calculation-001",
+    "primary_exemplar_id": "ex-physics-044",
+    "subject": "物理",
+    "front": "同濃度の水溶液で凝固点降下度が最大となるのは、D-グルコース、塩化ナトリウム、塩化カルシウムのうちどれか？",
+    "back": "塩化カルシウム（CaCl₂）。CaCl₂ → Ca²⁺ + 2Cl⁻で3イオン（i≈3）が最大。NaCl→2イオン（i≈2）、グルコース→非電解質（i=1）。凝固点降下度∝粒子数",
+    "format": "question_answer",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-044-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "max_freezing_depression",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r105-048"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-044-mechanism-002-osmotic_pressure_formula",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-044-mechanism-002",
+    "primary_exemplar_id": "ex-physics-044",
+    "subject": "物理",
+    "front": "浸透圧πは{{c1::π = iCRT}}で表される（ファントホッフの式）。半透膜を介して水は浸透圧が{{c2::低い}}側から{{c3::高い}}側へ移動する。",
+    "back": "π = iCRT — i: ファントホッフ係数、C: モル濃度(mol/L)、R: 気体定数、T: 絶対温度。モル濃度が大きいほど浸透圧は高い。覚え方：「アイシテル」（i·C·T·R）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-044-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "osmotic_pressure_formula",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-093",
+      "r104-099",
+      "r111-199"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-044-calculation-002-osmotic_pressure_molecular_weight",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-044-calculation-002",
+    "primary_exemplar_id": "ex-physics-044",
+    "subject": "物理",
+    "front": "同質量の低分子Aとその重合体PAを水に溶かした場合、浸透圧が高いのはどちらか？また半透膜を介した水の移動方向は？",
+    "back": "Aの方が浸透圧が高い。低分子はモル濃度が大きいため（分子量が小さい＝同質量でも粒子数が多い）。水はPA側（低浸透圧）→A側（高浸透圧）へ移動し、A水溶液の液面が上昇する",
+    "format": "question_answer",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-044-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "osmotic_pressure_molecular_weight",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r101-093",
+      "r106-097"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-044-mechanism-003-raoults_law",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-044-mechanism-003",
+    "primary_exemplar_id": "ex-physics-044",
+    "subject": "物理",
+    "front": "ラウールの法則：各成分の蒸気圧 Pi = {{c1::xi × Pi*}}（xiはモル分率、Pi*は純溶媒の蒸気圧）。気相のモル分率は{{c2::分圧/全圧}}で求める。",
+    "back": "Pi = xi × Pi* — 理想溶液では各成分の蒸気圧がモル分率に比例する。気相モル分率＝分圧/全圧（ドルトンの分圧の法則の応用）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-044-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "raoults_law",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r100-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-044-classification-002-positive_negative_deviation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-044-classification-002",
+    "primary_exemplar_id": "ex-physics-044",
+    "subject": "物理",
+    "front": "理想溶液からの正偏差と負偏差の違いを比較せよ。",
+    "back": "正偏差 = 異種分子間相互作用が同種より弱い→蒸気圧が理想溶液より高い（「仲が悪い混合」→逃げたがる）。負偏差 = 異種分子間が同種より強い→蒸気圧が理想溶液より低い（「仲が良い」→留まりたがる）",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-044-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "positive_negative_deviation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-044-calculation-003-vant_hoff_factor_calculation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-044-calculation-003",
+    "primary_exemplar_id": "ex-physics-044",
+    "subject": "物理",
+    "front": "ファントホッフ係数 i = 1 + ({{c1::n}} − 1)α。nはイオン数、αは解離度。Na₂SO₄（完全解離）では i = {{c2::3}}。",
+    "back": "i = 1 + (n−1)α — Na₂SO₄ → 2Na⁺ + SO₄²⁻（3イオン、完全解離でα=1なのでi=3）。NaCl: i=2、CaCl₂: i=3。非電解質: i=1",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-044-calculation-003",
+    "knowledge_type": "calculation",
+    "recall_direction": "vant_hoff_factor_calculation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r105-048",
+      "r111-199"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-044-mechanism-004-stokes_einstein_diffusion",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-044-mechanism-004",
+    "primary_exemplar_id": "ex-physics-044",
+    "subject": "物理",
+    "front": "ストークス-アインシュタインの式 D = {{c1::kT/(6πηr)}}。拡散係数Dは粒子半径rに{{c2::反比例}}し、温度Tに{{c3::比例}}する。",
+    "back": "D ∝ 1/r — 半径が2.5倍になるとDは1/2.5倍。動的光散乱法（DLS）は拡散係数から粒子サイズを求める測定法",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-044-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "stokes_einstein_diffusion",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-094"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-044-calculation-004-donnan_equilibrium_calculation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-044-calculation-004",
+    "primary_exemplar_id": "ex-physics-044",
+    "subject": "物理",
+    "front": "ドナン平衡の条件 [Na⁺]外[Cl⁻]外 = [Na⁺]内[Cl⁻]内 と電気的中性条件から、タンパク質P⁵⁻（0.01 mol/L）内相と外相（NaCl 0.1 mol/L）のNa⁺濃度差を求めよ。",
+    "back": "Cl⁻移動量をxとすると、外相: [Na⁺]=0.1, [Cl⁻]=0.1−x。内相: [Na⁺]=0.05+x, [Cl⁻]=x。平衡条件: 0.1(0.1−x) = (0.05+x)x → x≈0.04。[Na⁺]内−[Na⁺]外 = 0.09−0.06 = 0.03 mol/L",
+    "format": "question_answer",
+    "tags": [
+      "calculation",
+      "integrated"
+    ],
+    "knowledge_atom_id": "ex-physics-044-calculation-004",
+    "knowledge_type": "calculation",
+    "recall_direction": "donnan_equilibrium_calculation",
+    "difficulty_tier": "integrated",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.92,
+    "source_question_ids": [
+      "r107-094"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-044-mechanism-005-oros_drug_delivery",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-044-mechanism-005",
+    "primary_exemplar_id": "ex-physics-044",
+    "subject": "物理",
+    "front": "OROS（浸透圧放出制御システム）は{{c1::半透膜}}でコートされ、{{c2::浸透圧}}による水の流入でプッシュ層が膨潤し薬物を一定速度で放出する徐放性製剤である。",
+    "back": "浸透圧利用の徐放 — パリペリドン徐放錠（インヴェガ）が代表例。半透膜を通して水が流入し、内部のプッシュ層が膨潤して薬物を押し出す。浸透圧差で放出速度を制御",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-044-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "oros_drug_delivery",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r111-199"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-044-mnemonic-001-colligative_mnemonic",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-044-mnemonic-001",
+    "primary_exemplar_id": "ex-physics-044",
+    "subject": "物理",
+    "front": "束一的性質のゴロ合わせ：「{{c1::そうじの不思議}}」（そう＝蒸気圧降下、じ＝凝固点降下、不＝沸点上昇、思＝浸透圧上昇）。濃度上昇で減少するのは{{c2::凝固点と蒸気圧}}。",
+    "back": "「そうじの不思議」で4つを覚える。凝固点と蒸気圧は下がり、沸点と浸透圧は上がる",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-044-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "colligative_mnemonic",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r101-049",
+      "r104-099"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-047-calculation-001-ionic_strength_formula",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-047-calculation-001",
+    "primary_exemplar_id": "ex-physics-047",
+    "subject": "物理",
+    "front": "イオン強度 I = {{c1::(1/2)Σcᵢzᵢ²}}。cᵢはイオン種iのモル濃度、zᵢはそのイオンの{{c2::電荷}}である。高電荷イオンほど寄与が大きい。",
+    "back": "(1/2)Σcᵢzᵢ² — 電荷の2乗に依存する点がポイント。NaClではI=C、CaCl₂ではI=3C、MgSO₄ではI=4C",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-047-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "ionic_strength_formula",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r111-002",
+      "r104-097"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-047-calculation-002-complex_ionic_strength",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-047-calculation-002",
+    "primary_exemplar_id": "ex-physics-047",
+    "subject": "物理",
+    "front": "0.10 mol/L K₄[Fe(CN)₆] 水溶液のイオン強度を求めよ。",
+    "back": "K₄[Fe(CN)₆] → 4K⁺ + [Fe(CN)₆]⁴⁻。I = 1/2×(4×0.1×1² + 0.1×4²) = 1/2×(0.4 + 1.6) = 1.00 mol/L。高電荷の錯イオン（4⁻）が寄与大",
+    "format": "question_answer",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-047-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "complex_ionic_strength",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r104-097"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-047-mechanism-001-ionic_strength_activity_coefficient",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-047-mechanism-001",
+    "primary_exemplar_id": "ex-physics-047",
+    "subject": "物理",
+    "front": "イオン強度が高くなるとイオン間の{{c1::静電的相互作用}}が強くなり、活量係数は{{c2::小さく}}なる。ただし高濃度では活量係数が{{c3::1を超える}}こともある。",
+    "back": "デバイ-ヒュッケルの理論 — 希薄溶液ではI↑→γ↓。高濃度の強電解質では水和による溶媒活量低下でγ>1となることがある",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-047-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ionic_strength_activity_coefficient",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r108-199",
+      "r101-094"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-047-mechanism-002-diverse_ion_effect",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-047-mechanism-002",
+    "primary_exemplar_id": "ex-physics-047",
+    "subject": "物理",
+    "front": "難溶性塩AgClの溶解度はNaNO₃の添加による{{c1::異種イオン効果}}（塩効果）で{{c2::増大}}する。共通イオン効果とは逆の現象である。",
+    "back": "異種イオン効果 — 関係のないイオン（NO₃⁻）を添加するとイオン強度が増加し、活量係数が低下するため、見かけの溶解度が増大する。共通イオン→溶解度↓、異種イオン→溶解度↑",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-047-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "diverse_ion_effect",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-094"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-047-mechanism-003-activity_conventions",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-047-mechanism-003",
+    "primary_exemplar_id": "ex-physics-047",
+    "subject": "物理",
+    "front": "活量 a = {{c1::γ}} × x（Raoult則基準、溶媒）。平均活量 a± = {{c2::√(a₊ · a₋)}}（幾何平均）であり、算術平均ではない。",
+    "back": "γ×x（活量係数×モル分率） — 溶質の場合はHenry則基準（a = γ·m）を使うこともある。NaClの平均活量は2イオンの幾何平均（√）で求める",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-047-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "activity_conventions",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r108-199"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-047-mnemonic-001-ionic_strength_shortcut",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-047-mnemonic-001",
+    "primary_exemplar_id": "ex-physics-047",
+    "subject": "物理",
+    "front": "イオン強度の即答パターン：1価-1価（NaCl）→ I = {{c1::C}}、1価-2価（CaCl₂）→ I = {{c2::3C}}、2価-2価（MgSO₄）→ I = {{c3::4C}}。",
+    "back": "C, 3C, 4C — 計算せずに覚えてしまうと速い。NaCl: 1/2×(C×1²+C×1²)=C。CaCl₂: 1/2×(C×2²+2C×1²)=3C",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-047-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "ionic_strength_shortcut",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r104-097",
+      "r111-002"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-049-mechanism-001-she_definition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-049-mechanism-001",
+    "primary_exemplar_id": "ex-physics-049",
+    "subject": "物理",
+    "front": "標準電極電位の基準は{{c1::標準水素電極（SHE）}}で、その電位は{{c2::0 V}}と定義される。SHEの条件はH₂分圧{{c3::1 atm}}、H⁺活量1。",
+    "back": "金（Au）が基準ではない。H⁺活量1はpH=0に対応する。すべてのE°はSHEとの比較で測定",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-049-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "she_definition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r102-092",
+      "r107-003"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-049-mechanism-002-e_standard_properties",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-049-mechanism-002",
+    "primary_exemplar_id": "ex-physics-049",
+    "subject": "物理",
+    "front": "標準電極電位E°はイオンの活量が{{c1::1}}のときの値で、温度に{{c2::依存する}}。E°は負の値も{{c3::とりうる}}（イオン化傾向が大きい金属は負）。",
+    "back": "E°が正で大きいほど還元されやすい（酸化力大）。E°が負で大きいほど酸化されやすい（還元力大）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-049-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "e_standard_properties",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r102-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-049-calculation-001-daniell_cell_emf",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-049-calculation-001",
+    "primary_exemplar_id": "ex-physics-049",
+    "subject": "物理",
+    "front": "ダニエル電池（Zn|ZnSO₄‖CuSO₄|Cu）の標準起電力E°＝E°(正極)−E°(負極)＝(+0.337)−(−0.763)＝{{c1::+1.100 V}}。",
+    "back": "Znが負極（酸化）、Cuが正極（還元）。「マイナスのマイナスはプラス」で計算ミスに注意",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-049-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "daniell_cell_emf",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r110-001"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-049-calculation-002-gibbs_from_emf",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-049-calculation-002",
+    "primary_exemplar_id": "ex-physics-049",
+    "subject": "物理",
+    "front": "化学電池の標準ギブズエネルギー変化はΔG°＝{{c1::−nFE°}}で計算する。E°>0のときΔG°は{{c2::負}}（自発的反応）。",
+    "back": "n＝移動する電子のモル数、F＝ファラデー定数（96,500 C/mol）。E°＝正極E°−負極E°",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-049-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "gibbs_from_emf",
+    "reverse_of_id": "ex-physics-049-calculation-002-gibbs_calculation_example",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r100-095"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-049-calculation-002-gibbs_calculation_example",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-049-calculation-002",
+    "primary_exemplar_id": "ex-physics-049",
+    "subject": "物理",
+    "front": "NAD⁺/NADH（E°=−0.320V）とCH₃CHO/CH₃CH₂OH（E°=−0.197V）からなる電池のE°＝(−0.197)−(−0.320)＝0.123V、ΔG°＝−2×96500×0.123≈{{c1::−23.7 kJ/mol}}。",
+    "back": "E°が高い方が正極（還元側）。n＝2（2電子反応）。ΔG°の符号が負→自発的に放電する",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-049-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "gibbs_calculation_example",
+    "reverse_of_id": "ex-physics-049-calculation-002-gibbs_from_emf",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-095"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-049-mechanism-003-concentration_cell",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-049-mechanism-003",
+    "primary_exemplar_id": "ex-physics-049",
+    "subject": "物理",
+    "front": "濃淡電池は同じ電極で電解質濃度のみが異なる電池。標準起電力は{{c1::0 V}}。低濃度側が{{c2::アノード（負極）}}で酸化反応が起こる。",
+    "back": "同じ電極同士→E°の差＝0。「濃度を均等にしようとする」のが駆動力。生体膜電位も濃淡電池の原理",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-049-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "concentration_cell",
+    "reverse_of_id": "ex-physics-049-mechanism-003-concentration_cell_emf",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r105-100",
+      "r108-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-049-mechanism-003-concentration_cell_emf",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-049-mechanism-003",
+    "primary_exemplar_id": "ex-physics-049",
+    "subject": "物理",
+    "front": "Zn²⁺濃度が0.01と0.1 mol/Lの濃淡電池の起電力はネルンストの式より0.059/{{c1::n}}×log(0.1/0.01)で、n=2なので約{{c2::0.0295 V}}。",
+    "back": "n＝2（Zn²⁺＋2e⁻⇌Zn）のため0.059/2＝0.0295。0.059Vではない点がひっかけ",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-049-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "concentration_cell_emf",
+    "reverse_of_id": "ex-physics-049-mechanism-003-concentration_cell",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r105-100",
+      "r108-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-049-mechanism-004-anode_cathode",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-049-mechanism-004",
+    "primary_exemplar_id": "ex-physics-049",
+    "subject": "物理",
+    "front": "自発的に進む化学電池では、{{c1::アノード（負極）}}で酸化反応が起こり、{{c2::カソード（正極）}}で還元反応が起こる。",
+    "back": "覚え方：「アノード＝酸化（AとOは似た響き）」「カソード＝還元」。電子はアノードからカソードへ流れる",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-049-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "anode_cathode",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r108-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-049-mechanism-005-nernst_vs_hh",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-049-mechanism-005",
+    "primary_exemplar_id": "ex-physics-049",
+    "subject": "物理",
+    "front": "酸化還元反応の起電力を表す式は、ネルンストの式かHenderson-Hasselbalchの式か？",
+    "back": "ネルンストの式：E＝E°−(RT/nF)lnQ。Henderson-Hasselbalch式（pH＝pKa＋log[A⁻]/[HA]）は緩衝液のpH計算用であり酸化還元には使わない",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-049-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "nernst_vs_hh",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r108-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-049-mechanism-006-oxidant_reductant",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-049-mechanism-006",
+    "primary_exemplar_id": "ex-physics-049",
+    "subject": "物理",
+    "front": "酸化還元反応で電子を受け取るのは{{c1::酸化剤}}であり、電子を供与するのは{{c2::還元剤}}である。",
+    "back": "酸化剤＝相手を酸化する＝自分は還元される＝電子を受け取る。還元剤は逆",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-049-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "oxidant_reductant",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r108-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-049-calculation-003-emf_formula",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-049-calculation-003",
+    "primary_exemplar_id": "ex-physics-049",
+    "subject": "物理",
+    "front": "電池の標準起電力E°＝{{c1::E°(カソード/正極)}}−{{c2::E°(アノード/負極)}}。E°>0なら反応は{{c3::自発的}}に進む。",
+    "back": "正極のE°から負極のE°を引く。E°が大きい方が正極（還元される側）",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-049-calculation-003",
+    "knowledge_type": "calculation",
+    "recall_direction": "emf_formula",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r100-095",
+      "r110-001"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-050-calculation-001-zero_order_equation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-050-calculation-001",
+    "primary_exemplar_id": "ex-physics-050",
+    "subject": "物理",
+    "front": "0次反応の速度式を積分すると、{{c1::C = -kt + C₀}} となる。",
+    "back": "C = -kt + C₀ — 濃度が時間に比例して直線的に減少する。[A] vs t のグラフが直線になる",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-050-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "zero_order_equation",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r105-095",
+      "r107-095",
+      "r111-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-050-calculation-001-first_order_equation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-050-calculation-001",
+    "primary_exemplar_id": "ex-physics-050",
+    "subject": "物理",
+    "front": "1次反応の速度式を積分すると、{{c1::lnC = -kt + lnC₀}} となる。",
+    "back": "lnC = -kt + lnC₀ — ln[A] vs t のグラフが直線になる。濃度は指数関数的に減少する",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-050-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "first_order_equation",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r105-095",
+      "r107-095",
+      "r111-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-050-calculation-001-second_order_equation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-050-calculation-001",
+    "primary_exemplar_id": "ex-physics-050",
+    "subject": "物理",
+    "front": "2次反応の速度式を積分すると、{{c1::1/C = kt + 1/C₀}} となる。",
+    "back": "1/C = kt + 1/C₀ — 1/[A] vs t のグラフが直線になる",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-050-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "second_order_equation",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r105-095",
+      "r107-095",
+      "r111-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-050-calculation-002-half_life_zero_order",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-050-calculation-002",
+    "primary_exemplar_id": "ex-physics-050",
+    "subject": "物理",
+    "front": "0次反応の半減期は {{c1::t₁/₂ = C₀/(2k)}} であり、初期濃度に{{c2::比例}}する。",
+    "back": "t₁/₂ = C₀/(2k) — 初期濃度が高いほど半減期が長い。懸濁液中で溶解速度＞反応速度なら擬0次反応となる",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-050-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "half_life_zero_order",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r107-095",
+      "r111-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-050-calculation-002-half_life_first_order",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-050-calculation-002",
+    "primary_exemplar_id": "ex-physics-050",
+    "subject": "物理",
+    "front": "1次反応の半減期は {{c1::t₁/₂ = 0.693/k}} であり、初期濃度に{{c2::依存しない}}。",
+    "back": "t₁/₂ = 0.693/k = ln2/k — 半減期が一定なのは1次反応の特徴。医薬品の有効期限計算の基本",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-050-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "half_life_first_order",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r107-095",
+      "r111-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-050-calculation-002-half_life_second_order",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-050-calculation-002",
+    "primary_exemplar_id": "ex-physics-050",
+    "subject": "物理",
+    "front": "2次反応の半減期は {{c1::t₁/₂ = 1/(kC₀)}} であり、初期濃度に{{c2::反比例}}する。",
+    "back": "t₁/₂ = 1/(kC₀) — 濃度が高いほど半減期が短い。初期濃度との関係で反応次数を判別できる",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-050-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "half_life_second_order",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r107-095",
+      "r111-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-050-classification-001-graph_to_order",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-050-classification-001",
+    "primary_exemplar_id": "ex-physics-050",
+    "subject": "物理",
+    "front": "反応次数を判別するとき、[A] vs t、ln[A] vs t、1/[A] vs t のうち、どのグラフが直線になるかで何次反応か分かる。それぞれ何次反応に対応するか？",
+    "back": "[A] vs t が直線 → 0次反応、ln[A] vs t が直線 → 1次反応、1/[A] vs t が直線 → 2次反応。各グラフの傾きから速度定数kを求められる",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-050-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "graph_to_order",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r105-095",
+      "r107-095"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-050-classification-002-half_life_dependency",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-050-classification-002",
+    "primary_exemplar_id": "ex-physics-050",
+    "subject": "物理",
+    "front": "反応次数ごとの半減期と初期濃度の関係を比較せよ：0次 / 1次 / 2次",
+    "back": "0次: C₀に比例（t₁/₂=C₀/2k）、1次: C₀に無関係（t₁/₂=0.693/k）、2次: C₀に反比例（t₁/₂=1/kC₀）。全反応次数で半減期はkに反比例する",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-050-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "half_life_dependency",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r111-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-050-mechanism-001-equilibrium_constant_from_rate",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-050-mechanism-001",
+    "primary_exemplar_id": "ex-physics-050",
+    "subject": "物理",
+    "front": "正逆反応がともに一次反応 A ⇌ B の場合、平衡定数 K = {{c1::k₁/k₋₁}} である。K < 1 なら平衡時に{{c2::原系（A）}}が多く残る。",
+    "back": "K = k₁/k₋₁ — 正反応の速度定数と逆反応の速度定数の比。K=0.5なら[A]:[B]=2:1で平衡に達する",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-050-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "equilibrium_constant_from_rate",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-002"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-050-mnemonic-001-mnemonic_to_equations",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-050-mnemonic-001",
+    "primary_exemplar_id": "ex-physics-050",
+    "subject": "物理",
+    "front": "反応速度式のゴロ「小林は、まことのこ」はどの公式を覚えるためのもの？",
+    "back": "0次: C = -kt + C₀（小林は＝こばやしは→C = -kt + C₀）。ゴロで速度式を思い出し、1次: lnC = -kt + lnC₀、2次: 1/C = kt + 1/C₀ の3本セットで暗記する",
+    "format": "question_answer",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-050-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "mnemonic_to_equations",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.88,
+    "source_question_ids": [
+      "r105-095",
+      "r107-095",
+      "r111-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-050-calculation-003-first_order_identification",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-050-calculation-003",
+    "primary_exemplar_id": "ex-physics-050",
+    "subject": "物理",
+    "front": "濃度-時間グラフで半減期が一定（15分ごとに半減など）であれば、その反応は{{c1::1次反応}}と判定できる。",
+    "back": "1次反応 — 半減期が濃度に依存しないのは1次反応だけ。X→2Yの反応では、Xが半減する時間とYが対応量だけ増加する時間は等しい",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-050-calculation-003",
+    "knowledge_type": "calculation",
+    "recall_direction": "first_order_identification",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r105-095"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-050-classification-003-rate_constant_dimension",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-050-classification-003",
+    "primary_exemplar_id": "ex-physics-050",
+    "subject": "物理",
+    "front": "0次反応のkの次元は{{c1::mol·L⁻¹·s⁻¹}}、1次反応は{{c2::s⁻¹}}、2次反応は{{c3::L·mol⁻¹·s⁻¹}}である。",
+    "back": "反応次数が異なればkの次元も異なる。速度式 v = k[A]ⁿ の次元を揃えると導出できる",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-050-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "rate_constant_dimension",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r107-095",
+      "r111-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-058-classification-001-list_si_base_units",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-058-classification-001",
+    "primary_exemplar_id": "ex-physics-058",
+    "subject": "物理",
+    "front": "SI基本単位は7つ：m（長さ）、kg（質量）、s（時間）、{{c1::A}}（電流）、{{c2::K}}（温度）、{{c3::mol}}（物質量）、{{c4::cd}}（光度）である。",
+    "back": "A=アンペア、K=ケルビン、mol=モル、cd=カンデラ。J（ジュール）やPa（パスカル）はSI組立単位であり基本単位ではない",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-058-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "list_si_base_units",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-001",
+      "r106-002"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-058-mnemonic-001-mnemonic_si_units",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-058-mnemonic-001",
+    "primary_exemplar_id": "ex-physics-058",
+    "subject": "物理",
+    "front": "SI基本単位7つを覚えるゴロ合わせ「アンモル関係のメケス」とは？",
+    "back": "ア(A:アンペア)、モル(mol)、関(cd:カンデラ)、係(K:ケルビン)、の、メ(m:メートル)、ケ(kg:キログラム)、ス(s:秒)。これ以外（J, Pa, Hz, W等）はすべてSI組立単位",
+    "format": "question_answer",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-058-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "mnemonic_si_units",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-001"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-058-classification-002-prefix_positive",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-058-classification-002",
+    "primary_exemplar_id": "ex-physics-058",
+    "subject": "物理",
+    "front": "SI接頭辞（大きい方）：k（キロ）= 10³、M（メガ）= {{c1::10⁶}}、G（ギガ）= {{c2::10⁹}}、T（テラ）= {{c3::10¹²}}",
+    "back": "3桁ずつ増加する。キロ→メガ→ギガ→テラ→ペタ。薬学ではmg, µg, ngの使い分けが重要",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-058-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "prefix_positive",
+    "reverse_of_id": "ex-physics-058-classification-002-prefix_negative",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-001",
+      "r106-002"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-058-classification-002-prefix_negative",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-058-classification-002",
+    "primary_exemplar_id": "ex-physics-058",
+    "subject": "物理",
+    "front": "SI接頭辞（小さい方）：m（ミリ）= 10⁻³、µ（マイクロ）= {{c1::10⁻⁶}}、n（ナノ）= {{c2::10⁻⁹}}、p（ピコ）= {{c3::10⁻¹²}}",
+    "back": "3桁ずつ減少する。ミリ→マイクロ→ナノ→ピコ→フェムト。1 nm = 10⁻⁹ m、1 µg = 10⁻⁶ g",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-058-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "prefix_negative",
+    "reverse_of_id": "ex-physics-058-classification-002-prefix_positive",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-001",
+      "r106-002"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-058-calculation-001-ppm_percent_conversion",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-058-calculation-001",
+    "primary_exemplar_id": "ex-physics-058",
+    "subject": "物理",
+    "front": "1 ppm = {{c1::10⁻⁴}} %。逆に 1% = {{c2::10⁴}} ppm。また 1 mg/kg = {{c3::1}} ppm である。",
+    "back": "ppm = 10⁻⁶（百万分率）、% = 10⁻²（百分率）。差は10⁴倍。mg/kg = ppm、µg/kg = ppb",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-058-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "ppm_percent_conversion",
+    "reverse_of_id": "ex-physics-058-calculation-001-wv_percent",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r102-001",
+      "r106-002"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-058-calculation-001-wv_percent",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-058-calculation-001",
+    "primary_exemplar_id": "ex-physics-058",
+    "subject": "物理",
+    "front": "1 w/v% = {{c1::1 g/100 mL}} = {{c2::10 g/L}} である。",
+    "back": "w/v%は「溶質のg数 / 溶液100 mL」。v/v%は「溶質mL / 溶液100 mL」、w/w%は「溶質g / 溶液100 g」",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-058-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "wv_percent",
+    "reverse_of_id": "ex-physics-058-calculation-001-ppm_percent_conversion",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-001",
+      "r106-002"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-058-calculation-002-significant_figures_addition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-058-calculation-002",
+    "primary_exemplar_id": "ex-physics-058",
+    "subject": "物理",
+    "front": "有効数字の加減法では、{{c1::小数点以下の桁数}}が最も少ない値に合わせて丸める。",
+    "back": "例: 1.231 + 0.32132 = 1.55232 → 小数点以下3桁に丸めて1.552。加減法は「小数点以下」、乗除法は「有効数字の桁数」で合わせる",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-058-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "significant_figures_addition",
+    "reverse_of_id": "ex-physics-058-calculation-002-significant_figures_multiplication",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r103-005",
+      "r105-004"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-058-calculation-002-significant_figures_multiplication",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-058-calculation-002",
+    "primary_exemplar_id": "ex-physics-058",
+    "subject": "物理",
+    "front": "有効数字の乗除法では、{{c1::有効数字の桁数}}が最も少ない値に合わせて丸める。",
+    "back": "例: 原子量Pb=207.2（有効数字4桁）を含む式量計算では、結果も有効数字4桁にする",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-058-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "significant_figures_multiplication",
+    "reverse_of_id": "ex-physics-058-calculation-002-significant_figures_addition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-005",
+      "r105-004"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-058-classification-003-trueness_vs_precision",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-058-classification-003",
+    "primary_exemplar_id": "ex-physics-058",
+    "subject": "物理",
+    "front": "分析における「真度（trueness）」と「精度（precision）」の違いを説明せよ。",
+    "back": "真度: 測定値の平均が真の値にどれだけ近いか（系統誤差の指標）。精度: 測定値のばらつきがどれだけ小さいか（偶然誤差の指標）。両方高い＝真の値付近に密集したヒストグラム",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-058-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "trueness_vs_precision",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r111-005"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-058-classification-004-accurate_vs_precise_jp",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-058-classification-004",
+    "primary_exemplar_id": "ex-physics-058",
+    "subject": "物理",
+    "front": "日本薬局方で「{{c1::正確に}}量る」は指示量の±10%、「{{c2::精密に}}量る」は指示量を0.1%まで正確に量ることを意味する。",
+    "back": "正確に10g → 9.5〜10.5gの範囲。精密に10g → 10.000gのように0.1%精度。秤量の精度レベルが異なる",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-058-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "accurate_vs_precise_jp",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r111-005"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-058-mnemonic-002-concentration_mnemonic",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-058-mnemonic-002",
+    "primary_exemplar_id": "ex-physics-058",
+    "subject": "物理",
+    "front": "0.1% = {{c1::1000}} ppm。ppm → g/L の換算では 1 ppm = {{c2::0.001}} g/L（水溶液の場合）。",
+    "back": "0.1% = 10⁻³ = 1000 × 10⁻⁶ = 1000 ppm。水溶液（密度≒1）なら 1 ppm ≒ 1 mg/L = 0.001 g/L",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-058-mnemonic-002",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "concentration_mnemonic",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.92,
+    "source_question_ids": [
+      "r102-001",
+      "r106-002"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-061-calculation-001-strong_acid_ph",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-061-calculation-001",
+    "primary_exemplar_id": "ex-physics-061",
+    "subject": "物理",
+    "front": "強酸（完全解離）のpH計算：0.10 mol/L HCl → [H⁺] = 0.10 mol/L → pH = {{c1::1.0}}",
+    "back": "pH = -log[H⁺]。強酸は完全解離するので濃度がそのまま[H⁺]。0.1→pH1、0.01→pH2、0.001→pH3",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-061-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "strong_acid_ph",
+    "reverse_of_id": "ex-physics-061-calculation-001-strong_base_ph",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-005",
+      "r107-001"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-061-calculation-001-strong_base_ph",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-061-calculation-001",
+    "primary_exemplar_id": "ex-physics-061",
+    "subject": "物理",
+    "front": "強塩基のpH計算：0.010 mol/L NaOH → pOH = 2 → pH = {{c1::12}}",
+    "back": "pH + pOH = 14（25℃）。強塩基は完全解離で[OH⁻]＝濃度。NaOH 0.01mol/L→pOH=2→pH=12",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-061-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "strong_base_ph",
+    "reverse_of_id": "ex-physics-061-calculation-001-strong_acid_ph",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-005",
+      "r107-001"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-061-calculation-002-weak_acid_ph_formula",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-061-calculation-002",
+    "primary_exemplar_id": "ex-physics-061",
+    "subject": "物理",
+    "front": "弱酸水溶液のpH = {{c1::½(pKa - logC)}}。安息香酸（pKa=4.2、C=0.01）なら pH = ½(4.2+2) = {{c2::3.1}}",
+    "back": "½(pKa - logC) — logCが負の値なので引き算が足し算になる。[H⁺] = √(Ka·C) から導出される",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-061-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "weak_acid_ph_formula",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r109-005"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-061-calculation-003-salt_of_weak_base_ph",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-061-calculation-003",
+    "primary_exemplar_id": "ex-physics-061",
+    "subject": "物理",
+    "front": "弱塩基の塩（例：NH₄Cl）のpH = {{c1::½(pKa - logC)}}。pKb=4.70の場合、pKa = {{c2::9.30}} を使う。",
+    "back": "pKa + pKb = 14（pKw）。NH₄⁺が弱酸として加水分解するため溶液は酸性。pH = ½(9.30-(-2)) = 5.65",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-061-calculation-003",
+    "knowledge_type": "calculation",
+    "recall_direction": "salt_of_weak_base_ph",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r103-096"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-061-calculation-004-salt_of_weak_acid_ph",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-061-calculation-004",
+    "primary_exemplar_id": "ex-physics-061",
+    "subject": "物理",
+    "front": "弱酸と強塩基の塩のpH = {{c1::7 + ½(pKa + logC)}}。尿酸ナトリウム（pKa=5.75、C=400µmol/L）では約{{c2::8.2}}。",
+    "back": "弱酸の塩の水溶液は塩基性を示す。pH = 14 - ½(14 - pKa - logC) = 7 + ½(pKa + logC)。加水分解で OH⁻ が生じる",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-061-calculation-004",
+    "knowledge_type": "calculation",
+    "recall_direction": "salt_of_weak_acid_ph",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r111-196"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-061-calculation-005-hh_equation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-061-calculation-005",
+    "primary_exemplar_id": "ex-physics-061",
+    "subject": "物理",
+    "front": "Henderson-Hasselbalch式：pH = pKa + log({{c1::[A⁻]/[HA]}})。弱酸（pKa=8.9）がpH 7.4のとき、分子形:イオン形 = {{c2::32}}:1。",
+    "back": "pH < pKa なら分子形（HA）優位。7.4 = 8.9 + log([A⁻]/[HA]) → log比 = -1.5 → 10^1.5 ≒ 32で分子形が32倍多い",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-061-calculation-005",
+    "knowledge_type": "calculation",
+    "recall_direction": "hh_equation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r108-205"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-061-mechanism-001-isoelectric_point_charge",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-061-mechanism-001",
+    "primary_exemplar_id": "ex-physics-061",
+    "subject": "物理",
+    "front": "アミノ酸の等電点（pI）は全体の電荷が{{c1::0}}になるpH。pH < pI なら{{c2::正}}電荷、pH > pI なら{{c3::負}}電荷をもつ。",
+    "back": "中性アミノ酸のpI = (pKa1+pKa2)/2。塩基性アミノ酸（Arg等）のpI = (pKa2+pKR)/2 で高い値になる",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-061-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "isoelectric_point_charge",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r106-095"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-061-calculation-006-pi_calculation_method",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-061-calculation-006",
+    "primary_exemplar_id": "ex-physics-061",
+    "subject": "物理",
+    "front": "中性・塩基性・酸性アミノ酸の等電点（pI）はそれぞれどのpKa値の平均で求めるか？",
+    "back": "中性: pI = (pKa1+pKa2)/2（α-COOHとα-NH₃⁺の平均）。塩基性: pI = (pKa2+pKR)/2（α-NH₃⁺と側鎖の平均）。酸性: pI = (pKa1+pKR)/2（α-COOHと側鎖COOHの平均）。電荷が0になるpHを挟む2つのpKaの平均",
+    "format": "question_answer",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-061-calculation-006",
+    "knowledge_type": "calculation",
+    "recall_direction": "pi_calculation_method",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r106-095"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-061-classification-001-ph_formula_system",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-061-classification-001",
+    "primary_exemplar_id": "ex-physics-061",
+    "subject": "物理",
+    "front": "以下のpH公式を比較せよ：強酸 / 弱酸 / 弱塩基の塩 / 弱酸の塩 / 緩衝液",
+    "back": "強酸: pH=-log C。弱酸: pH=½(pKa-logC)。弱塩基の塩: pH=½(pKa-logC)（pKa=14-pKb）。弱酸の塩: pH=7+½(pKa+logC)。緩衝液: pH=pKa+log([塩基]/[酸])（Henderson-Hasselbalch式）",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-061-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "ph_formula_system",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-005",
+      "r103-096",
+      "r107-001",
+      "r109-005",
+      "r111-196"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-061-mnemonic-001-log2_value",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-061-mnemonic-001",
+    "primary_exemplar_id": "ex-physics-061",
+    "subject": "物理",
+    "front": "pH計算で頻出の数値：10^0.3 = {{c1::2}}、10^0.5 ≒ {{c2::3.2}}、10^1.5 ≒ {{c3::32}}。",
+    "back": "log₁₀ 2 = 0.3 は必須暗記。10^0.5 = √10 ≒ 3.16。10^1.5 = 10×√10 ≒ 31.6。これらを使ってHH式の比を暗算する",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-061-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "log2_value",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r108-205",
+      "r111-196"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-061-mechanism-002-pka_pkb_relationship",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-061-mechanism-002",
+    "primary_exemplar_id": "ex-physics-061",
+    "subject": "物理",
+    "front": "共役酸塩基対において、pKa + pKb = {{c1::pKw}} = {{c2::14}}（25℃）。Kw = Ka × Kb = {{c3::10⁻¹⁴}}。",
+    "back": "共役関係: NH₃(Kb) ↔ NH₄⁺(Ka)。pKb=4.70のアンモニアの共役酸NH₄⁺のpKa = 14-4.70 = 9.30",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-061-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "pka_pkb_relationship",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r103-096"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-065-mechanism-001-ksp_formula_setup",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-065-mechanism-001",
+    "primary_exemplar_id": "ex-physics-065",
+    "subject": "物理",
+    "front": "Fe(OH)₃の溶解度をS mol/Lとすると、[Fe³⁺] = S、[OH⁻] = {{c1::3S}}。Ksp = S × (3S)³ = {{c2::27S⁴}}。",
+    "back": "27S⁴ — 各イオン濃度をSで表してから代入するのが確実。「3を忘れずに3乗」→3³=27。同様にAgCl→Ksp=S²、CaF₂→Ksp=4S³、Ag₂CrO₄→Ksp=4S³",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-065-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ksp_formula_setup",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r110-003",
+      "r103-003"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-065-mechanism-002-common_ion_effect",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-065-mechanism-002",
+    "primary_exemplar_id": "ex-physics-065",
+    "subject": "物理",
+    "front": "硫酸バリウムの飽和溶液に硫酸ナトリウム（{{c1::SO₄²⁻}}を含む）を加えると、{{c2::共通イオン効果}}により沈殿が増加する。",
+    "back": "共通イオン効果 — 共通のイオン（SO₄²⁻）を加えるとイオン濃度の積がKspを超え、沈殿が生じやすくなる。異種イオン効果（溶解度↑）とは逆",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-065-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "common_ion_effect",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r103-003",
+      "r107-004"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-065-calculation-001-ksp_common_ion_calculation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-065-calculation-001",
+    "primary_exemplar_id": "ex-physics-065",
+    "subject": "物理",
+    "front": "BaSO₄のKsp = 1.0×10⁻¹⁰。0.10 mol/L Na₂SO₄水溶液中でのBaSO₄の溶解度を求めよ。",
+    "back": "[SO₄²⁻] ≒ 0.10 mol/L（Na₂SO₄由来が支配的）。Ksp = [Ba²⁺][SO₄²⁻]より、S = Ksp/0.10 = 1.0×10⁻⁹ mol/L。純水中ではS = √Ksp = 1.0×10⁻⁵ mol/Lなので、共通イオンにより10⁴倍溶けにくくなる",
+    "format": "question_answer",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-065-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "ksp_common_ion_calculation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r107-004"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-065-calculation-002-precipitation_ph_calculation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-065-calculation-002",
+    "primary_exemplar_id": "ex-physics-065",
+    "subject": "物理",
+    "front": "M(OH)₂（Ksp = 2.0×10⁻²⁰）の0.01 mol/L水溶液が沈殿し始めるpHは約{{c1::5}}。計算手順：Ksp = [M²⁺][OH⁻]² → [OH⁻] = √(Ksp/[M²⁺]) → pOH → pH。",
+    "back": "pH ≒ 5 — [OH⁻]² = 2.0×10⁻²⁰/0.01 = 2.0×10⁻¹⁸、[OH⁻] ≒ 1.41×10⁻⁹、pOH ≒ 8.85、pH = 14−8.85 ≒ 5.15。Kspが小さい（沈殿しやすい）ほど低pHで沈殿開始",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-065-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "precipitation_ph_calculation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r109-094"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-065-classification-001-common_vs_diverse_ion",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-065-classification-001",
+    "primary_exemplar_id": "ex-physics-065",
+    "subject": "物理",
+    "front": "共通イオン効果と異種イオン効果の違いを比較せよ。",
+    "back": "共通イオン効果 = 同じイオン（例：AgClにCl⁻）を加える→溶解度↓（Kspを超えて沈殿）。異種イオン効果 = 関係ないイオン（例：AgClにNO₃⁻）を加える→イオン強度↑→活量係数↓→溶解度↑",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-065-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "common_vs_diverse_ion",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r103-003"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-065-mnemonic-001-ksp_pattern_shortcut",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-065-mnemonic-001",
+    "primary_exemplar_id": "ex-physics-065",
+    "subject": "物理",
+    "front": "Kspの公式パターン：AgCl → {{c1::S²}}、CaF₂ → {{c2::4S³}}、Fe(OH)₃ → {{c3::27S⁴}}。係数は陰イオン数の「数をそのまま冪乗」。",
+    "back": "S², 4S³, 27S⁴ — AxByの場合Ksp = xˣyʸS^(x+y)のパターン。CaF₂: 1¹×2²×S³=4S³。Fe(OH)₃: 1¹×3³×S⁴=27S⁴",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-065-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "ksp_pattern_shortcut",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r110-003"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-067-mechanism-001-partition_coefficient_definition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-067-mechanism-001",
+    "primary_exemplar_id": "ex-physics-067",
+    "subject": "物理",
+    "front": "分配係数（logP）の測定では、水と{{c1::1-オクタノール}}を組み合わせて使用する。1-オクタノールは{{c2::生体膜の脂質二重層}}に性質が近いため標準的に選ばれている。",
+    "back": "1-オクタノール/水 — 水と混和しない有機溶媒が必要。アセトニトリル、アセトン、メタノール、グリセロールはすべて水と混和するため不可。logPが大きいほど脂溶性が高い",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-067-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "partition_coefficient_definition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r103-002"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-067-mechanism-002-ph_partition_acid_base",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-067-mechanism-002",
+    "primary_exemplar_id": "ex-physics-067",
+    "subject": "物理",
+    "front": "酸性薬物と塩基性薬物について、有機層への移行が最大となるpH条件を比較せよ。",
+    "back": "酸性薬物 = 低pHで分子形（非イオン形）→有機層へ移行。塩基性薬物 = 高pHで分子形→有機層へ移行。覚え方：分子形（電荷なし）が有機層に溶けやすい。pKa付近で水層濃度が急変する",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-067-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ph_partition_acid_base",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r101-205"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-067-calculation-001-kd_calculation_with_hh",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-067-calculation-001",
+    "primary_exemplar_id": "ex-physics-067",
+    "subject": "物理",
+    "front": "弱酸HA（pKa 5.3）をpH 5.0の緩衝液200 mLから有機溶媒100 mLで抽出し、抽出率75%。分配係数KDを求めよ（10⁰·³=2）。",
+    "back": "pH 5.0でpKa 5.3 → [HA]:[A⁻] = 10^(pKa-pH) = 10⁰·³ = 2:1。分子形は全体の2/3。抽出率75%から有機相:水相 = 3:1。水相中の分子形の濃度とKDの関係から、KD = 9.0。見かけの分配係数 = KD × fu（分子型分率）",
+    "format": "question_answer",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-067-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "kd_calculation_with_hh",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r107-096"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-067-calculation-002-extraction_volume_calculation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-067-calculation-002",
+    "primary_exemplar_id": "ex-physics-067",
+    "subject": "物理",
+    "front": "分配係数K = 18、水相100 mL中に薬物50 mmol。酢酸エチル相に45 mmol移行。K = (45/V) / (5/100) = 18 → V = {{c1::50}} mL。",
+    "back": "50 mL — 分配係数 = 有機相濃度/水相濃度（「濃度」なので量÷体積）。45×100/(V×5) = 18 → V = 50 mL",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-067-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "extraction_volume_calculation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r110-005"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-067-classification-001-solvent_density_layers",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-067-classification-001",
+    "primary_exemplar_id": "ex-physics-067",
+    "subject": "物理",
+    "front": "水と有機溶媒で二液相を形成したとき水が上層になるのは、有機溶媒の密度が水より{{c1::大きい}}場合。代表例は{{c2::クロロホルム}}（密度≒1.49 g/mL）。",
+    "back": "クロロホルム — ジエチルエーテル、1-オクタノール、n-ヘキサン、トルエンはすべて水より軽い（上層）。クロロホルムだけが水より重い（下層）ので水が上層になる",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-067-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "solvent_density_layers",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r111-001"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-067-mechanism-003-extraction_ph_adjustment",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-067-mechanism-003",
+    "primary_exemplar_id": "ex-physics-067",
+    "subject": "物理",
+    "front": "溶媒抽出法で酸性薬物を有機層へ移行させるには、pHをpKaより{{c1::2以上下げる}}（非解離形:解離形 = 100:1）。塩基性薬物ではpHをpKaより{{c2::2以上上げる}}。",
+    "back": "pKa ± 2 — Henderson-Hasselbalch式から、pHがpKaから2離れると分子形とイオン形の比は100:1。塩析（NaCl飽和添加で水和層を奪う）も抽出効率を高める手法",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-067-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "extraction_ph_adjustment",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r101-205",
+      "r107-096"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-069-classification-001-elemental_identification_tests",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-069-classification-001",
+    "primary_exemplar_id": "ex-physics-069",
+    "subject": "物理",
+    "front": "日局確認試験の元素別反応を比較せよ：フッ素(F)、硫黄(S)、ヨウ素(I)、塩素(Cl)。",
+    "back": "F → ガラス腐食。S → NaOH融解後HCl→H₂S発生→酢酸鉛紙黒変。I → 紫色蒸気（昇華）。Cl → 銅網で燃焼→緑色炎色（ベイルシュタイン試験）",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-069-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "elemental_identification_tests",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r104-092",
+      "r111-099"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-069-classification-002-qualitative_ion_reactions",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-069-classification-002",
+    "primary_exemplar_id": "ex-physics-069",
+    "subject": "物理",
+    "front": "AgClは{{c1::白色}}沈殿（希硝酸不溶、NH₃水可溶）、AgBrは{{c2::淡黄色}}沈殿、AgIは{{c3::黄色}}沈殿（NH₃水{{c4::不溶}}）。",
+    "back": "Ag塩の沈殿色で陰イオンを同定 — 塩化物(白)、臭化物(淡黄)、ヨウ化物(黄)。AgIはNH₃水にも溶けない点が識別のポイント",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-069-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "qualitative_ion_reactions",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-097"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-069-classification-003-functional_group_tests",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-069-classification-003",
+    "primary_exemplar_id": "ex-physics-069",
+    "subject": "物理",
+    "front": "次の官能基と確認試験法を対応させよ：カルボキシ基 / α-ケトール基 / 芳香族1級アミン / フェノール性OH / ステロイド骨格",
+    "back": "カルボキシ基 → ヒドロキサム酸鉄反応（赤紫色）。α-ケトール基 → フェーリング試液（赤色沈殿）。芳香族1級アミン → ジアゾ化カップリング。フェノール性OH → 4-アミノアンチピリン。ステロイド → 硫酸呈色反応（コーベル反応）",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-069-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "functional_group_tests",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r103-098",
+      "r106-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-069-mechanism-001-iodoform_reaction",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-069-mechanism-001",
+    "primary_exemplar_id": "ex-physics-069",
+    "subject": "物理",
+    "front": "ヨードホルム反応は{{c1::メチルケトン}}構造（-COCH₃）の検出法。I₂/NaOH条件で{{c2::淡黄色}}沈殿（CHI₃）を生じる。エタノールやイソプロパノールも{{c3::陽性}}。",
+    "back": "メチルケトン検出 — ホルミル基（-CHO）ではなくメチルケトン（-COCH₃）が正しい。エタノール・イソプロパノールは酸化されてアセトアルデヒド・アセトンになるため陽性",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-069-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "iodoform_reaction",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r107-105"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-069-mechanism-002-steroid_sulfuric_acid_reaction",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-069-mechanism-002",
+    "primary_exemplar_id": "ex-physics-069",
+    "subject": "物理",
+    "front": "ステロイドの確認試験：硫酸を加えると帯黄緑色蛍光→橙黄色→暗赤色に変化（{{c1::コーベル反応}}）。紫外線照射で{{c2::淡緑色}}の蛍光を発する。",
+    "back": "コーベル反応 — ヒドロコルチゾンコハク酸エステル等のステロイド骨格の確認に使用。確認試験は主成分の同定であり、純度試験（不純物の限度）とは目的が異なる",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-069-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "steroid_sulfuric_acid_reaction",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r106-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-069-mechanism-003-permanganate_phosphate_reactions",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-069-mechanism-003",
+    "primary_exemplar_id": "ex-physics-069",
+    "subject": "物理",
+    "front": "過マンガン酸塩の確認：硫酸酸性で過酸化水素を加えると{{c1::脱色}}。リン酸塩の確認：七モリブデン酸六アンモニウム試液を加えて加温すると{{c2::黄色沈殿}}を生じる。",
+    "back": "過マンガン酸塩→脱色（MnO₄⁻が還元）、リン酸塩→黄色沈殿（リンモリブデン酸アンモニウム）。NaOHやNH₃水で沈殿が溶解する点も特徴",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-069-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "permanganate_phosphate_reactions",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r101-097"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-069-mechanism-004-tlc_purity_test_principle",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-069-mechanism-004",
+    "primary_exemplar_id": "ex-physics-069",
+    "subject": "物理",
+    "front": "TLC純度試験では固定相に{{c1::シリカゲル}}（蛍光剤入り）を使用し、UV{{c2::254}} nmを照射してスポットを観察する。主スポット以外のスポットが標準溶液より濃くないことを確認する。",
+    "back": "シリカゲル + UV 254nm — 蛍光剤入りプレートに254nmのUVを当てると、薬物が吸収して暗点として観察される。類縁物質の許容限度は通常2%程度",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-069-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "tlc_purity_test_principle",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-069-calculation-001-aromatic_amine_limit_calculation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-069-calculation-001",
+    "primary_exemplar_id": "ex-physics-069",
+    "subject": "物理",
+    "front": "アミドトリゾ酸0.20gの純度試験で、芳香族第一アミンの呈色物のE1%1cm(485nm)=475。吸光度上限0.15のとき許容限度は？",
+    "back": "A = E1%1cm × c(g/100mL) × l。0.15 = 475 × c × 1 → c = 3.16×10⁻⁴ g/100mL。50mL中の量 = 1.58×10⁻⁴ g。許容限度 = 1.58×10⁻⁴/0.20 × 100 ≒ 0.079%",
+    "format": "question_answer",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-069-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "aromatic_amine_limit_calculation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.92,
+    "source_question_ids": [
+      "r110-097"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-069-mnemonic-001-detection_reaction_mnemonic",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-069-mnemonic-001",
+    "primary_exemplar_id": "ex-physics-069",
+    "subject": "物理",
+    "front": "シモン反応 → {{c1::2級アミン}}。ドラーゲンドルフ反応 → {{c2::3級アミン（窒素含有化合物）}}。ニンヒドリン反応 → {{c3::アミノ酸}}。",
+    "back": "シモン = 2級アミン（覚せい剤メタンフェタミンで陽性）。ドラーゲンドルフ = N含有化合物（アルカロイド検出）。ニンヒドリン = α-アミノ酸（紫色呈色）",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-069-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "detection_reaction_mnemonic",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r107-105"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-070-classification-001-glassware_selection",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-070-classification-001",
+    "primary_exemplar_id": "ex-physics-070",
+    "subject": "物理",
+    "front": "正確な一定量を量り取るには{{c1::ホールピペット}}、滴定操作には{{c2::ビュレット}}を用いる。メスピペットは概量用。",
+    "back": "ホールピペット = 一定体積を正確に量り取る。ビュレット = 滴下量を精密に測る。メスピペット = 任意量を量るが精度は劣る",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-070-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "glassware_selection",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r105-096",
+      "r106-091"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-070-calculation-001-factor_calculation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-070-calculation-001",
+    "primary_exemplar_id": "ex-physics-070",
+    "subject": "物理",
+    "front": "ファクター(f)とは標準液の濃度補正係数。実濃度 = 表示濃度 × f。NaOH量 = {{c1::濃度 × f × 滴定量}}",
+    "back": "例: 0.01 mol/L HCl（f=1.020）で6.10 mL → NaOH = 0.01×1.020×6.10 = 0.06222 mmol = 62.2 µmol（有効数字3桁）",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-070-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "factor_calculation",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-002",
+      "r106-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-070-classification-002-indicator_selection",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-070-classification-002",
+    "primary_exemplar_id": "ex-physics-070",
+    "subject": "物理",
+    "front": "弱酸＋強塩基の滴定（終点pH 8〜10）には{{c1::フェノールフタレイン}}、弱塩基＋強酸の滴定（終点pH 3〜6）には{{c2::メチルオレンジ}}か{{c3::メチルレッド}}を用いる。",
+    "back": "指示薬はpHジャンプの範囲に変色域が含まれるものを選ぶ。強酸＋強塩基はジャンプが大きいのでどちらでもよい",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-070-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "indicator_selection",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r105-096",
+      "r111-096"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-070-classification-003-standard_reagents",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-070-classification-003",
+    "primary_exemplar_id": "ex-physics-070",
+    "subject": "物理",
+    "front": "NaOH標準液の標定に使う標準試薬は{{c1::アミド硫酸}}、HCl/H₂SO₄の標定には{{c2::炭酸ナトリウム}}を用いる。",
+    "back": "NaOH→アミド硫酸で標定。HCl/H₂SO₄→炭酸ナトリウムで標定。ファクターは0.970〜1.030の範囲に調製する",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-070-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "standard_reagents",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-091",
+      "r111-096"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-070-mechanism-001-barium_hydroxide_purpose",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-070-mechanism-001",
+    "primary_exemplar_id": "ex-physics-070",
+    "subject": "物理",
+    "front": "NaOH標準液の調製時に水酸化バリウム飽和溶液を加える理由は？",
+    "back": "NaOH中の不純物Na₂CO₃を除去するため。Ba²⁺ + CO₃²⁻ → BaCO₃↓（炭酸バリウムの沈殿）を生成させ、ろ過で除く。硫酸バリウムではない点に注意",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-070-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "barium_hydroxide_purpose",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r106-091"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-070-calculation-002-polyprotic_acid_titration",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-070-calculation-002",
+    "primary_exemplar_id": "ex-physics-070",
+    "subject": "物理",
+    "front": "クエン酸は{{c1::3}}価の酸（COOH×3）。NaOH mol数の1/3がクエン酸mol数。質量(mg) = mol数 × {{c2::192.12}}。",
+    "back": "多価酸の中和: n(NaOH) = 価数 × n(酸)。クエン酸(C₆H₈O₇, MW 192.12)は3価、リン酸(H₃PO₄)も3価",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-070-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "polyprotic_acid_titration",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r105-096",
+      "r106-092"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-070-calculation-003-two_step_titration",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-070-calculation-003",
+    "primary_exemplar_id": "ex-physics-070",
+    "subject": "物理",
+    "front": "NaOH中のNa₂CO₃定量で、フェノールフタレイン終点までの滴定量をA、さらにメチルオレンジ終点までの滴定量をBとしたとき、NaOH量とNa₂CO₃量はどう求める？",
+    "back": "NaOH量: (A-B) mL から計算。Na₂CO₃量: B mL × 2（NaHCO₃→Na₂CO₃は1:1だが、第1→第2終点のH₂SO₄はCO₃²⁻の半分のみ中和するため×2）。0.5mol/L H₂SO₄ 1mL = 40.00mg NaOH",
+    "format": "question_answer",
+    "tags": [
+      "calculation",
+      "integrated"
+    ],
+    "knowledge_atom_id": "ex-physics-070-calculation-003",
+    "knowledge_type": "calculation",
+    "recall_direction": "two_step_titration",
+    "difficulty_tier": "integrated",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r111-096",
+      "r111-097"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-070-mnemonic-001-titration_types_mnemonic",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-070-mnemonic-001",
+    "primary_exemplar_id": "ex-physics-070",
+    "subject": "物理",
+    "front": "容量分析の分類ゴロ「中学できしすぎた非行少年」は何を表す？",
+    "back": "中=中和滴定、き=キレート滴定、し=沈殿滴定、非=非水滴定。また「ガラス割り偵察3回ハッキング」はそれぞれの電極：ガラス電極、白金電極、銀電極、白金電極を表す",
+    "format": "question_answer",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-070-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "titration_types_mnemonic",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.88,
+    "source_question_ids": [
+      "r104-002",
+      "r105-096",
+      "r106-091"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-073-mechanism-001-iodometric_titration_principle",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-073-mechanism-001",
+    "primary_exemplar_id": "ex-physics-073",
+    "subject": "物理",
+    "front": "ヨウ素滴定法：2Na₂S₂O₃ + I₂ → Na₂S₄O₆ + 2NaI。指示薬は{{c1::デンプン}}試液（ヨウ素デンプン反応で{{c2::青紫色}}→無色が終点）。",
+    "back": "チオ硫酸ナトリウムでヨウ素を滴定 — デンプン試液は終点直前に添加する（最初から入れるとヨウ素がデンプンに取り込まれてしまう）。ヨウ素はクロロホルム中で赤紫色",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-073-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "iodometric_titration_principle",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r108-004",
+      "r109-098"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-073-mechanism-002-thiosulfate_standardization",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-073-mechanism-002",
+    "primary_exemplar_id": "ex-physics-073",
+    "subject": "物理",
+    "front": "チオ硫酸ナトリウム液の標定には{{c1::ヨウ素酸カリウム（KIO₃）}}を標準試薬として用いる。KIO₃がKIと酸性条件で反応してI₂を遊離する。",
+    "back": "KIO₃ — 標定試薬は純度が高く安定な物質が選ばれる。KIO₃は乾燥しやすく安定。KI（ヨウ化カリウム）は補助試薬であり標準試薬ではない",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-073-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "thiosulfate_standardization",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r108-004"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-073-mechanism-003-phenol_bromination_back_titration",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-073-mechanism-003",
+    "primary_exemplar_id": "ex-physics-073",
+    "subject": "物理",
+    "front": "フェノールの臭素法：フェノール1 molは臭素{{c1::3}} molと反応して2,4,6-トリブロモフェノールを生成。過剰Br₂に{{c2::KI}}を加えてI₂を遊離→チオ硫酸Naで滴定（逆滴定）。",
+    "back": "1:3の反応（o,p位の3箇所にBr置換） — 逆滴定の流れ：過剰Br₂+KI→I₂遊離→チオ硫酸Naで滴定。クロロホルムは2,4,6-トリブロモフェノール沈殿を溶解するために加える",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-073-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "phenol_bromination_back_titration",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-096"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-073-mechanism-004-periodate_oxidation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-073-mechanism-004",
+    "primary_exemplar_id": "ex-physics-073",
+    "subject": "物理",
+    "front": "キシリトールの定量：過ヨウ素酸カリウムで酸化→KIを加えてI₂遊離→{{c1::チオ硫酸ナトリウム}}で滴定（指示薬：{{c2::デンプン}}試液）。酸化数が変化するのは{{c3::炭素とヨウ素}}。",
+    "back": "過ヨウ素酸酸化 — ポリオール（多価アルコール）の隣接OH基を酸化開裂する反応。酸素の酸化数は変化しない（炭素が酸化され、ヨウ素が還元される）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-073-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "periodate_oxidation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r104-093"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-073-calculation-001-iodine_tincture_calculation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-073-calculation-001",
+    "primary_exemplar_id": "ex-physics-073",
+    "subject": "物理",
+    "front": "ヨードチンキ5 mLをチオ硫酸Na液（f=1.000）で滴定、消費量23.60 mL。対応量12.69 mg/mL。ヨウ素含量 = 12.69×23.60/5×100/1000 = {{c1::6.0}} w/v%。",
+    "back": "6.0 w/v% — 12.69 mg/mL × 23.60 mL = 299.5 mg ≒ 0.3 g。0.3 g / 5 mL × 100 = 6.0 w/v%",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-073-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "iodine_tincture_calculation",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r109-098"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-073-mnemonic-001-volumetric_analysis_mnemonic",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-073-mnemonic-001",
+    "primary_exemplar_id": "ex-physics-073",
+    "subject": "物理",
+    "front": "容量分析法のゴロ：「中学できしすぎた非行少年」。中＝{{c1::中和滴定}}、キ＝{{c2::キレート滴定}}、非＝{{c3::非水滴定}}、行＝{{c4::酸化還元滴定}}、少＝{{c5::沈殿滴定}}。",
+    "back": "5種の容量分析法。酸化還元滴定の代表がヨウ素滴定法。沈殿滴定はAg⁺を使う。キレート滴定はEDTAで金属イオンを定量。非水滴定は弱酸・弱塩基の定量に使用",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-073-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "volumetric_analysis_mnemonic",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.92,
+    "source_question_ids": [
+      "r102-096",
+      "r108-004"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-077-mechanism-001-law_definition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-077-mechanism-001",
+    "primary_exemplar_id": "ex-physics-077",
+    "subject": "物理",
+    "front": "Lambert-Beerの法則では、吸光度Aは{{c1::モル吸光係数ε}}×{{c2::濃度c}}×{{c3::層長l}}で表される。",
+    "back": "A = εcl — 吸光度は濃度と層長に比例する。希薄溶液（高濃度では逸脱あり）で成立し、定量分析の基礎となる",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-077-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "law_definition",
+    "reverse_of_id": "ex-physics-077-mechanism-001-formula_to_components",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-096",
+      "r108-096",
+      "r111-004"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-077-mechanism-001-formula_to_components",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-077-mechanism-001",
+    "primary_exemplar_id": "ex-physics-077",
+    "subject": "物理",
+    "front": "Lambert-Beerの法則が成り立たなくなる条件を3つ挙げよ。",
+    "back": "①高濃度、②蛍光物質の存在、③化学変化する溶液 — さらに多色光の使用でも逸脱する。希薄溶液で単色光を使用する条件下でのみ正確に成立する",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-077-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "formula_to_components",
+    "reverse_of_id": "ex-physics-077-mechanism-001-law_definition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.88,
+    "source_question_ids": [
+      "r100-096",
+      "r108-096",
+      "r111-004"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-077-calculation-001-transmittance_to_absorbance",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-077-calculation-001",
+    "primary_exemplar_id": "ex-physics-077",
+    "subject": "物理",
+    "front": "透過度tと吸光度Aの関係式は A = {{c1::−log t}} である。",
+    "back": "A = −log t = log(I₀/I) — 透過度t = I/I₀ であり、吸光度が1のとき透過率は10%となる",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-077-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "transmittance_to_absorbance",
+    "reverse_of_id": "ex-physics-077-calculation-001-absorbance_to_transmittance",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-096",
+      "r111-004"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-077-calculation-001-absorbance_to_transmittance",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-077-calculation-001",
+    "primary_exemplar_id": "ex-physics-077",
+    "subject": "物理",
+    "front": "吸光度1.0を透過率（%）で表すといくらか？",
+    "back": "10% — A = −log t より t = 10^(−A) = 10^(−1) = 0.1 = 10%。吸光度2.0なら透過率1%",
+    "format": "question_answer",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-077-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "absorbance_to_transmittance",
+    "reverse_of_id": "ex-physics-077-calculation-001-transmittance_to_absorbance",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-096",
+      "r111-004"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-077-calculation-002-mixing_absorbance",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-077-calculation-002",
+    "primary_exemplar_id": "ex-physics-077",
+    "subject": "物理",
+    "front": "透過率50%の溶液と透過率20%の溶液を等量混合したとき、混合液の吸光度はいくらか？（log2=0.3）",
+    "back": "0.5 — 各吸光度はA₁ = −log0.5 = 0.3、A₂ = −log0.2 = 0.7。等量混合で濃度は半分ずつ→吸光度の平均 (0.3+0.7)/2 = 0.5。吸光度は濃度に比例するため単純平均で求まる",
+    "format": "question_answer",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-077-calculation-002",
+    "knowledge_type": "calculation",
+    "recall_direction": "mixing_absorbance",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r108-096"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-077-calculation-003-specific_to_molar",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-077-calculation-003",
+    "primary_exemplar_id": "ex-physics-077",
+    "subject": "物理",
+    "front": "モル吸光係数εと比吸光度E¹%₁cmの換算式は ε = E¹%₁cm × {{c1::M/10}} である（Mは分子量）。",
+    "back": "ε = E¹%₁cm × M/10 — 比吸光度は濃度1%(w/v)・層長1cmでの吸光度。モル吸光係数は濃度1mol/L基準。単位変換の係数がM/10",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-077-calculation-003",
+    "knowledge_type": "calculation",
+    "recall_direction": "specific_to_molar",
+    "reverse_of_id": "ex-physics-077-calculation-003-specific_absorbance_definition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-100"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-077-calculation-003-specific_absorbance_definition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-077-calculation-003",
+    "primary_exemplar_id": "ex-physics-077",
+    "subject": "物理",
+    "front": "比吸光度（E¹%₁cm）とは何か？",
+    "back": "溶液の濃度が1%(w/v)、層長が1cmのときの吸光度 — 分子量が不明な場合でも濃度さえ分かれば定量に使える。日本薬局方の定量法で頻用される",
+    "format": "term_definition",
+    "tags": [
+      "calculation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-077-calculation-003",
+    "knowledge_type": "calculation",
+    "recall_direction": "specific_absorbance_definition",
+    "reverse_of_id": "ex-physics-077-calculation-003-specific_to_molar",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-100"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-077-mechanism-002-wavelength_to_source_cell",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-077-mechanism-002",
+    "primary_exemplar_id": "ex-physics-077",
+    "subject": "物理",
+    "front": "紫外部（200〜400nm）と可視部（400〜800nm）で使用する光源とセルの違いは？",
+    "back": "紫外部：光源は重水素放電管、セルは石英のみ。可視部：光源はタングステンランプ、セルは石英またはガラス — ガラスは紫外線を吸収するため紫外部では使用不可",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-077-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "wavelength_to_source_cell",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r100-096",
+      "r105-203"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-077-mechanism-003-concentration_effect_on_A_and_T",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-077-mechanism-003",
+    "primary_exemplar_id": "ex-physics-077",
+    "subject": "物理",
+    "front": "希薄溶液で濃度を2倍にすると、吸光度Aと透過度tはそれぞれどうなるか？",
+    "back": "吸光度Aは2倍になる。透過度tはt²に減少する — A = εclより濃度に比例。t = 10^(−A)なので吸光度が2倍になるとtは指数的に減少（2倍にはならない）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-077-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "concentration_effect_on_A_and_T",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-096"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-077-mechanism-004-hydrogen_bond_ir_shift",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-077-mechanism-004",
+    "primary_exemplar_id": "ex-physics-077",
+    "subject": "物理",
+    "front": "水酸基のO-H伸縮振動は、水素結合を形成すると波数が{{c1::減少（低波数シフト）}}する。",
+    "back": "低波数シフト — 水素結合により結合の電子密度が低下→結合力が弱まる→振動数が低下→波数が小さくなる。溶媒効果を見る際に重要",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-077-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "hydrogen_bond_ir_shift",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r100-100"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-077-mechanism-005-urine_ph_on_excretion",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-077-mechanism-005",
+    "primary_exemplar_id": "ex-physics-077",
+    "subject": "物理",
+    "front": "弱酸性薬物（例：サリチル酸）は、尿pHが上昇すると{{c1::イオン形}}が増加し、尿細管での再吸収が{{c2::減少}}するため排泄速度が増加する。",
+    "back": "イオン形増加→再吸収減少→排泄促進 — 弱酸は塩基性条件でイオン化（A⁻）。イオン形は脂溶性が低く尿細管膜を通過しにくいため再吸収されない。強制アルカリ利尿の原理",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-077-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "urine_ph_on_excretion",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r105-203"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-077-classification-001-uv_absorption_requirement",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-077-classification-001",
+    "primary_exemplar_id": "ex-physics-077",
+    "subject": "物理",
+    "front": "紫外線を吸収するためには、分子中に{{c1::長い共役二重結合系}}が必要である。",
+    "back": "共役が延長するほど吸収波長は長波長側にシフトする（深色効果・レッドシフト） — 共役系のπ電子がUV-Visの光エネルギーを吸収してπ→π*遷移を起こす",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-077-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "uv_absorption_requirement",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.92,
+    "source_question_ids": [
+      "r107-207"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-077-mnemonic-001-light_source_mnemonic",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-077-mnemonic-001",
+    "primary_exemplar_id": "ex-physics-077",
+    "subject": "物理",
+    "front": "紫外・可視分光の光源を覚える語呂合わせは？",
+    "back": "「四十かた」→ 紫外線=重水素放電管、可視光=タングステンランプ — さらに蛍光光度計はキセノンランプ、原子吸光は中空陰極ランプ。測定法ごとに光源が異なる",
+    "format": "question_answer",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-077-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "light_source_mnemonic",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-096",
+      "r105-203"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-084-classification-001-ionization_methods",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-084-classification-001",
+    "primary_exemplar_id": "ex-physics-084",
+    "subject": "物理",
+    "front": "質量分析のイオン化法：EI法は{{c1::低分子・揮発性}}物質向け、ESI法は{{c2::溶液中の高分子}}向け、MALDI法は{{c3::固体中の高分子}}向け。",
+    "back": "EI=電子イオン化（GC-MS用、ハードイオン化）、ESI=エレクトロスプレーイオン化（LC-MS用、ソフト）、MALDI=マトリックス支援レーザー脱離イオン化（TOF-MSと組合せ）",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-084-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "ionization_methods",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r100-205",
+      "r102-100",
+      "r104-139",
+      "r111-100"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-084-classification-002-chromatography_ionization_pair",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-084-classification-002",
+    "primary_exemplar_id": "ex-physics-084",
+    "subject": "物理",
+    "front": "ガスクロマトグラフィーには{{c1::EI法}}（または化学イオン化法）、液体クロマトグラフィーには{{c2::ESI法}}（大気圧イオン化法）を組み合わせる。",
+    "back": "GC-MS = EI/CI。LC-MS = ESI/APCI。MALDI-TOFは通常固体試料で、HPLCとのオンライン接続は困難",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-084-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "chromatography_ionization_pair",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-205",
+      "r111-100"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-084-mechanism-001-tof_principle",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-084-mechanism-001",
+    "primary_exemplar_id": "ex-physics-084",
+    "subject": "物理",
+    "front": "TOF-MSでは、m/zが{{c1::大きい}}イオンほど飛行時間が{{c2::長い}}。飛行時間tは{{c3::√(m/z)}}に比例する。",
+    "back": "全イオンに同じ運動エネルギーを与えると、軽いイオンほど速く飛ぶ。t = L√(m/2qV)。質量分解能が高い",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-084-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "tof_principle",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r102-100",
+      "r111-100"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-084-mechanism-002-tandem_ms_flow",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-084-mechanism-002",
+    "primary_exemplar_id": "ex-physics-084",
+    "subject": "物理",
+    "front": "タンデムMS（MS/MS）の流れ：イオン化 → MS1で{{c1::プリカーサーイオン}}選択 → {{c2::CID}}（衝突誘起解離）→ MS2で{{c3::プロダクトイオン}}検出。",
+    "back": "質量分離部は直列（タンデム=縦列）に配置。CIDでは不活性ガス（Ar等）を衝突させる（電子ではない）。MRMモードで高感度・高選択性分析が可能",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-084-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "tandem_ms_flow",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r100-205",
+      "r104-139"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-084-classification-003-ms_terminology",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-084-classification-003",
+    "primary_exemplar_id": "ex-physics-084",
+    "subject": "物理",
+    "front": "マススペクトルで強度が最大のピークを{{c1::基準ピーク}}という。モノアイソトピック質量は各原子の{{c2::最多同位体}}のみで算出する。",
+    "back": "基準ピーク(base peak) = 相対強度100%のピーク。モノアイソトピック質量 ≠ 平均原子量（全同位体の加重平均）。分解能R = M/ΔM",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-084-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "ms_terminology",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r102-100"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-084-mechanism-003-maldi_mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-084-mechanism-003",
+    "primary_exemplar_id": "ex-physics-084",
+    "subject": "物理",
+    "front": "MALDI法では、マトリックスが{{c1::レーザー光を吸収}}し、そのエネルギーを試料に伝えてソフトにイオン化する。主に{{c2::[M+H]⁺}}等の分子イオンが観測される。",
+    "back": "マトリックス = レーザー光吸収性の低分子化合物（DHBなど）。タンパク質を壊さずにイオン化（ソフトイオン化）。感染症菌の同定にも利用",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-084-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "maldi_mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r111-100"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-084-classification-004-isotope_pattern_cl",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-084-classification-004",
+    "primary_exemplar_id": "ex-physics-084",
+    "subject": "物理",
+    "front": "³⁵Clと³⁷Clの存在比は約{{c1::3:1}}。Cl原子2個を含む化合物のM, M+2, M+4のピーク強度比は約{{c2::9:6:1}}。",
+    "back": "Cl₁個: M:M+2 = 3:1。Cl₂個: (3+1)²展開 = 9:6:1。Br(⁷⁹Br/⁸¹Br ≒ 1:1)の場合はM:M+2 = 1:1",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-084-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "isotope_pattern_cl",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r100-205"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-084-classification-005-deuterium_vs_radioactive",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-084-classification-005",
+    "primary_exemplar_id": "ex-physics-084",
+    "subject": "物理",
+    "front": "質量分析の内標準に用いる重水素標識体は{{c1::安定}}同位体であり、{{c2::放射性}}はない。",
+    "back": "重水素(²H, D)は安定同位体。放射性同位体（³H=トリチウム等）とは異なり、使用場所の制限はない。内標準として理想的（化学的性質がほぼ同じで質量のみ異なる）",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-084-classification-005",
+    "knowledge_type": "classification",
+    "recall_direction": "deuterium_vs_radioactive",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r100-205"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-089-classification-001-mode_to_stationary_phase",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-089-classification-001",
+    "primary_exemplar_id": "ex-physics-089",
+    "subject": "物理",
+    "front": "吸着・分配・イオン交換・サイズ排除クロマトグラフィーの固定相をそれぞれ答えよ。",
+    "back": "吸着→固体（シリカゲル等）、分配→液体（ODS等）、イオン交換→イオン交換体、サイズ排除→ゲル — 固定相の種類が分離機構を決定する。順相=固体/極性高、逆相=液体/極性低",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-089-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "mode_to_stationary_phase",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-004",
+      "r104-004"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-089-mechanism-001-parameter_to_definition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-089-mechanism-001",
+    "primary_exemplar_id": "ex-physics-089",
+    "subject": "物理",
+    "front": "分離係数αは、2成分の{{c1::補正保持時間}}の比（α = t'R2/t'R1）で定義される。",
+    "back": "α = t'R2/t'R1 — ピーク相互の保持時間の関係（選択性）を示す。α = 1のとき保持時間が同一で分離不可。ピーク幅には依存しない",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-089-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "parameter_to_definition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-004",
+      "r102-098",
+      "r108-099"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-089-mechanism-002-N_definition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-089-mechanism-002",
+    "primary_exemplar_id": "ex-physics-089",
+    "subject": "物理",
+    "front": "理論段数Nの計算式は N = 16×({{c1::tR}}/{{c2::W}})² であり、ピーク幅が{{c3::狭い}}ほどNは大きい。",
+    "back": "N = 16(tR/W)² — tRは保持時間、Wはピーク幅。Nが大きいほどカラム効率が高い。N > 2000で良好なカラムの目安",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-089-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "N_definition",
+    "reverse_of_id": "ex-physics-089-mechanism-002-H_definition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r102-098",
+      "r108-099"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-089-mechanism-002-H_definition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-089-mechanism-002",
+    "primary_exemplar_id": "ex-physics-089",
+    "subject": "物理",
+    "front": "理論段高さHは H = {{c1::L/N}} で表され、Hが{{c2::小さい}}ほどカラム効率が高い。",
+    "back": "H = L/N（Lはカラム長、Nは理論段数） — Hが小さい=ピークが鋭い=分離度が向上する。カラム長を2倍にするとNは2倍だがHは不変",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-089-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "H_definition",
+    "reverse_of_id": "ex-physics-089-mechanism-002-N_definition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-098",
+      "r108-099"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-089-mechanism-003-Rs_formula_and_criterion",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-089-mechanism-003",
+    "primary_exemplar_id": "ex-physics-089",
+    "subject": "物理",
+    "front": "分離度Rsは Rs = 2(tR2−tR1)/({{c1::W1+W2}}) で定義され、Rs ≧ {{c2::1.5}} で完全分離（ベースライン分離）とされる。",
+    "back": "Rs = 2(tR2−tR1)/(W1+W2) — ピーク幅に依存する（分離係数とは異なる）。Rs = 1.0で約98%分離。日本薬局方ではRs ≧ 1.5を完全分離の基準とする",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-089-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "Rs_formula_and_criterion",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r102-098",
+      "r108-099"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-089-mechanism-004-symmetry_to_peak_shape",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-089-mechanism-004",
+    "primary_exemplar_id": "ex-physics-089",
+    "subject": "物理",
+    "front": "シンメトリー係数Sが{{c1::1より大きい}}ときテーリング、{{c2::1より小さい}}ときリーディングである。",
+    "back": "S > 1 → テーリング（ピークの裾が後方に引く）、S < 1 → リーディング（前方に裾が出る） — 理想的なピークはS = 1の正規分布形",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-089-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "symmetry_to_peak_shape",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-098"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-089-mechanism-005-ion_exchange_selectivity",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-089-mechanism-005",
+    "primary_exemplar_id": "ex-physics-089",
+    "subject": "物理",
+    "front": "陽イオン交換樹脂に対してNa⁺とCa²⁺ではどちらが強く結合するか？その理由は？",
+    "back": "Ca²⁺が強く結合する — 陽イオン交換樹脂への結合力は価数が大きいほど強い。同じ価数ではイオン半径が大きいほど強い。陰イオンは結合しない",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-089-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ion_exchange_selectivity",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-004"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-089-mechanism-006-k_definition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-089-mechanism-006",
+    "primary_exemplar_id": "ex-physics-089",
+    "subject": "物理",
+    "front": "質量分布比kは{{c1::固定相の物質量}}/{{c2::移動相の物質量}}で定義され、kが大きいほど保持時間は{{c3::長く}}なる。",
+    "back": "k = 固定相中の物質量/移動相中の物質量 — kが大きい=固定相にくっつきやすい=溶出が遅い。分離係数αはα = kB/kAでも表される",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-089-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "k_definition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r108-099"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-091-classification-001-normal_vs_reverse_phase",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-091-classification-001",
+    "primary_exemplar_id": "ex-physics-091",
+    "subject": "物理",
+    "front": "順相クロマトと逆相クロマトの固定相の極性と溶出順序の違いは？",
+    "back": "順相：固定相の極性が高い（シリカゲル）→極性が低い物質から先に溶出。逆相：固定相の極性が低い（ODS）→極性が高い物質から先に溶出 — 溶質は固定相と似た極性を持つほど保持される",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-091-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "normal_vs_reverse_phase",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r103-099",
+      "r107-099",
+      "r110-100"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-091-classification-002-ods_properties",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-091-classification-002",
+    "primary_exemplar_id": "ex-physics-091",
+    "subject": "物理",
+    "front": "ODS（オクタデシルシリル化シリカゲル）は{{c1::C18}}基を結合した{{c2::逆相}}クロマトグラフィー用の固定相である。",
+    "back": "C18長鎖アルキル基で疎水性 — 疎水性相互作用で非極性化合物を保持する。移動相にメタノールやアセトニトリルと水の混合液を使用",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-091-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "ods_properties",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r103-099",
+      "r107-099",
+      "r106-094"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-091-mechanism-001-organic_solvent_effect",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-091-mechanism-001",
+    "primary_exemplar_id": "ex-physics-091",
+    "subject": "物理",
+    "front": "逆相HPLCで移動相中の有機溶媒（メタノール、アセトニトリル）の割合を増やすと、保持時間は{{c1::短く}}なる。",
+    "back": "有機溶媒↑→移動相の極性↓→溶質が移動相に溶けやすくなる→保持時間短縮 — 保持時間を調節する基本的な手法。グラジエント溶出でも同原理",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-091-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "organic_solvent_effect",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r103-099",
+      "r106-094",
+      "r107-099",
+      "r110-100"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-091-mechanism-002-elution_order_ods",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-091-mechanism-002",
+    "primary_exemplar_id": "ex-physics-091",
+    "subject": "物理",
+    "front": "ODSカラムでベンゼン、トルエン、エチルベンゼンを分離した場合の溶出順序は？",
+    "back": "ベンゼン→トルエン→エチルベンゼンの順 — 逆相では疎水性（非極性）が高い成分ほど固定相に強く保持され遅く溶出する。アルキル基が長いほど疎水性が高い",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-091-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "elution_order_ods",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r107-099"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-091-classification-003-chiral_separation_methods",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-091-classification-003",
+    "primary_exemplar_id": "ex-physics-091",
+    "subject": "物理",
+    "front": "液体クロマトグラフィーによる鏡像異性体の分離法を3つ挙げよ。",
+    "back": "①キラル固定相法（キラルカラム：多糖類誘導体やタンパク質を固定化）、②キラル移動相法（キラルセレクター添加）、③ジアステレオマー誘導体化法（通常の分配クロマトで分離可能にする） — ③は光学不活性カラムで分離できる",
+    "format": "question_answer",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-091-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "chiral_separation_methods",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-099"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-091-classification-004-ionization_by_instrument",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-091-classification-004",
+    "primary_exemplar_id": "ex-physics-091",
+    "subject": "物理",
+    "front": "LC/MSとGC/MSでそれぞれ用いられるイオン化法は？",
+    "back": "LC/MS：ESI（エレクトロスプレーイオン化）法、APCI法。GC/MS：EI（電子イオン化）法、CI（化学イオン化）法 — 試料の状態（液体/気体）でイオン化法が決まる。ESIはソフトイオン化で分子イオンが得やすい",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-091-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "ionization_by_instrument",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r107-005",
+      "r100-205"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-091-mechanism-003-amino_acid_elution_order",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-091-mechanism-003",
+    "primary_exemplar_id": "ex-physics-091",
+    "subject": "物理",
+    "front": "陽イオン交換クロマトグラフィーでアミノ酸を分離すると、{{c1::酸性アミノ酸（Asp, Glu）}}→{{c2::中性アミノ酸（Gly）}}→{{c3::塩基性アミノ酸（Arg, Lys）}}の順に溶出する。",
+    "back": "等電点（pI）が低い順に溶出 — pHを低→高に変化させることで陽電荷を失った順に溶出する。pH上昇→負に帯電→陽イオン交換体に保持されにくくなる",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-091-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "amino_acid_elution_order",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-100",
+      "r108-097"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-091-mechanism-004-ph_effect_on_elution",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-091-mechanism-004",
+    "primary_exemplar_id": "ex-physics-091",
+    "subject": "物理",
+    "front": "陽イオン交換クロマトグラフィーで移動相のpHを上昇させるとアミノ酸が溶出する理由は？",
+    "back": "pH上昇→アミノ酸が負に帯電（陰イオン化）→陽イオン交換体のスルホ基との静電引力が消失→保持されなくなり溶出 — 移動相のイオン強度を上げても同様に溶出が促進される（競合イオン効果）",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-091-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ph_effect_on_elution",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-100",
+      "r108-097"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-091-classification-005-pre_vs_post_column",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-091-classification-005",
+    "primary_exemplar_id": "ex-physics-091",
+    "subject": "物理",
+    "front": "プレカラム誘導体化法とポストカラム誘導体化法の違いは？ニンヒドリンはどちらか？",
+    "back": "プレカラム：カラム前で誘導体化（長時間反応OK、OPAなど蛍光検出）。ポストカラム：カラム後で誘導体化（夾雑成分の影響少、複数誘導体でもOK）。ニンヒドリンはポストカラム法で可視部検出（570nm） — ニンヒドリンをプレカラムとするのは誤り",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-091-classification-005",
+    "knowledge_type": "classification",
+    "recall_direction": "pre_vs_post_column",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r104-094",
+      "r108-097"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-091-mechanism-005-detector_light_source",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-091-mechanism-005",
+    "primary_exemplar_id": "ex-physics-091",
+    "subject": "物理",
+    "front": "HPLC検出器で、紫外吸光光度計の光源は{{c1::重水素放電管}}、可視吸光光度計の光源は{{c2::タングステンランプ}}である。",
+    "back": "UV域（200-400nm）=重水素放電管、可視域（400-800nm）=タングステンランプ — 蛍光検出器はキセノンランプ。検出波長域によって光源が異なる",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-091-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "detector_light_source",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r103-099",
+      "r106-094",
+      "r108-097"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-091-calculation-001-internal_standard_formula",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-091-calculation-001",
+    "primary_exemplar_id": "ex-physics-091",
+    "subject": "物理",
+    "front": "HPLC内標準法の定量式は、含量 = MS × {{c1::QT/QS}} である（MS：標準品秤取量、QT/QS：面積比の比）。",
+    "back": "含量 = MS × QT/QS — QT = 試料中の目的成分ピーク面積/内標準ピーク面積、QS = 標準品の同比。内標準法は注入量のばらつきを補正できる",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-091-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "internal_standard_formula",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-094"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-091-mechanism-006-ph_and_retention",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-091-mechanism-006",
+    "primary_exemplar_id": "ex-physics-091",
+    "subject": "物理",
+    "front": "逆相HPLCで移動相のpHを低下させると、パラオキシ安息香酸（弱酸）の保持時間はどうなるか？",
+    "back": "保持時間が長くなる — pH低下→分子形（非イオン形）が増加→疎水性が増大→ODS固定相に強く保持される。弱酸性化合物はpH低下で保持が強まる",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-091-mechanism-006",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ph_and_retention",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r110-100"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-091-mechanism-007-tandem_ms_principle",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-091-mechanism-007",
+    "primary_exemplar_id": "ex-physics-091",
+    "subject": "物理",
+    "front": "タンデム型質量分析計（MS/MS）では、{{c1::プリカーサーイオン}}とそこから生成する{{c2::プロダクトイオン}}を選択することで選択性が向上する。",
+    "back": "MRM（多重反応モニタリング）モード — 第1MSで分子イオンを選択→衝突誘起解離→第2MSで特定フラグメントを検出。高感度・高選択性で生体試料中の低濃度薬物測定に威力を発揮",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-091-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "tandem_ms_principle",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r100-205"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-099-mechanism-001-god_method_principle",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-099-mechanism-001",
+    "primary_exemplar_id": "ex-physics-099",
+    "subject": "物理",
+    "front": "GOD法では、グルコース + O₂ →(グルコースオキシダーゼ)→ グルコノラクトン + {{c1::H₂O₂}} が生成し、この{{c1::H₂O₂}}を検出する。",
+    "back": "H₂O₂（過酸化水素）を検出 — 比色法ではペルオキシダーゼ反応で発色、電極法では白金電極で酸化電流を測定する。ガラス電極ではない",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-099-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "god_method_principle",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-201",
+      "r104-201",
+      "r109-203"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-099-mechanism-002-hk_method_principle",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-099-mechanism-002",
+    "primary_exemplar_id": "ex-physics-099",
+    "subject": "物理",
+    "front": "HK/G6PD法では、グルコース→G6P→6PGの反応で生じた{{c1::NADPH}}の{{c2::340}}nm吸光度で定量する。",
+    "back": "NADPHは340nmに吸収を持ち、NADP⁺は持たない — 酵素反応の進行に伴いNADPH増加→340nm吸光度上昇。この波長変化量がグルコース濃度に比例する",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-099-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "hk_method_principle",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-201",
+      "r106-096"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-099-interaction-001-gdh_maltose_interference",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-099-interaction-001",
+    "primary_exemplar_id": "ex-physics-099",
+    "subject": "物理",
+    "front": "グルコース脱水素酵素（GDH）法では{{c1::マルトース}}が偽高値の原因となるため、{{c2::イコデキストリン}}含有腹膜透析液使用中の患者ではGOD法を用いる。",
+    "back": "GDHはマルトースにも反応→偽高値 — イコデキストリンが体内でマルトースに代謝されるため、GDH法で血糖を過大評価してしまう。GOD法はグルコースに特異的",
+    "format": "cloze",
+    "tags": [
+      "interaction",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-099-interaction-001",
+    "knowledge_type": "interaction",
+    "recall_direction": "gdh_maltose_interference",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-201",
+      "r104-201"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-099-mechanism-003-enzyme_electrode_detection",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-099-mechanism-003",
+    "primary_exemplar_id": "ex-physics-099",
+    "subject": "物理",
+    "front": "GOD法の酵素電極法では何を電極で検出しているか？酵素自体の電位差を測っているのか？",
+    "back": "酵素反応で生じたH₂O₂が電極上で酸化される際の電流を測定する — H₂O₂ → O₂ + 2H⁺ + 2e⁻。酵素自体の電位差変化を検出しているのではない",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-099-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "enzyme_electrode_detection",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-201",
+      "r109-203"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-099-calculation-001-glucose_coulometry",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-099-calculation-001",
+    "primary_exemplar_id": "ex-physics-099",
+    "subject": "物理",
+    "front": "血糖値90.0 mg/dLの血液1 μL中のグルコースから生じる電気量の計算方法は？（分子量180、F = 9.65×10⁴ C/mol）",
+    "back": "グルコース量 = 90.0×10⁻⁶ g → 5.0×10⁻⁷ mol。電子2 mol/グルコース1 mol → 1.0×10⁻⁶ mol e⁻。電気量 = 1.0×10⁻⁶ × 9.65×10⁴ = 9.65×10⁻² C。血液量の単位補正を考慮して9.65×10⁻⁴ C — グルコース1分子→H₂O₂ 1分子→電子2個の比を使う",
+    "format": "question_answer",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-099-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "glucose_coulometry",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.88,
+    "source_question_ids": [
+      "r109-203"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-099-mechanism-004-nadph_vs_nadp_uv",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-099-mechanism-004",
+    "primary_exemplar_id": "ex-physics-099",
+    "subject": "物理",
+    "front": "NADPHとNADP⁺の340nm吸収の違いは？",
+    "back": "NADPH：340nmに吸収あり。NADP⁺：340nmに吸収なし — 還元型（NADPH, NADH）のニコチンアミド環のジヒドロ構造が340nm吸収の原因。酵素反応の進行を吸光度変化で追跡できる（UV法）",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-099-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "nadph_vs_nadp_uv",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-096"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-099-contraindication-001-finger_contamination",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-099-contraindication-001",
+    "primary_exemplar_id": "ex-physics-099",
+    "subject": "物理",
+    "front": "血糖自己測定では、指に{{c1::果汁}}などグルコースを含む物質が付着していると{{c2::偽高値}}の原因となる。",
+    "back": "果汁中のグルコースが検出されてしまう — GOD法・GDH法いずれでも妨害される。測定前の手洗いが重要。アルコール綿で拭くだけでは不十分な場合もある",
+    "format": "cloze",
+    "tags": [
+      "contraindication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-099-contraindication-001",
+    "knowledge_type": "contraindication",
+    "recall_direction": "finger_contamination",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r104-201"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-101-classification-001-imaging_modality_principles",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-101-classification-001",
+    "primary_exemplar_id": "ex-physics-101",
+    "subject": "物理",
+    "front": "X線CT、MRI、超音波、PET、SPECTの原理をそれぞれ簡潔に答えよ。",
+    "back": "X線CT：X線の透過率差。MRI：水素原子核の磁気緩和時間差。超音波：反射波（エコー）。PET：陽電子放出→消滅γ線検出。SPECT：γ線放出核種の検出 — 被曝あり：X線CT/PET/SPECT。被曝なし：MRI/超音波",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-101-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "imaging_modality_principles",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r104-005",
+      "r105-243"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-101-mechanism-001-mri_principle",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-101-mechanism-001",
+    "primary_exemplar_id": "ex-physics-101",
+    "subject": "物理",
+    "front": "MRIでは、高磁場中で{{c1::ラーモア歳差運動}}の周波数と同じ周波数の{{c2::ラジオ波}}を照射し、{{c3::水素原子核}}の緩和時間の差を画像化する。",
+    "back": "水素原子核（¹H）を励起→T1/T2緩和時間の差で組織コントラストを得る — T1強調画像は脂肪が高信号、T2強調画像は水が高信号。放射線を使用しないため被曝なし",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-101-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mri_principle",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r102-197",
+      "r105-201"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-101-contraindication-001-gd_nsf_risk",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-101-contraindication-001",
+    "primary_exemplar_id": "ex-physics-101",
+    "subject": "物理",
+    "front": "ガドリニウム造影剤は、重篤な腎障害（eGFR < {{c1::30}}）の患者では{{c2::腎性全身性線維症（NSF）}}の発現リスクが高いため禁忌である。",
+    "back": "NSF（Nephrogenic Systemic Fibrosis） — 皮膚の硬化・線維化を特徴とする疾患。Gd³⁺が腎排泄されず体内に蓄積して発症。ヨード造影剤+メトホルミンの乳酸アシドーシスとの混同に注意",
+    "format": "cloze",
+    "tags": [
+      "contraindication",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-101-contraindication-001",
+    "knowledge_type": "contraindication",
+    "recall_direction": "gd_nsf_risk",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r102-196",
+      "r111-205"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-101-interaction-001-mri_vs_ct_contrast",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-101-interaction-001",
+    "primary_exemplar_id": "ex-physics-101",
+    "subject": "物理",
+    "front": "MRI用ガドリニウム造影剤とCT用ヨード造影剤で、メトホルミンの休薬が必要なのはどちらか？",
+    "back": "ヨード造影剤でメトホルミン休薬が必要（乳酸アシドーシスのリスク）。ガドリニウム造影剤ではメトホルミン休薬不要 — よく出題される混同ポイント。ガドリニウムは腎機能低下（NSF）に注意",
+    "format": "comparison",
+    "tags": [
+      "interaction",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-101-interaction-001",
+    "knowledge_type": "interaction",
+    "recall_direction": "mri_vs_ct_contrast",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r102-196",
+      "r105-200",
+      "r106-242",
+      "r111-205"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-101-classification-002-pet_vs_spect_nuclides",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-101-classification-002",
+    "primary_exemplar_id": "ex-physics-101",
+    "subject": "物理",
+    "front": "PET用核種とSPECT用核種の代表例をそれぞれ挙げよ。",
+    "back": "PET：¹⁸F, ¹¹C, ¹⁵O, ¹³N（β⁺線放出→消滅γ線）。SPECT：⁹⁹ᵐTc, ¹²³I, ⁶⁷Ga, ²⁰¹Tl（γ線放出） — PETは陽電子、SPECTは単一光子。¹²³Iを使うDAT-SPECTはSPECT検査",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-101-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "pet_vs_spect_nuclides",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r105-243",
+      "r106-242"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-101-mechanism-002-fdg_pet_fasting",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-101-mechanism-002",
+    "primary_exemplar_id": "ex-physics-101",
+    "subject": "物理",
+    "front": "FDG-PET検査では、¹⁸F標識デオキシグルコースが{{c1::糖代謝}}の活発な腫瘍に集積する原理を利用するため、検査前{{c2::4〜6時間}}の絶食が必要である。",
+    "back": "血糖値が高いとFDGの腫瘍への取り込みが低下→検出感度低下 — ブドウ糖含有輸液も同時投与不可。¹⁸Fの半減期は約110分",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-101-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "fdg_pet_fasting",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r106-242"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-101-mechanism-003-ultrasound_features",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-101-mechanism-003",
+    "primary_exemplar_id": "ex-physics-101",
+    "subject": "物理",
+    "front": "超音波診断法は{{c1::反射波（エコー）}}を利用する画像診断法で、{{c2::被曝がない}}ため妊婦にも安全に使用できる。",
+    "back": "組織境界面での超音波の反射を捉えて画像化 — リアルタイム観察が可能。ドップラー効果で血流速度も測定できる（MRIではなく超音波の特徴）",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-101-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ultrasound_features",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r104-005"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-101-mechanism-004-dat_spect_details",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-101-mechanism-004",
+    "primary_exemplar_id": "ex-physics-101",
+    "subject": "物理",
+    "front": "イオフルパン（{{c1::¹²³I}}）によるDAT-SPECTは{{c2::パーキンソン病}}の診断に用いられ、注射後{{c3::3〜6時間}}後に頭部を撮影する。",
+    "back": "¹²³I標識のドパミントランスポーターリガンド — 有効期間は検定日時から7時間と短い。SSRIはセロトニントランスポーターへの本剤結合を阻害するため検査前に休薬を検討",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-101-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "dat_spect_details",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r105-243",
+      "r109-204"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-101-classification-003-mri_contrast_types",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-101-classification-003",
+    "primary_exemplar_id": "ex-physics-101",
+    "subject": "物理",
+    "front": "MRI造影剤のGd製剤とSPIO製剤（フェルカルボトラン）の禁忌の違いは？",
+    "back": "Gd製剤：重篤な腎障害で禁忌（NSFリスク）。SPIO製剤：ヘモクロマトーシス等の鉄過剰症で禁忌 — SPIOは酸化鉄ナノ粒子。腎機能低下でも使用可能（Gdとの違い）",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-101-classification-003",
+    "knowledge_type": "classification",
+    "recall_direction": "mri_contrast_types",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r105-200",
+      "r102-196"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-101-mechanism-005-mri_metal_precaution",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-101-mechanism-005",
+    "primary_exemplar_id": "ex-physics-101",
+    "subject": "物理",
+    "front": "MRI検査時にロキソプロフェンNaテープは剥がす必要があるか？鉄サプリメントの扱いは？",
+    "back": "ロキソプロフェンNaテープ：金属を含まないため剥がす必要なし。鉄サプリメント：金属成分がMRI磁場を乱しアーチファクト（偽像）を生じるため検査当日は摂取を控える — ニコチンパッチ等の金属含有製品は要除去",
+    "format": "question_answer",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-physics-101-mechanism-005",
+    "knowledge_type": "mechanism",
+    "recall_direction": "mri_metal_precaution",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r111-205"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-physics-101-mnemonic-001-spect_nuclide_organs",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-physics-101-mnemonic-001",
+    "primary_exemplar_id": "ex-physics-101",
+    "subject": "物理",
+    "front": "⁹⁹ᵐTc, ¹²³I, ⁶⁷Ga, ²⁰¹Tlはそれぞれどの臓器・疾患の診断に使われるか？",
+    "back": "⁹⁹ᵐTc：多用途（脳・骨・腎・肝脾など）半減期6時間。¹²³I：甲状腺・DAT-SPECT。⁶⁷Ga：悪性腫瘍・炎症。²⁰¹Tl：心筋（K類似体として取り込まれる） — ⁹⁹ᵐTcはジェネレータ（ミルキング）で得る。放射平衡を利用",
+    "format": "question_answer",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-physics-101-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "spect_nuclide_organs",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r105-243"
+    ],
+    "source_note_ids": []
+  }
+]
