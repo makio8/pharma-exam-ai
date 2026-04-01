@@ -330,11 +330,11 @@ export function SwipeCard({
         className={styles.swipeLayer}
         role="button"
         tabIndex={0}
-        aria-label={
+        aria-label={`暗記カード ${sessionCardIndex + 1}: ${
           cardState === 'frontIdle'
-            ? 'カードをタップして裏返す'
-            : '左右にスワイプして評価する'
-        }
+            ? 'タップして裏返す'
+            : '左右にスワイプして評価'
+        }`}
         onMouseDown={cardState === 'backIdle' ? onMouseDown : undefined}
         onClick={cardState === 'frontIdle' ? onFrontClick : undefined}
         onTouchStart={onTouchStart}
