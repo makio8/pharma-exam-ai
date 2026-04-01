@@ -10957,6 +10957,82 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-pathology-083-classification-004-gi_cancer_features",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-083-classification-004",
+    "primary_exemplar_id": "ex-pathology-083",
+    "subject": "病態・薬物治療",
+    "front": "大腸がんの好発部位は{{c1::S状結腸}}。膵頭部がんでは{{c2::黄疸}}が出やすく、膵尾部がんでは{{c3::血糖上昇}}が起きやすい。",
+    "back": "膵頭部がん→胆管圧迫→閉塞性黄疸。膵尾部がん→ランゲルハンス島障害→インスリン分泌低下→高血糖。進行胃がんのボルマン4型はびまん浸潤型",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-083-classification-004",
+    "knowledge_type": "classification",
+    "recall_direction": "gi_cancer_features",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r110-325"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pathology-083-mechanism-003-dumping_syndrome",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-083-mechanism-003",
+    "primary_exemplar_id": "ex-pathology-083",
+    "subject": "病態・薬物治療",
+    "front": "ダンピング症候群は胃切除後に食物が急速に腸管に入ることで生じる。早期型は{{c1::腹痛・下痢}}、後期型は急激な糖吸収→インスリン過分泌→{{c2::低血糖}}を呈する。",
+    "back": "予防：小分け食事、α-グルコシダーゼ阻害薬（食後の急激な血糖上昇を抑制）。胃がん術後の栄養管理で重要",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pathology-083-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "dumping_syndrome",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r109-167",
+      "r110-325"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pathology-083-mechanism-004-hp_gastric_cancer",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-083-mechanism-004",
+    "primary_exemplar_id": "ex-pathology-083",
+    "subject": "病態・薬物治療",
+    "front": "ピロリ菌感染→慢性萎縮性胃炎→{{c1::腸上皮化生}}（胃に腸の細胞ができる）→胃がん発生リスク上昇。",
+    "back": "腸上皮化生＝胃粘膜が腸の上皮に置き換わる前がん状態。ピロリ除菌により胃がんリスクは低下するが、腸上皮化生が進行した後の除菌効果は限定的",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-083-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "hp_gastric_cancer",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r110-325"
+    ],
+    "source_note_ids": []
+  },
+  {
     "id": "ex-pathology-087-classification-001-marker_to_cancer",
     "source_type": "knowledge_atom",
     "source_id": "ex-pathology-087-classification-001",
@@ -11190,6 +11266,88 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-pathology-087-mechanism-002-pathway_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-087-mechanism-002",
+    "primary_exemplar_id": "ex-pathology-087",
+    "subject": "病態・薬物治療",
+    "front": "がん細胞の{{c1::PD-L1}}とキラーT細胞の{{c2::PD-1}}が結合すると、キラーT細胞の活性が抑制される。ニボルマブは{{c3::PD-1}}を標的とする抗体薬である。",
+    "back": "PD-1/PD-L1結合＝免疫チェックポイント。がん細胞がPD-L1を発現してT細胞の攻撃を回避する仕組みをニボルマブがブロックする",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-087-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "pathway_to_drug",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r111-192"
+    ],
+    "source_note_ids": [
+      "fusen-PD1-PDL1"
+    ]
+  },
+  {
+    "id": "ex-pathology-087-classification-006-cancer_to_site",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-087-classification-006",
+    "primary_exemplar_id": "ex-pathology-087",
+    "subject": "病態・薬物治療",
+    "front": "がんの転移好発部位：消化器がん → {{c1::肝転移}}、肺がん → {{c2::脳転移}}、前立腺がん・乳がん → {{c3::骨転移}}",
+    "back": "消化器がんは門脈を介して肝臓へ転移しやすい。骨転移にはゾレドロン酸・デノスマブ・塩化ストロンチウムを使用",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-087-classification-006",
+    "knowledge_type": "classification",
+    "recall_direction": "cancer_to_site",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r104-059",
+      "r111-192"
+    ],
+    "source_note_ids": [
+      "fusen-metastasis"
+    ]
+  },
+  {
+    "id": "ex-pathology-087-classification-007-type_to_cancer",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-087-classification-007",
+    "primary_exemplar_id": "ex-pathology-087",
+    "subject": "病態・薬物治療",
+    "front": "骨転移の分類：溶骨性 → {{c1::乳がん}}・肺がん（一般的）、造骨性 → {{c2::前立腺がん}}。治療にはビスホスホネート製剤（ゾレドロン酸等）や{{c3::デノスマブ}}を使用する。",
+    "back": "前立腺がんは骨芽細胞に作用して造骨性転移を起こす。痛み緩和には塩化ストロンチウムも使用される",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pathology-087-classification-007",
+    "knowledge_type": "classification",
+    "recall_direction": "type_to_cancer",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r111-192"
+    ],
+    "source_note_ids": [
+      "fusen-bone-metastasis"
+    ]
+  },
+  {
     "id": "ex-pathology-087-indication-001-condition_to_drug",
     "source_type": "knowledge_atom",
     "source_id": "ex-pathology-087-indication-001",
@@ -11238,6 +11396,34 @@
       "r107-295"
     ],
     "source_note_ids": []
+  },
+  {
+    "id": "ex-pathology-087-mnemonic-001-mnemonic_to_drugs",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-087-mnemonic-001",
+    "primary_exemplar_id": "ex-pathology-087",
+    "subject": "病態・薬物治療",
+    "front": "EGFR抗体薬のゴロ：「セッちゃんパニック エゴイスト」→ {{c1::セツキシマブ}}・{{c2::パニツムマブ}} = {{c3::EGFR}}抗体薬",
+    "back": "セツキシマブ・パニツムマブはともにEGFR（上皮成長因子受容体）に対するモノクローナル抗体。大腸がん等に使用",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-087-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "mnemonic_to_drugs",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r106-300",
+      "r111-192"
+    ],
+    "source_note_ids": [
+      "fusen-EGFR-antibody"
+    ]
   },
   {
     "id": "ex-pathology-089-adverse_effect-001-adverse_to_drug",
@@ -11582,6 +11768,36 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-pathology-089-adverse_effect-011-drug_to_adverse",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-089-adverse_effect-011",
+    "primary_exemplar_id": "ex-pathology-089",
+    "subject": "病態・薬物治療",
+    "front": "セツキシマブ/パニツムマブの副作用：{{c1::インフュージョンリアクション}}・{{c2::座瘡様皮疹}}・{{c3::低マグネシウム血症}}。ベバシズマブの副作用：{{c4::創傷治癒遅延}}。",
+    "back": "セツキシマブ・パニツムマブはEGFR抗体薬。ニボルマブの副作用には重症筋無力症がある。ベバシズマブはVEGF抗体薬",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-089-adverse_effect-011",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "drug_to_adverse",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r106-264",
+      "r107-332",
+      "r111-305"
+    ],
+    "source_note_ids": [
+      "fusen-cetuximab",
+      "fusen-nivolumab"
+    ]
+  },
+  {
     "id": "ex-pathology-090-mechanism-001-drug_to_mechanism",
     "source_type": "knowledge_atom",
     "source_id": "ex-pathology-090-mechanism-001",
@@ -11784,6 +12000,121 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-pathology-090-pharmacokinetics-002-drug_to_method",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-090-pharmacokinetics-002",
+    "primary_exemplar_id": "ex-pathology-090",
+    "subject": "病態・薬物治療",
+    "front": "抗がん剤の用量は基本的に{{c1::体表面積}}から算出する。例外のカルボプラチンは{{c2::カルバート式}}（目標AUC×（GFR+25））で{{c3::腎機能}}に基づいて計算する。",
+    "back": "Crawford式で体表面積を求めるのが一般的。カルボプラチンは腎排泄型のため腎機能（GFR）に基づく用量設定が必要",
+    "format": "cloze",
+    "tags": [
+      "pharmacokinetics",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-090-pharmacokinetics-002",
+    "knowledge_type": "pharmacokinetics",
+    "recall_direction": "drug_to_method",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r110-337"
+    ],
+    "source_note_ids": [
+      "fusen-dosing"
+    ]
+  },
+  {
+    "id": "ex-pathology-090-indication-005-drug_to_indication",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-090-indication-005",
+    "primary_exemplar_id": "ex-pathology-090",
+    "subject": "病態・薬物治療",
+    "front": "ペメトレキセドは非小細胞肺がん（{{c1::扁平上皮がん以外}}）に適応。副作用対策として{{c2::葉酸}}と{{c3::ビタミンB12}}の補充が必須。",
+    "back": "シスプラチンとの併用で使用。扁平上皮がんには効果が乏しいため適応外。葉酸・VB12で骨髄抑制や粘膜障害を軽減",
+    "format": "cloze",
+    "tags": [
+      "indication",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-090-indication-005",
+    "knowledge_type": "indication",
+    "recall_direction": "drug_to_indication",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r100-330",
+      "r103-286",
+      "r110-337"
+    ],
+    "source_note_ids": [
+      "fusen-pemetrexed"
+    ]
+  },
+  {
+    "id": "ex-pathology-090-mechanism-003-drug_to_usage",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-090-mechanism-003",
+    "primary_exemplar_id": "ex-pathology-090",
+    "subject": "病態・薬物治療",
+    "front": "EGFR-TKIの用法：ゲフィチニブ＝{{c1::食後}}投与（溶解がpHに依存、胃酸分泌亢進で吸収↑）。アファチニブ・エルロチニブ＝{{c2::空腹時}}投与。",
+    "back": "ゲフィチニブの食後投与は例外的。多くのTKIは食事の影響を避けるため空腹時投与が基本",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-090-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_usage",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.92,
+    "source_question_ids": [
+      "r103-286",
+      "r107-329",
+      "r110-337"
+    ],
+    "source_note_ids": [
+      "fusen-gefitinib"
+    ]
+  },
+  {
+    "id": "ex-pathology-091-classification-001-classification_to_criteria",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-091-classification-001",
+    "primary_exemplar_id": "ex-pathology-091",
+    "subject": "病態・薬物治療",
+    "front": "白血病の分類：急性（芽球{{c1::30%以上}}、裂孔形成）と慢性に分かれ、さらに{{c2::骨髄性}}とリンパ性に分類。MPO染色{{c3::3%以上}}陽性で骨髄性と判定する。",
+    "back": "AML=急性骨髄性、ALL=急性リンパ性、CML=慢性骨髄性、CLL=慢性リンパ性。裂孔形成＝中間の成熟段階がない",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-091-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "classification_to_criteria",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r101-222",
+      "r102-260",
+      "r105-059",
+      "r111-066"
+    ],
+    "source_note_ids": [
+      "fusen-leukemia-class"
+    ]
+  },
+  {
     "id": "ex-pathology-091-mechanism-001-chromosome_to_disease",
     "source_type": "knowledge_atom",
     "source_id": "ex-pathology-091-mechanism-001",
@@ -11884,6 +12215,64 @@
       "r102-260"
     ],
     "source_note_ids": []
+  },
+  {
+    "id": "ex-pathology-091-mnemonic-001-mnemonic_to_fact",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-091-mnemonic-001",
+    "primary_exemplar_id": "ex-pathology-091",
+    "subject": "病態・薬物治療",
+    "front": "転座のゴロ：「すぐに行こう伊那」→ 急性前骨髄球性白血病=t({{c1::15}};{{c2::17}})。「ヤニにこねて」→ 慢性骨髄性白血病=t({{c3::9}};{{c4::22}})。",
+    "back": "APL=t(15;17)→トレチノイン、CML=t(9;22)→フィラデルフィア染色体→イマチニブ",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-091-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "mnemonic_to_fact",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-222",
+      "r105-059",
+      "r106-061",
+      "r111-066"
+    ],
+    "source_note_ids": [
+      "fusen-translocation"
+    ]
+  },
+  {
+    "id": "ex-pathology-091-classification-002-disease_to_features",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-091-classification-002",
+    "primary_exemplar_id": "ex-pathology-091",
+    "subject": "病態・薬物治療",
+    "front": "成人T細胞白血病（ATL）の原因は{{c1::HTLV-1}}感染（母乳感染→成人で発症）。検査所見：IL-2陽性、{{c2::フラワーセル}}、{{c3::高カルシウム血症}}。治療薬：モガリズマブ（抗CCR4抗体）。",
+    "back": "フラワーセル＝花びら状に核がくびれた異常リンパ球。母乳を介して感染し数十年の潜伏期間後に発症",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-091-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "disease_to_features",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r105-059",
+      "r111-066"
+    ],
+    "source_note_ids": [
+      "fusen-ATL"
+    ]
   },
   {
     "id": "ex-pathology-092-classification-001-cell_to_type",
@@ -12223,6 +12612,39 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-pathology-095-mechanism-001-drug_to_usage",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-095-mechanism-001",
+    "primary_exemplar_id": "ex-pathology-095",
+    "subject": "病態・薬物治療",
+    "front": "ゲフィチニブは溶解がpHに依存するため{{c1::食後}}投与（例外的）。アファチニブ・エルロチニブは{{c2::空腹時}}投与。",
+    "back": "ゲフィチニブは食後の胃酸分泌亢進により溶解性が向上。多くのTKIは食事の影響を避けるため空腹時投与が基本",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-095-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "drug_to_usage",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.92,
+    "source_question_ids": [
+      "r101-065",
+      "r105-218",
+      "r107-296",
+      "r108-344",
+      "r110-302",
+      "r110-330",
+      "r111-262"
+    ],
+    "source_note_ids": [
+      "fusen-gefitinib-usage"
+    ]
+  },
+  {
     "id": "ex-pathology-095-indication-003-flow_to_selection",
     "source_type": "knowledge_atom",
     "source_id": "ex-pathology-095-indication-003",
@@ -12246,6 +12668,39 @@
       "r107-296"
     ],
     "source_note_ids": []
+  },
+  {
+    "id": "ex-pathology-095-indication-004-drug_to_indication",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-095-indication-004",
+    "primary_exemplar_id": "ex-pathology-095",
+    "subject": "病態・薬物治療",
+    "front": "ペメトレキセドは非小細胞肺がん（{{c1::扁平上皮がん以外}}）に適応。シスプラチンと併用。副作用対策に{{c2::葉酸}}と{{c3::ビタミンB12}}の補充が必須。",
+    "back": "扁平上皮がんには効果が乏しい。葉酸・VB12で骨髄抑制や粘膜障害を軽減する",
+    "format": "cloze",
+    "tags": [
+      "indication",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-095-indication-004",
+    "knowledge_type": "indication",
+    "recall_direction": "drug_to_indication",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r105-057",
+      "r105-218",
+      "r107-296",
+      "r110-302",
+      "r110-303",
+      "r110-330",
+      "r111-262"
+    ],
+    "source_note_ids": [
+      "fusen-pemetrexed"
+    ]
   },
   {
     "id": "ex-pathology-097-indication-001-target_to_drugs",
@@ -12431,6 +12886,43 @@
       "r109-264"
     ],
     "source_note_ids": []
+  },
+  {
+    "id": "ex-pathology-097-mechanism-003-pathway_to_drug",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-097-mechanism-003",
+    "primary_exemplar_id": "ex-pathology-097",
+    "subject": "病態・薬物治療",
+    "front": "エストロゲン分泌経路：閉経前＝{{c1::卵巣}}から分泌→リュープロレリンで抑制。閉経後＝副腎由来アンドロゲンが{{c2::アロマターゼ}}でエストロゲンに変換→レトロゾール/エキセメスタンで阻害。",
+    "back": "閉経後は卵巣からのエストロゲン産生がほぼ停止するため、副腎由来のアンドロゲン→エストロゲン変換がメインとなる",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-097-mechanism-003",
+    "knowledge_type": "mechanism",
+    "recall_direction": "pathway_to_drug",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-070",
+      "r101-294",
+      "r102-191",
+      "r102-258",
+      "r104-254",
+      "r106-067",
+      "r106-238",
+      "r107-263",
+      "r109-264",
+      "r110-304",
+      "r110-305"
+    ],
+    "source_note_ids": [
+      "fusen-estrogen"
+    ]
   },
   {
     "id": "ex-pathology-097-adverse_effect-002-drug_to_monitoring",
@@ -12949,6 +13441,33 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-pathology-101-mnemonic-001-character_to_action",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-101-mnemonic-001",
+    "primary_exemplar_id": "ex-pathology-101",
+    "subject": "病態・薬物治療",
+    "front": "柴苓湯の「苓」→ {{c1::利尿（利水）}}作用。柴朴湯の「朴」→ {{c2::厚朴}}→ {{c3::呼吸器・精神神経系}}に作用。",
+    "back": "漢字の構成要素から効能を推測するテクニック",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-101-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "character_to_action",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r111-193"
+    ],
+    "source_note_ids": [
+      "fusen-sairei"
+    ]
+  },
+  {
     "id": "ex-pathology-102-classification-001-constitution_to_drug",
     "source_type": "knowledge_atom",
     "source_id": "ex-pathology-102-classification-001",
@@ -13252,6 +13771,34 @@
       "r104-214",
       "r106-068",
       "r107-214"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pathology-103-adverse_effect-005-herb_to_rare_adverse_effect",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-103-adverse_effect-005",
+    "primary_exemplar_id": "ex-pathology-103",
+    "subject": "病態・薬物治療",
+    "front": "サンシシ（山梔子）を含む漢方薬の長期服用で{{c1::腸間膜静脈硬化症}}が報告されている。",
+    "back": "腸間膜静脈硬化症は大腸の静脈壁にカルシウム沈着が起こる疾患。加味逍遥散・黄連解毒湯等のサンシシ含有漢方で5年以上の長期服用がリスク因子",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pathology-103-adverse_effect-005",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "herb_to_rare_adverse_effect",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r102-089",
+      "r104-214",
+      "r106-068",
+      "r110-257"
     ],
     "source_note_ids": []
   },
@@ -15994,6 +16541,36 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-pathology-152-mnemonic-001-elderly_sleep_dose",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-152-mnemonic-001",
+    "primary_exemplar_id": "ex-pathology-152",
+    "subject": "病態・薬物治療",
+    "front": "高齢者の睡眠薬上限: トリアゾラム{{c1::0.25mg}}、フルニトラゼパム{{c2::1mg}}、エチゾラム{{c3::1.5mg}}。",
+    "back": "語呂:「にごっと3フルいエッチなイチゴ」。エスゾピクロンは例外で高齢者2mg/成人3mg（成人の1/2ではない）",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-152-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "elderly_sleep_dose",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r106-254",
+      "r106-318",
+      "r107-318",
+      "r110-237"
+    ],
+    "source_note_ids": [
+      "fusen-note-elderly-dose"
+    ]
+  },
+  {
     "id": "ex-pathology-153-classification-001-renal_excretion_drugs",
     "source_type": "knowledge_atom",
     "source_id": "ex-pathology-153-classification-001",
@@ -16230,6 +16807,34 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-pathology-153-mnemonic-001-tdm_target_levels",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-153-mnemonic-001",
+    "primary_exemplar_id": "ex-pathology-153",
+    "subject": "病態・薬物治療",
+    "front": "TDM正常血中濃度: フェニトイン{{c1::10〜20}}μg/mL、バルプロ酸Na{{c2::50〜100}}μg/mL、バンコマイシン トラフ値{{c3::10〜20}}μg/mL。",
+    "back": "カルバマゼピンは4〜12μg/mL、フェノバルビタールは10〜40μg/mL。バンコマイシンとテイコプラニンのトラフ値はともに10〜20μg/mL",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-153-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "tdm_target_levels",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r110-173",
+      "r110-309"
+    ],
+    "source_note_ids": [
+      "fusen-note-tdm-levels"
+    ]
+  },
+  {
     "id": "ex-pathology-157-contraindication-001-pregnancy_contraindicated_drugs",
     "source_type": "knowledge_atom",
     "source_id": "ex-pathology-157-contraindication-001",
@@ -16434,5 +17039,35 @@
       "r106-269"
     ],
     "source_note_ids": []
+  },
+  {
+    "id": "ex-pathology-157-contraindication-002-pregnancy_antibiotics_ci",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pathology-157-contraindication-002",
+    "primary_exemplar_id": "ex-pathology-157",
+    "subject": "病態・薬物治療",
+    "front": "妊婦に禁忌の抗菌薬: {{c1::ニューキノロン}}と{{c2::メトロニダゾール}}。ペニシリン・セフェムは有益性があれば使用可能。",
+    "back": "語呂:「にんご（妊婦）きんき（禁忌）」=ニューキノロン+メトロニダゾール。妊婦の尿路感染にはペニシリン・セフェム系を選択",
+    "format": "cloze",
+    "tags": [
+      "contraindication",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pathology-157-contraindication-002",
+    "knowledge_type": "contraindication",
+    "recall_direction": "pregnancy_antibiotics_ci",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r102-084",
+      "r108-186",
+      "r110-215",
+      "r110-313"
+    ],
+    "source_note_ids": [
+      "fusen-note-pregnancy-antibiotics"
+    ]
   }
 ]

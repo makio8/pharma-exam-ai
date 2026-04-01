@@ -269,6 +269,33 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-law-008-regulation-009-five_major_disasters",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-law-008-regulation-009",
+    "primary_exemplar_id": "ex-law-008",
+    "subject": "法規・制度・倫理",
+    "front": "5大薬害事件の原因薬物と被害の対応を整理せよ：サリドマイド、キノホルム、非加熱血液製剤、ヒト乾燥硬膜、ソリブジン",
+    "back": "①サリドマイド＝催奇形性（アザラシ肢症）②キノホルム＝SMON（亜急性脊髄視神経症）③非加熱血液製剤＝HIV感染（血友病患者）④ヒト乾燥硬膜＝CJD（クロイツフェルト・ヤコブ病）⑤ソリブジン＝5-FU相互作用（DPD阻害で骨髄抑制）。ポイント：「原因薬＋被害＋対象疾患」の3点セットで暗記する",
+    "format": "comparison",
+    "tags": [
+      "regulation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-law-008-regulation-009",
+    "knowledge_type": "regulation",
+    "recall_direction": "five_major_disasters",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r107-074",
+      "r100-076",
+      "r101-076"
+    ],
+    "source_note_ids": []
+  },
+  {
     "id": "ex-law-021-regulation-001-declaration_to_content",
     "source_type": "knowledge_atom",
     "source_id": "ex-law-021-regulation-001",
@@ -1470,6 +1497,33 @@
     ]
   },
   {
+    "id": "ex-law-057-calculation-001-pharmacist_staffing_formula",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-law-057-calculation-001",
+    "primary_exemplar_id": "ex-law-057",
+    "subject": "法規・制度・倫理",
+    "front": "一般病院の薬剤師員数：入院患者数÷{{c1::70}}＋外来処方箋数÷{{c2::75}}（端数切り上げ）。特定機能病院は入院÷{{c3::30}}。",
+    "back": "例：入院280人/70＝4、外来処方箋150枚/75＝2、合計6人。ポイント：一般病院は「70・75」、特定機能は「30」で計算",
+    "format": "cloze",
+    "tags": [
+      "calculation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-law-057-calculation-001",
+    "knowledge_type": "calculation",
+    "recall_direction": "pharmacist_staffing_formula",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r104-145"
+    ],
+    "source_note_ids": [
+      "薬剤師の設置条件"
+    ]
+  },
+  {
     "id": "ex-law-057-regulation-006-medical_plan_authority",
     "source_type": "knowledge_atom",
     "source_id": "ex-law-057-regulation-006",
@@ -2284,6 +2338,62 @@
     "source_question_ids": [
       "r109-142",
       "r104-076"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-law-063-regulation-001-abbreviation_to_full",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-law-063-regulation-001",
+    "primary_exemplar_id": "ex-law-063",
+    "subject": "法規・制度・倫理",
+    "front": "GLP = Good {{c1::Laboratory}} Practice = 医薬品の安全性に関する{{c2::非臨床試験}}の実施基準",
+    "back": "GLP — 動物実験等の非臨床試験の信頼性を確保する基準。一般毒性試験もGLP遵守が必要。ひっかけ注意：薬効薬理試験はGLP対象外。",
+    "format": "cloze",
+    "tags": [
+      "regulation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-law-063-regulation-001",
+    "knowledge_type": "regulation",
+    "recall_direction": "abbreviation_to_full",
+    "reverse_of_id": "ex-law-063-regulation-001-full_to_abbreviation",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-079",
+      "r104-078",
+      "r110-073"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-law-063-regulation-001-full_to_abbreviation",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-law-063-regulation-001",
+    "primary_exemplar_id": "ex-law-063",
+    "subject": "法規・制度・倫理",
+    "front": "GCP = Good {{c1::Clinical}} Practice = 医薬品の{{c2::臨床試験}}の実施基準",
+    "back": "GCP — 被験者の人権保護と治験の科学的質・信頼性を確保する基準。ICH-GCPで国際統一。",
+    "format": "cloze",
+    "tags": [
+      "regulation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-law-063-regulation-001",
+    "knowledge_type": "regulation",
+    "recall_direction": "full_to_abbreviation",
+    "reverse_of_id": "ex-law-063-regulation-001-abbreviation_to_full",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-079",
+      "r104-078",
+      "r110-073"
     ],
     "source_note_ids": []
   },
@@ -6310,6 +6420,34 @@
     "confidence_score": 0.94,
     "source_question_ids": [
       "r101-148"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-law-087-regulation-006-term→definition",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-law-087-regulation-006",
+    "primary_exemplar_id": "ex-law-087",
+    "subject": "法規・制度・倫理",
+    "front": "薬局内の検体測定室は{{c1::届出}}により設置可能。採血は{{c2::患者自身}}が行い（薬剤師は不可）、作業記録は{{c3::20年間}}保存する。",
+    "back": "検体測定室では自己採血による血糖値やHbA1c等の測定が可能。薬剤師が採血する行為は医行為に該当するため不可。",
+    "format": "cloze",
+    "tags": [
+      "regulation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-law-087-regulation-006",
+    "knowledge_type": "regulation",
+    "recall_direction": "term→definition",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.91,
+    "source_question_ids": [
+      "r101-148",
+      "r104-077",
+      "r108-322",
+      "r111-330"
     ],
     "source_note_ids": []
   },

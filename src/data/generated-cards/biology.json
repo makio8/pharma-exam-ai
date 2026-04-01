@@ -4902,5 +4902,34 @@
       "r109-120"
     ],
     "source_note_ids": []
+  },
+  {
+    "id": "ex-biology-137-classification-005-vector→diseases",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-biology-137-classification-005",
+    "primary_exemplar_id": "ex-biology-137",
+    "subject": "生物",
+    "front": "蚊が媒介する感染症のうち、原虫が原因なのは{{c1::マラリア}}で、ウイルスが原因なのは{{c2::日本脳炎}}・{{c3::デング熱}}・ジカ熱・ウエストナイル熱・チクングニア熱である。",
+    "back": "マラリア / 日本脳炎 / デング熱\n\n【ポイント】蚊媒介疾患の中でマラリアだけが原虫感染。日本脳炎はフラビウイルス科で、ブタが増幅動物。デング熱はネッタイシマカが媒介。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-biology-137-classification-005",
+    "knowledge_type": "classification",
+    "recall_direction": "vector→diseases",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-019",
+      "r102-018",
+      "r109-120"
+    ],
+    "source_note_ids": [
+      "蚊が媒介"
+    ]
   }
 ]

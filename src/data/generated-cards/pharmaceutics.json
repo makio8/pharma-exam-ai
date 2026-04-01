@@ -439,6 +439,37 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-pharmaceutics-002-interaction-002-erythromycin_digoxin_mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-002-interaction-002",
+    "primary_exemplar_id": "ex-pharmaceutics-002",
+    "subject": "薬剤",
+    "front": "エリスロマイシンがジゴキシンの血中濃度を上昇させる機序: ①{{c1::P-gp阻害}}→排出抑制、②{{c2::腸内細菌の抑制}}→腸内分解減少、③肝取り込み阻害。",
+    "back": "3つの機序が重なる代表的な相互作用。P-gp阻害が最も重要。ジゴキシンは治療域が狭いため少量の血中濃度変動でも中毒リスクあり",
+    "format": "cloze",
+    "tags": [
+      "interaction",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-002-interaction-002",
+    "knowledge_type": "interaction",
+    "recall_direction": "erythromycin_digoxin_mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r100-044",
+      "r106-170",
+      "r107-171",
+      "r109-042",
+      "r111-041"
+    ],
+    "source_note_ids": [
+      "fusen-note-erythromycin-digoxin"
+    ]
+  },
+  {
     "id": "ex-pharmaceutics-002-classification-001-renal_organic_anion_substrates",
     "source_type": "knowledge_atom",
     "source_id": "ex-pharmaceutics-002-classification-001",
@@ -2091,6 +2122,36 @@
     "confidence_score": 0.95,
     "source_question_ids": [
       "r100-167"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-014-mechanism-004-CYP_iron_state",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-014-mechanism-004",
+    "primary_exemplar_id": "ex-pharmaceutics-014",
+    "subject": "薬剤",
+    "front": "CYP450の中心鉄：{{c1::Fe²⁺（還元型）}}はO₂・COと結合（CO結合で450nmに吸収極大→名前の由来）。{{c2::Fe³⁺（酸化型）}}は{{c3::異物（基質）}}と結合する。",
+    "back": "チトクロムP450の「450」はFe²⁺-CO複合体の吸収極大波長。Fe²⁺⇄Fe³⁺の酸化還元サイクルで薬物を酸化する。NADPH-CYP還元酵素が電子を供給",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-014-mechanism-004",
+    "knowledge_type": "mechanism",
+    "recall_direction": "CYP_iron_state",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.92,
+    "source_question_ids": [
+      "r100-043",
+      "r100-130",
+      "r100-167",
+      "r107-172",
+      "r109-044",
+      "r111-044"
     ],
     "source_note_ids": []
   },
@@ -5207,8 +5268,8 @@
     "source_id": "ex-pharmaceutics-031-regulation-001",
     "primary_exemplar_id": "ex-pharmaceutics-031",
     "subject": "薬剤",
-    "front": "バンコマイシンのTDMにおけるトラフ値の目標範囲と、最新の推奨指標は？",
-    "back": "トラフ値: 10〜20 µg/mL（MRSA感染症）。最新ではAUC/MIC ≧ 400〜600 が推奨 — トラフ値だけでなくAUCベースの管理が腎毒性軽減に有用とされ、ベイジアン推定法が活用される",
+    "front": "バンコマイシンTDMで、成人MRSA重症感染症に現在推奨される指標と目標値は？",
+    "back": "現在の推奨はAUC24/MIC 400〜600 mg・h/L（MIC=1 μg/mL想定）。旧来はトラフ10〜20 μg/mLが用いられたが、特に15〜20 μg/mL域は腎障害リスク上昇と関連し、現在はAUCベース管理が第一推奨。ベイジアン推定法が活用される",
     "format": "question_answer",
     "tags": [
       "regulation",
@@ -5234,7 +5295,7 @@
     "primary_exemplar_id": "ex-pharmaceutics-031",
     "subject": "薬剤",
     "front": "ローディングドーズ（負荷投与＝初回に多めに投与して素早く有効血中濃度に到達させる方法）が必要な代表的薬物を3つ挙げよ",
-    "back": "テイコプラニン、クロピドグレル、ボリコナゾール — いずれも半減期が長い、または定常状態到達に時間がかかる薬物で、「遅く効いては困る」感染症や血栓症に使われるため初回高用量が必要",
+    "back": "テイコプラニン、クロピドグレル、ボリコナゾール — テイコプラニン/ボリコナゾールは半減期が長く定常状態到達に時間がかかるため。クロピドグレルはACS/PCI時に速やかな抗血小板作用が必要なため（半減期が長いからではなく、活性代謝物への変換に時間がかかるため）",
     "format": "question_answer",
     "tags": [
       "mnemonic",
@@ -9675,6 +9736,31 @@
     "confidence_score": 0.96,
     "source_question_ids": [
       "r101-281"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmaceutics-059-mechanism-002-pegylation_effects",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmaceutics-059-mechanism-002",
+    "primary_exemplar_id": "ex-pharmaceutics-059",
+    "subject": "薬剤",
+    "front": "PEG化の効果: 水溶性{{c1::↑}}、抗原性{{c2::↓}}（被覆）、酵素分解{{c3::↓}}（立体障害）、糸球体ろ過{{c4::↓}}（分子量増大）→ 血中持続時間延長。",
+    "back": "PEG = ポリエチレングリコール。サイズバリアで腎排泄が低下。ペグフィルグラスチム（持続型G-CSF）が代表例",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmaceutics-059-mechanism-002",
+    "knowledge_type": "mechanism",
+    "recall_direction": "pegylation_effects",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r108-283"
     ],
     "source_note_ids": []
   },

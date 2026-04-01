@@ -4119,6 +4119,171 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-practice-037-classification-002-incompatibility_levels",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-037-classification-002",
+    "primary_exemplar_id": "ex-practice-037",
+    "subject": "実務",
+    "front": "散剤の配合変化の3レベルとそれぞれの対応は？\n①配合禁忌（不可）→{{c1::疑義照会}}\n②配合不適→{{c2::別々に分包}}\n③配合注意→{{c3::患者に説明}}",
+    "back": "配合禁忌の例：テトラサイクリン系＋炭酸水素Na。配合不適の例：アスピリン＋炭酸水素Na。配合注意の例：センノシド＋炭酸Mg（お腹関係）",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-037-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "incompatibility_levels",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-204",
+      "r103-284",
+      "r105-210",
+      "r105-211",
+      "r110-219"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-037-mechanism-007-pvc_adsorption",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-037-mechanism-007",
+    "primary_exemplar_id": "ex-practice-037",
+    "subject": "実務",
+    "front": "PVC製輸液セットに吸着する代表的薬剤：{{c1::ニトログリセリン}}・{{c2::インスリン}}・タクロリムス・プロポフォール。PVCの可塑剤{{c3::DEHP}}は脂溶性薬剤で溶出する。",
+    "back": "ゴロ「まったくプロのQちゃん忙しくてもトロインス」＝タクロリムス・プロポフォール・イソソルビド・ニトログリセリン・インスリン。対策：ポリエチレン製やガラス製を使用",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-037-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "pvc_adsorption",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r110-219"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-037-mechanism-008-ceftriaxone_ca",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-037-mechanism-008",
+    "primary_exemplar_id": "ex-practice-037",
+    "subject": "実務",
+    "front": "セフトリアキソンは{{c1::Ca²⁺}}含有輸液（リンゲル液等）と混合すると{{c2::沈殿}}を生じるためNG。{{c3::生理食塩液}}で溶解はOK。",
+    "back": "セフトリアキソンのCa配合変化はセフェム系全体ではなくセフトリアキソン固有の問題。新生児では致死例の報告もあり特に注意",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-037-mechanism-008",
+    "knowledge_type": "mechanism",
+    "recall_direction": "ceftriaxone_ca",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-196",
+      "r101-204",
+      "r103-284",
+      "r106-278",
+      "r107-197",
+      "r110-210",
+      "r110-219"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-037-mechanism-009-nafamostat_dissolution",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-037-mechanism-009",
+    "primary_exemplar_id": "ex-practice-037",
+    "subject": "実務",
+    "front": "ナファモスタットメシル酸塩に直接{{c1::生食}}を加えると白濁する（塩酸塩が生成）。正しい溶解手順は{{c2::ブドウ糖注射用水}}で溶解後に生食で希釈。",
+    "back": "直接生食を加えるとNa⁺Cl⁻によりナファモスタット塩酸塩が生成し白濁。先にブドウ糖液で十分に希釈してから生食を加えれば出会う確率が下がりOK",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-037-mechanism-009",
+    "knowledge_type": "mechanism",
+    "recall_direction": "nafamostat_dissolution",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r100-196",
+      "r101-204",
+      "r106-278",
+      "r107-197",
+      "r110-219"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-037-mechanism-010-platinum_diluents",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-037-mechanism-010",
+    "primary_exemplar_id": "ex-practice-037",
+    "subject": "実務",
+    "front": "白金製剤の希釈液の使い分け：\nシスプラチン→{{c1::生食}}\nオキサリプラチン→{{c2::ブドウ糖液}}\nカルボプラチン→{{c3::ブドウ糖液・生食・注射用水いずれもOK}}",
+    "back": "シスプラチンはCl⁻が配位子を安定化するため生食が必須（ブドウ糖液だとCl→水の配位子交換で不安定化）。オキサリプラチンは逆にCl⁻含有液で分解するためブドウ糖液のみ",
+    "format": "comparison",
+    "tags": [
+      "mechanism",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-037-mechanism-010",
+    "knowledge_type": "mechanism",
+    "recall_direction": "platinum_diluents",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.97,
+    "source_question_ids": [
+      "r101-204",
+      "r110-219"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-037-adverse_effect-001-cam_bitter_taste",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-037-adverse_effect-001",
+    "primary_exemplar_id": "ex-practice-037",
+    "subject": "実務",
+    "front": "クラリスロマイシンのドライシロップは{{c1::腸溶性コーティング}}で苦味を防いでいる。{{c2::酸性飲料}}（OJ・スポーツドリンク）で服用するとコーティングが溶け苦味が{{c3::増強}}する。",
+    "back": "腸溶性コーティング＝酸性で溶ける設計。口腔内は中性なので溶けない→苦味なし。酸性飲料で服用→口の中で溶ける→苦味↑",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-037-adverse_effect-001",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "cam_bitter_taste",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r110-219"
+    ],
+    "source_note_ids": []
+  },
+  {
     "id": "ex-practice-038-classification-001-sterilization_selection",
     "source_type": "knowledge_atom",
     "source_id": "ex-practice-038-classification-001",
@@ -4215,6 +4380,31 @@
     "confidence_score": 0.95,
     "source_question_ids": [
       "r106-337"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-038-classification-002-cleanroom_class",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-038-classification-002",
+    "primary_exemplar_id": "ex-practice-038",
+    "subject": "実務",
+    "front": "クラス100とは、1立方フィートあたり0.5μm以上の粒子数が{{c1::100}}個以下の清浄度。クラス{{c2::10}}の方がクラス100よりきれい。",
+    "back": "クラスの数字が小さいほど清浄度が高い。無菌操作はクラス100の環境で行う。安全キャビネット内もクラス100に相当",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-038-classification-002",
+    "knowledge_type": "classification",
+    "recall_direction": "cleanroom_class",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-204"
     ],
     "source_note_ids": []
   },
@@ -5044,6 +5234,32 @@
     "generation_model": "claude-opus-4-6",
     "confidence_score": 0.95,
     "source_question_ids": [
+      "r110-316"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-041-mechanism-001-fentanyl_patch",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-041-mechanism-001",
+    "primary_exemplar_id": "ex-practice-041",
+    "subject": "実務",
+    "front": "フェンタニル貼付剤の注意：①最初の3日間は前の{{c1::オピオイド}}と重複期間、②貼付時に{{c2::アルコール消毒}}ダメ、③入浴は{{c3::ぬるめ/シャワー}}（付けたままOK、熱いのは避ける）。",
+    "back": "熱い風呂やカイロ等で貼付部位を温めると吸収速度が上昇→過量リスク。前治療からの切替時は効果発現に時間がかかるため重複が必要",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-041-mechanism-001",
+    "knowledge_type": "mechanism",
+    "recall_direction": "fentanyl_patch",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r108-266",
       "r110-316"
     ],
     "source_note_ids": []
@@ -7277,6 +7493,31 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-practice-045a-mnemonic-001-drug_to_dosage",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-045a-mnemonic-001",
+    "primary_exemplar_id": "ex-practice-045a",
+    "subject": "実務",
+    "front": "タミフルとイナビルの治療・予防の用法用量の違いは？",
+    "back": "タミフル：治療=1日2回×5日間、予防=1日1回×10日間（1シート10錠必要）。イナビル：治療=40mg単回吸入、予防=1回20mg×2日間（2キット調剤）。イナビルは薬の持続時間が1日で、1キットで4回吸入",
+    "format": "comparison",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-045a-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "drug_to_dosage",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.88,
+    "source_question_ids": [
+      "r111-297"
+    ],
+    "source_note_ids": []
+  },
+  {
     "id": "ex-practice-045b-regulation-001-drug_to_instructions",
     "source_type": "knowledge_atom",
     "source_id": "ex-practice-045b-regulation-001",
@@ -8673,6 +8914,60 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-practice-051-regulation-002-drug_to_storage",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-051-regulation-002",
+    "primary_exemplar_id": "ex-practice-051",
+    "subject": "実務",
+    "front": "リザベン点眼液（トラニラスト）の保存で注意すべき点は何か？",
+    "back": "結晶が析出するため冷蔵庫での保存を避ける。キサラタン（ラタノプロスト）は開封前は冷所保存・開封後は室温。ムコスタUD（レバミピド）は苦味があるため点眼後に目頭を押さえる",
+    "format": "question_answer",
+    "tags": [
+      "regulation",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-051-regulation-002",
+    "knowledge_type": "regulation",
+    "recall_direction": "drug_to_storage",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.88,
+    "source_question_ids": [
+      "r110-245"
+    ],
+    "source_note_ids": [
+      "fusen-note-eyedrop"
+    ]
+  },
+  {
+    "id": "ex-practice-051-mnemonic-001-scenario_to_order",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-051-mnemonic-001",
+    "primary_exemplar_id": "ex-practice-051",
+    "subject": "実務",
+    "front": "熱性けいれんでジアゼパム坐剤とアセトアミノフェン坐剤を併用する場合、まず{{c1::ジアゼパム（ダイアップ®）}}を使用し、{{c2::30分}}以上あけてからアセトアミノフェン（アンヒバ®）を使用する。",
+    "back": "けいれんの治療が優先→ジアゼパムが先。間隔は30分（点眼薬の間隔5分と混同注意）。ダイアップは室温・遮光保存、アンヒバは冷所保存",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-051-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "scenario_to_order",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.92,
+    "source_question_ids": [
+      "r110-245"
+    ],
+    "source_note_ids": [
+      "fusen-note-suppository"
+    ]
+  },
+  {
     "id": "ex-practice-055-regulation-001-type_to_procedure",
     "source_type": "knowledge_atom",
     "source_id": "ex-practice-055-regulation-001",
@@ -9003,6 +9298,64 @@
       "r102-088"
     ],
     "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-056-mnemonic-001-product_to_storage",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-056-mnemonic-001",
+    "primary_exemplar_id": "ex-practice-056",
+    "subject": "実務",
+    "front": "全血製剤・赤血球製剤は{{c1::2〜6℃}}で{{c2::21日間}}保存。凍結保存条件は{{c3::-20℃}}で{{c4::1年間}}。",
+    "back": "覚え方:「全ての赤ちゃんに仕方はらしいに来る」。凍結保存は-20℃1年間",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-056-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "product_to_storage",
+    "reverse_of_id": "ex-practice-056-mnemonic-001-product_to_storage_2",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-083",
+      "r105-316"
+    ],
+    "source_note_ids": [
+      "fusen-note-blood"
+    ]
+  },
+  {
+    "id": "ex-practice-056-mnemonic-001-product_to_storage_2",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-056-mnemonic-001",
+    "primary_exemplar_id": "ex-practice-056",
+    "subject": "実務",
+    "front": "人血小板濃厚液は{{c1::20〜24℃}}で{{c2::水平振とう}}保存し、有効期間は{{c3::4日間}}である。",
+    "back": "覚え方:「はたちの にっしー 化粧濃いし」。振とう保存は血小板凝集を防ぐため。冷蔵不可",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-056-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "product_to_storage_2",
+    "reverse_of_id": "ex-practice-056-mnemonic-001-product_to_storage",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-083",
+      "r105-316"
+    ],
+    "source_note_ids": [
+      "fusen-note-blood"
+    ]
   },
   {
     "id": "ex-practice-056-mechanism-001-drug_to_mechanism",
@@ -9470,6 +9823,64 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-practice-060-mnemonic-001-drug_to_rate",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-060-mnemonic-001",
+    "primary_exemplar_id": "ex-practice-060",
+    "subject": "実務",
+    "front": "KCl注の投与制限: 投与速度は{{c1::20}}mEq/hr以下、濃度は{{c2::40}}mEq/L以下、点滴速度は{{c3::8}}mL/分以下。",
+    "back": "覚え方:「ハニー脳死（速20/濃40/ハ(8)mL/分）」。KCl濃度は0.3%以下。急速投与は心停止の原因",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-060-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "drug_to_rate",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r111-084"
+    ],
+    "source_note_ids": [
+      "fusen-note-kcl"
+    ]
+  },
+  {
+    "id": "ex-practice-060-mnemonic-002-drug_to_time",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-060-mnemonic-002",
+    "primary_exemplar_id": "ex-practice-060",
+    "subject": "実務",
+    "front": "投与時間に特別な注意が必要な注射薬を3つ挙げよ。",
+    "back": "ゾレドロン酸＝15分以上かけて投与（腎不全リスク）。ペラミビル水和物＝15分以上かけて投与（インフルエンザ治療薬）。エリスロマイシン＝1回2時間以上かけて投与（心室頻拍の危険）",
+    "format": "question_answer",
+    "tags": [
+      "mnemonic",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-practice-060-mnemonic-002",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "drug_to_time",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.88,
+    "source_question_ids": [
+      "r103-266",
+      "r104-258",
+      "r105-333",
+      "r107-278",
+      "r111-084"
+    ],
+    "source_note_ids": [
+      "fusen-note-infusion-time"
+    ]
+  },
+  {
     "id": "ex-practice-061-regulation-001-principle_to_detail",
     "source_type": "knowledge_atom",
     "source_id": "ex-practice-061-regulation-001",
@@ -9518,6 +9929,35 @@
     "source_question_ids": [
       "r103-308",
       "r106-335"
+    ],
+    "source_note_ids": [
+      "fusen-note-hiyari"
+    ]
+  },
+  {
+    "id": "ex-practice-061-mnemonic-001-rank_to_type",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-061-mnemonic-001",
+    "primary_exemplar_id": "ex-practice-061",
+    "subject": "実務",
+    "front": "ヒヤリ・ハット事例の頻度: 1位＝{{c1::数量間違え}}、2位＝{{c2::規格・剤形間違え}}、3位＝{{c3::薬品取違え}}。",
+    "back": "類似名称薬（ノルバスク/ノルバデックス等）の取り違えは代表的事例。処方鑑査と交付時の確認が防止の要",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-061-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "rank_to_type",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r103-308",
+      "r106-335",
+      "r111-083"
     ],
     "source_note_ids": [
       "fusen-note-hiyari"
@@ -11148,6 +11588,33 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-practice-074c-mnemonic-001-drug_to_vitamin",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-074c-mnemonic-001",
+    "primary_exemplar_id": "ex-practice-074c",
+    "subject": "実務",
+    "front": "{{c1::ペメトレキセド}}投与時は葉酸+ビタミンB12の補充が必要。{{c2::高カロリー輸液}}にはビタミンB1の添加が必要（ウェルニッケ脳症予防）。",
+    "back": "ペメトレキセドは葉酸代謝拮抗薬で骨髄抑制軽減のため葉酸+B12を投与。高カロリー輸液にはビタミンB1を3mg/日以上添加し乳酸アシドーシス予防",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-074c-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "drug_to_vitamin",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r110-223"
+    ],
+    "source_note_ids": [
+      "fusen-note-vitamin"
+    ]
+  },
+  {
     "id": "ex-practice-076-classification-001-term_to_definition",
     "source_type": "knowledge_atom",
     "source_id": "ex-practice-076-classification-001",
@@ -11223,6 +11690,33 @@
       "r110-271"
     ],
     "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-074c-mnemonic-002-drug_to_protocol",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-074c-mnemonic-002",
+    "primary_exemplar_id": "ex-practice-076",
+    "subject": "実務",
+    "front": "アプレピタント（NK1受容体拮抗薬）の使い方：1日目は抗がん剤投与前に{{c1::125mg}}、2日目・3日目は午前中に{{c2::80mg}}を1回ずつ。5-HT3拮抗薬+ステロイドとの{{c3::3剤}}併用。",
+    "back": "高度催吐性抗がん剤に対する制吐療法の標準。3日間で終了。NK1受容体拮抗薬はCYP3A4基質でもあるため相互作用に注意",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-074c-mnemonic-002",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "drug_to_protocol",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r111-089"
+    ],
+    "source_note_ids": [
+      "fusen-note-aprepitant"
+    ]
   },
   {
     "id": "ex-practice-076-regulation-002-interaction_to_alternative",
@@ -11577,6 +12071,35 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-practice-078-mnemonic-001-rule_to_examples",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-078-mnemonic-001",
+    "primary_exemplar_id": "ex-practice-078",
+    "subject": "実務",
+    "front": "薬包紙のコンプライアンス上の許容範囲は広く、{{c1::透明タイプ}}・{{c2::キャラクター記載}}・{{c3::点字・絵文字}}の使用もOKである。",
+    "back": "患者のアドヒアランス向上のために視認性や親しみやすさを工夫できる。色分けラインもセットミス軽減に有効",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-078-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "rule_to_examples",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r103-314",
+      "r106-336",
+      "r110-342"
+    ],
+    "source_note_ids": [
+      "fusen-note-yakuho"
+    ]
+  },
+  {
     "id": "ex-practice-079-calculation-001-formula_recall",
     "source_type": "knowledge_atom",
     "source_id": "ex-practice-079-calculation-001",
@@ -11807,6 +12330,73 @@
       "r100-226"
     ],
     "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-079-mnemonic-001-comparison",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-079-mnemonic-001",
+    "primary_exemplar_id": "ex-practice-079",
+    "subject": "実務",
+    "front": "TPN（中心静脈栄養）とPPN（末梢静脈栄養）の違いを比較せよ",
+    "back": "PPN：末梢静脈、カロリー1000kcal程度、短期間、浸透圧3以下。TPN：中心静脈（太い血管、血流量多い）、カロリー3000kcalまで、長期間、浸透圧4-11。TPNは太い血管で血流量が多いため高浸透圧液もすぐ薄まる",
+    "format": "comparison",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-079-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "comparison",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r100-328",
+      "r100-344",
+      "r104-228",
+      "r106-340",
+      "r107-343",
+      "r109-235",
+      "r110-275",
+      "r110-340"
+    ],
+    "source_note_ids": [
+      "fusen-note-tpn-ppn"
+    ]
+  },
+  {
+    "id": "ex-practice-079-mnemonic-002-drug_to_reason",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-079-mnemonic-002",
+    "primary_exemplar_id": "ex-practice-079",
+    "subject": "実務",
+    "front": "高カロリー輸液にはビタミンB1を添加する。アシドーシス予防量は{{c1::3mg/日}}、治療量は{{c2::400mg}}（急速投与）。B1欠乏で{{c3::ウェルニッケ脳症}}を発症する。",
+    "back": "糖質代謝にビタミンB1が必要。TPN中の大量糖質投与でB1需要が増大→欠乏→乳酸アシドーシス。ペメトレキセドには葉酸+B12の補充が必要（別の知識）",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-079-mnemonic-002",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "drug_to_reason",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r100-328",
+      "r101-226",
+      "r101-286",
+      "r106-340",
+      "r107-343",
+      "r110-236",
+      "r110-340"
+    ],
+    "source_note_ids": [
+      "fusen-note-vitb1"
+    ]
   },
   {
     "id": "ex-practice-080-indication-001-procedure_to_drug",
@@ -12417,6 +13007,127 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-practice-082b-mnemonic-001-regimen_to_drugs",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-082b-mnemonic-001",
+    "primary_exemplar_id": "ex-practice-082b",
+    "subject": "実務",
+    "front": "高度催吐リスク薬（シスプラチン・シクロホスファミド）に対する制吐療法は{{c1::アプレピタント}}+{{c2::5-HT3受容体拮抗薬}}+{{c3::ステロイド}}の3剤併用である。",
+    "back": "アプレピタントはNK1受容体拮抗薬。3日間投与：1日目125mg（抗がん剤投与前）、2日目・3日目80mg。急性嘔吐には5-HT3拮抗薬、遅発性嘔吐にはアプレピタント+パロノセトロンが有効。",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-082b-mnemonic-001",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "regimen_to_drugs",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r111-228",
+      "r111-333"
+    ],
+    "source_note_ids": [
+      "fusen-制吐薬"
+    ]
+  },
+  {
+    "id": "ex-practice-082b-mnemonic-002-mnemonic_to_drugs",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-082b-mnemonic-002",
+    "primary_exemplar_id": "ex-practice-082b",
+    "subject": "実務",
+    "front": "白金製剤の希釈液語呂「オグシオ死す」：{{c1::オキサリプラチン}}は{{c2::グルコース（ブドウ糖液）}}、{{c3::シスプラチン}}は{{c4::生食}}で希釈する。",
+    "back": "オキサリプラチンは生食中のCl-でOxalato配位子が解離→急速分解するため5%ブドウ糖液で希釈。シスプラチンは逆にCl-存在下で安定するため生食で希釈。配合変化の頻出知識。",
+    "format": "cloze",
+    "tags": [
+      "mnemonic",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-082b-mnemonic-002",
+    "knowledge_type": "mnemonic",
+    "recall_direction": "mnemonic_to_drugs",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.94,
+    "source_question_ids": [
+      "r111-333"
+    ],
+    "source_note_ids": [
+      "fusen-白金製剤"
+    ]
+  },
+  {
+    "id": "ex-practice-082b-regulation-001-drug_to_administration",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-082b-regulation-001",
+    "primary_exemplar_id": "ex-practice-082b",
+    "subject": "実務",
+    "front": "ゲムシタビンは週1回{{c1::30分間}}かけて点滴する。30分以上に延長すると{{c2::骨髄抑制}}が増強する。",
+    "back": "ゲムシタビンは点滴時間を30分間ぴったりにすることが重要。30分を超えると活性代謝物dFdCTPの細胞内蓄積が増加し、骨髄抑制の副作用が増強される。",
+    "format": "cloze",
+    "tags": [
+      "regulation",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-082b-regulation-001",
+    "knowledge_type": "regulation",
+    "recall_direction": "drug_to_administration",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.92,
+    "source_question_ids": [
+      "r101-308",
+      "r103-084",
+      "r108-208",
+      "r109-246",
+      "r110-345",
+      "r111-333"
+    ],
+    "source_note_ids": [
+      "fusen-ゲムシタビン"
+    ]
+  },
+  {
+    "id": "ex-practice-082b-indication-001-drug_to_supplement",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-082b-indication-001",
+    "primary_exemplar_id": "ex-practice-082b",
+    "subject": "実務",
+    "front": "ペメトレキセド投与時は{{c1::葉酸}}と{{c2::ビタミンB12}}の補充が必須である。",
+    "back": "ペメトレキセドは複数の葉酸代謝酵素を阻害するため、葉酸+VitB12補充で骨髄抑制等の副作用を軽減する。葉酸は投与7日前から、VitB12は投与9週前から開始。高カロリー輸液ではVitB1補充が必要。",
+    "format": "cloze",
+    "tags": [
+      "indication",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-082b-indication-001",
+    "knowledge_type": "indication",
+    "recall_direction": "drug_to_supplement",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.93,
+    "source_question_ids": [
+      "r101-308",
+      "r102-330",
+      "r103-084",
+      "r108-208",
+      "r109-246",
+      "r110-345",
+      "r111-228",
+      "r111-333"
+    ],
+    "source_note_ids": [
+      "fusen-ビタミン補充"
+    ]
+  },
+  {
     "id": "ex-practice-082b-mechanism-001-drug_to_mechanism",
     "source_type": "knowledge_atom",
     "source_id": "ex-practice-082b-mechanism-001",
@@ -12615,6 +13326,41 @@
       "r106-311"
     ],
     "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-082c-indication-001-drug_to_precautions",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-082c-indication-001",
+    "primary_exemplar_id": "ex-practice-082c",
+    "subject": "実務",
+    "front": "フェンタニル貼付剤は{{c1::第一選択ではない（モルヒネから切り換え）}}。高温を避ける理由は{{c2::一気に血中に入る}}ためである。",
+    "back": "適応は癌性疼痛（慢性疼痛への適応は制限的）。持続時間は72時間または24時間。処方はDr→患者（確認書）→薬局のe-learning確認が必要。入浴時の高温にも注意。",
+    "format": "cloze",
+    "tags": [
+      "indication",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-082c-indication-001",
+    "knowledge_type": "indication",
+    "recall_direction": "drug_to_precautions",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.91,
+    "source_question_ids": [
+      "r100-255",
+      "r104-272",
+      "r106-263",
+      "r106-291",
+      "r106-311",
+      "r106-343",
+      "r109-214",
+      "r110-221",
+      "r110-231"
+    ],
+    "source_note_ids": [
+      "fusen-フェンタニル"
+    ]
   },
   {
     "id": "ex-practice-083-pharmacokinetics-001-pk_parameter_to_clinical_meaning",
@@ -13443,6 +14189,34 @@
       "r102-293"
     ],
     "source_note_ids": []
+  },
+  {
+    "id": "ex-practice-086-classification-001-abbreviation_to_meaning",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-practice-086-classification-001",
+    "primary_exemplar_id": "ex-practice-086",
+    "subject": "実務",
+    "front": "薬剤師のケアプラン：OP＝{{c1::観察する（Observational Plan）}}、EP＝{{c2::指導・説明する（Educational Plan）}}、CP＝{{c3::薬物治療に介入する（Care Plan）}}。",
+    "back": "OP：バイタルサイン・検査値・症状の観察。EP：服薬指導・副作用の初期症状説明・生活指導。CP：処方提案・用量調節・薬剤変更提案など薬物治療への直接介入。",
+    "format": "cloze",
+    "tags": [
+      "classification",
+      "basic"
+    ],
+    "knowledge_atom_id": "ex-practice-086-classification-001",
+    "knowledge_type": "classification",
+    "recall_direction": "abbreviation_to_meaning",
+    "difficulty_tier": "basic",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r110-312",
+      "r111-295"
+    ],
+    "source_note_ids": [
+      "fusen-初期計画"
+    ]
   },
   {
     "id": "ex-practice-087a-adverse_effect-001-drug_to_unexpected_side_effect",

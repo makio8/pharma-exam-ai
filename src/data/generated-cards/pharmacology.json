@@ -1231,6 +1231,31 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-pharmacology-012-adverse_effect-001-beta_blocker_asthma",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-012-adverse_effect-001",
+    "primary_exemplar_id": "ex-pharmacology-012",
+    "subject": "薬理",
+    "front": "非選択的β遮断薬（チモロールなど）は{{c1::β2受容体遮断}}により{{c2::気管支平滑筋が収縮}}するため、気管支喘息患者には{{c3::禁忌}}。",
+    "back": "点眼薬（チモロール）でも全身吸収により喘息発作を誘発しうる。β1選択的遮断薬（ビソプロロール等）の方が喘息リスクは低い",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-012-adverse_effect-001",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "beta_blocker_asthma",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.96,
+    "source_question_ids": [
+      "r104-249"
+    ],
+    "source_note_ids": []
+  },
+  {
     "id": "ex-pharmacology-012-classification-005-alpha1_subtypes",
     "source_type": "knowledge_atom",
     "source_id": "ex-pharmacology-012-classification-005",
@@ -3056,6 +3081,32 @@
     "knowledge_atom_id": "ex-pharmacology-019-mechanism-009",
     "knowledge_type": "mechanism",
     "recall_direction": "drug_class→mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r100-155",
+      "r101-155"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-019-classification-010-comparison",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-019-classification-010",
+    "primary_exemplar_id": "ex-pharmacology-019",
+    "subject": "薬理",
+    "front": "BZ系とバルビツール酸系の安全性の違いは？",
+    "back": "BZ系：GABA存在下でのみ作用増強→安全域が広い、REM抑制弱い。バルビツール酸系：直接Cl⁻チャネル開口→安全域が狭い、REM抑制強い、呼吸抑制リスク高い。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-019-classification-010",
+    "knowledge_type": "classification",
+    "recall_direction": "comparison",
     "difficulty_tier": "applied",
     "content_type": "text",
     "generation_model": "claude-opus-4-6",
@@ -5043,6 +5094,33 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-pharmacology-029-interaction-001-interaction_mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-029-interaction-001",
+    "primary_exemplar_id": "ex-pharmacology-029",
+    "subject": "薬理",
+    "front": "ニューキノロン系抗菌薬とフルルビプロフェン（NSAIDs）の併用は、ともに{{c1::GABA受容体}}への結合を阻害するため、痙攣を誘発するリスクがある。",
+    "back": "両薬がGABA受容体へのGABA結合を阻害→中枢の抑制性シグナル低下→興奮優位→痙攣。NSAIDsの中でフルルビプロフェンが特にリスクが高い",
+    "format": "cloze",
+    "tags": [
+      "interaction",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-029-interaction-001",
+    "knowledge_type": "interaction",
+    "recall_direction": "interaction_mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r101-038",
+      "r108-029",
+      "r111-137"
+    ],
+    "source_note_ids": []
+  },
+  {
     "id": "ex-pharmacology-029-mechanism-006-mechanism_to_effect",
     "source_type": "knowledge_atom",
     "source_id": "ex-pharmacology-029-mechanism-006",
@@ -5553,6 +5631,37 @@
     "confidence_score": 0.93,
     "source_question_ids": [
       "r110-294"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-031-interaction-001-interaction_mechanism",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-031-interaction-001",
+    "primary_exemplar_id": "ex-pharmacology-031",
+    "subject": "薬理",
+    "front": "シクロスポリンは肝臓の{{c1::OATP（有機アニオントランスポーター）}}を阻害し、ピタバスタチンやロスバスタチンの血中濃度を上昇させ、{{c2::横紋筋融解症}}のリスクを高める。",
+    "back": "OATPは肝臓への取り込みトランスポーター。阻害されるとスタチンの肝取り込みが減少→血中濃度上昇→筋障害。エルトロンボパグも同じ機序",
+    "format": "cloze",
+    "tags": [
+      "interaction",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-031-interaction-001",
+    "knowledge_type": "interaction",
+    "recall_direction": "interaction_mechanism",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.9,
+    "source_question_ids": [
+      "r100-160",
+      "r100-216",
+      "r101-188",
+      "r107-031",
+      "r109-158",
+      "r110-294",
+      "r110-326"
     ],
     "source_note_ids": []
   },
@@ -7911,6 +8020,32 @@
     "confidence_score": 0.95,
     "source_question_ids": [
       "r109-161"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-042-classification-007-comparison",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-042-classification-007",
+    "primary_exemplar_id": "ex-pharmacology-042",
+    "subject": "薬理",
+    "front": "腎性貧血治療のESAとHIF-PH阻害薬を比較せよ。",
+    "back": "ESA（ダルベポエチン等）：EPO自体を補充、注射薬。HIF-PH阻害薬（ダプロデュスタット等）：内因性EPO産生促進＋鉄代謝改善（ヘプシジン低下）、経口薬。ESA抵抗性にもHIF-PH阻害薬が有効な場合あり。",
+    "format": "comparison",
+    "tags": [
+      "classification",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-042-classification-007",
+    "knowledge_type": "classification",
+    "recall_direction": "comparison",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.95,
+    "source_question_ids": [
+      "r110-256",
+      "r111-293"
     ],
     "source_note_ids": []
   },
@@ -12726,7 +12861,7 @@
     "primary_exemplar_id": "ex-pharmacology-063",
     "subject": "薬理",
     "front": "ジスルフィラム様作用（飲酒時にアセトアルデヒド蓄積）を有するセフェム系薬にはセフメタゾール、{{c1::セフォペラゾン}}、{{c2::ラタモキセフ}}がある（MTT基を持つもの）。",
-    "back": "セフォペラゾン、ラタモキセフ — これらはMTT基（N-メチルチオテトラゾール基）を有し、ALDHを阻害する。メトロニダゾールもジスルフィラム様作用を持つ。飲酒で悪心・頭痛（フラッシュ反応）が出現。",
+    "back": "セフメタゾール、セフォペラゾン、ラタモキセフ。これらは3位側鎖のNMTT基（N-メチルチオテトラゾール基）によりALDHを阻害する。投与中および投与後少なくとも1週間は飲酒を避ける。飲酒で顔面潮紅・悪心・頻脈（フラッシュ反応）が出現",
     "format": "cloze",
     "tags": [
       "adverse_effect",
@@ -12750,8 +12885,8 @@
     "source_id": "ex-pharmacology-063-pharmacokinetics-001",
     "primary_exemplar_id": "ex-pharmacology-063",
     "subject": "薬理",
-    "front": "イミペネムは腎尿細管の{{c1::デヒドロペプチダーゼI（DHP-I）}}で分解され、分解物が腎毒性を示すため、阻害薬の{{c2::シラスタチン}}との合剤（チエナム）で使用する。メロペネムはDHP-Iに安定で単剤使用可能。",
-    "back": "デヒドロペプチダーゼI（DHP-I）、シラスタチン — 語呂「イミなくシラスを」。パニペネムはベタミプロン（腎移行抑制剤）と合剤。「メロンはそのまま（メロペネム＝単剤OK）」。",
+    "front": "イミペネムは腎尿細管の{{c1::デヒドロペプチダーゼI（DHP-I）}}で代謝・不活化されるため、阻害薬の{{c2::シラスタチン}}との合剤で使用する。シラスタチンはイミペネムの腎毒性も抑制する。",
+    "back": "DHP-I、シラスタチン — イミペネムはDHP-Iで不活化されるため、シラスタチンを併用する。シラスタチンはイミペネムの腎毒性も抑制する。メロペネムはDHP-Iに比較的安定で単剤使用可能。語呂「イミなくシラスを」",
     "format": "cloze",
     "tags": [
       "pharmacokinetics",
@@ -13588,6 +13723,37 @@
     "confidence_score": 0.9,
     "source_question_ids": [
       "r109-169"
+    ],
+    "source_note_ids": []
+  },
+  {
+    "id": "ex-pharmacology-067d-adverse_effect-013-drug→adverse_effect_prevention",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-pharmacology-067d-adverse_effect-013",
+    "primary_exemplar_id": "ex-pharmacology-067d",
+    "subject": "薬理",
+    "front": "シクロホスファミドはP450で代謝され、副産物の{{c1::アクロレイン}}が{{c2::出血性膀胱炎}}を引き起こす。予防には{{c3::メスナ}}を併用する。",
+    "back": "アクロレイン / 出血性膀胱炎 / メスナ — シクロホスファミド・イホスファミドはアルキル化薬で、肝P450による代謝で活性代謝物（抗腫瘍作用）とアクロレイン（膀胱毒性）が同時に生成される。メスナはアクロレインと結合して無毒化し出血性膀胱炎を予防する。",
+    "format": "cloze",
+    "tags": [
+      "adverse_effect",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-pharmacology-067d-adverse_effect-013",
+    "knowledge_type": "adverse_effect",
+    "recall_direction": "drug→adverse_effect_prevention",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r102-264",
+      "r104-255",
+      "r107-167",
+      "r108-167",
+      "r110-167",
+      "r111-169",
+      "r111-263"
     ],
     "source_note_ids": []
   },

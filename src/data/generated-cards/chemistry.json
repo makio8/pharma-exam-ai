@@ -1184,6 +1184,38 @@
     "source_note_ids": []
   },
   {
+    "id": "ex-chemistry-037-mechanism-007-reagent→product",
+    "source_type": "knowledge_atom",
+    "source_id": "ex-chemistry-037-mechanism-007",
+    "primary_exemplar_id": "ex-chemistry-037",
+    "subject": "化学",
+    "front": "グリニャール試薬（RMgBr）＋ニトリル（R'C≡N）→イミン中間体→{{c1::H₃O⁺で加水分解}}→{{c2::ケトン（R'-CO-R）}}",
+    "back": "H₃O⁺で加水分解 / ケトン（R'-CO-R）\n\n【ポイント】グリニャール試薬はニトリルのC≡Nに求核付加してイミノマグネシウム塩を形成し、酸性条件で加水分解するとケトンになる。CO₂との反応ではカルボン酸が生成する（RCOOH）。",
+    "format": "cloze",
+    "tags": [
+      "mechanism",
+      "applied"
+    ],
+    "knowledge_atom_id": "ex-chemistry-037-mechanism-007",
+    "knowledge_type": "mechanism",
+    "recall_direction": "reagent→product",
+    "difficulty_tier": "applied",
+    "content_type": "text",
+    "generation_model": "claude-opus-4-6",
+    "confidence_score": 0.85,
+    "source_question_ids": [
+      "r100-103",
+      "r101-104",
+      "r102-103",
+      "r103-106",
+      "r104-103",
+      "r108-009"
+    ],
+    "source_note_ids": [
+      "グリニャール試薬反応"
+    ]
+  },
+  {
     "id": "ex-chemistry-042-classification-001-官能基→酸性度の序列",
     "source_type": "knowledge_atom",
     "source_id": "ex-chemistry-042-classification-001",
