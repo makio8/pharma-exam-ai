@@ -119,6 +119,11 @@ export class LearningLinkService {
     return this.exemplarToQuestions.get(card.primary_exemplar_id) ?? []
   }
 
+  /** exemplar ID → 関連問題ID一覧（O(1) ルックアップ） */
+  getQuestionsForExemplar(exemplarId: string): string[] {
+    return this.exemplarToQuestions.get(exemplarId) ?? []
+  }
+
   /**
    * 類似問題を返す（exemplar一致優先 → トピック補完）
    * - 同じexemplarに紐づく問題をスコア降順で優先

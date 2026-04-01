@@ -1,0 +1,145 @@
+/* PracticeComplete — Soft Companion デザイン */
+
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 40px 16px 120px;
+  background: var(--bg);
+  font-family: var(--font);
+  color: var(--text);
+  min-height: 100dvh;
+  box-sizing: border-box;
+}
+
+/* ヘッダーエリア */
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.emoji {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 12px;
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.2); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emoji {
+    animation: none;
+  }
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.perfectBadge {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ok);
+  background: #ecfdf5;
+  border-radius: 20px;
+  padding: 2px 12px;
+  margin-top: 6px;
+}
+
+/* 統計エリア */
+.statsRow {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.statBox {
+  flex: 1;
+  max-width: 120px;
+  border-radius: var(--r-sm);
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.statOk {
+  background: #ecfdf5;
+  color: #10b981;
+}
+
+.statAgain {
+  background: #fffbeb;
+  color: #f59e0b;
+}
+
+.statNumber {
+  font-size: 28px;
+  font-weight: 700;
+  display: block;
+  line-height: 1.1;
+}
+
+.statLabel {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 2px;
+  display: block;
+}
+
+/* 次アクションエリア */
+.actionsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.actionsTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-2);
+  margin-bottom: 4px;
+}
+
+.actionBtn {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--card);
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: left;
+  transition: background 0.15s, border-color 0.15s;
+  box-shadow: var(--shadow-sm);
+}
+
+.actionBtn:hover {
+  background: var(--accent-light);
+  border-color: var(--accent-border);
+}
+
+.actionBtn:active {
+  background: var(--accent-mid);
+}
+
+.actionBtnEmoji {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.actionBtnLabel {
+  flex: 1;
+}
