@@ -146,6 +146,17 @@ const EXAMS: PdfConfig[] = [
       { url: 'https://www.mhlw.go.jp/content/001455162.pdf', file: 'q110-jissen3.pdf', section: '実践' },
     ],
   },
+  {
+    year: 111,
+    pdfs: [
+      { url: 'https://www.mhlw.go.jp/content/001677927.pdf', file: 'q111-hissu.pdf', section: '必須' },
+      { url: 'https://www.mhlw.go.jp/content/001677928.pdf', file: 'q111-riron1.pdf', section: '理論' },
+      { url: 'https://www.mhlw.go.jp/content/001677929.pdf', file: 'q111-riron2.pdf', section: '理論' },
+      { url: 'https://www.mhlw.go.jp/content/001677930.pdf', file: 'q111-jissen1.pdf', section: '実践' },
+      { url: 'https://www.mhlw.go.jp/content/001677931.pdf', file: 'q111-jissen2.pdf', section: '実践' },
+      { url: 'https://www.mhlw.go.jp/content/001677932.pdf', file: 'q111-jissen3.pdf', section: '実践' },
+    ],
+  },
 ]
 
 interface ParsedQuestion {
