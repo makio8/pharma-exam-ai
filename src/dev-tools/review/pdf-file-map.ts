@@ -36,6 +36,9 @@ export const PDF_FILE_MAP: Record<string, string[]> = {
   '110-必須': ['q110-hissu.pdf'],
   '110-理論': ['q110-riron1.pdf', 'q110-riron2.pdf'],
   '110-実践': ['q110-jissen1.pdf', 'q110-jissen2.pdf', 'q110-jissen3.pdf'],
+  '111-必須': ['q111-hissu.pdf'],
+  '111-理論': ['q111-riron1.pdf', 'q111-riron2.pdf'],
+  '111-実践': ['q111-jissen1.pdf', 'q111-jissen2.pdf', 'q111-jissen3.pdf'],
 }
 
 /** PDFファイルの絶対URLを返す（Vite dev server用） */

@@ -21,7 +21,7 @@ import styles from './ReviewPage.module.css'
 // デフォルトフィルタ: error+warning ON / 全年度 / 全区分 / 未判定
 const DEFAULT_FILTERS: FilterConfig = {
   severities: ['error', 'warning'],
-  years: Array.from({ length: 12 }, (_, i) => 100 + i),
+  years: Array.from({ length: 12 }, (_, i) => 100 + i), // 100-111
   sections: ['必須', '理論', '実践'],
   judgmentStatus: 'pending',
   rules: [],
