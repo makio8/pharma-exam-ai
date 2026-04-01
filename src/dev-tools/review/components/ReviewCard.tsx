@@ -14,6 +14,7 @@ const IMAGE_CHOICE_TYPES = new Set([
 ])
 
 const QUESTION_TEXT_TRUNCATE = 300
+const PLACEHOLDER_RE = /\{\{image:(\d+)\}\}/g
 
 interface ReviewCardProps {
   question: Question
@@ -44,6 +45,43 @@ export function ReviewCard({
 }: ReviewCardProps) {
   const [expanded, setExpanded] = useState(false)
 
+  function parseTextWithPersistedImageUrls(text: string, imageUrls: string[]) {
+    if (text === '' || imageUrls.length === 0) {
+      return [{ type: 'text' as const, content: text }]
+    }
+
+    const blocks: Array<
+      | { type: 'text'; content: string }
+      | { type: 'image'; imageId: number; url: string }
+    > = []
+    let lastIndex = 0
+    const re = new RegExp(PLACEHOLDER_RE.source, 'g')
+
+    let match: RegExpExecArray | null
+    while ((match = re.exec(text)) !== null) {
+      const imageId = parseInt(match[1], 10)
+      const imageUrl = imageUrls[imageId - 1]
+      if (!imageUrl) continue
+
+      if (match.index > lastIndex) {
+        blocks.push({ type: 'text', content: text.slice(lastIndex, match.index) })
+      }
+
+      blocks.push({ type: 'image', imageId, url: imageUrl })
+      lastIndex = match.index + match[0].length
+    }
+
+    if (lastIndex < text.length) {
+      blocks.push({ type: 'text', content: text.slice(lastIndex) })
+    }
+
+    if (blocks.length === 0) {
+      return [{ type: 'text' as const, content: text }]
+    }
+
+    return blocks
+  }
+
   // 問題が切り替わったら折りたたみリセット
   useEffect(() => {
     setExpanded(false)
@@ -65,8 +103,19 @@ export function ReviewCard({
   }
 
   // 問題文の表示（300文字トランケート）
-  const questionText = question.question_text ?? ''
-  const isTruncatable = questionText.length > QUESTION_TEXT_TRUNCATE
+  const questionTextCorrection = [...corrections].reverse().find(
+    c => c.type === 'text' && c.field === 'question_text'
+  )
+  const questionText = questionTextCorrection?.type === 'text'
+    ? questionTextCorrection.value
+    : question.question_text ?? ''
+  const questionCropCorrection = [...corrections].reverse().find(
+    c => c.type === 'multi-image-crop' && c.target === 'question'
+  )
+  const hasQuestionInlineImages = questionCropCorrection?.type === 'multi-image-crop'
+    ? questionCropCorrection.images.length > 0
+    : (question.question_image_urls?.length ?? 0) > 0
+  const isTruncatable = !hasQuestionInlineImages && questionText.length > QUESTION_TEXT_TRUNCATE
   const displayText = expanded || !isTruncatable
     ? questionText
     : questionText.slice(0, QUESTION_TEXT_TRUNCATE) + '…'
@@ -91,21 +140,21 @@ export function ReviewCard({
       {/* ===== 連問シナリオ ===== */}
       {question.linked_scenario && (() => {
         // Use corrected scenario text if available
-        const scenarioTextCorrection = corrections.find(
+        const scenarioTextCorrection = [...corrections].reverse().find(
           c => c.type === 'text' && c.field === 'linked_scenario'
         )
         const scenarioText = scenarioTextCorrection?.type === 'text'
           ? scenarioTextCorrection.value
           : question.linked_scenario
 
-        const scenarioCropCorrection = corrections.find(
+        const scenarioCropCorrection = [...corrections].reverse().find(
           c => c.type === 'multi-image-crop' && c.target === 'scenario'
         )
-        const scenarioImages: CropImage[] = scenarioCropCorrection?.type === 'multi-image-crop'
-          ? scenarioCropCorrection.images
-          : []
-
-        const blocks = parseTextWithImages(scenarioText, scenarioImages)
+        const scenarioImages: CropImage[] =
+          scenarioCropCorrection?.type === 'multi-image-crop' ? scenarioCropCorrection.images : []
+        const scenarioBlocks = scenarioImages.length > 0
+          ? parseTextWithImages(scenarioText, scenarioImages)
+          : parseTextWithPersistedImageUrls(scenarioText, question.scenario_image_urls ?? [])
 
         return (
           <div className={styles.scenarioArea}>
@@ -115,16 +164,17 @@ export function ReviewCard({
                 <span className={styles.linkedGroupTag}>{question.linked_group}</span>
               )}
             </h3>
-            {blocks.map((block, i) => {
+            {scenarioBlocks.map((block, i) => {
               if (block.type === 'text') {
                 return <p key={i} className={styles.scenarioText}>{block.content}</p>
               }
               const previewUrl = previews.get(`${question.id}-scenario-${block.imageId}`)
-              if (previewUrl) {
+              const imageUrl = ('url' in block && typeof block.url === 'string') ? block.url : previewUrl
+              if (imageUrl) {
                 return (
                   <img
                     key={i}
-                    src={previewUrl}
+                    src={imageUrl}
                     alt={`シナリオ画像 ${block.imageId}`}
                     className={styles.scenarioImage}
                   />
@@ -181,7 +231,45 @@ export function ReviewCard({
       {/* ===== 問題文 ===== */}
       <div className={styles.questionTextArea}>
         <h3 className={styles.sectionTitle}>問題文</h3>
-        <p className={styles.questionText}>{displayText}</p>
+        {questionCropCorrection?.type === 'multi-image-crop'
+          ? parseTextWithImages(questionText, questionCropCorrection.images).map((block, i) => {
+              if (block.type === 'text') {
+                return <p key={i} className={styles.questionText}>{block.content}</p>
+              }
+              const previewUrl = previews.get(`${question.id}-question-${block.imageId}`)
+              if (previewUrl) {
+                return (
+                  <div key={i} className={styles.imageArea}>
+                    <img
+                      src={previewUrl}
+                      alt={`問題画像 ${block.imageId}`}
+                      className={styles.questionImage}
+                    />
+                  </div>
+                )
+              }
+              return (
+                <span key={i} className={styles.imageBadge}>
+                  📷 image:{block.imageId}
+                </span>
+              )
+            })
+          : hasQuestionInlineImages
+            ? parseTextWithPersistedImageUrls(questionText, question.question_image_urls ?? []).map((block, i) => {
+                if (block.type === 'text') {
+                  return <p key={i} className={styles.questionText}>{block.content}</p>
+                }
+                return (
+                  <div key={i} className={styles.imageArea}>
+                    <img
+                      src={block.url}
+                      alt={`問題画像 ${block.imageId}`}
+                      className={styles.questionImage}
+                    />
+                  </div>
+                )
+              })
+            : <p className={styles.questionText}>{displayText}</p>}
         {isTruncatable && (
           <button
             className={styles.expandBtn}
