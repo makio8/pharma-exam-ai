@@ -204,7 +204,19 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - L0a/L0b追加: 名前↔構造式のシンプルカード288枚（合計720枚 → FlashCardTemplate統合で730枚）
   - レビューUI: L0a/L0b/L1/L2/L3の5枚表示対応
   - コマンド: `npx tsx scripts/validate-structural-cards.ts`（品質検証）、`npx tsx scripts/analyze-structural-formula-questions.ts`（出題分析）
-  - **次: 人間レビュー進行中（/dev-tools/structural-review） → exemplarマッピング**
+  - 人間レビュー: オールクリア。exemplarマッピング完了、P2指摘89件修正済み
+  - **FlashCardPageリデザイン完了（2026-04-01）**
+  - スワイプ2段階UI（OK/もう1回）、2層構造（フリップ+スワイプ分離）、rAF最適化
+  - 4,246枚統合: UnifiedTemplateProvider（構造式730同期+テキスト3,516非同期遅延ロード）
+  - Cloze穴埋めレンダリング（2,521枚、XSSサニタイズ、`{{c1::答え}}`→`[____]`/ハイライト）
+  - FlashCardListPage Soft Companionリデザイン: Ant Design完全排除、科目/カテゴリ別、進捗3状態
+  - PracticeComplete完了画面: 学習サイクル接続（苦手カードの関連問題誘導）
+  - オンボーディング6枚チュートリアル（テキスト+cloze+構造式全タイプ体験）
+  - a11y: キーボード(Space/Enter/←/→/Z)、ボタンフォールバック、aria、Reduced Motion
+  - 設計: `docs/superpowers/specs/2026-03-31-flashcard-page-redesign-design.md`（v1.4、3回レビュー）
+  - 計画: `docs/superpowers/plans/2026-04-01-flashcard-page-redesign.md`（v1.1）
+  - テスト: 40ファイル702件全パス
+  - **次: Vercelデプロイ確認 → スマホ実機テスト → ホームページの復習CTA導線**
 - **テキストカード生成パイプライン（2026-03-31）**
   - 設計spec §5「テキストカード生成パイプライン」の実装
   - 型拡張: KnowledgeType(11種), CardFormat(3→10種), FlashCardTemplate(12 optional新フィールド), KnowledgeAtom型
