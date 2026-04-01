@@ -67,7 +67,10 @@ export function TodayMenu({
               }
             </div>
             <div className={styles.desc}>
-              {dueCardsCount > 0 ? '暗記カードの復習期限です（2分）' : '昨日間違えた問題を復習しよう'}
+              {dueCardsCount > 0
+                ? `暗記カードの復習期限です（約${Math.max(1, Math.ceil(dueCardsCount * 6 / 60))}分）`
+                : '昨日間違えた問題を復習しよう'
+              }
             </div>
           </div>
           <span className={styles.arrow}>›</span>

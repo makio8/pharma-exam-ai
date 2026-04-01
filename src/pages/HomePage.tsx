@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAnalytics } from '../hooks/useAnalytics'
 import { useTopicMastery } from '../hooks/useTopicMastery'
-import { useFlashCards } from '../hooks/useFlashCards'
+import { useCardProgress } from '../hooks/useCardProgress'
 import { DecoWave } from '../components/ui/DecoWave'
 import { StatCircles } from '../components/ui/StatCircle'
 import { SubjectMastery } from '../components/ui/SubjectMastery'
@@ -14,7 +14,7 @@ export function HomePage() {
   const navigate = useNavigate()
   const { totalAnswered, isEmpty, streakDays, yesterdayMistakeCount } = useAnalytics()
   const { allTopics } = useTopicMastery()
-  const { dueCards } = useFlashCards()
+  const { dueProgress } = useCardProgress()
 
   // Find weakest topic (learning with lowest correctRate, or first not_started)
   const weakestTopic = useMemo(() => {
@@ -92,7 +92,7 @@ export function HomePage() {
           middleCategory: weakestTopic.middleCategory,
           correctRate: weakestTopic.correctRate,
         } : undefined}
-        dueCardsCount={dueCards.length}
+        dueCardsCount={dueProgress.length}
         almostMasteredTopic={almostMasteredTopic ? {
           topicId: almostMasteredTopic.topicId,
           subject: almostMasteredTopic.subject,
@@ -106,7 +106,7 @@ export function HomePage() {
       <div className="section-title">📈 がんばり記録</div>
       <StatCircles stats={[
         { value: totalAnswered, label: '解いた問題', color: 'blue' },
-        { value: dueCards.length, label: '復習カード', color: 'yellow' },
+        { value: dueProgress.length, label: '復習カード', color: 'yellow' },
         { value: streakDays, label: '連続学習', color: 'orange' },
       ]} />
 
