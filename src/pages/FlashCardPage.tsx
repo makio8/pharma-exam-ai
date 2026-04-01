@@ -1,93 +1,98 @@
 // 暗記カード復習画面
-// - PracticeContext あり → テンプレートベース練習（TemplatePractice）
-// - PracticeContext なし → 旧レガシー復習（LegacyDueCardReview）
-import { useState } from 'react'
-import { Button, Progress, Result, Typography } from 'antd'
-import { ArrowLeftOutlined } from '@ant-design/icons'
+// - オンボーディング未完了 → ONBOARDING_CARDS でチュートリアル（開始時点でフラグを立てる）
+// - PracticeContext あり → SwipePractice
+// - PracticeContext なし → dueProgress 全件で自動コンテキスト生成 → SwipePractice
+// - due 0件 → 空状態UI
 import { useLocation, useNavigate } from 'react-router-dom'
-import { useFlashCards } from '../hooks/useFlashCards'
-import { FlashCard } from '../components/FlashCard'
-import type { ReviewResult } from '../types/card-progress'
+import { useUnifiedTemplates } from '../hooks/useUnifiedTemplates'
+import { useCardProgress } from '../hooks/useCardProgress'
+import { SwipePractice } from '../components/flashcard/SwipePractice'
+import { ONBOARDING_CARDS } from '../data/onboarding-cards'
 import type { FlashCardPracticeContext } from '../types/card-progress'
-import { TemplatePractice } from '../components/flashcard/TemplatePractice'
 
-const { Title, Text } = Typography
-
-/** 旧レガシー復習（ユーザー作成カードの due cards） */
-function LegacyDueCardReview() {
+export function FlashCardPage() {
+  const location = useLocation()
   const navigate = useNavigate()
-  const { dueCards, reviewCard } = useFlashCards()
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [reviewedCount, setReviewedCount] = useState(0)
-  const totalCount = dueCards.length
+  const { getTemplate, loading } = useUnifiedTemplates()
+  const { dueProgress } = useCardProgress()
 
-  const handleReview = (id: string, result: ReviewResult) => {
-    reviewCard(id, result)
-    setReviewedCount((prev) => prev + 1)
-    setCurrentIndex((prev) => prev + 1)
+  // オンボーディング判定
+  const isOnboardingDone = localStorage.getItem('card-onboarding-done') === 'true'
+
+  if (!isOnboardingDone) {
+    // チュートリアルモード: 開始時点でフラグを立てる（途中離脱でも次回スキップ）
+    localStorage.setItem('card-onboarding-done', 'true')
+
+    const onboardingContext: FlashCardPracticeContext = {
+      mode: 'exemplar',
+      cardIds: ONBOARDING_CARDS.map((c) => c.id),
+      returnTo: '/cards',
+    }
+    const getOnboardingTemplate = (id: string) => ONBOARDING_CARDS.find((c) => c.id === id)
+
+    return (
+      <SwipePractice
+        context={onboardingContext}
+        getTemplate={getOnboardingTemplate}
+      />
+    )
   }
 
-  if (totalCount === 0 || currentIndex >= totalCount) {
+  // PracticeContext が location.state にあれば使用
+  const practiceContext = (location.state as { practiceContext?: FlashCardPracticeContext } | null)
+    ?.practiceContext
+
+  if (practiceContext && practiceContext.cardIds.length > 0) {
+    return <SwipePractice context={practiceContext} getTemplate={getTemplate} />
+  }
+
+  // コンテキストなし → dueProgress で自動コンテキスト or 空状態
+  if (loading) {
     return (
-      <div style={{ maxWidth: 600, margin: '0 auto', padding: '24px 8px' }}>
-        <Result
-          status="success"
-          title="今日の復習完了！"
-          subTitle={
-            reviewedCount > 0
-              ? `${reviewedCount}枚のカードを復習しました`
-              : '復習するカードはありません'
-          }
-          extra={
-            <Button type="primary" onClick={() => navigate('/cards')}>
-              カード一覧に戻る
-            </Button>
-          }
-        />
+      <div style={{ padding: '2rem', textAlign: 'center', color: '#8b7355' }}>
+        読み込み中...
       </div>
     )
   }
 
-  const currentCard = dueCards[currentIndex]
-
-  return (
-    <div style={{ maxWidth: 600, margin: '0 auto', padding: '0 8px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', marginBottom: 16 }}>
-        <Button
-          icon={<ArrowLeftOutlined />}
-          type="text"
-          onClick={() => navigate('/cards')}
-        />
-        <Title level={4} style={{ margin: 0, flex: 1, textAlign: 'center' }}>
-          復習
-        </Title>
-        <div style={{ width: 32 }} />
-      </div>
-
-      <div style={{ marginBottom: 16, textAlign: 'center' }}>
-        <Text type="secondary">
-          {currentIndex + 1} / {totalCount} カード
-        </Text>
-        <Progress
-          percent={Math.round((currentIndex / totalCount) * 100)}
-          showInfo={false}
-          size="small"
-          style={{ marginTop: 4 }}
-        />
-      </div>
-
-      <FlashCard card={currentCard} onReview={handleReview} />
-    </div>
-  )
-}
-
-export function FlashCardPage() {
-  const location = useLocation()
-  const context = location.state as FlashCardPracticeContext | null
-
-  if (context && context.cardIds && context.cardIds.length > 0) {
-    return <TemplatePractice context={context} />
+  if (dueProgress.length > 0) {
+    const autoContext: FlashCardPracticeContext = {
+      mode: 'review_queue',
+      cardIds: dueProgress.map((p) => p.template_id),
+      returnTo: '/cards',
+    }
+    return <SwipePractice context={autoContext} getTemplate={getTemplate} />
   }
 
-  return <LegacyDueCardReview />
+  // due 0件
+  return (
+    <div
+      style={{ padding: '2rem', textAlign: 'center', maxWidth: 480, margin: '0 auto' }}
+    >
+      <div style={{ fontSize: 48, marginBottom: 16 }}>✅</div>
+      <div
+        style={{ fontSize: 18, fontWeight: 700, color: '#3d2c1e', marginBottom: 8 }}
+      >
+        復習するカードはありません
+      </div>
+      <div style={{ fontSize: 14, color: '#8b7355', marginBottom: 24 }}>
+        カードタブからカテゴリを選んで練習しよう！
+      </div>
+      <button
+        onClick={() => navigate('/cards')}
+        style={{
+          padding: '12px 24px',
+          background: 'linear-gradient(135deg, #aa3bff, #8b5cf6)',
+          color: 'white',
+          border: 'none',
+          borderRadius: 12,
+          fontSize: 15,
+          fontWeight: 600,
+          cursor: 'pointer',
+        }}
+      >
+        カードタブに戻る
+      </button>
+    </div>
+  )
 }
