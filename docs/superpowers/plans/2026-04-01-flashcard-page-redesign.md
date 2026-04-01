@@ -1807,23 +1807,57 @@ git commit -m "chore: remove deprecated TemplatePractice (replaced by SwipePract
 
 ---
 
-## 依存関係
+## 依存関係（v1.1修正: GPT-5.4 P1指摘反映）
 
 ```
 Task 1 (cloze) ─────────────┐
 Task 2 (swipe gesture) ─────┤
-                             ├→ Task 3 (SwipeCard) → Task 4 (SwipePractice) → Task 5 (Complete)
-                             │                                                       │
-Task 6 (UnifiedTemplates) ──┤→ Task 7 (ListPage) → Task 8 (Onboarding)             │
-                             │                                                       │
-                             └→ Task 9 (FlashCardPage切替) ← ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─┘
+                             ├→ Task 3 (SwipeCard)
+                             │         │
+Task 5 (Complete logic) ─────┤         ↓
+                             ├→ Task 4 (SwipePractice) ← Task 5に依存
+                             │
+Task 6 (UnifiedTemplates) ──┤→ Task 7 (ListPage)
+                             │
+Task 8 (Onboarding) ────────┤
+                             │
+                             └→ Task 9 (FlashCardPage切替) ← Task 4, 5, 6, 8 全てに依存
                                      │
-                                     ├→ Task 10 (LearningLinks統合)
+                                     ├→ Task 10 (LearningLinks統合) ← 主に Task 6 依存
                                      └→ Task 11 (TemplatePractice削除)
 ```
 
-- Task 1, 2, 6 は並列実行可能
+- **並列実行可能**: Task 1, 2, 5, 6, 8（全て独立）
 - Task 3 は Task 1, 2 に依存
+- Task 4 は Task 3, **5** に依存（PracticeComplete を import するため）
 - Task 7 は Task 6 に依存
-- Task 9 は Task 4, 5, 6 に依存
-- Task 10, 11 は Task 9 に依存
+- Task 9 は Task 4, 5, 6, **8** に依存（オンボーディング判定を含むため）
+- Task 10 は主に Task **6** に依存（useUnifiedTemplates の allTemplates を使う）
+- Task 11 は Task 9 に依存
+
+## レビュー対応記録（v1.1修正）
+
+### P1修正（6件）
+
+1. **SwipeCard rAFフィードバック背景**: offsetRef をレンダーで読むのではなく、rAF内でDOM直接更新。bgRight/bgLeft の opacity もrAF内で `.style.opacity` に書く。
+2. **マウスstale closure**: `handleDragMove`/`handleDragEnd` を `useRef` に格納し、mousedown時のclosure問題を回避。
+3. **cloze XSSサニタイズ**: `parseCloze` の出力を `dangerouslySetInnerHTML` に渡す前に、`<` `>` `&` をエスケープする `sanitizeHtml` ヘルパーを追加。テストケースに `<script>alert(1)</script>` を追加。
+4. **reduced-motion フリップ遅延**: `window.matchMedia('(prefers-reduced-motion: reduce)')` を検査し、`true` なら `setTimeout` を 50ms に短縮。
+5. **依存関係修正**: Task 4→5 の順序修正、Task 9→8 の依存追加（上記図参照）。
+6. **session snapshot**: Spec v1.4 で Phase 2 送りに変更。Plan からは除外確定。
+
+### P2修正（主要3件）
+
+1. **SwipeCard分割**: Task 3 の SwipeCard 内でインラインだったゴーストヒントとスワイプジェスチャーを、実装時に以下に分離:
+   - `useSwipeGesture` カスタムフック（touch/mouse/keyboard統合、useRefパターン）
+   - ゴーストヒントはSwipeCard内の条件レンダリングで軽量に保つ（別コンポーネント不要）
+   - CardFace（表面/裏面レンダリング）の分離は実装者判断で可。260行を超えたら分割。
+
+2. **Task 7 実装指示の具体化**: FlashCardListPage の acceptance criteria を以下に追記:
+   - `groupTemplates(templates, progressMap)` で科目/カテゴリ別グループ化+進捗3状態計算
+   - 進捗3状態の閾値: 未学習=CardProgressなし, 復習待ち=next_review_at<=now, マスター=review_count>=3 && interval_days>=21
+   - 既存 `src/components/ui/Chip.tsx` を再利用（active variant使用）
+   - 構造式カードの `COMPOUND_META` は `src/dev-tools/structural-review/compound-meta.ts` から import
+   - ストリーク表示、loading skeleton、復習CTAの時間見積もり（L0: 4s, L1-L3: 8s, テキスト: 6s）を含む
+
+3. **undo時のSM-2二重呼び出し**: `reviewCard` は upsert（既存レコードを上書き）なので二重呼び出しは安全。`review_count` が+1されるが、undoは「やり直し」の意図なので妥当。明示的なドキュメントをコード内コメントに追加。
