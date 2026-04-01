@@ -216,9 +216,11 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - Codex検証: 低confidenceカードのバッチプロンプト生成(20枚/batch)
   - 生成方式: Claude Codeセッション内サブエージェント（Anthropic SDK API呼び出しではない、MAXプランのトークン使用）
   - GPT-5.4レビュー×5回: P1指摘計8件修正（ID衝突防止、型ガード強化、schema厳密化、エラーatomスキップ等）
-  - テスト: 35ファイル639テスト全パス
+  - テスト: 36ファイル654テスト全パス
   - 計画: `docs/superpowers/plans/2026-03-31-text-card-pipeline.md`
-  - **次: サブエージェントでカード生成実行（404件バッチ）→ アセンブル → Codex検証 → FlashCardPage UIリデザイン**
+  - ✅ バッチ生成完了: 404 exemplar全件 → 3,370 atoms → 3,451枚（9科目、エラー率1.9%）
+  - 科目別: 病態640/実務635/薬理527/衛生453/薬剤398/法規249/物理210/生物192/化学147
+  - **次: Codex相互検証（低confidenceカード） → FlashCardPage UIリデザイン**
 - **Vertex AI 移行 + Nano Banana 画像生成実験（2026-03-28）**
   - OCRスクリプト（ocr-cropped-notes.ts）を AI Studio → Vertex AI エンドポイントに移行
   - 認証: API Key → google-auth-library ADC（GCP無料クレジット¥46,955消費可能に）
