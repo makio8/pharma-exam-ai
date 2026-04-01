@@ -142,7 +142,8 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - questions_catalogシード: 全4,094問（第100〜111回）自動生成
   - 実装計画 Plan 1-5 全て策定済み（スキーマ→認証→Repo移行→課金→削除+移行）
   - Plan 1（スキーマ構築）: **全Task完了**（Task 7ローカル検証: 20テーブル+RLS全有効+4,094シード+8関数+product_catalog 2行 確認済み、2026-04-01）
-  - **次: Plan 2（認証統合: LINE Login + Apple Login）**
+  - Plan 2（認証統合）: **コード実装Task 2-10完了**（AuthContext/AuthGuard/LoginPage/OnboardingPage/AuthCallbackPage/line-account、ビルドOK+テスト702件全パス、2026-04-01）。残りはTask 1（LINE/Apple/Supabaseコンソール設定 = 手動作業）のみ
+  - **次: Task 1コンソール設定 → 動作確認 → Plan 3（localStorage → Supabase Repo移行）**
 - **付箋→例示マッチング パイプライン（2026-03-26）**
   - 付箋23枚を例示986件にClaude推論でセマンティックマッチング（topicId第一制約）
   - 中間JSON（confidence + reasoning付き）→ レビューUI → official-notes.ts反映の3段階フロー

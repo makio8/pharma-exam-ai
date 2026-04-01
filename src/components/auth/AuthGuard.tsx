@@ -6,6 +6,9 @@ import { Navigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../../hooks/useAuth'
 import { isSupabaseConfigured } from '../../lib/supabase'
 
+/** プロトタイプモード: VITE_PROTOTYPE_MODE=true で認証スキップ（トライアルユーザー向け） */
+const isPrototypeMode = import.meta.env.VITE_PROTOTYPE_MODE === 'true'
+
 interface AuthGuardProps {
   children: ReactNode
 }
@@ -14,9 +17,8 @@ export function AuthGuard({ children }: AuthGuardProps) {
   const { user, loading, needsOnboarding } = useAuth()
   const location = useLocation()
 
-  // Supabase未設定（localStorageモード）→ 認証スキップ（テスター用）
-  // LINE/Apple 設定完了後に .env.local を設定すれば自動的にログイン必須になる
-  if (!isSupabaseConfigured) {
+  // プロトタイプモード or Supabase未設定 → 認証スキップ
+  if (isPrototypeMode || !isSupabaseConfigured) {
     return <>{children}</>
   }
 
