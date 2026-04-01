@@ -287,6 +287,7 @@ function QuestionPageContent({
         <QuestionBody
           bodyText={normalizeForDisplay(question.question_text)}
           imageUrl={question.image_url}
+          inlineImageUrls={question.question_image_urls}
           displayMode={displayMode}
         />
 

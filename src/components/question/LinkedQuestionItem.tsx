@@ -109,6 +109,7 @@ export function LinkedQuestionItem({
         <QuestionBody
           bodyText={normalizeForDisplay(bodyText)}
           imageUrl={question.image_url}
+          inlineImageUrls={question.question_image_urls}
           displayMode={displayMode}
         />
 

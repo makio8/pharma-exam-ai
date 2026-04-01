@@ -6,9 +6,10 @@ import styles from './ScenarioCard.module.css'
 interface Props {
   scenario: string
   totalQuestions: number
+  scenarioImageUrls?: string[]
 }
 
-export function ScenarioCard({ scenario, totalQuestions }: Props) {
+export function ScenarioCard({ scenario, totalQuestions, scenarioImageUrls }: Props) {
   return (
     <div className={styles.card}>
       <p className={styles.label}>
@@ -17,6 +18,7 @@ export function ScenarioCard({ scenario, totalQuestions }: Props) {
       {scenario && (
         <QuestionBody
           bodyText={normalizeForDisplay(scenario)}
+          inlineImageUrls={scenarioImageUrls}
           displayMode="text"
         />
       )}

@@ -28,6 +28,7 @@ export function LinkedQuestionViewer({ group }: Props) {
       <ScenarioCard
         scenario={group.scenario}
         totalQuestions={group.questions.length}
+        scenarioImageUrls={group.questions[0]?.scenario_image_urls}
       />
       {group.questions.map((q, i) => (
         <LinkedQuestionItem

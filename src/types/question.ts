@@ -73,12 +73,15 @@ export interface Question {
   tags: string[]            // キーワードタグ
   correct_rate?: number     // 正答率（0〜1）。60%以上が演習推奨
   image_url?: string        // 問題に図がある場合
+  question_image_urls?: string[]  // 問題文中 {{image:N}} 用のインライン画像
+  scenario_image_urls?: string[]  // linked_scenario 中 {{image:N}} 用のインライン画像
   question_text_original?: string  // クリーニング前のテキスト（ロールバック用）
   visual_content_type?: VisualContentType
   display_mode_override?: 'text' | 'image' | 'both'  // 問題ごとの表示モード上書き（実機確認に基づく）
   question_concepts?: string[]
   linked_group?: string
   linked_scenario?: string
+  _flag_image_review?: boolean
 }
 
 /** 自信度 */

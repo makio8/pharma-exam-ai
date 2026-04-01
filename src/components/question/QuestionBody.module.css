@@ -28,3 +28,17 @@
   color: var(--text);
   white-space: pre-wrap;
 }
+
+.richText {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inlineImage {
+  border-radius: var(--r-card);
+  max-width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
