@@ -1,281 +1,372 @@
-// 暗記カードデッキ一覧画面 — テンプレートカード（公式）+ ユーザー作成カード
+// 暗記カード一覧ページ — Soft Companion リデザイン
 import { useMemo, useState } from 'react'
-import { Badge, Button, Card, Collapse, Empty, List, Popconfirm, Tag, Typography } from 'antd'
-import { DeleteOutlined, PlayCircleOutlined } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
-import { useFlashCards } from '../hooks/useFlashCards'
-import { useFlashCardTemplates } from '../hooks/useFlashCardTemplates'
+import { useUnifiedTemplates } from '../hooks/useUnifiedTemplates'
 import { useCardProgress } from '../hooks/useCardProgress'
-import { CARD_FORMAT_CONFIG } from '../types/flashcard'
-import { CARD_FORMAT_CONFIG as TEMPLATE_FORMAT_CONFIG } from '../types/flashcard-template'
-import type { FlashCard } from '../types/flashcard'
+import { Chip } from '../components/ui/Chip'
+import { COMPOUND_META } from '../dev-tools/structural-review/compound-meta'
+import type { FlashCardPracticeContext, CardProgress } from '../types/card-progress'
 import type { FlashCardTemplate } from '../types/flashcard-template'
-import type { FlashCardPracticeContext } from '../types/card-progress'
 import type { QuestionSubject } from '../types/question'
+import styles from './FlashCardListPage.module.css'
 
-const { Title, Text } = Typography
+// ---- 進捗3状態 ----
+type ProgressBucket = 'unlearned' | 'due' | 'mastered'
 
-/** テンプレートカードのカテゴリ定義 */
-const TEMPLATE_CATEGORIES = [
-  { key: 'structural', label: '構造式', emoji: '🔬', filter: (t: FlashCardTemplate) => t.source_type === 'structure_db' },
-  { key: 'text', label: 'テキスト', emoji: '📖', filter: (t: FlashCardTemplate) => t.source_type !== 'structure_db' },
-] as const
+function getProgressBucket(progress: CardProgress | undefined): ProgressBucket {
+  if (!progress) return 'unlearned'
+  if (progress.next_review_at <= new Date().toISOString()) return 'due'
+  if (progress.review_count >= 3 && progress.interval_days >= 21) return 'mastered'
+  return 'unlearned'
+}
 
-/** 構造式カードのサブカテゴリ */
-const STRUCTURE_SUBCATEGORIES = [
+// ---- 進捗フィルタ ----
+type ProgressFilter = 'all' | 'unlearned' | 'due' | 'mastered'
+const PROGRESS_FILTERS: { key: ProgressFilter; label: string }[] = [
   { key: 'all', label: '全て' },
-  { key: 'L0', label: '基礎（名前↔構造）', filter: (t: FlashCardTemplate) => t.id.endsWith('-L0a') || t.id.endsWith('-L0b') },
-  { key: 'L1-L3', label: '応用（特徴・分類）', filter: (t: FlashCardTemplate) => t.id.endsWith('-L1') || t.id.endsWith('-L2') || t.id.endsWith('-L3') },
-] as const
+  { key: 'unlearned', label: '未学習' },
+  { key: 'due', label: '復習待ち' },
+  { key: 'mastered', label: 'マスター済み' },
+]
+
+// ---- 構造式フィルタ ----
+type StructFilter = 'all' | 'basic' | 'advanced'
+const STRUCT_FILTERS: { key: StructFilter; label: string }[] = [
+  { key: 'all', label: '全て' },
+  { key: 'basic', label: '基礎' },
+  { key: 'advanced', label: '応用' },
+]
+
+function isBasicCard(t: FlashCardTemplate) {
+  return t.id.endsWith('-L0a') || t.id.endsWith('-L0b')
+}
+function isAdvancedCard(t: FlashCardTemplate) {
+  return t.id.endsWith('-L1') || t.id.endsWith('-L2') || t.id.endsWith('-L3')
+}
+
+// ---- カテゴリ表示名 ----
+const CATEGORY_LABELS: Record<string, { label: string; emoji: string }> = {
+  heterocycle:        { label: '複素環母核', emoji: '⬡' },
+  vitamin:            { label: 'ビタミン', emoji: '💊' },
+  amino_acid:         { label: 'アミノ酸', emoji: '🧬' },
+  prodrug:            { label: 'プロドラッグ', emoji: '💉' },
+  carcinogen:         { label: '発がん物質', emoji: '☢️' },
+  sweetener:          { label: '甘味料', emoji: '🍬' },
+  preservative:       { label: '保存料', emoji: '🧴' },
+  antioxidant:        { label: '酸化防止剤', emoji: '🛡️' },
+  antifungal:         { label: '防カビ剤', emoji: '🍊' },
+  pesticide:          { label: '農薬', emoji: '🌾' },
+  endocrine_disruptor:{ label: '内分泌撹乱', emoji: '⚠️' },
+  antidote:           { label: '解毒薬', emoji: '💊' },
+  foshu:              { label: 'トクホ', emoji: '🥗' },
+  pharmacology:       { label: '薬理', emoji: '💊' },
+}
+
+// ---- 科目emoji ----
+const SUBJECT_EMOJI: Record<string, string> = {
+  '病態・薬物治療': '🏥',
+  '実務': '💊',
+  '薬理': '💉',
+  '衛生': '🧪',
+  '薬剤': '💊',
+  '法規・制度・倫理': '📜',
+  '物理': '⚛️',
+  '生物': '🧬',
+  '化学': '🔬',
+}
+
+// ---- 時間見積もり ----
+function estimateMinutes(dueIds: string[], templates: Map<string, FlashCardTemplate>): number {
+  let totalSec = 0
+  for (const id of dueIds) {
+    const t = templates.get(id)
+    if (!t) { totalSec += 6; continue }
+    if (t.id.endsWith('-L0a') || t.id.endsWith('-L0b')) totalSec += 4
+    else if (t.id.endsWith('-L1') || t.id.endsWith('-L2') || t.id.endsWith('-L3')) totalSec += 8
+    else totalSec += 6
+  }
+  return Math.max(1, Math.ceil(totalSec / 60))
+}
+
+// ---- 表示件数 ----
+const COLLAPSED_COUNT = 5
 
 export function FlashCardListPage() {
   const navigate = useNavigate()
-  const { cards, loading, dueCards, deleteCard } = useFlashCards()
-  const { templates } = useFlashCardTemplates()
-  const { dueProgress } = useCardProgress()
-  const [structureFilter, setStructureFilter] = useState('all')
+  const { allTemplates, loading, error, templatesById, retry } = useUnifiedTemplates()
+  const { allProgress, dueProgress } = useCardProgress()
 
-  // テンプレートカード: 科目別グループ
-  const templateGroups = useMemo(() => {
-    const structuralTemplates = templates.filter(t => t.source_type === 'structure_db')
+  const [progressFilter, setProgressFilter] = useState<ProgressFilter>('all')
+  const [structFilter, setStructFilter] = useState<StructFilter>('all')
+  const [textExpanded, setTextExpanded] = useState(false)
+  const [structExpanded, setStructExpanded] = useState(false)
 
-    // サブカテゴリフィルタ適用
-    const filtered = structureFilter === 'all'
-      ? structuralTemplates
-      : STRUCTURE_SUBCATEGORIES.find(c => c.key === structureFilter)?.filter
-        ? structuralTemplates.filter(STRUCTURE_SUBCATEGORIES.find(c => c.key === structureFilter)!.filter!)
-        : structuralTemplates
+  // progress Map（template_id → CardProgress）
+  const progressMap = useMemo(() => {
+    const m = new Map<string, CardProgress>()
+    for (const p of allProgress) m.set(p.template_id, p)
+    return m
+  }, [allProgress])
 
-    // source_id でグループ化（同じ化合物のカードをまとめる）
-    const bySource = new Map<string, FlashCardTemplate[]>()
+  // フィルタ適用ヘルパー
+  const matchesProgressFilter = (tId: string) => {
+    if (progressFilter === 'all') return true
+    return getProgressBucket(progressMap.get(tId)) === progressFilter
+  }
+
+  // ---- テキストカード ----
+  const textGroups = useMemo(() => {
+    const textTemplates = allTemplates.filter(t => t.source_type !== 'structure_db')
+    const filtered = textTemplates.filter(t => matchesProgressFilter(t.id))
+    // subject でグループ化
+    const bySubject = new Map<QuestionSubject, FlashCardTemplate[]>()
     for (const t of filtered) {
-      if (!bySource.has(t.source_id)) bySource.set(t.source_id, [])
-      bySource.get(t.source_id)!.push(t)
+      if (!bySubject.has(t.subject)) bySubject.set(t.subject, [])
+      bySubject.get(t.subject)!.push(t)
     }
+    // 枚数順ソート
+    return [...bySubject.entries()].sort((a, b) => b[1].length - a[1].length)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allTemplates, progressFilter, allProgress])
 
-    // 科目別
-    const groups: Record<string, { sourceId: string; name: string; cards: FlashCardTemplate[]; mediaUrl?: string }[]> = {}
-    for (const [sourceId, cards] of bySource) {
-      const subject = cards[0].subject
-      if (!groups[subject]) groups[subject] = []
-      const l0b = cards.find(c => c.id.endsWith('-L0b'))
-      const name = l0b ? l0b.back.split('（')[0].split('。')[0] : sourceId.replace('struct-', '')
-      groups[subject].push({ sourceId, name, cards, mediaUrl: cards[0].media_url })
+  const totalTextCards = allTemplates.filter(t => t.source_type !== 'structure_db').length
+
+  // ---- 構造式カード ----
+  const structGroups = useMemo(() => {
+    let structTemplates = allTemplates.filter(t => t.source_type === 'structure_db')
+    // 構造式サブフィルタ
+    if (structFilter === 'basic') structTemplates = structTemplates.filter(isBasicCard)
+    else if (structFilter === 'advanced') structTemplates = structTemplates.filter(isAdvancedCard)
+    // 進捗フィルタ
+    const filtered = structTemplates.filter(t => matchesProgressFilter(t.id))
+    // source_id → カテゴリ
+    const byCat = new Map<string, { label: string; emoji: string; cards: FlashCardTemplate[] }>()
+    for (const t of filtered) {
+      const meta = COMPOUND_META[t.source_id]
+      const catKey = meta?.category ?? 'other'
+      const catInfo = CATEGORY_LABELS[catKey] ?? { label: catKey, emoji: '📦' }
+      if (!byCat.has(catKey)) byCat.set(catKey, { ...catInfo, cards: [] })
+      byCat.get(catKey)!.cards.push(t)
     }
-    return groups
-  }, [templates, structureFilter])
+    return [...byCat.entries()]
+      .map(([key, val]) => ({ key, ...val }))
+      .sort((a, b) => b.cards.length - a.cards.length)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allTemplates, structFilter, progressFilter, allProgress])
 
-  const templateSubjects = Object.keys(templateGroups) as QuestionSubject[]
-  const totalTemplateCards = templates.filter(t => t.source_type === 'structure_db').length
-  const dueTemplateCount = dueProgress.length
+  const totalStructCards = allTemplates.filter(t => t.source_type === 'structure_db').length
+  const totalCards = allTemplates.length
 
-  // レガシーカード: 科目別グループ
-  const groupedCards = useMemo(() => {
-    const groups: Record<string, FlashCard[]> = {}
-    for (const card of cards) {
-      if (!groups[card.subject]) groups[card.subject] = []
-      groups[card.subject].push(card)
+  // 科目別進捗計算
+  function getSubjectProgress(templates: FlashCardTemplate[]) {
+    let learned = 0, due = 0
+    for (const t of templates) {
+      const b = getProgressBucket(progressMap.get(t.id))
+      if (b === 'due') due++
+      else if (b === 'mastered') learned++
+      else if (progressMap.has(t.id)) learned++ // 学習中もlearned扱い
     }
-    return groups
-  }, [cards])
-  const subjects = Object.keys(groupedCards) as QuestionSubject[]
-
-  const formatNextReview = (dateStr: string) => {
-    const date = new Date(dateStr)
-    const now = new Date()
-    const diffDays = Math.ceil((date.getTime() - now.getTime()) / 86400000)
-    if (diffDays <= 0) return '今日'
-    if (diffDays === 1) return '明日'
-    return `${diffDays}日後`
+    return { learned, due, total: templates.length }
   }
 
-  /** 科目の構造式カードを練習開始 */
-  const startStructuralPractice = (subject: QuestionSubject) => {
-    const group = templateGroups[subject]
-    if (!group) return
-    const cardIds = group.flatMap(g => g.cards.map(c => c.id))
+  // 復習CTA
+  const dueCount = dueProgress.length
+  const dueCardIds = dueProgress.map(p => p.template_id)
+  const estimatedMin = dueCount > 0 ? estimateMinutes(dueCardIds, templatesById) : 0
+
+  const handleReviewCta = () => {
+    if (dueCount === 0) return
     const context: FlashCardPracticeContext = {
-      mode: 'exemplar',
-      cardIds,
+      mode: 'review_queue',
+      cardIds: dueCardIds,
       returnTo: '/cards',
     }
     navigate('/cards/review', { state: { practiceContext: context } })
   }
 
-  /** 全構造式カードを練習開始 */
-  const startAllStructuralPractice = () => {
-    const cardIds = Object.values(templateGroups).flatMap(group =>
-      group.flatMap(g => g.cards.map(c => c.id))
-    )
+  const handleCategoryTap = (cards: FlashCardTemplate[], mode: 'exemplar') => {
     const context: FlashCardPracticeContext = {
-      mode: 'exemplar',
-      cardIds,
+      mode,
+      cardIds: cards.map(c => c.id),
       returnTo: '/cards',
     }
     navigate('/cards/review', { state: { practiceContext: context } })
   }
 
-  if (loading) {
-    return <div style={{ padding: '2rem', textAlign: 'center' }}>読み込み中...</div>
-  }
+  const visibleTextGroups = textExpanded ? textGroups : textGroups.slice(0, COLLAPSED_COUNT)
+  const hiddenTextCount = textGroups.length - COLLAPSED_COUNT
+  const visibleStructGroups = structExpanded ? structGroups : structGroups.slice(0, COLLAPSED_COUNT)
+  const hiddenStructCount = structGroups.length - COLLAPSED_COUNT
 
   return (
-    <div style={{ maxWidth: 700, margin: '0 auto', padding: '0 8px' }}>
-      <Title level={3}>暗記カード</Title>
-
-      {/* ===== 構造式カード セクション ===== */}
-      <Card style={{ marginBottom: 16 }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-          <Text strong style={{ fontSize: 16 }}>🔬 構造式カード</Text>
-          <Text type="secondary">{totalTemplateCards}枚</Text>
+    <div className="sc-page">
+      <div className={styles.page}>
+        {/* ---- Header ---- */}
+        <div className={styles.header}>
+          <h1 className={styles.title}>暗記カード</h1>
+          <span className={styles.totalCount}>{totalCards.toLocaleString()}枚</span>
         </div>
 
-        {/* サブカテゴリフィルタ */}
-        <div style={{ display: 'flex', gap: 8, marginBottom: 12, flexWrap: 'wrap' }}>
-          {STRUCTURE_SUBCATEGORIES.map(cat => (
-            <Button
-              key={cat.key}
-              size="small"
-              type={structureFilter === cat.key ? 'primary' : 'default'}
-              onClick={() => setStructureFilter(cat.key)}
-            >
-              {cat.label}
-            </Button>
+        {/* ---- Error Banner ---- */}
+        {error && (
+          <div className={styles.errorBanner}>
+            <span className={styles.errorText}>テキストカードの読み込みに失敗しました</span>
+            <button className={styles.retryBtn} onClick={retry}>リトライ</button>
+          </div>
+        )}
+
+        {/* ---- Loading ---- */}
+        {loading && (
+          <div className={styles.loadingText}>カードを読み込み中...</div>
+        )}
+
+        {/* ---- Review CTA ---- */}
+        <button
+          className={`${styles.reviewCta} ${dueCount === 0 ? styles.reviewCtaDisabled : ''}`}
+          onClick={handleReviewCta}
+          disabled={dueCount === 0}
+        >
+          {dueCount > 0 ? (
+            <>
+              <div className={styles.ctaTop}>
+                <span className={styles.ctaLabel}>復習タイミング</span>
+                <span className={styles.ctaCount}>{dueCount}枚</span>
+              </div>
+              <div className={styles.ctaBottom}>
+                <span className={styles.ctaTime}>約{estimatedMin}分</span>
+                <span className={styles.ctaArrow}>練習する &rarr;</span>
+              </div>
+            </>
+          ) : (
+            <div className={styles.ctaTop}>
+              <span className={styles.ctaLabel}>復習するカードはまだありません</span>
+            </div>
+          )}
+        </button>
+
+        {/* ---- Progress Filter ---- */}
+        <div className={styles.chipRow}>
+          {PROGRESS_FILTERS.map(f => (
+            <Chip
+              key={f.key}
+              label={f.label}
+              active={progressFilter === f.key}
+              onClick={() => setProgressFilter(f.key)}
+            />
           ))}
         </div>
 
-        {/* 全体練習ボタン */}
-        <Button
-          type="primary"
-          icon={<PlayCircleOutlined />}
-          onClick={startAllStructuralPractice}
-          style={{ marginBottom: 16, width: '100%' }}
-        >
-          構造式カードを練習する
-        </Button>
+        {/* ---- Text Cards Section ---- */}
+        <div className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.sectionTitle}>📖 テキストカード</span>
+            <span className={styles.sectionCount}>{totalTextCards.toLocaleString()}枚</span>
+          </div>
 
-        {/* 科目別 */}
-        {templateSubjects.length > 0 && (
-          <Collapse
-            size="small"
-            items={templateSubjects.map(subject => ({
-              key: subject,
-              label: (
-                <span>
-                  {subject}
-                  <Tag style={{ marginLeft: 8 }}>{templateGroups[subject].length}化合物</Tag>
-                </span>
-              ),
-              children: (
-                <div>
-                  <Button
-                    size="small"
-                    type="link"
-                    icon={<PlayCircleOutlined />}
-                    onClick={() => startStructuralPractice(subject)}
-                    style={{ marginBottom: 8 }}
+          {visibleTextGroups.length > 0 ? (
+            <div className={styles.categoryCard}>
+              {visibleTextGroups.map(([subject, templates]) => {
+                const prog = getSubjectProgress(templates)
+                const learnedRatio = prog.total > 0 ? (prog.learned / prog.total) * 100 : 0
+                return (
+                  <div
+                    key={subject}
+                    className={styles.subCategoryRow}
+                    onClick={() => handleCategoryTap(templates, 'exemplar')}
                   >
-                    {subject}の構造式を練習
-                  </Button>
-                  <List
-                    size="small"
-                    dataSource={templateGroups[subject]}
-                    renderItem={(group) => (
-                      <List.Item style={{ padding: '4px 0' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, width: '100%' }}>
-                          {group.mediaUrl && (
-                            <img src={group.mediaUrl} alt="" style={{ width: 40, height: 30, objectFit: 'contain' }} />
-                          )}
-                          <div style={{ flex: 1 }}>
-                            <Text>{group.name}</Text>
-                            <br />
-                            <Text type="secondary" style={{ fontSize: 11 }}>{group.cards.length}枚</Text>
-                          </div>
-                        </div>
-                      </List.Item>
-                    )}
-                  />
-                </div>
-              ),
-            }))}
-          />
-        )}
-      </Card>
-
-      {/* ===== レガシーカード セクション ===== */}
-      {(cards.length > 0 || dueCards.length > 0) && (
-        <Card style={{ marginBottom: 16 }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-            <Text strong style={{ fontSize: 16 }}>📝 自分のカード</Text>
-            <Text type="secondary">{cards.length}枚</Text>
-          </div>
-
-          <div style={{ textAlign: 'center', marginBottom: 16 }}>
-            <Badge count={dueCards.length} offset={[10, 0]}>
-              <Button
-                type="primary"
-                icon={<PlayCircleOutlined />}
-                disabled={dueCards.length === 0}
-                onClick={() => navigate('/cards/review')}
-              >
-                今日の復習（{dueCards.length}枚）
-              </Button>
-            </Badge>
-          </div>
-
-          {subjects.length > 0 && (
-            <Collapse
-              size="small"
-              items={subjects.map((subject) => ({
-                key: subject,
-                label: (
-                  <span>
-                    {subject}
-                    <Tag style={{ marginLeft: 8 }}>{groupedCards[subject].length}枚</Tag>
-                  </span>
-                ),
-                children: (
-                  <List
-                    size="small"
-                    dataSource={groupedCards[subject]}
-                    renderItem={(card) => {
-                      const formatConfig = CARD_FORMAT_CONFIG[card.format]
-                      return (
-                        <List.Item
-                          actions={[
-                            <Popconfirm
-                              key="delete"
-                              title="このカードを削除しますか？"
-                              onConfirm={() => deleteCard(card.id)}
-                              okText="削除"
-                              cancelText="キャンセル"
-                            >
-                              <Button type="text" danger size="small" icon={<DeleteOutlined />} />
-                            </Popconfirm>,
-                          ]}
-                        >
-                          <List.Item.Meta
-                            title={<span>{formatConfig.emoji} {card.front}</span>}
-                            description={
-                              <Text type="secondary" style={{ fontSize: 12 }}>
-                                次回: {formatNextReview(card.next_review_at)} / 復習{card.review_count}回
-                              </Text>
-                            }
-                          />
-                        </List.Item>
-                      )
-                    }}
-                  />
-                ),
-              }))}
-            />
+                    <div className={styles.subCategoryInfo}>
+                      <div className={styles.subCategoryName}>
+                        {SUBJECT_EMOJI[subject] ?? '📄'} {subject}
+                      </div>
+                      <span className={styles.subCategoryCount}>{templates.length}枚</span>
+                    </div>
+                    <div className={styles.progressMini}>
+                      <div className={styles.progressMiniBar} style={{ width: `${learnedRatio}%` }} />
+                    </div>
+                    <div className={styles.progressStats}>
+                      {prog.learned > 0 && <span className={styles.statLearned}>学習{prog.learned}</span>}
+                      {prog.due > 0 && <span className={styles.statDue}>復{prog.due}</span>}
+                    </div>
+                  </div>
+                )
+              })}
+              {!textExpanded && hiddenTextCount > 0 && (
+                <button className={styles.expandBtn} onClick={() => setTextExpanded(true)}>
+                  + 他{hiddenTextCount}科目
+                </button>
+              )}
+            </div>
+          ) : (
+            <div className={styles.emptyState}>
+              {loading ? 'カードを読み込み中...' : 'フィルタに一致するテキストカードがありません'}
+            </div>
           )}
-        </Card>
-      )}
+        </div>
 
-      {cards.length === 0 && totalTemplateCards === 0 && (
-        <Empty description="カードがまだありません" />
-      )}
+        {/* ---- Structural Cards Section ---- */}
+        <div className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.sectionTitle}>🔬 構造式カード</span>
+            <span className={styles.sectionCount}>{totalStructCards}枚</span>
+          </div>
+
+          {/* 構造式Chipフィルタ */}
+          <div className={styles.chipRow}>
+            {STRUCT_FILTERS.map(f => (
+              <Chip
+                key={f.key}
+                label={f.label}
+                active={structFilter === f.key}
+                onClick={() => setStructFilter(f.key)}
+              />
+            ))}
+          </div>
+
+          {visibleStructGroups.length > 0 ? (
+            <div className={styles.categoryCard}>
+              {visibleStructGroups.map(g => {
+                const prog = getSubjectProgress(g.cards)
+                const learnedRatio = prog.total > 0 ? (prog.learned / prog.total) * 100 : 0
+                return (
+                  <div
+                    key={g.key}
+                    className={styles.subCategoryRow}
+                    onClick={() => handleCategoryTap(g.cards, 'exemplar')}
+                  >
+                    <div className={styles.subCategoryInfo}>
+                      <div className={styles.subCategoryName}>
+                        {g.emoji} {g.label}
+                      </div>
+                      <span className={styles.subCategoryCount}>{g.cards.length}枚</span>
+                    </div>
+                    <div className={styles.progressMini}>
+                      <div className={styles.progressMiniBar} style={{ width: `${learnedRatio}%` }} />
+                    </div>
+                    <div className={styles.progressStats}>
+                      {prog.learned > 0 && <span className={styles.statLearned}>学習{prog.learned}</span>}
+                      {prog.due > 0 && <span className={styles.statDue}>復{prog.due}</span>}
+                    </div>
+                  </div>
+                )
+              })}
+              {!structExpanded && hiddenStructCount > 0 && (
+                <button className={styles.expandBtn} onClick={() => setStructExpanded(true)}>
+                  + 他{hiddenStructCount}カテゴリ
+                </button>
+              )}
+            </div>
+          ) : (
+            <div className={styles.emptyState}>
+              フィルタに一致する構造式カードがありません
+            </div>
+          )}
+        </div>
+
+        {/* ---- Total Empty ---- */}
+        {!loading && allTemplates.length === 0 && (
+          <div className={styles.emptyState}>カードがまだありません</div>
+        )}
+      </div>
     </div>
   )
 }
