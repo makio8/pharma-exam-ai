@@ -1,0 +1,250 @@
+/* SwipeCard.module.css — Soft Companion */
+
+/* ===== 外層: スワイプ変形レイヤー ===== */
+.swipeLayer {
+  position: relative;
+  touch-action: none;
+  user-select: none;
+  cursor: grab;
+  min-height: 280px;
+  width: 100%;
+  will-change: transform;
+}
+
+.swipeLayer:active {
+  cursor: grabbing;
+}
+
+/* ===== フィードバック背景 ===== */
+.bgFeedback {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--r, 14px);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+}
+
+.bgRight {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(16, 185, 129, 0.1));
+}
+
+.bgLeft {
+  background: linear-gradient(225deg, rgba(239, 68, 68, 0.25), rgba(239, 68, 68, 0.1));
+}
+
+/* ===== フリップコンテナ ===== */
+.flipContainer {
+  perspective: 1000px;
+  width: 100%;
+  min-height: 280px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== フリップインナー ===== */
+.flipInner {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flipInner.flipped {
+  transform: rotateY(180deg);
+}
+
+/* ===== カード面: 共通 ===== */
+.face {
+  position: absolute;
+  inset: 0;
+  min-height: 280px;
+  border-radius: var(--r, 14px);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 24px 20px;
+  box-shadow: var(--shadow-md, 0 4px 12px rgba(0, 0, 0, 0.06));
+  overflow: hidden;
+}
+
+/* ===== 表面 ===== */
+.front {
+  background: var(--card, #fff);
+  border: 1px solid var(--border, #e8e5ee);
+}
+
+/* ===== 裏面 ===== */
+.back {
+  background: #f0f5ff;
+  border: 1px solid #c7d7f5;
+  transform: rotateY(180deg);
+}
+
+/* ===== フォーマットラベル ===== */
+.formatLabel {
+  font-size: 11px;
+  color: var(--text-2, #8b7355);
+  margin-bottom: 12px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+/* ===== カードテキスト ===== */
+.cardText {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text, #3d2c1e);
+  text-align: center;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.cardTextSmall {
+  font-size: 14px;
+}
+
+/* ===== Cloze: 穴あき ===== */
+.clozeBlank {
+  display: inline-block;
+  border-bottom: 2px solid var(--accent, #aa3bff);
+  min-width: 60px;
+  height: 1.2em;
+  vertical-align: bottom;
+  margin: 0 2px;
+}
+
+/* ===== Cloze: 答え表示 ===== */
+.clozeAnswer {
+  font-weight: 700;
+  color: var(--accent, #aa3bff);
+}
+
+/* ===== タップヒント ===== */
+.tapHint {
+  font-size: 11px;
+  color: var(--text-3, #9ca3af);
+  margin-top: 20px;
+}
+
+/* ===== SVG画像（構造式） ===== */
+.structureImg {
+  max-width: 100%;
+  max-height: 180px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+/* ===== ゴーストヒント ===== */
+.ghostHintRight,
+.ghostHintLeft {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--r-sm, 10px);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.ghostHintRight {
+  right: 16px;
+}
+
+.ghostHintLeft {
+  left: 16px;
+}
+
+/* ===== エラー表示 ===== */
+.errorBadge {
+  font-size: 10px;
+  color: var(--warn, #f59e0b);
+  background: rgba(245, 158, 11, 0.1);
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-bottom: 8px;
+}
+
+/* ===== ボタンフォールバック（a11y） ===== */
+.fallbackButtons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.btnAgain {
+  flex: 1;
+  max-width: 140px;
+  padding: 10px 0;
+  border: 2px solid var(--ng, #ef4444);
+  border-radius: var(--r-sm, 10px);
+  background: transparent;
+  color: var(--ng, #ef4444);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btnAgain:hover,
+.btnAgain:focus-visible {
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.btnAgain:active {
+  transform: scale(0.97);
+}
+
+.btnOk {
+  flex: 1;
+  max-width: 140px;
+  padding: 10px 0;
+  border: 2px solid var(--ok, #10b981);
+  border-radius: var(--r-sm, 10px);
+  background: transparent;
+  color: var(--ok, #10b981);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btnOk:hover,
+.btnOk:focus-visible {
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.btnOk:active {
+  transform: scale(0.97);
+}
+
+/* ===== キーボードフォーカス ===== */
+.swipeLayer:focus-visible {
+  outline: 2px solid var(--accent, #aa3bff);
+  outline-offset: 4px;
+  border-radius: var(--r, 14px);
+}
+
+/* ===== reduced-motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  .flipInner {
+    transition: none;
+  }
+
+  .swipeLayer {
+    transition: none !important;
+  }
+}
