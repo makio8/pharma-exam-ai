@@ -218,9 +218,11 @@ Google Drive（マイドライブ>pharma-exam-ai>design-mockups/）:
   - GPT-5.4レビュー×5回: P1指摘計8件修正（ID衝突防止、型ガード強化、schema厳密化、エラーatomスキップ等）
   - テスト: 36ファイル654テスト全パス
   - 計画: `docs/superpowers/plans/2026-03-31-text-card-pipeline.md`
-  - ✅ バッチ生成完了: 404 exemplar全件 → 3,370 atoms → 3,451枚（9科目、エラー率1.9%）
-  - 科目別: 病態640/実務635/薬理527/衛生453/薬剤398/法規249/物理210/生物192/化学147
-  - **次: Codex相互検証（低confidenceカード） → FlashCardPage UIリデザイン**
+  - ✅ バッチ生成+品質修正完了: 404 exemplar → 3,370 atoms → **3,516枚**（9科目、エラー率**0.00%**）
+  - 科目別: 病態662/実務662/薬理533/衛生453/薬剤401/法規254/物理210/生物193/化学148
+  - ✅ Codex検証完了: 低confidence5枚中P1×1（バンコマイシンTDM）修正済み、P2×3修正済み
+  - ✅ エラーatom63件全修正: NO_SOURCE_QUESTIONS 57件+ATOM_ID_TYPE_MISMATCH 5件+DUPLICATE 1件
+  - **次: FlashCardPage Soft Companion UIリデザイン → 構造式カードパイプライン**
 - **Vertex AI 移行 + Nano Banana 画像生成実験（2026-03-28）**
   - OCRスクリプト（ocr-cropped-notes.ts）を AI Studio → Vertex AI エンドポイントに移行
   - 認証: API Key → google-auth-library ADC（GCP無料クレジット¥46,955消費可能に）
